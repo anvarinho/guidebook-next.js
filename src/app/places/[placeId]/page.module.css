@@ -1,0 +1,26 @@
+.main{
+    width: 100%;
+    text-align: center;
+    /* padding-top: 2.5rem; */
+    z-index: 1;
+}
+
+.main p{
+    white-space: pre-wrap;
+}
+.main img{
+    max-width: 90vw;
+}
+
+.loading{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+@media (max-width:991px){
+    .main{
+        padding-top: 4rem;
+    }
+  }
