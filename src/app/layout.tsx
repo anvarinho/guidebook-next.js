@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 import Navbar from '@/Components/Navbar'
+import ContactButton from '@/Components/ContactButton'
 import styles from '@/app/page.module.css'
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
           <section className={styles.section}>
           {children}
           </section>
+          <ContactButton/>
         </main>
       </body>
     </html>

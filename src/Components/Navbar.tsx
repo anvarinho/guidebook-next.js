@@ -16,30 +16,12 @@ const Navbar = () => {
         console.log("Clicked")
     };
     useEffect(() => {
-        // Function to handle scroll event
-        const handleScroll = () => {
-          // Calculate the scroll position or any other logic to determine when to toggle the navbar
-          // For example, you can use `window.scrollY` to get the vertical scroll position
-          const scrollPosition = window.scrollY;
-    
-          // Update the showNavbar state based on the scroll position
-          // For example, show the navbar if the scroll position is below 100 pixels from the top
-          setShowNavbar(scrollPosition > 100 || scrollPosition < 100 );
-        };
-    
-        // Add the scroll event listener when the component mounts
-        if(showNavbar){
-            window.addEventListener('scroll', handleScroll);
-        }
-        
-    
-        // Remove the scroll event listener when the component unmounts to avoid memory leaks
-        return () => {
-            if(showNavbar){
-                window.removeEventListener('scroll', handleScroll);
+        window.onscroll = () =>{
+            if (showNavbar){
+                setShowNavbar(false)
             }
-        };
-      }, []);
+        }
+      }, [showNavbar]);
     const navLinks = [
         { text: 'Home', url: '/' },
         { text: 'Sights', url: '/places' },
@@ -61,9 +43,15 @@ const Navbar = () => {
                 </nav>
                 <a className={styles.menuBtn} onClick={handleToggleNavbar}>
                     {!showNavbar ? (
+                        <>
                         <FontAwesomeIcon icon={faBars} />
+                        </>
+                        
                     ) : (
+                        <>
                         <FontAwesomeIcon icon={faXmark} />
+                        </>
+                        
                     )}
                 </a>
             </section>

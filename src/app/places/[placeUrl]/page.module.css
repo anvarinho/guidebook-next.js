@@ -1,7 +1,14 @@
 .main{
-    width: 100%;
+    /* width: 100%; */
+    max-width: 1000px;
+    /* display: flex; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     /* padding-top: 2.5rem; */
+    padding: auto;
+    margin: auto;
     z-index: 1;
 }
 
@@ -9,7 +16,11 @@
     white-space: pre-wrap;
 }
 .main img{
-    max-width: 90vw;
+    /* position: relative; */
+   width: 100%;
+   max-width: 100%;
+   aspect-ratio: 1.77/1;
+   overflow: hidden;
 }
 
 .loading{

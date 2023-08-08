@@ -23,26 +23,44 @@
     z-index: 0;
   }
   
-  .placesList .box{
+  .placesList .placeBox{
     position: relative;
    /* height: 40rem; */
    min-width: 20vw;
    aspect-ratio: 1.77/1;
    overflow: hidden;
-   border-radius: .6rem;
+   border-radius: .4rem;
    text-align: center;
-   transition: all .6 ease;
   }
 
-  .placesList .box p{
-    z-index: 100;
-  }
-  
-  .placeImg{
+  .placeBox .placeImg{
     width: 100%;
-    /* height: 200px;  */
-    object-fit: cover; 
-    border-radius: 0.5rem;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease-in;
+  }
+
+  .placesList .placeImg:hover{
+    transform: scale(1.2);
+  }
+
+  .placesList .placeBox h4{
+    position: absolute;
+    bottom: .4rem; left: .4rem;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding:.2rem 1rem;
+    border-radius: 0.3rem;
+  }
+  .placesList .placeBox h6{
+    position: absolute;
+    top: .4rem; right: .4rem;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding:.2rem 1rem;
+    border-radius: 0.3rem;
   }
 
   .loading{

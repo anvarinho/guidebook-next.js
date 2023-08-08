@@ -1,15 +1,20 @@
 type Place = {
-    "id": string,
+    "_id": string,
     "name": string,
     "title": string,
+    "region": string,
+    "created": Date,
     "description": string,
+    "keywords": [string],
+    "url": string,
+    "image": [string]
 }
 
 type PlaceData = {
     "place": Place
 }
 
-type Data = {
+type Places = {
     "count": number,
-    "places": [Place]
+    "places": [PlaceData]
 }
