@@ -8,6 +8,8 @@ export default async function sitemap() {
     const places = placesData.map((item, i)=> ({
         url: `${URL}/places/${item.placeUrl}`,
         lastModified: item.lastModified,
+        changeFrequency: "Monthly",
+        priority: "1"
     }))
  
     const routes = ["", "/places", "/tours", "/about", "/contact",].map((route) => ({

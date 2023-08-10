@@ -7,11 +7,19 @@ type Place = {
     "description": string,
     "keywords": [string],
     "url": string,
-    "image": [string]
+    "image": [string],
+    "weather": Weather?
 }
 
 type PlaceData = {
     "place": Place
+}
+
+type Weather = {
+    "temp": string,
+    "main": string,
+    "description": string,
+    "icon": string
 }
 
 type Places = {

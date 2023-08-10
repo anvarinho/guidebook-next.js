@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className={styles.main}>
-      <h1>Tours</h1>
+      <h1>Most popular tours of Kyrgyzstan</h1>
     </div>
   )
 }

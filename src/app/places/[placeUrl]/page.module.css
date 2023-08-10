@@ -16,8 +16,6 @@
     white-space: pre-wrap;
 }
 .main img{
-    /* position: relative; */
-   width: 100%;
    max-width: 100%;
    aspect-ratio: 1.77/1;
    overflow: hidden;
