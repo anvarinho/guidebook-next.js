@@ -1,0 +1,144 @@
+.main{
+    width: 100%;
+    text-align: center;
+    /* padding-top: 2.5rem; */
+    z-index: 1;
+}
+  
+  .placesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+  
+  .placesList {
+    /* max-width: 1200px; */
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center; 
+    gap: .6rem;
+    z-index: 0;
+  }
+  
+  .placesList .placeBox{
+    position: relative;
+    /* height: 40rem; */
+    min-width: 20vw;
+    aspect-ratio: 1.77/1;
+    overflow: hidden;
+    border-radius: .4rem;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5); /* Initially scaled down */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+ 
+  
+  /* Apply the animation when the element becomes visible */
+  .placesList .placeBox {
+    opacity: 1; /* Make the element visible */
+    transform: scale(1); /* Restore original scale */
+    animation: zoomIn 1s ease; /* Apply the animation */
+  }
+
+  .placeBox .placeImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease-in;
+    border-radius: .4rem;
+  }
+
+  .placesList .placeImg:hover{
+    transform: scale(1.04);
+  }
+
+  .weather{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    left: .4rem;
+    top: .4rem;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding:.2rem 1rem;
+    border-radius: 0.3rem;
+  }
+  .weather h3{
+    padding-right: .4rem;
+    font-weight: 400;
+    font-family: 'Bai Jamjuree', sans-serif;
+  }
+
+  .placesList .placeBox h4{
+    position: absolute;
+    bottom: .4rem; left: .4rem;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding:.2rem 1rem;
+    margin-right: 0.4rem;
+    border-radius: 0.3rem;
+  }
+  .placesList .placeBox h6{
+    position: absolute;
+    top: .4rem; right: .4rem;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding:.2rem 1rem;
+    border-radius: 0.3rem;
+    opacity: 0;
+    transition: all .3s ease-in;
+  }
+  .placesList .placeBox:hover h6{
+    opacity: 1;
+  }
+
+  .loading{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+  
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  @media (max-width:991px){
+    .placesList{
+        grid-template-columns: repeat(3, 1fr);
+        gap: .4rem;
+    }
+    .main{
+        padding-top: 3.2rem;
+    }
+  }
+
+@media (max-width:768px){
+    .placesList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:600px){
+    .placesList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

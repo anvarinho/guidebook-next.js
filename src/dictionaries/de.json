@@ -1,0 +1,42 @@
+{
+    "page": {
+        "name": "Reiseführer für Kirgisistan",
+        "loading": "Laden...",
+        "navigation": [
+            { "text": "Startseite", "url": "/" },
+            { "text": "Sehenswürdigkeiten", "url": "/places" },
+            { "text": "Touren", "url": "/tours" },
+            { "text": "Über uns", "url": "/about" },
+            { "text": "Kontakt", "url":  "/contact" }
+        ],
+        "home": {
+            "title": "Willkommen in Kirgisistan!",
+            "description": "Erleben Sie die Schönheit und Kultur Kirgisistans durch unseren umfassenden Touristenführer. Entdecken Sie lokale Attraktionen, planen Sie Ihr Abenteuer und machen Sie das Beste aus Ihrer Reise.",
+            "keywords": "Kirgisistan Touristenführer, Reisekomfort, Lokale Attraktionen, Touristische Dienstleistungen, Kyrgyz Reisetipps, Kulturelle Erfahrungen, Tourenplanung, Besichtigungen, Abenteuerreisen, Bequeme Touren, Bishkek Stadtführer"
+        },
+        "sights": {
+            "title": "Beliebteste Orte in Kirgisistan",
+            "description": "Tauchen Sie ein in die atemberaubenden Landschaften und bezaubernden Ziele Kirgisistans. Erkunden Sie vielfältige Gelände, kulturelle Stätten und natürliche Wunder, die den Charme dieses einzigartigen Landes ausmachen.",
+            "keywords": "Kirgisistan Orte, Kirgisistan Reisen, Kirgisistan erkunden, Kirgisistan Ziele, Kirgisistan Tourismus, Muss-Besuch Orte in Kirgisistan, Top Attraktionen Kirgisistan, Kirgisistan Landschaften, Kulturelle Stätten Kirgisistan, Natürliche Wunder Kirgisistan, Beste Orte zum Besuchen in Kirgisistan"
+        },
+        "tours": {
+            "title": "Beliebteste Touren in Kirgisistan",
+            "description": "Begib dich auf unvergessliche Touren, die die Pracht Kirgisistans zeigen. Wähle aus Abenteuer-, Kultur- und Trekking-Touren und lass uns dich durch die vielfältigen und fesselnden Landschaften führen.",
+            "keywords": "Kirgisistan Touren, Abenteuer Touren Kirgisistan, Geführte Touren Kirgisistan, Kultur Touren Kirgisistan, Trekking Touren Kirgisistan, Reiten Touren Kirgisistan, Nomadische Erfahrungen Kirgisistan, Kirgisistan Reisepakete, Beste Touren in Kirgisistan, Kirgisistan erkunden durch Touren"
+        },
+        "contact": {
+            "title": "Kontaktieren Sie uns",
+            "description": "Treten Sie mit unserem Team in Kontakt für Anfragen, Unterstützung oder zur Planung Ihres Kirgisistan-Abenteuers. Wir sind hier, um Ihnen zu helfen, das Beste aus Ihrer Reise herauszuholen.",
+            "keywords": "Kontaktieren Sie uns, In Kontakt treten, Kirgisistan Reiseanfragen, Unterstützung, Abenteuerplanung, Tourinformationen"
+        },
+        "about": {
+            "title": "Über uns",
+            "description": "Erfahren Sie mehr über unsere Leidenschaft für Kirgisistan und unser Engagement, außergewöhnliche Reiseerlebnisse zu bieten. Entdecken Sie unser Team, unsere Werte und unsere Mission.",
+            "keywords": "Über uns, Unsere Geschichte, Kirgisistan Enthusiasten, Reiseleidenschaft, Außergewöhnliche Erlebnisse, Team, Werte, Mission"
+        },
+        "info": {
+            "seen": "Aufrufe: ",
+            "created": "Erstellt: "
+        }
+    }
+}

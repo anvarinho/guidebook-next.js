@@ -1,0 +1,44 @@
+.main{
+    /* width: 100%; */
+    max-width: 1000px;
+    /* display: flex; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding-top: 2.5rem; */
+    padding: auto;
+    margin: auto;
+    z-index: 1;
+}
+
+.main p{
+    white-space: pre-wrap;
+}
+.main img{
+   max-width: 100%;
+   aspect-ratio: 1.77/1;
+   overflow: hidden;
+}
+
+.main .info{
+    padding: .5rem 1rem 0 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    font-size: .7rem;
+}
+
+.loading{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+@media (max-width:991px){
+    .main{
+        padding-top: 4rem;
+    }
+  }

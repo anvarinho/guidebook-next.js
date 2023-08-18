@@ -1,14 +1,22 @@
 type Place = {
     "_id": string,
-    "name": string,
-    "title": string,
-    "region": string,
+    "name": Translations,
+    "title": Translations,
+    "region": Translations,
     "created": Date,
-    "description": string,
-    "keywords": [string],
+    "description": Translations,
+    "keywords": Translations,
     "url": string,
     "image": [string],
+    "viewCount": number,
     "weather": Weather?
+}
+type Translations = {
+    "en": string,
+    "fr": string,
+    "de": string,
+    "es": string,
+    "ru": string,
 }
 
 type PlaceData = {

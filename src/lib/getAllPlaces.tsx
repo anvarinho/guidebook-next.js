@@ -3,6 +3,7 @@ export default async function getAllPlaces() {
     
     try {
       const res = await fetch(url);
+      // console.log(res)
       if (!res.ok) {
         throw new Error('Failed to fetch data');
       }

@@ -1,0 +1,42 @@
+{
+    "page": {
+        "name": "Guía de Kirguistán",
+        "loading": "Cargando...",
+        "navigation": [
+            { "text": "Inicio", "url": "/" },
+            { "text": "Lugares de interés", "url": "/places" },
+            { "text": "Tours", "url": "/tours" },
+            { "text": "Acerca de", "url": "/about" },
+            { "text": "Contacto", "url":  "/contact" }
+        ],
+        "home": {
+            "title": "¡Bienvenido a Kirguistán!",
+            "description": "Experimenta la belleza y la cultura de Kirguistán a través de nuestra completa guía turística. Descubre atracciones locales, planifica tu aventura y aprovecha al máximo tu viaje.",
+            "keywords": "Guía turística de Kirguistán, Comodidad de viaje, Atracciones locales, Servicios turísticos, Consejos de viaje en Kirguistán, Experiencias culturales, Planificación de tours, Visitas turísticas, Viajes de aventura, Tours convenientes, Guía de la ciudad de Biskek"
+        },
+        "sights": {
+            "title": "Lugares más populares de Kirguistán",
+            "description": "Sumérgete en los impresionantes paisajes y destinos encantadores de Kirguistán. Explora terrenos diversos, sitios culturales y maravillas naturales que definen el encanto de este país único.",
+            "keywords": "Lugares de Kirguistán, Viajes en Kirguistán, Explorar Kirguistán, Destinos de Kirguistán, Turismo en Kirguistán, Lugares imperdibles en Kirguistán, Principales atracciones de Kirguistán, Paisajes de Kirguistán, Sitios culturales de Kirguistán, Maravillas naturales de Kirguistán, Mejores lugares para visitar en Kirguistán"
+        },
+        "tours": {
+            "title": "Tours más populares de Kirguistán",
+            "description": "Embárcate en tours inolvidables que muestran la belleza de Kirguistán. Elige entre tours de aventura, culturales y de trekking, y permítenos guiarte a través de paisajes diversos y cautivadores.",
+            "keywords": "Tours en Kirguistán, Tours de aventura en Kirguistán, Tours guiados en Kirguistán, Tours culturales en Kirguistán, Tours de trekking en Kirguistán, Tours a caballo en Kirguistán, Experiencias nómadas en Kirguistán, Paquetes de viaje en Kirguistán, Mejores tours en Kirguistán, Explora Kirguistán a través de tours"
+        },
+        "contact": {
+            "title": "Contáctenos",
+            "description": "Póngase en contacto con nuestro equipo para consultas, asistencia o para planificar su aventura en Kirguistán. Estamos aquí para ayudarte a aprovechar al máximo tu viaje.",
+            "keywords": "Contáctenos, Ponerse en contacto, Consultas de viaje en Kirguistán, Asistencia, Planificación de aventuras, Información sobre tours"
+        },
+        "about": {
+            "title": "Acerca de nosotros",
+            "description": "Obtén más información sobre nuestra pasión por Kirguistán y nuestro compromiso de ofrecer experiencias de viaje excepcionales. Descubre a nuestro equipo, valores y misión.",
+            "keywords": "Acerca de nosotros, Nuestra historia, Enthusiastas de Kirguistán, Pasión por viajar, Experiencias excepcionales, Equipo, Valores, Misión"
+        },
+        "info": {
+            "seen": "Visto: ",
+            "created": "Creado: "
+        }
+    }
+}

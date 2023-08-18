@@ -1,29 +1,38 @@
 import getAllPlaces from '@/lib/getAllPlaces'
+import { i18n } from '@/lib/i18n.config';
 
 const URL = "https://central-asia.live";
  
 export default async function sitemap() {
-    const placesData = await generateStaticParamsPlaces()
+    const languages = i18n.locales;
+    const placesData = await generateStaticParamsPlaces();
+    const routes = ["", "/places", "/tours", "/about", "/contact"];
+    const currentDate = new Date().toISOString();
+    
+    const pages = [];
 
-    const places = placesData.map((item, i)=> ({
-        url: `${URL}/places/${item.placeUrl}`,
-        lastModified: item.lastModified,
-        changeFrequency: "Monthly",
-        priority: "1"
-    }))
- 
-    const routes = ["", "/places", "/tours", "/about", "/contact",].map((route) => ({
-        url: `${URL}${route}`,
-        lastModified: new Date().toISOString(),
-    }));
- 
-    return [...routes, ...places];
+    for (const lang of languages) {
+        for (const route of routes) {
+            pages.push({
+                url: `${URL}/${lang}${route}`,
+                lastModified: currentDate,
+            });
+        }
+
+        for (const placeItem of placesData) {
+            pages.push({
+                url: `${URL}/${lang}/places/${placeItem.placeUrl}`,
+                lastModified: placeItem.lastModified,
+            });
+        }
+    }
+
+    return pages;
 }
 
 export async function generateStaticParamsPlaces(){
     const data: Promise<Places> = getAllPlaces()
     const placesData = await data
-    
     return placesData.places.map( placeItem => ({
         placeUrl: placeItem.place.url,
         lastModified: placeItem.place.created

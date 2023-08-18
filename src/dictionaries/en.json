@@ -1,0 +1,42 @@
+{
+    "page": {
+        "name": "GuideBook of Kyrgyzstan",
+        "loading": "Loading...",
+        "navigation": [
+            { "text": "Home", "url": "/" },
+            { "text": "Sights", "url": "/places" },
+            { "text": "Tours", "url": "/tours" },
+            { "text": "About", "url": "/about" },
+            { "text": "Contact", "url":  "/contact" }
+        ],
+        "home": {
+            "title": "Welcome to Kyrgyzstan!",
+            "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, plan your adventure, and make the most of your trip.",
+            "keywords": "Kyrgyzstan tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide"
+        },
+        "sights": {
+            "title": "Most popular places of Kyrgyzstan",
+            "description": "Immerse yourself in the breathtaking landscapes and enchanting destinations of Kyrgyzstan. Explore diverse terrains, cultural sites, and natural wonders that define the charm of this unique country.",
+            "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan"
+        },
+        "tours": {
+            "title": "Most popular tours of Kyrgyzstan",
+            "description": "Embark on unforgettable tours that showcase the splendor of Kyrgyzstan. Choose from adventure, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
+            "keywords": "Kyrgyzstan tours, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "description": "Get in touch with our team for inquiries, assistance, or to plan your Kyrgyzstan adventure. We're here to help you make the most of your journey.",
+            "keywords": "Contact us, Get in touch, Kyrgyzstan travel inquiries, Assistance, Adventure planning, Tour information"
+        },
+        "about": {
+            "title": "About Us",
+            "description": "Learn more about our passion for Kyrgyzstan and our commitment to providing exceptional travel experiences. Discover our team, values, and mission.",
+            "keywords": "About us, Our story, Kyrgyzstan enthusiasts, Travel passion, Exceptional experiences, Team, Values, Mission"
+        },
+        "info":{
+            "seen":"Visits: ",
+            "created":"Created: "
+        }
+    }
+}

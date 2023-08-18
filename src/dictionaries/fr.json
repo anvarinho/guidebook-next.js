@@ -1,0 +1,42 @@
+{
+  "page": {
+      "name": "Guide du Kirghizistan",
+      "loading": "Chargement...",
+      "navigation": [
+          { "text": "Accueil", "url": "/" },
+          { "text": "Sites", "url": "/places" },
+          { "text": "Tours", "url": "/tours" },
+          { "text": "À propos", "url": "/about" },
+          { "text": "Contact", "url":  "/contact" }
+      ],
+      "home": {
+          "title": "Bienvenue au Kirghizistan !",
+          "description": "Découvrez la beauté et la culture du Kirghizistan grâce à notre guide touristique complet. Découvrez les attractions locales, planifiez votre aventure et profitez au maximum de votre voyage.",
+          "keywords": "Guide touristique du Kirghizistan, Confort de voyage, Attractions locales, Services touristiques, Conseils de voyage au Kirghizistan, Expériences culturelles, Planification de visites, Visites touristiques, Voyages d'aventure, Tours pratiques, Guide de la ville de Bichkek"
+      },
+      "sights": {
+          "title": "Sites les plus populaires du Kirghizistan",
+          "description": "Plongez-vous dans les paysages époustouflants et les destinations enchanteuses du Kirghizistan. Explorez des terrains variés, des sites culturels et des merveilles naturelles qui définissent le charme de ce pays unique.",
+          "keywords": "Sites du Kirghizistan, Voyage au Kirghizistan, Explorer le Kirghizistan, Destinations du Kirghizistan, Tourisme au Kirghizistan, Lieux incontournables au Kirghizistan, Principales attractions du Kirghizistan, Paysages du Kirghizistan, Sites culturels du Kirghizistan, Merveilles naturelles du Kirghizistan, Meilleurs endroits à visiter au Kirghizistan"
+      },
+      "tours": {
+          "title": "Tours les plus populaires du Kirghizistan",
+          "description": "Partez pour des tours inoubliables qui mettent en valeur la splendeur du Kirghizistan. Choisissez parmi des tours d'aventure, culturels et de trekking, et laissez-nous vous guider à travers des paysages divers et captivants.",
+          "keywords": "Tours au Kirghizistan, Tours d'aventure au Kirghizistan, Tours guidés au Kirghizistan, Tours culturels au Kirghizistan, Tours de trekking au Kirghizistan, Tours à cheval au Kirghizistan, Expériences nomades au Kirghizistan, Forfaits de voyage au Kirghizistan, Meilleurs tours au Kirghizistan, Explorez le Kirghizistan à travers des tours"
+      },
+      "contact": {
+          "title": "Contactez-nous",
+          "description": "Contactez notre équipe pour des questions, de l'assistance ou pour planifier votre aventure au Kirghizistan. Nous sommes là pour vous aider à profiter au maximum de votre voyage.",
+          "keywords": "Contactez-nous, Prendre contact, Demandes de voyage au Kirghizistan, Assistance, Planification d'aventures, Informations sur les tours"
+      },
+      "about": {
+          "title": "À propos de nous",
+          "description": "Découvrez notre passion pour le Kirghizistan et notre engagement à offrir des expériences de voyage exceptionnelles. Découvrez notre équipe, nos valeurs et notre mission.",
+          "keywords": "À propos de nous, Notre histoire, Passionnés du Kirghizistan, Passion du voyage, Expériences exceptionnelles, Équipe, Valeurs, Mission"
+      },
+      "info": {
+        "seen": "Vues : ",
+        "created": "Créé : "
+    }
+  }
+}
