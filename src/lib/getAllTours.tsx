@@ -1,5 +1,5 @@
-export default async function getAllPlaces() {
-    const url = 'http://127.0.0.1:4000/places/';
+export default async function getAllTours() {
+    const url = 'http://127.0.0.1:4000/tours/';
     
     try {
       const res = await fetch(url);

@@ -14,7 +14,7 @@ type Props = {
 
 export default async function PlaceArticle({ promise, lang }: Props) {
     const { page } = await getDictionary(lang)
-    const baseUrl = 'http://172.20.10.4:4000/';
+    const baseUrl = 'http://127.0.0.1:4000/';
     const place = await promise
     const blurDataURL = await getBase64(baseUrl + place.place.image[0])
     const createdDate = place.place.created ? new Date(place.place.created) : null;

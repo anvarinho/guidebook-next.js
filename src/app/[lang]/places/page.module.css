@@ -3,6 +3,7 @@
     text-align: center;
     /* padding-top: 2.5rem; */
     z-index: 1;
+    min-height: 100vh;
 }
   
   .placesDiv{
@@ -86,6 +87,7 @@
     padding:.2rem 1rem;
     margin-right: 0.4rem;
     border-radius: 0.3rem;
+    text-align: left;
   }
   .placesList .placeBox h6{
     position: absolute;
@@ -126,9 +128,6 @@
     .placesList{
         grid-template-columns: repeat(3, 1fr);
         gap: .4rem;
-    }
-    .main{
-        padding-top: 3.2rem;
     }
   }
 

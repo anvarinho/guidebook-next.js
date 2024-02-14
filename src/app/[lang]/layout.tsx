@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Locale, i18n } from '@/lib/i18n.config'
+import Footer from './Components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 import Navbar from './Components/Navbar'
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Navbar lang={params.lang}/>
           <section className={styles.section}>
           {children}
+          <Footer lang={params.lang}/>
           </section>
           <ContactButton/>
           <Flags lang={params.lang}/>

@@ -37,6 +37,9 @@
         "info":{
             "seen":"Visits: ",
             "created":"Created: "
+        },
+        "download":{
+            "text": "Download our apps today and enjoy convenient access to our service on your mobile device! Simply click on the button!"
         }
     }
 }

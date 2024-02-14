@@ -52,7 +52,6 @@ export async function generateMetadata({
     const placeData: Promise<PlaceData> = getPlace(placeUrl)
     const data = await placeData
     // console.log(data)
-    const description = data.place.description.ru.slice(0, 500)
     // console.log("generateMetadata")
     if (!data){
         return {

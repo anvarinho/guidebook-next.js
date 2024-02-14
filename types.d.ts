@@ -11,6 +11,17 @@ type Place = {
     "viewCount": number,
     "weather": Weather?
 }
+type Tour = {
+    "_id": string,
+    "name": string,
+    "title": string,
+    "created": Date,
+    "description": string,
+    "keywords": string,
+    "url": string,
+    "image": [string],
+    "viewCount": number,
+}
 type Translations = {
     "en": string,
     "fr": string,
@@ -23,6 +34,10 @@ type PlaceData = {
     "place": Place
 }
 
+type TourData = {
+    "tour": Tour
+}
+
 type Weather = {
     "temp": string,
     "main": string,
@@ -33,4 +48,9 @@ type Weather = {
 type Places = {
     "count": number,
     "places": [PlaceData]
+}
+
+type Tours = {
+    "count": number,
+    "tours": [TourData]
 }

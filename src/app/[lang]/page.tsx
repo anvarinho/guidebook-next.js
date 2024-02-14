@@ -11,6 +11,7 @@ import getWikiResults from "@/lib/getWikiResults";
 // since it's already imported above
 config.autoAddCss = false;
 import styles from './page.module.css'
+import  Footer  from './Components/Footer'
 
 export default async function Home({
   params: {lang}
@@ -21,7 +22,7 @@ export default async function Home({
   // const router = useRouter()
   // const wikiData = getWeatherData("Osh")
   // const data = await wikiData
-  console.log(page)
+  // console.log(page)
   return (
     <div className={styles.mainDiv}>
       <h1>{page.home.title}</h1>

@@ -25,9 +25,9 @@ export default function Flags({ lang }: { lang: Locale }) {
     return (
         <div className={styles.flags}>
             <div className={`${styles.flaglist} ${showFlags ? '' : styles.active}`}>
-                {i18n.locales.map((locale) => (
+                {i18n.locales.map((locale, i) => (
                     locale != lang ? 
-                        <a key={locale}    
+                        <Link key={i}
                             href={redirectedPathName(locale)}
                             onClick={handleToggleNavbar}
                             
@@ -43,10 +43,10 @@ export default function Flags({ lang }: { lang: Locale }) {
                                 {/* <p>{locale}</p> */}
                             </div>
                             
-                        </a> : <></>
+                        </Link> : <a key={i}></a>
                 ))}
             </div>
-            <a onClick={handleToggleNavbar} key={lang}>
+            <a onClick={handleToggleNavbar}>
                 <div className={styles.flagtext}>
                     <Image
                         src={`/${lang}.png`}
@@ -57,7 +57,6 @@ export default function Flags({ lang }: { lang: Locale }) {
                     />
                     {/* <p>{lang}</p> */}
                 </div>
-                
             </a>
         </div>
     );

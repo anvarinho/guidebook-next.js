@@ -35,7 +35,7 @@ const nextConfig = {
         ]
       },
     images: {
-        domains: ['172.20.10.4'], // Add your external image domains here
+        domains: ['172.20.10.4', '127.0.0.1'], // Add your external image domains here
         // unoptimized: true,
     },
     webpack(config) {

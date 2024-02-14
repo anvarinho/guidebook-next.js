@@ -37,8 +37,8 @@
     transform: translateX(-50%);
 }
 
-@media (max-width:991px){
+/* @media (max-width:991px){
     .main{
         padding-top: 4rem;
     }
-  }
+  } */

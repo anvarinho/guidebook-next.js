@@ -37,6 +37,9 @@
       "info": {
         "seen": "Vues : ",
         "created": "Créé : "
+    },
+    "download":{
+        "text": "Téléchargez nos applications dès aujourd'hui et profitez d'un accès pratique à notre service sur votre appareil mobile ! Il vous suffit de cliquer sur le bouton !"
     }
   }
 }

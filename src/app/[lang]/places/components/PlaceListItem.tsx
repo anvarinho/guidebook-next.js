@@ -9,11 +9,11 @@ import Image from "next/image";
 
 type Props = {
   place: PlaceData,
-  lang: Locale
+  lang: Locale,
 }
 
 export default async function PlaceListItem({ place, lang }: Props) {
-  const baseUrl = 'http://172.20.10.4:4000/';
+  const baseUrl = 'http://127.0.0.1:4000/';
   const blurDataURL = await getBase64(baseUrl + place.place.image[0])
   return (
     <div key={place.place._id} className={styles.placeBox}>
