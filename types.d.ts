@@ -27,7 +27,12 @@ type Translations = {
     "fr": string,
     "de": string,
     "es": string,
+    "it": string,
+    "jp": string,
+    "kr": string,
+    "ae": string,
     "ru": string,
+    "cn": string,
 }
 
 type PlaceData = {

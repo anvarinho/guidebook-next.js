@@ -18,6 +18,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     const place = await promise
     const blurDataURL = await getBase64(baseUrl + place.place.image[0])
     const createdDate = place.place.created ? new Date(place.place.created) : null;
+    // console.log(place)
     return (
         <article className={styles.main}>
             <h1>{getLangName(lang, place.place)}</h1>

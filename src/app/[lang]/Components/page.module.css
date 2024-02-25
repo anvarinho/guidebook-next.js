@@ -117,6 +117,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+  }
+  .flagtext:hover{
+    transform: scale(1.15);
   }
   .footer{
     width: 100%;

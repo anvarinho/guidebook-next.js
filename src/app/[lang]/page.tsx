@@ -41,5 +41,40 @@ export async function generateMetadata({
       title: page.home.title,
       description: page.home.description,
       keywords: page.home.keywords,
+      openGraph: {
+          images: ``,
+      },
+      alternates: {
+          canonical: `en/`,
+          languages: {
+            "en-EN": "en",
+            "fr-FR": "fr",
+            "de-DE": "de",
+            "es-ES": "es",
+            "ru-RU": "ru",
+            "it-IT": "it",
+            "jp-JP": "jp", 
+            "kr-KR": "kr",
+            "ae-AE": "ae"
+          }
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: page.home.title,
+        description: page.home.description,
+        siteId: "",
+        creator: "@anvarinho",
+        creatorId: "@anvarinho",
+        images: 'data.place.image'
+      },
+      robots: {
+          index: true,
+          follow: false,
+          nocache: true,
+          googleBot: {
+              index: true,
+              follow: false,
+          }
+      }
   }
 }
