@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
-import { getLangKeywords , getLangDescription, getLangName, getLangTitle } from "@/lib/getLang"
+import LoadingSpinner from "../../Components/LoadingSpinner"
 
 type Params = {
     params: {
@@ -18,29 +18,16 @@ type Params = {
 }
 
 export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
-    const placeData: Promise<PlaceData> = getPlace(placeUrl)
-    // const userData: Promise<Data> = getAllPlaces()
-    // // const [place, places] = await Promise.all([placeData, userData])
+    const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const data = await placeData
     const { page } = await getDictionary(lang)
     if (!data) notFound()
 
     return (
-        <>  
-            <Suspense fallback={<h3 className={styles.loading}>{page.loading}</h3>}>
+            <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
                 <PlaceArticle promise={placeData} lang={lang}/>
             </Suspense>
-        </>
     )
-}
-
-export async function generateStaticParams(){
-    const data: Promise<Places> = getAllPlaces()
-    const placesData = await data
-    return placesData.places.map( placeItem => ({
-        placeUrl: placeItem.place.url,
-        name: placeItem.place.name
-    }))
 }
 
 export async function generateMetadata({
@@ -49,42 +36,47 @@ export async function generateMetadata({
     params: { lang: Locale; placeUrl: string }
   }): Promise<Metadata> {
     const { page } = await getDictionary(lang)
-    const placeData: Promise<PlaceData> = getPlace(placeUrl)
-    const data = await placeData
+    const placeData: Promise<Place> = getPlace(placeUrl, lang)
+    const place = await placeData
     // console.log(data)
     // console.log("generateMetadata")
-    if (!data){
+    if (!place){
         return {
             title: "Place Not found"
         }
     }
     return {
         title: {
-            absolute: getLangName(lang, data.place) + ' | ' + page.name
+            absolute: place.title + ' | ' + page.name
         },
-        description: getLangDescription(lang, data.place),
-        keywords: getLangKeywords(lang, data.place),
+        description: place.description,
+        keywords: place.keywords,
         openGraph: {
-            images: `${data.place.image[0]}`,
+            images: `http://127.0.0.1:4000/${place.images[0]}`,
         },
         alternates: {
-            canonical: `en/places/${data.place.url}`,
+            canonical: `en/places/${place.url}`,
             languages: {
-                "en-EN": `en/places/${data.place.url}`,
-                "fr-FR": `fr/places/${data.place.url}`,
-                "de-DE": `de/places/${data.place.url}`,
-                "es-ES": `es/places/${data.place.url}`,
-                "ru-RU": `ru/places/${data.place.url}`
+                "en-EN": `en/places/${place.url}`,
+                "fr-FR": `fr/places/${place.url}`,
+                "de-DE": `de/places/${place.url}`,
+                "es-ES": `es/places/${place.url}`,
+                "ru-RU": `ru/places/${place.url}`,
+                "it-IT": `it/places/${place.url}`,
+                "jp-JP": `jp/places/${place.url}`,
+                "kr-KR": `kr/places/${place.url}`,
+                "ae-AE": `ae/places/${place.url}`,
+                "zh-CN": `cn/places/${place.url}`
             }
         },
         twitter: {
             card: "summary_large_image",
-            title: getLangTitle(lang, data.place),
-            description: getLangDescription(lang, data.place),
+            title: place.title,
+            description: place.description,
             siteId: "",
             creator: "@anvarinho",
             creatorId: "@anvarinho",
-            images: data.place.image
+            images: place.images
         },
         robots: {
             index: false,

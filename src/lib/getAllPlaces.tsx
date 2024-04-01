@@ -1,5 +1,5 @@
-export default async function getAllPlaces() {
-    const url = 'http://127.0.0.1:4000/places/';
+export default async function getAllPlaces(lang: string) {
+    const url = `http://159.65.95.44/api/places?lang=${lang}`;
     
     try {
       const res = await fetch(url);
@@ -8,7 +8,7 @@ export default async function getAllPlaces() {
         throw new Error('Failed to fetch data');
       }
       const data = await res.json();
-      // console.log(data)
+      console.log(data)
       return data;
     } catch (error) {
       console.error('Error:', error);

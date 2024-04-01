@@ -1,5 +1,5 @@
 export default async function getAllTours() {
-    const url = 'http://127.0.0.1:4000/tours/';
+    const url = 'http://159.65.95.44/api/tours/';
     
     try {
       const res = await fetch(url);
@@ -8,7 +8,7 @@ export default async function getAllTours() {
         throw new Error('Failed to fetch data');
       }
       const data = await res.json();
-      // console.log(data)
+      console.log(data)
       return data;
     } catch (error) {
       console.error('Error:', error);

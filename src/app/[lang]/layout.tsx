@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
 import Flags from './Components/Flags'
+import { getDictionary } from '../../lib/dictionary'
 
 
 export async function generateStaticParams() {
@@ -30,9 +31,9 @@ export default function RootLayout({
           <Navbar lang={params.lang}/>
           <section className={styles.section}>
           {children}
-          <Footer lang={params.lang}/>
           </section>
-          <ContactButton/>
+          <Footer lang={params.lang}/>
+          <ContactButton lang={params.lang}/>
           <Flags lang={params.lang}/>
         </main>
       </body>
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   },
   description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
   keywords: "Kyrgyzstan travel guide, Central Asia tourism, Bishkek city attractions, Issyk-Kul Lake, Tien Shan mountains, Silk Road history, Karakol trekking routes, Nomadic culture, Ala Archa National Park, Osh bazaar, Cultural festivals, Burana Tower, Kyrgyz cuisine, Son-Kul Lake, Sary-Chelek Nature Reserve, Historical sites, Petroglyphs, Kyrgyz yurts, Horseback riding tours, Pamir Highway, Arslanbob walnut forests, Kyrgyz handicrafts, Nomadic yurt stays, Song Kol horse trek, Sary-Mogol village, Tash Rabat caravanserai, Jyrgalan Valley, Sulaiman-Too Sacred Mountain, Kyrgyz art and music, Cultural etiquette in Kyrgyzstan",
-  category: 'travel',
+  category: 'Travel',
   openGraph: {
     images: "karakolcablelift.jpg",
   },

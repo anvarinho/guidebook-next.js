@@ -1,10 +1,70 @@
 .main{
     width: 100%;
     text-align: center;
+    padding: 5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main img{
+    padding: 1rem;
 }
   
-.placesDiv{
+.toursDiv{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.toursList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center; 
+}
+
+.toursList .tourBox{
+    position: relative;
+    height: 30rem;
+    aspect-ratio: 1/1.4;
+    object-fit: cover;
+    margin: 1.2rem;
+    /* overflow: hidden; */
+    align-items: end;
+}
+
+.toursList .tourBox h3{
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+}
+
+.article {
+    max-width: 65vw;
+}
+
+.article h4{
+    padding: 1rem;
+}
+
+.day {
+    padding: 1rem;
+    border-top: 1px solid rgba(125,125,125,0.4);
+    text-align: left;
+}
+
+.day p{
+    font-weight: bold;
+    padding: .3rem;
+}
+
+
+.dayImages{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center; 
 }

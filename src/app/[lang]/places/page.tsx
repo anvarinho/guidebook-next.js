@@ -5,6 +5,8 @@ import { Metadata } from 'next'
 import PlaceListItem from "./components/PlaceListItem";
 import { getDictionary } from '@/lib/dictionary'
 import { Locale } from '@/lib/i18n.config'
+import { LoadMore } from "./load-more";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 export default async function Places({
   params: {lang}
@@ -12,14 +14,13 @@ export default async function Places({
   params: {lang : Locale}
 }) {
     const { page } = await getDictionary(lang)
-    const baseUrl = 'http://127.0.0.1:4000/';
-    const data: Promise<Places> = getAllPlaces()
-    const placesData = await data
+    const data: Promise<[PlaceAlias]> = getAllPlaces(lang)
+    const places = await data
     // const arrayImages = placesData.places.map((place) => place.image)
     // const images = getBlurredDataUrls(arrayImages)
-    const content = placesData.places.map(async (place, i) => {
+    const content = places.map(async (place, i) => {
       return (
-          <PlaceListItem place={place} lang={lang}/>
+          <PlaceListItem key={i} place={place} lang={lang}/>
       )
     })
     return (
@@ -27,13 +28,16 @@ export default async function Places({
             <h1>{page.sights.title}</h1>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
-                  <Suspense fallback={<h3 className={styles.loading}>{page.loading}</h3>}>
+                  <Suspense fallback={
+                    <div className={styles.loadingSpinnerWrapper}>
+                      <LoadingSpinner text={page.loading} />
+                    </div>}>
                     {content}
-                    <br />
+                    <LoadMore lang={lang}/>
                   </Suspense>
               </div>
             </div>
-        </div>    
+        </div>
     )
 }
 

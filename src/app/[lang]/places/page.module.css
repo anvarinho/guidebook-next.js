@@ -1,9 +1,10 @@
 .main{
     width: 100%;
     text-align: center;
-    /* padding-top: 2.5rem; */
+    padding: 5rem 1rem 1rem 1rem;
     z-index: 1;
     min-height: 100vh;
+    overflow: hidden;
 }
   
   .placesDiv{
@@ -88,7 +89,14 @@
     margin-right: 0.4rem;
     border-radius: 0.3rem;
     text-align: left;
+    font-weight:lighter;
   }
+  
+  html[lang="ae"] .placesList .placeBox h4 {
+    right: .4rem;
+    text-align: right;
+  }
+
   .placesList .placeBox h6{
     position: absolute;
     top: .4rem; right: .4rem;
@@ -104,11 +112,10 @@
     opacity: 1;
   }
 
-  .loading{
+  .loadingSpinnerWrapper{
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translateX(-50%);
+    top: 20%;
+    left: 50%;
   }
   
 

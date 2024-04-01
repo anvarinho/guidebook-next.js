@@ -2,15 +2,18 @@
 import styles from './page.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation'
 
 import {
   faBars,
+  faL,
   faXmark
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function MenuButton() {
     const [showNavbar, setShowNavbar] = useState(false);
-    
+    const pathname = usePathname();
+
     const handleToggleNavbar = () => {
         const navbarElement = document.querySelector(`.${styles.navbar}`);
         setShowNavbar((showNavbar) => !showNavbar);
@@ -30,6 +33,15 @@ export default function MenuButton() {
             }
         }
       }, [showNavbar]);
+
+    useEffect(()=>{
+        if(showNavbar){
+            console.log(pathname, showNavbar)
+            handleToggleNavbar()
+        }
+    },[pathname])
+
+
     
     return (
         <a className={styles.menuBtn} onClick={handleToggleNavbar}>

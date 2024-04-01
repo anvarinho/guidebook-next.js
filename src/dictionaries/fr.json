@@ -2,17 +2,21 @@
   "page": {
       "name": "Guide du Kirghizistan",
       "loading": "Chargement...",
+      "contactButton": "Des questions ?",
       "navigation": [
           { "text": "Accueil", "url": "/" },
           { "text": "Sites", "url": "/places" },
           { "text": "Tours", "url": "/tours" },
-          { "text": "À propos", "url": "/about" },
-          { "text": "Contact", "url":  "/contact" }
+          { "text": "Histoires", "url": "/articles" },
+          { "text": "À propos", "url": "/about" }
       ],
       "home": {
           "title": "Bienvenue au Kirghizistan !",
           "description": "Découvrez la beauté et la culture du Kirghizistan grâce à notre guide touristique complet. Découvrez les attractions locales, planifiez votre aventure et profitez au maximum de votre voyage.",
-          "keywords": "Guide touristique du Kirghizistan, Confort de voyage, Attractions locales, Services touristiques, Conseils de voyage au Kirghizistan, Expériences culturelles, Planification de visites, Visites touristiques, Voyages d'aventure, Tours pratiques, Guide de la ville de Bichkek"
+          "keywords": "Guide touristique du Kirghizistan, Confort de voyage, Attractions locales, Services touristiques, Conseils de voyage au Kirghizistan, Expériences culturelles, Planification de visites, Visites touristiques, Voyages d'aventure, Tours pratiques, Guide de la ville de Bichkek",
+          "button": "Découvrons-le !",
+          "button1": "Où aller!",
+          "button2": "Que faire!"
       },
       "sights": {
           "title": "Sites les plus populaires du Kirghizistan",
@@ -24,11 +28,17 @@
           "description": "Partez pour des tours inoubliables qui mettent en valeur la splendeur du Kirghizistan. Choisissez parmi des tours d'aventure, culturels et de trekking, et laissez-nous vous guider à travers des paysages divers et captivants.",
           "keywords": "Tours au Kirghizistan, Tours d'aventure au Kirghizistan, Tours guidés au Kirghizistan, Tours culturels au Kirghizistan, Tours de trekking au Kirghizistan, Tours à cheval au Kirghizistan, Expériences nomades au Kirghizistan, Forfaits de voyage au Kirghizistan, Meilleurs tours au Kirghizistan, Explorez le Kirghizistan à travers des tours"
       },
-      "contact": {
-          "title": "Contactez-nous",
-          "description": "Contactez notre équipe pour des questions, de l'assistance ou pour planifier votre aventure au Kirghizistan. Nous sommes là pour vous aider à profiter au maximum de votre voyage.",
-          "keywords": "Contactez-nous, Prendre contact, Demandes de voyage au Kirghizistan, Assistance, Planification d'aventures, Informations sur les tours"
-      },
+      "articles": {
+        "title": "Le Kirghizistan : culture, traditions et nature",
+        "description": "Explorez la riche culture, les traditions vibrantes et la nature à couper le souffle du Kirghizistan à travers ces récits perspicaces. Des traditions anciennes comme la chasse à l'aigle et le kok-boru aux majestueux chiens Alabaï et aux aventures du Taïga, plongez au cœur de la culture kirghize.",
+        "keywords": [
+        "Culture kirghize", "Traditions kirghizes", "Nature kirghize", "Chasse à l'aigle", "Kok-boru",
+        "Chiens Alabaï", "Taïga", "Histoire kirghize", "Culture d'Asie centrale", "Héritage nomade",
+        "Exploration culturelle", "Sports traditionnels", "Lévriers kirghizes", "Expériences culturelles",
+        "Aventure au Kirghizistan", "Races patrimoniales", "Traditions culturelles", "Expériences uniques",
+        "Mode de vie kirghize"
+        ]
+        },
       "about": {
           "title": "À propos de nous",
           "description": "Découvrez notre passion pour le Kirghizistan et notre engagement à offrir des expériences de voyage exceptionnelles. Découvrez notre équipe, nos valeurs et notre mission.",
@@ -40,6 +50,72 @@
     },
     "download":{
         "text": "Téléchargez nos applications dès aujourd'hui et profitez d'un accès pratique à notre service sur votre appareil mobile ! Il vous suffit de cliquer sur le bouton !"
-    }
+    },
+    "footer": {
+        "sections": [
+          {
+            "title": "Liens Utiles",
+            "links": [
+              {
+                "text": "Accueil",
+                "url": "/"
+              },
+              {
+                "text": "Lieux à Visiter",
+                "url": "/places"
+              },
+              {
+                "text": "Visites",
+                "url": "/tours"
+              }
+            ]
+          },
+          {
+            "title": "Confidentialité et Mentions Légales",
+            "links": [
+              {
+                "text": "À Propos de Nous",
+                "url": "/about"
+              },
+              {
+                "text": "Nous Contacter",
+                "url": "/contact"
+              },
+              {
+                "text": "Politique de Confidentialité",
+                "url": "/privacy-policy"
+              }
+            ]
+          },
+          {
+            "title": "Coordonnées",
+            "info": {
+              "phone": "+996 500 490 806",
+              "email": "anvarinho@gmail.com",
+              "address": "Bichkek, Razzakov 49"
+            }
+          },
+          {
+            "title": "Comptes Sociaux",
+            "links": [
+                {
+                    "text": "@guidebookofkg",
+                    "icon":"instagram.svg",
+                    "url": "https://www.instagram.com/guidebookofkg"
+                },
+                {
+                    "text": "+996 500 490 806",
+                    "icon":"whatsapp.svg",
+                    "url": "https://wa.me/996500490806?text=Hello!!!"
+                },
+                {
+                    "text": "Développeur",
+                    "icon":"twitter.svg",
+                    "url": "https://twitter.com/anvarinho"
+                }
+            ]
+          }
+        ]
+    }      
   }
 }

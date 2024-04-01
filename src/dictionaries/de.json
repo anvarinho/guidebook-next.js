@@ -2,17 +2,21 @@
     "page": {
         "name": "Reiseführer für Kirgisistan",
         "loading": "Laden...",
+        "contactButton": "Noch Fragen?",
         "navigation": [
             { "text": "Startseite", "url": "/" },
             { "text": "Sehenswürdigkeiten", "url": "/places" },
             { "text": "Touren", "url": "/tours" },
-            { "text": "Über uns", "url": "/about" },
-            { "text": "Kontakt", "url":  "/contact" }
+            { "text": "Geschichten", "url": "/articles" },
+            { "text": "Über uns", "url": "/about" }
         ],
         "home": {
             "title": "Willkommen in Kirgisistan!",
             "description": "Erleben Sie die Schönheit und Kultur Kirgisistans durch unseren umfassenden Touristenführer. Entdecken Sie lokale Attraktionen, planen Sie Ihr Abenteuer und machen Sie das Beste aus Ihrer Reise.",
-            "keywords": "Kirgisistan Touristenführer, Reisekomfort, Lokale Attraktionen, Touristische Dienstleistungen, Kyrgyz Reisetipps, Kulturelle Erfahrungen, Tourenplanung, Besichtigungen, Abenteuerreisen, Bequeme Touren, Bishkek Stadtführer"
+            "keywords": "Kirgisistan Touristenführer, Reisekomfort, Lokale Attraktionen, Touristische Dienstleistungen, Kyrgyz Reisetipps, Kulturelle Erfahrungen, Tourenplanung, Besichtigungen, Abenteuerreisen, Bequeme Touren, Bishkek Stadtführer",
+            "button": "Lass uns herausfinden!",
+            "button1": "Wohin gehen!",
+            "button2": "Was zu tun ist!"
         },
         "sights": {
             "title": "Beliebteste Orte in Kirgisistan",
@@ -24,11 +28,17 @@
             "description": "Begib dich auf unvergessliche Touren, die die Pracht Kirgisistans zeigen. Wähle aus Abenteuer-, Kultur- und Trekking-Touren und lass uns dich durch die vielfältigen und fesselnden Landschaften führen.",
             "keywords": "Kirgisistan Touren, Abenteuer Touren Kirgisistan, Geführte Touren Kirgisistan, Kultur Touren Kirgisistan, Trekking Touren Kirgisistan, Reiten Touren Kirgisistan, Nomadische Erfahrungen Kirgisistan, Kirgisistan Reisepakete, Beste Touren in Kirgisistan, Kirgisistan erkunden durch Touren"
         },
-        "contact": {
-            "title": "Kontaktieren Sie uns",
-            "description": "Treten Sie mit unserem Team in Kontakt für Anfragen, Unterstützung oder zur Planung Ihres Kirgisistan-Abenteuers. Wir sind hier, um Ihnen zu helfen, das Beste aus Ihrer Reise herauszuholen.",
-            "keywords": "Kontaktieren Sie uns, In Kontakt treten, Kirgisistan Reiseanfragen, Unterstützung, Abenteuerplanung, Tourinformationen"
-        },
+        "articles": {
+          "title": "Kirgisistan: Kultur, Traditionen und Natur",
+          "description": "Entdecken Sie die reiche Kultur, die lebendigen Traditionen und die atemberaubende Natur Kirgisistans durch diese aufschlussreichen Geschichten. Tauchen Sie ein in das Herz der kirgisischen Kultur, von alten Traditionen wie der Adlerjagd und dem Kok-Boru bis hin zu den majestätischen Alabai-Hunden und dem abenteuerlichen Taigan.",
+          "keywords": [
+          "Kirgisische Kultur", "Kirgisische Traditionen", "Kirgisische Natur", "Adlerjagd", "Kok-Boru",
+          "Alabai-Hunde", "Taigan", "Kirgisische Geschichte", "Zentralasiatische Kultur", "Nomadisches Erbe",
+          "Kulturelle Entdeckung", "Traditioneller Sport", "Kirgisische Windhunde", "Kulturelle Erlebnisse",
+          "Abenteuer in Kirgisistan", "Alte Haustierrassen", "Kulturelle Traditionen", "Einzigartige Erlebnisse",
+          "Kirgisischer Lebensstil"
+          ]
+          },
         "about": {
             "title": "Über uns",
             "description": "Erfahren Sie mehr über unsere Leidenschaft für Kirgisistan und unser Engagement, außergewöhnliche Reiseerlebnisse zu bieten. Entdecken Sie unser Team, unsere Werte und unsere Mission.",
@@ -40,6 +50,72 @@
         },
         "download":{
             "text": "Laden Sie heute unsere Apps herunter und genießen Sie bequemen Zugriff auf unseren Service auf Ihrem mobilen Gerät! Klicken Sie einfach auf die Schaltfläche!"
-        }
+        },
+        "footer": {
+            "sections": [
+              {
+                "title": "Nützliche Links",
+                "links": [
+                  {
+                    "text": "Startseite",
+                    "url": "/"
+                  },
+                  {
+                    "text": "Sehenswürdigkeiten",
+                    "url": "/places"
+                  },
+                  {
+                    "text": "Touren",
+                    "url": "/tours"
+                  }
+                ]
+              },
+              {
+                "title": "Datenschutz und Rechtliches",
+                "links": [
+                  {
+                    "text": "Über Uns",
+                    "url": "/about"
+                  },
+                  {
+                    "text": "Kontaktieren Sie uns",
+                    "url": "/contact"
+                  },
+                  {
+                    "text": "Datenschutzrichtlinie",
+                    "url": "/privacy-policy"
+                  }
+                ]
+              },
+              {
+                "title": "Kontaktinformationen",
+                "info": {
+                  "phone": "+996 500 490 806",
+                  "email": "anvarinho@gmail.com",
+                  "address": "Bishkek, Razzakov 49"
+                }
+              },
+              {
+                "title": "Soziale Konten",
+                "links": [
+                    {
+                        "text": "@guidebookofkg",
+                        "icon":"instagram.svg",
+                        "url": "https://www.instagram.com/guidebookofkg"
+                    },
+                    {
+                        "text": "+996 500 490 806",
+                        "icon":"whatsapp.svg",
+                        "url": "https://wa.me/996500490806?text=Hello!!!"
+                    },
+                    {
+                        "text": "Entwickler",
+                        "icon":"twitter.svg",
+                        "url": "https://twitter.com/anvarinho"
+                    }
+                ]
+              }
+            ]
+        }          
     }
 }

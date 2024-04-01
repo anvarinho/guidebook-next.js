@@ -7,25 +7,95 @@
    text-decoration: none;
    align-items: center;
    justify-content: center;
-   padding-top: 2.5rem;
+   margin-top: 2.5rem;
 }
 
 .section {
   width: 100%;
-  padding: 1rem;
-  padding-top: 2rem;
+  /* padding: 1rem; */
+  /* padding-top: 2rem; */
   min-height: 100vh;
-  /* display: flex;
-  padding: 3rem 1rem 1rem 1rem; */
+  margin-top: -2.5rem;
+  /* display: flex; */
+  /* padding: 3rem 1rem 1rem 1rem; */
 }
 
 .mainDiv{
   width: 100%;
   text-align: center;
+  transition: all .3s ease-in;
 }
 
-@media (max-width:991px){
-  .section{
-    padding-top: 3.2rem;
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
   }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}
+.buttons{
+  display: flex;
+  padding: 1rem;
+}
+
+.floatingButton {
+  /* animation: float 3s ease-in-out infinite; */
+  display: inline-block;
+  padding: 10px 30px;
+  /* background-color: #007bff; Choose your desired background color */
+  /* color: var(--main-active-color); */
+  background: rgba(255,255,255,.4); /* Change the background color on hover */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  border-radius: 12px;
+  /* border:.2rem solid var(--main-active-color); */
+  text-decoration: none;
+  font-weight:bolder;
+  transition: all 0.3s ease-in;
+  margin: 1rem;
+}
+
+.floatingButton:hover {
+  /* color: rgba(0,0,0,1); */
+  background: rgba(0,0,0,.4); /* Change the background color on hover */
+}
+
+.home{  
+  background: url('../../../public/karakolcablelift.jpg') no-repeat rgba(0,0,0,0.4);
+   background-position: center;
+   /* background-attachment: fixed; */
+   background-size: cover;
+   background-blend-mode: multiply;
+   min-height: 100vh;
+   /* margin: -5.5rem -2rem 0 -2rem; */
+   /* padding: 3rem; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+   position: relative;
+   text-align: center;
+}
+
+.home h4{
+  max-width: 800px;
+}
+
+.chooseLanguage{
+  position: absolute;
+  bottom: 4rem; left: 2rem;
+  text-align: left;
+}
+
+.downloadApps{
+  position: absolute;
+  background:rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  right: 1.5rem;
+  bottom: .5rem;
+  text-align: center;
+  margin: .8rem;
+  border-radius: 1rem;
 }

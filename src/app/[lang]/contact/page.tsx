@@ -12,22 +12,22 @@ export default async function Home({
   const { page } = await getDictionary(lang)
   return (
     <div className={styles.main}>
-      <h1>{page.contact.title}</h1>
+      <h1>Contact Us</h1>
     </div>
   )
 }
 
-export async function generateMetadata({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}): Promise<Metadata> {
-  const { page } = await getDictionary(lang)
-  return {
-      title: {
-        absolute: page.contact.title + ' | ' + page.name
-      },
-      description: page.contact.description,
-      keywords: page.contact.keywords,
-  }
-}
+// export async function generateMetadata({
+//   params: {lang}
+// }: {
+//   params: {lang : Locale}
+// }): Promise<Metadata> {
+//   const { page } = await getDictionary(lang)
+//   return {
+//       title: {
+//         absolute: page.contact.title + ' | ' + page.name
+//       },
+//       description: page.contact.description,
+//       keywords: page.contact.keywords,
+//   }
+// }

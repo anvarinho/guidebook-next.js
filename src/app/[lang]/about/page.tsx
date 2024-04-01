@@ -11,8 +11,9 @@ export default async function Home({
 }) {
   const { page } = await getDictionary(lang)
   return (
-    <div className={styles.main}>
+    <div className={styles.about}>
       <h1>{page.about.title}</h1>
+      <h3>{page.about.description}</h3>
     </div>
   )
 }

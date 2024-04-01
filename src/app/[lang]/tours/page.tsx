@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import getAllTours from '@/lib/getAllTours'
+import Image from "next/image";
+import getBase64 from "@/lib/getLocalBase64"
 
 
 export default async function Home({
@@ -13,11 +15,27 @@ export default async function Home({
     const { page } = await getDictionary(lang)
     const data: Promise<[Tour]> = getAllTours()
     const toursData = await data
-    console.log(toursData)
+    const baseUrl = 'http://127.0.0.1:4000/';
+    // const blurDataURL = await getBase64(baseUrl + place.images[0])
+    // console.log(toursData)
     return (
       <div className={styles.main}>
         <h1>{page.tours.title}</h1>
-        <a href={`tours/${toursData[0].url}`}>{toursData[0].name}</a>
+        <div className={styles.toursDiv}>
+          <div className={styles.toursList}>
+          {toursData.map((tour, index) => (
+            <a key={index} href={`tours/${tour.url}`} className={styles.tourBox}>
+              <Image
+                fill
+                src={baseUrl + tour.images[0]}
+                alt={tour.url}
+                //  sizes='(max-width: 768px) 100%, (max-width: 1200px) 50%, 33%' 
+                objectFit='cover'
+                />
+              <h3>{tour.title} {tour.days.length}</h3></a>
+          ))}
+          </div>
+        </div>
       </div>
     )
 }

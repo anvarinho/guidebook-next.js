@@ -1,27 +1,35 @@
 type Place = {
     "_id": string,
-    "name": Translations,
-    "title": Translations,
-    "region": Translations,
+    "name": string,
+    "title": string,
+    "region": string,
     "created": Date,
-    "description": Translations,
-    "keywords": Translations,
+    "description": string,
+    "keywords": string,
     "url": string,
-    "image": [string],
+    "images": [string],
+    "sights": [string]?,
     "viewCount": number,
-    "weather": Weather?
 }
+
 type Tour = {
     "_id": string,
-    "name": string,
     "title": string,
     "created": Date,
     "description": string,
     "keywords": string,
     "url": string,
-    "image": [string],
+    "images": [string],
     "viewCount": number,
+    "days": [Day]
 }
+
+type Day = {
+    "activities": [string],
+    "images": [string],
+    "places": [string]
+}
+
 type Translations = {
     "en": string,
     "fr": string,
@@ -35,8 +43,15 @@ type Translations = {
     "cn": string,
 }
 
-type PlaceData = {
-    "place": Place
+type PlaceAlias = {
+    "_id": string,
+    "name": string,
+    "title": string,
+    "region": string,
+    "url": string,
+    // "blurDataURL": string?,
+    "images": [string],
+    "weather": Weather?
 }
 
 type TourData = {
@@ -52,10 +67,29 @@ type Weather = {
 
 type Places = {
     "count": number,
-    "places": [PlaceData]
+    "places": [PlaceAlias]
 }
 
 type Tours = {
     "count": number,
     "tours": [TourData]
+}
+
+type Article = {
+    "_id": string,
+    "title": string,
+    "subtitle": string,
+    "image": string?,
+    "paragraphs": [Paragraph],
+    "url": string,
+    "viewCount": number,
+    "createdAt": Date,
+    "keywords": string
+}
+
+type Paragraph = {
+    "title": string,
+    "text": string,
+    "image": string?,
+    "link": string?,
 }
