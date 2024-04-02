@@ -52,7 +52,7 @@ export async function generateMetadata({
         description: place.description,
         keywords: place.keywords,
         openGraph: {
-            images: `http://127.0.0.1:4000/${place.images[0]}`,
+            images: `http://159.65.95.44/${place.images[0]}`,
         },
         alternates: {
             canonical: `en/places/${place.url}`,

@@ -51,7 +51,7 @@ const nextConfig = {
   },
   images: {
     domains: ["159.65.95.44", "172.20.10.4", "127.0.0.1"], // Add your external image domains here
-    // unoptimized: true,
+    unoptimized: true,
   },
   webpack(config) {
     config.infrastructureLogging = { debug: /PackFileCache/ };
@@ -59,7 +59,7 @@ const nextConfig = {
   },
   experimental: {
     serverActions: true,
-  },
+  }
 };
 
 
