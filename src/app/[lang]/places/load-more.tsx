@@ -9,6 +9,7 @@ import Image from "next/image";
 import getBase64 from "@/lib/getLocalBase64"
 // import { getLangName, getLangRegions } from "@/lib/getLang";
 import PlaceListItem from "./components/PlaceListItem";
+import ImageLoader from "../Components/ImageLoader";
 
 export function LoadMore({ lang }: { lang: Locale }) {
     const [places, setPlaces] = useState<PlaceAlias[]>([]);
@@ -62,19 +63,18 @@ export function LoadMore({ lang }: { lang: Locale }) {
         <>
             {places.length !== 0 ? (
                 places.map((place) => (
-                    <div  className={styles.placeBox} key={place._id}>
-                        <Link href={`places/${place.url}`} target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src={baseUrl + place.images[0]}
-                            alt={place.name}
-                            className={styles.placeImg}
-                            height={360}
-                            width={640}
-                            priority/>
-                        </Link>
+                    <Link className={styles.placeBox} key={place._id} href={`places/${place.url}`} target="_blank" rel="noopener noreferrer">
+                    <Image
+                        src={baseUrl + place.images[0]}
+                        alt={place.name}
+                        className={styles.placeImg}
+                        height={360}
+                        width={640}
+                        priority/>
+                        {/* <ImageLoader image={`places/${place.url}`} /> */}
                         <h4>{place.title}</h4>
                         <h6>{place.region}</h6>
-                    </div>
+                    </Link>
                 ))
             ) : (
                 <></>
