@@ -15,6 +15,7 @@ export function LoadMore({ lang }: { lang: Locale }) {
     const [places, setPlaces] = useState<PlaceAlias[]>([]);
     const [page, setPage] = useState(0);
     const { ref, inView } = useInView();
+    const [isLoading, setIsLoading] = useState(false);
     const baseUrl = 'http://159.65.95.44/';
     // const blurDataURL = await getBase64(baseUrl + place.image[0])
 
@@ -22,6 +23,7 @@ export function LoadMore({ lang }: { lang: Locale }) {
 
     const loadMorePlaces = async () => {
         // await delay(2000);
+        setIsLoading(true)
         const nextPage = page + 1;
         const url = `http://159.65.95.44/api/places/more?lang=${lang}&offset=${nextPage * 12}&limit=12`;
 
@@ -32,6 +34,8 @@ export function LoadMore({ lang }: { lang: Locale }) {
             // // Update places state with new places
             setPlaces((prevPlaces) => [...prevPlaces, ...data.places]);
             setPage(nextPage);
+            setIsLoading(false)
+
             // Update places state with new places and blurDataUrl
             // setPlaces((prevPlaces) => {
             //     const updatedPlaces = data.places.map((place: PlaceAlias) => {
@@ -63,6 +67,7 @@ export function LoadMore({ lang }: { lang: Locale }) {
         <>
             {places.length !== 0 ? (
                 places.map((place) => (
+                    // <PlaceListItem key={place._id} place={place} lang={lang}/>
                     <Link className={styles.placeBox} key={place._id} href={`places/${place.url}`} target="_blank" rel="noopener noreferrer">
                     <Image
                         src={baseUrl + place.images[0]}
@@ -71,7 +76,6 @@ export function LoadMore({ lang }: { lang: Locale }) {
                         height={360}
                         width={640}
                         priority/>
-                        {/* <ImageLoader image={`places/${place.url}`} /> */}
                         <h4>{place.title}</h4>
                         <h6>{place.region}</h6>
                     </Link>
@@ -79,9 +83,15 @@ export function LoadMore({ lang }: { lang: Locale }) {
             ) : (
                 <></>
             )}
-            <h5 ref={ref}>No more places yet...</h5>
+            {isLoading && places.length < 140 ? (
+                <div className={styles.center}>
+                    <div className={styles.ring}></div>
+                    <span className={styles.loadingText}>Loading</span>
+                </div>
+            ):(
+                <h5 ref={ref}>No more places yet...</h5>
+            )}
         </>
-        
     );
 }
 

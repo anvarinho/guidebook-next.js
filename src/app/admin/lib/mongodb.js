@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 
 // Define the connection URL and the database name
 const url = 'mongodb://localhost:27017';
-const dbName = 'my_database';
+const dbName = 'guidebook';
 
 // Create a global variable to store the database connection
 let cachedDb = null;

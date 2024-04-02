@@ -11,7 +11,7 @@ type Params = {
 }
 
 export default async function Tour({ params: {tourUrl, lang}}: Params) {
-    const baseUrl = 'http://127.0.0.1:4000/';
+    const baseUrl = 'http://159.65.95.44/';
     const tourData: Promise<TourData> = getTour(tourUrl)
     const data = await tourData
     return (
