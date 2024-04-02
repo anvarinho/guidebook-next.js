@@ -37,8 +37,6 @@
     transform: scale(0.5); /* Initially scaled down */
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
-
- 
   
   /* Apply the animation when the element becomes visible */
   .placesList .placeBox {
@@ -148,3 +146,59 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+
+  /* Loading Animation */
+  .center{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+  }
+  .ring{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: ring 1s linear infinite;
+  }
+  @keyframes ring {
+    0%{
+      transform: rotate(0deg);
+      box-shadow: 1px 1px 2px #ffa;
+    }
+    50%{
+      transform: rotate(180deg);
+      box-shadow: 1px 1px 2px #aaa;
+    }
+    100%{
+      transform: rotate(360deg);
+      box-shadow: 1px 1px 2px #fff;
+    }
+  }
+  .ring:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255,255,255,.3);
+  }
+  .loadingText{
+    color: #737373;
+    font-size: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+    animation: text 2s ease-in-out infinite;
+  }
+  @keyframes text {
+    50%{
+      color: black;
+    }
+  }

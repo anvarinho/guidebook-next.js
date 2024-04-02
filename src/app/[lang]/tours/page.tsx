@@ -15,7 +15,7 @@ export default async function Home({
     const { page } = await getDictionary(lang)
     const data: Promise<[Tour]> = getAllTours()
     const toursData = await data
-    const baseUrl = 'http://127.0.0.1:4000/';
+    const baseUrl = 'http://159.65.95.44/';
     // const blurDataURL = await getBase64(baseUrl + place.images[0])
     // console.log(toursData)
     return (
