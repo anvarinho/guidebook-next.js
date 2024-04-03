@@ -1,0 +1,110 @@
+.team {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 5rem 1rem 1rem 1rem;
+    background: url('../../../../../public/yurt-bg.jpg') no-repeat rgba(0,0,0,0.6);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+ }
+ 
+.team__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+.team__member{ 
+    background-color: var(--light-bg);
+    backdrop-filter: blur(.4rem);
+    -webkit-backdrop-filter:blur(2px);
+    padding: 2rem;
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .team__member:hover{
+    background-color: var(--light-black);
+ }
+ 
+ .team__member_image img {
+    filter: saturate(1);
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1.12;
+    border-radius: 1rem;
+ }
+ 
+ .team__member:hover img {
+    filter: saturate(0);
+ }
+ 
+ .team__member-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+ }
+ 
+ .team__member-info h4 {
+    font-size: 2rem;
+    color: #eef3db;
+ }
+ 
+ .team__member-info p {
+    color: var(--main-color);
+ }
+ 
+ .team__member-socials a {
+    padding: 1rem;
+ }
+
+ /* ========== Media Queries ========== */
+
+@media screen and (max-width: 1024px) {
+    .team__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .team__member {
+        padding: 1rem;
+    }
+ }
+ 
+ /* ========== Media Queries - Mobile ========== */
+ 
+ @media screen and (max-width: 600px) {
+    .team__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+ 
+    .team__member p {
+        margin-bottom: 1.5rem;
+    }
+ }
+
+ .floatingButton {
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(255,255,255,.4); /* Change the background color on hover */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    border-radius: 12px;
+  
+    text-decoration: none;
+    font-weight:bolder;
+    transition: all 0.3s ease-in;
+    margin: 1rem;
+  }
+  
+  .floatingButton:hover {
+    background: rgba(0,0,0,.4);
+  }
+
+ 
