@@ -54,7 +54,12 @@ margin-top: 15px;
   transition: all .3s ease-in-out;
 }
 
+.hero a h3{
+  color: var(--main-active-color);
+}
+
 .hero a:hover{
+  text-decoration: underline;
   color: var(--main-active-color);
 }
 

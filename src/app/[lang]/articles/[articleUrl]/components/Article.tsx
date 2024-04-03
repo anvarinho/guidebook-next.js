@@ -1,8 +1,8 @@
 import styles from '../page.module.css'
-import Link from "next/link";
+// import Link from "next/link";
 import getBase64 from "@/lib/getLocalBase64"
 import { Locale } from "@/lib/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
+// import { getDictionary } from "@/lib/dictionary";
 import Paragraph from './Paragraph'
 
 import Image from "next/image";
@@ -36,25 +36,6 @@ export default async function Article({ article, lang }: Props) {
         </div>
         {article.paragraphs.map((paragraph, index) => (
           <Paragraph key={index} paragraph={paragraph} lang={lang}/>
-          // <section key={index} className={styles.hero}>
-          //   {paragraph.image && (
-          //       <Image
-          //       src={baseUrl + paragraph.image}
-          //       alt={lang}
-          //       // className={styles.flag}
-          //       height={400}
-          //       width={600}
-          //   />
-          //   )}
-          //   {paragraph.link ? (
-          //     <Link href={`${baseUrl1}${lang}/${paragraph.link}`} target='_blank'>
-          //       <h6>read more</h6>
-          //       <h3>{paragraph.title}</h3>
-          //     </Link>
-          //   ): <h3>{paragraph.title}</h3>}
-          //   <p>{paragraph.text}</p>
-          //   
-          // </section>
         ))}
       </article>
   )
