@@ -18,7 +18,7 @@ export default async function getAllPlaces(lang: string) {
 
 export async function getPlacesByURLs(lang: string, urls:[string] | null) {
   try {
-    const url = `http://127.0.0.1:4000/api/places/home?lang=${lang}&urls=${urls?.map(encodeURIComponent).join(',')}`;
+    const url = `http://159.65.95.44/api/places/home?lang=${lang}&urls=${urls?.map(encodeURIComponent).join(',')}`;
     try {
       const res = await fetch(url);
       if (!res.ok) {
