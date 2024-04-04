@@ -5,7 +5,7 @@ import styles from './homeplaces.module.css'
 import { Locale } from "@/lib/i18n.config";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ImageLoader from "../ImageLoader";
+import ImageLoader from "../image/ImageLoader";
 import Link from "next/link";
 import {
     faArrowLeft,

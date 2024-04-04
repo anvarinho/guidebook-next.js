@@ -9,7 +9,7 @@ import Image from "next/image";
 import getBase64 from "@/lib/getLocalBase64"
 // import { getLangName, getLangRegions } from "@/lib/getLang";
 import PlaceListItem from "./components/PlaceListItem";
-import ImageLoader from "../Components/ImageLoader";
+import ImageLoader from "../Components/image/ImageLoader";
 
 export function LoadMore({ lang }: { lang: Locale }) {
     const [places, setPlaces] = useState<PlaceAlias[]>([]);

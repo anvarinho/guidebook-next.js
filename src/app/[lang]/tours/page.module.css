@@ -50,6 +50,10 @@
     border-radius: .3rem;
 }
 
+.toursList .tourBox .meta h4 span{
+    color: var(--main-active-color);
+}
+
 .toursList .tourBox .content {
     margin-top: auto;
     background-color: rgba(0, 0, 0, 0.7);
@@ -78,45 +82,4 @@
     -webkit-backdrop-filter:blur(3px);
     border-radius: .3rem;
     margin-top: .3rem;
-}
-
-.article {
-    max-width: 65vw;
-}
-
-.article h4{
-    padding: 1rem;
-}
-
-.day {
-    padding: 1rem;
-    border-top: 1px solid rgba(125,125,125,0.4);
-    text-align: left;
-}
-
-.day p{
-    font-weight: bold;
-    padding: .3rem;
-}
-
-
-.dayImages{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center; 
-}
-
-
-@media (max-width:991px){
-    .toursList{
-        grid-template-columns: repeat(2, 1fr);
-        gap: .4rem;
-    }
-  }
-
-@media (max-width:768px){
-    .toursList{
-        grid-template-columns: repeat(1, 1fr);
-    }
 }

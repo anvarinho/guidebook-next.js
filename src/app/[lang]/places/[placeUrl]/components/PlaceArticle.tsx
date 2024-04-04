@@ -4,6 +4,7 @@ import getBase64 from "@/lib/getLocalBase64"
 import { Locale } from "@/lib/i18n.config";
 // import { getLangDescription, getLangTitle, getLangName } from "@/lib/getLang";
 import { getDictionary } from "@/lib/dictionary";
+import ImageSlider from "@/app/[lang]/Components/image/ImageSlider";
 
 // import Head from 'next/head';
 
@@ -22,8 +23,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     return (
         <article className={styles.main}>
             <h1>{place.name}</h1>
-            <Image src={baseUrl + place.images[0]} alt={place.images[0]} width={600} height={400} placeholder="blur" blurDataURL={blurDataURL} priority/>
-            {/* <img src={baseUrl + place.place.image} alt="" /> */}
+            <ImageSlider items={place.images}/>
             <h4>{place.title}</h4>
             <div className={styles.info}>
                 <p>{page.info.created}{createdDate?.toLocaleDateString()}</p>
