@@ -38,8 +38,14 @@ export async function generateMetadata({
     const { page } = await getDictionary(lang)
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const place = await placeData
-    // console.log(data)
-    // console.log("generateMetadata")
+    const description = place.description.substring(0, 150)
+    const images = place.images.map(image => ({
+        url: `http://159.65.95.44/${image}`,
+        width: 800,
+        height: 600,
+        alt: place.title
+    }))
+
     if (!place){
         return {
             title: "Place Not found"
@@ -49,10 +55,17 @@ export async function generateMetadata({
         title: {
             absolute: place.title + ' | ' + page.name
         },
-        description: place.description,
+        description: description,
         keywords: place.keywords,
+        applicationName: 'GuideBook of Kyrgyzstan',
         openGraph: {
-            images: `http://159.65.95.44/${place.images[0]}`,
+            title: place.title + ' | ' + page.name,
+            description: description,
+            url: 'https://central-asia.live/',
+            siteName: 'GuideBook of Kyrgyzstan',
+            images: images,
+            locale: 'en_US',
+            type: 'website',
         },
         alternates: {
             canonical: `en/places/${place.url}`,
@@ -72,11 +85,11 @@ export async function generateMetadata({
         twitter: {
             card: "summary_large_image",
             title: place.title,
-            description: place.description,
+            description: description,
             siteId: "",
             creator: "@anvarinho",
             creatorId: "@anvarinho",
-            images: place.images
+            images: images
         },
         robots: {
             index: false,
