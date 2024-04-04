@@ -14,3 +14,38 @@ export default async function getAllArticles(lang: string) {
       throw error; // Re-throw the error to handle it at the caller's level
     }
 }
+
+export async function getArticle(articleUrl: string, lang: string) {
+  const res = await fetch(`http://159.65.95.44/api/articles/${articleUrl}?lang=${lang}`, {next: {revalidate: 60}})
+  // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
+  // if (!res.ok) throw new Error('Failed to fetch place')
+  if (!res.ok) return undefined
+  // console.log(res.json())
+  return res.json()
+}
+
+export async function sitemapArticles() {
+  // Define an asynchronous function to fetch articles data
+  const loadArticles = async () => {
+      const url = `http://127.0.0.1:4000/articles`;
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data;
+      } catch (error) {
+          console.error("Error fetching articles:", error);
+      }
+  };
+
+  // Call the loadArticles function to get the Promise<[Article]> data
+  const data: Promise<[Article]> = loadArticles();
+
+  // Wait for the Promise to resolve and get the articlesData
+  const articlesData = await data;
+
+  // Map over the articlesData array and return a new array of objects
+  return articlesData.map((article: Article) => ({
+      placeUrl: article.url,
+      lastModified: article.createdAt
+  }));
+}
