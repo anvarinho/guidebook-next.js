@@ -1,12 +1,18 @@
 import { MetadataRoute } from 'next'
 import { i18n } from '@/lib/i18n.config';
+import { sitemapPlaces } from '@/lib/getAllPlaces';
+import { sitemapArticles } from '@/lib/getAllArticles';
+import { sitemapTours } from '@/lib/getAllTours';
  
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
-    const URL = "http://127.0.0.1:3000";
+    const URL = "https://central-asia.live";
     const languages = i18n.locales;
     // const languages = ['en', 'de', 'fr', 'it', 'es', 'kr', 'jp', 'cn', 'ae', 'ru']
     // const placesData = await generateStaticParamsPlaces();
     // const articlesData = await generateStaticParamsArticles()
+    const places = await sitemapPlaces()
+    const articles = await sitemapArticles()
+    const tours = await sitemapTours()
     const routes = ["/", "/places", "/tours", "/about", "/articles"];
     const currentDate = new Date().toISOString();
     
@@ -17,25 +23,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             pages.push({
                 url: `${URL}/${lang}${route}`,
                 lastModified: currentDate,
+                changefreq: 'monthly',
+                priority: 0.8
             });
         }
-
-        // for (const place of placesData) {
-        //     // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
-        //     pages.push({
-        //         url: `${URL}/${lang}/places/${place.placeUrl}`,
-        //         lastModified: place.lastModified,
-        //     });
-        // }
-        // for (const article of articlesData) {
-        //     // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
-        //     pages.push({
-        //         url: `${URL}/${lang}/articles/${article.placeUrl}`,
-        //         lastModified: article.lastModified,
-        //     });
-        // }
+        for (const place of places) {
+            // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
+            pages.push({
+                url: `${URL}/${lang}/places/${place.placeUrl}`,
+                lastModified: place.lastModified,
+                changefreq: 'monthly',
+                priority: 0.8
+            });
+        }
+        for (const article of articles) {
+            // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
+            pages.push({
+                url: `${URL}/${lang}/articles/${article.placeUrl}`,
+                lastModified: article.lastModified,
+                changefreq: 'monthly',
+                priority: 0.9
+            });
+        }
+        for (const tour of tours) {
+            // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
+            pages.push({
+                url: `${URL}/${lang}/tours/${tour.tourUrl}`,
+                lastModified: "2024-04-04T19:51:29.199Z",
+                changefreq: 'monthly',
+                priority: 1
+            });
+        }
     }
-
     return pages;
 }
 

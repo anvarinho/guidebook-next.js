@@ -51,6 +51,7 @@ type PlaceAlias = {
     "url": string,
     // "blurDataURL": string?,
     "images": [string],
+    "created": Date,
     "weather": Weather?
 }
 

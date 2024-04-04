@@ -15,7 +15,7 @@
 .slider {
     position: relative;
     display: flex;
-    width: 90%;
+    width: 100%;
     aspect-ratio: 1.9/1;
     border-radius: 10px;
     overflow: hidden;

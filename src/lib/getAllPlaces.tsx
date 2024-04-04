@@ -39,3 +39,32 @@ export async function getPlacesByURLs(lang: string, urls:[string] | null) {
     console.error('Error fetching data:', error);
   } 
 }
+
+export async function getPlace(placeId: string, lang: string) {
+  const res = await fetch(`http://159.65.95.44/api/places/${placeId}?lang=${lang}`, {next: {revalidate: 60}})
+  // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
+  // if (!res.ok) throw new Error('Failed to fetch place')
+  if (!res.ok) return undefined
+  // console.log(res.json())
+  return res.json()
+}
+
+export async function sitemapPlaces() {
+  const loadPlaces = async () => {
+      const url = `http://127.0.0.1:4000/api/places/more?offset=0&limit=160`;
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data;
+      } catch (error) {
+          console.error("Error fetching places:", error);
+      }
+  };
+
+  const data: Promise<Places> = loadPlaces();
+  const placesData = await data;
+  return placesData.places.map((placeItem) => ({
+      placeUrl: placeItem.url,
+      lastModified: placeItem.created
+  }));
+}

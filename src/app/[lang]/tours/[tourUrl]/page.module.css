@@ -36,8 +36,45 @@
 }
 
 .day p{
-    font-weight: bold;
+    font-weight: lighter;
     padding: .3rem;
 }
+
+.day .sights{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.button{
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(255,255,255,.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight:500;
+    transition: all 0.3s ease-in;
+    margin: .2rem;
+}
+
+.button:hover {
+    background: rgba(111,111,111,.4);
+    color: var(--main-active-color);
+}
+
+@media (max-width:991px){
+    .sights{
+        grid-template-columns: repeat(3, 1fr);
+        gap: .4rem;
+    }
+}
+
+
+
 
 

@@ -5,6 +5,7 @@ import ImageSlider from '../../Components/image/ImageSlider';
 import { Metadata } from 'next'
 import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
+import DayView from './DayView';
 
 type Params = {
     params: {
@@ -30,17 +31,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     </div>
                     <h4>{data.tour.description}</h4>
                     {data.tour.days.map((day, index) => (
-                        <div key={index} className={styles.day}>
-                            <h2>Day: {index + 1}</h2>
-                            <br />
-                            <div className={styles.dayImages}>
-                                <ImageSlider items={day.images}/>
-                            </div>
-                            <br />
-                            {day.activities.map((activity, i) => (
-                                <p key={i}>{activity}</p>
-                            ))}
-                        </div>
+                        <DayView key={index} params={{ day: day, index: index, lang: lang }} />
                     ))}
                 </article>  
             </Suspense>
