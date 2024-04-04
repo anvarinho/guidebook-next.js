@@ -93,7 +93,7 @@ export async function generateMetadata({
         siteId: "",
         creator: "@anvarinho",
         creatorId: "@anvarinho",
-        images: 'data.place.image'
+        images: 'data.place.image',
       },
       robots: {
           index: true,

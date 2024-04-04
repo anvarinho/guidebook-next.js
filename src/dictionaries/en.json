@@ -16,12 +16,15 @@
             "keywords": "Kyrgyzstan tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide",
             "button": "Lets Find Out!",
             "button1": "Where To Go!",
-            "button2": "What To Do!"
+            "button2": "What To Do!",
+            "button3": "read more"
+            
         },
         "sights": {
             "title": "Most popular places of Kyrgyzstan",
             "description": "Immerse yourself in the breathtaking landscapes and enchanting destinations of Kyrgyzstan. Explore diverse terrains, cultural sites, and natural wonders that define the charm of this unique country.",
-            "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan"
+            "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan",
+            "sights": "Places to visit"
         },
         "tours": {
             "title": "Most popular tours of Kyrgyzstan",

@@ -16,12 +16,14 @@
             "keywords": "Kirgisistan Touristenführer, Reisekomfort, Lokale Attraktionen, Touristische Dienstleistungen, Kyrgyz Reisetipps, Kulturelle Erfahrungen, Tourenplanung, Besichtigungen, Abenteuerreisen, Bequeme Touren, Bishkek Stadtführer",
             "button": "Lass uns herausfinden!",
             "button1": "Wohin gehen!",
-            "button2": "Was zu tun ist!"
+            "button2": "Was zu tun ist!",
+            "button3": "mehr lesen"
         },
         "sights": {
             "title": "Beliebteste Orte in Kirgisistan",
             "description": "Tauchen Sie ein in die atemberaubenden Landschaften und bezaubernden Ziele Kirgisistans. Erkunden Sie vielfältige Gelände, kulturelle Stätten und natürliche Wunder, die den Charme dieses einzigartigen Landes ausmachen.",
-            "keywords": "Kirgisistan Orte, Kirgisistan Reisen, Kirgisistan erkunden, Kirgisistan Ziele, Kirgisistan Tourismus, Muss-Besuch Orte in Kirgisistan, Top Attraktionen Kirgisistan, Kirgisistan Landschaften, Kulturelle Stätten Kirgisistan, Natürliche Wunder Kirgisistan, Beste Orte zum Besuchen in Kirgisistan"
+            "keywords": "Kirgisistan Orte, Kirgisistan Reisen, Kirgisistan erkunden, Kirgisistan Ziele, Kirgisistan Tourismus, Muss-Besuch Orte in Kirgisistan, Top Attraktionen Kirgisistan, Kirgisistan Landschaften, Kulturelle Stätten Kirgisistan, Natürliche Wunder Kirgisistan, Beste Orte zum Besuchen in Kirgisistan",
+            "sights":"Orte zum Besuchen"
         },
         "tours": {
             "title": "Beliebteste Touren in Kirgisistan",

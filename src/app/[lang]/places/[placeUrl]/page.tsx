@@ -1,5 +1,5 @@
 import getPlace from "@/lib/getPlace"
-import getAllPlaces from "@/lib/getAllPlaces"
+import getAllPlaces, { getPlacesByURLs } from "@/lib/getAllPlaces"
 import { Suspense } from "react"
 import PlaceArticle from "./components/PlaceArticle"
 import styles from './page.module.css'
@@ -25,7 +25,7 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
 
     return (
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
-                <PlaceArticle promise={placeData} lang={lang}/>
+                <PlaceArticle promise={placeData} lang={lang}/>  
             </Suspense>
     )
 }

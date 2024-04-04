@@ -16,12 +16,14 @@
           "keywords": "Guide touristique du Kirghizistan, Confort de voyage, Attractions locales, Services touristiques, Conseils de voyage au Kirghizistan, Expériences culturelles, Planification de visites, Visites touristiques, Voyages d'aventure, Tours pratiques, Guide de la ville de Bichkek",
           "button": "Découvrons-le !",
           "button1": "Où aller!",
-          "button2": "Que faire!"
+          "button2": "Que faire!",
+          "button3": "lire la suite"
       },
       "sights": {
           "title": "Sites les plus populaires du Kirghizistan",
           "description": "Plongez-vous dans les paysages époustouflants et les destinations enchanteuses du Kirghizistan. Explorez des terrains variés, des sites culturels et des merveilles naturelles qui définissent le charme de ce pays unique.",
-          "keywords": "Sites du Kirghizistan, Voyage au Kirghizistan, Explorer le Kirghizistan, Destinations du Kirghizistan, Tourisme au Kirghizistan, Lieux incontournables au Kirghizistan, Principales attractions du Kirghizistan, Paysages du Kirghizistan, Sites culturels du Kirghizistan, Merveilles naturelles du Kirghizistan, Meilleurs endroits à visiter au Kirghizistan"
+          "keywords": "Sites du Kirghizistan, Voyage au Kirghizistan, Explorer le Kirghizistan, Destinations du Kirghizistan, Tourisme au Kirghizistan, Lieux incontournables au Kirghizistan, Principales attractions du Kirghizistan, Paysages du Kirghizistan, Sites culturels du Kirghizistan, Merveilles naturelles du Kirghizistan, Meilleurs endroits à visiter au Kirghizistan",
+          "sights":"Sites à visiter"
       },
       "tours": {
           "title": "Tours les plus populaires du Kirghizistan",
