@@ -1,6 +1,6 @@
 .about{
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   padding: 5rem 1rem 1rem 1rem;
   background: url('../../../../public/bozteri.jpg') no-repeat rgba(0,0,0,.5);
@@ -21,14 +21,15 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  min-height: 60vh;
+  /* min-height: 60vh; */
   border-radius: .5rem;
+  margin-bottom: 2rem;
 }
 
 .about .details .box{
   width: 80vw;
   background-color: rgba(0,0,0,.5);
-  padding:3rem 2rem;
+  padding:2rem 1rem;
   text-align: center;
   backdrop-filter: blur(.4rem);
   -webkit-backdrop-filter:blur(2px);
@@ -44,9 +45,9 @@
 .about .details .box p{
   padding: 1rem 0;
   font-size: 1.12rem;
-  font-weight: bold;
+  font-weight: lighter;
   color: white;
-  line-height: 2;
+  /* line-height: 2; */
 }
 
 /* .about .details .box{
