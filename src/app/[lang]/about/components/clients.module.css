@@ -1,0 +1,129 @@
+.testimonials{
+	width: 100%;
+    min-height: 100vh;
+	padding: 0px 8%;
+    margin-bottom: 1rem;
+}
+.testimonials header{
+	/* max-width: 700px; */
+	text-align: center;
+	margin: 80px auto 40px;
+}
+
+.testimonials_container{
+	position: relative;
+    display: flex;
+}
+.testimonials_container .testimonial_card{
+	padding: 20px;
+}
+.testimonial_card .test_card_body{
+	background-color: #161922;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.12);
+	padding: 20px;
+}
+.test_card_body .quote{
+	display: flex;
+	align-items: center;
+}
+.test_card_body .quote i{
+	
+	color: #dadada;
+	margin-right: 20px;
+}
+.test_card_body .quote h2 span{
+	color: #dadada;
+    font-size: 45px;
+}
+.test_card_body p{
+	margin: 10px 0px 15px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #767a86;
+}
+.test_card_body .ratings{
+	margin-top: 20px;
+}
+.test_card_body .ratings span{
+	font-size: 17px;
+	color: var(--main-active-color);
+	cursor: pointer;
+    padding: 2px;
+}
+.testimonial_card .profile{
+	display: flex;
+	align-items: center;
+	margin-top: 25px;
+}
+.profile .profile_image{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 15px;
+}
+.profile .profile_image img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.profile .profile_desc{
+	display: flex;
+	flex-direction: column;
+}
+.profile_desc span:nth-child(1){
+	font-size: 18px;
+	font-weight: bold;
+	color: #f0bf6a;
+}
+.profile_desc span:nth-child(2){
+	font-size: 15px;
+	color: #767a86;
+}
+.owl_nav{
+	/* position: absolute; */
+	right: 20px;
+	bottom: -10px;
+}
+.owl_nav button{
+	border-radius: 50% !important;
+}
+.owl_nav .owl_prev ,
+.owl_nav .owl_next {
+	padding: 10px !important;
+	border-radius: 50%;
+	font-size: 18px !important;
+	background-color: #161922 !important;
+	color: #f0bf6a;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.owl_nav .owl_prev i:hover,
+.owl_nav .owl_next i:hover{
+	background-color: #f0bf6a !important;
+	color: #e9e9e9;
+}
+
+.slider_indicators {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+    bottom: 15px;
+    z-index: 101;
+}
+
+.slider_indicators span {
+    cursor: pointer;
+    margin: 0 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    transition: .2s;
+    background-color: #ccc;
+}
+
+.slider_indicators span.active {
+    background-color: #555;
+}
