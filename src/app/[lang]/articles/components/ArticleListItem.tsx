@@ -17,7 +17,7 @@ export default async function ArticleListItem({ article, lang }: Props) {
   let imageUrl = article.image ? article.image : article.paragraphs[0].image
   const blurDataURL = await getBase64(baseUrl + imageUrl)
   return (
-    <Link href={`articles/${article.url}`} key={article._id} className={styles.articleBox} target='_blank'>
+    <Link href={`articles/${article.url}`} key={article._id} className={styles.articleBox}>
         <Image
             src={baseUrl + imageUrl}
             alt={`${article.image}`}

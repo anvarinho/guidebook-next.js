@@ -43,8 +43,14 @@
         },
       "about": {
           "title": "À propos de nous",
-          "description": "Découvrez notre passion pour le Kirghizistan et notre engagement à offrir des expériences de voyage exceptionnelles. Découvrez notre équipe, nos valeurs et notre mission.",
-          "keywords": "À propos de nous, Notre histoire, Passionnés du Kirghizistan, Passion du voyage, Expériences exceptionnelles, Équipe, Valeurs, Mission"
+          "subtitle": "Qui sommes-nous?",
+          "description": "Nous sommes une équipe de passionnés dévoués à vous offrir des expériences exceptionnelles. Notre passion nourrit tout ce que nous faisons, car nous mettons tout notre cœur à créer pour vous des moments inoubliables. Rejoignez-nous pour des aventures pleines d'émerveillement et découvrez ce magnifique pays.",
+          "keywords": "À propos de nous, Notre histoire, Passionnés du Kirghizistan, Passion du voyage, Expériences exceptionnelles, Équipe, Valeurs, Mission",
+          "buttons":{
+            "our_team": "Notre équipe",
+            "our_clients": "Nos clients",
+            "contact_us": "Contactez-nous"
+          }
       },
       "info": {
         "seen": "Vues : ",

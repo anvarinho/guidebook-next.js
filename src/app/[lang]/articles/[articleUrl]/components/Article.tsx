@@ -24,10 +24,8 @@ export default async function Article({ article, lang }: Props) {
             <Image
             src={baseUrl + article.image} 
             alt={lang}
-            // className={styles.flag}
             height={400}
             width={600} placeholder="blur" blurDataURL={blurDataURL} priority/>
-            
           )}
             
             <h2>{article.title}</h2>

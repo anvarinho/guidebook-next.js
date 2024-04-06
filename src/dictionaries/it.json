@@ -42,9 +42,15 @@
             ]
             },
         "about":{ 
-            "title":"Chi Siamo", 
-            "description":"Scopri di più sulla nostra passione per Kyrgyzstan e il nostro impegno a fornire esperienze di viaggio eccezionali. Scopri il nostro team, i valori e la missione.", 
-            "keywords":"Chi siamo, La nostra storia, Appassionati di Kyrgyzstan, Passione per i viaggi, Esperienze eccezionali, Team, Valori, Missione" 
+            "title":"Chi Siamo",
+            "subtitle": "Chi siamo?",
+            "description":"Siamo un team di appassionati dedicati a offrirti esperienze eccezionali. La nostra passione alimenta tutto ciò che facciamo, poiché mettiamo il cuore nel creare momenti indimenticabili per te. Unisciti a noi in avventure di meraviglia e scopri questo bellissimo paese.", 
+            "keywords":"Chi siamo, La nostra storia, Appassionati di Kyrgyzstan, Passione per i viaggi, Esperienze eccezionali, Team, Valori, Missione" ,
+            "buttons":{
+              "our_team": "Il nostro team",
+              "our_clients": "I nostri clienti",
+              "contact_us": "Contattaci"
+            }
             },
         "info":{ 
             "seen":"Visite: ", 

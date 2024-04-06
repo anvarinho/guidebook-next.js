@@ -16,7 +16,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     // const baseUrl = 'http://159.65.95.44/';
     const place = await promise
     // const blurDataURL = await getBase64(baseUrl + place.images[0])
-    const sights = await getPlacesByURLs(lang, place.sights)
+    const sights = (place.sights && place.sights.length > 0) ? await getPlacesByURLs(lang, place.sights) : [];
     const createdDate = place.created ? new Date(place.created) : null;
     return (
         <article className={styles.main}>

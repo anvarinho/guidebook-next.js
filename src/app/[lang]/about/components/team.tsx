@@ -11,7 +11,7 @@ export default async function Team({
   const { page } = await getDictionary(lang)
   return (
     <section className={styles.team} id='team'>
-      <h1>Our Team</h1>
+      <h1>{page.about.buttons.our_team}</h1>
       <div className={styles.team__container}>
         <article className={styles.team__member} data-aos="zoom-in">
             <div className={styles.team__member_image}>
@@ -51,9 +51,9 @@ export default async function Team({
         </article>
       </div>
         <div>
-            <a href="#team" className={styles.floatingButton}>Our Team</a>
+            <a href="#contact" className={styles.floatingButton}>{page.about.buttons.contact_us}</a>
             {/* <a href="{% url 'contact' %}" className={styles.floatingButton}>contact us</a> */}
-            <a href="{% url 'contact' %}" className={styles.floatingButton}>Contact Us</a>
+            <a href="#clients" className={styles.floatingButton}>{page.about.buttons.our_clients}</a>
         </div>
     </section>
   )

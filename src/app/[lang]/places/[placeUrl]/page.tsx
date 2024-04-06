@@ -1,8 +1,6 @@
 import getPlace from "@/lib/getPlace"
-import getAllPlaces, { getPlacesByURLs } from "@/lib/getAllPlaces"
 import { Suspense } from "react"
 import PlaceArticle from "./components/PlaceArticle"
-import styles from './page.module.css'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
@@ -97,7 +95,7 @@ export async function generateMetadata({
             nocache: true,
             googleBot: {
                 index: true,
-                follow: false,
+                follow: true,
             }
         }
     }

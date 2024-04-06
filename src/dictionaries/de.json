@@ -43,8 +43,14 @@
           },
         "about": {
             "title": "Über uns",
-            "description": "Erfahren Sie mehr über unsere Leidenschaft für Kirgisistan und unser Engagement, außergewöhnliche Reiseerlebnisse zu bieten. Entdecken Sie unser Team, unsere Werte und unsere Mission.",
-            "keywords": "Über uns, Unsere Geschichte, Kirgisistan Enthusiasten, Reiseleidenschaft, Außergewöhnliche Erlebnisse, Team, Werte, Mission"
+            "subtitle": "Wer sind wir?",
+            "description": "Wir sind ein Team begeisterter Einzelpersonen, die sich der Bereitstellung außergewöhnlicher Erlebnisse verschrieben haben. Unsere Leidenschaft treibt alles an, was wir tun, während wir unser Herzblut in die Schaffung unvergesslicher Momente für Sie stecken. Begleiten Sie uns auf Abenteuern voller Wunder und entdecken Sie dieses wunderschöne Land.",
+            "keywords": "Über uns, Unsere Geschichte, Kirgisistan Enthusiasten, Reiseleidenschaft, Außergewöhnliche Erlebnisse, Team, Werte, Mission",
+            "buttons":{
+              "our_team": "Unser Team",
+              "our_clients": "Unsere Kunden",
+              "contact_us": "Kontaktiere uns"
+            }
         },
         "info": {
             "seen": "Aufrufe: ",
