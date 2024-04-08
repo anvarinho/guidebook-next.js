@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-// import styles from './homeplaces.module.css'
 import styles from './homeplaces.module.css'
 import { Locale } from "@/lib/i18n.config";
 import Image from "next/image";
@@ -39,7 +38,7 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                   }
                   const data = await res.json();
                   setPlaces(data)
-                  console.log(data)
+                //   console.log(data)
                 //   return data;
                 } catch (error) {
                   console.error('Error:', error);
@@ -79,9 +78,9 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                     <h1>Kyrgyzstan</h1>
                     <h4>Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.</h4>
                     <div>
-                        <Link href={`/places`}  className={styles.floatingButton}  target="_blank" rel="noopener noreferrer">Places to Visit</Link>
-                        <Link href={`/articles`}  className={styles.floatingButton}  target="_blank" rel="noopener noreferrer">Facts About Kyrgyzstan</Link>
-                        <Link href={`/tours`}  className={styles.floatingButton}  target="_blank" rel="noopener noreferrer">Our Tours</Link>
+                        <Link href={`/places`}  className={styles.floatingButton} >Places to Visit</Link>
+                        <Link href={`/articles`}  className={styles.floatingButton} >Facts About Kyrgyzstan</Link>
+                        <Link href={`/tours`}  className={styles.floatingButton} >Our Tours</Link>
                     </div>
                 </div>
             )}

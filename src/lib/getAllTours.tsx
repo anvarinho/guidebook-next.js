@@ -1,5 +1,5 @@
 export default async function getAllTours() {
-    const url = 'http://159.65.95.44/api/tours/';
+    const url = `${process.env.URL}/api/tours/`;
     
     try {
       const res = await fetch(url);
@@ -17,7 +17,7 @@ export default async function getAllTours() {
 }
 
 export async function getTour(tourId: string) {
-  const res = await fetch(`http://159.65.95.44/api/tours/${tourId}`, {next: {revalidate: 60}})
+  const res = await fetch(`${process.env.URL}/api/tours/${tourId}`, {next: {revalidate: 60}})
   // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
   // if (!res.ok) throw new Error('Failed to fetch place')
   // console.log(res.json())

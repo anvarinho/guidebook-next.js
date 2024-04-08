@@ -4,7 +4,7 @@ import styles from './imageSlider.module.css'
 
 const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
     const [index, setIndex] = useState(1);
-    const baseUrl = 'http://159.65.95.44/';
+    const baseUrl = `${process.env.URL}/`;
 
     const moveTo = (newIndex: number) => {
         setIndex(newIndex);

@@ -1,5 +1,5 @@
 export default async function getAllPlaces(lang: string) {
-    const url = `http://159.65.95.44/api/places?lang=${lang}`;
+    const url = `${process.env.URL}/api/places?lang=${lang}`;
     
     try {
       const res = await fetch(url);
@@ -18,7 +18,7 @@ export default async function getAllPlaces(lang: string) {
 
 export async function getPlacesByURLs(lang: string, urls:[string] | null) {
   try {
-    const url = `http://159.65.95.44/api/places/home?lang=${lang}&urls=${urls?.map(encodeURIComponent).join(',')}`;
+    const url = `${process.env.URL}/api/places/home?lang=${lang}&urls=${urls?.map(encodeURIComponent).join(',')}`;
     try {
       const res = await fetch(url);
       if (!res.ok) {
@@ -41,7 +41,7 @@ export async function getPlacesByURLs(lang: string, urls:[string] | null) {
 }
 
 export async function getPlace(placeId: string, lang: string) {
-  const res = await fetch(`http://159.65.95.44/api/places/${placeId}?lang=${lang}`, {next: {revalidate: 60}})
+  const res = await fetch(`${process.env.URL}/api/places/${placeId}?lang=${lang}`, {next: {revalidate: 60}})
   // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
   // if (!res.ok) throw new Error('Failed to fetch place')
   if (!res.ok) return undefined
@@ -51,7 +51,7 @@ export async function getPlace(placeId: string, lang: string) {
 
 export async function sitemapPlaces() {
   const loadPlaces = async () => {
-      const url = `http://127.0.0.1:4000/api/places/more?offset=0&limit=160`;
+      const url = `${process.env.URL}/api/places/more?offset=0&limit=160`;
       try {
           const response = await fetch(url);
           const data = await response.json();
