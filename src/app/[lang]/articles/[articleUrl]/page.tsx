@@ -74,7 +74,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       card: "summary_large_image",
       title: article.title,
       description: article.subtitle,
-      siteId: "",
+      siteId: "@anvarinho",
       creator: "@anvarinho",
       creatorId: "@anvarinho",
       images: [{
