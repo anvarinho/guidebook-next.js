@@ -38,7 +38,7 @@ export async function generateMetadata({
     const place = await placeData
     const description = place.description.substring(0, 150)
     const images = place.images.map(image => ({
-        url: `http://159.65.95.44/${image}`,
+        url: `${process.env.URL}/${image}`,
         width: 800,
         height: 600,
         alt: place.title
@@ -59,7 +59,7 @@ export async function generateMetadata({
         openGraph: {
             title: place.title + ' | ' + page.name,
             description: description,
-            url: 'https://central-asia.live/',
+            url: `${process.env.URL}/`,
             siteName: 'GuideBook of Kyrgyzstan',
             images: images,
             locale: 'en_US',

@@ -1,7 +1,7 @@
 export default async function signIn(email, password) {
   try {
 
-    const res = await fetch('http://159.65.95.44/api/user/login', {
+    const res = await fetch(`${process.env.URL}/api/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
