@@ -27,10 +27,12 @@ export async function getArticle(articleUrl: string, lang: string) {
 export async function sitemapArticles() {
   // Define an asynchronous function to fetch articles data
   const loadArticles = async () => {
-      const url = `${process.env.URL}/articles`;
+      const url = `${process.env.URL}/api/articles`;
       try {
           const response = await fetch(url);
+          console.log(response.status)
           const data = await response.json();
+          console.log(data)
           return data;
       } catch (error) {
           console.error("Error fetching articles:", error);
