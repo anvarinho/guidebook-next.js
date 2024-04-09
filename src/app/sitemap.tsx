@@ -58,11 +58,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
     return pages;
 }
 
-export async function getServerSideProps() {
-    const pages = await sitemap();
-    return {
-        props: {
-            pages,
-        },
-    };
-}
+// export async function getServerSideProps() {
+//     const pages = await sitemap();
+//     return {
+//         props: {
+//             pages,
+//         },
+//     };
+// }

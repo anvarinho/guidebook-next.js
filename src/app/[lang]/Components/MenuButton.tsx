@@ -36,7 +36,7 @@ export default function MenuButton() {
 
     useEffect(()=>{
         if(showNavbar){
-            console.log(pathname, showNavbar)
+            // console.log(pathname, showNavbar)
             handleToggleNavbar()
         }
     },[pathname])

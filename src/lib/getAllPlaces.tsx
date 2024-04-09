@@ -54,7 +54,9 @@ export async function sitemapPlaces() {
       const url = `${process.env.URL}/api/places/more?offset=0&limit=160`;
       try {
           const response = await fetch(url);
+          // console.log('Response status:', response.status);
           const data = await response.json();
+          // console.log('Received data:', data);
           return data;
       } catch (error) {
           console.error("Error fetching places:", error);
