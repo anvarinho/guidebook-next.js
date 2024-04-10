@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Bai_Jamjuree } from 'next/font/google'
 import { Locale, i18n } from '@/lib/i18n.config'
 import Footer from './Components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Bai_Jamjuree({weight: '500',style: 'normal', subsets: ['latin'], display: 'swap' })
 import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
@@ -29,7 +29,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
-      <body className={inter.className}>
+      <body className={font.className}>
         <main className={styles.main}>
           <Navbar lang={params.lang}/>
           <section className={styles.section}>

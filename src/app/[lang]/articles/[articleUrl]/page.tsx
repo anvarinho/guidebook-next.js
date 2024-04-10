@@ -44,10 +44,10 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       openGraph: {
           title: article.title + ' | ' + 'GuideBook of Kyrgyzstan',
           description: article.subtitle,
-          url: `${process.env.URL}/`,
+          url: `${process.env.NEXT_PUBLIC_URL}/`,
           siteName: 'GuideBook of Kyrgyzstan',
           images: [{
-            url: `${process.env.URL}/${article.image}`,
+            url: `${process.env.NEXT_PUBLIC_URL}/${article.image}`,
             width: 800,
             height: 600,
             alt: article.title

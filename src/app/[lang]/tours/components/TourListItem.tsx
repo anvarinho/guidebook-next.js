@@ -11,7 +11,7 @@ type Props = {
 }
 
 export default async function TourListItem({ tour, lang }: Props) {
-  const baseUrl = 'http://159.65.95.44/';
+  const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
   const blurDataURL = await getBase64(baseUrl + tour.images[0])
   const shortDescription = tour.description.slice(0, 300);
   return (
@@ -22,7 +22,7 @@ export default async function TourListItem({ tour, lang }: Props) {
         alt={tour.url}
         objectFit='cover'
         placeholder="blur" 
-        blurDataURL={blurDataURL} 
+        blurDataURL={blurDataURL}
         priority
         />
         <div className={styles.meta}><h4><span>From: </span>340$</h4><h4>{tour.days.length} {tour.days.length == 1 ? "Day": "Days"}</h4></div>

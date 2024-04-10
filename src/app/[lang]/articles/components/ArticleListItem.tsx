@@ -12,7 +12,7 @@ type Props = {
 }
 
 export default async function ArticleListItem({ article, lang }: Props) {
-  const baseUrl = `${process.env.URL}/`;
+  const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
   
   let imageUrl = article.image ? article.image : article.paragraphs[0].image
   const blurDataURL = await getBase64(baseUrl + imageUrl)

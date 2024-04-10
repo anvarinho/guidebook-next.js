@@ -6,13 +6,14 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ImageLoader from "../image/ImageLoader";
 import Link from "next/link";
+import { getHomePlaces } from "@/lib/getAllPlaces";
 import {
     faArrowLeft,
     faArrowRight
   } from "@fortawesome/free-solid-svg-icons";
 
 const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
-    const baseUrl = 'http://159.65.95.44/';
+    const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const [currentSlide, setCurrentSlide] = useState(0);
     const [places, setPlaces] = useState<any[]>([]);
     
@@ -29,25 +30,8 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
     };    
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const url = `http://159.65.95.44/api/places/home?lang=${lang}`;
-                try {
-                  const res = await fetch(url);
-                  if (!res.ok) {
-                    throw new Error('Failed to fetch data');
-                  }
-                  const data = await res.json();
-                  setPlaces(data)
-                //   console.log(data)
-                //   return data;
-                } catch (error) {
-                  console.error('Error:', error);
-                  throw error; // Re-throw the error to handle it at the caller's level
-                }
-            // console.log(data)
-            } catch (error) {
-              console.error('Error fetching data:', error);
-            }
+            const places = await getHomePlaces(lang)
+            setPlaces(places)
         };
         fetchData();
     }, []);
