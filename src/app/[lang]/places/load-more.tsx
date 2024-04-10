@@ -16,7 +16,7 @@ export function LoadMore({ lang }: { lang: Locale }) {
     const [page, setPage] = useState(0);
     const { ref, inView } = useInView();
     const [isLoading, setIsLoading] = useState(false);
-    const baseUrl = 'http://159.65.95.44/';
+    const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     // const blurDataURL = await getBase64(baseUrl + place.image[0])
 
     // const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -25,32 +25,14 @@ export function LoadMore({ lang }: { lang: Locale }) {
         // await delay(2000);
         setIsLoading(true)
         const nextPage = page + 1;
-        const url = `http://159.65.95.44/api/places/more?lang=${lang}&offset=${nextPage * 12}&limit=12`;
+        const url = `${process.env.NEXT_PUBLIC_URL}/api/places/more?lang=${lang}&offset=${nextPage * 12}&limit=12`;
 
         try {
             const response = await fetch(url);
             const data = await response.json();
-            
-            // // Update places state with new places
             setPlaces((prevPlaces) => [...prevPlaces, ...data.places]);
             setPage(nextPage);
             setIsLoading(false)
-
-            // Update places state with new places and blurDataUrl
-            // setPlaces((prevPlaces) => {
-            //     const updatedPlaces = data.places.map((place: PlaceAlias) => {
-            //     const baseUrl = 'http://127.0.0.1:4000/'; // Replace with your base URL
-            //     const blurDataURL = getBase64(baseUrl + place.image[0]); // Assuming image[0] contains the image URL
-        
-            //     // Add blurDataURL to the place object
-            //     return { ...place, blurDataURL };
-            //     });
-        
-            //     return [...prevPlaces, ...updatedPlaces];
-            // });
-        
-            // setPage(nextPage);
-
         } catch (error) {
             console.error("Error fetching places:", error);
         }

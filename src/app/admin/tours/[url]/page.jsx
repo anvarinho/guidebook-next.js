@@ -19,7 +19,7 @@ const SinglePlacePage = async ({ params }) => {
         <div className={styles.imgContainer}>
             {product.title}
             <Image
-                src={"http://127.0.0.1:4000/" + product.images[0] || "/noproduct.jpg"}
+                src={`${process.env.NEXT_PUBLIC_URL}` + product.images[0] || "/noproduct.jpg"}
                 alt=""
                 fill objectFit="contain"/>
         </div>

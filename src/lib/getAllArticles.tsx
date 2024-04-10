@@ -1,5 +1,5 @@
 export default async function getAllArticles(lang: string) {
-    const url = `${process.env.URL}/api/articles/?lang=${lang}`;
+    const url = `${process.env.NEXT_PUBLIC_URL}/api/articles/?lang=${lang}`;
     try {
       const res = await fetch(url);
       // console.log(res)
@@ -16,7 +16,7 @@ export default async function getAllArticles(lang: string) {
 }
 
 export async function getArticle(articleUrl: string, lang: string) {
-  const res = await fetch(`${process.env.URL}/api/articles/${articleUrl}?lang=${lang}`, {next: {revalidate: 60}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/articles/${articleUrl}?lang=${lang}`, {next: {revalidate: 60}})
   // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
   // if (!res.ok) throw new Error('Failed to fetch place')
   if (!res.ok) return undefined
@@ -27,7 +27,7 @@ export async function getArticle(articleUrl: string, lang: string) {
 export async function sitemapArticles() {
   // Define an asynchronous function to fetch articles data
   const loadArticles = async () => {
-      const url = `${process.env.URL}/api/articles`;
+      const url = `${process.env.NEXT_PUBLIC_URL}/api/articles`;
       try {
           const response = await fetch(url);
           console.log(response.status)

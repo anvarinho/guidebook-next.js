@@ -2,8 +2,8 @@
 import { MongoClient } from 'mongodb';
 
 // Define the connection URL and the database name
-const url = 'mongodb://localhost:27017';
-const dbName = 'guidebook';
+const url = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}`;
+const dbName = `${process.env.DB_NAME}`;
 
 // Create a global variable to store the database connection
 let cachedDb = null;

@@ -39,7 +39,7 @@ const ProductsPage = async ({ searchParams }) => {
               <td>
                 <div className={styles.product}>
                   <Image
-                    src={"http://127.0.0.1:4000/" + (product.image || product.paragraphs[0].image) || "/noproduct.jpg"}
+                    src={`${process.env.NEXT_PUBLIC_URL}` + (product.image || product.paragraphs[0].image) || "/noproduct.jpg"}
                     alt=""
                     width={40}
                     height={40}

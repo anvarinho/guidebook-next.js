@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const isAdmin = isAuthenticatedAdmin()
-  if(!isAdmin){
+  if (!isAdmin) {
     console.log(isAdmin)
     console.log("is not an admin")
     redirect('/login')

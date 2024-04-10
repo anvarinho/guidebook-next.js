@@ -18,9 +18,6 @@ export default async function Home({
     const { page } = await getDictionary(lang)
     const data: Promise<[Tour]> = getAllTours()
     const toursData = await data
-    const baseUrl = 'http://159.65.95.44/';
-    // const blurDataURL = await getBase64(baseUrl + place.images[0])
-    // console.log(toursData)
 
     const content = toursData.map(async (tour, i) => {
       return (

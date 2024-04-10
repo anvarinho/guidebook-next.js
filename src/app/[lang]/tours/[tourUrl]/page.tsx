@@ -15,7 +15,7 @@ type Params = {
 }
 
 export default async function Tour({ params: {tourUrl, lang}}: Params) {
-    const baseUrl = `${process.env.URL}/`;
+    const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const tourData: Promise<TourData> = getTour(tourUrl)
     const data = await tourData
     return (
@@ -42,7 +42,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
 export async function generateMetadata({ params: {tourUrl, lang}}: Params): Promise<Metadata> {
     const tourData: Promise<TourData> = getTour(tourUrl)
     const tour = await tourData
-    const baseUrl = `${process.env.URL}/`;
+    const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     return {
         title: {
           absolute: tour.tour.title

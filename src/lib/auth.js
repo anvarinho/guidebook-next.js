@@ -5,16 +5,26 @@ import { readUser } from '@/app/admin/lib/data';
 
 // Function to check if the user is authenticated
 export const isAuthenticatedAdmin = async () => {
-  const cookieStore = cookies();
-  const userId = cookieStore.get('userID');
-  console.log(userId.value);
+  try {
+    const cookieStore = cookies();
+    const userId = cookieStore.get('userID');
 
-  // Assuming readUser is an async function
-  const user = await readUser(userId.value);
-  console.log(user);
+    if (typeof userId.value !== 'string') {
+      throw new Error('Invalid user ID type');
+    }
 
-  // Ensure user.isAdmin is a boolean, not a string
-  return user.isAdmin === true;
+    const user = await readUser(userId.value);
+
+    if (user && typeof user.isAdmin === 'boolean' && userId) {
+      return user.isAdmin;
+    } else {
+      return false; // User not found or isAdmin property not a boolean
+    }
+  } catch (error) {
+    console.error('Error checking admin status:', error);
+    // Handle the error gracefully, e.g., return false
+    return false;
+  }
 };
 
 // Function to redirect the user
@@ -24,14 +34,9 @@ export const isAuthenticatedAdmin = async () => {
 // };
 
 // Function to sign out the user
-export const signOut = () => {
-  // Clear the authentication tokens
-  // localStorage.removeItem('token');
-  // localStorage.removeItem('isAdmin');
-  // Alternatively, if you're using cookies
+export const signOut = async () => {
   const cookieStore = cookies();
   cookieStore.delete('token');
   cookieStore.delete('isAdmin');
-  // Redirect to the login page after signing out
   redirect('/login');
 };
