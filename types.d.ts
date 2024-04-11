@@ -15,13 +15,31 @@ type Place = {
 type Tour = {
     "_id": string,
     "title": string,
+    // "created": Date,
+    "description": string,
+    // "keywords": string,
+    "url": string,
+    "daysCount": number,
+    "lastPrice": number
+    "images": [string],
+    // "viewCount": number,
+    // "days": [Day]
+}
+
+type TourInfo = {
+    "_id": string,
+    "title": string,
     "created": Date,
+    "level": string,
     "description": string,
     "keywords": string,
     "url": string,
     "images": [string],
+    "price": [number],
     "viewCount": number,
-    "days": [Day]
+    "days": [Day],
+    "includings": [string],
+    "excludings": [string],
 }
 
 type Day = {
@@ -56,7 +74,7 @@ type PlaceAlias = {
 }
 
 type TourData = {
-    "tour": Tour
+    "tour": TourInfo
 }
 
 type Weather = {

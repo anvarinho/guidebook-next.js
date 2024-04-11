@@ -2,6 +2,7 @@ import styles from '../page.module.css'
 import Link from "next/link";
 import getBase64 from "@/lib/getLocalBase64"
 import { Locale } from "@/lib/i18n.config";
+import { getDictionary } from '@/lib/dictionary'
 
 import Image from "next/image";
 
@@ -11,9 +12,11 @@ type Props = {
 }
 
 export default async function TourListItem({ tour, lang }: Props) {
+  const { page } = await getDictionary(lang)
   const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
   const blurDataURL = await getBase64(baseUrl + tour.images[0])
   const shortDescription = tour.description.slice(0, 300);
+  const daysSpelling = (tour.daysCount === 3 && lang === "ru") ? "Дня": tour.daysCount == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`
   return (
     <Link href={`tours/${tour.url}`} className={styles.tourBox}>
         <Image
@@ -25,7 +28,7 @@ export default async function TourListItem({ tour, lang }: Props) {
         blurDataURL={blurDataURL}
         priority
         />
-        <div className={styles.meta}><h4><span>From: </span>340$</h4><h4>{tour.days.length} {tour.days.length == 1 ? "Day": "Days"}</h4></div>
+        <div className={styles.meta}><h4><span>{page.tours.tourPage.from}: </span>{tour.lastPrice}$</h4><h4>{tour.daysCount} {daysSpelling}</h4></div>
         <div className={styles.content}>
             <h3>{tour.title}</h3>
             <p>{shortDescription} ...</p>

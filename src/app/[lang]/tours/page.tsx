@@ -16,7 +16,7 @@ export default async function Home({
   params: {lang : Locale}
 }) {
     const { page } = await getDictionary(lang)
-    const data: Promise<[Tour]> = getAllTours()
+    const data: Promise<[Tour]> = getAllTours(lang)
     const toursData = await data
 
     const content = toursData.map(async (tour, i) => {

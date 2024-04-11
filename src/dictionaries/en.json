@@ -29,7 +29,21 @@
         "tours": {
             "title": "Most popular tours of Kyrgyzstan",
             "description": "Embark on unforgettable tours that showcase the splendor of Kyrgyzstan. Choose from adventure, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
-            "keywords": "Kyrgyzstan tours, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours"
+            "keywords": "Kyrgyzstan tours, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
+            "tourPage":{
+              "level": "Level",
+              "duration": "Duration",
+              "price": "Price",
+              "day": "Day",
+              "days": "Days",
+              "details": "Details of Tour",
+              "things":"Things we do",
+              "places":"Places we go",
+              "addInfo":"Additional information",
+              "includings":"Price includes",
+              "excludings":"Price excludes",
+              "from": "From"
+            }
         },
         "articles": {
             "title": "The Kyrgyzstan: on Culture, Traditions, and Nature",

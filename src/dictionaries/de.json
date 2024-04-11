@@ -28,7 +28,21 @@
         "tours": {
             "title": "Beliebteste Touren in Kirgisistan",
             "description": "Begib dich auf unvergessliche Touren, die die Pracht Kirgisistans zeigen. Wähle aus Abenteuer-, Kultur- und Trekking-Touren und lass uns dich durch die vielfältigen und fesselnden Landschaften führen.",
-            "keywords": "Kirgisistan Touren, Abenteuer Touren Kirgisistan, Geführte Touren Kirgisistan, Kultur Touren Kirgisistan, Trekking Touren Kirgisistan, Reiten Touren Kirgisistan, Nomadische Erfahrungen Kirgisistan, Kirgisistan Reisepakete, Beste Touren in Kirgisistan, Kirgisistan erkunden durch Touren"
+            "keywords": "Kirgisistan Touren, Abenteuer Touren Kirgisistan, Geführte Touren Kirgisistan, Kultur Touren Kirgisistan, Trekking Touren Kirgisistan, Reiten Touren Kirgisistan, Nomadische Erfahrungen Kirgisistan, Kirgisistan Reisepakete, Beste Touren in Kirgisistan, Kirgisistan erkunden durch Touren",
+            "tourPage":{
+              "level": "Niveau",
+              "duration": "Dauer",
+              "price": "Preis",
+              "day": "Tag",
+              "days": "Tage",
+              "details": "Tourdetails",
+              "things":"Aktivitäten",
+              "places":"Besuchte Orte",
+              "addInfo":"Zusätzliche Informationen",
+              "includings":"Im Preis enthalten",
+              "excludings":"Nicht im Preis enthalten",
+              "from": "Von"
+            }            
         },
         "articles": {
           "title": "Kirgisistan: Kultur, Traditionen und Natur",
