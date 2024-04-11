@@ -67,10 +67,38 @@
     color: var(--main-active-color);
 }
 
+.infoTitle{
+    padding: 1rem;
+    border-top: 1px solid rgba(125,125,125,0.4);
+}
+
+.infoList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1rem;
+}
+
+.infoList div{
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid rgba(125,125,125,0.4);
+    border-radius: 1rem;
+}
+
+
+
+.infoList div p{
+    font-weight: lighter;
+}
+
 @media (max-width:991px){
     .sights{
         grid-template-columns: repeat(3, 1fr);
         gap: .4rem;
+    }
+
+    .infoList{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

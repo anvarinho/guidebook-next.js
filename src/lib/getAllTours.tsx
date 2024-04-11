@@ -1,6 +1,6 @@
-export default async function getAllTours() {
-    const url = `${process.env.NEXT_PUBLIC_URL}/api/tours/`;
-    
+export default async function getAllTours(lang:string) {
+    const url = `${process.env.NEXT_PUBLIC_URL}/api/tours/?lang=${lang}`;
+
     try {
       const res = await fetch(url);
       // console.log(res)
@@ -8,7 +8,7 @@ export default async function getAllTours() {
         throw new Error('Failed to fetch data');
       }
       const data = await res.json();
-      console.log(data)
+      // console.log(data)
       return data;
     } catch (error) {
       console.error('Error:', error);
@@ -16,8 +16,8 @@ export default async function getAllTours() {
     }
 }
 
-export async function getTour(tourId: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tours/${tourId}`, {next: {revalidate: 60}})
+export async function getTour(tourId: string, lang: string) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tours/${tourId}?lang=${lang}`, {next: {revalidate: 60}})
   // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
   // if (!res.ok) throw new Error('Failed to fetch place')
   // console.log(res.json())
@@ -28,7 +28,7 @@ export async function getTour(tourId: string) {
 // Example usage
 export async function sitemapTours() {
   try {
-      const tours = await getAllTours();
+      const tours = await getAllTours("en");
       // Handle the tours data, such as mapping it to the required format
       const formattedTours = tours.map((tour: any) => ({
           tourUrl: tour.url,

@@ -1,11 +1,12 @@
 import { Locale } from '@/lib/i18n.config'
-import getTour from '@/lib/getTour'
+import getTour from '@/lib/getTour';
 import styles from './page.module.css'
 import ImageSlider from '../../Components/image/ImageSlider';
 import { Metadata } from 'next'
 import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
+import { getDictionary } from '@/lib/dictionary'
 
 type Params = {
     params: {
@@ -15,24 +16,43 @@ type Params = {
 }
 
 export default async function Tour({ params: {tourUrl, lang}}: Params) {
-    const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-    const tourData: Promise<TourData> = getTour(tourUrl)
+    // const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
+    const { page } = await getDictionary(lang)
+    const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const data = await tourData
     return (
         <div className={styles.main}>
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
                 <article className={styles.article}>
-                    <h1>{data.tour.title}</h1>
-                    <ImageSlider items={data.tour.images}/>
+                    <h1>{data.title}</h1>
+                    <ImageSlider items={data.images}/>
                     <div className={styles.meta}>
-                        <p>Level: <strong>Easy</strong></p>
-                        <p>Duration: <strong>{data.tour.days.length} {data.tour.days.length == 1 ? "Day": "Days"}</strong></p>
-                        <p>Price: <strong>340$</strong></p>
+                        <p>{page.tours.tourPage.level}: <strong>{data.level}</strong></p>
+                        <p>{page.tours.tourPage.duration}: <strong>{data.days.length} {data.days.length == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`}</strong></p>
+                        <p>{page.tours.tourPage.price}: <strong>{data.price}$</strong></p>
                     </div>
-                    <h4>{data.tour.description}</h4>
-                    {data.tour.days.map((day, index) => (
+                    <h4>{data.description}</h4>
+                    <h2>{page.tours.tourPage.details}</h2>
+                    <br />
+                    {data.days.map((day, index) => (
                         <DayView key={index} params={{ day: day, index: index, lang: lang }} />
                     ))}
+                    <br />
+                    <h2 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h2>
+                    <div className={styles.infoList}>
+                        <div>
+                            <h3>{page.tours.tourPage.includings}</h3>
+                            {data.includings.map((text, index) => (
+                                <p key={index}>{text}</p>
+                            ))}
+                        </div>
+                        <div>
+                            <h3>{page.tours.tourPage.excludings}</h3>
+                            {data.excludings.map((text, index) => (
+                                <p key={index}>{text}</p>
+                            ))}
+                        </div>
+                    </div>
                 </article>  
             </Suspense>
         </div>
@@ -40,14 +60,14 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
 }
 
 export async function generateMetadata({ params: {tourUrl, lang}}: Params): Promise<Metadata> {
-    const tourData: Promise<TourData> = getTour(tourUrl)
+    const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const tour = await tourData
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     return {
         title: {
-          absolute: tour.tour.title
+          absolute: tour.title
         },
-        description: tour.tour.description,
-        keywords: tour.tour.keywords,
+        description: tour.description,
+        keywords: tour.keywords,
     }
   }

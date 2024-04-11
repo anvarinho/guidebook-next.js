@@ -28,7 +28,21 @@
       "tours": {
           "title": "Tours les plus populaires du Kirghizistan",
           "description": "Partez pour des tours inoubliables qui mettent en valeur la splendeur du Kirghizistan. Choisissez parmi des tours d'aventure, culturels et de trekking, et laissez-nous vous guider à travers des paysages divers et captivants.",
-          "keywords": "Tours au Kirghizistan, Tours d'aventure au Kirghizistan, Tours guidés au Kirghizistan, Tours culturels au Kirghizistan, Tours de trekking au Kirghizistan, Tours à cheval au Kirghizistan, Expériences nomades au Kirghizistan, Forfaits de voyage au Kirghizistan, Meilleurs tours au Kirghizistan, Explorez le Kirghizistan à travers des tours"
+          "keywords": "Tours au Kirghizistan, Tours d'aventure au Kirghizistan, Tours guidés au Kirghizistan, Tours culturels au Kirghizistan, Tours de trekking au Kirghizistan, Tours à cheval au Kirghizistan, Expériences nomades au Kirghizistan, Forfaits de voyage au Kirghizistan, Meilleurs tours au Kirghizistan, Explorez le Kirghizistan à travers des tours",
+          "tourPage":{
+            "level": "Niveau",
+            "duration": "Durée",
+            "price": "Prix",
+            "day": "Jour",
+            "days": "Jours",
+            "details": "Détails de la visite",
+            "things":"Activités",
+            "places":"Lieux visités",
+            "addInfo":"Informations supplémentaires",
+            "includings":"Ce qui est inclus",
+            "excludings":"Ce qui n'est pas inclus",
+            "from": "De"
+          }
       },
       "articles": {
         "title": "Le Kirghizistan : culture, traditions et nature",
