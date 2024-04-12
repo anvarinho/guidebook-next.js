@@ -36,7 +36,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     <h2>{page.tours.tourPage.details}</h2>
                     <div className={styles.daysNavigation}>
                         {data.days.map((day, index) => (
-                            <Link href={`#day${index + 1}`}>{page.tours.tourPage.day}: {index + 1}</Link>
+                            <Link href={`#day${index + 1}`} key={index}>{page.tours.tourPage.day}: {index + 1}</Link>
                         ))}
                     </div>
                     <br />
