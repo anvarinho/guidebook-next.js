@@ -11,6 +11,8 @@
     margin: auto;
     min-height: 50vh;
     z-index: 1;
+    scroll-behavior: smooth;
+    /* transition-duration: 500ms; */
 }
 
 .article h4{
@@ -24,6 +26,25 @@
     border: 1px solid aliceblue;
     border-radius: .3rem;
     margin-top: 1rem;
+}
+
+.daysNavigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daysNavigation a{
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(122,122,122,.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight:500;
+    transition: all 0.3s ease-in;
+    margin: .2rem;
 }
 
 .day {

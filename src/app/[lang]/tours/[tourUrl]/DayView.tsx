@@ -19,7 +19,7 @@ export default async function DayView({ params: {day, index, lang}}: Params) {
     const { page } = await getDictionary(lang)
     // console.log(sights)
     return (
-        <div key={index} className={styles.day}>
+        <div key={index} id={`day${index + 1}`} className={styles.day}>
             <h3>{page.tours.tourPage.day}: {index + 1}</h3>
             <br />
             <div className={styles.dayImages}>

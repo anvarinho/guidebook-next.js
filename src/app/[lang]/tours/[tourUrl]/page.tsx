@@ -7,6 +7,7 @@ import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
+import Link from 'next/link';
 
 type Params = {
     params: {
@@ -33,6 +34,11 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     </div>
                     <h4>{data.description}</h4>
                     <h2>{page.tours.tourPage.details}</h2>
+                    <div className={styles.daysNavigation}>
+                        {data.days.map((day, index) => (
+                            <Link href={`#day${index + 1}`}>{page.tours.tourPage.day}: {index + 1}</Link>
+                        ))}
+                    </div>
                     <br />
                     {data.days.map((day, index) => (
                         <DayView key={index} params={{ day: day, index: index, lang: lang }} />

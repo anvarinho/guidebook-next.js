@@ -55,7 +55,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                         ))
                     ) : (
                         <div>
-                        <a href={`tel:${section.info?.phone}`}>{section.info?.phone}</a>
+                        <a href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}>{section.info?.phone}</a>
                         <a href={`mailto:${section.info?.email}`}>{section.info?.email}</a>
                         <p>{section.info?.address}</p>
                         </div>
