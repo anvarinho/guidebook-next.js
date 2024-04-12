@@ -4,20 +4,23 @@ import { redirect } from 'next/navigation'
 import { readUser } from '@/app/admin/lib/data';
 
 // Function to check if the user is authenticated
-export const isAuthenticatedAdmin = async () => {
+export const isAuthenticatedAdmin = () => {
   try {
     const cookieStore = cookies();
     const userId = cookieStore.get('userID');
+    const token = cookieStore.get('token');
 
     if (typeof userId.value !== 'string') {
       throw new Error('Invalid user ID type');
     }
 
-    const user = await readUser(userId.value);
-
-    if (user && typeof user.isAdmin === 'boolean' && userId) {
-      return user.isAdmin;
+    const user = readUser(userId.value);
+    console.log(token)
+    if (user.isAdmin && token) {
+      console.log("Loggen in")
+      return true;
     } else {
+      console.log("Not Loggen in")
       return false; // User not found or isAdmin property not a boolean
     }
   } catch (error) {

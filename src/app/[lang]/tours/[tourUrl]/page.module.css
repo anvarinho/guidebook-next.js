@@ -114,6 +114,11 @@
         gap: .4rem;
     }
 
+    .daysNavigation{
+        flex-wrap: wrap;
+        white-space: nowrap;
+        max-width: 100%;
+    }
     .infoList{
         grid-template-columns: repeat(1, 1fr);
     }
