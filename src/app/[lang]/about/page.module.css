@@ -8,6 +8,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-blend-mode: multiply;
+  color: white;
 }
 
 .about .details{
