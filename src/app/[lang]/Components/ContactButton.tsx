@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from './page.module.css'
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
@@ -11,7 +12,8 @@ import {
 
 const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const texts = {
+    const pathname = usePathname()
+    const contactMe = {
         en: 'Any Questions?',
         es: '¿Alguna pregunta?',
         fr: 'Des questions ?',
@@ -22,7 +24,20 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
         cn: '有问题吗？',
         jp: '質問はありますか？',
         ae: 'هل لديك أي أسئلة؟'
-      }
+    }
+
+    const bookTour = {
+        en: 'Book a Tour !',
+        es: 'Reservar Tour !',
+        fr: 'Réserver une visite !',
+        de: 'Tour Buchen !',
+        it: 'Prenota un Tour !',
+        ru: 'Забронировать тур !',
+        kr: '투어 예약 !',
+        cn: '预订旅游 !',
+        jp: 'ツアーを予約する !',
+        ae: '! حجز جولة',
+    }
 
     useEffect(() => {
         // Function to handle the scroll event
@@ -47,11 +62,16 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
         window.removeEventListener('scroll', handleScroll);
         };
     }, [isScrolled]);
+
     return (
         <div className={`${styles.contactBtn} ${isScrolled ? '' : styles.active}`}>
             <div className={styles.contactBox}>
-                <h4>{texts[lang]}</h4>
-                <Link href="https://wa.me/996500490806?text=Hello!!!" target="_blank">
+                {pathname.includes('/tours/') ? (
+                    <h4>{bookTour[lang]}</h4>
+                ) : (
+                    <h4>{contactMe[lang]}</h4>
+                )}
+                <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`} target="_blank">
                     <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
                 </Link>
             </div>
