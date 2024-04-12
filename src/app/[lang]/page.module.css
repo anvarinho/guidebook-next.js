@@ -77,9 +77,13 @@
    position: relative;
    text-align: center;
 }
+.home h1{
+  color: #fff;
+}
 
 .home h4{
   max-width: 800px;
+  color: #fff;
 }
 
 .chooseLanguage{
@@ -88,6 +92,9 @@
   text-align: left;
 }
 
+.chooseLanguage h5{
+  color: #fff;
+}
 .downloadApps{
   position: absolute;
   background:rgba(255,255,255,.1);

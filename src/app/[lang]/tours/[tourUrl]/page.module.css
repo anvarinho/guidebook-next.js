@@ -26,10 +26,6 @@
     margin-top: 1rem;
 }
 
-.article .meta p{
-    color: aliceblue;
-}
-
 .day {
     padding: 1rem;
     border-top: 1px solid rgba(125,125,125,0.4);
@@ -52,7 +48,7 @@
 .button{
     display: inline-block;
     padding: 5px 12px;
-    background: rgba(255,255,255,.4);
+    background: rgba(122,122,122,.4);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter:blur(3px);
     border-radius: 12px;

@@ -27,9 +27,9 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     <h1>{data.title}</h1>
                     <ImageSlider items={data.images}/>
                     <div className={styles.meta}>
-                        <p>{page.tours.tourPage.level}: <strong>{data.level}</strong></p>
-                        <p>{page.tours.tourPage.duration}: <strong>{data.days.length} {data.days.length == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`}</strong></p>
-                        <p>{page.tours.tourPage.price}: <strong>{data.price}$</strong></p>
+                        <p><strong>{page.tours.tourPage.level}</strong>: {data.level}</p>
+                        <p><strong>{page.tours.tourPage.duration}</strong>: {data.days.length} {data.days.length == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`}</p>
+                        <p><strong>{page.tours.tourPage.price}</strong>: {data.price}$</p>
                     </div>
                     <h4>{data.description}</h4>
                     <h2>{page.tours.tourPage.details}</h2>

@@ -81,6 +81,7 @@
     position: absolute;
     bottom: .4rem; left: .4rem;
     background-color: rgba(0,0,0,0.4);
+    color: #fff;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter:blur(3px);
     padding:.2rem 1rem;
