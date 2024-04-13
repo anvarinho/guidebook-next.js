@@ -41,7 +41,8 @@
               "addInfo":"额外信息",
               "includings":"价格包括",
               "excludings":"价格不包括",
-              "from": "从"
+              "from": "从",
+              "note":"注"
             }            
         },
         "articles": {

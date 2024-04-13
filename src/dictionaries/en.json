@@ -42,7 +42,8 @@
               "addInfo":"Additional information",
               "includings":"Price includes",
               "excludings":"Price excludes",
-              "from": "From"
+              "from": "From",
+              "note":"Note"
             }
         },
         "articles": {

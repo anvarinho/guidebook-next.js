@@ -41,7 +41,8 @@
             "addInfo":"معلومات إضافية",
             "includings":"السعر يشمل",
             "excludings":"السعر لا يشمل",
-            "from": "من"
+            "from": "من",
+            "note":"ملحوظة"
           }          
        },
        "articles": {

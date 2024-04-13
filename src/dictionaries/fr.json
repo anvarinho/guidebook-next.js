@@ -41,7 +41,8 @@
             "addInfo":"Informations supplémentaires",
             "includings":"Ce qui est inclus",
             "excludings":"Ce qui n'est pas inclus",
-            "from": "De"
+            "from": "De",
+            "note":"Remarque"
           }
       },
       "articles": {

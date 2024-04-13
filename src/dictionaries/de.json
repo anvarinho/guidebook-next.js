@@ -41,7 +41,8 @@
               "addInfo":"Zusätzliche Informationen",
               "includings":"Im Preis enthalten",
               "excludings":"Nicht im Preis enthalten",
-              "from": "Von"
+              "from": "Von",
+              "note":"Hinweis"
             }            
         },
         "articles": {
