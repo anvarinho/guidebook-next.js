@@ -38,6 +38,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                         {data.days.map((day, index) => (
                             <Link href={`#day${index + 1}`} key={index}>{page.tours.tourPage.day}: {index + 1}</Link>
                         ))}
+                        <Link href="#note">{page.tours.tourPage.note}</Link>
                     </div>
                     <br />
                     {data.days.map((day, index) => (
@@ -45,7 +46,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     ))}
                     <br />
                     <h2 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h2>
-                    <div className={styles.infoList}>
+                    <div className={styles.infoList} id='note'>
                         <div>
                             <h3>{page.tours.tourPage.includings}</h3>
                             {data.includings.map((text, index) => (

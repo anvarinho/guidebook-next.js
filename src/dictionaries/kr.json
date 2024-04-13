@@ -41,7 +41,8 @@
               "addInfo":"추가 정보",
               "includings":"가격 포함 사항",
               "excludings":"가격 불포함 사항",
-              "from": "에서"
+              "from": "에서",
+              "note":"노트"
             }            
         },
         "articles": {

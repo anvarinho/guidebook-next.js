@@ -41,7 +41,8 @@
               "addInfo":"追加情報",
               "includings":"価格に含まれるもの",
               "excludings":"価格に含まれないもの",
-              "from": "From"
+              "from": "From",
+              "note":"注意"
             }            
         },
         "articles": {

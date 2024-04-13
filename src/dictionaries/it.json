@@ -41,7 +41,8 @@
               "addInfo":"Informazioni aggiuntive",
               "includings":"Cosa include il prezzo",
               "excludings":"Cosa non include il prezzo",
-              "from": "Dal"
+              "from": "Dal",
+              "note":"Nota"
             }            
           }, 
         "articles": {
