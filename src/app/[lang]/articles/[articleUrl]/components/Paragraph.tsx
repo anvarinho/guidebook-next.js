@@ -11,7 +11,6 @@ type Props = {
 
 export default async function Article({ paragraph, lang}: Props) {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-    // const baseUrl1 = 'http://127.0.0.1:3000/';
     const blurDataURL = paragraph.image ? await getBase64(baseUrl + paragraph.image) : ""
     return (
         <div className={styles.hero}>

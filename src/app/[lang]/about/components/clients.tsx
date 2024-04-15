@@ -100,7 +100,7 @@ export default function Clients({
                 <div className={styles.profile}>
                   <div className={styles.profile_image}>
                     <img
-                      src={"http://159.65.95.44/uploads/" + review.avatar}
+                      src={"https://central-asia.live/uploads/" + review.avatar}
                       alt="Profile"
                     />
                   </div>
