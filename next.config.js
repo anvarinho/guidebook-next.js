@@ -50,7 +50,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ["159.65.95.44", "172.20.10.4", "127.0.0.1"], // Add your external image domains here
+    domains: ["159.65.95.44","central-asia.live", "https://central-asia.live", "127.0.0.1"], // Add your external image domains here
     unoptimized: true,
   },
   webpack(config) {

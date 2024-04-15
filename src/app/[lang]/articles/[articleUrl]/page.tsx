@@ -20,7 +20,6 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   // const { page } = await getDictionary(lang)
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
-  // const baseUrl = 'http://127.0.0.1:4000/';
   return (
     <div className={styles.main}>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
@@ -33,7 +32,6 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
 export async function generateMetadata({ params: {articleUrl, lang}}: Params): Promise<Metadata> {
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
-  // const baseUrl = 'http://127.0.0.1:4000/';
   return {
       title: {
         absolute: article.title
