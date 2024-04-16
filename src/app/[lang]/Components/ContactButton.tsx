@@ -73,7 +73,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
                 )}
                 {
                     pathname.includes('/tours/') ? (
-                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20Hello!!!`} target="_blank">
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`} target="_blank">
                             <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
                         </Link>
                     ) : (
