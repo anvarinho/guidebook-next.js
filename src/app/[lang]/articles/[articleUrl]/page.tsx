@@ -1,8 +1,6 @@
 import styles from './page.module.css'
 import { Metadata } from 'next'
 import { Locale } from '@/lib/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
-import Image from "next/image";
 import getArticle from '@/lib/getArticle';
 import Article from './components/Article'
 import { Suspense } from "react"
@@ -32,6 +30,7 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
 export async function generateMetadata({ params: {articleUrl, lang}}: Params): Promise<Metadata> {
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
+  let imageUrl = article.image ? article.image : article.paragraphs[0].image
   return {
       title: {
         absolute: article.title
@@ -45,7 +44,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
           url: `${process.env.NEXT_PUBLIC_URL}/`,
           siteName: 'GuideBook of Kyrgyzstan',
           images: [{
-            url: `${process.env.NEXT_PUBLIC_URL}/${article.image}`,
+            url: `${process.env.NEXT_PUBLIC_URL}/${imageUrl}`,
             width: 800,
             height: 600,
             alt: article.title
@@ -76,7 +75,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       creator: "@anvarinho",
       creatorId: "@anvarinho",
       images: [{
-        url: `${process.env.URL}/${article.image}`,
+        url: `${process.env.URL}/${imageUrl}`,
         width: 800,
         height: 600,
         alt: article.title
