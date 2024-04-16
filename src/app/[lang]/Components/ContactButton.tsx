@@ -71,9 +71,18 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
                 ) : (
                     <h4>{contactMe[lang]}</h4>
                 )}
-                <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`} target="_blank">
-                    <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
-                </Link>
+                {
+                    pathname.includes('/tours/') ? (
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20Hello!!!`} target="_blank">
+                            <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
+                        </Link>
+                    ) : (
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`} target="_blank">
+                            <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
+                        </Link>
+                    )
+                }
+                
             </div>
         </div>
     );

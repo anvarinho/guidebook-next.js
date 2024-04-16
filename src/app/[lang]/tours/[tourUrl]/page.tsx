@@ -45,21 +45,23 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                         <DayView key={index} params={{ day: day, index: index, lang: lang }} />
                     ))}
                     <br />
-                    <h2 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h2>
-                    <div className={styles.infoList} id='note'>
-                        <div>
-                            <h3>{page.tours.tourPage.includings}</h3>
-                            {data.includings.map((text, index) => (
-                                <p key={index}>{text}</p>
-                            ))}
+                    <div id='note'>
+                        <h2 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h2>
+                        <div className={styles.infoList}>
+                            <div>
+                                <h3>{page.tours.tourPage.includings}</h3>
+                                {data.includings.map((text, index) => (
+                                    <p key={index}>{text}</p>
+                                ))}
+                            </div>
+                            <div>
+                                <h3>{page.tours.tourPage.excludings}</h3>
+                                {data.excludings.map((text, index) => (
+                                    <p key={index}>{text}</p>
+                                ))}
+                            </div>
                         </div>
-                        <div>
-                            <h3>{page.tours.tourPage.excludings}</h3>
-                            {data.excludings.map((text, index) => (
-                                <p key={index}>{text}</p>
-                            ))}
-                        </div>
-                    </div>
+                    </div>  
                 </article>  
             </Suspense>
         </div>
