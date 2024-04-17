@@ -82,8 +82,8 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       }]
     },
     robots: {
-        index: false,
-        follow: false,
+        index: true,
+        follow: true,
         nocache: true,
         googleBot: {
             index: true,
