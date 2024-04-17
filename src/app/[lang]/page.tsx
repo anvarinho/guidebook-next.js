@@ -68,6 +68,7 @@ export async function generateMetadata({
       title: page.home.title,
       description: page.home.description,
       keywords: page.home.keywords,
+      category: "Travel",
       openGraph: {
         type: "website",
         url: `${process.env.NEXT_PUBLIC_URL}/en/`,
@@ -104,7 +105,7 @@ export async function generateMetadata({
         creator: "@anvarinho",
         creatorId: "@anvarinho",
         images:[{
-          url: `${process.env.NEXT_PUBLIC_URL}/uploads/karakolcablelift.jpg`,
+          url: `${process.env.NEXT_PUBLIC_URL}/uploads/karakol-gorge1.jpg`,
           width: 800,
           height: 600,
           alt: "Karakol Cable Lift"
@@ -112,7 +113,7 @@ export async function generateMetadata({
       },
       robots: {
           index: true,
-          follow: false,
+          follow: true,
           nocache: true,
           googleBot: {
               index: true,

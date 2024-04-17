@@ -82,7 +82,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
         openGraph: {
             title: tour.title + ' | ' + 'GuideBook of Kyrgyzstan',
             description: tour.description,
-            url: `${process.env.NEXT_PUBLIC_URL}/`,
+            url: baseUrl,
             siteName: 'GuideBook of Kyrgyzstan',
             images: {
                 url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
@@ -123,8 +123,8 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             }
         },
         robots: {
-            index: false,
-            follow: false,
+            index: true,
+            follow: true,
             nocache: true,
             googleBot: {
                 index: true,
