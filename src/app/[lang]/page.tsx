@@ -39,7 +39,7 @@ export default async function Home({
     <div className={styles.main}>
       <div className={styles.home}>
         <h1>{page.home.title}</h1>
-        <h4>{page.home.description}</h4>
+        <h2>{page.home.description}</h2>
         <div className={styles.buttons}>
         <a href="#places" className={styles.floatingButton}>{page.home.button1}</a>
         <a href="#places" className={styles.floatingButton}>{page.home.button2}</a>
@@ -73,12 +73,12 @@ export async function generateMetadata({
         url: `${process.env.NEXT_PUBLIC_URL}/en/`,
         title: page.home.title,
         description: page.home.description,
-        images:{
+        images:[{
           url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
           width: 800,
           height: 600,
           alt: "Karakol Cable Lift"
-        },
+        }],
         locale: 'en_US'
       },
       alternates: {
@@ -103,12 +103,12 @@ export async function generateMetadata({
         siteId: "",
         creator: "@anvarinho",
         creatorId: "@anvarinho",
-        images:{
-          url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+        images:[{
+          url: `${process.env.NEXT_PUBLIC_URL}/uploads/karakolcablelift.jpg`,
           width: 800,
           height: 600,
           alt: "Karakol Cable Lift"
-        }
+        }]
       },
       robots: {
           index: true,
