@@ -54,7 +54,9 @@ export const metadata: Metadata = {
   keywords: "Kyrgyzstan travel guide, Central Asia tourism, Bishkek city attractions, Issyk-Kul Lake, Tien Shan mountains, Silk Road history, Karakol trekking routes, Nomadic culture, Ala Archa National Park, Osh bazaar, Cultural festivals, Burana Tower, Kyrgyz cuisine, Son-Kul Lake, Sary-Chelek Nature Reserve, Historical sites, Petroglyphs, Kyrgyz yurts, Horseback riding tours, Pamir Highway, Arslanbob walnut forests, Kyrgyz handicrafts, Nomadic yurt stays, Song Kol horse trek, Sary-Mogol village, Tash Rabat caravanserai, Jyrgalan Valley, Sulaiman-Too Sacred Mountain, Kyrgyz art and music, Cultural etiquette in Kyrgyzstan",
   category: 'Travel',
   openGraph: {
-    images: "karakolcablelift.jpg",
+    images: {
+      url:`${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`
+    },
   },
   verification: {
     google: "google-site-verification=353073521"
@@ -71,6 +73,14 @@ export const metadata: Metadata = {
     web: {
       url: "https://central-asia.live",
       should_fallback: true,
+    }
+  },
+  twitter:{
+    card:"summary_large_image",
+    title: "Welcome to Kyrgyzstan!",
+    description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
+    images:{
+      url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
     }
   }
 }
