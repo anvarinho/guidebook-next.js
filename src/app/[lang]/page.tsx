@@ -69,7 +69,9 @@ export async function generateMetadata({
       description: page.home.description,
       keywords: page.home.keywords,
       openGraph: {
-          images: ``,
+        images:{
+          url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+        }
       },
       alternates: {
           canonical: `en/`,
@@ -93,7 +95,9 @@ export async function generateMetadata({
         siteId: "",
         creator: "@anvarinho",
         creatorId: "@anvarinho",
-        images: 'data.place.image',
+        images:{
+          url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+        }
       },
       robots: {
           index: true,
