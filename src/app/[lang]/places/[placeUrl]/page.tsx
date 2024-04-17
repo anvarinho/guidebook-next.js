@@ -68,15 +68,15 @@ export async function generateMetadata({
         alternates: {
             canonical: `en/places/${place.url}`,
             languages: {
-                "en-EN": `en/places/${place.url}`,
+                "en-US": `en/places/${place.url}`,
                 "fr-FR": `fr/places/${place.url}`,
                 "de-DE": `de/places/${place.url}`,
                 "es-ES": `es/places/${place.url}`,
                 "ru-RU": `ru/places/${place.url}`,
                 "it-IT": `it/places/${place.url}`,
-                "jp-JP": `jp/places/${place.url}`,
-                "kr-KR": `kr/places/${place.url}`,
-                "ae-AE": `ae/places/${place.url}`,
+                "ja-JP": `jp/places/${place.url}`,
+                "ko-KR": `kr/places/${place.url}`,
+                "ar-AE": `ae/places/${place.url}`,
                 "zh-CN": `cn/places/${place.url}`
             }
         },
@@ -90,8 +90,8 @@ export async function generateMetadata({
             images: images
         },
         robots: {
-            index: false,
-            follow: false,
+            index: true,
+            follow: true,
             nocache: true,
             googleBot: {
                 index: true,

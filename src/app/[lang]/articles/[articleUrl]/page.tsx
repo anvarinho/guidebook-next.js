@@ -55,15 +55,15 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       alternates: {
         canonical: `en/articles/${article.url}`,
         languages: {
-            "en-EN": `en/articles/${article.url}`,
+            "en-US": `en/articles/${article.url}`,
             "fr-FR": `fr/articles/${article.url}`,
             "de-DE": `de/articles/${article.url}`,
             "es-ES": `es/articles/${article.url}`,
             "ru-RU": `ru/articles/${article.url}`,
             "it-IT": `it/articles/${article.url}`,
-            "jp-JP": `jp/articles/${article.url}`,
-            "kr-KR": `kr/articles/${article.url}`,
-            "ae-AE": `ae/articles/${article.url}`,
+            "ja-JP": `jp/articles/${article.url}`,
+            "ko-KR": `kr/articles/${article.url}`,
+            "ar-AE": `ae/articles/${article.url}`,
             "zh-CN": `cn/articles/${article.url}`
         }
     },

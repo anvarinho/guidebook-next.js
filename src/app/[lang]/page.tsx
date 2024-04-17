@@ -47,7 +47,7 @@ export default async function Home({
         
         <div className={styles.chooseLanguage}>
           <h5>{translations[lang]}</h5>
-          <Image src={'/arrow-down.png'} alt={'arrow down'} width={'30'} height={'30'}/>
+          <Image src={'/arrow-down.png'} alt={'arrow down'} width={'30'} height={'30'} title='Arrow Down'/>
         </div>
         <div className={styles.downloadApps}>
             <DownloadApps/>
@@ -69,23 +69,31 @@ export async function generateMetadata({
       description: page.home.description,
       keywords: page.home.keywords,
       openGraph: {
+        type: "website",
+        url: `${process.env.NEXT_PUBLIC_URL}/en/`,
+        title: page.home.title,
+        description: page.home.description,
         images:{
           url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
-        }
+          width: 800,
+          height: 600,
+          alt: "Karakol Cable Lift"
+        },
+        locale: 'en_US'
       },
       alternates: {
-          canonical: `en/`,
+          canonical: `${process.env.NEXT_PUBLIC_URL}/en/`,
           languages: {
-            "en-EN": "en",
-            "fr-FR": "fr",
-            "de-DE": "de",
-            "es-ES": "es",
-            "ru-RU": "ru",
-            "it-IT": "it",
-            "jp-JP": "jp",
-            "kr-KR": "kr",
-            "ae-AE": "ae",
-            "zh-CN": "cn"
+            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/`,
+            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/`,
+            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/`,
+            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/`,
+            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/`,
+            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/`,
+            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/`,
+            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/`,
+            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/`,
+            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/`
           }
       },
       twitter: {
@@ -97,6 +105,9 @@ export async function generateMetadata({
         creatorId: "@anvarinho",
         images:{
           url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+          width: 800,
+          height: 600,
+          alt: "Karakol Cable Lift"
         }
       },
       robots: {
