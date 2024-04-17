@@ -145,7 +145,7 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                 ))
             ) : (
                 <div className={styles.readMore}>
-                    <h1>{dictionary.title[lang]}</h1>
+                    <h2>{dictionary.title[lang]}</h2>
                     <h4>{dictionary.description[lang]}</h4>
                     <div>
                         <Link href={`/${lang}/places`} className={styles.floatingButton} >{dictionary.places[lang]}</Link>

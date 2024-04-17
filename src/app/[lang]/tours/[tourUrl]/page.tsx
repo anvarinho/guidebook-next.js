@@ -78,5 +78,58 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
         },
         description: tour.description,
         keywords: tour.keywords,
+        applicationName: 'GuideBook of Kyrgyzstan',
+        openGraph: {
+            title: tour.title + ' | ' + 'GuideBook of Kyrgyzstan',
+            description: tour.description,
+            url: `${process.env.NEXT_PUBLIC_URL}/`,
+            siteName: 'GuideBook of Kyrgyzstan',
+            images: {
+                url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
+                width: 800,
+                height: 600,
+                alt: tour.title
+            },
+            locale: 'en_US',
+            type: 'website',
+        },
+        alternates: {
+            canonical: `en/tours/${tour.url}`,
+            languages: {
+                "en-US": `en/tours/${tour.url}`,
+                "fr-FR": `fr/tours/${tour.url}`,
+                "de-DE": `de/tours/${tour.url}`,
+                "es-ES": `es/tours/${tour.url}`,
+                "ru-RU": `ru/tours/${tour.url}`,
+                "it-IT": `it/tours/${tour.url}`,
+                "ja-JP": `jp/tours/${tour.url}`,
+                "ko-KR": `kr/tours/${tour.url}`,
+                "ar-AE": `ae/tours/${tour.url}`,
+                "zh-CN": `cn/tours/${tour.url}`
+            }
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: tour.title,
+            description: tour.description,
+            siteId: "",
+            creator: "@anvarinho",
+            creatorId: "@anvarinho",
+            images: {
+                url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
+                width: 800,
+                height: 600,
+                alt: tour.title
+            }
+        },
+        robots: {
+            index: false,
+            follow: false,
+            nocache: true,
+            googleBot: {
+                index: true,
+                follow: true,
+            }
+        }
     }
   }

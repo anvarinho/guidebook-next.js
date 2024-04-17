@@ -34,7 +34,7 @@ const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
                 <div className={styles.slider_items}>
                     {items.map((image, idx) => (
                         <div key={idx} className={`${styles.slider_item} ${idx + 1 === index ? styles.active : ''}`}>
-                            <img src={baseUrl + image} alt={`${image}`} />
+                            <img src={baseUrl + image} alt={`${image}`} title={`${image}`} />
                         </div>
                     ))}
                 </div>

@@ -8,6 +8,7 @@ export default function Flag(lang: string){
             // className={styles.flag}
             height={40}
             width={50}
+            title={`Flag of ${lang}`}
         />
     )
 }
