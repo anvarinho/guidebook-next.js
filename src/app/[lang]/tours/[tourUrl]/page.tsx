@@ -8,7 +8,7 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
-import JSONLD from "../../Components/meta/JSONLD"
+import JSONLD from "../../Components/meta/JsonLD"
 
 type Params = {
     params: {
@@ -24,14 +24,36 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const data = await tourData
     const metaData = {
         "@context": "https://schema.org",
-        "@type": "Tourism Attraction",
-        "name": "GuideBook of Kyrgyzstan",
-        "url": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
-        "logo": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
-        "contactPoint": {
+        "@type": "Product",
+        name: "GuideBook of Kyrgyzstan",
+        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
+        logo: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
+        contactPoint: {
           "@type": "ContactPoint",
           "telephone": "+996500490806",
           "contactType": "Customer Service"
+        },
+        description: "A comprehensive guidebook providing information about the culture, history, attractions, and practical travel tips for exploring Kyrgyzstan.",
+        audience: {
+          "@type": "Audience",
+          "audienceType": "Tourists"
+        },
+        provider: {
+          "@type": "Organization",
+          "name": "GuideBook of Kyrgyzstan",
+          "url": `${process.env.NEXT_PUBLIC_URL}`,
+          "logo": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`
+        },
+        offers: {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": `${data.price}`,
+          "availability": "https://schema.org/InStock",
+          "url": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
+          "seller": {
+            "@type": "Organization",
+            "name": "GuideBook of Kyrgyzstan"
+          }
         }
       };
     return (
@@ -86,16 +108,17 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
     const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const tour = await tourData
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
+    const description = tour.description.substring(0, 200)
     return {
         title: {
           absolute: tour.title
         },
-        description: tour.description,
+        description: description,
         keywords: tour.keywords,
         applicationName: 'GuideBook of Kyrgyzstan',
         openGraph: {
             title: tour.title + ' | ' + 'GuideBook of Kyrgyzstan',
-            description: tour.description,
+            description: description,
             url: baseUrl,
             siteName: 'GuideBook of Kyrgyzstan',
             images: {
@@ -125,7 +148,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
         twitter: {
             card: "summary_large_image",
             title: tour.title,
-            description: tour.description,
+            description: description,
             siteId: "",
             creator: "@anvarinho",
             creatorId: "@anvarinho",
@@ -146,4 +169,4 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             }
         }
     }
-  }
+}

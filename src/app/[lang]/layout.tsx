@@ -9,7 +9,7 @@ import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
 import Flags from './Components/Flags'
-import { getDictionary } from '../../lib/dictionary'
+// import { getDictionary } from '../../lib/dictionary'
 // import { GoogleAnalytics } from '@next/third-parties/google'
 
 export async function generateStaticParams() {
@@ -23,8 +23,20 @@ export default function RootLayout({
   children: React.ReactNode,
   params: { lang: Locale }
 }) {
+  const langs = {
+    "en": "en-US",
+    "fr": "fr-FR",
+    "de": "de-DE",
+    "es": "es-ES",
+    "ru": "ru-RU",
+    "it": "it-IT",
+    "jp": "ja-JP",
+    "kr": "ko-KR",
+    "ae": "ar-AE",
+    "cn": "zh-CN"
+  };
   return (
-    <html lang={params.lang}>
+    <html lang={langs[params.lang]}>
       <head>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
