@@ -29,42 +29,25 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
         logo: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
         description: data.description,
+        image: data.images,
         audience: {
           "@type": "Audience",
           "audienceType": "Tourists"
         },
-        provider: {
-          "@type": "Organization",
-          "name": "GuideBook of Kyrgyzstan",
-          "url": `${process.env.NEXT_PUBLIC_URL}`,
-          "logo": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`
-        },
-        // contactPoint: {
-        //     "@type": "ContactPoint",
-        //     "telephone": "+996500490806",
-        //     "contactType": "Customer Service"
-        // },
-        offers: {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": `${data.price}`,
-          "availability": "https://schema.org/InStock",
-          "url": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
-          "seller": {
-            "@type": "Organization",
+        "brand": {
+            "@type": "Brand",
             "name": "GuideBook of Kyrgyzstan"
-          }
         },
-        aggregateRating: {
+        "offers": {
+            "@type": "AggregateOffer",
+            "price": data.price,
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "0",
-            "ratingCount": "100",
-            "itemReviewed": {
-                "@type": "Service",
-                "name": data.title
-              }
+            "ratingValue": 4.4,
+            "reviewCount": 12
         },
         category: "Travel Guidebooks"
     };
