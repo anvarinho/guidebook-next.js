@@ -39,9 +39,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             });
         }
         for (const article of articles) {
+            const isoString = new Date(article.lastModified).toISOString()
             pages.push({
                 url: `${URL}/${lang}/articles/${article.placeUrl}`,
-                lastModified: article.lastModified,
+                lastModified: isoString,
                 changeFrequency: 'monthly' as const,
                 priority: 0.9
             });
