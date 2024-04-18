@@ -8,6 +8,7 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
+import JSONLD from "../../Components/meta/JSONLD"
 
 type Params = {
     params: {
@@ -21,8 +22,21 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const { page } = await getDictionary(lang)
     const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const data = await tourData
+    const metaData = {
+        "@context": "https://schema.org",
+        "@type": "Tourism Attraction",
+        "name": "GuideBook of Kyrgyzstan",
+        "url": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
+        "logo": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+996500490806",
+          "contactType": "Customer Service"
+        }
+      };
     return (
         <div className={styles.main}>
+            <JSONLD data={metaData} />
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
                 <article className={styles.article}>
                     <h1>{data.title}</h1>

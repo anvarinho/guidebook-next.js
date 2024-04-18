@@ -19,7 +19,7 @@ export default async function Team({
             </div>
             <div className={styles.team__member_info}>
                 <h4>Erkin</h4>
-                <p>Expert</p>
+                {/* <p>Expert</p> */}
             </div>
         </article>
         <article className={styles.team__member} data-aos="zoom-in">
@@ -27,8 +27,8 @@ export default async function Team({
                 <img src="/team/tm2.jpg" alt=""/>
             </div>
             <div className={styles.team__member_info}>
-                <h4>Erkin</h4>
-                <p>Expert</p>
+                <h4>Evgeniy</h4>
+                {/* <p>Expert</p> */}
             </div>
         </article>
         <article className={styles.team__member} data-aos="zoom-in">
@@ -36,8 +36,8 @@ export default async function Team({
                 <img src="/team/tm3.jpg" alt=""/>
             </div>
             <div className={styles.team__member_info}>
-                <h4>Erkin</h4>
-                <p>Expert</p>
+                <h4>Narynbek</h4>
+                {/* <p>Expert</p> */}
             </div>
         </article>
         <article className={styles.team__member} data-aos="zoom-in">
@@ -45,8 +45,8 @@ export default async function Team({
                 <img src="/team/tm4.jpg" alt=""/>
             </div>
             <div className={styles.team__member_info}>
-                <h4>Erkin</h4>
-                <p>Expert</p>
+                <h4>Anvar</h4>
+                {/* <p>Expert</p> */}
             </div>
         </article>
       </div>
