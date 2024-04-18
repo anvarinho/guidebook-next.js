@@ -10,7 +10,7 @@ import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
 import Flags from './Components/Flags'
 import { getDictionary } from '../../lib/dictionary'
-
+// import { GoogleAnalytics } from '@next/third-parties/google'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
