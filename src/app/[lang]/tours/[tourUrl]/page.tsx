@@ -24,32 +24,40 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const data = await tourData
     const metaData = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        name: data.title,
-        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
-        logo: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
-        description: data.description,
-        image: data.images,
-        audience: {
-          "@type": "Audience",
-          "audienceType": "Tourists"
-        },
+        "@type": "Product",
+        "name": data.title,
+        "description": data.description,
+        "image": data.images,
+        "sku":data._id,
         "brand": {
             "@type": "Brand",
             "name": "GuideBook of Kyrgyzstan"
         },
-        "offers": {
-            "@type": "AggregateOffer",
-            "price": data.price[0],
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 4,
+              "bestRating": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Fred Benson"
+            }
+          },
+          "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": 4.4,
+            "ratingValue": 4.8,
             "reviewCount": 12
         },
-        category: "Travel Guidebooks"
+        "offers": {
+            "@type": "Offer",
+            "url": `${process.env.NEXT_PUBLIC_URL}/tours/${data.url}`,
+            "priceCurrency": "USD",
+            "price": data.price[0],
+            "priceValidUntil": "2024-7-1",
+            "availability": "https://schema.org/InStock"
+          }
     };
     return (
         <div className={styles.main}>
