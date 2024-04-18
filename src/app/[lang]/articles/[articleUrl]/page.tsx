@@ -53,7 +53,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
           type: 'website',
       },
       alternates: {
-        canonical: `en/articles/${article.url}`,
+        canonical: `articles/${article.url}`,
         languages: {
             "en-US": `en/articles/${article.url}`,
             "fr-FR": `fr/articles/${article.url}`,

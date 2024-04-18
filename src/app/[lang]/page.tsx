@@ -70,6 +70,7 @@ export async function generateMetadata({
       keywords: page.home.keywords,
       category: "Travel",
       openGraph: {
+        siteName:"GuideBook of Kyrgyzstan",
         type: "website",
         url: `${process.env.NEXT_PUBLIC_URL}/en/`,
         title: page.home.title,
@@ -83,7 +84,7 @@ export async function generateMetadata({
         locale: 'en_US'
       },
       alternates: {
-          canonical: `${process.env.NEXT_PUBLIC_URL}/en/`,
+          canonical: `${process.env.NEXT_PUBLIC_URL}/`,
           languages: {
             "en-US": `${process.env.NEXT_PUBLIC_URL}/en/`,
             "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/`,

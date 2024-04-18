@@ -53,5 +53,34 @@ export async function generateMetadata({
       },
       description: page.sights.description,
       keywords: page.sights.keywords,
+      applicationName:"GuideBook of Kyrgyzstan",
+      openGraph: {
+        title: page.sights.title + ' | ' + 'GuideBook of Kyrgyzstan',
+        description: page.sights.description,
+        url: `${process.env.NEXT_PUBLIC_URL}/places`,
+        siteName: 'GuideBook of Kyrgyzstan',
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        },
+        locale: 'en_US',
+        type: 'website',
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: page.sights.title,
+        description: page.sights.description,
+        siteId: "",
+        creator: "@anvarinho",
+        creatorId: "@anvarinho",
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        }
+    },
   }
 }

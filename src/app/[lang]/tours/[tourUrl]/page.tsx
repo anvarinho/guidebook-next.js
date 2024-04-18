@@ -94,7 +94,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             type: 'website',
         },
         alternates: {
-            canonical: `en/tours/${tour.url}`,
+            canonical: `tours/${tour.url}`,
             languages: {
                 "en-US": `en/tours/${tour.url}`,
                 "fr-FR": `fr/tours/${tour.url}`,
