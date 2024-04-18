@@ -40,7 +40,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
         },
         "offers": {
             "@type": "AggregateOffer",
-            "price": data.price,
+            "price": data.price[0],
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock"
         },
