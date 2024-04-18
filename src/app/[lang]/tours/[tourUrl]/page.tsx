@@ -39,6 +39,11 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
           "url": `${process.env.NEXT_PUBLIC_URL}`,
           "logo": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`
         },
+        // contactPoint: {
+        //     "@type": "ContactPoint",
+        //     "telephone": "+996500490806",
+        //     "contactType": "Customer Service"
+        // },
         offers: {
           "@type": "Offer",
           "priceCurrency": "USD",
@@ -58,11 +63,11 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
             "ratingCount": "100"
         },
         category: "Travel Guidebooks",
-        potentialAction: {
-            "@type": "ContactAction",
-            "contactType": "customer service",
-            "telephone": "+996500490806"
-        }
+        // potentialAction: {
+        //     "@type": "ContactAction",
+        //     "contactType": "customer service",
+        //     "telephone": "+996500490806"
+        // }
     };
     return (
         <div className={styles.main}>
