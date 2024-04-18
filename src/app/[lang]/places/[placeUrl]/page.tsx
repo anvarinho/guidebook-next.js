@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import LoadingSpinner from "../../Components/LoadingSpinner"
+import JsonLD from "../../Components/meta/JsonLD"
 
 type Params = {
     params: {
@@ -19,10 +20,44 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const data = await placeData
     const { page } = await getDictionary(lang)
-    if (!data) notFound()
 
+    const metaData = {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        name: `${data.name}`,
+        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${data.url}`,
+        description: data.description.substring(0, 200),
+        image: `${process.env.NEXT_PUBLIC_URL}/${data.images[0]}`,
+        address: {
+          "@type": "PostalAddress",
+          "addressLocality": `${data.region}`,
+          "addressCountry": "KG"
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          "latitude": data.location.latitude,
+          "longitude": data.location.longitude
+        },
+        openingHours: "Mo-Su 06:00-22:00",
+        sameAs: [
+            `${process.env.NEXT_PUBLIC_URL}/en/places/${data.url}`,
+            `${process.env.NEXT_PUBLIC_URL}/ru/places/${data.url}`
+        ],
+        additionalProperty: [
+            {
+              "@type": "PropertyValue",
+              "name": "Category",
+              "value": "Tourist Attraction"
+            }
+        ]
+    };
+      
+
+    if (!data) notFound()
+    
     return (
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
+                <JsonLD data={metaData} />
                 <PlaceArticle promise={placeData} lang={lang}/>  
             </Suspense>
     )
