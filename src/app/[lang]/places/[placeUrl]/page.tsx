@@ -20,7 +20,7 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const data = await placeData
     const { page } = await getDictionary(lang)
-
+    // console.log(data)
     const metaData = {
         "@context": "https://schema.org",
         "@type": "Place",

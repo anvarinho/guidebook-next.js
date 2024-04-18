@@ -1,3 +1,8 @@
+type GeoLocation = {
+    longitude: string;
+    latitude: string;
+};
+
 type Place = {
     "_id": string,
     "name": string,
@@ -10,12 +15,7 @@ type Place = {
     "images": [string],
     "sights": [string]?,
     "viewCount": number,
-    "location": Location
-}
-
-type Location = {
-    "longitude": string,
-    "latitude": string
+    location: GeoLocation;
 }
 
 type Tour = {
@@ -118,3 +118,10 @@ type Paragraph = {
     "image": string?,
     "link": string?,
 }
+
+const data: { location: Location } = {
+    location: {
+        latitude: "Your latitude value",
+        longitude: "Your longitude value"
+    }
+};
