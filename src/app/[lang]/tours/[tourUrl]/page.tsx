@@ -25,10 +25,10 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const metaData = {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: "GuideBook of Kyrgyzstan",
+        name: data.title,
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
         logo: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
-        description: "A comprehensive guidebook providing information about the culture, history, attractions, and practical travel tips for exploring Kyrgyzstan.",
+        description: data.description,
         audience: {
           "@type": "Audience",
           "audienceType": "Tourists"
@@ -57,22 +57,21 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
         },
         aggregateRating: {
             "@type": "AggregateRating",
-            "ratingValue": "4.5",
+            "ratingValue": "4.8",
             "bestRating": "5",
             "worstRating": "0",
-            "ratingCount": "100"
+            "ratingCount": "100",
+            "itemReviewed": {
+                "@type": "Service",
+                "name": data.title
+              }
         },
-        category: "Travel Guidebooks",
-        // potentialAction: {
-        //     "@type": "ContactAction",
-        //     "contactType": "customer service",
-        //     "telephone": "+996500490806"
-        // }
+        category: "Travel Guidebooks"
     };
     return (
         <div className={styles.main}>
-            <JsonLD data={metaData} />
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
+                <JsonLD data={metaData} />
                 <article className={styles.article}>
                     <h1>{data.title}</h1>
                     <ImageSlider items={data.images}/>
