@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "Welcome to Kyrgyzstan!",
     description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
     images:{
-      url: `${process.env.NEXT_PUBLIC_URL}/uploads/karakol-gorge1.jpg`,
+      url: `${process.env.NEXT_PUBLIC_URL}/uploads/bozteri.jpg`,
       width: 800,
       height: 600,
       alt: "Karakol Cable Lift"

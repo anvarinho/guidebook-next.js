@@ -14,4 +14,4 @@ const dictionaries = {
   cn: () => import('@/dictionaries/cn.json').then(module => module.default),
 }
 
-export const getDictionary = async (lang: Locale) => dictionaries[lang]()
+export const getDictionary = async (lang: Locale = 'en') => dictionaries[lang]();
