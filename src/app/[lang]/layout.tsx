@@ -36,7 +36,7 @@ export default function RootLayout({
     "cn": "zh-CN"
   };
   return (
-    <html lang={langs[params.lang]}>
+    <html lang={params.lang}>
       <head>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
