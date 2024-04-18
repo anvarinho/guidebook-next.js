@@ -10,6 +10,12 @@ type Place = {
     "images": [string],
     "sights": [string]?,
     "viewCount": number,
+    "location": Location
+}
+
+type Location = {
+    "longitude": string,
+    "latitude": string
 }
 
 type Tour = {

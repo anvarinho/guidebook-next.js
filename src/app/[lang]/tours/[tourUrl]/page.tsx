@@ -8,7 +8,7 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
-import JSONLD from "../../Components/meta/JsonLD"
+import JsonLD from "../../Components/meta/JsonLD"
 
 type Params = {
     params: {
@@ -24,15 +24,10 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const data = await tourData
     const metaData = {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "GuideBook of Kyrgyzstan",
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tourUrl}`,
         logo: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`,
-        contactPoint: {
-          "@type": "ContactPoint",
-          "telephone": "+996500490806",
-          "contactType": "Customer Service"
-        },
         description: "A comprehensive guidebook providing information about the culture, history, attractions, and practical travel tips for exploring Kyrgyzstan.",
         audience: {
           "@type": "Audience",
@@ -54,11 +49,24 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
             "@type": "Organization",
             "name": "GuideBook of Kyrgyzstan"
           }
+        },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "worstRating": "0",
+            "ratingCount": "100"
+        },
+        category: "Travel Guidebooks",
+        potentialAction: {
+            "@type": "ContactAction",
+            "contactType": "customer service",
+            "telephone": "+996500490806"
         }
-      };
+    };
     return (
         <div className={styles.main}>
-            <JSONLD data={metaData} />
+            <JsonLD data={metaData} />
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
                 <article className={styles.article}>
                     <h1>{data.title}</h1>

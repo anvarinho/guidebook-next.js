@@ -5,6 +5,7 @@ import getArticle from '@/lib/getArticle';
 import Article from './components/Article'
 import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
+import JsonLD from "../../Components/meta/JsonLD"
 
 type Params = {
   params: {
@@ -18,9 +19,42 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   // const { page } = await getDictionary(lang)
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
+  const metaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
+    datePublished: article.createdAt,
+    dateModified: article.createdAt,
+    author: {
+      "@type": "Person",
+      name: "Anvar Jumabaev"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "GuideBook of Kyrgyzstan",
+      logo: {
+        "@type": "ImageObject",
+        url: `${process.env.NEXT_PUBLIC_URL}/favicon.ico`
+      }
+    },
+    description: article.subtitle,
+    image: {
+      "@type": "ImageObject",
+      url: `${process.env.NEXT_PUBLIC_URL}/${article.image ? article.image : article.paragraphs[0].image}`,
+      width: 800,
+      height: 600
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${process.env.NEXT_PUBLIC_URL}/articles/${article.url}`
+    }
+  };
+  
   return (
     <div className={styles.main}>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
+        <JsonLD data={metaData} />
         <Article article={article} lang={lang}/>
       </Suspense>
     </div>
