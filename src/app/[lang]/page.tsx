@@ -106,7 +106,7 @@ export async function generateMetadata({
         creator: "@anvarinho",
         creatorId: "@anvarinho",
         images:[{
-          url: `${process.env.NEXT_PUBLIC_URL}/uploads/karakol-gorge1.jpg`,
+          url: `${process.env.NEXT_PUBLIC_URL}/uploads/bozteri.jpg`,
           width: 800,
           height: 600,
           alt: "Karakol Cable Lift"
