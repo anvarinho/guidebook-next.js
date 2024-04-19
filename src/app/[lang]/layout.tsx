@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     },
     web: {
       url: "https://central-asia.live",
-      should_fallback: true,
+      should_fallback: false,
     }
   },
   twitter:{
