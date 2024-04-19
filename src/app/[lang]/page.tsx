@@ -68,11 +68,12 @@ export async function generateMetadata({
       title: page.home.title,
       description: page.home.description,
       keywords: page.home.keywords,
+      applicationName:"GuideBook of Kyrgyzstan",
       category: "Travel",
       openGraph: {
         siteName:"GuideBook of Kyrgyzstan",
         type: "website",
-        url: `${process.env.NEXT_PUBLIC_URL}/en/`,
+        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/`,
         title: page.home.title,
         description: page.home.description,
         images:[{
@@ -81,7 +82,7 @@ export async function generateMetadata({
           height: 600,
           alt: "Karakol Cable Lift"
         }],
-        locale: 'en_US'
+        locale: lang
       },
       alternates: {
           canonical: `${process.env.NEXT_PUBLIC_URL}/`,
