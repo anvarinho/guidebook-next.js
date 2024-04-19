@@ -8,7 +8,7 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
-import JsonLD from "../../Components/meta/JsonLD"
+import Meta from './meta';
 
 type Params = {
     params: {
@@ -22,47 +22,11 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const { page } = await getDictionary(lang)
     const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const data = await tourData
-    const metaData = {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": data.title,
-        "description": data.description,
-        "image": data.images,
-        "sku":data._id,
-        "brand": {
-            "@type": "Brand",
-            "name": "GuideBook of Kyrgyzstan"
-        },
-        "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 4,
-              "bestRating": 5
-            },
-            "author": {
-              "@type": "Person",
-              "name": "Fred Benson"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 4.8,
-            "reviewCount": 12
-        },
-        "offers": {
-            "@type": "Offer",
-            "url": `${process.env.NEXT_PUBLIC_URL}/tours/${data.url}`,
-            "priceCurrency": "USD",
-            "price": data.price[0],
-            "priceValidUntil": "2024-7-1",
-            "availability": "https://schema.org/InStock"
-          }
-    };
     return (
         <div className={styles.main}>
+            <Meta tour={data}/>
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
-                <JsonLD data={metaData} />
+                {/* <JsonLD data={metaData} /> */}
                 <article className={styles.article}>
                     <h1>{data.title}</h1>
                     <ImageSlider items={data.images}/>
@@ -162,6 +126,12 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
                 alt: tour.title
             }
         },
+        appLinks: {
+            web: {
+              url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
+              should_fallback: false,
+            }
+          },
         robots: {
             index: true,
             follow: true,
