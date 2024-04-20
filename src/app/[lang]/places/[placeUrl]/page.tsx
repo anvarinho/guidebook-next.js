@@ -26,7 +26,7 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
     return (
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
                 {/* <JsonLD data={metaData} /> */}
-                <Meta lang={lang} place={data}/>
+                <Meta lang={lang} place={data} page={page}/>
                 <PlaceArticle promise={placeData} lang={lang}/>  
             </Suspense>
     )
@@ -66,7 +66,7 @@ export async function generateMetadata({
             url: `${process.env.NEXT_PUBLIC_URL}/`,
             siteName: 'GuideBook of Kyrgyzstan',
             images: images,
-            locale: 'en_US',
+            locale: page.langCode.replace("-",'_'),
             type: 'website',
         },
         alternates: {
@@ -94,10 +94,20 @@ export async function generateMetadata({
             images: images
         },
         appLinks: {
+            ios: {
+              url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+              app_store_id: "id1575382810",
+              app_name: "GuideBook of Kyrgyzstan"
+            },
+            android: {
+              url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+              package: "com.anvarinho.guidebook",
+              app_name: "GuideBook of Kyrgyzstan"
+            },
             web: {
-              url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
-              should_fallback: false,
-            }
+                url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
+                should_fallback: false,
+              }
         },
         robots: {
             index: true,

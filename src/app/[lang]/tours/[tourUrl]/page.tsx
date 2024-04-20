@@ -24,7 +24,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const data = await tourData
     return (
         <div className={styles.main}>
-            <Meta tour={data}/>
+            <Meta lang={lang} tour={data} page={page}/>
             <Suspense fallback={<LoadingSpinner text={"Loading"}/>}>
                 {/* <JsonLD data={metaData} /> */}
                 <article className={styles.article}>
@@ -76,6 +76,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
     const tour = await tourData
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const description = tour.description.substring(0, 200)
+    const { page } = await getDictionary(lang)
     return {
         title: {
           absolute: tour.title
@@ -94,7 +95,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
                 height: 600,
                 alt: tour.title
             },
-            locale: 'en_US',
+            locale: page.langCode.replace("-",'_'),
             type: 'website',
         },
         alternates: {
@@ -127,8 +128,18 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             }
         },
         appLinks: {
+            ios: {
+              url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+              app_store_id: "id1575382810",
+              app_name: "GuideBook of Kyrgyzstan"
+            },
+            android: {
+              url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+              package: "com.anvarinho.guidebook",
+              app_name: "GuideBook of Kyrgyzstan"
+            },
             web: {
-              url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
+              url: "https://central-asia.live",
               should_fallback: false,
             }
         },

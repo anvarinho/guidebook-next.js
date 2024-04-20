@@ -6,6 +6,7 @@ import Article from './components/Article'
 import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import Meta from './meta';
+import { getDictionary } from '@/lib/dictionary'
 
 type Params = {
   params: {
@@ -16,14 +17,14 @@ type Params = {
 }
 
 export default async function Home({ params: {articleUrl, lang}}: Params) {
-  // const { page } = await getDictionary(lang)
+  const { page } = await getDictionary(lang)
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
   
   return (
     <div className={styles.main}>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
-        <Meta lang={lang} article={article}/>
+        <Meta lang={lang} article={article} page={page}/>
         <Article article={article} lang={lang}/>
       </Suspense>
     </div>
@@ -85,6 +86,16 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       }]
     },
     appLinks: {
+      ios: {
+        url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+        app_store_id: "id1575382810",
+        app_name: "GuideBook of Kyrgyzstan"
+      },
+      android: {
+        url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+        package: "com.anvarinho.guidebook",
+        app_name: "GuideBook of Kyrgyzstan"
+      },
       web: {
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
         should_fallback: false,

@@ -1,11 +1,14 @@
 // import { Locale } from "@/lib/i18n.config";
 
+import { Locale } from "@/lib/i18n.config";
+
 interface Props {
-    tour: TourInfo; // Assuming 'tour' is a string, adjust the type accordingly if it's different
-    // lang: Locale
+  lang: Locale
+  tour: TourInfo; // Assuming 'tour' is a string, adjust the type accordingly if it's different
+  page: any
 }
 
-const Meta: React.FC<Props> = ({ tour }) => {
+const Meta: React.FC<Props> = ({ lang,  tour, page }) => {
     const data = {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -41,7 +44,31 @@ const Meta: React.FC<Props> = ({ tour }) => {
             "price": tour.price[0],
             "priceValidUntil": "2024-7-1",
             "availability": "https://schema.org/InStock"
-          }
+          },
+          "breadcrumb": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": page.name,
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": page.tours.name,
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": `${tour.title}`,
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`
+              }
+            ]
+          },
     }
     
     return (

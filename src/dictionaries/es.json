@@ -1,5 +1,6 @@
 {
     "page": {
+      "langCode":"es-ES",
         "name": "Guía de Kirguistán",
         "loading": "Cargando...",
         "contactButton": "¿Alguna pregunta?",
@@ -20,12 +21,14 @@
             "button3": "leer más"
         },
         "sights": {
+          "name": "Lugares de interés",
             "title": "Lugares más populares de Kirguistán",
             "description": "Sumérgete en los impresionantes paisajes y destinos encantadores de Kirguistán. Explora terrenos diversos, sitios culturales y maravillas naturales que definen el encanto de este país único.",
             "keywords": "Lugares de Kirguistán, Viajes en Kirguistán, Explorar Kirguistán, Destinos de Kirguistán, Turismo en Kirguistán, Lugares imperdibles en Kirguistán, Principales atracciones de Kirguistán, Paisajes de Kirguistán, Sitios culturales de Kirguistán, Maravillas naturales de Kirguistán, Mejores lugares para visitar en Kirguistán",
             "sights": "Lugares para visitar"
         },
         "tours": {
+          "name": "Tours",
             "title": "Tours más populares de Kirguistán",
             "description": "Embárcate en tours inolvidables que muestran la belleza de Kirguistán. Elige entre tours de aventura, culturales y de trekking, y permítenos guiarte a través de paisajes diversos y cautivadores.",
             "keywords": "Tours en Kirguistán, Tours de aventura en Kirguistán, Tours guiados en Kirguistán, Tours culturales en Kirguistán, Tours de trekking en Kirguistán, Tours a caballo en Kirguistán, Experiencias nómadas en Kirguistán, Paquetes de viaje en Kirguistán, Mejores tours en Kirguistán, Explora Kirguistán a través de tours",
@@ -46,6 +49,7 @@
             }            
         },
         "articles": {
+          "name": "Historias",
           "title": "Kirguistán: cultura, tradiciones y naturaleza",
           "description": "Explore la rica cultura, las vibrantes tradiciones y la naturaleza impresionante de Kirguistán a través de estos interesantes relatos. Adéntrese en el corazón de la cultura kirguisa, desde tradiciones antiguas como la caza con águilas y el kok boru hasta los majestuosos perros alabai y las aventuras en el Taiga.",
           "keywords": [

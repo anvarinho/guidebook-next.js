@@ -1,5 +1,6 @@
 {
   "page": {
+    "langCode":"fr-FR",
       "name": "Guide du Kirghizistan",
       "loading": "Chargement...",
       "contactButton": "Des questions ?",
@@ -20,12 +21,14 @@
           "button3": "lire la suite"
       },
       "sights": {
+        "name": "Sites",
           "title": "Sites les plus populaires du Kirghizistan",
           "description": "Plongez-vous dans les paysages époustouflants et les destinations enchanteuses du Kirghizistan. Explorez des terrains variés, des sites culturels et des merveilles naturelles qui définissent le charme de ce pays unique.",
           "keywords": "Sites du Kirghizistan, Voyage au Kirghizistan, Explorer le Kirghizistan, Destinations du Kirghizistan, Tourisme au Kirghizistan, Lieux incontournables au Kirghizistan, Principales attractions du Kirghizistan, Paysages du Kirghizistan, Sites culturels du Kirghizistan, Merveilles naturelles du Kirghizistan, Meilleurs endroits à visiter au Kirghizistan",
           "sights":"Sites à visiter"
       },
       "tours": {
+        "name": "Tours",
           "title": "Tours les plus populaires du Kirghizistan",
           "description": "Partez pour des tours inoubliables qui mettent en valeur la splendeur du Kirghizistan. Choisissez parmi des tours d'aventure, culturels et de trekking, et laissez-nous vous guider à travers des paysages divers et captivants.",
           "keywords": "Tours au Kirghizistan, Tours d'aventure au Kirghizistan, Tours guidés au Kirghizistan, Tours culturels au Kirghizistan, Tours de trekking au Kirghizistan, Tours à cheval au Kirghizistan, Expériences nomades au Kirghizistan, Forfaits de voyage au Kirghizistan, Meilleurs tours au Kirghizistan, Explorez le Kirghizistan à travers des tours",
@@ -46,6 +49,7 @@
           }
       },
       "articles": {
+        "name": "Histoires",
         "title": "Le Kirghizistan : culture, traditions et nature",
         "description": "Explorez la riche culture, les traditions vibrantes et la nature à couper le souffle du Kirghizistan à travers ces récits perspicaces. Des traditions anciennes comme la chasse à l'aigle et le kok-boru aux majestueux chiens Alabaï et aux aventures du Taïga, plongez au cœur de la culture kirghize.",
         "keywords": [
