@@ -23,7 +23,6 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   return (
     <div className={styles.main}>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
-        {/* <JsonLD data={metaData} /> */}
         <Meta lang={lang} article={article}/>
         <Article article={article} lang={lang}/>
       </Suspense>

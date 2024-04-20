@@ -1,7 +1,7 @@
 import { Locale } from "@/lib/i18n.config";
 
 interface Props {
-    article: Article; // Assuming 'tour' is a string, adjust the type accordingly if it's different
+    article: Article;
     lang: Locale
 }
 
@@ -15,6 +15,7 @@ const Meta: React.FC<Props> = ({ lang, article }) => {
         dateModified: article.createdAt,
         author: {
           "@type": "Person",
+          "url":"https://fb.com/anvarinho",
           name: "Anvar Jumabaev"
         },
         publisher: {
