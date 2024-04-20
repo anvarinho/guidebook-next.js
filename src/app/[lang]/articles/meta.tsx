@@ -3,9 +3,10 @@ import { Locale } from "@/lib/i18n.config";
 interface Props {
     articles: [Article];
     lang: Locale
+    page: any
 }
 
-const Meta: React.FC<Props> = ({ lang, articles }) => {
+const Meta: React.FC<Props> = ({ lang, articles, page }) => {
   const itemListElement = articles.map((article, index) => {
     const dateModifiedISO = new Date(article.createdAt).toISOString();
     return {
@@ -41,7 +42,25 @@ const Meta: React.FC<Props> = ({ lang, articles }) => {
           "@type": "WebPage",
           "@id": `${process.env.NEXT_PUBLIC_URL}/articles/${article.url}`
         }
-      }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": page.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": page.articles.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/articles`
+          }
+        ]
+      },
     };
   });
 
@@ -51,12 +70,12 @@ const Meta: React.FC<Props> = ({ lang, articles }) => {
     "itemListElement": itemListElement
   };
 
-    return (
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      />
-    );
-  };
-  
-  export default Meta;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+};
+
+export default Meta;

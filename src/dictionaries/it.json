@@ -1,5 +1,6 @@
 { 
     "page":{ 
+      "langCode":"it-IT",
         "name":"GuideBook of Kyrgyzstan", 
         "loading":"Caricamento...", 
         "contactButton": "Domande?",
@@ -20,12 +21,14 @@
             "button3": "leggi di più"
         }, 
         "sights":{ 
+          "name":"Luoghi di Interesse",
             "title":"Luoghi più popolari del Kyrgyzstan", 
             "description":"Immergiti nei paesaggi mozzafiato e nelle destinazioni incantevoli del Kyrgyzstan. Esplora terreni diversi, siti culturali, e meraviglie naturali che definiscono il fascino di questo paese unico.", 
             "keywords":"Luoghi Kyrgyzstan, Viaggio in Kyrgyzstan, Esplora il Kyrgyzstan, Destinazioni Kyrgyzstan, Turismo Kyrgyzstan, Luoghi da visitare in Kyrgyzstan, Attrazioni principali Kyrgyzstan, Paesaggi Kyrgyzstan, Siti culturali Kyrgyzstan, Meraviglie naturali Kyrgyzstan, I migliori posti da visitare in Kyrgyzstan",
             "sights":"Luoghi da visitare"
         }, 
         "tours":{ 
+          "name":"Tour", 
             "title":"Tour più popolari del Kyrgyzstan", 
             "description":"Intraprendi tour indimenticabili che mostrano lo splendore del Kyrgyzstan. Scegli tra avventure, culturali, e trekking e lasciaci guidare attraverso paesaggi diversi e affascinanti.", 
             "keywords":"Tour Kyrgyzstan, Tour avventura Kyrgyzstan, Tour guidati Kyrgyzstan, Tour culturali Kyrgyzstan, Tour trekking Kyrgyzstan, Tour a cavallo Kyrgyzstan, Esperienze nomadi Kyrgyzstan, Pacchetti viaggio Kyrgyzstan, I migliori tour in Kyrgyzstan, Esplora il Kyrgyzstan attraverso i tour" ,
@@ -46,6 +49,7 @@
             }            
           }, 
         "articles": {
+          "name": "Storie",
             "title": "Il Kirghizistan: cultura, tradizioni e natura",
             "description": "Esplora la ricca cultura, le tradizioni vivaci e la natura mozzafiato del Kirghizistan attraverso questi racconti illuminanti. Immergiti nel cuore della cultura kirghiza, da antiche tradizioni come la caccia con l'aquila e il kok boru ai maestosi cani Alabai e alle avventure del Taiga.",
             "keywords": [

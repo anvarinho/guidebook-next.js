@@ -1,11 +1,14 @@
+import { Locale } from "@/lib/i18n.config";
 
 interface Props {
-    places: [PlaceAlias]; // Assuming 'tour' is a string, adjust the type accordingly if it's different
+    lang: Locale
+    places: [PlaceAlias]// Assuming 'tour' is a string, adjust the type accordingly if it's different
+    page: any
 }
 
-import React from 'react';
+// import React from 'react';
 
-const Meta: React.FC<Props> = ({ places }) => {
+const Meta: React.FC<Props> = ({ lang, places, page }) => {
   const itemListElement = places.map((place, index) => {
     return {
       "@type": "ListItem",
@@ -13,6 +16,7 @@ const Meta: React.FC<Props> = ({ places }) => {
       "item": {
         "@type": "Place",
         "name": place.name,
+        "title": place.title,
         "address": {
           "@type": "PostalAddress",
           "addressLocality": place.region,
@@ -27,12 +31,30 @@ const Meta: React.FC<Props> = ({ places }) => {
         }
       }
     };
-  });
+});
 
   const data = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": itemListElement
+    "itemListElement": itemListElement,
+    "breadcrumb": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": page.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": page.sights.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places`
+          }
+        ]
+      },
   };
 
   return (

@@ -14,6 +14,7 @@ import styles from './page.module.css'
 import Image from "next/image";
 import DownloadApps from './Components/DownloadApps'
 import HomePlaces from './Components/home/HomePlaces';
+import Meta from './meta';
 
 export default async function Home({
   params: {lang}
@@ -37,6 +38,7 @@ export default async function Home({
 
   return (
     <div className={styles.main}>
+      <Meta lang={lang} page={page}/>
       <div className={styles.home}>
         <h1>{page.home.title}</h1>
         <h2>{page.home.description}</h2>
@@ -82,7 +84,7 @@ export async function generateMetadata({
           height: 600,
           alt: "Karakol Cable Lift"
         }],
-        locale: lang
+        locale: page.langCode.replace("-",'_')
       },
       alternates: {
           canonical: `${process.env.NEXT_PUBLIC_URL}/`,

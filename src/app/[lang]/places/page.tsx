@@ -26,8 +26,10 @@ export default async function Places({
     })
     return (
         <div className={styles.main}>
-          <Meta places={places}/>
+          {/* <Head></Head> */}
+          <Meta lang={lang} places={places} page={page}/>
             <h1>{page.sights.title}</h1>
+            <h2>{page.sights.description}</h2>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
                   <Suspense fallback={
@@ -67,7 +69,7 @@ export async function generateMetadata({
             height: 600,
             alt: "Kel-Suu Lake"
         },
-        locale: 'en_US',
+        locale: page.langCode.replace("-",'_'),
         type: 'website',
       },
       twitter: {
@@ -83,6 +85,22 @@ export async function generateMetadata({
             height: 600,
             alt: "Kel-Suu Lake"
         }
-    },
+      },
+      appLinks: {
+        ios: {
+          url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+          app_store_id: "id1575382810",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        android: {
+          url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+          package: "com.anvarinho.guidebook",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        web: {
+          url: `${process.env.NEXT_PUBLIC_URL}/places`,
+          should_fallback: false,
+        }
+      },
   }
 }

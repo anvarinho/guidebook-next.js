@@ -1,11 +1,12 @@
+import { Locale } from "@/lib/i18n.config";
 
 interface Props {
+    lang: Locale
     tours: [Tour]; // Assuming 'tour' is a string, adjust the type accordingly if it's different
-    title: String
-    description: String
+    page: any
 }
 
-const Meta: React.FC<Props> = ({ tours, title, description }) => {
+const Meta: React.FC<Props> = ({ lang, tours, page }) => {
     const variants = tours.map((tour) => {
         return {
           "@type": "Product",
@@ -27,8 +28,8 @@ const Meta: React.FC<Props> = ({ tours, title, description }) => {
         {
           "@context": "https://schema.org/",
           "@type": "ProductGroup",
-          "name": title,
-          "description": description,
+          "name": page.tours.title,
+          "description": page.tours.description,
           "url": `${process.env.NEXT_PUBLIC_URL}/tours`,
           "brand": {
             "@type": "Brand",
@@ -39,7 +40,25 @@ const Meta: React.FC<Props> = ({ tours, title, description }) => {
             "audienceType": "Tourists"
           },
           "productGroupID": "44E01",
-          "hasVariant": variants
+          "hasVariant": variants,
+          "breadcrumb": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": page.name,
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": page.tours.name,
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places`
+              }
+            ]
+          },
         }
       ]
     

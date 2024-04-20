@@ -1,5 +1,6 @@
 {
     "page": {
+        "langCode":"en-US",
         "name": "GuideBook of Kyrgyzstan",
         "loading": "Loading...",
         "contactButton": "Any questions?",
@@ -20,14 +21,16 @@
             "button3": "read more"
         },
         "sights": {
+            "name":"Sights",
             "title": "Most popular places of Kyrgyzstan",
             "description": "Immerse yourself in the breathtaking landscapes and enchanting destinations of Kyrgyzstan. Explore diverse terrains, cultural sites, and natural wonders that define the charm of this unique country.",
             "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan",
             "sights": "Places to visit"
         },
         "tours": {
+          "name": "Tours",
             "title": "Most popular tours of Kyrgyzstan",
-            "description": "Embark on unforgettable tours that showcase the splendor of Kyrgyzstan. Choose from adventure, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
+            "description": "Unforgettable tours that showcase the splendor of Kyrgyzstan. Choose from adventure, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
             "keywords": "Kyrgyzstan tours, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
             "tourPage":{
               "level": "Level",
@@ -46,6 +49,7 @@
             }
         },
         "articles": {
+            "name": "Articles",
             "title": "The Kyrgyzstan: on Culture, Traditions, and Nature",
             "description": "Explore the rich culture, vibrant traditions, and breathtaking nature of Kyrgyzstan through these insightful stories. From ancient traditions like burkut hunting and kok-boru to the majestic Alabai dogs and the adventurous Taigan, delve into the heart of Kyrgyz culture.",
             "keywords": ["Kyrgyz culture", "Kyrgyz traditions","Kyrgyz nature","Burkut hunting","Kok-boru","Alabai dogs","Taigan","Kyrgyz history","Central Asian culture","Nomadic heritage","Cultural exploration", "Traditional sports", "Sighthounds of Kyrgyzstan", "Cultural experiences","Adventure in Kyrgyzstan", "Heritage breeds","Cultural traditions","Unique experiences", "Kyrgyz lifestyle"]

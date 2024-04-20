@@ -3,9 +3,10 @@ import { Locale } from "@/lib/i18n.config";
 interface Props {
     place: Place; // Assuming 'tour' is a string, adjust the type accordingly if it's different
     lang: Locale
+    page: any
 }
 
-const Meta: React.FC<Props> = ({ lang, place }) => {
+const Meta: React.FC<Props> = ({ lang, place, page }) => {
   
     const data = {
       "@context": "https://schema.org",
@@ -38,6 +39,30 @@ const Meta: React.FC<Props> = ({ lang, place }) => {
         "longitude": place.location.longitude
       },
       "hasMap": `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
+      "breadcrumb": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": page.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": page.sights.name,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${place.name}`,
+            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`
+          }
+        ]
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [

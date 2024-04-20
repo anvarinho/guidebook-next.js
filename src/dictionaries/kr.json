@@ -1,5 +1,6 @@
 {
     "page": {
+      "langCode":"ko-KR",
         "name": "키르기스스탄 안내서",
         "loading": "로드 중...",
         "contactButton": "질문이 있으신가요?",
@@ -20,12 +21,14 @@
             "button3": "더 읽기"
         },
         "sights": {
+          "name": "명소",
             "title": "키르기스스탄의 가장 인기 있는 장소",
             "description": "키르기스스탄의 숨막히는 풍경과 매혹적인 목적지에 몰두해보세요. 이 독특한 나라의 매력을 정의하는 다양한 지형, 문화적 장소 및 자연의 경이로움을 탐험해보세요.",
             "keywords": "키르기스스탄 장소, 키르기스스탄 여행, 키르기스스탄 탐험, 키르기스스탄 목적지, 키르기스스탄 관광, 키르기스스탄에서 꼭 방문해야 할 곳, 키르기스스탄의 최고 명소, 키르기스스탄 풍경, 키르기스스탄의 문화적 장소, 키르기스스탄의 자연 경이로움, 키르기스스탄에서 방문해야 할 최고의 장소",
             "sights": "방문할 곳"
         },
         "tours": {
+          "name": "투어",
             "title": "키르기스스탄의 가장 인기 있는 투어",
             "description": "키르기스스탄의 멋진 투어에 참여해보세요. 모험, 문화, 트레킹 투어 중에서 선택하고 다양하고 매혹적인 풍경을 안내 받으세요.",
             "keywords": "키르기스스탄 투어, 키르기스스탄 모험 투어, 키르기스스탄 가이드 투어, 키르기스스탄 문화 투어, 키르기스스탄 트레킹 투어, 키르기스스탄 승마 투어, 키르기스스탄의 유목 경험, 키르기스스탄 여행 패키지, 키르기스스탄 최고의 투어, 투어를 통해 키르기스스탄 탐험",
@@ -46,6 +49,7 @@
             }            
         },
         "articles": {
+          "name": "스토리",
             "title": "키르기스스탄: 문화, 전통, 자연",
             "description": "이 통찰력 넘치는 이야기들을 통해 키르기스스탄의 풍부한 문화, 활기찬 전통, 숨막히는 자연을 탐험해보세요. 독수리 사냥(독수리 사냥)과 코크보루(코크보루)와 같은 오랜 전통부터 위엄에 찬 알라바이 개와 모험 가득한 타이가까지 키르기스 문화의 핵심을 깊이 파고들어 보세요.",
             "keywords": ["키르기스 문화 (Kirugiseu munhwa)", "키르기스 전통 (Kirugiseu jeontong)", "키르기스 자연 (Kirugiseu jayon)", "독수리 사냥 (doksuri sanyang)", "코크보루 (kokkeoboru)", "알라바이 개 (alabaai gae)", "타이가 (taiga)", "키르기스스탄 역사 (Kirugiseu tan yeoksa)", "중앙아시아 문화 (jungang asia munhwa)", "遊牧民의 유산 (yumo minui yusan)", "문화 탐험 (munhwa tamheom)", "전통 스포츠 (jeontong seuporteu)", "키르기스 사냥개 (Kirugiseu sănanggae)", "문화 체험 (munhwa chehom)", "키르기스스탄의 모험 (Kirugiseu tanui moheom)", "재래 종 (jaerae jong)", "문화 전통 (munhwa jeontong)", "독특한 경험 (doktohthan gyeongheom)", "키르기스스탄 생활 방식 (Kirugiseu saenghwal bangsik)"]
