@@ -131,7 +131,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
               url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
               should_fallback: false,
             }
-          },
+        },
         robots: {
             index: true,
             follow: true,

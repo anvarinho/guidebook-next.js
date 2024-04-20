@@ -7,6 +7,7 @@ import getAllArticles from '@/lib/getAllArticles';
 import ArticleListItem from './components/ArticleListItem';
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import LoadingSpinner from '../Components/LoadingSpinner';
+import Meta from './meta';
 
 
 export default async function Home({
@@ -26,6 +27,7 @@ export default async function Home({
     })
   return (
         <div className={styles.main}>
+          <Meta articles={placesData} lang={lang}/>
           <h1>{page.articles.title}</h1>
           <div className={styles.articlesDiv}>
             <div className={styles.articlesList}>

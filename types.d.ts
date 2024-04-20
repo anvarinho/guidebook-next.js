@@ -15,7 +15,7 @@ type Place = {
     "images": [string],
     "sights": [string]?,
     "viewCount": number,
-    location: GeoLocation;
+    "location": GeoLocation;
 }
 
 type Tour = {
@@ -76,7 +76,8 @@ type PlaceAlias = {
     // "blurDataURL": string?,
     "images": [string],
     "created": Date,
-    "weather": Weather?
+    "weather": Weather?,
+    "location": GeoLocation;
 }
 
 type TourData = {
@@ -118,10 +119,3 @@ type Paragraph = {
     "image": string?,
     "link": string?,
 }
-
-const data: { location: Location } = {
-    location: {
-        latitude: "Your latitude value",
-        longitude: "Your longitude value"
-    }
-};

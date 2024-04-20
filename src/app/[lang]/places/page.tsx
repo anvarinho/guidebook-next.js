@@ -7,6 +7,7 @@ import { getDictionary } from '@/lib/dictionary'
 import { Locale } from '@/lib/i18n.config'
 import { LoadMore } from "./load-more";
 import LoadingSpinner from "../Components/LoadingSpinner";
+import Meta from "./meta";
 
 export default async function Places({
   params: {lang}
@@ -25,6 +26,7 @@ export default async function Places({
     })
     return (
         <div className={styles.main}>
+          <Meta places={places}/>
             <h1>{page.sights.title}</h1>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
