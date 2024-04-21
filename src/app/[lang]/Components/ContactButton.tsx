@@ -19,7 +19,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
         fr: 'Des questions ?',
         de: 'Noch Fragen?',
         it: 'Domande?',
-        ru: 'Есть вопросы?',
+        ru: 'Связаться?',
         kr: '질문이 있으신가요?',
         cn: '有问题吗？',
         jp: '質問はありますか？',

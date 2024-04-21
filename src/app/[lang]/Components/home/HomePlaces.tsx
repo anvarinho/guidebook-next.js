@@ -128,14 +128,14 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
             {places.length > 0 ? (
                 places.slice(currentSlide, currentSlide + 12).map((place) => (
                     <div key={place._id} className={styles.slideImages}>
-                        <Image fill src={baseUrl + place.images[0]} alt={'arrow down'} objectFit='cover'/>
+                        <Image fill src={baseUrl + place.images[0]} alt={'arrow down'} loading="lazy" objectFit='cover'/>
                         {/* <ImageLoader image={place.images[0]}/> */}
                         <div className={styles.coverGradient}></div>
                         <div className={styles.blurGradient}></div>
                         <div className={styles.content}>
                             <h2>{place.name}</h2>
                             <p>{place.description} ...</p>
-                            <div>
+                            <div className={styles.floatingbuttons}>
                                 <Link href={`/${lang}/places/${place.url}`} className={styles.floatingButton} rel="noopener noreferrer">{dictionary.readMore[lang]}</Link>
                                 <Link href={`/${lang}/places`} className={styles.floatingButton} rel="noopener noreferrer">{dictionary.morePlaces[lang]}</Link>
                             </div>

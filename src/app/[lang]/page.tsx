@@ -15,6 +15,7 @@ import Image from "next/image";
 import DownloadApps from './Components/DownloadApps'
 import HomePlaces from './Components/home/HomePlaces';
 import Meta from './meta';
+import Link from 'next/link';
 
 export default async function Home({
   params: {lang}
@@ -43,10 +44,10 @@ export default async function Home({
         <h1>{page.home.title}</h1>
         <h2>{page.home.description}</h2>
         <div className={styles.buttons}>
-        <a href="#places" className={styles.floatingButton}>{page.home.button1}</a>
-        <a href="#places" className={styles.floatingButton}>{page.home.button2}</a>
+          <Link href="#places" className={styles.floatingButton}>{page.home.button1}</Link>
+          <Link href={`/${lang}/articles`} className={styles.floatingButton}>{page.home.button2}</Link>
+          <Link href={`/${lang}/tours`} className={styles.floatingButton}>{page.home.button4}!</Link>
         </div>
-        
         <div className={styles.chooseLanguage}>
           <h5>{translations[lang]}</h5>
           <Image src={'/arrow-down.png'} alt={'arrow down'} width={'30'} height={'30'} title='Arrow Down'/>

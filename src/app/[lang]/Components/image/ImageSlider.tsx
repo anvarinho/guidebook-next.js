@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import styles from './imageSlider.module.css'
+import Image from "next/image";
 
 const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
     const [index, setIndex] = useState(1);
@@ -34,7 +35,7 @@ const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
                 <div className={styles.slider_items}>
                     {items.map((image, idx) => (
                         <div key={idx} className={`${styles.slider_item} ${idx + 1 === index ? styles.active : ''}`}>
-                            <img src={baseUrl + image} alt={`${image}`} title={`${image}`} />
+                            <Image fill src={baseUrl + image} alt={`${image}`} objectFit="cover" title={`${image}`} />
                         </div>
                     ))}
                 </div>

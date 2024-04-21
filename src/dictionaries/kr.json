@@ -18,7 +18,8 @@
             "button": "알아보자!",
             "button1": "어디로 가!",
             "button2": "무엇을 할까요!",
-            "button3": "더 읽기"
+            "button3": "더 읽기",
+            "button4": "우리 투어"
         },
         "sights": {
           "name": "명소",

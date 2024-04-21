@@ -1,9 +1,7 @@
 export default async function getAllArticles(lang: string) {
     const url = `${process.env.NEXT_PUBLIC_URL}/api/articles/?lang=${lang}`;
     try {
-      const res = await fetch(url, {
-        cache: "no-store",
-      });
+      const res = await fetch(url, { next: { revalidate: 3600 } });
       // console.log(res)
       if (!res.ok) {
         throw new Error('Failed to fetch data');

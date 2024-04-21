@@ -18,7 +18,8 @@
           "button": "Découvrons-le !",
           "button1": "Où aller!",
           "button2": "Que faire!",
-          "button3": "lire la suite"
+          "button3": "lire la suite",
+          "button4": "Nos Tours"
       },
       "sights": {
         "name": "Sites",

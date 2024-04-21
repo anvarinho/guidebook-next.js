@@ -15,7 +15,7 @@ export default async function PlaceListItem({ place, lang }: Props) {
   const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
   const blurDataURL = await getBase64(baseUrl + place.images[0])
   return (
-    <Link href={`places/${place.url}`} key={place._id} className={styles.placeBox} target='_blank'>
+    <Link href={`places/${place.url}`} key={place._id} className={styles.placeBox}>
           <Image
               //  fill 
               src={baseUrl + place.images[0]}
