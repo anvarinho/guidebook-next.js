@@ -45,7 +45,10 @@
               "includings":"Cosa include il prezzo",
               "excludings":"Cosa non include il prezzo",
               "from": "Dal",
-              "note":"Nota"
+              "note":"Nota",
+              "person": "Persona",
+              "persons": "Persone",
+              "andMore": "e altro"
             }            
           }, 
         "articles": {

@@ -27,8 +27,8 @@ export default async function Article({ article, lang }: Props) {
             width={600} placeholder="blur" blurDataURL={blurDataURL} priority/>
           )}
             
-            <h2>{article.title}</h2>
-            <h4>{article.subtitle}</h4>
+            <h1>{article.title}</h1>
+            <h2>{article.subtitle}</h2>
             <br />
         </div>
         {article.paragraphs.map((paragraph, index) => (

@@ -45,7 +45,10 @@
               "includings":"价格包括",
               "excludings":"价格不包括",
               "from": "从",
-              "note":"注"
+              "note":"注",
+              "person": "人",
+              "persons": "人们",
+              "andMore": "等等"
             }            
         },
         "articles": {

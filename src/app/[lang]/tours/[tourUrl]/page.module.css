@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 1rem;
 }
 
 .daysNavigation a{
@@ -45,6 +46,7 @@
     font-weight:500;
     transition: all 0.3s ease-in;
     margin: .2rem;
+    text-wrap: nowrap;
 }
 
 .day {
@@ -91,7 +93,8 @@
 
 .infoList{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the column width as needed */
+    justify-content: center;
     padding-bottom: 1rem;
 }
 
@@ -100,6 +103,10 @@
     margin: 1rem;
     border: 1px solid rgba(125,125,125,0.4);
     border-radius: 1rem;
+}
+
+.infoList div h4{
+    padding: 0.6rem;
 }
 
 
@@ -119,9 +126,9 @@
         white-space: nowrap;
         max-width: 100%;
     }
-    .infoList{
+    /* .infoList{
         grid-template-columns: repeat(1, 1fr);
-    }
+    } */
 }
 
 

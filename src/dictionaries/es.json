@@ -45,7 +45,10 @@
               "includings":"Incluido en el precio",
               "excludings":"No incluido en el precio",
               "from": "De",
-              "note":"Nota"
+              "note":"Nota",
+              "person": "Persona",
+              "persons": "Personas",
+              "andMore": "y más"
             }            
         },
         "articles": {

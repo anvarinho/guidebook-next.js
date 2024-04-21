@@ -45,7 +45,10 @@
             "includings":"Ce qui est inclus",
             "excludings":"Ce qui n'est pas inclus",
             "from": "De",
-            "note":"Remarque"
+            "note":"Remarque",
+            "person": "Personne",
+            "persons": "Personnes",
+            "andMore": "et plus"
           }
       },
       "articles": {

@@ -45,7 +45,10 @@
               "includings":"Im Preis enthalten",
               "excludings":"Nicht im Preis enthalten",
               "from": "Von",
-              "note":"Hinweis"
+              "note":"Hinweis",
+              "person": "Person",
+              "persons": "Personen",
+              "andMore": "und mehr"
             }            
         },
         "articles": {

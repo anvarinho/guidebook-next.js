@@ -22,7 +22,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
         <article className={styles.main}>
             <h1>{place.name}</h1>
             <ImageSlider items={place.images}/>
-            <h4>{place.title}</h4>
+            <h2>{place.title}</h2>
             <div className={styles.info}>
                 <p>{page.info.created}{createdDate?.toLocaleDateString()}</p>
                 <p>{page.info.seen}{Math.floor(place.viewCount)}</p>

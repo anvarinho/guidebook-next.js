@@ -45,7 +45,10 @@
               "includings":"Price includes",
               "excludings":"Price excludes",
               "from": "From",
-              "note":"Note"
+              "note":"Note",
+              "person":"Person",
+              "persons":"Persons",
+              "andMore":"and more"
             }
         },
         "articles": {
