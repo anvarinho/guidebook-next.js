@@ -6,19 +6,20 @@
         "contactButton": "Domande?",
         "navigation":[ 
             {"text":"Casa", "url":"/"}, 
-            {"text":"Luoghi di Interesse", "url":"/places"}, 
+            {"text":"Siti", "url":"/places"},
             {"text":"Tour", "url":"/tours"}, 
             { "text": "Storie", "url": "/articles" },
             {"text":"Informazioni", "url":"/about"}
         ], 
-        "home":{ 
+        "home":{
             "title":"Benvenuti in Kyrgyzstan!", 
             "description":"Esperienza della bellezza e della cultura di Kyrgyzstan attraverso la nostra guida turistica completa. Scopri le attrazioni locali, pianifica la tua avventura e approfitta al massimo del tuo viaggio.", 
             "keywords":"Guida turistica di Kyrgyzstan, Convenienza di viaggio, Attrazioni locali, Servizi turistici, Suggerimenti di viaggio in Kyrgyz, Esperienze culturali, Pianificazione del tour, Visite turistiche, Viaggi di avventura, Tour convenienti, Guida della città di Bishkek" ,
             "button": "Scopriamolo!",
             "button1": "Dove andare!",
             "button2": "Cosa fare!",
-            "button3": "leggi di più"
+            "button3": "leggi di più",
+            "button4": "I nostri Tour"
         }, 
         "sights":{ 
           "name":"Luoghi di Interesse",

@@ -19,6 +19,11 @@
     padding: 1rem;
 }
 
+.dayImages img{
+    width: 100%;
+    aspect-ratio: 1.9/1;
+}
+
 .article .meta{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -108,8 +113,6 @@
 .infoList div h4{
     padding: 0.6rem;
 }
-
-
 
 .infoList div p{
     font-weight: lighter;

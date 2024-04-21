@@ -17,7 +17,7 @@
   .floatingButton {
     animation: float 3s ease-in-out infinite;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 8px 15px;
     /* background-color: #007bff; Choose your desired background color */
     /* color: var(--main-active-color); */
     background: rgba(255,255,255,.4); /* Change the background color on hover */
@@ -28,7 +28,7 @@
     text-decoration: none;
     font-weight:bolder;
     transition: all 0.3s ease-in;
-    margin-top: 1rem;
+    margin-top: .2rem;
   }
   
   .floatingButton:hover {
@@ -168,7 +168,7 @@
   
   .content div a{
     margin: .5rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
   
   .content p{

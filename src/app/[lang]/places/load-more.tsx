@@ -69,7 +69,7 @@ export function LoadMore({ lang }: { lang: Locale }) {
             {places.length !== 0 ? (
                 places.map((place) => (
                     // <PlaceListItem key={place._id} place={place} lang={lang}/>
-                    <Link className={styles.placeBox} key={place._id} href={`places/${place.url}`} target="_blank" rel="noopener noreferrer">
+                    <Link className={styles.placeBox} key={place._id} href={`places/${place.url}`}>
                     <Image
                         src={baseUrl + place.images[0]}
                         alt={place.name}

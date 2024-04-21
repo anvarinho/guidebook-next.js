@@ -36,6 +36,11 @@
 }
 .buttons{
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  max-width: 100%;
   padding: 1rem;
 }
 
@@ -53,7 +58,7 @@
   text-decoration: none;
   font-weight:bolder;
   transition: all 0.3s ease-in;
-  margin: 1rem;
+  margin: .3rem;
 }
 
 .floatingButton:hover {

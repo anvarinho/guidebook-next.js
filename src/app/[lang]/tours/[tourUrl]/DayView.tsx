@@ -14,7 +14,7 @@ type Params = {
 }
 
 export default async function DayView({ params: {day, index, lang}}: Params) {
-    // const baseUrl = 'http://159.65.95.44/';
+    // const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const sights = await getPlacesByURLs(lang, day.places)
     const { page } = await getDictionary(lang)
     // console.log(sights)

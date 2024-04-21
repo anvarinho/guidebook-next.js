@@ -186,6 +186,10 @@
     justify-content: center;
     width: auto;
   }
+
+  .downloadlinks .badge h5{
+    color: #fff;
+  }
   .badge{
     display: flex;
     justify-content: space-between;
