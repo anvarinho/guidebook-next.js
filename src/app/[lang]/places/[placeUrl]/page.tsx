@@ -60,6 +60,7 @@ export async function generateMetadata({
         description: description,
         keywords: place.keywords,
         applicationName: 'GuideBook of Kyrgyzstan',
+        category: "Travel",
         openGraph: {
             title: place.title + ' | ' + page.name,
             description: description,
@@ -70,18 +71,18 @@ export async function generateMetadata({
             type: 'website',
         },
         alternates: {
-            canonical: `en/places/${place.url}`,
+            canonical: `${process.env.NEXT_PUBLIC_URL}/places/${place.url}`,
             languages: {
-                "en-US": `en/places/${place.url}`,
-                "fr-FR": `fr/places/${place.url}`,
-                "de-DE": `de/places/${place.url}`,
-                "es-ES": `es/places/${place.url}`,
-                "ru-RU": `ru/places/${place.url}`,
-                "it-IT": `it/places/${place.url}`,
-                "ja-JP": `jp/places/${place.url}`,
-                "ko-KR": `kr/places/${place.url}`,
-                "ar-AE": `ae/places/${place.url}`,
-                "zh-CN": `cn/places/${place.url}`
+                "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/${place.url}`,
+                "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/${place.url}`,
+                "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/places/${place.url}`,
+                "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/places/${place.url}`,
+                "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/places/${place.url}`,
+                "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/places/${place.url}`,
+                "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/places/${place.url}`,
+                "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/places/${place.url}`,
+                "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/places/${place.url}`,
+                "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/places/${place.url}`
             }
         },
         twitter: {

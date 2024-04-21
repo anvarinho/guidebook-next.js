@@ -58,6 +58,7 @@ export async function generateMetadata({
       description: page.sights.description,
       keywords: page.sights.keywords,
       applicationName:"GuideBook of Kyrgyzstan",
+      category: "Travel",
       openGraph: {
         title: page.sights.title + ' | ' + 'GuideBook of Kyrgyzstan',
         description: page.sights.description,
@@ -102,5 +103,20 @@ export async function generateMetadata({
           should_fallback: false,
         }
       },
+      alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_URL}/places/`,
+        languages: {
+            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/`,
+            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/`,
+            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/places/`,
+            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/places/`,
+            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/places/`,
+            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/places/`,
+            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/places/`,
+            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/places/`,
+            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/places/`,
+            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/places/`
+        }
+    },
   }
 }

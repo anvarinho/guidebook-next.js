@@ -42,6 +42,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       description: article.subtitle,
       keywords: article.keywords,
       applicationName: 'GuideBook of Kyrgyzstan',
+      category: "Travel",
       openGraph: {
           title: article.title + ' | ' + 'GuideBook of Kyrgyzstan',
           description: article.subtitle,
@@ -57,18 +58,18 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
           type: 'website',
       },
       alternates: {
-        canonical: `articles/${article.url}`,
+        canonical: `${process.env.NEXT_PUBLIC_URL}/articles/${article.url}`,
         languages: {
-            "en-US": `en/articles/${article.url}`,
-            "fr-FR": `fr/articles/${article.url}`,
-            "de-DE": `de/articles/${article.url}`,
-            "es-ES": `es/articles/${article.url}`,
-            "ru-RU": `ru/articles/${article.url}`,
-            "it-IT": `it/articles/${article.url}`,
-            "ja-JP": `jp/articles/${article.url}`,
-            "ko-KR": `kr/articles/${article.url}`,
-            "ar-AE": `ae/articles/${article.url}`,
-            "zh-CN": `cn/articles/${article.url}`
+            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/${article.url}`,
+            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/${article.url}`,
+            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/articles/${article.url}`,
+            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/articles/${article.url}`,
+            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/articles/${article.url}`,
+            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/articles/${article.url}`,
+            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/articles/${article.url}`,
+            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/articles/${article.url}`,
+            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/articles/${article.url}`,
+            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/articles/${article.url}`
         }
     },
     twitter: {

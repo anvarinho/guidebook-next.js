@@ -53,6 +53,7 @@ export async function generateMetadata({
     description: page.tours.description,
     keywords: page.tours.keywords,
     applicationName:"GuideBook of Kyrgyzstan",
+    category: "Travel",
       openGraph: {
         title: page.tours.title + ' | ' + 'GuideBook of Kyrgyzstan',
         description: page.tours.description,
@@ -97,5 +98,20 @@ export async function generateMetadata({
           should_fallback: false,
         }
       },
+      alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_URL}/tours/`,
+        languages: {
+            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/tours/`,
+            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/tours/`,
+            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/tours/`,
+            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/tours/`,
+            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/tours/`,
+            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/tours/`,
+            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/tours/`,
+            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/tours/`,
+            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/tours/`,
+            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/tours/`
+        }
+    },
   }
 }
