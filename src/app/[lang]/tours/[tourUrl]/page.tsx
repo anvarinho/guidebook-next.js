@@ -94,6 +94,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
         description: description,
         keywords: tour.keywords,
         applicationName: 'GuideBook of Kyrgyzstan',
+        category: "Travel",
         openGraph: {
             title: tour.title + ' | ' + 'GuideBook of Kyrgyzstan',
             description: description,
@@ -109,18 +110,18 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             type: 'website',
         },
         alternates: {
-            canonical: `tours/${tour.url}`,
+            canonical: `${process.env.NEXT_PUBLIC_URL}/tours/${tour.url}`,
             languages: {
-                "en-US": `en/tours/${tour.url}`,
-                "fr-FR": `fr/tours/${tour.url}`,
-                "de-DE": `de/tours/${tour.url}`,
-                "es-ES": `es/tours/${tour.url}`,
-                "ru-RU": `ru/tours/${tour.url}`,
-                "it-IT": `it/tours/${tour.url}`,
-                "ja-JP": `jp/tours/${tour.url}`,
-                "ko-KR": `kr/tours/${tour.url}`,
-                "ar-AE": `ae/tours/${tour.url}`,
-                "zh-CN": `cn/tours/${tour.url}`
+                "en-US": `${process.env.NEXT_PUBLIC_URL}/en/tours/${tour.url}`,
+                "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/tours/${tour.url}`,
+                "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/tours/${tour.url}`,
+                "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/tours/${tour.url}`,
+                "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/tours/${tour.url}`,
+                "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/tours/${tour.url}`,
+                "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/tours/${tour.url}`,
+                "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/tours/${tour.url}`,
+                "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/tours/${tour.url}`,
+                "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/tours/${tour.url}`
             }
         },
         twitter: {

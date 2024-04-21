@@ -54,5 +54,66 @@ export async function generateMetadata({
       },
       description: page.articles.description,
       keywords: page.articles.keywords,
+      applicationName:"GuideBook of Kyrgyzstan",
+      category: "Travel",
+      openGraph:{
+        title:page.articles.title,
+        description: page.articles.description,
+        url: `${process.env.NEXT_PUBLIC_URL}/articles`,
+        siteName: 'GuideBook of Kyrgyzstan',
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/alakul.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        },
+        locale: page.langCode.replace("-",'_'),
+        type: 'website',
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: page.articles.title,
+        description: page.articles.description,
+        siteId: "",
+        creator: "@anvarinho",
+        creatorId: "@anvarinho",
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/alakul.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        }
+      },
+      appLinks: {
+        ios: {
+          url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+          app_store_id: "id1575382810",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        android: {
+          url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+          package: "com.anvarinho.guidebook",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        web: {
+          url: `${process.env.NEXT_PUBLIC_URL}/articles`,
+          should_fallback: false,
+        }
+      },
+      alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_URL}/articles/`,
+        languages: {
+            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/`,
+            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/`,
+            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/articles/`,
+            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/articles/`,
+            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/articles/`,
+            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/articles/`,
+            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/articles/`,
+            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/articles/`,
+            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/articles/`,
+            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/articles/`
+        }
+    },
   }
 }
