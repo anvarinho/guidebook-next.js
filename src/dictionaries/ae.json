@@ -45,7 +45,10 @@
             "includings":"السعر يشمل",
             "excludings":"السعر لا يشمل",
             "from": "من",
-            "note":"ملحوظة"
+            "note":"ملحوظة",
+            "person": "شخص",
+            "persons": "أشخاص",
+            "andMore": "وأكثر"
           }          
        },
        "articles": {

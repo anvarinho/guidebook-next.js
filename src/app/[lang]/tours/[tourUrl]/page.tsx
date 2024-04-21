@@ -33,10 +33,10 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     <div className={styles.meta}>
                         <p><strong>{page.tours.tourPage.level}</strong>: {data.level}</p>
                         <p><strong>{page.tours.tourPage.duration}</strong>: {data.days.length} {data.days.length == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`}</p>
-                        <p><strong>{page.tours.tourPage.price}</strong>: {data.price}$</p>
+                        <p><strong>{page.tours.tourPage.price}</strong>: {data.price[data.price.length - 1]}$</p>
                     </div>
-                    <h4>{data.description}</h4>
-                    <h2>{page.tours.tourPage.details}</h2>
+                    <h2>{data.description}</h2>
+                    <h3>{page.tours.tourPage.details}</h3>
                     <div className={styles.daysNavigation}>
                         {data.days.map((day, index) => (
                             <Link href={`#day${index + 1}`} key={index}>{page.tours.tourPage.day}: {index + 1}</Link>
@@ -49,16 +49,26 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                     ))}
                     <br />
                     <div id='note'>
-                        <h2 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h2>
+                        <h3 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h3>
                         <div className={styles.infoList}>
+                            {data.price.length > 1 && (
+                                <div>
+                                    <h4>{page.tours.tourPage.price}</h4>
+                                    {data.price.map((fee, index) => (
+                                        <p key={index}>
+                                            {index + 1} {index === data.price.length - 1 ? page.tours.tourPage.andMore : (index === 0 ? page.tours.tourPage.person : page.tours.tourPage.persons)}: {fee}$
+                                        </p>
+                                    ))}
+                                </div>
+                            )}
                             <div>
-                                <h3>{page.tours.tourPage.includings}</h3>
+                                <h4>{page.tours.tourPage.includings}</h4>
                                 {data.includings.map((text, index) => (
                                     <p key={index}>{text}</p>
                                 ))}
                             </div>
                             <div>
-                                <h3>{page.tours.tourPage.excludings}</h3>
+                                <h4>{page.tours.tourPage.excludings}</h4>
                                 {data.excludings.map((text, index) => (
                                     <p key={index}>{text}</p>
                                 ))}

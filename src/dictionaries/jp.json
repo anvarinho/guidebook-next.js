@@ -45,7 +45,10 @@
               "includings":"価格に含まれるもの",
               "excludings":"価格に含まれないもの",
               "from": "From",
-              "note":"注意"
+              "note":"注意",
+              "person": "人",
+              "persons": "人々",
+              "andMore": "その他"
             }            
         },
         "articles": {

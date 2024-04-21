@@ -45,7 +45,10 @@
               "includings":"가격 포함 사항",
               "excludings":"가격 불포함 사항",
               "from": "에서",
-              "note":"노트"
+              "note":"노트",
+              "person": "사람",
+              "persons": "사람들",
+              "andMore": "그리고 더"
             }            
         },
         "articles": {

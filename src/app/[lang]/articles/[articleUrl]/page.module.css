@@ -63,11 +63,11 @@ margin-top: 15px;
   color: var(--main-active-color);
 }
 
-.hero h2 {
+.hero h1 {
 font-size: 1.5em;
 margin-bottom: 1rem;
 }
 
-.content h3{
+.content h2{
   padding: 1rem;
 }

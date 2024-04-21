@@ -50,7 +50,52 @@ export async function generateMetadata({
     title: {
       absolute: page.tours.title + ' | ' + page.name
     },
-      description: page.tours.description,
-      keywords: page.tours.keywords,
+    description: page.tours.description,
+    keywords: page.tours.keywords,
+    applicationName:"GuideBook of Kyrgyzstan",
+      openGraph: {
+        title: page.tours.title + ' | ' + 'GuideBook of Kyrgyzstan',
+        description: page.tours.description,
+        url: `${process.env.NEXT_PUBLIC_URL}/tours`,
+        siteName: 'GuideBook of Kyrgyzstan',
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        },
+        locale: page.langCode.replace("-",'_'),
+        type: 'website',
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: page.tours.title,
+        description: page.tours.description,
+        siteId: "",
+        creator: "@anvarinho",
+        creatorId: "@anvarinho",
+        images: {
+            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            width: 800,
+            height: 600,
+            alt: "Kel-Suu Lake"
+        }
+      },
+      appLinks: {
+        ios: {
+          url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
+          app_store_id: "id1575382810",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        android: {
+          url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
+          package: "com.anvarinho.guidebook",
+          app_name: "GuideBook of Kyrgyzstan"
+        },
+        web: {
+          url: `${process.env.NEXT_PUBLIC_URL}/tours`,
+          should_fallback: false,
+        }
+      },
   }
 }
