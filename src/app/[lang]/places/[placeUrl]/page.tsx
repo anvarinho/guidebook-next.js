@@ -45,7 +45,7 @@ export async function generateMetadata({
         url: `${process.env.NEXT_PUBLIC_URL}/${image}`,
         width: 800,
         height: 600,
-        alt: place.title
+        alt: `Image of ${place.name}`
     }))
 
     if (!place){
@@ -116,7 +116,7 @@ export async function generateMetadata({
             nocache: true,
             googleBot: {
                 index: true,
-                follow: true,
+                follow: true
             }
         }
     }

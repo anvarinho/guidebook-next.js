@@ -3,13 +3,14 @@ import MenuButton from "./MenuButton";
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import NavItem from './NavItem'
+import Link from 'next/link';
 
 export default async function Navbar ({ lang }: { lang: Locale }) {
     const { page } = await getDictionary(lang)
     return (
         <header className={styles.header}>
             <div className={styles.flex}>
-                <a href={`/${lang}`} className={styles.logo}>{page.name}</a>
+                <Link href={`/${lang}`} className={styles.logo}><h1>{page.name}</h1></Link>
                 <nav className={`${styles.navbar}`}>
                     {page.navigation.map((link, index) => (
                         <NavItem key={index} lang={lang} index={index} url={link.url} text={link.text} />
