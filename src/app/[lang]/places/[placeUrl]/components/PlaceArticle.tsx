@@ -1,6 +1,6 @@
 import styles from "../page.module.css"
 import { getPlacesByURLs } from "@/lib/getAllPlaces"
-import getBase64 from "@/lib/getLocalBase64"
+import { GoogleMapsEmbed } from '@next/third-parties/google'
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ImageSlider from "@/app/[lang]/Components/image/ImageSlider";
@@ -30,8 +30,21 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             <br />
             <p>{place.description}</p>
             <br />
+            <GoogleMapsEmbed
+                apiKey={`${process.env.GOOGLE_MAPS_API_KEY}`}
+                height={300}
+                width="100%"
+                mode="place"
+                q={`${place.location.latitude},${place.location.longitude}`}
+                // q={`${place.url}, ${place.region}`}
+                // center={`${place.location.latitude},${place.location.longitude}`}
+                />
+            
             {sights.length > 0 && (
-                <h2>{place.name}: {page.sights.sights}</h2>
+                <div>
+                    <br />
+                    <h2>{place.name}: {page.sights.sights}</h2>
+                </div>
             )}
             <br />
             {sights.map((sight: any, index: number) => {
