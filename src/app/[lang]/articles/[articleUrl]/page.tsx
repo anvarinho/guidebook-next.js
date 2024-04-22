@@ -23,8 +23,8 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   
   return (
     <div className={styles.main}>
+      <Meta lang={lang} article={article} page={page}/>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
-        <Meta lang={lang} article={article} page={page}/>
         <Article article={article} lang={lang}/>
       </Suspense>
     </div>
