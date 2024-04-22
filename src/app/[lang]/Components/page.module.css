@@ -15,7 +15,7 @@
     max-width: 1200px;
 }
 
-.header .flex .logo{
+.header .flex .logo h1{
     /* font-family: 'Bai Jamjuree', cursive; */
     font-weight: 700;
     font-size: 1rem;
