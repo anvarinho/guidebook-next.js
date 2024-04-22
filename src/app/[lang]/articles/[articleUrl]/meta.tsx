@@ -10,6 +10,7 @@ const Meta: React.FC<Props> = ({ lang, article, page }) => {
     const data = {
         "@context": "https://schema.org",
         "@type": "Article",
+        "name": article.title,
         headline: article.title,
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
         datePublished: article.createdAt,

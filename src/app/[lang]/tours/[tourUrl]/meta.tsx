@@ -42,7 +42,7 @@ const Meta: React.FC<Props> = ({ lang,  tour, page }) => {
             "url": `${process.env.NEXT_PUBLIC_URL}/tours/${tour.url}`,
             "priceCurrency": "USD",
             "price": tour.price[0],
-            "priceValidUntil": "2024-7-1",
+            "priceValidUntil": "2024-10-10",
             "availability": "https://schema.org/InStock"
           },
           "breadcrumb": {
