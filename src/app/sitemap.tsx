@@ -31,11 +31,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
                 lastModified: place.lastModified,
                 changeFrequency: 'monthly' as const,
                 priority: 0.8,
-                alternates:{
-                    languages: {
-                        en:""
-                    }
-                }
+                // alternates:{
+                //     languages: {
+                //         en:""
+                //     }
+                // }
             });
         }
         for (const article of articles) {
