@@ -47,18 +47,24 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     <h3>{section.title}</h3>
                     {section.links ? (
                         section.links.map((link, linkIndex) => (
-                        <Link key={linkIndex} href={link.url == "/privacy-policy" ? link.url : "/" + lang + link.url}>
-                            {link.icon && (
-                                <Image src={`/${link.icon}`} alt={`${link.icon}`} width="20" height="20"/>
-                            )}
-                            {link.text}
-                        </Link>
+                            <>
+                                {link.icon ? (
+                                    <Link key={linkIndex} href={`${link.url}`}>
+                                        <Image src={`/${link.icon}`} alt={`${link.icon}`} width="20" height="20"/>
+                                        {link.text}
+                                    </Link>
+                                ) : (
+                                    <Link key={linkIndex} href={link.url === "/privacy-policy" ? link.url : `/${lang}${link.url}`}>
+                                        {link.text}
+                                    </Link>
+                                )}
+                            </>
                         ))
                     ) : (
                         <div>
-                        <Link href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}>{section.info?.phone}</Link>
-                        <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link>
-                        <p>{section.info?.address}</p>
+                            <Link href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}>{section.info?.phone}</Link>
+                            <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link>
+                            <p>{section.info?.address}</p>
                         </div>
                     )}
                     </div>
