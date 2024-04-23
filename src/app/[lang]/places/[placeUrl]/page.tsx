@@ -64,7 +64,7 @@ export async function generateMetadata({
         openGraph: {
             title: place.title + ' | ' + page.name,
             description: description,
-            url: `${process.env.NEXT_PUBLIC_URL}/`,
+            url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
             siteName: 'GuideBook of Kyrgyzstan',
             images: images,
             locale: page.langCode.replace("-",'_'),

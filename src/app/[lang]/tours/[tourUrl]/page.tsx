@@ -98,7 +98,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
         openGraph: {
             title: tour.title + ' | ' + 'GuideBook of Kyrgyzstan',
             description: description,
-            url: baseUrl,
+            url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
             siteName: 'GuideBook of Kyrgyzstan',
             images: {
                 url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,

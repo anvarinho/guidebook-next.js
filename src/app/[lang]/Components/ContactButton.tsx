@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
+import { sendGAEvent } from '@next/third-parties/google'
 
 import {
   faPhone
@@ -73,7 +74,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
                 )}
                 {
                     pathname.includes('/tours/') ? (
-                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`} target="_blank">
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`} target="_blank" onClick={() => sendGAEvent({ event: 'buttonClicked', value: '4FJFCJuVic8YELL_7YUq' })}>
                             <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} />
                         </Link>
                     ) : (
