@@ -15,6 +15,10 @@
     /* transition-duration: 500ms; */
 }
 
+.article h2{
+    padding: 1rem 0;
+}
+
 .article h4{
     padding: 1rem;
 }
