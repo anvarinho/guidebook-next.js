@@ -36,6 +36,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
                 width="100%"
                 mode="place"
                 q={`${place.location.latitude},${place.location.longitude}`}
+                zoom="12"
                 // q={`${place.url}, ${place.region}`}
                 // center={`${place.location.latitude},${place.location.longitude}`}
                 />
