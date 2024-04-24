@@ -8,10 +8,6 @@ import { Locale } from "@/lib/i18n.config";
 import { sendGAEvent } from '@next/third-parties/google'
 import Image from "next/image";
 
-import {
-  faPhone, faChartPie
-} from "@fortawesome/free-solid-svg-icons";
-
 const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname()
@@ -44,16 +40,16 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     useEffect(() => {
         // Function to handle the scroll event
         const handleScroll = () => {
-        const scrollY = window.scrollY;
-        // Set a threshold value for when to toggle the class
-        const scrollThreshold = 100;
+            const scrollY = window.scrollY;
+            // Set a threshold value for when to toggle the class
+            const scrollThreshold = 100;
 
-        // Check if the user has scrolled beyond the threshold
-        if (scrollY > scrollThreshold) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
+            // Check if the user has scrolled beyond the threshold
+            if (scrollY > scrollThreshold) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         };
 
         // Add the scroll event listener when the component mounts
@@ -86,7 +82,6 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
                         </Link>
                     )
                 }
-                
             </div>
         </div>
     );
