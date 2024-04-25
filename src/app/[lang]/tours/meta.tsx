@@ -22,23 +22,23 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
             "price": tour.lastPrice,
             "priceValidUntil": "2024-10-10",
             "availability": "https://schema.org/InStock",
-            "review": {
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": 4,
-                "bestRating": 5
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Fred Benson"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": 4.9,
-              "reviewCount": 17
-          },
+          //   "review": {
+          //     "@type": "Review",
+          //     "reviewRating": {
+          //       "@type": "Rating",
+          //       "ratingValue": 4,
+          //       "bestRating": 5
+          //     },
+          //     "author": {
+          //       "@type": "Person",
+          //       "name": "Fred Benson"
+          //     }
+          //   },
+          //   "aggregateRating": {
+          //     "@type": "AggregateRating",
+          //     "ratingValue": 4.9,
+          //     "reviewCount": 17
+          // },
           }
         };
       });
