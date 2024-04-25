@@ -34,8 +34,8 @@ const Meta: React.FC<Props> = ({ lang,  tour, page }) => {
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": 4.8,
-            "reviewCount": 12
+            "ratingValue": 4.9,
+            "reviewCount": 17
         },
         "offers": {
             "@type": "Offer",
@@ -43,7 +43,42 @@ const Meta: React.FC<Props> = ({ lang,  tour, page }) => {
             "priceCurrency": "USD",
             "price": tour.price[0],
             "priceValidUntil": "2024-10-10",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "KG",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 60,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn",
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": 1,
+                  "currency": "USD"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "KG"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              }
+            }
           },
           "breadcrumb": {
             "@context": "https://schema.org",
@@ -52,12 +87,6 @@ const Meta: React.FC<Props> = ({ lang,  tour, page }) => {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": page.name,
-                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
                 "name": page.tours.name,
                 "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`
               },

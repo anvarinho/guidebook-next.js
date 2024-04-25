@@ -46,18 +46,12 @@ const Meta: React.FC<Props> = ({ lang, article, page }) => {
             {
               "@type": "ListItem",
               "position": 1,
-              "name": page.name,
-              "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
               "name": page.articles.name,
               "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/articles`
             },
             {
               "@type": "ListItem",
-              "position": 3,
+              "position": 2,
               "name": article.title,
               "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`
             }

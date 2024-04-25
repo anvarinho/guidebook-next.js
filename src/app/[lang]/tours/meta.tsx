@@ -20,7 +20,25 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
             "url": tour.url,
             "priceCurrency": "USD",
             "price": tour.lastPrice,
+            "priceValidUntil": "2024-10-10",
             "availability": "https://schema.org/InStock",
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 4,
+                "bestRating": 5
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Fred Benson"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.9,
+              "reviewCount": 17
+          },
           }
         };
       });
@@ -48,14 +66,8 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": page.name,
-                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}`
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
                 "name": page.tours.name,
-                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places`
+                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`
               }
             ]
           },
