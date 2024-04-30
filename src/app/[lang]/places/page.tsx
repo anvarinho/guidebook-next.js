@@ -100,7 +100,7 @@ export async function generateMetadata({
         },
         web: {
           url: `${process.env.NEXT_PUBLIC_URL}/places`,
-          should_fallback: false,
+          should_fallback: true,
         }
       },
       alternates: {

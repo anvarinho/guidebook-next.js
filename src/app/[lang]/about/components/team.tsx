@@ -1,6 +1,7 @@
 import styles from './team.module.css'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
+import Link from 'next/link'
 
 
 export default async function Team({
@@ -51,9 +52,9 @@ export default async function Team({
         </article>
       </div>
         <div>
-            <a href="#contact" className={styles.floatingButton}>{page.about.buttons.contact_us}</a>
+            <Link href={`/${lang}/contact`} className={styles.floatingButton}>{page.about.buttons.contact_us}</Link>
             {/* <a href="{% url 'contact' %}" className={styles.floatingButton}>contact us</a> */}
-            <a href="#clients" className={styles.floatingButton}>{page.about.buttons.our_clients}</a>
+            <Link href="#clients" className={styles.floatingButton}>{page.about.buttons.our_clients}</Link>
         </div>
     </section>
   )
