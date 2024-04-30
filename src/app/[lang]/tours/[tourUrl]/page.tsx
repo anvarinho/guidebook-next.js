@@ -150,7 +150,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
               app_name: "GuideBook of Kyrgyzstan"
             },
             web: {
-              url: "https://central-asia.live",
+              url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
               should_fallback: true,
             }
         },
