@@ -97,7 +97,7 @@ export async function generateMetadata({
         },
         web: {
           url: `${process.env.NEXT_PUBLIC_URL}/articles`,
-          should_fallback: false,
+          should_fallback: true,
         }
       },
       alternates: {

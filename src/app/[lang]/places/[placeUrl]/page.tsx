@@ -107,7 +107,7 @@ export async function generateMetadata({
             },
             web: {
                 url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
-                should_fallback: false,
+                should_fallback: true,
               }
         },
         robots: {

@@ -13,8 +13,8 @@
         ],
         "home": {
             "title": "Welcome to Kyrgyzstan!",
-            "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, plan your adventure, and make the most of your trip.",
-            "keywords": "Kyrgyzstan tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide",
+            "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, guided tours, plan your adventure, and make the most of your trip.",
+            "keywords": "Kyrgyzstan tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide, ",
             "button": "Lets Find Out!",
             "button1": "Where To Go!",
             "button2": "What To Do!",
@@ -31,7 +31,7 @@
         "tours": {
           "name": "Tours",
             "title": "Most popular tours of Kyrgyzstan",
-            "description": "Unforgettable tours that showcase the splendor of Kyrgyzstan. Choose from adventure, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
+            "description": "Unforgettable tours of Kyrgyzstan. Choose from adventure, Silk Road, cultural, and trekking tours, and let us guide you through the diverse and captivating landscapes.",
             "keywords": "Kyrgyzstan tours, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
             "tourPage":{
               "level": "Level",

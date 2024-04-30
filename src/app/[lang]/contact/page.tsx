@@ -2,6 +2,7 @@ import styles from './page.module.css'
 import { Metadata } from 'next'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
+import ContactForm from './components/ContactForm'
 
 
 export default async function Home({
@@ -12,7 +13,8 @@ export default async function Home({
   const { page } = await getDictionary(lang)
   return (
     <div className={styles.main}>
-      <h1>Contact Us</h1>
+      {/* <h1>Contact Us</h1> */}
+      <ContactForm/>
     </div>
   )
 }

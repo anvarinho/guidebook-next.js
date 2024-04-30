@@ -151,7 +151,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             },
             web: {
               url: "https://central-asia.live",
-              should_fallback: false,
+              should_fallback: true,
             }
         },
         robots: {

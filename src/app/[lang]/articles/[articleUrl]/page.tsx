@@ -99,7 +99,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       },
       web: {
         url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
-        should_fallback: false,
+        should_fallback: true,
       }
     },
     robots: {
