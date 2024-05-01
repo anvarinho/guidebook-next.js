@@ -49,7 +49,7 @@ export async function getPlace(placeId: string, lang: string) {
 }
 
 export async function getPlacesByRegion(lang: string, region: string, url:string) {
-  const res = await fetch(`http://127.0.0.1:4000/api/places/region?lang=${lang}&region=${region}&url=${url}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/places/region?lang=${lang}&region=${region}&url=${url}`)
   // const res = await fetch(`http://127.0.0.1:4000/places/${placeId}`, {cache: 'no-store'})
   // if (!res.ok) throw new Error('Failed to fetch place')
   if (!res.ok) return undefined
