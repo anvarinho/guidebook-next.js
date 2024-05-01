@@ -1,5 +1,6 @@
 import styles from "../page.module.css"
 import { getPlacesByURLs } from "@/lib/getAllPlaces"
+import { getPlacesByRegion } from "@/lib/getAllPlaces"
 import { GoogleMapsEmbed } from '@next/third-parties/google'
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
@@ -15,6 +16,8 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     const { page } = await getDictionary(lang)
     // const baseUrl = 'http://159.65.95.44/';
     const place = await promise
+    const placesByRegionData = getPlacesByRegion(lang, place.region, place.url)
+    const places: any[] = await placesByRegionData
     // const blurDataURL = await getBase64(baseUrl + place.images[0])
     const sights = (place.sights && place.sights.length > 0) ? await getPlacesByURLs(lang, place.sights) : [];
     const createdDate = place.created ? new Date(place.created) : null;
@@ -56,6 +59,23 @@ export default async function PlaceArticle({ promise, lang }: Props) {
                         <h4>{sight.title}</h4>
                         <br />
                         <p key={index}>{sight.description}...<Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {page.home.button3}</Link></p>
+                        <br />
+                    </>
+                );
+            })}
+            <div>
+                {/* <br /> */}
+                <h2>{place.region}: {page.sights.sights}</h2>
+                <br />
+            </div>
+            {places.map((sight: any, index: number) => {
+                return (
+                    <>
+                        <ImageSlider items={sight.images}/>
+                        <br />
+                        <h4>{sight.name}</h4>
+                        <br />
+                        <p key={index}>{sight.title}...<Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {page.home.button3}</Link></p>
                         <br />
                     </>
                 );

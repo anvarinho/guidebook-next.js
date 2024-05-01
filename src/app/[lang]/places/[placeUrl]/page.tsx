@@ -22,12 +22,11 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
     const { page } = await getDictionary(lang)
 
     if (!data) notFound()
-    
     return (
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
                 {/* <JsonLD data={metaData} /> */}
                 <Meta lang={lang} place={data} page={page}/>
-                <PlaceArticle promise={placeData} lang={lang}/>  
+                <PlaceArticle promise={placeData} lang={lang}/>
             </Suspense>
     )
 }
