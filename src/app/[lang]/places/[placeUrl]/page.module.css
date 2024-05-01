@@ -54,3 +54,21 @@ html[lang="ae"] .main p {
         padding-top: 4rem;
     }
   } */
+
+  .placesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+  
+  .placesList {
+    /* max-width: 1200px; */
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center; 
+    gap: .6rem;
+    z-index: 0;
+  }

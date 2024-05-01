@@ -41,10 +41,10 @@
     border: .2rem solid gray;
 }
 
-.contact form .inputbox .inputfield input::placeholder,
+/* .contact form .inputbox .inputfield input::placeholder,
 .contact form .textareafield textarea::placeholder{
-    /* color: #ededed; */
-}
+    color: #ededed;
+} */
 
 /* .contact form .focus {
     position: absolute;

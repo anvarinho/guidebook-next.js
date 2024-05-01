@@ -94,7 +94,7 @@ export async function generateMetadata({
           app_name: "GuideBook of Kyrgyzstan"
         },
         web: {
-          url: `${process.env.NEXT_PUBLIC_URL}/tours`,
+          url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`,
           should_fallback: true,
         }
       },
