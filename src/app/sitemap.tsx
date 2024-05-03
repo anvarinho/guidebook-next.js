@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             pages.push({
                 url: `${URL}/${lang}${route}`,
                 lastModified: currentDate,
-                changeFrequency: 'monthly' as const,
+                changeFrequency: 'weekly' as const,
                 priority: 0.8
             });
         }
@@ -29,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             pages.push({
                 url: `${URL}/${lang}/places/${place.placeUrl}`,
                 lastModified: place.lastModified,
-                changeFrequency: 'monthly' as const,
+                changeFrequency: 'weekly' as const,
                 priority: 0.8,
                 // alternates:{
                 //     languages: {
@@ -43,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             pages.push({
                 url: `${URL}/${lang}/articles/${article.placeUrl}`,
                 lastModified: isoString,
-                changeFrequency: 'monthly' as const,
+                changeFrequency: 'weekly' as const,
                 priority: 0.9
             });
         }
@@ -51,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
             pages.push({
                 url: `${URL}/${lang}/tours/${tour.tourUrl}`,
                 lastModified: "2024-04-04T19:51:29.199Z",
-                changeFrequency: 'monthly' as const,
+                changeFrequency: 'weekly' as const,
                 priority: 1
             });
         }

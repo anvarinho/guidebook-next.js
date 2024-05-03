@@ -1,7 +1,7 @@
 import styles from "../page.module.css"
 import { getPlacesByURLs } from "@/lib/getAllPlaces"
 import { getPlacesByRegion } from "@/lib/getAllPlaces"
-import { GoogleMapsEmbed } from '@next/third-parties/google'
+import { GoogleMapsEmbed, YouTubeEmbed } from '@next/third-parties/google'
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ImageSlider from "@/app/[lang]/Components/image/ImageSlider";
@@ -33,6 +33,18 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             <br />
             <p>{place.description}</p>
             <br />
+            {place.videoID && (
+                <>
+                <div className={styles.video}>
+                    <YouTubeEmbed videoid={place.videoID}
+                        // height={400}
+                        width={700}
+                        params="controls=0" />
+                </div>
+                <br />
+                </>
+            )}
+            
             <GoogleMapsEmbed
                 apiKey={`${process.env.GOOGLE_MAPS_API_KEY}`}
                 height={300}
