@@ -7,6 +7,7 @@ import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import Meta from './meta';
 import { getDictionary } from '@/lib/dictionary'
+import { notFound } from 'next/navigation'
 
 type Params = {
   params: {
@@ -20,7 +21,7 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   const { page } = await getDictionary(lang)
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
-  
+  if (!article) notFound()
   return (
     <div className={styles.main}>
       <Meta lang={lang} article={article} page={page}/>
@@ -34,6 +35,7 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
 export async function generateMetadata({ params: {articleUrl, lang}}: Params): Promise<Metadata> {
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
+  if (!article) notFound()
   let imageUrl = article.image ? article.image : article.paragraphs[0].image
   return {
       title: {
