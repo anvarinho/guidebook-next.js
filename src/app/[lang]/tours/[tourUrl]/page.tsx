@@ -9,6 +9,7 @@ import DayView from './DayView';
 import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
 import Meta from './meta';
+import { notFound } from 'next/navigation'
 
 type Params = {
     params: {
@@ -22,6 +23,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
     const { page } = await getDictionary(lang)
     const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const data = await tourData
+    if (!data) notFound()
     return (
         <div className={styles.main}>
             <Meta lang={lang} tour={data} page={page}/>
@@ -84,6 +86,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
 export async function generateMetadata({ params: {tourUrl, lang}}: Params): Promise<Metadata> {
     const tourData: Promise<TourInfo> = getTour(tourUrl, lang)
     const tour = await tourData
+    if (!tour) notFound()
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const description = tour.description.substring(0, 200)
     const { page } = await getDictionary(lang)
