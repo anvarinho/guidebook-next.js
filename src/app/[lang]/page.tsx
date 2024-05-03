@@ -118,8 +118,9 @@ export async function generateMetadata({
       },
       robots: {
           index: true,
-          follow: true,
+          follow: false,
           nocache: true,
+          "max-image-preview":"large",
           googleBot: {
               index: true,
               follow: true,

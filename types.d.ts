@@ -15,7 +15,8 @@ type Place = {
     "images": [string],
     "sights": [string]?,
     "viewCount": number,
-    "location": GeoLocation;
+    "location": GeoLocation,
+    "videoID": string?
 }
 
 type Tour = {

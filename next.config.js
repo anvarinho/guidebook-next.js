@@ -18,6 +18,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/contact",
+        destination: "/en/contact", // Matched parameters can be used in the destination
+        permanent: true,
+      },
+      {
         source: '/places/:slug*', // Use the wildcard :slug* to match all deeper URLs
         destination: '/en/places/:slug*', // Redirect to the equivalent URL in the /en/places path
         permanent: true,
@@ -45,11 +50,6 @@ const nextConfig = {
       {
         source: '/tours/:slug*', // Use the wildcard :slug* to match all deeper URLs
         destination: '/en/tours/:slug*', // Redirect to the equivalent URL in the /en/places path
-        permanent: true,
-      },
-      {
-        source: '/place', // Use the wildcard :slug* to match all deeper URLs
-        destination: '/en/places', // Redirect to the equivalent URL in the /en/places path
         permanent: true,
       },
       {

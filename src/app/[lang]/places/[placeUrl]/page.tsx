@@ -39,6 +39,7 @@ export async function generateMetadata({
     const { page } = await getDictionary(lang)
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const place = await placeData
+    if (!place) notFound()
     const description = place.description.substring(0, 200)
     const images = place.images.map(image => ({
         url: `${process.env.NEXT_PUBLIC_URL}/${image}`,
