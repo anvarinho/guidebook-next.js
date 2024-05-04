@@ -10,6 +10,7 @@ import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
 import Flags from './Components/Flags'
+import Meta from './metalayout';
 // import { getDictionary } from '../../lib/dictionary'
 // import { GoogleAnalytics } from '@next/third-parties/google'
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <Meta lang={params.lang}/>
       </head>
       <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
       <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/>
