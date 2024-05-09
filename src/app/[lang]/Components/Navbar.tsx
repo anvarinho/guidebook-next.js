@@ -10,7 +10,7 @@ export default async function Navbar ({ lang }: { lang: Locale }) {
     return (
         <header className={styles.header}>
             <div className={styles.flex}>
-                <Link href={`/${lang}`} className={styles.logo}><h1>{page.name}</h1></Link>
+                <Link href={`/${lang}`} className={styles.logo}><h3>{page.name}</h3></Link>
                 <nav className={`${styles.navbar}`}>
                     {page.navigation.map((link, index) => (
                         <NavItem key={index} lang={lang} index={index} url={link.url} text={link.text} />
