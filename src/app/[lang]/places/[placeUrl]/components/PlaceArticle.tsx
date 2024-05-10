@@ -59,7 +59,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             {sights.length > 0 && (
                 <div>
                     <br />
-                    <h2>{place.name}: {page.sights.sights}</h2>
+                    <h3>{place.name}: {page.sights.sights}</h3>
                 </div>
             )}
             <br />
@@ -77,7 +77,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             })}
             <div>
                 {/* <br /> */}
-                <h2>{place.region}: {page.sights.sights}</h2>
+                <h3>{place.region}: {page.sights.sights}</h3>
                 <br />
             </div>
             {places.map((sight: any, index: number) => {

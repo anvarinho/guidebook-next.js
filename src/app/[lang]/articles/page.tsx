@@ -101,7 +101,7 @@ export async function generateMetadata({
         }
       },
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_URL}/articles/`,
+        canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/`,
         languages: {
             "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/`,
             "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/`,

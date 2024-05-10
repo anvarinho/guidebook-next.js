@@ -88,7 +88,7 @@ export async function generateMetadata({
         locale: page.langCode.replace("-",'_')
       },
       alternates: {
-          canonical: `${process.env.NEXT_PUBLIC_URL}/`,
+          canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}`,
           languages: {
             "en-US": `${process.env.NEXT_PUBLIC_URL}/en/`,
             "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/`,
