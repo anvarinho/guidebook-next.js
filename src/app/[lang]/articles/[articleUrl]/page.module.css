@@ -42,12 +42,24 @@ white-space: pre-wrap;
 /* padding-top: 20px; */
 }
 
-.hero img {
-max-width: 100%;
-height: auto;
+.hero .image{
+  position: relative;
+  width: 80%;
+  aspect-ratio: 16/9;
+  margin-bottom: 2rem;
+}
+
+.hero .image img {
+/* width: 100%; */
+/* height: auto; */
 border-radius: 5px;
 margin-bottom: 15px;
 margin-top: 15px;
+}
+
+.hero h3{
+  font-size: .9em;
+  font-weight: 500;
 }
 
 .hero a{
@@ -56,6 +68,7 @@ margin-top: 15px;
 
 .hero a h3{
   color: var(--main-active-color);
+  font-size: .9em;
 }
 
 .hero a:hover{
@@ -68,6 +81,22 @@ font-size: 1.5em;
 margin-bottom: 1rem;
 }
 
-.content h2{
-  padding: 1rem;
+.hero h2{
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hero p{
+  font-weight: 300;
+}
+
+
+@media (max-width:768px){
+  .main {
+    padding: 5rem .3rem .3rem .3rem;
+  }
+  .hero .image{
+    width: 100%;
+  }
 }
