@@ -14,19 +14,26 @@ export default async function Article({ paragraph, lang}: Props) {
     const blurDataURL = paragraph.image ? await getBase64(baseUrl + paragraph.image) : ""
     return (
         <div className={styles.hero}>
-            {paragraph.image && (
-                <Image
-                src={baseUrl + paragraph.image}
-                alt={lang}
-                // className={styles.flag}
-                height={400}
-                width={600}  placeholder="blur" blurDataURL={blurDataURL} priority/>
-            )}
+                {paragraph.image && (
+                    <picture className={styles.image}>
+                        <Image
+                        src={baseUrl + paragraph.image}
+                        alt={lang}
+                        // className={styles.flag}
+                        fill
+                        // height={400}
+                        // width={600}  
+                        sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
+                        placeholder="blur" blurDataURL={blurDataURL} priority/>
+                    </picture>
+                )}
+            
+            
             {paragraph.link ? (
             <Link href={`${baseUrl}${lang}/${paragraph.link}`} target='_blank'>
-                <h3>{paragraph.title}</h3>
+                <h2>{paragraph.title}</h2>
             </Link>
-            ): <h3>{paragraph.title}</h3>}
+            ): <h2>{paragraph.title}</h2>}
             <p>{paragraph.text}</p>
             <br />
         </div>

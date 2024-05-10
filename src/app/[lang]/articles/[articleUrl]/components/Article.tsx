@@ -19,17 +19,29 @@ export default async function Article({ article, lang }: Props) {
   return (
     <article className={styles.article}>
         <div className={styles.hero}>
-          {article.image && (
-            <Image
-            src={baseUrl + article.image} 
-            alt={lang}
-            height={400}
-            width={700} 
-            placeholder="blur" blurDataURL={blurDataURL} priority/>
-          )}
+          
+            {article.image && (
+              <picture className={styles.image}>
+                <Image
+                src={baseUrl + article.image} 
+                alt={article.title}
+                sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
+                fill 
+                // overrideSrc={baseUrl + article.image} 
+                // height={400}
+                // width={700} 
+                
+                // style={{
+                //   objectFit: 'cover', // cover, contain, none
+                // }}
+                placeholder="blur" blurDataURL={blurDataURL} 
+                priority/>
+              </picture>
+            )}
+          
             
             <h1>{article.title}</h1>
-            <h2>{article.subtitle}</h2>
+            <h3>{article.subtitle}</h3>
             <br />
         </div>
         {article.paragraphs.map((paragraph, index) => (

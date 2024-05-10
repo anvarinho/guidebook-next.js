@@ -596,7 +596,7 @@ const nextConfig = {
   },
   images: {
     domains: ["159.65.95.44","central-asia.live", "https://central-asia.live", "127.0.0.1"], // Add your external image domains here
-    unoptimized: true,
+    // unoptimized: true,
   },
   webpack(config) {
     config.infrastructureLogging = { debug: /PackFileCache/ };
