@@ -71,7 +71,7 @@ export async function generateMetadata({
             type: 'website',
         },
         alternates: {
-            canonical: `${process.env.NEXT_PUBLIC_URL}/places/${place.url}`,
+            canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
             languages: {
                 "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/${place.url}`,
                 "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/${place.url}`,

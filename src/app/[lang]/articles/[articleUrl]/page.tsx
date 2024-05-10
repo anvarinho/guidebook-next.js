@@ -60,7 +60,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
           type: 'website',
       },
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_URL}/articles/${article.url}`,
+        canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
         languages: {
             "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/${article.url}`,
             "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/${article.url}`,

@@ -71,12 +71,12 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
                 )}
                 {
                     pathname.includes('/tours/') ? (
-                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`} target="_blank" onClick={() => sendGAEvent({ event: 'buttonClicked', value: '4FJFCJuVic8YELL_7YUq' })}>
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`} title="Whatsapp contact" target="_blank" onClick={() => sendGAEvent({ event: 'buttonClicked', value: '4FJFCJuVic8YELL_7YUq' })}>
                             {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}
                             <Image src={"/whatsapp.png"} width={50} height={50} alt=""/>
                         </Link>
                     ) : (
-                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`} target="_blank">
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`} title="Whatsapp contact" target="_blank">
                             {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}
                             <Image src={"/whatsapp.png"} width={50} height={50} alt=""/>
                         </Link>
