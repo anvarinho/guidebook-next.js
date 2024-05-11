@@ -1,7 +1,6 @@
 import { Locale } from '@/lib/i18n.config'
 import getTour from '@/lib/getTour';
 import styles from './page.module.css'
-import ImageSlider from '../../Components/image/ImageSlider';
 import { Metadata } from 'next'
 import { Suspense } from "react"
 import LoadingSpinner from '../../Components/LoadingSpinner';
@@ -10,6 +9,7 @@ import { getDictionary } from '@/lib/dictionary'
 import Link from 'next/link';
 import Meta from './meta';
 import { notFound } from 'next/navigation'
+import ImageRenderer from '../../Components/image/ImageRenderer';
 
 type Params = {
     params: {
@@ -31,7 +31,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                 {/* <JsonLD data={metaData} /> */}
                 <article className={styles.article}>
                     <h1>{data.title}</h1>
-                    <ImageSlider items={data.images}/>
+                    <ImageRenderer images={data.images}/>
                     <div className={styles.meta}>
                         <p><strong>{page.tours.tourPage.level}</strong>: {data.level}</p>
                         <p><strong>{page.tours.tourPage.duration}</strong>: {data.days.length} {data.days.length == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`}</p>

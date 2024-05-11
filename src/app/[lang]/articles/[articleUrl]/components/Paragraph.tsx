@@ -18,13 +18,12 @@ export default async function Article({ paragraph, lang}: Props) {
                     <picture className={styles.image}>
                         <Image
                         src={baseUrl + paragraph.image}
-                        alt={lang}
-                        // className={styles.flag}
+                        alt={paragraph.title}
                         fill
-                        // height={400}
-                        // width={600}  
                         sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
-                        placeholder="blur" blurDataURL={blurDataURL} priority/>
+                        placeholder="blur" blurDataURL={blurDataURL}
+                        loading='lazy'
+                         />
                     </picture>
                 )}
             
