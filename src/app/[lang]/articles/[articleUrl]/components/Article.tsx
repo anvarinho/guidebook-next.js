@@ -26,17 +26,11 @@ export default async function Article({ article, lang }: Props) {
                 src={baseUrl + article.image} 
                 alt={article.title}
                 sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill 
-                // overrideSrc={baseUrl + article.image} 
-                // height={400}
-                // width={700} 
-                
-                // style={{
-                //   objectFit: 'cover', // cover, contain, none
-                // }}
                 placeholder="blur" blurDataURL={blurDataURL} 
                 // priority
-                loading='lazy'
+                // loading='lazy'
                 />
               </picture>
             )}

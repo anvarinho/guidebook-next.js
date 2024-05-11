@@ -8,7 +8,7 @@ export default async function getAllArticles(lang: string) {
         throw new Error('Failed to fetch data');
       }
       const data = await res.json();
-      console.log(data.length)
+      // console.log(data.length)
       return data;
     } catch (error) {
       console.error('Error:', error);
@@ -31,9 +31,9 @@ export async function sitemapArticles() {
       const url = `${process.env.NEXT_PUBLIC_URL}/api/articles`;
       try {
           const response = await fetch(url);
-          console.log(response.status)
+          // console.log(response.status)
           const data = await response.json();
-          console.log(data)
+          // console.log(data)
           return data;
       } catch (error) {
           console.error("Error fetching articles:", error);
