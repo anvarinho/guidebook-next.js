@@ -14,7 +14,7 @@ export default async function ImageLoader({ image }: { image: String }) {
             alt={`${image}`}
             placeholder="blur" 
             blurDataURL={blurDataURL} 
-            loading="lazy"
+            // loading="lazy"
             objectFit='cover'/>
         </picture>
     </div>

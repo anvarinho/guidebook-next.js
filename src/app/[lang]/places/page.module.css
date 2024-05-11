@@ -74,7 +74,7 @@
   .weather h3{
     padding-right: .4rem;
     font-weight: 400;
-    font-family: 'Bai Jamjuree', sans-serif;
+    /* font-family: 'Bai Jamjuree', sans-serif; */
   }
 
   .placesList .placeBox h4{
