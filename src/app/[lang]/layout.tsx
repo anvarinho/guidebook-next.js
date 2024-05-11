@@ -3,20 +3,19 @@ import type { Metadata } from 'next'
 import { Bai_Jamjuree } from 'next/font/google'
 import { Locale, i18n } from '@/lib/i18n.config'
 import Footer from './Components/Footer'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
-const font = Bai_Jamjuree({weight: '500',style: 'normal', subsets: ['latin'], display: 'swap' })
 import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import styles from './page.module.css'
 import Flags from './Components/Flags'
 import Meta from './metalayout';
-// import { getDictionary } from '../../lib/dictionary'
-// import { GoogleAnalytics } from '@next/third-parties/google'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
 }
+
+const font = Bai_Jamjuree({weight: ['200','300','400','500','600','700'],style: 'normal', subsets: ['latin'], display: 'swap' })
 
 export default function RootLayout({
   children,
@@ -35,7 +34,7 @@ export default function RootLayout({
         <Meta lang={params.lang}/>
       </head>
       <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
-      <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/>
+      {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
       <body className={font.className}>
         <main className={styles.main}>
           <Navbar lang={params.lang}/>

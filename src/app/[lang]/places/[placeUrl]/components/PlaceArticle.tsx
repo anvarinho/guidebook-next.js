@@ -72,7 +72,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
                         <br />
                         <h4>{sight.title}</h4>
                         <br />
-                        <p key={index}>{sight.description}...<Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {page.home.button3}</Link></p>
+                        <p key={index}><Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {sight.description}... {page.home.button3}</Link></p>
                         <br />
                     </>
                 );
@@ -89,7 +89,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
                         <br />
                         <h4>{sight.name}</h4>
                         <br />
-                        <p key={index}>{sight.title}...<Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {page.home.button3}</Link></p>
+                        <p key={index}><Link href={`/${lang}/places/${sight.url}`} style={{'color':"var(--main-active-color)"}}> {sight.title}...  {page.home.button3}</Link></p>
                         <br />
                     </>
                 );
