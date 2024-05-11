@@ -35,7 +35,9 @@ export default async function Article({ article, lang }: Props) {
                 //   objectFit: 'cover', // cover, contain, none
                 // }}
                 placeholder="blur" blurDataURL={blurDataURL} 
-                priority/>
+                // priority
+                loading='lazy'
+                />
               </picture>
             )}
           

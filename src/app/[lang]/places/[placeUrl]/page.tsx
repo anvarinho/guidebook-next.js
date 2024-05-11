@@ -1,7 +1,7 @@
 import getPlace from "@/lib/getPlace"
 import { Suspense } from "react"
 import PlaceArticle from "./components/PlaceArticle"
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
@@ -114,9 +114,11 @@ export async function generateMetadata({
             index: true,
             follow: true,
             nocache: true,
+            "max-image-preview":"large",
             googleBot: {
                 index: true,
-                follow: true
+                follow: true,
+                "max-image-preview":"large"
             }
         }
     }

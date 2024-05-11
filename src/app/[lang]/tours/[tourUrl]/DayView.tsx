@@ -1,9 +1,9 @@
 import { Locale } from '@/lib/i18n.config'
 import styles from './page.module.css'
-import ImageSlider from '../../Components/image/ImageSlider';
 import { getPlacesByURLs } from "@/lib/getAllPlaces"
 import Link from 'next/link';
 import { getDictionary } from '@/lib/dictionary'
+import ImageRenderer from '../../Components/image/ImageRenderer';
 
 type Params = {
     params: {
@@ -23,7 +23,7 @@ export default async function DayView({ params: {day, index, lang}}: Params) {
             <h3>{page.tours.tourPage.day}: {index + 1}</h3>
             <br />
             <div className={styles.dayImages}>
-                <ImageSlider items={day.images}/>
+                <ImageRenderer images={day.images}/>
             </div>
             <br />
             <h3>{page.tours.tourPage.things}</h3>

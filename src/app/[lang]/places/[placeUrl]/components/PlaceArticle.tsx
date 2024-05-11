@@ -6,6 +6,8 @@ import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ImageSlider from "@/app/[lang]/Components/image/ImageSlider";
 import Link from "next/link";
+import ImageLoader from "../../../Components/image/ImageLoader"
+import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
 
 type Props = {
     promise: Promise<Place>,
@@ -24,7 +26,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     return (
         <article className={styles.main}>
             <h1>{place.name}</h1>
-            <ImageSlider items={place.images}/>
+            <ImageRenderer images={place.images}/>
             <h2>{place.title}</h2>
             <div className={styles.info}>
                 <p>{page.info.created}{createdDate?.toLocaleDateString()}</p>
@@ -66,7 +68,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             {sights.map((sight: any, index: number) => {
                 return (
                     <>
-                        <ImageSlider items={sight.images}/>
+                        <ImageRenderer images={sight.images}/>
                         <br />
                         <h4>{sight.title}</h4>
                         <br />
@@ -83,7 +85,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             {places.map((sight: any, index: number) => {
                 return (
                     <>
-                        <ImageSlider items={sight.images}/>
+                        <ImageRenderer images={sight.images}/>
                         <br />
                         <h4>{sight.name}</h4>
                         <br />
