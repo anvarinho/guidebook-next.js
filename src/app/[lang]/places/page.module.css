@@ -27,7 +27,7 @@
   
   .placesList .placeBox{
     position: relative;
-    /* height: 40rem; */
+    /* height: 12rem; */
     min-width: 20vw;
     aspect-ratio: 1.77/1;
     overflow: hidden;
