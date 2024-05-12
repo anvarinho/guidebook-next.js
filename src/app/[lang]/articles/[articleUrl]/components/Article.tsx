@@ -29,8 +29,7 @@ export default async function Article({ article, lang }: Props) {
                 // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill 
                 placeholder="blur" blurDataURL={blurDataURL} 
-                // priority
-                // loading='lazy'
+                priority
                 />
               </picture>
             )}
@@ -41,7 +40,7 @@ export default async function Article({ article, lang }: Props) {
             <br />
         </div>
         {article.paragraphs.map((paragraph, index) => (
-          <Paragraph key={index} paragraph={paragraph} lang={lang}/>
+          <Paragraph key={index} paragraph={paragraph} lang={lang} priority={index == 0 && article.image == null ? true : false}/>
         ))}
       </article>
   )
