@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from './imageSlider.module.css'
 import Image from "next/image";
 
-const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
+const ImageSlider: React.FC<{ items: [String], priority: boolean }> = ({ items, priority }) => {
     const [index, setIndex] = useState(1);
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
 
@@ -35,7 +35,10 @@ const ImageSlider: React.FC<{ items: [String] }> = ({ items }) => {
                 <div className={styles.slider_items}>
                     {items.map((image, idx) => (
                         <picture key={idx} className={`${styles.slider_item} ${idx + 1 === index ? styles.active : ''}`}>
-                            <Image fill src={baseUrl + image} alt={`${image}`} objectFit="cover" title={`${image}`} loading="lazy"/>
+                            <Image fill src={baseUrl + image} alt={`${image}`} objectFit="cover" title={`${image}`}
+                             priority={idx == 0 && priority ? true : false}
+                             loading={idx == 0 && priority ? 'eager' : 'lazy'}
+                             />
                         </picture>
                     ))}
                 </div>

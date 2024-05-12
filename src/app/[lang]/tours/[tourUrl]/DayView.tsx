@@ -23,7 +23,7 @@ export default async function DayView({ params: {day, index, lang}}: Params) {
             <h3>{page.tours.tourPage.day}: {index + 1}</h3>
             <br />
             <div className={styles.dayImages}>
-                <ImageRenderer images={day.images}/>
+                <ImageRenderer images={day.images} priority={index == 0}/>
             </div>
             <br />
             <h3>{page.tours.tourPage.things}</h3>
