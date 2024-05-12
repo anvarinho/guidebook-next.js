@@ -7,9 +7,10 @@ import getBase64 from "@/lib/getLocalBase64"
 type Props = {
     paragraph: Paragraph,
     lang: Locale,
+    priority: boolean
 }
 
-export default async function Article({ paragraph, lang}: Props) {
+export default async function Article({ paragraph, lang, priority}: Props) {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const blurDataURL = paragraph.image ? await getBase64(baseUrl + paragraph.image) : ""
     return (
@@ -22,7 +23,8 @@ export default async function Article({ paragraph, lang}: Props) {
                         fill
                         sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
                         placeholder="blur" blurDataURL={blurDataURL}
-                        // loading='lazy'
+                        priority={priority}
+                        loading={priority ? 'eager' : 'lazy'}
                          />
                     </picture>
                 )}
