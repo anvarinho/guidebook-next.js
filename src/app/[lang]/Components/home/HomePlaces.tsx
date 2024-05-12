@@ -136,8 +136,8 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                             <h2>{place.name}</h2>
                             <p>{place.description} ...</p>
                             <div className={styles.floatingbuttons}>
-                                <Link href={`/${lang}/places/${place.url}`} className={styles.floatingButton} rel="noopener noreferrer">{dictionary.readMore[lang]}</Link>
-                                <Link href={`/${lang}/places`} className={styles.floatingButton} rel="noopener noreferrer">{dictionary.morePlaces[lang]}</Link>
+                                <Link href={`/${lang}/places/${place.url}`} className={styles.floatingButton} title={place.title} rel="noopener noreferrer">{dictionary.readMore[lang]}</Link>
+                                <Link href={`/${lang}/places`} className={styles.floatingButton} title="Kyrgyzstan Where To Go!" rel="noopener noreferrer">{dictionary.morePlaces[lang]}</Link>
                             </div>
                         </div>
                     </div>
@@ -148,9 +148,9 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                     <h2>{dictionary.title[lang]}</h2>
                     <h4>{dictionary.description[lang]}</h4>
                     <div>
-                        <Link href={`/${lang}/places`} className={styles.floatingButton} >{dictionary.places[lang]}</Link>
-                        <Link href={`/${lang}/articles`} className={styles.floatingButton} >{dictionary.articles[lang]}</Link>
-                        <Link href={`/${lang}/tours`} className={styles.floatingButton} >{dictionary.tours[lang]}</Link>
+                        <Link href={`/${lang}/places`} title="Kyrgyzstan Where To Go!" className={styles.floatingButton} >{dictionary.places[lang]}</Link>
+                        <Link href={`/${lang}/articles`} title="The Kyrgyzstan: on Culture, Traditions, and Nature" className={styles.floatingButton} >{dictionary.articles[lang]}</Link>
+                        <Link href={`/${lang}/tours`} title="Private tours in Kyrgyzstan!" className={styles.floatingButton} >{dictionary.tours[lang]}</Link>
                     </div>
                 </div>
             )}

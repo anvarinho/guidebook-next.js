@@ -17,13 +17,12 @@ export default async function PlaceListItem({ place, lang }: Props) {
   return (
     <Link href={`places/${place.url}`} key={place._id} className={styles.placeBox}>
           <Image
-              //  fill 
               src={baseUrl + place.images[0]}
               alt={place.name}
               className={styles.placeImg}
               height={360}
               width={640}
-              //  sizes='(max-width: 768px) 100%, (max-width: 1200px) 50%, 33%' 
+              sizes='(max-width: 768px) 100%, (max-width: 1200px) 50%, 33%' 
               placeholder="blur" 
               blurDataURL={blurDataURL} 
               priority/>
