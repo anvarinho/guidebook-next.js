@@ -55,7 +55,7 @@ export async function generateMetadata({
       title: {
         absolute: page.sights.title + ' | ' + page.name
       },
-      description: page.sights.description,
+      description: page.sights.description.substring(0, 160),
       keywords: page.sights.keywords,
       applicationName:"GuideBook of Kyrgyzstan",
       category: "Travel",
