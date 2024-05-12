@@ -26,7 +26,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
     return (
         <article className={styles.main}>
             <h1>{place.name}</h1>
-            <ImageRenderer images={place.images}/>
+            <ImageRenderer images={place.images} priority/>
             <h2>{place.title}</h2>
             <div className={styles.info}>
                 <p>{page.info.created}{createdDate?.toLocaleDateString()}</p>
@@ -68,7 +68,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             {sights.map((sight: any, index: number) => {
                 return (
                     <>
-                        <ImageRenderer images={sight.images}/>
+                        <ImageRenderer images={sight.images} priority={false}/>
                         <br />
                         <h4>{sight.title}</h4>
                         <br />
@@ -85,7 +85,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             {places.map((sight: any, index: number) => {
                 return (
                     <>
-                        <ImageRenderer images={sight.images}/>
+                        <ImageRenderer images={sight.images} priority={false}/>
                         <br />
                         <h4>{sight.name}</h4>
                         <br />
