@@ -29,7 +29,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             <ImageRenderer images={place.images} priority/>
             <h2>{place.title}</h2>
             <div className={styles.info}>
-                <p>{page.info.created}{createdDate?.toLocaleDateString()}</p>
+                <time dateTime={createdDate?.toLocaleString()}>{page.info.created}{createdDate?.toLocaleDateString()}</time>
                 <p>{page.info.seen}{Math.floor(place.viewCount)}</p>
             </div>
             <br />

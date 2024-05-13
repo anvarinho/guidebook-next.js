@@ -8,6 +8,10 @@
     justify-content: center;
 
 }
+
+.main h3{
+    font-size: 1rem;
+}
   
 .toursDiv{
     display: flex;
@@ -67,8 +71,9 @@
     border-radius: .3rem;
 }
 
-.toursList .tourBox h3{
+.toursList .tourBox h2{
     /* position: relative; */
+    font-size: large;
     background-color: rgba(0,0,0,0.4);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter:blur(3px);

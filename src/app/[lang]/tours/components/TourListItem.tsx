@@ -30,7 +30,7 @@ export default async function TourListItem({ tour, lang }: Props) {
         />
         <div className={styles.meta}><h4><span>{page.tours.tourPage.from}: </span>{tour.lastPrice}$</h4><h4>{tour.daysCount} {daysSpelling}</h4></div>
         <div className={styles.content}>
-            <h3>{tour.title}</h3>
+            <h2>{tour.title}</h2>
             <p>{shortDescription} ...</p>
         </div>
     </Link>
