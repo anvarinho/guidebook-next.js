@@ -78,8 +78,8 @@ export function LoadMore({ lang }: { lang: Locale }) {
                         width={640}
                         sizes='(max-width: 768px) 100%, (max-width: 1200px) 50%, 33%' 
                         priority/>
-                        <h4>{place.title}</h4>
-                        <h6>{place.region}</h6>
+                        <h2>{place.title}</h2>
+                        <h5>{place.region}</h5>
                     </Link>
                 ))
             ) : (

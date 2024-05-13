@@ -6,6 +6,11 @@
     min-height: 100vh;
     overflow: hidden;
 }
+
+.main h3{
+  font-size: 1rem;
+  font-weight: 600;
+}
   
   .placesDiv{
     display: flex;
@@ -71,13 +76,13 @@
     padding:.2rem 1rem;
     border-radius: 0.3rem;
   }
-  .weather h3{
+  .weather h4{
     padding-right: .4rem;
     font-weight: 400;
     /* font-family: 'Bai Jamjuree', sans-serif; */
   }
 
-  .placesList .placeBox h4{
+  .placesList .placeBox h2{
     position: absolute;
     bottom: .4rem; left: .4rem;
     background-color: rgba(0,0,0,0.4);
@@ -96,7 +101,7 @@
     text-align: right;
   }
 
-  .placesList .placeBox h6{
+  .placesList .placeBox h5{
     position: absolute;
     top: .4rem; right: .4rem;
     background-color: rgba(0,0,0,0.4);
@@ -107,7 +112,7 @@
     opacity: 0;
     transition: all .3s ease-in;
   }
-  .placesList .placeBox:hover h6{
+  .placesList .placeBox:hover h5{
     opacity: 1;
   }
 
