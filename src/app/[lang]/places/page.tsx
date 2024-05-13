@@ -29,7 +29,7 @@ export default async function Places({
           {/* <Head></Head> */}
           <Meta lang={lang} places={places} page={page}/>
             <h1>{page.sights.title}</h1>
-            <h2>{page.sights.description}</h2>
+            <h3>{page.sights.description}</h3>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
                   <Suspense fallback={

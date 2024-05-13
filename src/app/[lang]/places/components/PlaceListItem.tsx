@@ -28,12 +28,12 @@ export default async function PlaceListItem({ place, lang }: Props) {
               priority/>
         {place.weather && place.weather.temp &&(
           <div className={styles.weather}>
-            <h3>{parseInt(place.weather?.temp)}°C</h3> 
+            <h4>{parseInt(place.weather?.temp)}°C</h4> 
             <Image src={`/${place.weather?.icon}.png`} alt={`${place.weather?.icon}`} width="32" height="32" /> 
           </div>
         )}
-        <h4>{place.title}</h4>
-        <h6>{place.region}</h6>
+        <h2>{place.title}</h2>
+        <h5>{place.region}</h5>
     </Link>
   )
 }
