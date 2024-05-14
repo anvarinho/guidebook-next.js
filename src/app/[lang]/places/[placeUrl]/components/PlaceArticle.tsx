@@ -4,9 +4,7 @@ import { getPlacesByRegion } from "@/lib/getAllPlaces"
 import { GoogleMapsEmbed, YouTubeEmbed } from '@next/third-parties/google'
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import ImageSlider from "@/app/[lang]/Components/image/ImageSlider";
 import Link from "next/link";
-import ImageLoader from "../../../Components/image/ImageLoader"
 import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
 
 type Props = {
