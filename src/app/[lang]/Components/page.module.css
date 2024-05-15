@@ -62,7 +62,7 @@
 }
   
   .navbar a{
-    /* padding: 0 20px 0 20px; */
+    padding: 0 20px 0 20px;
     transition: all .3s ease-in;
     font-weight: 600;
     z-index: 100;
