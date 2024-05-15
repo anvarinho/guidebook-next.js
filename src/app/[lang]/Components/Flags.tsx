@@ -49,7 +49,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                                     alt={locale}
                                     className={styles.flag}
                                     height={40}
-                                    width={50}
+                                    width={40}
                                 />
                                 {/* <p>{locale}</p> */}
                             </div>
@@ -64,7 +64,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                         alt={lang}
                         className={styles.flag}
                         height={40}
-                        width={50}
+                        width={40}
                     />
                     {/* <p>{lang}</p> */}
                 </div>

@@ -3,7 +3,7 @@ import { i18n } from '@/lib/i18n.config';
 import { sitemapPlaces } from '@/lib/getAllPlaces';
 import { sitemapArticles } from '@/lib/getAllArticles';
 import { sitemapTours } from '@/lib/getAllTours';
- 
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
     const URL = "https://central-asia.live";
     const languages = i18n.locales;
