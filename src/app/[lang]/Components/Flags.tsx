@@ -38,7 +38,7 @@ export default function Flags({ lang }: { lang: Locale }) {
         <div className={styles.flags}>
             <div className={`${styles.flaglist} ${showFlags ? '' : styles.active}`}>
                 {i18n.locales.map((locale, i) => (
-                    locale != lang ? 
+                    locale != lang && 
                         <Link key={i}
                             href={redirectedPathName(locale)}
                             onClick={() => {handleToggleNavbar; Cookies.set('lang', locale, { expires: 365 })}}
@@ -54,10 +54,10 @@ export default function Flags({ lang }: { lang: Locale }) {
                                 {/* <p>{locale}</p> */}
                             </div>
                             
-                        </Link> : <p key={i}></p>
+                        </Link>
                 ))}
             </div>
-            <button onClick={handleToggleNavbar}>
+            <button onClick={handleToggleNavbar} aria-label="Toggle language menu">
                 <div className={styles.flagtext}>
                     <Image
                         src={`/${lang}.png`}
