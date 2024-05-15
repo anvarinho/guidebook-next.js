@@ -44,7 +44,7 @@ export default function MenuButton() {
 
     
     return (
-        <button className={styles.menuBtn} onClick={handleToggleNavbar}>
+        <button className={styles.menuBtn} onClick={handleToggleNavbar} aria-label="Toggle menu visibility">
             {!showNavbar ? (
                 <>
                 <FontAwesomeIcon icon={faBars} />
