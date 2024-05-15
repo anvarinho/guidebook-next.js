@@ -82,7 +82,7 @@
     /* font-family: 'Bai Jamjuree', sans-serif; */
   }
 
-  .placesList .placeBox h2{
+  .placesList .placeBox h3{
     position: absolute;
     bottom: .4rem; left: .4rem;
     background-color: rgba(0,0,0,0.4);

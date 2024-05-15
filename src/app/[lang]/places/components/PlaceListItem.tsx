@@ -32,7 +32,7 @@ export default async function PlaceListItem({ place, lang }: Props) {
             <Image src={`/${place.weather?.icon}.png`} alt={`${place.weather?.icon}`} width="32" height="32" /> 
           </div>
         )}
-        <h2>{place.title}</h2>
+        <h3>{place.title}</h3>
         <h5>{place.region}</h5>
     </Link>
   )
