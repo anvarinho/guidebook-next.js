@@ -4,7 +4,6 @@ import styles from './homeplaces.module.css'
 import { Locale } from "@/lib/i18n.config";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ImageLoader from "../image/ImageLoader";
 import Link from "next/link";
 import { getHomePlaces } from "@/lib/getAllPlaces";
 import {
@@ -157,10 +156,10 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
 
             {places.length > 0 && (
                 <div className={styles.buttons}>
-                    <button onClick={handleSlideLeft} disabled={currentSlide === 0}>
+                    <button onClick={handleSlideLeft} aria-label="Previous Place" disabled={currentSlide === 0}>
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </button>
-                    <button onClick={handleSlideRight} disabled={currentSlide === places.length - 2}>
+                    <button onClick={handleSlideRight} aria-label="Next Place" disabled={currentSlide === places.length - 2}>
                         <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                 </div>
