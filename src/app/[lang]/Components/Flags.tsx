@@ -57,7 +57,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                         </Link> : <a key={i}></a>
                 ))}
             </div>
-            <a onClick={handleToggleNavbar}>
+            <button onClick={handleToggleNavbar}>
                 <div className={styles.flagtext}>
                     <Image
                         src={`/${lang}.png`}
@@ -68,7 +68,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                     />
                     {/* <p>{lang}</p> */}
                 </div>
-            </a>
+            </button>
         </div>
     );
 }
