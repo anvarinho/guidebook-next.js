@@ -54,7 +54,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                                 {/* <p>{locale}</p> */}
                             </div>
                             
-                        </Link> : <a key={i}></a>
+                        </Link> : <p key={i}></p>
                 ))}
             </div>
             <button onClick={handleToggleNavbar}>
