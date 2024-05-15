@@ -44,7 +44,7 @@ export default function MenuButton() {
 
     
     return (
-        <a className={styles.menuBtn} onClick={handleToggleNavbar}>
+        <button className={styles.menuBtn} onClick={handleToggleNavbar}>
             {!showNavbar ? (
                 <>
                 <FontAwesomeIcon icon={faBars} />
@@ -54,6 +54,6 @@ export default function MenuButton() {
                 <FontAwesomeIcon icon={faXmark} />
                 </>
             )}
-        </a>
+        </button>
     )
 }

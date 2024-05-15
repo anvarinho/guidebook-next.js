@@ -15,6 +15,23 @@
     max-width: 1200px;
 }
 
+.header .flex button{
+  font-size: .8rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  background-color: rgba(122, 122, 122, 0.4);
+  border-radius: .3rem;
+  /* border: 1px solid rgba(255, 255, 255, 0.4); */
+  border: none;
+  transition: all .3s ease-in;
+  z-index: 100;
+  color: #fff;
+}
+
+.header .flex button:hover{
+  color: var(--main-active-color);
+}
+
 .header .flex .logo h3{
     /* font-family: 'Bai Jamjuree', cursive; */
     font-weight: 700;
@@ -45,7 +62,7 @@
 }
   
   .navbar a{
-    padding: 0 20px 0 20px;
+    /* padding: 0 20px 0 20px; */
     transition: all .3s ease-in;
     font-weight: 600;
     z-index: 100;
@@ -139,6 +156,11 @@
     /* height: 40px; */
     z-index: 100;
     
+  }
+
+  .flags button{
+    background-color: transparent;
+    border: none;
   }
   .flags .flaglist {
     position: relative;
