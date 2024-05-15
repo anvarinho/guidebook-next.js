@@ -81,9 +81,11 @@ export async function generateMetadata({
         description: page.home.description,
         images:[{
           url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+          secureUrl: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
           width: 800,
           height: 600,
-          alt: "Karakol Cable Lift"
+          alt: "Karakol Cable Lift",
+          type:"image/jpeg"
         }],
         locale: page.langCode.replace("-",'_')
       },

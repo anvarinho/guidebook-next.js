@@ -42,10 +42,12 @@ export async function generateMetadata({
     if (!place) notFound()
     const description = place.description.substring(0, 200)
     const images = place.images.map(image => ({
+        secureUrl: `${process.env.NEXT_PUBLIC_URL}/${image}`,
         url: `${process.env.NEXT_PUBLIC_URL}/${image}`,
         width: 800,
         height: 600,
-        alt: `Image of ${place.name}`
+        alt: `Image of ${place.name}`,
+        type:"image/jpeg"
     }))
 
     if (!place){

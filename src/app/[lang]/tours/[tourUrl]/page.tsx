@@ -105,9 +105,11 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
             siteName: 'GuideBook of Kyrgyzstan',
             images: {
                 url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
+                secureUrl: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
                 width: 800,
                 height: 600,
-                alt: tour.title
+                alt: tour.title,
+                type:"image/jpeg"
             },
             locale: page.langCode.replace("-",'_'),
             type: 'website',

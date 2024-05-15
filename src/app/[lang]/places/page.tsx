@@ -66,6 +66,7 @@ export async function generateMetadata({
         siteName: 'GuideBook of Kyrgyzstan',
         images: {
             url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            secureUrl: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
             width: 800,
             height: 600,
             alt: "Kel-Suu Lake"
@@ -84,7 +85,8 @@ export async function generateMetadata({
             url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
             width: 800,
             height: 600,
-            alt: "Kel-Suu Lake"
+            alt: "Kel-Suu Lake",
+            type:"image/jpeg"
         }
       },
       appLinks: {
