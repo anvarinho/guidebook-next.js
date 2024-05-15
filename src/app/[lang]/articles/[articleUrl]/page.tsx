@@ -52,9 +52,11 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
           siteName: 'GuideBook of Kyrgyzstan',
           images: [{
             url: `${process.env.NEXT_PUBLIC_URL}/${imageUrl}`,
+            secureUrl: `${process.env.NEXT_PUBLIC_URL}/${imageUrl}`,
             width: 800,
             height: 600,
-            alt: article.title
+            alt: article.title,
+            type:"image/jpeg"
           }],
           locale: 'en_US',
           type: 'website',

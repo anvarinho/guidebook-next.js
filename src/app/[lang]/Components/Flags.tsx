@@ -42,7 +42,6 @@ export default function Flags({ lang }: { lang: Locale }) {
                         <Link key={i}
                             href={redirectedPathName(locale)}
                             onClick={() => {handleToggleNavbar; Cookies.set('lang', locale, { expires: 365 })}}
-                            rel="nofollow"
                         >
                             <div className={styles.flagtext}>
                                 <Image
