@@ -46,6 +46,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             )}
             
             <GoogleMapsEmbed
+                aria-label={`Google Maps ${place.name}`}
                 apiKey={`${process.env.GOOGLE_MAPS_API_KEY}`}
                 height={300}
                 width="100%"
