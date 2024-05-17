@@ -9,8 +9,8 @@
 
 }
 
-.main h3{
-    font-size: 1rem;
+.main h2{
+    font-weight: 500;
 }
   
 .toursDiv{
@@ -71,7 +71,7 @@
     border-radius: .3rem;
 }
 
-.toursList .tourBox h2{
+.toursList .tourBox h3{
     /* position: relative; */
     font-size: large;
     background-color: rgba(0,0,0,0.4);

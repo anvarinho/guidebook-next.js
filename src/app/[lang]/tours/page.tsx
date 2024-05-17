@@ -27,7 +27,7 @@ export default async function Home({
       <div className={styles.main}>
         <Meta lang={lang} tours={toursData} page={page} />
         <h1>{page.tours.title}</h1>
-        <h3>{page.tours.description}</h3>
+        <h2>{page.tours.description}</h2>
         <div className={styles.toursDiv}>
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
               <div className={styles.toursList}>
