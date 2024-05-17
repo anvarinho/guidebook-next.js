@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.main .info{
+  padding: .5rem 1rem 0 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: .7rem;
+}
+
 .author a {
 color: #333;
 text-decoration: none;

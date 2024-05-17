@@ -88,7 +88,7 @@ export async function generateMetadata({ params: {tourUrl, lang}}: Params): Prom
     const tour = await tourData
     if (!tour) notFound()
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-    const description = tour.description.substring(0, 200)
+    const description = tour.description.substring(0, 159)
     const { page } = await getDictionary(lang)
     return {
         title: {
