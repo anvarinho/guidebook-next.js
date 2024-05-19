@@ -28,9 +28,9 @@ export default async function TourListItem({ tour, lang }: Props) {
         blurDataURL={blurDataURL}
         priority
         />
-        <div className={styles.meta}><h4><span>{page.tours.tourPage.from}: </span>{tour.lastPrice}$</h4><h4>{tour.daysCount} {daysSpelling}</h4></div>
+        <div className={styles.meta}><h5><span>{page.tours.tourPage.from}: </span>{tour.lastPrice}$</h5><h5>{tour.daysCount} {daysSpelling}</h5></div>
         <div className={styles.content}>
-            <h3>{tour.title}</h3>
+            <h4>{tour.title}</h4>
             <p>{shortDescription} ...</p>
         </div>
     </Link>
