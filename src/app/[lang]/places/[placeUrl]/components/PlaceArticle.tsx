@@ -6,6 +6,7 @@ import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import Link from "next/link";
 import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
+import ShareButtons from "@/app/[lang]/Components/ShareButtons";
 
 type Props = {
     promise: Promise<Place>,
@@ -33,6 +34,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
             <br />
             <p>{place.description}</p>
             <br />
+            {/* <ShareButtons/> */}
             {place.videoID && (
                 <>
                 <div className={styles.video}>
