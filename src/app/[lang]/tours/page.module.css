@@ -57,7 +57,7 @@
     justify-content: space-between;
 }
 
-.toursList .tourBox .meta h5{
+/* .toursList .tourBox .meta h5{
     background-color: rgba(0,0,0,0.4);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter:blur(3px);
@@ -66,6 +66,25 @@
 }
 
 .toursList .tourBox .meta h5 span{
+    color: var(--main-active-color);
+} */
+
+.main h4{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.toursList .tourBox .meta h2{
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    padding: .2rem .7rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.toursList .tourBox .meta h2 span{
     color: var(--main-active-color);
 }
 
@@ -82,9 +101,17 @@
     border-radius: .3rem;
 }
 
-.toursList .tourBox h4{
-    /* position: relative; */
+/* .toursList .tourBox h4{
     font-size: large;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    border-radius: .3rem;
+} */
+
+.toursList .tourBox h3{
+    font-size: 1.1rem;
+    font-weight: 800;
     background-color: rgba(0,0,0,0.4);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter:blur(3px);
