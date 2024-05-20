@@ -82,7 +82,7 @@
     border-radius: .3rem;
 }
 
-.toursList .tourBox h3{
+.toursList .tourBox h4{
     /* position: relative; */
     font-size: large;
     background-color: rgba(0,0,0,0.4);
