@@ -57,14 +57,14 @@ export async function generateMetadata({
     }
     return {
         title: {
-            absolute: place.title + ' | ' + page.name
+            absolute: place.title
         },
         description: description,
         keywords: place.keywords,
         applicationName: 'GuideBook of Kyrgyzstan',
         category: "Travel",
         openGraph: {
-            title: place.title + ' | ' + page.name,
+            title: place.title,
             description: description,
             url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
             siteName: 'GuideBook of Kyrgyzstan',

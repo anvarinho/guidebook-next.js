@@ -46,7 +46,7 @@ export async function generateMetadata({ params: {articleUrl, lang}}: Params): P
       applicationName: 'GuideBook of Kyrgyzstan',
       category: "Travel",
       openGraph: {
-          title: article.title + ' | ' + 'GuideBook of Kyrgyzstan',
+          title: article.title,
           description: article.subtitle,
           url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
           siteName: 'GuideBook of Kyrgyzstan',

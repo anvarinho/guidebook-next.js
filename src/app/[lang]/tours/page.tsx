@@ -27,7 +27,7 @@ export default async function Home({
       <div className={styles.main}>
         <Meta lang={lang} tours={toursData} page={page} />
         <h1>{page.tours.title}</h1>
-        <h3>{page.tours.description}</h3>
+        <p>{page.tours.description}</p>
         <div className={styles.toursDiv}>
             <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
               <div className={styles.toursList}>
@@ -36,7 +36,7 @@ export default async function Home({
               </div>
             </Suspense>
         </div>
-        <h2>{page.tours.subtitle}</h2>
+        <h4>{page.tours.subtitle}</h4>
         <p>{page.tours.description1}</p>
       </div>
     )
@@ -48,17 +48,18 @@ export async function generateMetadata({
   params: {lang : Locale}
 }): Promise<Metadata> {
   const { page } = await getDictionary(lang)
+  const description = page.tours.description.substring(0, 159)
   return {
     title: {
-      absolute: page.tours.title + ' | ' + page.name
+      absolute: page.tours.title
     },
-    description: page.tours.description,
+    description: description,
     keywords: page.tours.keywords,
     applicationName:"GuideBook of Kyrgyzstan",
     category: "Travel",
       openGraph: {
-        title: page.tours.title + ' | ' + 'GuideBook of Kyrgyzstan',
-        description: page.tours.description,
+        title: page.tours.title,
+        description: description,
         url: `${process.env.NEXT_PUBLIC_URL}/tours`,
         siteName: 'GuideBook of Kyrgyzstan',
         images: {
@@ -75,7 +76,7 @@ export async function generateMetadata({
       twitter: {
         card: "summary_large_image",
         title: page.tours.title,
-        description: page.tours.description,
+        description: description,
         siteId: "",
         creator: "@anvarinho",
         creatorId: "@anvarinho",
