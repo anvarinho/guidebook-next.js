@@ -42,7 +42,7 @@ export default async function Home({
       <Meta lang={lang} page={page}/>
       <div className={styles.home}>
         <h1>{page.home.title}</h1>
-        <h2>{page.home.description}</h2>
+        <p>{page.home.description}</p>
         <div className={styles.buttons}>
           <Link href="#places" className={styles.floatingButton}>{page.home.button1}</Link>
           <Link href={`/${lang}/articles`} className={styles.floatingButton}>{page.home.button2}</Link>
@@ -55,6 +55,19 @@ export default async function Home({
         <div className={styles.downloadApps}>
             <DownloadApps/>
         </div>
+      </div>
+      <div className={styles.travel}>
+        <h2>{page.home.subtitle}</h2>
+        <p>{page.home.paragraph}</p>
+        <h2>{page.home.subtitle1}</h2>
+        <p>{page.home.paragraph1}</p>
+        <h2>{page.home.subtitle2}</h2>
+        <p>{page.home.paragraph2}</p>
+        <h2>{page.home.subtitle3}</h2>
+        <p>{page.home.paragraph3}</p>
+        <h2>{page.home.subtitle4}</h2>
+        <p>{page.home.paragraph4}</p>
+        <h2>{page.home.subtitle5}</h2>
       </div>
       <HomePlaces lang={lang}/>
     </div>
