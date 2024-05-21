@@ -88,10 +88,25 @@
   color: #fff;
 }
 
+.home p{
+  padding: 0 1rem 0 1rem;
+}
+
 .home h2{
   max-width: 800px;
   font-size: 1rem;
   color: #fff;
+}
+
+.travel{
+  padding: 1rem;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.travel h2{
+  font-size: 1.5rem;
+  padding: .6rem;
 }
 
 .chooseLanguage{
