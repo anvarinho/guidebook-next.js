@@ -22,13 +22,14 @@ export default async function ArticleListItem({ article, lang }: Props) {
             src={baseUrl + imageUrl}
             alt={`${article.image}`}
             className={styles.articleImg}
-            height={100}
-            width={100}
+            height={150}
+            width={150}
             placeholder="blur" 
             blurDataURL={blurDataURL} 
             priority/>
         <div className={styles.cardContent}>
             <h4>{article.title}</h4>
+            <p>{article.subtitle.substring(0,160)} ...</p>
             <div className={styles.cardBottom}>
                 <h6>{String(article.createdAt)}</h6><h6>{article.viewCount}</h6>
             </div>
