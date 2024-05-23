@@ -55,6 +55,10 @@
   margin: 0; /* Remove default margin from h4 */
 }
 
+.cardContent p{
+  font-size: .7rem;
+}
+
 
 .cardBottom{
   width: calc(100% - 10px); 

@@ -59,16 +59,56 @@ export default async function Home({
       <div className={styles.travel}>
         <h2>{page.home.subtitle}</h2>
         <p>{page.home.paragraph}</p>
-        <h2>{page.home.subtitle1}</h2>
-        <p>{page.home.paragraph1}</p>
-        <h2>{page.home.subtitle2}</h2>
-        <p>{page.home.paragraph2}</p>
-        <h2>{page.home.subtitle3}</h2>
-        <p>{page.home.paragraph3}</p>
-        <h2>{page.home.subtitle4}</h2>
-        <p>{page.home.paragraph4}</p>
-        <h2>{page.home.subtitle5}</h2>
+        <div>
+          <h3>{page.home.Transportation.title}</h3>
+          <p>{page.home.Transportation.Description}</p>
+          {Object.entries(page.home.Transportation.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          {/* <p>{page.home.Transportation.details}</p> */}
+        </div>
+        <div>
+          <h3>{page.home.Accommodations.title}</h3>
+          <p>{page.home.Accommodations.Description}</p>
+          {Object.entries(page.home.Accommodations.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.Accommodations.details}</p>
+        </div>
+        <div>
+          <h3>{page.home.Food.title}</h3>
+          <p>{page.home.Food.Description}</p>
+          {Object.entries(page.home.Food.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.Food.details}</p>
+        </div>
+        <div>
+          <h3>{page.home.Safety.title}</h3>
+          <p>{page.home.Safety.Description}</p>
+          {Object.entries(page.home.Safety.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.Safety.details}</p>
+        </div>
+        <div>
+          <h3>{page.home.Prices.title}</h3>
+          <p>{page.home.Prices.Description}</p>
+          {Object.entries(page.home.Prices.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.Prices.details}</p>
+        </div>
+        <div>
+          <h3>{page.home.Travel_Seasons.title}</h3>
+          <p>{page.home.Travel_Seasons.Description}</p>
+          {Object.entries(page.home.Travel_Seasons.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.Travel_Seasons.details}</p>
+        </div>
       </div>
+      
       <HomePlaces lang={lang}/>
     </div>
   )
