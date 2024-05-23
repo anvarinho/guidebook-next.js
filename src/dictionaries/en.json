@@ -41,7 +41,7 @@
                 "Car Rentals": "For more flexibility, renting a car is a good option. Roads in rural areas can be rough, so a 4x4 is recommended. Ensure you have an international driving permit.",
                 "Trains": "Limited train services are available, primarily connecting Bishkek to Balykchy near Issyk-Kul Lake. It's a scenic route but slower than road travel.",
                 "Buses": "Regular buses operate in major cities, offering a comfortable way to travel. However, they may not cover remote areas.",
-                "HitchHiking": "If you're feeling adventurous and don't mind relying on the kindness of strangers, hitchhiking can be a unique and cost-free way to travel. Exercise caution and always prioritize safety."
+                "HitchHiking": "is a common practice in rural areas of Kyrgyzstan, where formal transportation options may be limited. It's relatively safe and culturally accepted, but exercise caution and use your judgment when accepting rides from strangers."
               },
               "details": "For detailed insights on transportation options, visit the provided guide."
             },
@@ -110,6 +110,36 @@
                 "Winter (December to February)": "Winter transforms Kyrgyzstan into a winter wonderland, with snow-covered mountains and frozen lakes creating breathtaking scenery. While temperatures can drop below freezing, winter sports enthusiasts flock to ski resorts like Karakol and Jyrgalan for skiing, snowboarding, and ice skating. February marks the celebration of the traditional nomadic game, Kok Boru (Buzkashi)."
               },
               "details": "For more information on specific activities, events, and weather conditions during each season, consult travel guides and local tourism resources."
+            },
+            "FirstTimeInKyrgyzstan": {
+              "title": "First Time in Kyrgyzstan?",
+              "Description": "If you're visiting Kyrgyzstan for the first time, here's a comprehensive guide to help you make the most of your trip:",
+              "Options": {
+                "Arrival and Getting Around": "Most international travelers arrive at Manas International Airport in Bishkek. Taxis and buses are readily available for transportation into the city. Within Kyrgyzstan, you can use domestic flights, buses, marshrutkas (minibuses), and shared taxis to get around.",
+                "SIM Cards and Internet": "Staying connected in Kyrgyzstan is easy with a local SIM card. You can purchase SIM cards at the airport or from mobile network providers in the city. Major providers include Beeline, O!, and Megacom. Ensure your phone is unlocked before purchasing a SIM card. Internet coverage is generally good in cities and towns, but can be spotty in rural areas.",
+                "Internet Prices": "Internet prices in Kyrgyzstan are generally affordable. A basic data package of 1GB can cost around 100 KGS (approximately $1.20 USD), while larger packages, such as 10GB, might cost around 500 KGS (approximately $6 USD). Unlimited data plans for a month can range from 800 to 1500 KGS (approximately $9.50 to $18 USD) depending on the provider and the speed of the connection.",
+                "Currency and Payments": "The local currency is the Kyrgyzstani Som (KGS). ATMs are available in major cities, but it's advisable to carry cash in rural areas. Credit and debit cards are accepted in many places in cities, but less so in remote areas. Currency exchange services are available at airports, banks, and exchange offices.",
+                "Language": "Kyrgyz and Russian are the official languages. In major cities, you might find some English speakers, especially in tourist areas, but in rural regions, it's useful to know some basic Kyrgyz or Russian phrases. A translation app or phrasebook can be very helpful.",
+                "Health and Safety": "Kyrgyzstan is generally safe for travelers, but it's wise to take standard precautions. Drink bottled or boiled water to avoid waterborne illnesses. Ensure you have travel insurance that covers health and accidents. Emergency medical services are available in cities, but can be limited in rural areas.",
+                "Climate and Clothing": "Kyrgyzstan has a continental climate with cold winters and hot summers. In the mountains, temperatures can be significantly cooler, so pack accordingly. Layered clothing, sturdy walking shoes, and sun protection are recommended. In winter, bring warm clothing, including a good quality jacket, gloves, and hats.",
+                "Electricity and Plugs": "The standard voltage is 220V, and the frequency is 50Hz. Power plugs and sockets are of type C and F. It's advisable to bring a universal travel adapter to ensure you can charge your electronic devices."
+              },
+              "details": "For more detailed information and tips, refer to travel guides and local resources. Enjoy your first trip to Kyrgyzstan and make unforgettable memories!"
+            },
+            "TravelPreparation": {
+              "title": "Prepare for Your Travel to Kyrgyzstan",
+              "Description": "Ensure a smooth and enjoyable trip to Kyrgyzstan by taking care of these essential travel preparations.",
+              "Options": {
+                "Visa and Passport": "Check the visa requirements for your nationality and ensure your passport is valid for at least six months beyond your intended stay.",
+                "Health and Vaccinations": "Consult your healthcare provider for any required vaccinations or health precautions for traveling to Kyrgyzstan.",
+                "Travel Insurance": "Consider purchasing travel insurance to cover unexpected emergencies, such as medical expenses or trip cancellations.",
+                "Currency and Money Matters": "Familiarize yourself with the local currency (Kyrgyzstani Som) and exchange some money before your trip. ATMs are available in major cities.",
+                "Language": "While Russian and Kyrgyz are the official languages, English is not widely spoken. Consider learning some basic phrases in Russian or Kyrgyz.",
+                "Weather and Clothing": "Pack appropriate clothing for the weather conditions during your visit. Kyrgyzstan experiences hot summers and cold winters, so bring layers.",
+                "Safety and Security": "Stay informed about the current situation in Kyrgyzstan and exercise caution, especially in remote areas. Keep your belongings secure and be aware of your surroundings.",
+                "Cultural Etiquette": "Respect local customs and traditions, such as removing your shoes before entering someone's home and asking permission before taking photographs of people."
+              },
+              "details": "For additional travel tips and advice specific to your trip to Kyrgyzstan, refer to our comprehensive travel guide."
             }
         },
         "sights": {
@@ -164,7 +194,8 @@
         },
         "info":{
             "seen":"Visits: ",
-            "created":"Created: "
+            "created":"Created: ",
+            "modified":"Last modified: "
         },
         "download":{
             "text": "Download our apps today and enjoy convenient access to our service on your mobile device! Simply click on the button!"

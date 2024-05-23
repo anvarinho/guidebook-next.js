@@ -110,6 +110,36 @@
                 "Invierno (Diciembre a Febrero)": "El invierno transforma Kirguistán en un país de maravillas invernales, con montañas cubiertas de nieve y lagos congelados creando paisajes impresionantes. Aunque las temperaturas pueden bajar bajo cero, los entusiastas de los deportes de invierno acuden a estaciones de esquí como Karakol y Jyrgalan para esquiar, hacer snowboard y patinar sobre hielo. Febrero marca la celebración del juego tradicional nómada, Kok Boru (Buzkashi)."
               },
               "details": "Para obtener más información sobre actividades específicas, eventos y condiciones climáticas durante cada temporada, consulta guías de viaje y recursos turísticos locales."
+            },
+            "FirstTimeInKyrgyzstan": {
+              "title": "Primera Vez en Kirguistán",
+              "Description": "Si estás visitando Kirguistán por primera vez, aquí tienes una guía completa para ayudarte a aprovechar al máximo tu viaje:",
+              "Options": {
+                "Llegada y Desplazamiento": "La mayoría de los viajeros internacionales llegan al Aeropuerto Internacional de Manas en Biskek. Taxis y autobuses están fácilmente disponibles para el transporte hacia la ciudad. Dentro de Kirguistán, puedes utilizar vuelos domésticos, autobuses, marshrutkas (minibuses) y taxis compartidos para moverte.",
+                "Tarjeta SIM e Internet": "Permanecer conectado en Kirguistán es fácil con una tarjeta SIM local. Puedes comprar tarjetas SIM en el aeropuerto o a proveedores de redes móviles en la ciudad. Los principales proveedores incluyen Beeline, O! y Megacom. Asegúrate de que tu teléfono esté desbloqueado antes de comprar una tarjeta SIM. La cobertura de Internet es generalmente buena en ciudades y pueblos, pero puede ser irregular en zonas rurales.",
+                "Precios de Internet": "Los precios de Internet en Kirguistán son generalmente asequibles. Un paquete de datos básico de 1 GB puede costar alrededor de 100 KGS (aproximadamente 1,20 USD), mientras que paquetes más grandes como 10 GB pueden costar alrededor de 500 KGS (aproximadamente 6 USD). Los planes de datos ilimitados por un mes pueden variar de 800 a 1500 KGS (aproximadamente de 9,50 a 18 USD) según el proveedor y la velocidad de conexión.",
+                "Moneda y Pagos": "La moneda local es el Som kirguís (KGS). Los cajeros automáticos están disponibles en las principales ciudades, pero es recomendable llevar efectivo en las zonas rurales. Las tarjetas de crédito y débito son aceptadas en muchos lugares de la ciudad, pero menos en áreas remotas. Los servicios de cambio de divisas están disponibles en aeropuertos, bancos y casas de cambio.",
+                "Idioma": "El kirguís y el ruso son los idiomas oficiales. En las principales ciudades, es posible que encuentres algunas personas que hablen inglés, especialmente en zonas turísticas, pero en regiones rurales es útil conocer algunas frases básicas en kirguís o ruso. Una aplicación de traducción o un diccionario pueden ser muy útiles.",
+                "Salud y Seguridad": "Kirguistán es generalmente seguro para los viajeros, pero es sabio tomar precauciones estándar. Bebe agua embotellada o hervida para evitar enfermedades transmitidas por el agua. Asegúrate de tener un seguro de viaje que cubra la salud y los accidentes. Los servicios médicos de emergencia están disponibles en las ciudades, pero pueden ser limitados en áreas rurales.",
+                "Clima y Vestimenta": "Kirguistán tiene un clima continental con inviernos fríos y veranos calurosos. En las montañas, las temperaturas pueden ser considerablemente más bajas, así que vístete en consecuencia. Se recomienda ropa en capas, zapatos de senderismo resistentes y protección solar. En invierno, lleva ropa abrigada, incluyendo una chaqueta de buena calidad, guantes y gorros.",
+                "Electricidad y Enchufes": "El voltaje estándar es de 220V, y la frecuencia es de 50Hz. Los enchufes y clavijas son de tipo C y F. Se recomienda llevar un adaptador de viaje universal para asegurarte de poder cargar tus dispositivos electrónicos."
+              },
+              "details": "Para obtener información más detallada y consejos, consulta guías de viaje y recursos locales. ¡Disfruta de tu primera visita a Kirguistán y crea recuerdos inolvidables!"
+            },
+            "TravelPreparation": {
+              "title": "Prepárate para tu Viaje a Kirguistán",
+              "Description": "Asegúrate de que tu viaje a Kirguistán sea fluido y agradable ocupándote de estas preparaciones de viaje esenciales.",
+              "Options": {
+                "Visado y Pasaporte": "Verifica los requisitos de visado para tu nacionalidad y asegúrate de que tu pasaporte tenga validez por al menos seis meses más allá del período previsto de tu estancia.",
+                "Salud e Inmunizaciones": "Consulta a tu médico sobre las vacunas obligatorias o precauciones de salud necesarias para viajar a Kirguistán.",
+                "Seguro de Viaje": "Considera adquirir un seguro de viaje que cubra emergencias imprevistas, como gastos médicos o cancelaciones de viaje.",
+                "Moneda y Asuntos Financieros": "Familiarízate con la moneda local (Som kirguís) y cambia algo de dinero antes de tu viaje. Hay cajeros automáticos disponibles en las principales ciudades.",
+                "Idioma": "Aunque el ruso y el kirguís son los idiomas oficiales, el inglés no es muy común. Considera aprender algunas frases básicas en ruso o kirguís.",
+                "Clima y Vestimenta": "Prepara ropa adecuada para las condiciones climáticas durante tu visita. Kirguistán tiene veranos calurosos e inviernos fríos, así que lleva ropa en capas.",
+                "Seguridad": "Mantente informado sobre la situación actual en Kirguistán y ten precaución, especialmente en áreas remotas. Mantén tus pertenencias seguras y sé consciente de tu entorno.",
+                "Etiqueta Cultural": "Respeta las costumbres y tradiciones locales, como quitarte los zapatos antes de entrar en la casa de alguien y pedir permiso antes de tomar fotos de las personas."
+              },
+              "details": "Para obtener más consejos y recomendaciones específicas para tu viaje a Kirguistán, consulta nuestra guía completa."
             }
         },
         "sights": {
@@ -170,7 +200,8 @@
         },
         "info": {
             "seen": "Visto: ",
-            "created": "Creado: "
+            "created": "Creado: ",
+            "modified":"Última modificación: "
         },
         "download":{
             "text": "¡Descargue nuestras aplicaciones hoy mismo y disfrute de un acceso conveniente a nuestro servicio en su dispositivo móvil! ¡Simplemente haga clic en el botón!"

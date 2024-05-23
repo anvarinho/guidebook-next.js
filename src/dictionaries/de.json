@@ -111,6 +111,36 @@
                 "Winter (Dezember bis Februar)": "Der Winter verwandelt Kirgisistan in ein Winterwunderland, mit schneebedeckten Bergen und gefrorenen Seen, die atemberaubende Landschaften schaffen. Obwohl die Temperaturen unter den Gefrierpunkt fallen können, strömen Wintersportbegeisterte in Skigebiete wie Karakol und Jyrgalan zum Skifahren, Snowboarden und Eislaufen. Februar markiert die Feier des traditionellen nomadischen Spiels, Kok Boru (Buzkashi)."
               },
               "details": "Für weitere Informationen zu spezifischen Aktivitäten, Veranstaltungen und Wetterbedingungen während jeder Jahreszeit konsultieren Sie Reiseführer und lokale Tourismusressourcen."
+            },
+            "FirstTimeInKyrgyzstan": {
+              "title": "Erstes Mal in Kirgisistan",
+              "Description": "Wenn Sie zum ersten Mal Kirgisistan besuchen, finden Sie hier einen umfassenden Leitfaden, der Ihnen hilft, das Beste aus Ihrer Reise zu machen:",
+              "Options": {
+                "Ankunft und Fortbewegung": "Die meisten internationalen Reisenden kommen am internationalen Flughafen Manas in Bischkek an. Taxis und Busse stehen für den Transport in die Stadt zur Verfügung. Innerhalb von Kirgisistan können Sie Inlandsflüge, Busse, Marschrutkas (Minibusse) und geteilte Taxis nutzen, um sich fortzubewegen.",
+                "SIM-Karten und Internet": "Mit einer lokalen SIM-Karte bleiben Sie in Kirgisistan problemlos verbunden. Sie können SIM-Karten am Flughafen oder bei Mobilfunkanbietern in der Stadt kaufen. Zu den wichtigsten Anbietern gehören Beeline, O! und Megacom. Stellen Sie sicher, dass Ihr Telefon entsperrt ist, bevor Sie eine SIM-Karte kaufen. Die Internetabdeckung ist in Städten und Dörfern im Allgemeinen gut, kann aber in ländlichen Gebieten unregelmäßig sein.",
+                "Internetpreise": "Die Internetpreise in Kirgisistan sind in der Regel erschwinglich. Ein Basis-Datenpaket mit 1 GB kann etwa 100 KGS (ca. 1,20 USD) kosten, während größere Pakete wie 10 GB etwa 500 KGS (ca. 6 USD) kosten können. Unbegrenzte Datenpläne für einen Monat können je nach Anbieter und Geschwindigkeit der Verbindung zwischen 800 und 1500 KGS (ca. 9,50 bis 18 USD) liegen.",
+                "Währung und Zahlungen": "Die lokale Währung ist der Kirgisische Som (KGS). Geldautomaten sind in den größeren Städten verfügbar, aber es ist ratsam, in ländlichen Gebieten Bargeld mitzuführen. Kredit- und EC-Karten werden in vielen Städten akzeptiert, jedoch weniger in abgelegenen Gebieten. Wechselstuben sind an Flughäfen, Banken und Wechselstuben verfügbar.",
+                "Sprache": "Kirgisisch und Russisch sind die offiziellen Sprachen. In den größeren Städten finden Sie möglicherweise einige Englischsprachige, insbesondere in touristischen Gebieten, aber in ländlichen Regionen ist es hilfreich, einige grundlegende kirgisische oder russische Phrasen zu kennen. Eine Übersetzungs-App oder ein Phrasebook kann sehr nützlich sein.",
+                "Gesundheit und Sicherheit": "Kirgisistan ist im Allgemeinen sicher für Reisende, aber es ist ratsam, Standardvorsichtsmaßnahmen zu treffen. Trinken Sie abgefülltes oder abgekochtes Wasser, um Krankheiten durch Wasser zu vermeiden. Stellen Sie sicher, dass Sie eine Reiseversicherung haben, die Gesundheits- und Unfalldeckung bietet. Notfallmedizinische Dienste sind in Städten verfügbar, können aber in ländlichen Gebieten begrenzt sein.",
+                "Klima und Kleidung": "Kirgisistan hat ein kontinentales Klima mit kalten Wintern und heißen Sommern. In den Bergen können die Temperaturen deutlich kühler sein, also packen Sie entsprechend ein. Schichtkleidung, robuste Wanderschuhe und Sonnenschutz werden empfohlen. Im Winter sollten Sie warme Kleidung mitbringen, einschließlich einer qualitativ hochwertigen Jacke, Handschuhe und Mützen.",
+                "Strom und Stecker": "Die Standardspannung beträgt 220V und die Frequenz beträgt 50Hz. Steckdosen und Stecker sind vom Typ C und F. Es empfiehlt sich, einen universellen Reiseadapter mitzubringen, um sicherzustellen, dass Sie Ihre elektronischen Geräte aufladen können."
+              },
+              "details": "Für weitere ausführliche Informationen und Tipps konsultieren Sie Reiseführer und lokale Ressourcen. Genießen Sie Ihre erste Reise nach Kirgisistan und schaffen Sie unvergessliche Erinnerungen!"
+            },
+            "TravelPreparation": {
+              "title": "Bereiten Sie sich auf Ihre Reise nach Kirgisistan vor",
+              "Description": "Stellen Sie sicher, dass Ihre Reise nach Kirgisistan reibungslos und angenehm verläuft, indem Sie diese wesentlichen Reisevorbereitungen treffen.",
+              "Options": {
+                "Visum und Reisepass": "Überprüfen Sie die Visumanforderungen für Ihre Nationalität und stellen Sie sicher, dass Ihr Reisepass mindestens sechs Monate über die geplante Aufenthaltsdauer hinaus gültig ist.",
+                "Gesundheit und Impfungen": "Konsultieren Sie Ihren Arzt für eventuell erforderliche Impfungen oder Gesundheitsmaßnahmen für Ihre Reise nach Kirgisistan.",
+                "Reiseversicherung": "Erwägen Sie den Abschluss einer Reiseversicherung, um unerwartete Notfälle wie medizinische Ausgaben oder Reiseabsagen abzudecken.",
+                "Währung und Finanzen": "Machen Sie sich mit der lokalen Währung (Kirgisischer Som) vertraut und tauschen Sie etwas Geld vor Ihrer Reise um. Geldautomaten sind in den größeren Städten verfügbar.",
+                "Sprache": "Obwohl Russisch und Kirgisisch die Amtssprachen sind, wird Englisch nicht weit verbreitet gesprochen. Erwägen Sie, einige grundlegende Phrasen auf Russisch oder Kirgisisch zu lernen.",
+                "Wetter und Kleidung": "Packen Sie passende Kleidung für die Wetterbedingungen während Ihres Besuchs ein. Kirgisistan hat heiße Sommer und kalte Winter, also bringen Sie Schichten mit.",
+                "Sicherheit": "Informieren Sie sich über die aktuelle Situation in Kirgisistan und seien Sie besonders in abgelegenen Gebieten vorsichtig. Halten Sie Ihre persönlichen Gegenstände sicher und achten Sie auf Ihre Umgebung.",
+                "Kulturetikette": "Respektieren Sie die lokalen Bräuche und Traditionen, wie das Ausziehen Ihrer Schuhe, bevor Sie das Haus einer Person betreten, und das Einholen von Erlaubnis, bevor Sie Fotos von Menschen machen."
+              },
+              "details": "Für weitere Tipps und Empfehlungen speziell für Ihre Reise nach Kirgisistan, konsultieren Sie unseren umfassenden Reiseführer."
             }
         },
         "sights": {
@@ -171,7 +201,8 @@
         },
         "info": {
             "seen": "Aufrufe: ",
-            "created": "Erstellt: "
+            "created": "Erstellt: ",
+            "modified":"Letzte Änderung: "
         },
         "download":{
             "text": "Laden Sie heute unsere Apps herunter und genießen Sie bequemen Zugriff auf unseren Service auf Ihrem mobilen Gerät! Klicken Sie einfach auf die Schaltfläche!"
