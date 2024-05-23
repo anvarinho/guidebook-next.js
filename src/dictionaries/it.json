@@ -111,6 +111,36 @@
                 "Inverno (Dicembre a Febbraio)": "L'inverno trasforma il Kirghizistan in un paese delle meraviglie invernali, con montagne coperte di neve e laghi ghiacciati che creano uno scenario mozzafiato. Sebbene le temperature possano scendere sotto lo zero, gli appassionati di sport invernali affollano le località sciistiche come Karakol e Jyrgalan per sciare, fare snowboard e pattinare su ghiaccio. Febbraio segna la celebrazione del tradizionale gioco nomade, Kok Boru (Buzkashi)."
               },
               "details": "Per ulteriori informazioni su attività specifiche, eventi e condizioni meteorologiche durante ciascuna stagione, consulta le guide turistiche e le risorse turistiche locali."
+            },
+            "FirstTimeInKyrgyzstan": {
+              "title": "Prima Volta in Kirghizistan",
+              "Description": "Se stai visitando il Kirghizistan per la prima volta, ecco una guida completa per aiutarti a sfruttare al meglio il tuo viaggio:",
+              "Options": {
+                "Arrivo e Spostamenti": "La maggior parte dei viaggiatori internazionali arriva all'Aeroporto Internazionale di Manas a Bishkek. Taxi e autobus sono facilmente disponibili per il trasporto in città. All'interno del Kirghizistan, è possibile utilizzare voli domestici, autobus, marshrutka (minibus) e taxi condivisi per spostarsi.",
+                "SIM Card e Internet": "Rimanere connessi in Kirghizistan è facile con una SIM locale. È possibile acquistare SIM card all'aeroporto o dai fornitori di reti mobili in città. I principali provider includono Beeline, O! e Megacom. Assicurati che il tuo telefono sia sbloccato prima di acquistare una SIM card. La copertura Internet è generalmente buona nelle città e nei paesi, ma può essere irregolare nelle zone rurali.",
+                "Prezzi Internet": "I prezzi Internet in Kirghizistan sono generalmente accessibili. Un pacchetto dati di base da 1GB può costare circa 100 KGS (circa 1,20 USD), mentre pacchetti più grandi, come 10GB, potrebbero costare circa 500 KGS (circa 6 USD). I piani dati illimitati per un mese possono variare da 800 a 1500 KGS (circa da 9,50 a 18 USD) a seconda del provider e della velocità della connessione.",
+                "Valuta e Pagamenti": "La valuta locale è il Som kirghiso (KGS). Gli sportelli bancomat sono disponibili nelle principali città, ma è consigliabile portare contanti nelle zone rurali. Le carte di credito e di debito sono accettate in molti luoghi nelle città, ma meno in quelle remote. I servizi di cambio valuta sono disponibili negli aeroporti, nelle banche e negli uffici di cambio.",
+                "Lingua": "Il kirghiso e il russo sono le lingue ufficiali. Nelle principali città, potresti trovare alcuni parlanti di inglese, specialmente nelle zone turistiche, ma nelle regioni rurali è utile conoscere alcune frasi di base in kirghiso o russo. Un'app di traduzione o un vocabolario possono essere molto utili.",
+                "Salute e Sicurezza": "Il Kirghizistan è generalmente sicuro per i viaggiatori, ma è saggio prendere precauzioni standard. Bevi acqua in bottiglia o bollita per evitare malattie trasmesse dall'acqua. Assicurati di avere un'assicurazione di viaggio che copra la salute e gli incidenti. I servizi medici di emergenza sono disponibili nelle città, ma possono essere limitati nelle zone rurali.",
+                "Clima e Abbigliamento": "Il Kirghizistan ha un clima continentale con inverni freddi ed estati calde. In montagna, le temperature possono essere significativamente più basse, quindi veste di conseguenza. L'abbigliamento a strati, scarpe da passeggio robuste e protezione solare sono raccomandati. In inverno, porta abbigliamento caldo, inclusa una giacca di buona qualità, guanti e cappelli.",
+                "Elettricità e Prese": "La tensione standard è di 220V, e la frequenza è di 50Hz. Le prese di corrente e le spine sono di tipo C e F. È consigliabile portare un adattatore di viaggio universale per assicurarti di poter caricare i tuoi dispositivi elettronici."
+              },
+              "details": "Per informazioni più dettagliate e consigli, consulta guide turistiche e risorse locali. Goditi il tuo primo viaggio in Kirghizistan e crea ricordi indimenticabili!"
+            },
+            "TravelPreparation": {
+              "title": "Preparati per il Tuo Viaggio in Kirghizistan",
+              "Description": "Assicurati un viaggio senza intoppi e piacevole in Kirghizistan occupandoti di queste preparazioni di viaggio essenziali.",
+              "Options": {
+                "Visto e Passaporto": "Controlla i requisiti del visto per la tua nazionalità e assicurati che il passaporto sia valido per almeno sei mesi oltre il periodo di permanenza previsto.",
+                "Salute e Vaccinazioni": "Consulta il tuo medico per eventuali vaccinazioni obbligatorie o precauzioni sanitarie per viaggiare in Kirghizistan.",
+                "Assicurazione di Viaggio": "Valuta l'acquisto di un'assicurazione di viaggio che copra eventuali emergenze impreviste, come spese mediche o cancellazioni del viaggio.",
+                "Valuta e Questioni Monetarie": "Familiarizzati con la valuta locale (Som kirghiso) e cambia un po' di denaro prima del viaggio. Gli sportelli bancomat sono disponibili nelle città principali.",
+                "Lingua": "Anche se il russo e il kirghiso sono le lingue ufficiali, l'inglese non è molto diffuso. Valuta di imparare alcune frasi di base in russo o kirghiso.",
+                "Clima e Abbigliamento": "Prepara abiti adeguati alle condizioni meteorologiche durante la tua visita. Il Kirghizistan ha estati calde e inverni freddi, quindi porta con te abiti adatti a strati.",
+                "Sicurezza": "Tieniti informato sulla situazione attuale in Kirghizistan e fai attenzione, specialmente nelle aree remote. Tieni al sicuro i tuoi effetti personali e mantieni la consapevolezza del tuo ambiente circostante.",
+                "Etichetta Culturale": "Rispetta le usanze e le tradizioni locali, come toglierti le scarpe prima di entrare in casa di qualcuno e chiedere il permesso prima di scattare fotografie alle persone."
+              },
+              "details": "Per ulteriori consigli e suggerimenti specifici per il tuo viaggio in Kirghizistan, consulta la nostra guida completa."
             }
         }, 
         "sights":{ 
@@ -171,8 +201,9 @@
             },
         "info":{ 
             "seen":"Visite: ", 
-            "created":"Creato: " 
-            },
+            "created":"Creato: ",
+            "modified":"Ultima modifica: "
+        },
         "download":{ 
             "text":"Scarica le nostre app oggi e goditi un accesso comodo al nostro servizio sul tuo dispositivo mobile! Clicca semplicemente sul pulsante!" 
         },
