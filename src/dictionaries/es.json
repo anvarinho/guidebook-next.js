@@ -173,7 +173,19 @@
               "person": "Persona",
               "persons": "Personas",
               "andMore": "y más"
-            }            
+            },
+            "TourPreparation": {
+              "title": "Elementos Esenciales para Viajar en Kirguistán",
+              "Description": "Una lista completa de elementos esenciales para llevar en su viaje a Kirguistán para garantizar comodidad, seguridad y preparación para las variadas condiciones climáticas y actividades al aire libre.",
+              "Options": {
+                "Zapatos": "Traiga zapatos cómodos para caminar por la ciudad, zapatos de senderismo resistentes para caminatas moderadas, botas de trekking duraderas para el trekking y sandalias de secado rápido como par adicional.",
+                "Sombrero": "No olvide empacar un sombrero de ala ancha o una gorra con solapa para el cuello para protegerse del sol intenso en altitudes elevadas.",
+                "Crema Solar": "No olvide empacar protector solar de amplio espectro con alto SPF para proteger su piel de los intensos rayos UV, especialmente en elevaciones más altas en Kirguistán.",
+                "Ropa": "Empaque capas de ropa apropiadas para temperaturas y condiciones climáticas variables, considerando que las temperaturas pueden variar significativamente con los cambios de altitud. Esté preparado para la nieve o la lluvia, especialmente en áreas montañosas.",
+                "Ayuda Médica": "Recuerde llevar ayudas médicas personales como medicamentos necesarios, vendas, analgésicos y cualquier artículo específico para condiciones médicas preexistentes como precaución."
+              },
+              "overview": "Su comodidad es nuestro trabajo, lo que nos lleva a buscar constantemente formas de hacer que su viaje sea aún más memorable y agradable."
+            }           
         },
         "articles": {
           "name": "Historias",

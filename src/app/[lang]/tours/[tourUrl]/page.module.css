@@ -122,6 +122,18 @@
     font-weight: lighter;
 }
 
+.extra {
+    border-bottom: 1px solid rgba(125,125,125,0.4);
+}
+
+.essentials h3{
+    padding-bottom: 1rem;
+}
+
+.essentials p{
+    line-height: 1.5rem;
+}
+
 @media (max-width:991px){
     .sights{
         grid-template-columns: repeat(3, 1fr);
