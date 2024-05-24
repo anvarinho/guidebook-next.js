@@ -174,7 +174,19 @@
               "person": "Person",
               "persons": "Personen",
               "andMore": "und mehr"
-            }            
+            },
+            "TourPreparation": {
+              "title": "Essentials für Reisen in Kirgisistan",
+              "Description": "Eine umfassende Liste der wesentlichen Gegenstände, die Sie auf Ihrer Reise nach Kirgisistan mitnehmen sollten, um Komfort, Sicherheit und Vorbereitung auf wechselnde Wetterbedingungen und Outdoor-Aktivitäten zu gewährleisten.",
+              "Options": {
+                "Schuhe": "Bringen Sie bequeme Wanderschuhe für Stadtrundgänge, robuste Wanderschuhe für moderate Wanderungen, strapazierfähige Trekkingstiefel für Trekkingtouren und schnell trocknende Sandalen als zusätzliches Paar mit.",
+                "Hut": "Vergessen Sie nicht, einen breitkrempigen Hut oder eine Sonnenkappe mit Nackenschutz mitzunehmen, um sich vor der intensiven Sonne in großer Höhe zu schützen.",
+                "UV-Creme": "Vergessen Sie nicht, eine Sonnencreme mit hohem LSF und breitem Spektrum einzupacken, um Ihre Haut vor den intensiven UV-Strahlen zu schützen, insbesondere in höheren Lagen in Kirgisistan.",
+                "Kleidung": "Packen Sie geeignete Kleidungsschichten für unterschiedliche Temperaturen und Wetterbedingungen ein, da die Temperaturen mit den Höhenänderungen erheblich variieren können. Seien Sie auf Schnee oder Regen vorbereitet, insbesondere in bergigen Gebieten.",
+                "Medizinische Hilfe": "Denken Sie daran, persönliche medizinische Hilfsmittel wie notwendige Medikamente, Pflaster, Schmerzmittel und eventuelle spezifische Artikel für bereits bestehende medizinische Probleme als Vorsichtsmaßnahme mitzuführen."
+              },
+              "overview": "Ihr Komfort ist unsere Aufgabe, die uns dazu führt, ständig nach Möglichkeiten zu suchen, Ihre Reise noch unvergesslicher und angenehmer zu gestalten."
+            }         
         },
         "articles": {
           "name": "Geschichten",

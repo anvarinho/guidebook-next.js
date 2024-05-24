@@ -174,6 +174,18 @@
             "person": "Personne",
             "persons": "Personnes",
             "andMore": "et plus"
+          },
+          "TourPreparation": {
+            "title": "Éléments Essentiels pour Voyager au Kirghizistan",
+            "Description": "Une liste complète des éléments essentiels à emporter lors de votre voyage au Kirghizistan pour garantir confort, sécurité et préparation aux conditions météorologiques variables et aux activités de plein air.",
+            "Options": {
+              "Chaussures": "Apportez des chaussures de marche confortables pour les visites en ville, des chaussures de randonnée robustes pour les randonnées modérées, des bottes de randonnée durables pour le trekking et des sandales à séchage rapide en tant que paire supplémentaire.",
+              "Chapeau": "N'oubliez pas d'emporter un chapeau à larges bords ou une casquette avec une protection pour le cou pour vous protéger du soleil intense en haute altitude.",
+              "Crème UV": "N'oubliez pas d'emporter une crème solaire à large spectre avec un FPS élevé pour protéger votre peau des rayons UV intenses, surtout à des altitudes plus élevées au Kirghizistan.",
+              "Vêtements": "Emportez des couches de vêtements appropriées pour les températures et les conditions météorologiques variables, en tenant compte du fait que les températures peuvent varier considérablement avec les changements d'altitude. Soyez prêt pour la neige ou la pluie, surtout dans les régions montagneuses.",
+              "Aide Médicale": "N'oubliez pas d'emporter des aides médicales personnelles telles que des médicaments nécessaires, des pansements, des analgésiques et tout article spécifique pour des conditions médicales préexistantes par mesure de précaution."
+            },
+            "overview": "Votre confort est notre travail, nous guidant à chercher constamment des moyens de rendre votre voyage encore plus mémorable et agréable."
           }
       },
       "articles": {

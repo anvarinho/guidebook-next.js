@@ -50,7 +50,7 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                         <DayView key={index} params={{ day: day, index: index, lang: lang }} />
                     ))}
                     <br />
-                    <div id='note'>
+                    <div className={styles.extra} id='note'>
                         <h3 className={styles.infoTitle}>{page.tours.tourPage.addInfo}</h3>
                         <div className={styles.infoList}>
                             {data.price.length > 1 && (
@@ -77,6 +77,15 @@ export default async function Tour({ params: {tourUrl, lang}}: Params) {
                             </div>
                         </div>
                     </div>  
+                    <br />
+                    <div className={styles.essentials}>
+                        <h3>{page.tours.TourPreparation.title}</h3>
+                        <p>{page.tours.TourPreparation.Description}</p>
+                        {Object.entries(page.tours.TourPreparation.Options).map(([key, value]: [string, string]) => (
+                            <p key={key}><b>{key}</b> : {value}</p>
+                        ))}
+                        <h4>{page.tours.TourPreparation.overview}</h4>
+                    </div>
                 </article>  
             </Suspense>
         </div>

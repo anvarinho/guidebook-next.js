@@ -173,6 +173,18 @@
               "person":"Person",
               "persons":"Persons",
               "andMore":"and more"
+            },
+            "TourPreparation": {
+              "title": "Essentials for Travel in Kyrgyzstan",
+              "Description": "A comprehensive list of essential items to bring on your trip to Kyrgyzstan to ensure comfort, safety, and preparedness for varying weather conditions and outdoor activities.",
+              "Options": {
+                "Shoes": "Bring comfortable walking shoes for city tours, sturdy hiking shoes for moderate hikes, durable hiking boots for trekking, and quick-drying sandals as an extra pair.",
+                "Hat":"Don't forget to pack a wide-brimmed hat or a sun cap with a neck flap to protect against the intense sun at high altitudes.",
+                "UV Cream":"Don't forget to pack high SPF broad-spectrum sunscreen to shield your skin from the intense UV rays, especially at higher elevations in Kyrgyzstan.",
+                "Clothing":"Pack appropriate clothing layers for varying temperatures and weather conditions, considering that temperatures can vary significantly with altitude changes. Be prepared for snow or rain, especially in mountainous areas.",
+                "Medical Aid":"Remember to carry personal medical aids such as necessary medications, band-aids, pain relievers, and any specific items for pre-existing medical conditions as precautions."
+              },
+              "overview": "Your comfort is our job, guiding us to constantly seek out ways to make your journey even more memorable and enjoyable."
             }
         },
         "articles": {
