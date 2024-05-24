@@ -61,19 +61,6 @@ export default async function Home({
         <time dateTime={"2024-05-24 13:45:30"}>{page.info.modified}2024-05-24 13:45:30</time>
         <p>{page.home.paragraph}</p>
         <div>
-          <h3>{page.home.FirstTimeInKyrgyzstan.title}</h3>
-          <p>{page.home.FirstTimeInKyrgyzstan.Description}</p>
-          {Object.entries(page.home.FirstTimeInKyrgyzstan.Options).map(([key, value]: [string, string]) => (
-            <p key={key}><b>{key}</b> : {value}</p>
-          ))}
-          <p>{page.home.FirstTimeInKyrgyzstan.details}</p>
-        </div>
-        <h2>{page.home.subtitle5}</h2>
-      </div>
-      <HomePlaces lang={lang}/>
-      <div className={styles.travel}>
-        <h2>{page.home.subtitle}</h2>
-        <div>
           <h3>{page.home.Transportation.title}</h3>
           <p>{page.home.Transportation.Description}</p>
           {Object.entries(page.home.Transportation.Options).map(([key, value]: [string, string]) => (
@@ -128,6 +115,18 @@ export default async function Home({
             <p key={key}><b>{key}</b> : {value}</p>
           ))}
           <p>{page.home.TravelPreparation.details}</p>
+        </div>
+        <h2>{page.home.subtitle5}</h2>
+      </div>
+      <HomePlaces lang={lang}/>
+      <div className={styles.travel}>
+      <h2>{page.home.FirstTimeInKyrgyzstan.title}</h2>
+        <div>
+          <p>{page.home.FirstTimeInKyrgyzstan.Description}</p>
+          {Object.entries(page.home.FirstTimeInKyrgyzstan.Options).map(([key, value]: [string, string]) => (
+            <p key={key}><b>{key}</b> : {value}</p>
+          ))}
+          <p>{page.home.FirstTimeInKyrgyzstan.details}</p>
         </div>
       </div>
     </div>
