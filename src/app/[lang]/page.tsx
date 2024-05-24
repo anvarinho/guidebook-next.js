@@ -58,7 +58,7 @@ export default async function Home({
       </div>
       <div className={styles.travel}>
         <h2>{page.home.subtitle}</h2>
-        <time dateTime={"2024-05-24 13:45:30"}>{page.info.modified}2024-05-24 13:45:30</time>
+        <time dateTime={"2024-05-15 13:45:30"}>{page.info.modified}2024-05-15 13:45:30</time>
         <p>{page.home.paragraph}</p>
         <div>
           <h3>{page.home.Transportation.title}</h3>
@@ -119,7 +119,7 @@ export default async function Home({
         <h2>{page.home.subtitle5}</h2>
       </div>
       <HomePlaces lang={lang}/>
-      <div className={styles.travel}>
+      {/* <div className={styles.travel}>
       <h2>{page.home.FirstTimeInKyrgyzstan.title}</h2>
         <div>
           <p>{page.home.FirstTimeInKyrgyzstan.Description}</p>
@@ -128,7 +128,7 @@ export default async function Home({
           ))}
           <p>{page.home.FirstTimeInKyrgyzstan.details}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
