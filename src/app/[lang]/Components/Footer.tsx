@@ -49,7 +49,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                         section.links.map((link, linkIndex) => (
                             <>
                                 {link.icon ? (
-                                    <Link key={linkIndex} href={`${link.url}`}>
+                                    <Link key={linkIndex} href={`${link.url}`} rel={"follow"}>
                                         <Image src={`/${link.icon}`} alt={`${link.icon}`} width="20" height="20"/>
                                         {link.text}
                                     </Link>
