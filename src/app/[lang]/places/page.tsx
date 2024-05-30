@@ -8,6 +8,7 @@ import { Locale } from '@/lib/i18n.config'
 import { LoadMore } from "./load-more";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import Meta from "./meta";
+import MustSee from "./must-see";
 
 export default async function Places({
   params: {lang}
@@ -29,7 +30,8 @@ export default async function Places({
           {/* <Head></Head> */}
           <Meta lang={lang} places={places} page={page}/>
             <h1>{page.sights.title}</h1>
-            <h2>{page.sights.description}</h2>
+            <h2>{page.sights.subtitle}</h2>
+            <p>{page.sights.description}</p>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
                   <Suspense fallback={
@@ -41,6 +43,7 @@ export default async function Places({
                   </Suspense>
               </div>
             </div>
+            <MustSee lang={lang}/>
         </div>
     )
 }

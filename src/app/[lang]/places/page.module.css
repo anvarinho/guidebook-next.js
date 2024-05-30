@@ -122,6 +122,17 @@
     left: 50%;
   }
 
+  .mustSee{
+    padding-top: 1rem;
+    line-height: 1.4rem;
+  }
+  .mustSee h2{
+    font-size: 1.2rem;
+  }
+  .mustSee h3{
+    font-size: 1.1rem;
+  }
+
   .notfound {
     /* position: relative; */
       align-items: center;
