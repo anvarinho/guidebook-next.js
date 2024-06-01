@@ -8,7 +8,7 @@ import { Locale } from '@/lib/i18n.config'
 import { LoadMore } from "./load-more";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import Meta from "./meta";
-import MustSee from "./must-see";
+// import MustSee from "./must-see";
 
 export default async function Places({
   params: {lang}
@@ -56,14 +56,14 @@ export async function generateMetadata({
   const { page } = await getDictionary(lang)
   return {
       title: {
-        absolute: page.sights.title + ' | ' + page.name
+        absolute: page.sights.title
       },
       description: page.sights.description.substring(0, 160),
       keywords: page.sights.keywords,
       applicationName:"GuideBook of Kyrgyzstan",
       category: "Travel",
       openGraph: {
-        title: page.sights.title + ' | ' + 'GuideBook of Kyrgyzstan',
+        title: page.sights.title,
         description: page.sights.description,
         url: `${process.env.NEXT_PUBLIC_URL}/places`,
         siteName: 'GuideBook of Kyrgyzstan',
