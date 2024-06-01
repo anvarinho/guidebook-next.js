@@ -50,7 +50,7 @@ export async function generateMetadata({
   const { page } = await getDictionary(lang)
   return {
       title: {
-        absolute: page.articles.title + ' | ' + page.name
+        absolute: page.articles.title
       },
       description: page.articles.description,
       keywords: page.articles.keywords,
