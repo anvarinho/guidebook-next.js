@@ -190,7 +190,8 @@
               "beshtashdescription": "Ha fiumi scenografici e prati alpini.",
               "manasordotitle": "Complesso di Manas Ordo:",
               "manasordodescription": "Un sito culturale dedicato all'eroe Manas."
-          }                
+          },
+          "highlights":["Come Arrivare", "Trasporti","Dove Alloggiare","Cosa Mangiare","Cosa Fare"]             
         }, 
         "tours":{ 
           "name":"Tour", 

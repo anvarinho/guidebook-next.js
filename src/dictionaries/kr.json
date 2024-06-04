@@ -189,7 +189,8 @@
               "beshtashdescription": "아름다운 강과 고산 초원을 보유하고 있습니다.",
               "manasordotitle": "마나스 오르도 복합체:",
               "manasordodescription": "영웅 마나스를 기리는 문화 유적지입니다."
-          }          
+          },
+          "highlights":["가는 방법", "교통","어디 묵을까","무엇을 먹을까","무엇을 할까"]  
         },
         "tours": {
           "name": "투어",

@@ -189,7 +189,8 @@
               "beshtashdescription": "Has scenic rivers and alpine meadows.",
               "manasordotitle": "Manas Ordo Complex:",
               "manasordodescription": "A cultural site dedicated to the hero Manas."
-          }          
+          },
+          "highlights":["How to Get to", "Transport","Where to Stay","What to Eat","What to Do"]
         },
         "tours": {
           "name": "Tours",

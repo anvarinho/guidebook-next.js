@@ -189,7 +189,8 @@
               "beshtashdescription": "美しい川と高山の草原を持っています。",
               "manasordotitle": "マナスオルド複合施設：",
               "manasordodescription": "英雄マナスに捧げられた文化的遺産地です。"
-          }          
+          },
+          "highlights":["行き方", "交通機関","宿泊先","食事","見所"]     
         },
         "tours": {
           "name": "ツアー",

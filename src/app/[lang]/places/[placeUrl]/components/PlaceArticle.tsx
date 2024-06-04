@@ -7,6 +7,7 @@ import { getDictionary } from "@/lib/dictionary";
 import Link from "next/link";
 import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
 import ShareButtons from "@/app/[lang]/Components/ShareButtons";
+import PlaceDescripiton from "./PlaceDescripiton";
 
 type Props = {
     promise: Promise<Place>,
@@ -32,7 +33,7 @@ export default async function PlaceArticle({ promise, lang }: Props) {
                 <p>{page.info.seen}{Math.floor(place.viewCount)}</p>
             </div>
             <br />
-            <p>{place.description}</p>
+            <PlaceDescripiton text={place.description} highlights={page.sights.highlights} name={place.name}/>
             <br />
             {/* <ShareButtons/> */}
             {place.videoID && (
