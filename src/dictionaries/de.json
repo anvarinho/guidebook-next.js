@@ -190,7 +190,8 @@
               "beshtashdescription": "Verfügt über malerische Flüsse und alpine Wiesen.",
               "manasordotitle": "Komplex von Manas Ordo:",
               "manasordodescription": "Ein Kulturstätte, die dem Helden Manas gewidmet ist."
-          }          
+          }      ,
+          "highlights":["Anreise", "Verkehrsmittel","Unterkunft","Essen","Aktivitäten"]      
         },
         "tours": {
             "name": "Touren",

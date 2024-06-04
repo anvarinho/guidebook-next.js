@@ -190,7 +190,8 @@
             "beshtashdescription": "Possède des rivières pittoresques et des prairies alpines.",
             "manasordotitle": "Complexe de Manas Ordo :",
             "manasordodescription": "Un site culturel dédié au héros Manas."
-        }        
+        },
+        "highlights":["Comment s'y rendre", "Transport","Où loger","Que manger","Que faire"]   
       },
       "tours": {
         "name": "Tours",

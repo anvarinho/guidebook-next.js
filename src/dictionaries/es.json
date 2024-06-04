@@ -189,7 +189,8 @@
               "beshtashdescription": "Posee ríos pintorescos y praderas alpinas.",
               "manasordotitle": "Complejo de Manas Ordo:",
               "manasordodescription": "Un sitio cultural dedicado al héroe Manas."
-          }          
+          },
+          "highlights":["Cómo llegar", "Transporte","Dónde alojarse","Qué comer","Qué hacer"]       
         },
         "tours": {
           "name": "Tours",

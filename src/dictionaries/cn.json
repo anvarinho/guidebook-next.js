@@ -189,7 +189,8 @@
               "beshtashdescription": "拥有壮丽的河流和高山草甸。",
               "manasordotitle": "马纳斯奥尔多综合体：",
               "manasordodescription": "一个致力于英雄马纳斯的文化遗址。"
-          }          
+          },
+          "highlights":["如何到达", "交通","住宿","美食","活动"]
         },
         "tours": {
           "name": "旅游",
