@@ -59,7 +59,7 @@ export async function getPlacesByRegion(lang: string, region: string, url:string
 
 export async function sitemapPlaces() {
   const loadPlaces = async () => {
-      const url = `${process.env.NEXT_PUBLIC_URL}/api/places/more?offset=0&limit=160`;
+      const url = `${process.env.NEXT_PUBLIC_URL}/api/places/more?offset=0&limit=200`;
       try {
           const response = await fetch(url);
           // console.log('Response status:', response.status);
