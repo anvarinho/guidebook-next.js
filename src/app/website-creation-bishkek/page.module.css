@@ -120,7 +120,9 @@
 
 /* Header and navigation styling */
 .header {
-    background-color: #e5e5e5;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    background-color: rgba(124, 124, 124, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -259,7 +261,8 @@ color: var(--color-primary);
   }
   
   .hero__description {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
   }
   
   .hero__info {
@@ -293,7 +296,7 @@ color: var(--color-primary);
   }
 
 .services{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     border-top: solid 2px #151515;
 }
 
@@ -304,6 +307,11 @@ color: var(--color-primary);
 
 .services .container h2{
     font-size: var(--fs-xl)
+}
+
+.services .container p{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .services .container .services__list{
