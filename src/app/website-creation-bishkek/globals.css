@@ -1,0 +1,102 @@
+:root {
+    /* Colors
+    ____________________*/
+    --color-primary: #25ab75;
+    --color-primary-dark: #208c61;
+    --color-bg-primary: #DCDCDC;
+    --color-bg-secondary: #242424;
+    --color-bg-footer: #151515;
+    --color-white: #ffffff;
+    --color-text: #676767;
+    --color-border: #373737;
+  
+    /* Font & Typography
+    ___________________*/
+    --ff-body: "Space Grotesk", sans-serif;
+    /* font sizes */
+    --fs-sm: 1.4rem;
+    --fs-md: 1.6rem;
+    --fs-lg: 2rem;
+    --fs-xl: 2.4rem;
+    --fs-xxl: 3.2rem;
+    --fs-biggest: clamp(3rem, 8vw, 5rem);
+    /* font weight */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+  
+    /* z-index
+    ___________________*/
+    --zindex-menu: 1000;
+    --zindex-fixed: 1010;
+  
+    /* With & Height 
+    ------------------*/
+    --width-container: 98rem;
+    --height-header: 10rem;
+    --height-header--scroll: 8rem;
+  
+    /* Transition and box shadow*/
+    --transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CSS Reset
+  --------------------------------------------------------------*/
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  ul,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  
+  main {
+    overflow: hidden;
+  }
+  
+  body {
+    background-color: var(--color-bg-primary);
+    font-family: var(--ff-body);
+    font-size: var(--fs-md);
+    color: var(--color-text);
+    margin-top: var(--height-header);
+    line-height: 1.2;
+  }
