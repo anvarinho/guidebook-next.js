@@ -92,30 +92,35 @@ export default function Home() {
                             <div className={styles.services__item}>
                                 <h3>Лэндинг или сайт-визитка</h3>
                                 <p>Мы создаем одностраничные лэндинги и сайты-визитки, которые привлекают внимание посетителей и повышают конверсию благодаря современному дизайну и UX/UI оптимизации.</p>
+                                <p className={styles.services__item__price}>Цена: от <strong>15 000</strong> сомов</p>
                             </div>
                             <div className={styles.services__item}>
                                 <h3>Корпоративный сайт</h3>
                                 <p>Разрабатываем корпоративные сайты, которые помогают вашему бизнесу выделяться и предоставляют все необходимые инструменты для взаимодействия с клиентами и партнёрами.</p>
+                                <p className={styles.services__item__price}>Цена: от <strong>45 000</strong> сомов</p>
                             </div>
                             <div className={styles.services__item}>
                                 <h3>Интернет-магазин</h3>
                                 <p>Создаём интернет-магазины с удобной системой управления, безопасными платёжными системами и оптимизированной структурой для максимального удобства ваших клиентов.</p>
+                                <p className={styles.services__item__price}>Цена: от <strong>75 000</strong> сомов</p>
                             </div>
                             <div className={styles.services__item}>
                                 <h3>iOS приложения</h3>
                                 <p>Мы предлагаем услуги по разработке iOS приложений, обеспечивая высокое качество и производительность на всех этапах: дизайн, разработка и развёртывание.</p>
+                                <p className={styles.services__item__price}>Цена: <strong>договорная</strong></p>
                             </div>
                             <div className={styles.services__item}>
                                 <h3>Android приложения</h3>
                                 <p>Мы создаём Android приложения с акцентом на производительность, безопасность и удобство использования, включая полный цикл: дизайн, разработка и развёртывание.</p>
+                                <p className={styles.services__item__price}>Цена: <strong>договорная</strong></p>
                             </div>
                             <div className={styles.services__item}>
                                 <h3>Работа с базами данных</h3>
                                 <p>Предлагаем услуги по проектированию, разработке и оптимизации баз данных, чтобы обеспечить надёжное хранение данных и их эффективное использование в ваших приложениях и системах.</p>
+                                <p className={styles.services__item__price}>Цена: <strong>договорная</strong></p>
                             </div>
                         </div>
                     </div>
-                    
                 </section>
             </main>
             <footer id="Контакты" className={styles.footer}>
