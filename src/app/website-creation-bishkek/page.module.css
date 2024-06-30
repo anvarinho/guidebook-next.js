@@ -310,8 +310,8 @@ color: var(--color-primary);
 }
 
 .services .container p{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
 }
 
 .services .container .services__list{
