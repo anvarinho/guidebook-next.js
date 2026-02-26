@@ -1,332 +1,353 @@
-{ 
-    "page":{ 
-      "langCode":"it-IT",
-        "name": "GuideBook of Kyrgyzstan",
-        "loading":"Caricamento...", 
-        "contactButton": "Domande?",
-        "navigation":[ 
-            {"text":"Casa", "url":"/"}, 
-            {"text":"Siti", "url":"/places"},
-            {"text":"Tour", "url":"/tours"}, 
-            { "text": "Storie", "url": "/articles" },
-            {"text":"Informazioni", "url":"/about"}
-        ], 
-        "home":{
-            "title":"Benvenuti in Kyrgyzstan!", 
-            "description":"Esperienza della bellezza e della cultura di Kyrgyzstan attraverso la nostra guida turistica completa. Scopri le attrazioni locali, pianifica la tua avventura e approfitta al massimo del tuo viaggio.", 
-            "subtitle": "Guida di viaggio in Kirghizistan - 2024",
-            "subtitle1": "Perché visitare il Kirghizistan?",
-            "subtitle2": "Esplorando la natura grandiosa",
-            "subtitle3": "Esplorazione senza fine",
-            "subtitle4": "Pianifica il tuo viaggio",
-            "subtitle5": "I luoghi da visitare assolutamente in Kirghizistan",
-            "paragraph": "Questo bellissimo paese senza sbocco sul mare, un tempo parte dell'Unione Sovietica, sta rapidamente diventando una delle destinazioni turistiche più popolari dell'Asia centrale. L'industria turistica del Kirghizistan è in forte crescita, offrendo ai viaggiatori la possibilità di esplorare uno dei paesi più spettacolari al mondo.",
-            "paragraph1": "Il Kirghizistan ha registrato un aumento spettacolare del turismo negli ultimi anni, con avventurieri che accorrono per fare escursioni, campeggiare e fare trekking a cavallo attraverso i suoi paesaggi mozzafiato. Essendo la prima nazione dell'Asia centrale a rilassare le sue politiche sui visti, offrendo l'ingresso senza visto per la maggior parte dei paesi occidentali e sviluppati, si è sviluppata una solida rete turistica.",
-            "paragraph2": "Dalle iniziative di turismo comunitario (CBT) in tutto il paese alle case per gli ospiti e alle guide indipendenti, ci sono numerose modalità per vivere i paesaggi mozzafiato del Kirghizistan. Gli escursionisti possono intraprendere escursioni mozzafiato da Karakol, Kochkor, Arslanbob e persino dalla capitale, Bishkek. Tieni presente che fare escursioni qui richiede spesso un livello ragionevole di forma fisica, poiché molti sentieri offrono più di una semplice passeggiata domenicale. La maggior parte delle escursioni dura da 1 a 5 giorni, ma sono disponibili anche avventure più lunghe.\r\n\r\nPer coloro che preferiscono risparmiare le gambe, l'equitazione è un'alternativa popolare. Affronta il trekking a cavallo più spettacolare del paese verso il lago Song Kol, o trascorri alcuni giorni a rilassarti e a nuotare nel bellissimo lago Issyk-Kul.",
-            "paragraph3": "Con innumerevoli destinazioni fuori dai percorsi battuti, trekking e sentieri, le opportunità di esplorazione sono infinite. Che tu stia cercando avventura o relax, il Kirghizistan ha qualcosa per tutti.",
-            "paragraph4": "Per informazioni più specifiche su cosa vedere e fare, come arrivare e muoversi e altri consigli di viaggio, assicurati di leggere la nostra completa guida di viaggio sul Kirghizistan. Migliora la tua esperienza di viaggio con le app consigliate per la navigazione, la traduzione e le informazioni locali per sfruttare al meglio il tuo viaggio. Goditi il tuo viaggio e scopri la bellezza e la cultura uniche del Kirghizistan.",
-            "keywords":"Guida turistica di Kyrgyzstan, Convenienza di viaggio, Attrazioni locali, Servizi turistici, Suggerimenti di viaggio in Kyrgyz, Esperienze culturali, Pianificazione del tour, Visite turistiche, Viaggi di avventura, Tour convenienti, Guida della città di Bishkek" ,
-            "button": "Scopriamolo!",
-            "button1": "Dove andare!",
-            "button2": "Cosa fare!",
-            "button3": "leggi di più",
-            "button4": "I nostri Tour",
-            
-            "Transportation": {
-              "title": "Trasporti in Kirghizistan",
-              "Description": "Muoversi in Kirghizistan può essere un'avventura di per sé. Ecco cosa devi sapere:",
-              "Options": {
-              "Voli interni": "Per distanze più lunghe, specialmente se il tempo è un vincolo, sono disponibili voli interni tra le principali città come Bishkek, Osh e Tamchy (nei pressi di Cholpon-Ata nella regione di Issyk-Kul). Controlla le compagnie aeree per orari e prenotazioni.",
-              "Maršrutka (minibus)": "Questi sono il modo più comune ed economico per spostarsi per distanze brevi e medie. Seguono percorsi fissi tra città e paesi e sono molto popolari tra i residenti locali.",
-              "Taxi condivisi": "I taxi condivisi offrono un'alternativa più veloce ma leggermente più costosa rispetto alle maršrutka. Di solito partono quando sono pieni, e i prezzi possono essere negoziati.",
-              "Noleggio auto": "Per una maggiore flessibilità, il noleggio di un'auto è una buona opzione. Le strade nelle aree rurali possono essere accidentate, quindi si consiglia un 4x4. Assicurati di avere una patente di guida internazionale.",
-              "Treni": "Sono disponibili servizi ferroviari limitati, principalmente tra Bishkek e Balykchy vicino al lago Issyk-Kul. È un percorso panoramico ma più lento rispetto al viaggio su strada.",
-              "Autobus": "Autobus regolari operano nelle principali città, offrendo un modo confortevole per viaggiare. Tuttavia, potrebbero non coprire le aree remote.",
-              "Autostop": "Se ti senti avventuroso e non ti dispiace fare affidamento sulla gentilezza degli estranei, l'autostop può essere un modo unico e gratuito per viaggiare. Fai attenzione e dai sempre la priorità alla sicurezza."
-              },
-              "details": "Per approfondimenti dettagliati sulle opzioni di trasporto, consulta la guida fornita."
-            },
-            "Accommodations": {
-              "title": "Alloggi in Kirghizistan",
-              "Description": "Dalle accoglienti pensioni ai lussuosi resort, il Kirghizistan offre una varietà di opzioni di alloggio per soddisfare le preferenze e il budget di ogni viaggiatore. Ecco alcune scelte da considerare:",
-              "Options": {
-                "Alberghi": "Le principali città del Kirghizistan come Bishkek e Osh vantano una serie di hotel che soddisfano diversi budget e preferenze. Dai marchi internazionali agli hotel boutique, troverai alloggi confortevoli con servizi come Wi-Fi, aria condizionata e opzioni di ristorazione in loco.",
-                "Case degli ospiti": "Per un'esperienza più autentica, considera di soggiornare in una casa degli ospiti gestita da famiglie locali. Questi accoglienti stabilimenti offrono un caloroso benvenuto e la possibilità di sperimentare l'ospitalità kirghisa. Spesso avrai l'opportunità di gustare pasti fatti in casa e conoscere le tradizioni locali.",
-                "Yurte": "Nelle aree rurali e nelle regioni montane, le tradizionali yurte offrono un'esperienza di alloggio unica. Queste strutture portatili simili a tende offrono alloggi basilari ma confortevoli, spesso con splendide viste sui paesaggi circostanti. I soggiorni in yurta possono includere pasti e attività culturali.",
-                "Homestay": "Vivi la vita con una famiglia kirghisa optando per un homestay. Avrai l'opportunità di vivere con i locali, condividere pasti e partecipare alle attività quotidiane. Gli homestay offrono uno scambio culturale autentico e un'idea dello stile di vita tradizionale del Kirghizistan.",
-                "Eco-Lodge": "Per i viaggiatori attenti all'ambiente, le eco-lodge offrono opzioni di alloggio sostenibili in ambienti naturali. Queste strutture privilegiano la conservazione ambientale e spesso offrono attività come escursioni, birdwatching e coinvolgimento comunitario.",
-                "Campeggio": "è una popolare opzione per i viaggiatori in cerca di avventura e solitudine. Che tu monti una tenda in una zona di campeggio designata o campeggi in luoghi remoti, assicurati di seguire i principi di Leave No Trace e ottenere eventuali permessi necessari."
-              },
-              "details": "Per raccomandazioni specifiche e opzioni di prenotazione, consulta siti web di viaggi, piattaforme di prenotazione online e uffici turistici locali."
-            },
-            "Food": {
-              "title": "Cibo in Kirghizistan",
-              "Description": "Esplorare la cucina kirghisa è parte integrante dell'esperienza di viaggio. Ecco cosa devi sapere:",
-              "Options": {
-                "Cucina Tradizionale": "La cucina kirghisa è ricca di sapore e patrimonio, con piatti tradizionali come il beshbarmak (carne e noodles), il manty (dumplings) e il laghman (zuppa di noodle) che sono dei pilastri. Non perdere l'occasione di provare il latte di giumenta fermentato noto come kumis, una bevanda popolare.",
-                "Influenza Nomade": "Riflettendo la sua eredità nomade, la cucina kirghisa spesso presenta piatti robusti realizzati con ingredienti come carne (specialmente agnello e carne di cavallo), prodotti lattiero-caseari (come il kymyz e l'airan) e cereali (incluso riso e grano). Le yurte, tende nomadi tradizionali, possono offrire autentiche esperienze culinarie nelle zone rurali.",
-                "Mercati Locali": "Visita mercati locali come il Bazaar di Osh a Bishkek per assaggiare una varietà di piatti e spuntini kirghisi, tra cui shashlik (carne alla griglia su spiedini), samsa (pasticcini salati) e plov (pilaf). Questi mercati offrono anche l'opportunità di acquistare frutta fresca, noci e spezie.",
-                "Case del Tè e Caffè": "Le case del tè (chaykhana) e i caffè sono ubicui in Kirghizistan, servendo tè (chai) e caffè (kofe) insieme a pasticcini, pane e pasti leggeri. Goditi l'atmosfera rilassata e l'ospitalità mentre assapori le tradizionali prelibatezze kirghise come il baursak (impasto fritto) e il kurut (palle di yogurt essiccate).",
-                "Cucina Internazionale": "Nelle aree urbane come Bishkek, troverai una vasta gamma di cucine internazionali, tra cui russe, cinesi, coreane ed europee. Esplora ristoranti alla moda, bistrot e food court per assaporare sapori globali insieme all'ospitalità kirghisa.",
-                "Cibo da Strada": "Avventurati per le strade del Kirghizistan per scoprire una varietà di venditori di cibo da strada che offrono spuntini veloci e saporiti. Prova cibi da strada popolari come somsas (fritti o cotti al forno e ripieni di carne o verdure), laghman noodles fritti e mais alla griglia.",
-                "Tour Gastronomici e Lezioni di Cucina": "Parti per tour gastronomici o partecipa a lezioni di cucina per approfondire la cucina kirghisa e le tradizioni culinarie. Impara a preparare piatti tradizionali, visita fattorie e produttori locali e immergiti nella vibrante scena culinaria del Kirghizistan."
-              },
-              "details": "Per maggiori informazioni sulla cucina kirghisa e le opzioni di ristorazione, consulta la guida fornita."
-            },
-            "Safety": {
-              "title": "Sicurezza in Kirghizistan",
-              "Description": "Viaggiare in Kirghizistan è generalmente sicuro, ma è essenziale essere consapevoli dei potenziali rischi e prendere le precauzioni necessarie. Ecco cosa devi sapere:",
-              "Options": {
-                "Stabilità Politica": "Il Kirghizistan ha sperimentato instabilità politica in passato, inclusi proteste e occasionali disordini. Mentre la maggior parte delle aree turistiche rimane indenne, mantieniti informato sugli sviluppi locali e evita grandi raduni o manifestazioni.",
-                "Criminalità": "I reati minori come il borseggio e il furto possono verificarsi, specialmente in zone affollate e luoghi turistici. Mantieni i tuoi effetti personali al sicuro e resta vigile.",
-                "Terrorismo": "La minaccia del terrorismo in Kirghizistan è bassa, ma i viaggiatori dovrebbero rimanere vigili, specialmente nelle zone di confine. Segui eventuali avvisi di viaggio emessi dal tuo governo e mantieniti informato.",
-                "Rischi Naturali": "Il Kirghizistan è soggetto a rischi naturali come terremoti, valanghe e frane, soprattutto nelle regioni montuose. Sii preparato e segui le linee guida sulla sicurezza, specialmente durante trekking o attività all'aperto.",
-                "Sicurezza Stradale": "Le condizioni delle strade in Kirghizistan possono variare e guidare può essere impegnativo, specialmente nelle aree rurali. Fai attenzione, rispetta le leggi locali sul traffico e considera l'opzione di assumere un autista affidabile.",
-                "Rischi per la Salute": "Sebbene il Kirghizistan non presenti rischi per la salute significativi, i viaggiatori dovrebbero essere aggiornati sulle vaccinazioni di routine e prendere precauzioni contro le malattie trasmesse da cibo e acqua.",
-                "Mal di Altitudine": "I viaggiatori che visitano zone ad alta quota dovrebbero essere consapevoli del rischio di mal di altitudine. Prenditi del tempo per acclimatarti ed evita attività fisiche intense fino a quando il tuo corpo non si sarà adattato.",
-                "Assicurazione di Viaggio": "È essenziale avere un'assicurazione di viaggio che copra le spese mediche, l'evacuazione di emergenza e l'annullamento/interruzione del viaggio. Assicurati che la tua polizza includa la copertura delle attività che hai intenzione di svolgere."
-              },
-              "details": "Per informazioni sulla sicurezza più dettagliate e avvisi di viaggio, consulta fonti ufficiali governative e guide turistiche."
-            },
-            "Prices": {
-              "title": "Prezzi in Kirghizistan",
-              "Description": "Comprendere il costo della vita e delle spese in Kirghizistan può aiutarti a pianificare il tuo budget in modo efficace. Ecco una panoramica dei prezzi per articoli e servizi comuni:",
-              "Options": {
-                "Alloggio": "Il costo dell'alloggio in Kirghizistan varia a seconda del tipo di sistemazione e della posizione. I viaggiatori con budget limitato possono trovare opzioni convenienti come pensioni e ostelli, mentre hotel di lusso e resort sono pensati per coloro che cercano servizi di alto livello. I prezzi variano da $10 a notte per sistemazioni economiche a oltre $100 a notte per strutture di lusso.",
-                "Cibo e Ristorazione": "Mangiare fuori in Kirghizistan è generalmente conveniente, soprattutto nei ristoranti locali e nelle bancarelle di cibo di strada. Piatti tradizionali come beshbarmak e plov sono economici e sostanziosi, costando tipicamente tra $3 e $7 a pasto nei ristoranti locali. La cucina internazionale e le opzioni di ristorazione di alta classe possono essere più costose, con pasti che vanno in media da $10 a $20 o più a persona.",
-                "Trasporti": "I costi dei trasporti in Kirghizistan variano a seconda del mezzo di trasporto e della distanza. I voli domestici tra le principali città come Bishkek e Osh possono variare da $50 a $150 o più, mentre i taxi condivisi e le marshrutkas (minibus) offrono opzioni convenienti per distanze più brevi, con costi tipici da $1 a $10 a seconda del percorso. Affittare un'auto può costare da $30 a $100 o più al giorno, a seconda del tipo di veicolo e della società di noleggio.",
-                "Attività e Attrazioni": "Il costo delle attività e delle attrazioni in Kirghizistan varia ampiamente a seconda dell'esperienza. I biglietti d'ingresso per musei, siti storici e parchi nazionali sono generalmente convenienti, variando da $1 a $10 a persona. Tour guidati, escursioni all'aperto e attività avventurose come l'equitazione e il trekking possono comportare costi aggiuntivi, con prezzi che variano in base alla durata e alla complessità.",
-                "Shopping": "Lo shopping in Kirghizistan offre una vasta gamma di opzioni, dalle tradizionali artigianato e souvenir a beni moderni ed elettronica. I prezzi variano a seconda dell'articolo e della posizione, ma il tasso di contrattazione è comune nei mercati e nei bazar. Sii pronto a negoziare per il miglior prezzo, specialmente quando acquisti tessuti, gioielli e artigianato fatto a mano.",
-                "Valuta e Tassi di Cambio": "La valuta ufficiale del Kirghizistan è il som kirghiso (KGS). I tassi di cambio fluttuano, quindi è consigliabile verificare i tassi correnti prima di cambiare denaro. Le principali carte di credito sono accettate nelle città più grandi e nelle zone turistiche, ma è consigliabile portare contanti per le transazioni nelle città più piccole e nelle aree rurali."
-              },
-              "details": "Per le informazioni più accurate e aggiornate sui prezzi in Kirghizistan, consulta le fonti locali e le guide di viaggio recenti."
-            },
-            "Travel_Seasons": {
-              "title": "Stagioni di Viaggio in Kirghizistan",
-              "Description": "Comprendere le stagioni di viaggio in Kirghizistan può aiutarti a pianificare il tuo viaggio e sfruttare al meglio la tua visita. Ecco una panoramica delle diverse stagioni e cosa aspettarsi:",
-              "Options": {
-                "Primavera (Marzo a Maggio)": "La primavera è un momento bellissimo per visitare il Kirghizistan, con il paesaggio che prende vita mentre i fiori sbocciano e i fiumi si gonfiano con la neve sciolta. Il clima è mite, rendendolo ideale per attività all'aperto come escursioni, trekking e equitazione. Tuttavia, sii preparato per occasionali rovesci di pioggia, specialmente ad aprile e maggio.",
-                "Estate (Giugno a Agosto)": "L'estate è la stagione turistica più affollata in Kirghizistan, con giornate lunghe, temperature calde e cieli sereni. È il momento perfetto per avventure all'aria aperta come campeggio, arrampicata in montagna ed esplorazione dei laghi alpini. Durante questo periodo si svolgono festival ed eventi popolari, tra cui i World Nomad Games a settembre.",
-                "Autunno (Settembre a Novembre)": "L'autunno è una stagione splendida in Kirghizistan, con paesaggi dipinti in vividi toni di rosso, arancione e oro mentre le foglie cambiano colore. Il clima rimane piacevole, rendendolo un ottimo momento per trekking, avvistamento della fauna selvatica ed esperienze culturali. Settembre è un mese ideale per visitare i World Nomad Games.",
-                "Inverno (Dicembre a Febbraio)": "L'inverno trasforma il Kirghizistan in un paese delle meraviglie invernali, con montagne coperte di neve e laghi ghiacciati che creano uno scenario mozzafiato. Sebbene le temperature possano scendere sotto lo zero, gli appassionati di sport invernali affollano le località sciistiche come Karakol e Jyrgalan per sciare, fare snowboard e pattinare su ghiaccio. Febbraio segna la celebrazione del tradizionale gioco nomade, Kok Boru (Buzkashi)."
-              },
-              "details": "Per ulteriori informazioni su attività specifiche, eventi e condizioni meteorologiche durante ciascuna stagione, consulta le guide turistiche e le risorse turistiche locali."
-            },
-            "FirstTimeInKyrgyzstan": {
-              "title": "Prima Volta in Kirghizistan",
-              "Description": "Se stai visitando il Kirghizistan per la prima volta, ecco una guida completa per aiutarti a sfruttare al meglio il tuo viaggio:",
-              "Options": {
-                "Arrivo e Spostamenti": "La maggior parte dei viaggiatori internazionali arriva all'Aeroporto Internazionale di Manas a Bishkek. Taxi e autobus sono facilmente disponibili per il trasporto in città. All'interno del Kirghizistan, è possibile utilizzare voli domestici, autobus, marshrutka (minibus) e taxi condivisi per spostarsi.",
-                "SIM Card e Internet": "Rimanere connessi in Kirghizistan è facile con una SIM locale. È possibile acquistare SIM card all'aeroporto o dai fornitori di reti mobili in città. I principali provider includono Beeline, O! e Megacom. Assicurati che il tuo telefono sia sbloccato prima di acquistare una SIM card. La copertura Internet è generalmente buona nelle città e nei paesi, ma può essere irregolare nelle zone rurali.",
-                "Prezzi Internet": "I prezzi Internet in Kirghizistan sono generalmente accessibili. Un pacchetto dati di base da 1GB può costare circa 100 KGS (circa 1,20 USD), mentre pacchetti più grandi, come 10GB, potrebbero costare circa 500 KGS (circa 6 USD). I piani dati illimitati per un mese possono variare da 800 a 1500 KGS (circa da 9,50 a 18 USD) a seconda del provider e della velocità della connessione.",
-                "Valuta e Pagamenti": "La valuta locale è il Som kirghiso (KGS). Gli sportelli bancomat sono disponibili nelle principali città, ma è consigliabile portare contanti nelle zone rurali. Le carte di credito e di debito sono accettate in molti luoghi nelle città, ma meno in quelle remote. I servizi di cambio valuta sono disponibili negli aeroporti, nelle banche e negli uffici di cambio.",
-                "Lingua": "Il kirghiso e il russo sono le lingue ufficiali. Nelle principali città, potresti trovare alcuni parlanti di inglese, specialmente nelle zone turistiche, ma nelle regioni rurali è utile conoscere alcune frasi di base in kirghiso o russo. Un'app di traduzione o un vocabolario possono essere molto utili.",
-                "Salute e Sicurezza": "Il Kirghizistan è generalmente sicuro per i viaggiatori, ma è saggio prendere precauzioni standard. Bevi acqua in bottiglia o bollita per evitare malattie trasmesse dall'acqua. Assicurati di avere un'assicurazione di viaggio che copra la salute e gli incidenti. I servizi medici di emergenza sono disponibili nelle città, ma possono essere limitati nelle zone rurali.",
-                "Clima e Abbigliamento": "Il Kirghizistan ha un clima continentale con inverni freddi ed estati calde. In montagna, le temperature possono essere significativamente più basse, quindi veste di conseguenza. L'abbigliamento a strati, scarpe da passeggio robuste e protezione solare sono raccomandati. In inverno, porta abbigliamento caldo, inclusa una giacca di buona qualità, guanti e cappelli.",
-                "Elettricità e Prese": "La tensione standard è di 220V, e la frequenza è di 50Hz. Le prese di corrente e le spine sono di tipo C e F. È consigliabile portare un adattatore di viaggio universale per assicurarti di poter caricare i tuoi dispositivi elettronici."
-              },
-              "details": "Per informazioni più dettagliate e consigli, consulta guide turistiche e risorse locali. Goditi il tuo primo viaggio in Kirghizistan e crea ricordi indimenticabili!"
-            },
-            "TravelPreparation": {
-              "title": "Preparati per il Tuo Viaggio in Kirghizistan",
-              "Description": "Assicurati un viaggio senza intoppi e piacevole in Kirghizistan occupandoti di queste preparazioni di viaggio essenziali.",
-              "Options": {
-                "Visto e Passaporto": "Controlla i requisiti del visto per la tua nazionalità e assicurati che il passaporto sia valido per almeno sei mesi oltre il periodo di permanenza previsto.",
-                "Salute e Vaccinazioni": "Consulta il tuo medico per eventuali vaccinazioni obbligatorie o precauzioni sanitarie per viaggiare in Kirghizistan.",
-                "Assicurazione di Viaggio": "Valuta l'acquisto di un'assicurazione di viaggio che copra eventuali emergenze impreviste, come spese mediche o cancellazioni del viaggio.",
-                "Valuta e Questioni Monetarie": "Familiarizzati con la valuta locale (Som kirghiso) e cambia un po' di denaro prima del viaggio. Gli sportelli bancomat sono disponibili nelle città principali.",
-                "Lingua": "Anche se il russo e il kirghiso sono le lingue ufficiali, l'inglese non è molto diffuso. Valuta di imparare alcune frasi di base in russo o kirghiso.",
-                "Clima e Abbigliamento": "Prepara abiti adeguati alle condizioni meteorologiche durante la tua visita. Il Kirghizistan ha estati calde e inverni freddi, quindi porta con te abiti adatti a strati.",
-                "Sicurezza": "Tieniti informato sulla situazione attuale in Kirghizistan e fai attenzione, specialmente nelle aree remote. Tieni al sicuro i tuoi effetti personali e mantieni la consapevolezza del tuo ambiente circostante.",
-                "Etichetta Culturale": "Rispetta le usanze e le tradizioni locali, come toglierti le scarpe prima di entrare in casa di qualcuno e chiedere il permesso prima di scattare fotografie alle persone."
-              },
-              "details": "Per ulteriori consigli e suggerimenti specifici per il tuo viaggio in Kirghizistan, consulta la nostra guida completa."
-            }
-        }, 
-        "sights":{ 
-          "name":"Luoghi di Interesse",
-            "title":"Luoghi più popolari del Kyrgyzstan", 
-            "subtitle": "Dove andare in Kirghizistan?",
-            "description":"Immergiti nei paesaggi mozzafiato e nelle destinazioni incantevoli del Kyrgyzstan. Esplora terreni diversi, siti culturali, e meraviglie naturali che definiscono il fascino di questo paese unico.", 
-            "keywords":"Luoghi Kyrgyzstan, Viaggio in Kyrgyzstan, Esplora il Kyrgyzstan, Destinazioni Kyrgyzstan, Turismo Kyrgyzstan, Luoghi da visitare in Kyrgyzstan, Attrazioni principali Kyrgyzstan, Paesaggi Kyrgyzstan, Siti culturali Kyrgyzstan, Meraviglie naturali Kyrgyzstan, I migliori posti da visitare in Kyrgyzstan",
-            "sights":"Luoghi da visitare",
-            "must-see":{
-              "subtitle": "Destinazioni da Vedere in Kirghizistan",
-              "description1": "Il Kirghizistan è noto per i suoi splendidi paesaggi naturali, dalle maestose montagne ai sereni laghi. Ecco alcuni dei luoghi più belli di ogni regione:",
-              "chuyregion": "Regione di Chuy",
-              "alaarchatitle": "Parco Nazionale di Ala Archa:",
-              "alaarchadescription": "Offre viste mozzafiato e sentieri escursionistici.",
-              "buranatitle": "Torre di Burana:",
-              "buranadescription": "Un minareto storico con viste panoramiche sulla valle.",
-              "issykulregion": "Regione di Issyk-Kul",
-              "lakeissykkultitle": "Lago Issyk-Kul:",
-              "lakeissykkuldescription": "Un grande lago salato con spiagge e resort.",
-              "jetioguxtitle": "Jeti-Oguz:",
-              "jetioguzdescription": "Famoso per le sue formazioni rocciose rosse.",
-              "karakoltitle": "Karakol:",
-              "karakoldescription": "Porta d'accesso a bellissimi siti montani come Altyn Arashan.",
-              "narynregion": "Regione di Naryn",
-              "tashrabattitle": "Tash Rabat:",
-              "tashrabatdescription": "Un caravanserraglio di pietra storico in una pittoresca valle.",
-              "sonkultitle": "Lago Son-Kul:",
-              "sonkuldescription": "Un lago ad alta quota con tramonti mozzafiato.",
-              "jalalabadregion": "Regione di Jalal-Abad",
-              "sarychelextitle": "Riserva della Biosfera di Sary-Chelek:",
-              "sarychelekdescription": "Caratterizzata da laghi e foreste incontaminate.",
-              "arslanbobtitle": "Arslanbob:",
-              "arslanbobdescription": "Sede della più grande foresta di noci e bellissime cascate.",
-              "oshregion": "Regione di Osh",
-              "sulaymanmountaintitle": "Montagna di Sulayman:",
-              "sulaymanmountaindescription": "Una montagna sacra con viste panoramiche.",
-              "alayvalleytitle": "Valle di Alay:",
-              "alayvalleydescription": "Offre viste spettacolari sui Monti del Pamir.",
-              "batkenregion": "Regione di Batken",
-              "batkenvalleytitle": "Montagna Aigul-Tash:",
-              "batkenvalleydescription": "Casa del misterioso fiore Aigul nei pressi del pittoresco villaggio di Kara-Bulak",
-              "karakuljatitle": "Parco Nazionale di Sarkent:",
-              "karakuljadescription": "Un paradiso naturale nella regione di Batken di oltre 40 mila ettari di natura incontaminata",
-              "talasregion": "Regione di Talas",
-              "beshtashtitle": "Parco Nazionale di Besh-Tash:",
-              "beshtashdescription": "Ha fiumi scenografici e prati alpini.",
-              "manasordotitle": "Complesso di Manas Ordo:",
-              "manasordodescription": "Un sito culturale dedicato all'eroe Manas."
-          },
-          "highlights":["Come Arrivare", "Trasporti","Dove Alloggiare","Cosa Mangiare","Cosa Fare"]             
-        }, 
-        "tours":{ 
-          "name":"Tour", 
-            "title":"Tour più popolari del Kyrgyzstan", 
-            "subtitle":"Tour Privati e per Piccoli Gruppi in Kirghizistan",
-            "description":"Intraprendi tour indimenticabili che mostrano lo splendore del Kyrgyzstan. Scegli tra avventure, culturali, e trekking e lasciaci guidare attraverso paesaggi diversi e affascinanti.", 
-            "description1": "Nonostante le sue dimensioni ridotte, il Kirghizistan è pieno di luoghi sorprendenti. Prenota il miglior tour in Kirghizistan per scoprire le montagne, i laghi e le valli che rendono questo paese una destinazione di prima classe. Che tu sia un avventuriero in cerca di emozioni forti o interessato a esplorare la ricca cultura e storia di questo piccolo paese, un tour in Kirghizistan è ideale per coloro che cercano qualcosa di unico. \r\n\r\nMolte persone vengono in Kirghizistan per visitare le montagne, il che ha senso, considerando che il 94% del Kirghizistan è coperto da montagne. La massiccia catena del Tian Shan copre gran parte del Kirghizistan, con le sue vette più alte che superano i 7000 metri. Nascosti tra le imponenti vette ci sono ampie vallate verdi e laghi cristallini, con fiumi impetuosi che attraversano foreste di ginepri fresche. Le ampie vallate verdi vengono spesso utilizzate come pascoli estivi per greggi di animali e durante i mesi più caldi sono punteggiate di yurte e cavalli. Alcuni laghi sono troppo freddi per nuotare (come il lago Son-Kul), ma l'Issyk-Kul sicuramente no. Le coste sabbiose e le località alpine intorno all'Issyk-Kul sono tappe imprescindibili in qualsiasi miglior tour in Kirghizistan, perfette per un momento di relax. A molte persone piace l'avventura e il Kirghizistan offre molte passeggiate a cavallo, rafting, località sciistiche e escursioni, perfette per qualsiasi amante dell'adrenalina. \r\n\r\nAnche se la natura può dominare a volte, i migliori tour in Kirghizistan non trascurano la cultura e la storia di questo paese. Trascorri una notte in una yurta, una casa tradizionale fatta di legno e feltro progettata per essere resistente e trasportabile. Scopri tutti i tessuti per cui il Kirghizistan è famoso e ascolta il famoso komuz (uno strumento a tre corde) o l'Epopea di Manas, la poesia epica che è un fondamento spirituale nel Kirghizistan moderno. E assicurati di assaggiare il beshbarmak (carne macinata bollita con noodles) e il kumis (latte di giumenta fermentato) per assaporare veramente la vita nomade. \r\n\r\nSulla base di anni di esperienza, i nostri migliori tour in Kirghizistan combinano tutti gli elementi della cultura e del paesaggio kirghiso per presentarti l'intero paese. Viaggia con le migliori guide, alloggia nei migliori hotel e mangia nei migliori ristoranti. Prenota un tour di gruppo per risparmiare denaro e pianificazione, o programma un tour privato per adattarsi ai tuoi interessi e al tuo programma.",
-            "keywords":"Tour Kyrgyzstan, Tour avventura Kyrgyzstan, Tour guidati Kyrgyzstan, Tour culturali Kyrgyzstan, Tour trekking Kyrgyzstan, Tour a cavallo Kyrgyzstan, Esperienze nomadi Kyrgyzstan, Pacchetti viaggio Kyrgyzstan, I migliori tour in Kyrgyzstan, Esplora il Kyrgyzstan attraverso i tour" ,
-            "tourPage":{
-              "level": "Livello",
-              "duration": "Durata",
-              "price": "Prezzo",
-              "day": "Giorno",
-              "days": "Giorni",
-              "details": "Dettagli del tour",
-              "things":"Cose da fare",
-              "places":"Luoghi che visitiamo",
-              "addInfo":"Informazioni aggiuntive",
-              "includings":"Cosa include il prezzo",
-              "excludings":"Cosa non include il prezzo",
-              "from": "Dal",
-              "note":"Nota",
-              "person": "Persona",
-              "persons": "Persone",
-              "andMore": "e altro"
-            },
-            "TourPreparation": {
-              "title": "Elementi Essenziali per Viaggiare in Kirghizistan",
-              "Description": "Un elenco completo degli elementi essenziali da portare con te durante il tuo viaggio in Kirghizistan per garantire comfort, sicurezza e preparazione per le varie condizioni meteorologiche e le attività all'aperto.",
-              "Options": {
-                "Scarpe": "Porta scarpe comode da passeggio per le visite in città, scarponcini resistenti per escursioni moderate, robusti stivali da trekking per il trekking e sandali a rapido asciugatura come paio extra.",
-                "Cappello": "Non dimenticare di mettere in valigia un cappello a tesa larga o una berretta con protezione per il collo per proteggerti dal sole intenso alle alte altitudini.",
-                "Crema UV": "Non dimenticare di mettere in valigia una crema solare ad alto SPF a protezione totale per proteggere la tua pelle dai raggi UV intensi, specialmente a quote più elevate in Kirghizistan.",
-                "Abbigliamento": "Prepara strati di abbigliamento appropriati per temperature e condizioni meteorologiche variabili, considerando che le temperature possono variare notevolmente con i cambi di altitudine. Sii pronto per neve o pioggia, specialmente in aree montuose.",
-                "Pronto Soccorso": "Ricorda di portare con te dispositivi medici personali come farmaci necessari, cerotti, antidolorifici e eventuali articoli specifici per condizioni mediche preesistenti come precauzione."
-              },
-              "overview": "Il tuo comfort è il nostro lavoro, guidandoci a cercare costantemente modi per rendere il tuo viaggio ancora più memorabile e piacevole."
-            }        
-          }, 
-        "articles": {
-          "name": "Storie",
-            "title": "Il Kirghizistan: cultura, tradizioni e natura",
-            "description": "Esplora la ricca cultura, le tradizioni vivaci e la natura mozzafiato del Kirghizistan attraverso questi racconti illuminanti. Immergiti nel cuore della cultura kirghiza, da antiche tradizioni come la caccia con l'aquila e il kok boru ai maestosi cani Alabai e alle avventure del Taiga.",
-            "keywords": [
-            "Cultura kirghiza", "Tradizioni kirghize", "Natura del Kirghizistan", "Caccia con l'aquila", "Kok boru",
-            "Cani Alabai", "Taiga", "Storia del Kirghizistan", "Cultura dell'Asia centrale", "Eredità nomade",
-            "Esplorazione culturale", "Sport tradizionali", "Levrieri del Kirghizistan", "Esperienze culturali",
-            "Avventura in Kirghizistan", "Razze canine tradizionali", "Tradizioni culturali", "Esperienze uniche",
-            "Stile di vita kirghizo"
-            ]
-            },
-        "about":{ 
-            "title":"Chi Siamo",
-            "subtitle": "Chi siamo?",
-            "description":"Siamo un team di appassionati dedicati a offrirti esperienze eccezionali. La nostra passione alimenta tutto ciò che facciamo, poiché mettiamo il cuore nel creare momenti indimenticabili per te. Unisciti a noi in avventure di meraviglia e scopri questo bellissimo paese.", 
-            "keywords":"Chi siamo, La nostra storia, Appassionati di Kyrgyzstan, Passione per i viaggi, Esperienze eccezionali, Team, Valori, Missione" ,
-            "buttons":{
-              "our_team": "Il nostro team",
-              "our_clients": "I nostri clienti",
-              "contact_us": "Contattaci"
-            }
-            },
-        "info":{ 
-            "seen":"Visite: ", 
-            "created":"Creato: ",
-            "modified":"Ultima modifica: "
+{
+  "page": {
+    "langCode": "it-IT",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Caricamento...",
+    "contactButton": "Domande?",
+    "navigation": [
+      { "text": "Casa", "url": "/" },
+      { "text": "Siti", "url": "/places" },
+      { "text": "Tour", "url": "/tours" },
+      { "text": "Storie", "url": "/articles" },
+      { "text": "Informazioni", "url": "/about" }
+    ],
+    "home": {
+      "title": "Benvenuti in Kyrgyzstan!",
+      "description": "Esperienza della bellezza e della cultura di Kyrgyzstan attraverso la nostra guida turistica completa. Scopri le attrazioni locali, pianifica la tua avventura e approfitta al massimo del tuo viaggio.",
+      "subtitle": "Guida di viaggio in Kirghizistan - 2024",
+      "subtitle1": "Perché visitare il Kirghizistan?",
+      "subtitle2": "Esplorando la natura grandiosa",
+      "subtitle3": "Esplorazione senza fine",
+      "subtitle4": "Pianifica il tuo viaggio",
+      "subtitle5": "I luoghi da visitare assolutamente in Kirghizistan",
+      "paragraph": "Questo bellissimo paese senza sbocco sul mare, un tempo parte dell'Unione Sovietica, sta rapidamente diventando una delle destinazioni turistiche più popolari dell'Asia centrale. L'industria turistica del Kirghizistan è in forte crescita, offrendo ai viaggiatori la possibilità di esplorare uno dei paesi più spettacolari al mondo.",
+      "paragraph1": "Il Kirghizistan ha registrato un aumento spettacolare del turismo negli ultimi anni, con avventurieri che accorrono per fare escursioni, campeggiare e fare trekking a cavallo attraverso i suoi paesaggi mozzafiato. Essendo la prima nazione dell'Asia centrale a rilassare le sue politiche sui visti, offrendo l'ingresso senza visto per la maggior parte dei paesi occidentali e sviluppati, si è sviluppata una solida rete turistica.",
+      "paragraph2": "Dalle iniziative di turismo comunitario (CBT) in tutto il paese alle case per gli ospiti e alle guide indipendenti, ci sono numerose modalità per vivere i paesaggi mozzafiato del Kirghizistan. Gli escursionisti possono intraprendere escursioni mozzafiato da Karakol, Kochkor, Arslanbob e persino dalla capitale, Bishkek. Tieni presente che fare escursioni qui richiede spesso un livello ragionevole di forma fisica, poiché molti sentieri offrono più di una semplice passeggiata domenicale. La maggior parte delle escursioni dura da 1 a 5 giorni, ma sono disponibili anche avventure più lunghe.\r\n\r\nPer coloro che preferiscono risparmiare le gambe, l'equitazione è un'alternativa popolare. Affronta il trekking a cavallo più spettacolare del paese verso il lago Song Kol, o trascorri alcuni giorni a rilassarti e a nuotare nel bellissimo lago Issyk-Kul.",
+      "paragraph3": "Con innumerevoli destinazioni fuori dai percorsi battuti, trekking e sentieri, le opportunità di esplorazione sono infinite. Che tu stia cercando avventura o relax, il Kirghizistan ha qualcosa per tutti.",
+      "paragraph4": "Per informazioni più specifiche su cosa vedere e fare, come arrivare e muoversi e altri consigli di viaggio, assicurati di leggere la nostra completa guida di viaggio sul Kirghizistan. Migliora la tua esperienza di viaggio con le app consigliate per la navigazione, la traduzione e le informazioni locali per sfruttare al meglio il tuo viaggio. Goditi il tuo viaggio e scopri la bellezza e la cultura uniche del Kirghizistan.",
+      "keywords": "Guida turistica di Kyrgyzstan, Convenienza di viaggio, Attrazioni locali, Servizi turistici, Suggerimenti di viaggio in Kyrgyz, Esperienze culturali, Pianificazione del tour, Visite turistiche, Viaggi di avventura, Tour convenienti, Guida della città di Bishkek",
+      "button": "Scopriamolo!",
+      "button1": "Dove andare!",
+      "button2": "Cosa fare!",
+      "button3": "leggi di più",
+      "button4": "I nostri Tour",
+
+      "Transportation": {
+        "title": "Trasporti in Kirghizistan",
+        "Description": "Muoversi in Kirghizistan può essere un'avventura di per sé. Ecco cosa devi sapere:",
+        "Options": {
+          "Voli interni": "Per distanze più lunghe, specialmente se il tempo è un vincolo, sono disponibili voli interni tra le principali città come Bishkek, Osh e Tamchy (nei pressi di Cholpon-Ata nella regione di Issyk-Kul). Controlla le compagnie aeree per orari e prenotazioni.",
+          "Maršrutka (minibus)": "Questi sono il modo più comune ed economico per spostarsi per distanze brevi e medie. Seguono percorsi fissi tra città e paesi e sono molto popolari tra i residenti locali.",
+          "Taxi condivisi": "I taxi condivisi offrono un'alternativa più veloce ma leggermente più costosa rispetto alle maršrutka. Di solito partono quando sono pieni, e i prezzi possono essere negoziati.",
+          "Noleggio auto": "Per una maggiore flessibilità, il noleggio di un'auto è una buona opzione. Le strade nelle aree rurali possono essere accidentate, quindi si consiglia un 4x4. Assicurati di avere una patente di guida internazionale.",
+          "Treni": "Sono disponibili servizi ferroviari limitati, principalmente tra Bishkek e Balykchy vicino al lago Issyk-Kul. È un percorso panoramico ma più lento rispetto al viaggio su strada.",
+          "Autobus": "Autobus regolari operano nelle principali città, offrendo un modo confortevole per viaggiare. Tuttavia, potrebbero non coprire le aree remote.",
+          "Autostop": "Se ti senti avventuroso e non ti dispiace fare affidamento sulla gentilezza degli estranei, l'autostop può essere un modo unico e gratuito per viaggiare. Fai attenzione e dai sempre la priorità alla sicurezza."
         },
-        "download":{ 
-            "text":"Scarica le nostre app oggi e goditi un accesso comodo al nostro servizio sul tuo dispositivo mobile! Clicca semplicemente sul pulsante!" 
+        "details": "Per approfondimenti dettagliati sulle opzioni di trasporto, consulta la guida fornita."
+      },
+      "Accommodations": {
+        "title": "Alloggi in Kirghizistan",
+        "Description": "Dalle accoglienti pensioni ai lussuosi resort, il Kirghizistan offre una varietà di opzioni di alloggio per soddisfare le preferenze e il budget di ogni viaggiatore. Ecco alcune scelte da considerare:",
+        "Options": {
+          "Alberghi": "Le principali città del Kirghizistan come Bishkek e Osh vantano una serie di hotel che soddisfano diversi budget e preferenze. Dai marchi internazionali agli hotel boutique, troverai alloggi confortevoli con servizi come Wi-Fi, aria condizionata e opzioni di ristorazione in loco.",
+          "Case degli ospiti": "Per un'esperienza più autentica, considera di soggiornare in una casa degli ospiti gestita da famiglie locali. Questi accoglienti stabilimenti offrono un caloroso benvenuto e la possibilità di sperimentare l'ospitalità kirghisa. Spesso avrai l'opportunità di gustare pasti fatti in casa e conoscere le tradizioni locali.",
+          "Yurte": "Nelle aree rurali e nelle regioni montane, le tradizionali yurte offrono un'esperienza di alloggio unica. Queste strutture portatili simili a tende offrono alloggi basilari ma confortevoli, spesso con splendide viste sui paesaggi circostanti. I soggiorni in yurta possono includere pasti e attività culturali.",
+          "Homestay": "Vivi la vita con una famiglia kirghisa optando per un homestay. Avrai l'opportunità di vivere con i locali, condividere pasti e partecipare alle attività quotidiane. Gli homestay offrono uno scambio culturale autentico e un'idea dello stile di vita tradizionale del Kirghizistan.",
+          "Eco-Lodge": "Per i viaggiatori attenti all'ambiente, le eco-lodge offrono opzioni di alloggio sostenibili in ambienti naturali. Queste strutture privilegiano la conservazione ambientale e spesso offrono attività come escursioni, birdwatching e coinvolgimento comunitario.",
+          "Campeggio": "è una popolare opzione per i viaggiatori in cerca di avventura e solitudine. Che tu monti una tenda in una zona di campeggio designata o campeggi in luoghi remoti, assicurati di seguire i principi di Leave No Trace e ottenere eventuali permessi necessari."
         },
-        "footer": {
-            "sections": [
-              {
-                "title": "Link Utili",
-                "links": [
-                  {
-                    "text": "Home",
-                    "url": "/"
-                  },
-                  {
-                    "text": "Luoghi da Visitare",
-                    "url": "/places"
-                  },
-                  {
-                    "text": "Tour",
-                    "url": "/tours"
-                  }
-                ]
-              },
-              {
-                "title": "Privacy e Legale",
-                "links": [
-                  {
-                    "text": "Chi Siamo",
-                    "url": "/about"
-                  },
-                  {
-                    "text": "Contattaci",
-                    "url": "/contact"
-                  },
-                  {
-                    "text": "Informativa sulla Privacy",
-                    "url": "/privacy-policy"
-                  }
-                ]
-              },
-              {
-                "title": "Informazioni di Contatto",
-                "info": {
-                  "phone": "+996 500 490 806",
-                  "email": "anvarinho@gmail.com",
-                  "address": "Bishkek, Razzakov 49"
-                }
-              },
-              {
-                "title": "Account Sociali",
-                "links": [
-                    {
-                        "text": "@guidebookofkg",
-                        "icon":"instagram.svg",
-                        "url": "https://www.instagram.com/guidebookofkg"
-                    },
-                    {
-                        "text": "+996 500 490 806",
-                        "icon":"whatsapp.svg",
-                        "url": "https://wa.me/996500490806?text=Hello!!!"
-                    },
-                    {
-                        "text": "Sviluppatore",
-                        "icon":"twitter.svg",
-                        "url": "https://twitter.com/anvarinho"
-                    }
-                ]
-              }
-            ]
-        }          
+        "details": "Per raccomandazioni specifiche e opzioni di prenotazione, consulta siti web di viaggi, piattaforme di prenotazione online e uffici turistici locali."
+      },
+      "Food": {
+        "title": "Cibo in Kirghizistan",
+        "Description": "Esplorare la cucina kirghisa è parte integrante dell'esperienza di viaggio. Ecco cosa devi sapere:",
+        "Options": {
+          "Cucina Tradizionale": "La cucina kirghisa è ricca di sapore e patrimonio, con piatti tradizionali come il beshbarmak (carne e noodles), il manty (dumplings) e il laghman (zuppa di noodle) che sono dei pilastri. Non perdere l'occasione di provare il latte di giumenta fermentato noto come kumis, una bevanda popolare.",
+          "Influenza Nomade": "Riflettendo la sua eredità nomade, la cucina kirghisa spesso presenta piatti robusti realizzati con ingredienti come carne (specialmente agnello e carne di cavallo), prodotti lattiero-caseari (come il kymyz e l'airan) e cereali (incluso riso e grano). Le yurte, tende nomadi tradizionali, possono offrire autentiche esperienze culinarie nelle zone rurali.",
+          "Mercati Locali": "Visita mercati locali come il Bazaar di Osh a Bishkek per assaggiare una varietà di piatti e spuntini kirghisi, tra cui shashlik (carne alla griglia su spiedini), samsa (pasticcini salati) e plov (pilaf). Questi mercati offrono anche l'opportunità di acquistare frutta fresca, noci e spezie.",
+          "Case del Tè e Caffè": "Le case del tè (chaykhana) e i caffè sono ubicui in Kirghizistan, servendo tè (chai) e caffè (kofe) insieme a pasticcini, pane e pasti leggeri. Goditi l'atmosfera rilassata e l'ospitalità mentre assapori le tradizionali prelibatezze kirghise come il baursak (impasto fritto) e il kurut (palle di yogurt essiccate).",
+          "Cucina Internazionale": "Nelle aree urbane come Bishkek, troverai una vasta gamma di cucine internazionali, tra cui russe, cinesi, coreane ed europee. Esplora ristoranti alla moda, bistrot e food court per assaporare sapori globali insieme all'ospitalità kirghisa.",
+          "Cibo da Strada": "Avventurati per le strade del Kirghizistan per scoprire una varietà di venditori di cibo da strada che offrono spuntini veloci e saporiti. Prova cibi da strada popolari come somsas (fritti o cotti al forno e ripieni di carne o verdure), laghman noodles fritti e mais alla griglia.",
+          "Tour Gastronomici e Lezioni di Cucina": "Parti per tour gastronomici o partecipa a lezioni di cucina per approfondire la cucina kirghisa e le tradizioni culinarie. Impara a preparare piatti tradizionali, visita fattorie e produttori locali e immergiti nella vibrante scena culinaria del Kirghizistan."
+        },
+        "details": "Per maggiori informazioni sulla cucina kirghisa e le opzioni di ristorazione, consulta la guida fornita."
+      },
+      "Safety": {
+        "title": "Sicurezza in Kirghizistan",
+        "Description": "Viaggiare in Kirghizistan è generalmente sicuro, ma è essenziale essere consapevoli dei potenziali rischi e prendere le precauzioni necessarie. Ecco cosa devi sapere:",
+        "Options": {
+          "Stabilità Politica": "Il Kirghizistan ha sperimentato instabilità politica in passato, inclusi proteste e occasionali disordini. Mentre la maggior parte delle aree turistiche rimane indenne, mantieniti informato sugli sviluppi locali e evita grandi raduni o manifestazioni.",
+          "Criminalità": "I reati minori come il borseggio e il furto possono verificarsi, specialmente in zone affollate e luoghi turistici. Mantieni i tuoi effetti personali al sicuro e resta vigile.",
+          "Terrorismo": "La minaccia del terrorismo in Kirghizistan è bassa, ma i viaggiatori dovrebbero rimanere vigili, specialmente nelle zone di confine. Segui eventuali avvisi di viaggio emessi dal tuo governo e mantieniti informato.",
+          "Rischi Naturali": "Il Kirghizistan è soggetto a rischi naturali come terremoti, valanghe e frane, soprattutto nelle regioni montuose. Sii preparato e segui le linee guida sulla sicurezza, specialmente durante trekking o attività all'aperto.",
+          "Sicurezza Stradale": "Le condizioni delle strade in Kirghizistan possono variare e guidare può essere impegnativo, specialmente nelle aree rurali. Fai attenzione, rispetta le leggi locali sul traffico e considera l'opzione di assumere un autista affidabile.",
+          "Rischi per la Salute": "Sebbene il Kirghizistan non presenti rischi per la salute significativi, i viaggiatori dovrebbero essere aggiornati sulle vaccinazioni di routine e prendere precauzioni contro le malattie trasmesse da cibo e acqua.",
+          "Mal di Altitudine": "I viaggiatori che visitano zone ad alta quota dovrebbero essere consapevoli del rischio di mal di altitudine. Prenditi del tempo per acclimatarti ed evita attività fisiche intense fino a quando il tuo corpo non si sarà adattato.",
+          "Assicurazione di Viaggio": "È essenziale avere un'assicurazione di viaggio che copra le spese mediche, l'evacuazione di emergenza e l'annullamento/interruzione del viaggio. Assicurati che la tua polizza includa la copertura delle attività che hai intenzione di svolgere."
+        },
+        "details": "Per informazioni sulla sicurezza più dettagliate e avvisi di viaggio, consulta fonti ufficiali governative e guide turistiche."
+      },
+      "Prices": {
+        "title": "Prezzi in Kirghizistan",
+        "Description": "Comprendere il costo della vita e delle spese in Kirghizistan può aiutarti a pianificare il tuo budget in modo efficace. Ecco una panoramica dei prezzi per articoli e servizi comuni:",
+        "Options": {
+          "Alloggio": "Il costo dell'alloggio in Kirghizistan varia a seconda del tipo di sistemazione e della posizione. I viaggiatori con budget limitato possono trovare opzioni convenienti come pensioni e ostelli, mentre hotel di lusso e resort sono pensati per coloro che cercano servizi di alto livello. I prezzi variano da $10 a notte per sistemazioni economiche a oltre $100 a notte per strutture di lusso.",
+          "Cibo e Ristorazione": "Mangiare fuori in Kirghizistan è generalmente conveniente, soprattutto nei ristoranti locali e nelle bancarelle di cibo di strada. Piatti tradizionali come beshbarmak e plov sono economici e sostanziosi, costando tipicamente tra $3 e $7 a pasto nei ristoranti locali. La cucina internazionale e le opzioni di ristorazione di alta classe possono essere più costose, con pasti che vanno in media da $10 a $20 o più a persona.",
+          "Trasporti": "I costi dei trasporti in Kirghizistan variano a seconda del mezzo di trasporto e della distanza. I voli domestici tra le principali città come Bishkek e Osh possono variare da $50 a $150 o più, mentre i taxi condivisi e le marshrutkas (minibus) offrono opzioni convenienti per distanze più brevi, con costi tipici da $1 a $10 a seconda del percorso. Affittare un'auto può costare da $30 a $100 o più al giorno, a seconda del tipo di veicolo e della società di noleggio.",
+          "Attività e Attrazioni": "Il costo delle attività e delle attrazioni in Kirghizistan varia ampiamente a seconda dell'esperienza. I biglietti d'ingresso per musei, siti storici e parchi nazionali sono generalmente convenienti, variando da $1 a $10 a persona. Tour guidati, escursioni all'aperto e attività avventurose come l'equitazione e il trekking possono comportare costi aggiuntivi, con prezzi che variano in base alla durata e alla complessità.",
+          "Shopping": "Lo shopping in Kirghizistan offre una vasta gamma di opzioni, dalle tradizionali artigianato e souvenir a beni moderni ed elettronica. I prezzi variano a seconda dell'articolo e della posizione, ma il tasso di contrattazione è comune nei mercati e nei bazar. Sii pronto a negoziare per il miglior prezzo, specialmente quando acquisti tessuti, gioielli e artigianato fatto a mano.",
+          "Valuta e Tassi di Cambio": "La valuta ufficiale del Kirghizistan è il som kirghiso (KGS). I tassi di cambio fluttuano, quindi è consigliabile verificare i tassi correnti prima di cambiare denaro. Le principali carte di credito sono accettate nelle città più grandi e nelle zone turistiche, ma è consigliabile portare contanti per le transazioni nelle città più piccole e nelle aree rurali."
+        },
+        "details": "Per le informazioni più accurate e aggiornate sui prezzi in Kirghizistan, consulta le fonti locali e le guide di viaggio recenti."
+      },
+      "Travel_Seasons": {
+        "title": "Stagioni di Viaggio in Kirghizistan",
+        "Description": "Comprendere le stagioni di viaggio in Kirghizistan può aiutarti a pianificare il tuo viaggio e sfruttare al meglio la tua visita. Ecco una panoramica delle diverse stagioni e cosa aspettarsi:",
+        "Options": {
+          "Primavera (Marzo a Maggio)": "La primavera è un momento bellissimo per visitare il Kirghizistan, con il paesaggio che prende vita mentre i fiori sbocciano e i fiumi si gonfiano con la neve sciolta. Il clima è mite, rendendolo ideale per attività all'aperto come escursioni, trekking e equitazione. Tuttavia, sii preparato per occasionali rovesci di pioggia, specialmente ad aprile e maggio.",
+          "Estate (Giugno a Agosto)": "L'estate è la stagione turistica più affollata in Kirghizistan, con giornate lunghe, temperature calde e cieli sereni. È il momento perfetto per avventure all'aria aperta come campeggio, arrampicata in montagna ed esplorazione dei laghi alpini. Durante questo periodo si svolgono festival ed eventi popolari, tra cui i World Nomad Games a settembre.",
+          "Autunno (Settembre a Novembre)": "L'autunno è una stagione splendida in Kirghizistan, con paesaggi dipinti in vividi toni di rosso, arancione e oro mentre le foglie cambiano colore. Il clima rimane piacevole, rendendolo un ottimo momento per trekking, avvistamento della fauna selvatica ed esperienze culturali. Settembre è un mese ideale per visitare i World Nomad Games.",
+          "Inverno (Dicembre a Febbraio)": "L'inverno trasforma il Kirghizistan in un paese delle meraviglie invernali, con montagne coperte di neve e laghi ghiacciati che creano uno scenario mozzafiato. Sebbene le temperature possano scendere sotto lo zero, gli appassionati di sport invernali affollano le località sciistiche come Karakol e Jyrgalan per sciare, fare snowboard e pattinare su ghiaccio. Febbraio segna la celebrazione del tradizionale gioco nomade, Kok Boru (Buzkashi)."
+        },
+        "details": "Per ulteriori informazioni su attività specifiche, eventi e condizioni meteorologiche durante ciascuna stagione, consulta le guide turistiche e le risorse turistiche locali."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Prima Volta in Kirghizistan",
+        "Description": "Se stai visitando il Kirghizistan per la prima volta, ecco una guida completa per aiutarti a sfruttare al meglio il tuo viaggio:",
+        "Options": {
+          "Arrivo e Spostamenti": "La maggior parte dei viaggiatori internazionali arriva all'Aeroporto Internazionale di Manas a Bishkek. Taxi e autobus sono facilmente disponibili per il trasporto in città. All'interno del Kirghizistan, è possibile utilizzare voli domestici, autobus, marshrutka (minibus) e taxi condivisi per spostarsi.",
+          "SIM Card e Internet": "Rimanere connessi in Kirghizistan è facile con una SIM locale. È possibile acquistare SIM card all'aeroporto o dai fornitori di reti mobili in città. I principali provider includono Beeline, O! e Megacom. Assicurati che il tuo telefono sia sbloccato prima di acquistare una SIM card. La copertura Internet è generalmente buona nelle città e nei paesi, ma può essere irregolare nelle zone rurali.",
+          "Prezzi Internet": "I prezzi Internet in Kirghizistan sono generalmente accessibili. Un pacchetto dati di base da 1GB può costare circa 100 KGS (circa 1,20 USD), mentre pacchetti più grandi, come 10GB, potrebbero costare circa 500 KGS (circa 6 USD). I piani dati illimitati per un mese possono variare da 800 a 1500 KGS (circa da 9,50 a 18 USD) a seconda del provider e della velocità della connessione.",
+          "Valuta e Pagamenti": "La valuta locale è il Som kirghiso (KGS). Gli sportelli bancomat sono disponibili nelle principali città, ma è consigliabile portare contanti nelle zone rurali. Le carte di credito e di debito sono accettate in molti luoghi nelle città, ma meno in quelle remote. I servizi di cambio valuta sono disponibili negli aeroporti, nelle banche e negli uffici di cambio.",
+          "Lingua": "Il kirghiso e il russo sono le lingue ufficiali. Nelle principali città, potresti trovare alcuni parlanti di inglese, specialmente nelle zone turistiche, ma nelle regioni rurali è utile conoscere alcune frasi di base in kirghiso o russo. Un'app di traduzione o un vocabolario possono essere molto utili.",
+          "Salute e Sicurezza": "Il Kirghizistan è generalmente sicuro per i viaggiatori, ma è saggio prendere precauzioni standard. Bevi acqua in bottiglia o bollita per evitare malattie trasmesse dall'acqua. Assicurati di avere un'assicurazione di viaggio che copra la salute e gli incidenti. I servizi medici di emergenza sono disponibili nelle città, ma possono essere limitati nelle zone rurali.",
+          "Clima e Abbigliamento": "Il Kirghizistan ha un clima continentale con inverni freddi ed estati calde. In montagna, le temperature possono essere significativamente più basse, quindi veste di conseguenza. L'abbigliamento a strati, scarpe da passeggio robuste e protezione solare sono raccomandati. In inverno, porta abbigliamento caldo, inclusa una giacca di buona qualità, guanti e cappelli.",
+          "Elettricità e Prese": "La tensione standard è di 220V, e la frequenza è di 50Hz. Le prese di corrente e le spine sono di tipo C e F. È consigliabile portare un adattatore di viaggio universale per assicurarti di poter caricare i tuoi dispositivi elettronici."
+        },
+        "details": "Per informazioni più dettagliate e consigli, consulta guide turistiche e risorse locali. Goditi il tuo primo viaggio in Kirghizistan e crea ricordi indimenticabili!"
+      },
+      "TravelPreparation": {
+        "title": "Preparati per il Tuo Viaggio in Kirghizistan",
+        "Description": "Assicurati un viaggio senza intoppi e piacevole in Kirghizistan occupandoti di queste preparazioni di viaggio essenziali.",
+        "Options": {
+          "Visto e Passaporto": "Controlla i requisiti del visto per la tua nazionalità e assicurati che il passaporto sia valido per almeno sei mesi oltre il periodo di permanenza previsto.",
+          "Salute e Vaccinazioni": "Consulta il tuo medico per eventuali vaccinazioni obbligatorie o precauzioni sanitarie per viaggiare in Kirghizistan.",
+          "Assicurazione di Viaggio": "Valuta l'acquisto di un'assicurazione di viaggio che copra eventuali emergenze impreviste, come spese mediche o cancellazioni del viaggio.",
+          "Valuta e Questioni Monetarie": "Familiarizzati con la valuta locale (Som kirghiso) e cambia un po' di denaro prima del viaggio. Gli sportelli bancomat sono disponibili nelle città principali.",
+          "Lingua": "Anche se il russo e il kirghiso sono le lingue ufficiali, l'inglese non è molto diffuso. Valuta di imparare alcune frasi di base in russo o kirghiso.",
+          "Clima e Abbigliamento": "Prepara abiti adeguati alle condizioni meteorologiche durante la tua visita. Il Kirghizistan ha estati calde e inverni freddi, quindi porta con te abiti adatti a strati.",
+          "Sicurezza": "Tieniti informato sulla situazione attuale in Kirghizistan e fai attenzione, specialmente nelle aree remote. Tieni al sicuro i tuoi effetti personali e mantieni la consapevolezza del tuo ambiente circostante.",
+          "Etichetta Culturale": "Rispetta le usanze e le tradizioni locali, come toglierti le scarpe prima di entrare in casa di qualcuno e chiedere il permesso prima di scattare fotografie alle persone."
+        },
+        "details": "Per ulteriori consigli e suggerimenti specifici per il tuo viaggio in Kirghizistan, consulta la nostra guida completa."
+      }
+    },
+    "sights": {
+      "name": "Luoghi di Interesse",
+      "title": "Luoghi più popolari del Kyrgyzstan",
+      "subtitle": "Dove andare in Kirghizistan?",
+      "description": "Immergiti nei paesaggi mozzafiato e nelle destinazioni incantevoli del Kyrgyzstan. Esplora terreni diversi, siti culturali, e meraviglie naturali che definiscono il fascino di questo paese unico.",
+      "keywords": "Luoghi Kyrgyzstan, Viaggio in Kyrgyzstan, Esplora il Kyrgyzstan, Destinazioni Kyrgyzstan, Turismo Kyrgyzstan, Luoghi da visitare in Kyrgyzstan, Attrazioni principali Kyrgyzstan, Paesaggi Kyrgyzstan, Siti culturali Kyrgyzstan, Meraviglie naturali Kyrgyzstan, I migliori posti da visitare in Kyrgyzstan",
+      "sights": "Luoghi da visitare",
+      "must-see": {
+        "subtitle": "Destinazioni da Vedere in Kirghizistan",
+        "description1": "Il Kirghizistan è noto per i suoi splendidi paesaggi naturali, dalle maestose montagne ai sereni laghi. Ecco alcuni dei luoghi più belli di ogni regione:",
+        "chuyregion": "Regione di Chuy",
+        "alaarchatitle": "Parco Nazionale di Ala Archa:",
+        "alaarchadescription": "Offre viste mozzafiato e sentieri escursionistici.",
+        "buranatitle": "Torre di Burana:",
+        "buranadescription": "Un minareto storico con viste panoramiche sulla valle.",
+        "issykulregion": "Regione di Issyk-Kul",
+        "lakeissykkultitle": "Lago Issyk-Kul:",
+        "lakeissykkuldescription": "Un grande lago salato con spiagge e resort.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Famoso per le sue formazioni rocciose rosse.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Porta d'accesso a bellissimi siti montani come Altyn Arashan.",
+        "narynregion": "Regione di Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Un caravanserraglio di pietra storico in una pittoresca valle.",
+        "sonkultitle": "Lago Son-Kul:",
+        "sonkuldescription": "Un lago ad alta quota con tramonti mozzafiato.",
+        "jalalabadregion": "Regione di Jalal-Abad",
+        "sarychelextitle": "Riserva della Biosfera di Sary-Chelek:",
+        "sarychelekdescription": "Caratterizzata da laghi e foreste incontaminate.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Sede della più grande foresta di noci e bellissime cascate.",
+        "oshregion": "Regione di Osh",
+        "sulaymanmountaintitle": "Montagna di Sulayman:",
+        "sulaymanmountaindescription": "Una montagna sacra con viste panoramiche.",
+        "alayvalleytitle": "Valle di Alay:",
+        "alayvalleydescription": "Offre viste spettacolari sui Monti del Pamir.",
+        "batkenregion": "Regione di Batken",
+        "batkenvalleytitle": "Montagna Aigul-Tash:",
+        "batkenvalleydescription": "Casa del misterioso fiore Aigul nei pressi del pittoresco villaggio di Kara-Bulak",
+        "karakuljatitle": "Parco Nazionale di Sarkent:",
+        "karakuljadescription": "Un paradiso naturale nella regione di Batken di oltre 40 mila ettari di natura incontaminata",
+        "talasregion": "Regione di Talas",
+        "beshtashtitle": "Parco Nazionale di Besh-Tash:",
+        "beshtashdescription": "Ha fiumi scenografici e prati alpini.",
+        "manasordotitle": "Complesso di Manas Ordo:",
+        "manasordodescription": "Un sito culturale dedicato all'eroe Manas."
+      },
+      "highlights": [
+        "Come Arrivare",
+        "Trasporti",
+        "Dove Alloggiare",
+        "Cosa Mangiare",
+        "Cosa Fare"
+      ]
+    },
+    "tours": {
+      "name": "Tour",
+      "title": "Tour più popolari del Kyrgyzstan",
+      "subtitle": "Tour Privati e per Piccoli Gruppi in Kirghizistan",
+      "description": "Intraprendi tour indimenticabili che mostrano lo splendore del Kyrgyzstan. Scegli tra avventure, culturali, e trekking e lasciaci guidare attraverso paesaggi diversi e affascinanti.",
+      "description1": "Nonostante le sue dimensioni ridotte, il Kirghizistan è pieno di luoghi sorprendenti. Prenota il miglior tour in Kirghizistan per scoprire le montagne, i laghi e le valli che rendono questo paese una destinazione di prima classe. Che tu sia un avventuriero in cerca di emozioni forti o interessato a esplorare la ricca cultura e storia di questo piccolo paese, un tour in Kirghizistan è ideale per coloro che cercano qualcosa di unico. \r\n\r\nMolte persone vengono in Kirghizistan per visitare le montagne, il che ha senso, considerando che il 94% del Kirghizistan è coperto da montagne. La massiccia catena del Tian Shan copre gran parte del Kirghizistan, con le sue vette più alte che superano i 7000 metri. Nascosti tra le imponenti vette ci sono ampie vallate verdi e laghi cristallini, con fiumi impetuosi che attraversano foreste di ginepri fresche. Le ampie vallate verdi vengono spesso utilizzate come pascoli estivi per greggi di animali e durante i mesi più caldi sono punteggiate di yurte e cavalli. Alcuni laghi sono troppo freddi per nuotare (come il lago Son-Kul), ma l'Issyk-Kul sicuramente no. Le coste sabbiose e le località alpine intorno all'Issyk-Kul sono tappe imprescindibili in qualsiasi miglior tour in Kirghizistan, perfette per un momento di relax. A molte persone piace l'avventura e il Kirghizistan offre molte passeggiate a cavallo, rafting, località sciistiche e escursioni, perfette per qualsiasi amante dell'adrenalina. \r\n\r\nAnche se la natura può dominare a volte, i migliori tour in Kirghizistan non trascurano la cultura e la storia di questo paese. Trascorri una notte in una yurta, una casa tradizionale fatta di legno e feltro progettata per essere resistente e trasportabile. Scopri tutti i tessuti per cui il Kirghizistan è famoso e ascolta il famoso komuz (uno strumento a tre corde) o l'Epopea di Manas, la poesia epica che è un fondamento spirituale nel Kirghizistan moderno. E assicurati di assaggiare il beshbarmak (carne macinata bollita con noodles) e il kumis (latte di giumenta fermentato) per assaporare veramente la vita nomade. \r\n\r\nSulla base di anni di esperienza, i nostri migliori tour in Kirghizistan combinano tutti gli elementi della cultura e del paesaggio kirghiso per presentarti l'intero paese. Viaggia con le migliori guide, alloggia nei migliori hotel e mangia nei migliori ristoranti. Prenota un tour di gruppo per risparmiare denaro e pianificazione, o programma un tour privato per adattarsi ai tuoi interessi e al tuo programma.",
+      "keywords": "Tour Kyrgyzstan, Tour avventura Kyrgyzstan, Tour guidati Kyrgyzstan, Tour culturali Kyrgyzstan, Tour trekking Kyrgyzstan, Tour a cavallo Kyrgyzstan, Esperienze nomadi Kyrgyzstan, Pacchetti viaggio Kyrgyzstan, I migliori tour in Kyrgyzstan, Esplora il Kyrgyzstan attraverso i tour",
+      "tourPage": {
+        "level": "Livello",
+        "duration": "Durata",
+        "price": "Prezzo",
+        "day": "Giorno",
+        "days": "Giorni",
+        "details": "Dettagli",
+        "things": "Cose da fare",
+        "places": "Luoghi che visitiamo",
+        "addInfo": "Informazioni aggiuntive",
+        "includings": "Cosa include il prezzo",
+        "excludings": "Cosa non include il prezzo",
+        "from": "Dal",
+        "note": "Nota",
+        "person": "Persona",
+        "persons": "Persone",
+        "andMore": "e altro"
+      },
+      "TourPreparation": {
+        "title": "Elementi Essenziali per Viaggiare in Kirghizistan",
+        "Description": "Un elenco completo degli elementi essenziali da portare con te durante il tuo viaggio in Kirghizistan per garantire comfort, sicurezza e preparazione per le varie condizioni meteorologiche e le attività all'aperto.",
+        "Options": {
+          "Scarpe": "Porta scarpe comode da passeggio per le visite in città, scarponcini resistenti per escursioni moderate, robusti stivali da trekking per il trekking e sandali a rapido asciugatura come paio extra.",
+          "Cappello": "Non dimenticare di mettere in valigia un cappello a tesa larga o una berretta con protezione per il collo per proteggerti dal sole intenso alle alte altitudini.",
+          "Crema UV": "Non dimenticare di mettere in valigia una crema solare ad alto SPF a protezione totale per proteggere la tua pelle dai raggi UV intensi, specialmente a quote più elevate in Kirghizistan.",
+          "Abbigliamento": "Prepara strati di abbigliamento appropriati per temperature e condizioni meteorologiche variabili, considerando che le temperature possono variare notevolmente con i cambi di altitudine. Sii pronto per neve o pioggia, specialmente in aree montuose.",
+          "Pronto Soccorso": "Ricorda di portare con te dispositivi medici personali come farmaci necessari, cerotti, antidolorifici e eventuali articoli specifici per condizioni mediche preesistenti come precauzione."
+        },
+        "overview": "Il tuo comfort è il nostro lavoro, guidandoci a cercare costantemente modi per rendere il tuo viaggio ancora più memorabile e piacevole."
+      }
+    },
+    "articles": {
+      "name": "Storie",
+      "title": "Il Kirghizistan: cultura, tradizioni e natura",
+      "description": "Esplora la ricca cultura, le tradizioni vivaci e la natura mozzafiato del Kirghizistan attraverso questi racconti illuminanti. Immergiti nel cuore della cultura kirghiza, da antiche tradizioni come la caccia con l'aquila e il kok boru ai maestosi cani Alabai e alle avventure del Taiga.",
+      "keywords": [
+        "Cultura kirghiza",
+        "Tradizioni kirghize",
+        "Natura del Kirghizistan",
+        "Caccia con l'aquila",
+        "Kok boru",
+        "Cani Alabai",
+        "Taiga",
+        "Storia del Kirghizistan",
+        "Cultura dell'Asia centrale",
+        "Eredità nomade",
+        "Esplorazione culturale",
+        "Sport tradizionali",
+        "Levrieri del Kirghizistan",
+        "Esperienze culturali",
+        "Avventura in Kirghizistan",
+        "Razze canine tradizionali",
+        "Tradizioni culturali",
+        "Esperienze uniche",
+        "Stile di vita kirghizo"
+      ]
+    },
+    "about": {
+      "title": "Chi Siamo",
+      "subtitle": "Chi siamo?",
+      "description": "Siamo un team di appassionati dedicati a offrirti esperienze eccezionali. La nostra passione alimenta tutto ciò che facciamo, poiché mettiamo il cuore nel creare momenti indimenticabili per te. Unisciti a noi in avventure di meraviglia e scopri questo bellissimo paese.",
+      "keywords": "Chi siamo, La nostra storia, Appassionati di Kyrgyzstan, Passione per i viaggi, Esperienze eccezionali, Team, Valori, Missione",
+      "buttons": {
+        "our_team": "Il nostro team",
+        "our_clients": "I nostri clienti",
+        "contact_us": "Contattaci"
+      }
+    },
+    "info": {
+      "seen": "Visite: ",
+      "created": "Creato: ",
+      "modified": "Ultima modifica: "
+    },
+    "download": {
+      "text": "Scarica le nostre app oggi e goditi un accesso comodo al nostro servizio sul tuo dispositivo mobile! Clicca semplicemente sul pulsante!"
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Link Utili",
+          "links": [
+            {
+              "text": "Home",
+              "url": "/"
+            },
+            {
+              "text": "Luoghi da Visitare",
+              "url": "/places"
+            },
+            {
+              "text": "Tour",
+              "url": "/tours"
+            }
+          ]
+        },
+        {
+          "title": "Privacy e Legale",
+          "links": [
+            {
+              "text": "Chi Siamo",
+              "url": "/about"
+            },
+            {
+              "text": "Contattaci",
+              "url": "/contact"
+            },
+            {
+              "text": "Informativa sulla Privacy",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Informazioni di Contatto",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Account Sociali",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "Sviluppatore",
+              "icon": "twitter.svg",
+              "url": "https://twitter.com/anvarinho"
+            }
+          ]
+        }
+      ]
     }
+  }
 }
+
