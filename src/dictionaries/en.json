@@ -1,325 +1,353 @@
 {
-    "page": {
-        "langCode":"en-US",
-        "name": "GuideBook of Kyrgyzstan",
-        "loading": "Loading...",
-        "contactButton": "Any questions?",
-        "navigation": [
-            { "text": "Home", "url": "/" },
-            { "text": "Sights", "url": "/places" },
-            { "text": "Tours", "url": "/tours" },
-            { "text": "Stories", "url": "/articles" },
-            { "text": "About", "url":  "/about" }
-        ],
-        "home": {
-            "title": "Kyrgyzstan Travel Guide (2024)",
-            "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, guided tours, plan your adventure, and make the most of your trip.",
-            "subtitle":"Kyrgyzstan Travel Guide (2024)",
-            "subtitle1":"Why Visit Kyrgyzstan?",
-            "subtitle2":"Exploring the Great Outdoors",
-            "subtitle3":"Endless Exploration",
-            "subtitle4":"Plan Your Trip",
-            "subtitle5":"Kyrgyzstan must-visit places",
-            "paragraph":"This beautiful, landlocked country, formerly part of the Soviet Union, is quickly becoming one of the most popular travel destinations in Central Asia. Kyrgyzstan's tourism industry is growing rapidly, offering travelers the chance to explore one of the world's most spectacular countries.",
-            "paragraph1":"Kyrgyzstan has seen a dramatic increase in tourism in recent years as adventurers flock to hike, camp, and horse trek through its stunning landscapes. As the first Central Asian nation to relax its visa policies—offering visa-free entry for most Western and developed nations—a strong tourism network has developed.",
-            "paragraph2":"From Community Based Tourism (CBT) initiatives across the country to guesthouses and independent guides, there are numerous ways to experience Kyrgyzstan's breathtaking scenery. Hikers can embark on awe-inspiring treks from Karakol, Kochkor, Arslanbob, and even the capital city, Bishkek. Note that hiking here often requires a reasonable level of fitness, as many trails offer more than just a leisurely stroll. Most treks range from 1 to 5 days, though longer adventures are available.\r\n\r\nFor those looking to save their legs, horseback riding is a popular alternative. Take on the country’s most spectacular horse trek to Song Kol, or spend a few days relaxing and swimming at the beautiful Issyk-Kul Lake.",
-            "paragraph3":"With countless off-the-beaten-path destinations, treks, and trails, the opportunities to explore are limitless. Whether you are seeking adventure or relaxation, Kyrgyzstan has something for everyone.",
-            "paragraph4":"For more specific information on attractions, how to get there and around, and other travel tips, be sure to read through our comprehensive Kyrgyzstan travel guide. Enhance your travel experience with recommended apps for navigation, translation, and local insights to make the most of your trip.\r\n\r\nEnjoy your journey and experience the unique beauty and culture of Kyrgyzstan",
-            "keywords": "Kyrgyzstan tourist guide, tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide, Kyrgyzstan tourist attractions, Tourist spot, Places near me to sightsee, Places to visit near me, Tourist places, Tourist destination, Beautiful destinations in the world, World's most beautiful locations, The most beautiful sites in the world, Travel with guide, Guide for travel, Beautiful places, Bishkek in Kyrgyzstan, City Bishkek, Tourist and guide, PR tourist attractions, Nearby attractions and how to execute it",
-            "button": "Lets Find Out!",
-            "button1": "Where To Go!",
-            "button2": "What To Do!",
-            "button3": "read more",
-            "button4": "Our Tours",
-            "Transportation": {
-              "title":"Transportation in Kyrgyzstan | Travel Guide",
-              "Description": "Getting around Kyrgyzstan can be an adventure in itself. Here's what you need to know:",
-              "Options": {
-                "Domestic Flights": "For longer distances, especially if time is a constraint, domestic flights are available between major cities like Bishkek, Osh and Tamchy (near Cholpon-Ata in Issyk-Kul Region). Check airlines for schedules and bookings.",
-                "Marshrutkas (Minibuses)": "These are the most common and cost-effective mode of transport for short to medium distances. They follow fixed routes between cities and towns and are very popular among locals.",
-                "Shared Taxis": "Shared taxis offer a faster but slightly more expensive alternative to marshrutkas. They typically leave when full, and prices can be negotiated.",
-                "Car Rentals": "For more flexibility, renting a car is a good option. Roads in rural areas can be rough, so a 4x4 is recommended. Ensure you have an international driving permit.",
-                "Trains": "Limited train services are available, primarily connecting Bishkek to Balykchy near Issyk-Kul Lake. It's a scenic route but slower than road travel.",
-                "Buses": "Regular buses operate in major cities, offering a comfortable way to travel. However, they may not cover remote areas.",
-                "HitchHiking": "is a common practice in rural areas of Kyrgyzstan, where formal transportation options may be limited. It's relatively safe and culturally accepted, but exercise caution and use your judgment when accepting rides from strangers."
-              },
-              "details": "For detailed insights on transportation options, visit the provided guide."
+  "page": {
+    "langCode": "en-US",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Loading...",
+    "contactButton": "Any questions?",
+    "navigation": [
+      { "text": "Home", "url": "/" },
+      { "text": "Sights", "url": "/places" },
+      { "text": "Tours", "url": "/tours" },
+      { "text": "Stories", "url": "/articles" },
+      { "text": "About", "url": "/about" }
+    ],
+    "home": {
+      "title": "Kyrgyzstan Travel Guide (2024)",
+      "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, guided tours, plan your adventure, and make the most of your trip.",
+      "subtitle": "Kyrgyzstan Travel Guide (2024)",
+      "subtitle1": "Why Visit Kyrgyzstan?",
+      "subtitle2": "Exploring the Great Outdoors",
+      "subtitle3": "Endless Exploration",
+      "subtitle4": "Plan Your Trip",
+      "subtitle5": "Kyrgyzstan must-visit places",
+      "paragraph": "This beautiful, landlocked country, formerly part of the Soviet Union, is quickly becoming one of the most popular travel destinations in Central Asia. Kyrgyzstan's tourism industry is growing rapidly, offering travelers the chance to explore one of the world's most spectacular countries.",
+      "paragraph1": "Kyrgyzstan has seen a dramatic increase in tourism in recent years as adventurers flock to hike, camp, and horse trek through its stunning landscapes. As the first Central Asian nation to relax its visa policies—offering visa-free entry for most Western and developed nations—a strong tourism network has developed.",
+      "paragraph2": "From Community Based Tourism (CBT) initiatives across the country to guesthouses and independent guides, there are numerous ways to experience Kyrgyzstan's breathtaking scenery. Hikers can embark on awe-inspiring treks from Karakol, Kochkor, Arslanbob, and even the capital city, Bishkek. Note that hiking here often requires a reasonable level of fitness, as many trails offer more than just a leisurely stroll. Most treks range from 1 to 5 days, though longer adventures are available.\r\n\r\nFor those looking to save their legs, horseback riding is a popular alternative. Take on the country’s most spectacular horse trek to Song Kol, or spend a few days relaxing and swimming at the beautiful Issyk-Kul Lake.",
+      "paragraph3": "With countless off-the-beaten-path destinations, treks, and trails, the opportunities to explore are limitless. Whether you are seeking adventure or relaxation, Kyrgyzstan has something for everyone.",
+      "paragraph4": "For more specific information on attractions, how to get there and around, and other travel tips, be sure to read through our comprehensive Kyrgyzstan travel guide. Enhance your travel experience with recommended apps for navigation, translation, and local insights to make the most of your trip.\r\n\r\nEnjoy your journey and experience the unique beauty and culture of Kyrgyzstan",
+      "keywords": "Kyrgyzstan tourist guide, tourist guide, Travel convenience, Local attractions, Tourist services, Kyrgyz travel tips, Cultural experiences, Tour planning, Sightseeing, Adventure travel, Convenient tours, Bishkek city guide, Kyrgyzstan tourist attractions, Tourist spot, Places near me to sightsee, Places to visit near me, Tourist places, Tourist destination, Beautiful destinations in the world, World's most beautiful locations, The most beautiful sites in the world, Travel with guide, Guide for travel, Beautiful places, Bishkek in Kyrgyzstan, City Bishkek, Tourist and guide, PR tourist attractions, Nearby attractions and how to execute it",
+      "button": "Lets Find Out!",
+      "button1": "Where To Go!",
+      "button2": "What To Do!",
+      "button3": "read more",
+      "button4": "Our Tours",
+      "Transportation": {
+        "title": "Transportation in Kyrgyzstan | Travel Guide",
+        "Description": "Getting around Kyrgyzstan can be an adventure in itself. Here's what you need to know:",
+        "Options": {
+          "Domestic Flights": "For longer distances, especially if time is a constraint, domestic flights are available between major cities like Bishkek, Osh and Tamchy (near Cholpon-Ata in Issyk-Kul Region). Check airlines for schedules and bookings.",
+          "Marshrutkas (Minibuses)": "These are the most common and cost-effective mode of transport for short to medium distances. They follow fixed routes between cities and towns and are very popular among locals.",
+          "Shared Taxis": "Shared taxis offer a faster but slightly more expensive alternative to marshrutkas. They typically leave when full, and prices can be negotiated.",
+          "Car Rentals": "For more flexibility, renting a car is a good option. Roads in rural areas can be rough, so a 4x4 is recommended. Ensure you have an international driving permit.",
+          "Trains": "Limited train services are available, primarily connecting Bishkek to Balykchy near Issyk-Kul Lake. It's a scenic route but slower than road travel.",
+          "Buses": "Regular buses operate in major cities, offering a comfortable way to travel. However, they may not cover remote areas.",
+          "HitchHiking": "is a common practice in rural areas of Kyrgyzstan, where formal transportation options may be limited. It's relatively safe and culturally accepted, but exercise caution and use your judgment when accepting rides from strangers."
+        },
+        "details": "For detailed insights on transportation options, visit the provided guide."
+      },
+      "Accommodations": {
+        "title": "Accommodations in Kyrgyzstan | Travel Guide",
+        "Description": "From cozy guesthouses to luxury resorts, Kyrgyzstan offers a variety of accommodation options to suit every traveler's preference and budget. Here are some choices to consider:",
+        "Options": {
+          "Hotels": "Kyrgyzstan's major cities like Bishkek and Osh boast a range of hotels catering to different budgets and preferences. From international chains to boutique hotels, you'll find comfortable accommodations with amenities such as Wi-Fi, air conditioning, and in-house dining options.",
+          "Guesthouses": "For a more authentic experience, consider staying in a guesthouse run by local families. These cozy establishments offer a warm welcome and a chance to experience Kyrgyz hospitality. You'll often have the opportunity to enjoy homemade meals and learn about local customs and traditions.",
+          "Yurts": "In rural areas and mountainous regions, traditional yurts provide a unique lodging experience. These portable, tent-like structures offer basic but comfortable accommodation, often with stunning views of the surrounding landscapes. Yurt stays may include meals and cultural activities.",
+          "Homestays": "Experience life with a Kyrgyz family by opting for a homestay. You'll have the opportunity to live with locals, share meals, and participate in daily activities. Homestays offer an authentic cultural exchange and insight into Kyrgyzstan's traditional way of life.",
+          "Eco-Lodges": "For eco-conscious travelers, eco-lodges provide sustainable accommodation options in natural settings. These lodges prioritize environmental conservation and often offer activities such as hiking, birdwatching, and community engagement.",
+          "Camping": "is a popular option for travelers seeking adventure and solitude. Whether you pitch a tent in a designated camping area or wild camp in remote locations, be sure to follow Leave No Trace principles and obtain any necessary permits."
+        },
+        "details": "For specific recommendations and booking options, consult travel websites, online booking platforms, and local tourism offices."
+      },
+      "Food": {
+        "title": "Food in Kyrgyzstan | Travel Guide",
+        "Description": "Exploring Kyrgyz cuisine is an integral part of the travel experience. Here's what you need to know:",
+        "Options": {
+          "Traditional Cuisine": "Kyrgyz cuisine is rich in flavor and heritage, with traditional dishes like beshbarmak (meat and noodles), manty (dumplings), and laghman (noodle soup) being staples. Don't miss trying fermented mare's milk known as kumis, a popular beverage.",
+          "Nomadic Influence": "Reflecting its nomadic heritage, Kyrgyz cuisine often features hearty dishes made from ingredients like meat (especially lamb and horse meat), dairy products (such as kymyz and airan), and grains (including rice and wheat). Yurts, traditional nomadic tents, may offer authentic dining experiences in rural areas.",
+          "Local Markets": "Visit local markets like Osh Bazaar in Bishkek to sample a variety of Kyrgyz dishes and snacks, including shashlik (grilled skewered meat), samsa (savory pastries), and plov (pilaf). These markets also offer an opportunity to purchase fresh fruits, nuts, and spices.",
+          "Teahouses and Cafes": "Teahouses (chaykhana) and cafes are ubiquitous in Kyrgyzstan, serving tea (chai) and coffee (kofe) alongside pastries, bread, and light meals. Enjoy the relaxed atmosphere and hospitality while savoring traditional Kyrgyz treats like baursak (fried dough) and kurut (dried yogurt balls).",
+          "International Cuisine": "In urban areas like Bishkek, you'll find a diverse range of international cuisines, including Russian, Chinese, Korean, and European. Explore trendy restaurants, bistros, and food courts for a taste of global flavors alongside Kyrgyz hospitality.",
+          "Street Food": "Venture into the streets of Kyrgyzstan to discover an array of street food vendors offering quick and flavorful snacks. Try popular street foods like somsas (fried or baked turnovers filled with meat or vegetables), fried laghman noodles, and grilled corn on the cob.",
+          "Food Tours and Cooking Classes": "Embark on food tours or join cooking classes to delve deeper into Kyrgyz cuisine and culinary traditions. Learn how to prepare traditional dishes, visit local farms and producers, and immerse yourself in the vibrant culinary scene of Kyrgyzstan."
+        },
+        "details": "For more information on Kyrgyz cuisine and dining options, refer to the provided guide."
+      },
+      "Safety": {
+        "title": "Safety in Kyrgyzstan | Travel Guide",
+        "Description": "Traveling to Kyrgyzstan is generally safe, but it's essential to be aware of potential risks and take necessary precautions. Here's what you need to know:",
+        "Options": {
+          "Political Stability": "Kyrgyzstan has experienced political instability in the past, including protests and occasional unrest. While most tourist areas remain unaffected, stay informed about local developments and avoid large gatherings or demonstrations.",
+          "Crime": "Petty crime such as pickpocketing and theft can occur, especially in crowded areas and tourist hotspots. Keep your belongings secure and be vigilant.",
+          "Terrorism": "The threat of terrorism in Kyrgyzstan is low, but travelers should remain vigilant, particularly in border areas. Follow any travel advisories issued by your government and stay informed.",
+          "Natural Hazards": "Kyrgyzstan is prone to natural hazards such as earthquakes, avalanches, and landslides, particularly in mountainous regions. Be prepared and follow safety guidelines, especially when trekking or engaging in outdoor activities.",
+          "Road Safety": "Road conditions in Kyrgyzstan can vary, and driving can be challenging, especially in rural areas. Exercise caution, adhere to local traffic laws, and consider hiring a reputable driver.",
+          "Health Risks": "While Kyrgyzstan does not pose significant health risks, travelers should be up to date on routine vaccinations and take precautions against food and waterborne illnesses.",
+          "Altitude Sickness": "Travelers visiting high-altitude areas should be aware of the risk of altitude sickness. Take time to acclimatize and avoid strenuous physical activity until your body adjusts.",
+          "Travel Insurance": "It's essential to have travel insurance that covers medical expenses, emergency evacuation, and trip cancellation/interruption. Make sure your insurance policy includes coverage for activities you plan to engage in."
+        },
+        "details": "For more detailed safety information and travel advisories, consult official government sources and travel guides."
+      },
+      "Prices": {
+        "title": "Prices in Kyrgyzstan | Travel Guide",
+        "Description": "Understanding the cost of living and expenses in Kyrgyzstan can help you plan your budget effectively. Here's an overview of prices for common items and services:",
+        "Options": {
+          "Accommodation": "The cost of accommodation in Kyrgyzstan varies depending on the type of lodging and location. Budget travelers can find affordable options such as guesthouses and hostels, while luxury hotels and resorts cater to those seeking upscale amenities. Prices range from as low as $10 per night for budget accommodations to over $100 per night for luxury establishments.",
+          "Food and Dining": "Dining out in Kyrgyzstan is generally affordable, especially at local eateries and street food stalls. Traditional dishes like beshbarmak and plov are inexpensive and filling, typically costing between $3 to $7 per meal at local restaurants. International cuisine and fine dining options may be pricier, with meals averaging $10 to $20 or more per person.",
+          "Transportation": "Transportation costs in Kyrgyzstan vary depending on the mode of travel and distance. Domestic flights between major cities like Bishkek and Osh can range from $50 to $150 or more, while shared taxis and marshrutkas (minibuses) offer budget-friendly options for shorter distances, typically costing $1 to $10 depending on the route. Renting a car can cost $30 to $100 or more per day, depending on the vehicle type and rental company.",
+          "Activities and Attractions": "The cost of activities and attractions in Kyrgyzstan varies widely depending on the experience. Entrance fees to museums, historical sites, and national parks are generally affordable, ranging from $1 to $10 per person. Guided tours, outdoor excursions, and adventure activities like horseback riding and trekking may incur additional costs, with prices varying based on duration and complexity.",
+          "Shopping": "Shopping in Kyrgyzstan offers a range of options, from traditional handicrafts and souvenirs to modern goods and electronics. Prices vary depending on the item and location, but bargaining is common in markets and bazaars. Be prepared to negotiate for the best price, especially when purchasing textiles, jewelry, and handmade crafts.",
+          "Currency and Exchange Rates": "The official currency of Kyrgyzstan is the Kyrgyzstani som (KGS). Exchange rates fluctuate, so it's advisable to check current rates before exchanging money. Major credit cards are accepted in larger cities and tourist areas, but it's recommended to carry cash for transactions in smaller towns and rural areas. (1$ = 85-90soms)"
+        },
+        "details": "For the most accurate and up-to-date information on prices in Kyrgyzstan, consult local sources and recent travel guides."
+      },
+      "Travel_Seasons": {
+        "title": "Travel Seasons in Kyrgyzstan | Travel Guide",
+        "Description": "Understanding the travel seasons in Kyrgyzstan can help you plan your trip and make the most of your visit. Here's an overview of the different seasons and what to expect:",
+        "Options": {
+          "Spring (March to May)": "Spring is a beautiful time to visit Kyrgyzstan, with the landscape coming to life as flowers bloom and rivers swell with melted snow. The weather is mild, making it ideal for outdoor activities like hiking, trekking, and horseback riding. However, be prepared for occasional rain showers, especially in April and May.",
+          "Summer (June to August)": "Summer is the peak tourist season in Kyrgyzstan, with long days, warm temperatures, and clear skies. It's the perfect time for outdoor adventures such as camping, mountain climbing, and exploring alpine lakes. Popular festivals and events take place during this time, including the World Nomad Games in September.",
+          "Autumn (September to November)": "Autumn is a stunning season in Kyrgyzstan, with landscapes painted in vibrant hues of red, orange, and gold as the leaves change color. The weather remains pleasant, making it an excellent time for trekking, wildlife spotting, and cultural experiences. September is an ideal month to visit for the World Nomad Games.",
+          "Winter (December to February)": "Winter transforms Kyrgyzstan into a winter wonderland, with snow-covered mountains and frozen lakes creating breathtaking scenery. While temperatures can drop below freezing, winter sports enthusiasts flock to ski resorts like Karakol and Jyrgalan for skiing, snowboarding, and ice skating. February marks the celebration of the traditional nomadic game, Kok Boru (Buzkashi)."
+        },
+        "details": "For more information on specific activities, events, and weather conditions during each season, consult travel guides and local tourism resources."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "First Time in Kyrgyzstan?",
+        "Description": "If you're visiting Kyrgyzstan for the first time, here's a comprehensive guide to help you make the most of your trip:",
+        "Options": {
+          "Arrival and Getting Around": "Most international travelers arrive at Manas International Airport in Bishkek. Taxis and buses are readily available for transportation into the city. Within Kyrgyzstan, you can use domestic flights, buses, marshrutkas (minibuses), and shared taxis to get around.",
+          "SIM Cards and Internet": "Staying connected in Kyrgyzstan is easy with a local SIM card. You can purchase SIM cards at the airport or from mobile network providers in the city. Major providers include Beeline, O!, and Megacom. Ensure your phone is unlocked before purchasing a SIM card. Internet coverage is generally good in cities and towns, but can be spotty in rural areas.",
+          "Internet Prices": "Internet prices in Kyrgyzstan are generally affordable. A basic data package of 1GB can cost around 100 KGS (approximately $1.20 USD), while larger packages, such as 10GB, might cost around 500 KGS (approximately $6 USD). Unlimited data plans for a month can range from 800 to 1500 KGS (approximately $9.50 to $18 USD) depending on the provider and the speed of the connection.",
+          "Currency and Payments": "The local currency is the Kyrgyzstani Som (KGS). ATMs are available in major cities, but it's advisable to carry cash in rural areas. Credit and debit cards are accepted in many places in cities, but less so in remote areas. Currency exchange services are available at airports, banks, and exchange offices.",
+          "Language": "Kyrgyz and Russian are the official languages. In major cities, you might find some English speakers, especially in tourist areas, but in rural regions, it's useful to know some basic Kyrgyz or Russian phrases. A translation app or phrasebook can be very helpful.",
+          "Health and Safety": "Kyrgyzstan is generally safe for travelers, but it's wise to take standard precautions. Drink bottled or boiled water to avoid waterborne illnesses. Ensure you have travel insurance that covers health and accidents. Emergency medical services are available in cities, but can be limited in rural areas.",
+          "Climate and Clothing": "Kyrgyzstan has a continental climate with cold winters and hot summers. In the mountains, temperatures can be significantly cooler, so pack accordingly. Layered clothing, sturdy walking shoes, and sun protection are recommended. In winter, bring warm clothing, including a good quality jacket, gloves, and hats.",
+          "Electricity and Plugs": "The standard voltage is 220V, and the frequency is 50Hz. Power plugs and sockets are of type C and F. It's advisable to bring a universal travel adapter to ensure you can charge your electronic devices."
+        },
+        "details": "For more detailed information and tips, refer to travel guides and local resources. Enjoy your first trip to Kyrgyzstan and make unforgettable memories!"
+      },
+      "TravelPreparation": {
+        "title": "Prepare for Your Travel to Kyrgyzstan",
+        "Description": "Ensure a smooth and enjoyable trip to Kyrgyzstan by taking care of these essential travel preparations.",
+        "Options": {
+          "Visa and Passport": "Check the visa requirements for your nationality and ensure your passport is valid for at least six months beyond your intended stay.",
+          "Health and Vaccinations": "Consult your healthcare provider for any required vaccinations or health precautions for traveling to Kyrgyzstan.",
+          "Travel Insurance": "Consider purchasing travel insurance to cover unexpected emergencies, such as medical expenses or trip cancellations.",
+          "Currency and Money Matters": "Familiarize yourself with the local currency (Kyrgyzstani Som) and exchange some money before your trip. ATMs are available in major cities.",
+          "Language": "While Russian and Kyrgyz are the official languages, English is not widely spoken. Consider learning some basic phrases in Russian or Kyrgyz.",
+          "Weather and Clothing": "Pack appropriate clothing for the weather conditions during your visit. Kyrgyzstan experiences hot summers and cold winters, so bring layers.",
+          "Safety and Security": "Stay informed about the current situation in Kyrgyzstan and exercise caution, especially in remote areas. Keep your belongings secure and be aware of your surroundings.",
+          "Cultural Etiquette": "Respect local customs and traditions, such as removing your shoes before entering someone's home and asking permission before taking photographs of people."
+        },
+        "details": "For additional travel tips and advice specific to your trip to Kyrgyzstan, refer to our comprehensive travel guide."
+      }
+    },
+    "sights": {
+      "name": "Sights",
+      "title": "Most Beautiful Places in Kyrgyzstan!",
+      "subtitle": "Where to go in Kyrgyzstan?  Additionally, stay informed about weather conditions in cities and regional centers to make the most of your journey comfortable and be prepared for constantly changing weather of this beautiful country.",
+      "description": "Where to go in Kyrgyzstan? Here’s the full list of the most interesting, beautiful, and exciting places to visit in Kyrgyzstan, including famous landmarks in Kyrgyzstan and highlights, detailed info on how to get to all these places independently, their precise location details, stunning videos and images that capture the essence of each unique sight. Whether you're seeking adventure, relaxation, or cultural experience, our guide gives you all must-see sights of Kyrgyzstan.",
+      "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan",
+      "sights": "Where To Go!",
+      "must-see": {
+        "subtitle": "Must-See Destinations of Kyrgyzstan by regions",
+        "description1": "Kyrgyzstan is known for its beautiful natural landscapes, from majestic mountains to serene lakes. Here are some of the most beautiful places in each region:",
+        "chuyregion": "Chuy Region",
+        "alaarchatitle": "Ala Archa National Park:",
+        "alaarchadescription": "Offers breathtaking views and hiking trails.",
+        "buranatitle": "Burana Tower:",
+        "buranadescription": "A historical minaret with scenic valley views.",
+        "issykulregion": "Issyk-Kul Region",
+        "lakeissykkultitle": "Lake Issyk-Kul:",
+        "lakeissykkuldescription": "A large saline lake with beaches and resorts.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Famous for its red rock formations.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Gateway to beautiful mountain sites like Altyn Arashan.",
+        "narynregion": "Naryn Region",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "A historic stone caravanserai in a picturesque valley.",
+        "sonkultitle": "Son-Kul Lake:",
+        "sonkuldescription": "A high-altitude lake with stunning sunsets.",
+        "jalalabadregion": "Jalal-Abad Region",
+        "sarychelextitle": "Sary-Chelek Biosphere Reserve:",
+        "sarychelekdescription": "Features pristine lakes and forests.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Home to the largest walnut forest and beautiful waterfalls.",
+        "oshregion": "Osh Region",
+        "sulaymanmountaintitle": "Sulayman Mountain:",
+        "sulaymanmountaindescription": "A sacred mountain with panoramic views.",
+        "alayvalleytitle": "Alay Valley:",
+        "alayvalleydescription": "Offers spectacular views of the Pamir Mountains.",
+        "batkenregion": "Batken Region",
+        "batkenvalleytitle": "Batken Valley:",
+        "batkenvalleydescription": "Known for its apricot trees and unique rock formations.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Features beautiful river valleys.",
+        "talasregion": "Talas Region",
+        "beshtashtitle": "Besh-Tash National Park:",
+        "beshtashdescription": "Has scenic rivers and alpine meadows.",
+        "manasordotitle": "Manas Ordo Complex:",
+        "manasordodescription": "A cultural site dedicated to the hero Manas."
+      },
+      "highlights": [
+        "How to Get to",
+        "Transport",
+        "Where to Stay",
+        "What to Eat",
+        "What to Do",
+        "Season"
+      ]
+    },
+    "tours": {
+      "name": "Tours",
+      "title": "Kyrgyzstan Private Tours & Tour Packages!",
+      "subtitle": "Private and Small Group Tours in Kyrgyzstan",
+      "description": "Craft your dream itinerary through Kyrgyzstan with a personalized touch. Our private tours offer the best flexibility, privacy, and a tailored itinerary, perfectly matching your preferences. Choose from adventure, Silk Road, cultural, horseback riding, and trekking tours for active trip, jeep tours for those who prefer comfort. If you could not find tour of your dream just let us know and let us guide you through an unforgettable experience in Kyrgyzstan.",
+      "description1": "Despite its small size, Kyrgyzstan is full of amazing places. Book a best Kyrgyzstan tour to discover the mountains, lakes, and valleys that make this country a top destination. Whether you’re an adventurer looking for a thrill or interested in exploring the rich culture and history of this small country, a Kyrgyzstan tour is best for those looking for something unequaled anywhere else.\r\n\r\nMany people come to Kyrgyzstan to visit the mountains, which makes sense, considering that 94% of Kyrgyzstan is covered in mountains. The massive Tian Shan range covers a lot of Kyrgyzstan, with its tallest peaks reaching over 7,000 m (22,965 ft). Nestled among the towering peaks are broad green valleys and crystal-clear lakes, with tumbling rivers that flow through fresh juniper forests. The broad green valleys are often used as summer pastures for herds of animals, and in the warmer months, are dotted with yurts and horses. Some of the lakes are too cold for swimming (like Son-Kul), but Issyk-Kul definitely isn’t. The sandy shores and alpine resorts around Issyk-Kul are must-visits on any best Kyrgyzstan tour, perfect for a moment of relaxation. Some people love adventure, and Kyrgyzstan offers plenty of horseback rides, rafting trips, ski resorts, and hikes, perfect for any adrenaline lover.\r\n\r\nThough the nature can tend to dominate, the best Kyrgyzstan tours don’t ignore the culture and history of this country. Spend a night in a yurt, a traditional home made of wood and felt and designed to be both sturdy and transportable. Learn about all of the textiles Kyrgyzstan is famous for, and listen to the famous komuz (a three-stringed instrument) or The Epic of Manas, the epic poem that is a spiritual foundation in modern Kyrgyzstan. And make sure to try beshbarmak (ground meat boiled with noodles) and kumis (fermented mare’s milk) to get a real taste of nomadic life.\r\n\r\nBased on years of experience, our best Kyrgyzstan tours combine all of the elements of Kyrgyzstan’s culture and landscape to introduce you to the entirety of this country. Travel with the best guides, stay at the best hotels, and eat at the best restaurants. Book a small group tour to Kyrgyzstan to save on money and planning, or schedule a private tour to fit your interests and schedule.",
+      "keywords": "Kyrgyzstan tours, Best Kyrgyzstan Tours, Trips in Kyrgyzstan, Best Kyrgyzstan Tours Companies, Travel Agency in Kyrgyzstan, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
+      "tourPage": {
+        "level": "Level",
+        "duration": "Duration",
+        "price": "Price",
+        "day": "Day",
+        "days": "Days",
+        "details": "Details",
+        "things": "Things we do",
+        "places": "Places we go",
+        "addInfo": "Additional information",
+        "includings": "Price includes",
+        "excludings": "Price excludes",
+        "from": "From",
+        "note": "Note",
+        "person": "Person",
+        "persons": "Persons",
+        "andMore": "and more"
+      },
+      "TourPreparation": {
+        "title": "Essentials for Travel in Kyrgyzstan",
+        "Description": "A comprehensive list of essential items to bring on your trip to Kyrgyzstan to ensure comfort, safety, and preparedness for varying weather conditions and outdoor activities.",
+        "Options": {
+          "Shoes": "Bring comfortable walking shoes for city tours, sturdy hiking shoes for moderate hikes, durable hiking boots for trekking, and quick-drying sandals as an extra pair.",
+          "Hat": "Don't forget to pack a wide-brimmed hat or a sun cap with a neck flap to protect against the intense sun at high altitudes.",
+          "UV Cream": "Don't forget to pack high SPF broad-spectrum sunscreen to shield your skin from the intense UV rays, especially at higher elevations in Kyrgyzstan.",
+          "Clothing": "Pack appropriate clothing layers for varying temperatures and weather conditions, considering that temperatures can vary significantly with altitude changes. Be prepared for snow or rain, especially in mountainous areas.",
+          "Medical Aid": "Remember to carry personal medical aids such as necessary medications, band-aids, pain relievers, and any specific items for pre-existing medical conditions as precautions."
+        },
+        "overview": "Your comfort is our job, guiding us to constantly seek out ways to make your journey even more memorable and enjoyable."
+      }
+    },
+    "articles": {
+      "name": "Articles",
+      "title": "Culture, Traditions, and Nature of Kyrgyzstan and Kyrgyz people",
+      "description": "Explore the rich culture, vibrant traditions, and breathtaking nature of Kyrgyzstan through these insightful stories. From ancient traditions like burkut hunting and kok-boru to the majestic Alabai dogs and the adventurous Taigan, delve into the heart of Kyrgyz culture.",
+      "keywords": [
+        "Kyrgyz culture",
+        "Kyrgyz traditions",
+        "Kyrgyz nature",
+        "Burkut hunting",
+        "Kok-boru",
+        "Alabai dogs",
+        "Taigan",
+        "Kyrgyz history",
+        "Central Asian culture",
+        "Nomadic heritage",
+        "Cultural exploration",
+        "Traditional sports",
+        "Sighthounds of Kyrgyzstan",
+        "Cultural experiences",
+        "Adventure in Kyrgyzstan",
+        "Heritage breeds",
+        "Cultural traditions",
+        "Unique experiences",
+        "Kyrgyz lifestyle"
+      ]
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Who We Are?",
+      "description": "We are a team of enthusiastic individuals dedicated to providing you with exceptional experiences. Our passion fuels everything we do, as we pour our hearts into creating unforgettable moments for you. Join us on adventures of wonder and discover this beautiful country.",
+      "keywords": "About us, Our story, Kyrgyzstan enthusiasts, Travel passion, Exceptional experiences, Team, Values, Mission",
+      "buttons": {
+        "our_team": "Our Team",
+        "our_clients": "Our Clients",
+        "contact_us": "Contact Us"
+      }
+    },
+    "info": {
+      "seen": "Visits: ",
+      "created": "Created: ",
+      "modified": "Last modified: "
+    },
+    "download": {
+      "text": "Download our apps today and enjoy convenient access to our service on your mobile device! Simply click on the button!"
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Useful Links",
+          "links": [
+            {
+              "text": "Home",
+              "url": "/"
             },
-            "Accommodations": {
-              "title": "Accommodations in Kyrgyzstan | Travel Guide",
-              "Description": "From cozy guesthouses to luxury resorts, Kyrgyzstan offers a variety of accommodation options to suit every traveler's preference and budget. Here are some choices to consider:",
-              "Options": {
-                "Hotels": "Kyrgyzstan's major cities like Bishkek and Osh boast a range of hotels catering to different budgets and preferences. From international chains to boutique hotels, you'll find comfortable accommodations with amenities such as Wi-Fi, air conditioning, and in-house dining options.",
-                "Guesthouses": "For a more authentic experience, consider staying in a guesthouse run by local families. These cozy establishments offer a warm welcome and a chance to experience Kyrgyz hospitality. You'll often have the opportunity to enjoy homemade meals and learn about local customs and traditions.",
-                "Yurts": "In rural areas and mountainous regions, traditional yurts provide a unique lodging experience. These portable, tent-like structures offer basic but comfortable accommodation, often with stunning views of the surrounding landscapes. Yurt stays may include meals and cultural activities.",
-                "Homestays": "Experience life with a Kyrgyz family by opting for a homestay. You'll have the opportunity to live with locals, share meals, and participate in daily activities. Homestays offer an authentic cultural exchange and insight into Kyrgyzstan's traditional way of life.",
-                "Eco-Lodges": "For eco-conscious travelers, eco-lodges provide sustainable accommodation options in natural settings. These lodges prioritize environmental conservation and often offer activities such as hiking, birdwatching, and community engagement.",
-                "Camping": "is a popular option for travelers seeking adventure and solitude. Whether you pitch a tent in a designated camping area or wild camp in remote locations, be sure to follow Leave No Trace principles and obtain any necessary permits."
-              },
-              "details": "For specific recommendations and booking options, consult travel websites, online booking platforms, and local tourism offices."
+            {
+              "text": "Sights",
+              "url": "/places"
             },
-            "Food": {
-              "title": "Food in Kyrgyzstan | Travel Guide",
-              "Description": "Exploring Kyrgyz cuisine is an integral part of the travel experience. Here's what you need to know:",
-              "Options": {
-                "Traditional Cuisine": "Kyrgyz cuisine is rich in flavor and heritage, with traditional dishes like beshbarmak (meat and noodles), manty (dumplings), and laghman (noodle soup) being staples. Don't miss trying fermented mare's milk known as kumis, a popular beverage.",
-                "Nomadic Influence": "Reflecting its nomadic heritage, Kyrgyz cuisine often features hearty dishes made from ingredients like meat (especially lamb and horse meat), dairy products (such as kymyz and airan), and grains (including rice and wheat). Yurts, traditional nomadic tents, may offer authentic dining experiences in rural areas.",
-                "Local Markets": "Visit local markets like Osh Bazaar in Bishkek to sample a variety of Kyrgyz dishes and snacks, including shashlik (grilled skewered meat), samsa (savory pastries), and plov (pilaf). These markets also offer an opportunity to purchase fresh fruits, nuts, and spices.",
-                "Teahouses and Cafes": "Teahouses (chaykhana) and cafes are ubiquitous in Kyrgyzstan, serving tea (chai) and coffee (kofe) alongside pastries, bread, and light meals. Enjoy the relaxed atmosphere and hospitality while savoring traditional Kyrgyz treats like baursak (fried dough) and kurut (dried yogurt balls).",
-                "International Cuisine": "In urban areas like Bishkek, you'll find a diverse range of international cuisines, including Russian, Chinese, Korean, and European. Explore trendy restaurants, bistros, and food courts for a taste of global flavors alongside Kyrgyz hospitality.",
-                "Street Food": "Venture into the streets of Kyrgyzstan to discover an array of street food vendors offering quick and flavorful snacks. Try popular street foods like somsas (fried or baked turnovers filled with meat or vegetables), fried laghman noodles, and grilled corn on the cob.",
-                "Food Tours and Cooking Classes": "Embark on food tours or join cooking classes to delve deeper into Kyrgyz cuisine and culinary traditions. Learn how to prepare traditional dishes, visit local farms and producers, and immerse yourself in the vibrant culinary scene of Kyrgyzstan."
-              },
-              "details": "For more information on Kyrgyz cuisine and dining options, refer to the provided guide."
-            },
-            "Safety": {
-              "title": "Safety in Kyrgyzstan | Travel Guide",
-              "Description": "Traveling to Kyrgyzstan is generally safe, but it's essential to be aware of potential risks and take necessary precautions. Here's what you need to know:",
-              "Options": {
-                "Political Stability": "Kyrgyzstan has experienced political instability in the past, including protests and occasional unrest. While most tourist areas remain unaffected, stay informed about local developments and avoid large gatherings or demonstrations.",
-                "Crime": "Petty crime such as pickpocketing and theft can occur, especially in crowded areas and tourist hotspots. Keep your belongings secure and be vigilant.",
-                "Terrorism": "The threat of terrorism in Kyrgyzstan is low, but travelers should remain vigilant, particularly in border areas. Follow any travel advisories issued by your government and stay informed.",
-                "Natural Hazards": "Kyrgyzstan is prone to natural hazards such as earthquakes, avalanches, and landslides, particularly in mountainous regions. Be prepared and follow safety guidelines, especially when trekking or engaging in outdoor activities.",
-                "Road Safety": "Road conditions in Kyrgyzstan can vary, and driving can be challenging, especially in rural areas. Exercise caution, adhere to local traffic laws, and consider hiring a reputable driver.",
-                "Health Risks": "While Kyrgyzstan does not pose significant health risks, travelers should be up to date on routine vaccinations and take precautions against food and waterborne illnesses.",
-                "Altitude Sickness": "Travelers visiting high-altitude areas should be aware of the risk of altitude sickness. Take time to acclimatize and avoid strenuous physical activity until your body adjusts.",
-                "Travel Insurance": "It's essential to have travel insurance that covers medical expenses, emergency evacuation, and trip cancellation/interruption. Make sure your insurance policy includes coverage for activities you plan to engage in."
-              },
-              "details": "For more detailed safety information and travel advisories, consult official government sources and travel guides."
-            },
-            "Prices": {
-              "title": "Prices in Kyrgyzstan | Travel Guide",
-              "Description": "Understanding the cost of living and expenses in Kyrgyzstan can help you plan your budget effectively. Here's an overview of prices for common items and services:",
-              "Options": {
-                "Accommodation": "The cost of accommodation in Kyrgyzstan varies depending on the type of lodging and location. Budget travelers can find affordable options such as guesthouses and hostels, while luxury hotels and resorts cater to those seeking upscale amenities. Prices range from as low as $10 per night for budget accommodations to over $100 per night for luxury establishments.",
-                "Food and Dining": "Dining out in Kyrgyzstan is generally affordable, especially at local eateries and street food stalls. Traditional dishes like beshbarmak and plov are inexpensive and filling, typically costing between $3 to $7 per meal at local restaurants. International cuisine and fine dining options may be pricier, with meals averaging $10 to $20 or more per person.",
-                "Transportation": "Transportation costs in Kyrgyzstan vary depending on the mode of travel and distance. Domestic flights between major cities like Bishkek and Osh can range from $50 to $150 or more, while shared taxis and marshrutkas (minibuses) offer budget-friendly options for shorter distances, typically costing $1 to $10 depending on the route. Renting a car can cost $30 to $100 or more per day, depending on the vehicle type and rental company.",
-                "Activities and Attractions": "The cost of activities and attractions in Kyrgyzstan varies widely depending on the experience. Entrance fees to museums, historical sites, and national parks are generally affordable, ranging from $1 to $10 per person. Guided tours, outdoor excursions, and adventure activities like horseback riding and trekking may incur additional costs, with prices varying based on duration and complexity.",
-                "Shopping": "Shopping in Kyrgyzstan offers a range of options, from traditional handicrafts and souvenirs to modern goods and electronics. Prices vary depending on the item and location, but bargaining is common in markets and bazaars. Be prepared to negotiate for the best price, especially when purchasing textiles, jewelry, and handmade crafts.",
-                "Currency and Exchange Rates": "The official currency of Kyrgyzstan is the Kyrgyzstani som (KGS). Exchange rates fluctuate, so it's advisable to check current rates before exchanging money. Major credit cards are accepted in larger cities and tourist areas, but it's recommended to carry cash for transactions in smaller towns and rural areas. (1$ = 85-90soms)"
-              },
-              "details": "For the most accurate and up-to-date information on prices in Kyrgyzstan, consult local sources and recent travel guides."
-            },
-            "Travel_Seasons": {
-              "title": "Travel Seasons in Kyrgyzstan | Travel Guide",
-              "Description": "Understanding the travel seasons in Kyrgyzstan can help you plan your trip and make the most of your visit. Here's an overview of the different seasons and what to expect:",
-              "Options": {
-                "Spring (March to May)": "Spring is a beautiful time to visit Kyrgyzstan, with the landscape coming to life as flowers bloom and rivers swell with melted snow. The weather is mild, making it ideal for outdoor activities like hiking, trekking, and horseback riding. However, be prepared for occasional rain showers, especially in April and May.",
-                "Summer (June to August)": "Summer is the peak tourist season in Kyrgyzstan, with long days, warm temperatures, and clear skies. It's the perfect time for outdoor adventures such as camping, mountain climbing, and exploring alpine lakes. Popular festivals and events take place during this time, including the World Nomad Games in September.",
-                "Autumn (September to November)": "Autumn is a stunning season in Kyrgyzstan, with landscapes painted in vibrant hues of red, orange, and gold as the leaves change color. The weather remains pleasant, making it an excellent time for trekking, wildlife spotting, and cultural experiences. September is an ideal month to visit for the World Nomad Games.",
-                "Winter (December to February)": "Winter transforms Kyrgyzstan into a winter wonderland, with snow-covered mountains and frozen lakes creating breathtaking scenery. While temperatures can drop below freezing, winter sports enthusiasts flock to ski resorts like Karakol and Jyrgalan for skiing, snowboarding, and ice skating. February marks the celebration of the traditional nomadic game, Kok Boru (Buzkashi)."
-              },
-              "details": "For more information on specific activities, events, and weather conditions during each season, consult travel guides and local tourism resources."
-            },
-            "FirstTimeInKyrgyzstan": {
-              "title": "First Time in Kyrgyzstan?",
-              "Description": "If you're visiting Kyrgyzstan for the first time, here's a comprehensive guide to help you make the most of your trip:",
-              "Options": {
-                "Arrival and Getting Around": "Most international travelers arrive at Manas International Airport in Bishkek. Taxis and buses are readily available for transportation into the city. Within Kyrgyzstan, you can use domestic flights, buses, marshrutkas (minibuses), and shared taxis to get around.",
-                "SIM Cards and Internet": "Staying connected in Kyrgyzstan is easy with a local SIM card. You can purchase SIM cards at the airport or from mobile network providers in the city. Major providers include Beeline, O!, and Megacom. Ensure your phone is unlocked before purchasing a SIM card. Internet coverage is generally good in cities and towns, but can be spotty in rural areas.",
-                "Internet Prices": "Internet prices in Kyrgyzstan are generally affordable. A basic data package of 1GB can cost around 100 KGS (approximately $1.20 USD), while larger packages, such as 10GB, might cost around 500 KGS (approximately $6 USD). Unlimited data plans for a month can range from 800 to 1500 KGS (approximately $9.50 to $18 USD) depending on the provider and the speed of the connection.",
-                "Currency and Payments": "The local currency is the Kyrgyzstani Som (KGS). ATMs are available in major cities, but it's advisable to carry cash in rural areas. Credit and debit cards are accepted in many places in cities, but less so in remote areas. Currency exchange services are available at airports, banks, and exchange offices.",
-                "Language": "Kyrgyz and Russian are the official languages. In major cities, you might find some English speakers, especially in tourist areas, but in rural regions, it's useful to know some basic Kyrgyz or Russian phrases. A translation app or phrasebook can be very helpful.",
-                "Health and Safety": "Kyrgyzstan is generally safe for travelers, but it's wise to take standard precautions. Drink bottled or boiled water to avoid waterborne illnesses. Ensure you have travel insurance that covers health and accidents. Emergency medical services are available in cities, but can be limited in rural areas.",
-                "Climate and Clothing": "Kyrgyzstan has a continental climate with cold winters and hot summers. In the mountains, temperatures can be significantly cooler, so pack accordingly. Layered clothing, sturdy walking shoes, and sun protection are recommended. In winter, bring warm clothing, including a good quality jacket, gloves, and hats.",
-                "Electricity and Plugs": "The standard voltage is 220V, and the frequency is 50Hz. Power plugs and sockets are of type C and F. It's advisable to bring a universal travel adapter to ensure you can charge your electronic devices."
-              },
-              "details": "For more detailed information and tips, refer to travel guides and local resources. Enjoy your first trip to Kyrgyzstan and make unforgettable memories!"
-            },
-            "TravelPreparation": {
-              "title": "Prepare for Your Travel to Kyrgyzstan",
-              "Description": "Ensure a smooth and enjoyable trip to Kyrgyzstan by taking care of these essential travel preparations.",
-              "Options": {
-                "Visa and Passport": "Check the visa requirements for your nationality and ensure your passport is valid for at least six months beyond your intended stay.",
-                "Health and Vaccinations": "Consult your healthcare provider for any required vaccinations or health precautions for traveling to Kyrgyzstan.",
-                "Travel Insurance": "Consider purchasing travel insurance to cover unexpected emergencies, such as medical expenses or trip cancellations.",
-                "Currency and Money Matters": "Familiarize yourself with the local currency (Kyrgyzstani Som) and exchange some money before your trip. ATMs are available in major cities.",
-                "Language": "While Russian and Kyrgyz are the official languages, English is not widely spoken. Consider learning some basic phrases in Russian or Kyrgyz.",
-                "Weather and Clothing": "Pack appropriate clothing for the weather conditions during your visit. Kyrgyzstan experiences hot summers and cold winters, so bring layers.",
-                "Safety and Security": "Stay informed about the current situation in Kyrgyzstan and exercise caution, especially in remote areas. Keep your belongings secure and be aware of your surroundings.",
-                "Cultural Etiquette": "Respect local customs and traditions, such as removing your shoes before entering someone's home and asking permission before taking photographs of people."
-              },
-              "details": "For additional travel tips and advice specific to your trip to Kyrgyzstan, refer to our comprehensive travel guide."
+            {
+              "text": "Tours",
+              "url": "/tours"
             }
+          ]
         },
-        "sights": {
-            "name":"Sights",
-            "title": "Most Beautiful Places in Kyrgyzstan!",
-            "subtitle":"Where to go in Kyrgyzstan?  Additionally, stay informed about weather conditions in cities and regional centers to make the most of your journey comfortable and be prepared for constantly changing weather of this beautiful country.",
-            "description": "Where to go in Kyrgyzstan? Here’s the full list of the most interesting, beautiful, and exciting places to visit in Kyrgyzstan, including famous landmarks in Kyrgyzstan and highlights, detailed info on how to get to all these places independently, their precise location details, stunning videos and images that capture the essence of each unique sight. Whether you're seeking adventure, relaxation, or cultural experience, our guide gives you all must-see sights of Kyrgyzstan.",
-            "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan",
-            "sights": "Where To Go!",
-            "must-see":{
-              "subtitle": "Must-See Destinations of Kyrgyzstan by regions",
-              "description1": "Kyrgyzstan is known for its beautiful natural landscapes, from majestic mountains to serene lakes. Here are some of the most beautiful places in each region:",
-              "chuyregion": "Chuy Region",
-              "alaarchatitle": "Ala Archa National Park:",
-              "alaarchadescription": "Offers breathtaking views and hiking trails.",
-              "buranatitle": "Burana Tower:",
-              "buranadescription": "A historical minaret with scenic valley views.",
-              "issykulregion": "Issyk-Kul Region",
-              "lakeissykkultitle": "Lake Issyk-Kul:",
-              "lakeissykkuldescription": "A large saline lake with beaches and resorts.",
-              "jetioguxtitle": "Jeti-Oguz:",
-              "jetioguzdescription": "Famous for its red rock formations.",
-              "karakoltitle": "Karakol:",
-              "karakoldescription": "Gateway to beautiful mountain sites like Altyn Arashan.",
-              "narynregion": "Naryn Region",
-              "tashrabattitle": "Tash Rabat:",
-              "tashrabatdescription": "A historic stone caravanserai in a picturesque valley.",
-              "sonkultitle": "Son-Kul Lake:",
-              "sonkuldescription": "A high-altitude lake with stunning sunsets.",
-              "jalalabadregion": "Jalal-Abad Region",
-              "sarychelextitle": "Sary-Chelek Biosphere Reserve:",
-              "sarychelekdescription": "Features pristine lakes and forests.",
-              "arslanbobtitle": "Arslanbob:",
-              "arslanbobdescription": "Home to the largest walnut forest and beautiful waterfalls.",
-              "oshregion": "Osh Region",
-              "sulaymanmountaintitle": "Sulayman Mountain:",
-              "sulaymanmountaindescription": "A sacred mountain with panoramic views.",
-              "alayvalleytitle": "Alay Valley:",
-              "alayvalleydescription": "Offers spectacular views of the Pamir Mountains.",
-              "batkenregion": "Batken Region",
-              "batkenvalleytitle": "Batken Valley:",
-              "batkenvalleydescription": "Known for its apricot trees and unique rock formations.",
-              "karakuljatitle": "Kara-Kulja:",
-              "karakuljadescription": "Features beautiful river valleys.",
-              "talasregion": "Talas Region",
-              "beshtashtitle": "Besh-Tash National Park:",
-              "beshtashdescription": "Has scenic rivers and alpine meadows.",
-              "manasordotitle": "Manas Ordo Complex:",
-              "manasordodescription": "A cultural site dedicated to the hero Manas."
-          },
-          "highlights":["How to Get to", "Transport","Where to Stay","What to Eat","What to Do", "Season"]
-        },
-        "tours": {
-          "name": "Tours",
-            "title": "Kyrgyzstan Private Tours & Tour Packages!",
-            "subtitle": "Private and Small Group Tours in Kyrgyzstan",
-            "description": "Craft your dream itinerary through Kyrgyzstan with a personalized touch. Our private tours offer the best flexibility, privacy, and a tailored itinerary, perfectly matching your preferences. Choose from adventure, Silk Road, cultural, horseback riding, and trekking tours for active trip, jeep tours for those who prefer comfort. If you could not find tour of your dream just let us know and let us guide you through an unforgettable experience in Kyrgyzstan.",
-            "description1":"Despite its small size, Kyrgyzstan is full of amazing places. Book a best Kyrgyzstan tour to discover the mountains, lakes, and valleys that make this country a top destination. Whether you’re an adventurer looking for a thrill or interested in exploring the rich culture and history of this small country, a Kyrgyzstan tour is best for those looking for something unequaled anywhere else.\r\n\r\nMany people come to Kyrgyzstan to visit the mountains, which makes sense, considering that 94% of Kyrgyzstan is covered in mountains. The massive Tian Shan range covers a lot of Kyrgyzstan, with its tallest peaks reaching over 7,000 m (22,965 ft). Nestled among the towering peaks are broad green valleys and crystal-clear lakes, with tumbling rivers that flow through fresh juniper forests. The broad green valleys are often used as summer pastures for herds of animals, and in the warmer months, are dotted with yurts and horses. Some of the lakes are too cold for swimming (like Son-Kul), but Issyk-Kul definitely isn’t. The sandy shores and alpine resorts around Issyk-Kul are must-visits on any best Kyrgyzstan tour, perfect for a moment of relaxation. Some people love adventure, and Kyrgyzstan offers plenty of horseback rides, rafting trips, ski resorts, and hikes, perfect for any adrenaline lover.\r\n\r\nThough the nature can tend to dominate, the best Kyrgyzstan tours don’t ignore the culture and history of this country. Spend a night in a yurt, a traditional home made of wood and felt and designed to be both sturdy and transportable. Learn about all of the textiles Kyrgyzstan is famous for, and listen to the famous komuz (a three-stringed instrument) or The Epic of Manas, the epic poem that is a spiritual foundation in modern Kyrgyzstan. And make sure to try beshbarmak (ground meat boiled with noodles) and kumis (fermented mare’s milk) to get a real taste of nomadic life.\r\n\r\nBased on years of experience, our best Kyrgyzstan tours combine all of the elements of Kyrgyzstan’s culture and landscape to introduce you to the entirety of this country. Travel with the best guides, stay at the best hotels, and eat at the best restaurants. Book a small group tour to Kyrgyzstan to save on money and planning, or schedule a private tour to fit your interests and schedule.",
-            "keywords": "Kyrgyzstan tours, Best Kyrgyzstan Tours, Trips in Kyrgyzstan, Best Kyrgyzstan Tours Companies, Travel Agency in Kyrgyzstan, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
-            "tourPage":{
-              "level": "Level",
-              "duration": "Duration",
-              "price": "Price",
-              "day": "Day",
-              "days": "Days",
-              "details": "Details of Tour",
-              "things":"Things we do",
-              "places":"Places we go",
-              "addInfo":"Additional information",
-              "includings":"Price includes",
-              "excludings":"Price excludes",
-              "from": "From",
-              "note":"Note",
-              "person":"Person",
-              "persons":"Persons",
-              "andMore":"and more"
+        {
+          "title": "Privacy and Legal",
+          "links": [
+            {
+              "text": "About Us",
+              "url": "/about"
             },
-            "TourPreparation": {
-              "title": "Essentials for Travel in Kyrgyzstan",
-              "Description": "A comprehensive list of essential items to bring on your trip to Kyrgyzstan to ensure comfort, safety, and preparedness for varying weather conditions and outdoor activities.",
-              "Options": {
-                "Shoes": "Bring comfortable walking shoes for city tours, sturdy hiking shoes for moderate hikes, durable hiking boots for trekking, and quick-drying sandals as an extra pair.",
-                "Hat":"Don't forget to pack a wide-brimmed hat or a sun cap with a neck flap to protect against the intense sun at high altitudes.",
-                "UV Cream":"Don't forget to pack high SPF broad-spectrum sunscreen to shield your skin from the intense UV rays, especially at higher elevations in Kyrgyzstan.",
-                "Clothing":"Pack appropriate clothing layers for varying temperatures and weather conditions, considering that temperatures can vary significantly with altitude changes. Be prepared for snow or rain, especially in mountainous areas.",
-                "Medical Aid":"Remember to carry personal medical aids such as necessary medications, band-aids, pain relievers, and any specific items for pre-existing medical conditions as precautions."
-              },
-              "overview": "Your comfort is our job, guiding us to constantly seek out ways to make your journey even more memorable and enjoyable."
+            {
+              "text": "Contact Us",
+              "url": "/contact"
+            },
+            {
+              "text": "Privacy Policy",
+              "url": "/privacy-policy"
             }
+          ]
         },
-        "articles": {
-            "name": "Articles",
-            "title": "Culture, Traditions, and Nature of Kyrgyzstan and Kyrgyz people",
-            "description": "Explore the rich culture, vibrant traditions, and breathtaking nature of Kyrgyzstan through these insightful stories. From ancient traditions like burkut hunting and kok-boru to the majestic Alabai dogs and the adventurous Taigan, delve into the heart of Kyrgyz culture.",
-            "keywords": ["Kyrgyz culture", "Kyrgyz traditions","Kyrgyz nature","Burkut hunting","Kok-boru","Alabai dogs","Taigan","Kyrgyz history","Central Asian culture","Nomadic heritage","Cultural exploration", "Traditional sports", "Sighthounds of Kyrgyzstan", "Cultural experiences","Adventure in Kyrgyzstan", "Heritage breeds","Cultural traditions","Unique experiences", "Kyrgyz lifestyle"]
-        },
-        "about": {
-            "title": "About Us",
-            "subtitle": "Who We Are?",
-            "description": "We are a team of enthusiastic individuals dedicated to providing you with exceptional experiences. Our passion fuels everything we do, as we pour our hearts into creating unforgettable moments for you. Join us on adventures of wonder and discover this beautiful country.",
-            "keywords": "About us, Our story, Kyrgyzstan enthusiasts, Travel passion, Exceptional experiences, Team, Values, Mission",
-            "buttons":{
-              "our_team": "Our Team",
-              "our_clients": "Our Clients",
-              "contact_us": "Contact Us"
-            }
-        },
-        "info":{
-            "seen":"Visits: ",
-            "created":"Created: ",
-            "modified":"Last modified: "
-        },
-        "download":{
-            "text": "Download our apps today and enjoy convenient access to our service on your mobile device! Simply click on the button!"
-        },
-        "footer": {
-            "sections": [
-              {
-                "title": "Useful Links",
-                "links": [
-                  {
-                    "text": "Home",
-                    "url": "/"
-                  },
-                  {
-                    "text": "Sights",
-                    "url": "/places"
-                  },
-                  {
-                    "text": "Tours",
-                    "url": "/tours"
-                  }
-                ]
-              },
-              {
-                "title": "Privacy and Legal",
-                "links": [
-                  {
-                    "text": "About Us",
-                    "url": "/about"
-                  },
-                  {
-                    "text": "Contact Us",
-                    "url": "/contact"
-                  },
-                  {
-                    "text": "Privacy Policy",
-                    "url": "/privacy-policy"
-                  }
-                ]
-              },
-              {
-                "title": "Contact Information",
-                "info": {
-                  "phone": "+996 500 490 806",
-                  "email": "anvarinho@gmail.com",
-                  "address": "Bishkek, Razzakov 49"
-                }
-              },
-              {
-                "title": "Social Accounts",
-                "links": [
-                    {
-                        "text": "@guidebookofkg",
-                        "icon":"instagram.svg",
-                        "url": "https://www.instagram.com/guidebookofkg"
-                    },
-                    {
-                        "text": "+996 500 490 806",
-                        "icon":"whatsapp.svg",
-                        "url": "https://wa.me/996500490806?text=Hello!!!"
-                    },
-                    {
-                        "text": "developer",
-                        "icon":"twitter.svg",
-                        "url": "https://anvarinho.github.io"
-                    }
-                ]
-              }
-            ]
+        {
+          "title": "Contact Information",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
           }
+        },
+        {
+          "title": "Social Accounts",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "developer",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
     }
+  }
 }
+
