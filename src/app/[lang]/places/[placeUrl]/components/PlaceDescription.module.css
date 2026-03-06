@@ -89,14 +89,16 @@
 }
 
 /* Highlight styling - just a simple yellow background */
-.container mark.highlight {
-  background-color: #fff3cd;
-  padding: 0.1rem 0.2rem;
+.container mark[class*="highlight"] {
+  background-color: var(--main-active-color);
+  padding: 0.2rem;
+  margin: 0.2rem;
   border-radius: 0.2rem;
+  animation: gentlePulse 3s infinite;
 }
 
 /* Dark mode support if needed */
-:global(.dark) .container mark.highlight {
+:global(.dark) .container mark[class*="highlight"] {
   background-color: #856404;
   color: #fff;
 }
@@ -108,7 +110,7 @@
     opacity: 1;
   }
   50% {
-    opacity: 0.95;
+    opacity: 0.8;
   }
 }
 
