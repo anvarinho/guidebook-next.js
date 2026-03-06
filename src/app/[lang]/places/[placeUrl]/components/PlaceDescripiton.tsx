@@ -1,4 +1,4 @@
-import styles from "./PlaceDescription.module.css";
+import styles from "../page.module.css";
 
 interface Props {
   text: string | { [key: string]: string };
@@ -84,7 +84,7 @@ function processDescription(content: string, highlights: string[]): string {
 
 export default function PlaceDescription({
   text,
-  highlights,
+  highlights = [],
   name,
   lang = "en",
 }: Props) {
