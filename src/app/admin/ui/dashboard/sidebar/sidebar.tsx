@@ -1,28 +1,30 @@
+export const dynamic = "force-dynamic";
+
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
 import styles from "./sidebar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faTachometerAlt, // Equivalent to MdDashboard
-    faUserCircle,    // Equivalent to MdSupervisedUserCircle
-    faShoppingBag,   // Equivalent to MdShoppingBag
-    faMoneyBillAlt,  // Equivalent to MdAttachMoney
-    faBriefcase,     // Equivalent to MdWork
-    faChartBar,      // Equivalent to MdAnalytics
-    faUsers,         // Equivalent to MdPeople
-    faCog,           // Equivalent to MdOutlineSettings
-    faQuestionCircle,// Equivalent to MdHelpCenter
-    faSignOutAlt,    // Equivalent to MdLogout
-    faGlobe,
-    faRoute,
-    faNewspaper
-  } from '@fortawesome/free-solid-svg-icons';
-  
+  faTachometerAlt, // Equivalent to MdDashboard
+  faUserCircle, // Equivalent to MdSupervisedUserCircle
+  faShoppingBag, // Equivalent to MdShoppingBag
+  faMoneyBillAlt, // Equivalent to MdAttachMoney
+  faBriefcase, // Equivalent to MdWork
+  faChartBar, // Equivalent to MdAnalytics
+  faUsers, // Equivalent to MdPeople
+  faCog, // Equivalent to MdOutlineSettings
+  faQuestionCircle, // Equivalent to MdHelpCenter
+  faSignOutAlt, // Equivalent to MdLogout
+  faGlobe,
+  faRoute,
+  faNewspaper,
+} from "@fortawesome/free-solid-svg-icons";
+
 // import { auth, signOut } from "@/app/auth";
 import { signOut } from "@/lib/auth";
 import React, { useEffect } from "react";
 import { readUser } from "@/app/admin/lib/data";
-import { cookies } from 'next/headers'
+import { cookies } from "next/headers";
 
 const menuItems = [
   {
@@ -36,7 +38,7 @@ const menuItems = [
       {
         title: "Users",
         path: "/admin/users",
-        icon: <FontAwesomeIcon icon={faUserCircle} size="sm"  />,
+        icon: <FontAwesomeIcon icon={faUserCircle} size="sm" />,
       },
       {
         title: "Articles",
@@ -51,7 +53,7 @@ const menuItems = [
       {
         title: "Tours",
         path: "/admin/tours",
-        icon: <FontAwesomeIcon icon={faRoute} size="sm"  />,
+        icon: <FontAwesomeIcon icon={faRoute} size="sm" />,
       },
       // {
       //   title: "Transactions",
@@ -71,7 +73,7 @@ const menuItems = [
       {
         title: "Reports",
         path: "/admin/reports",
-        icon: <FontAwesomeIcon icon={faChartBar} size="sm"  />,
+        icon: <FontAwesomeIcon icon={faChartBar} size="sm" />,
       },
       // {
       //   title: "Teams",
@@ -98,10 +100,10 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-  const cookieStore = cookies()
-  const userID = cookieStore.get('userID')?.value || null
-  const isAdmin = cookieStore.get('isAdmin')?.value || null
-  const user = isAdmin ? await readUser(userID) : ""
+  const cookieStore = cookies();
+  const userID = cookieStore.get("userID")?.value || null;
+  const isAdmin = cookieStore.get("isAdmin")?.value || null;
+  const user = isAdmin ? await readUser(userID) : "";
   // console.log(user)
   return (
     <div className={styles.container}>
@@ -135,7 +137,7 @@ const Sidebar = async () => {
         }}
       >
         <button className={styles.logout}>
-        <FontAwesomeIcon icon={faSignOutAlt} size="sm"/>
+          <FontAwesomeIcon icon={faSignOutAlt} size="sm" />
           Logout
         </button>
       </form>
@@ -144,3 +146,4 @@ const Sidebar = async () => {
 };
 
 export default Sidebar;
+

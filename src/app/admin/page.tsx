@@ -1,16 +1,15 @@
 import { cards } from "./lib/data";
-import Card from './ui/dashboard/card/card'
-import Rightbar from './ui/dashboard/rightbar/rightbar'
+export const dynamic = "force-dynamic";
+import Card from "./ui/dashboard/card/card";
+import Rightbar from "./ui/dashboard/rightbar/rightbar";
 // import Chart from "./ui/dashboard/chart/chart";
-import styles from './dashboard.module.css'
-
+import styles from "./dashboard.module.css";
 
 export default async function Home() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>
         <div className={styles.cards}>
-          
           {cards.map((item) => (
             <Card item={item} key={item.id} />
           ))}
@@ -23,7 +22,7 @@ export default async function Home() {
         <Rightbar />
       </div>
     </div>
-  )
+  );
 }
 
 // export default function Page() {
