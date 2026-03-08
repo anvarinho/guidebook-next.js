@@ -11,21 +11,158 @@ interface Props {
 function processDescription(content: string, highlights: string[]): string {
   let html = content;
 
+  // FIRST: Convert markdown images to HTML img tags (do this before any other processing)
+  const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+  html = html.replace(imageRegex, (match, alt, src) => {
+    console.log("Found image:", { alt, src }); // Debug log
+    // Clean the src URL
+    let cleanSrc = src;
+    if (
+      !src.startsWith("http://") &&
+      !src.startsWith("https://") &&
+      !src.startsWith("/")
+    ) {
+      cleanSrc = `/${src}`;
+    }
+    return `<img src="${cleanSrc}" alt="${alt}" class="${styles.markdownImage}" loading="lazy" />`;
+  });
+
   // Sort highlights by length (longest first) to avoid partial matches
   const sortedHighlights = [...highlights].sort((a, b) => b.length - a.length);
 
-  // Apply highlights to plain text
+  // Apply highlights to plain text using tag protection method
   sortedHighlights.forEach((highlight) => {
     if (!highlight.trim()) return;
 
     // Escape special regex characters
     const escapedHighlight = highlight.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-    // Create pattern that matches the highlight as a whole word
-    const regex = new RegExp(`(?<!\\w)(${escapedHighlight})(?!\\w)`, "gi");
+    // First, temporarily protect HTML tags by replacing them with placeholders
+    const tagPlaceholders: { [key: string]: string } = {};
+    let tagCounter = 0;
 
-    // Replace with mark that has highlight class
-    html = html.replace(regex, `<mark class="${styles.highlight}">$1</mark>`);
+    // Replace all HTML tags with placeholders
+    let tempHtml = html.replace(/<[^>]*>/g, (match) => {
+      const placeholder = `§§TAG_${tagCounter}§§`;
+      tagPlaceholders[placeholder] = match;
+      tagCounter++;
+      return placeholder;
+    });
+
+    // Apply highlights to the text (now safe from HTML tags)
+    const wordBoundaryRegex = new RegExp(
+      `(?<!\\w)(${escapedHighlight})(?!\\w)`,
+      "gi",
+    );
+    tempHtml = tempHtml.replace(
+      wordBoundaryRegex,
+      `<mark class="${styles.highlight}">$1</mark>`,
+    );
+
+    // Restore HTML tags
+    html = tempHtml.replace(
+      /§§TAG_\d+§§/g,
+      (match) => tagPlaceholders[match] || match,
+    );
+  });
+
+  // First, protect existing HTML tables from markdown conversion
+  const tablePlaceholders: string[] = [];
+  html = html.replace(/<table[\s\S]*?<\/table>/g, (match) => {
+    tablePlaceholders.push(match);
+    return `§§TABLE_${tablePlaceholders.length - 1}§§`;
+  });
+
+  // Convert markdown tables to HTML tables
+  const markdownTableRegex = /^\|(.+)\|\n\|([-\s|]+)\|\n(\|.+\|\n?)+/gm;
+  html = html.replace(markdownTableRegex, (match) => {
+    const lines = match.trim().split("\n");
+    const headers = lines[0]
+      .split("|")
+      .filter((cell) => cell.trim() !== "")
+      .map((cell) => cell.trim());
+    const rows = lines.slice(2).map((line) =>
+      line
+        .split("|")
+        .filter((cell) => cell.trim() !== "")
+        .map((cell) => cell.trim()),
+    );
+
+    // Single wrapper div for centering with no extra margins
+    let tableHtml =
+      '<div style="display: flex; justify-content: center; width: 100%;">';
+    tableHtml += '<table class="' + styles.table + '">';
+
+    // Headers
+    tableHtml += "<thead><tr>";
+    headers.forEach((header) => {
+      tableHtml += `<th class="${styles.tableHeader}">${header}</th>`;
+    });
+    tableHtml += "</tr></thead>";
+
+    // Body
+    tableHtml += "<tbody>";
+    rows.forEach((row) => {
+      tableHtml += "<tr>";
+      row.forEach((cell) => {
+        tableHtml += `<td class="${styles.tableCell}">${cell}</td>`;
+      });
+      tableHtml += "</tr>";
+    });
+    tableHtml += "</tbody>";
+
+    tableHtml += "</table></div>";
+
+    return tableHtml;
+  });
+
+  // Convert markdown links
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  html = html.replace(linkRegex, (match, text, url) => {
+    // Check if it's an internal link (no http/https)
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      return `<a href="/places/${url}" class="${styles.link}">${text}</a>`;
+    }
+    // External link
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="${styles.link}">${text}</a>`;
+  });
+
+  // Restore protected HTML tables
+  html = html.replace(/§§TABLE_(\d+)§§/g, (_, index) => {
+    return tablePlaceholders[parseInt(index)];
+  });
+
+  // Process blockquotes to separate citation and author
+  const blockquoteRegex = /<blockquote>([\s\S]*?)<\/blockquote>/g;
+  html = html.replace(blockquoteRegex, (match, content) => {
+    // Split by lines
+    const lines = content
+      .split("\n")
+      .filter((line: string) => line.trim() !== "");
+
+    if (lines.length >= 2) {
+      // First line is the citation, last line is the author
+      const citation = lines[0].trim();
+      const author = lines[lines.length - 1].trim();
+
+      // Check if author contains a dash (—) for formatting
+      const authorFormatted = author.includes("—")
+        ? author.replace(
+            "—",
+            '<span class="' + styles.authorDash + '">—</span>',
+          )
+        : author;
+
+      return `
+        <blockquote class="${styles.testimonial}">
+          <div class="${styles.citation}">${citation}</div>
+          <div class="${styles.author}">${authorFormatted}</div>
+        </blockquote>
+      `;
+    }
+
+    // If only one line, return as is
+    return match;
   });
 
   // Convert markdown syntax to HTML (using native HTML elements)
@@ -47,7 +184,7 @@ function processDescription(content: string, highlights: string[]): string {
     // Horizontal rule
     .replace(/^---$/gm, `<hr />`)
 
-    // Blockquotes
+    // Blockquotes (already processed above, but keep for single-line quotes)
     .replace(/^> (.*$)/gm, `<blockquote>$1</blockquote>`)
 
     // List items - handle emoji lists specially
@@ -74,10 +211,13 @@ function processDescription(content: string, highlights: string[]): string {
     })
 
     // Paragraphs - wrap remaining text
-    .replace(/^(?!<h2|<h3|<h4|<h5|<blockquote|<div|<hr).+$/gm, (match) => {
-      if (!match.trim() || match.startsWith("<")) return match;
-      return `<p>${match}</p>`;
-    });
+    .replace(
+      /^(?!<h2|<h3|<h4|<h5|<blockquote|<div|<hr|<p|<table|<a|<img).+$/gm,
+      (match) => {
+        if (!match.trim() || match.startsWith("<")) return match;
+        return `<p>${match}</p>`;
+      },
+    );
 
   return html;
 }
@@ -94,7 +234,9 @@ export default function PlaceDescription({
       ? text
       : text[lang] || text.en || Object.values(text)[0] || "";
 
+  console.log("Original content:", content.substring(0, 200)); // Debug log
   const processedHtml = processDescription(content, highlights);
+  console.log("Processed HTML:", processedHtml.substring(0, 200)); // Debug log
 
   return (
     <div

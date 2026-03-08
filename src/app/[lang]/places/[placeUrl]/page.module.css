@@ -262,3 +262,144 @@ html[lang="ae"] .main p {
   font-style: italic;
 }
 
+/* Table styles - perfectly centered with no extra spacing */
+.table {
+  border-collapse: collapse;
+  margin: 0.5rem auto 1rem auto; /* top: 0.5rem, auto left/right for centering, bottom: 1rem */
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+  padding: 0.6rem 1rem;
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #111827;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.table td {
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Dark mode support */
+:global(.dark) .table {
+  border-color: #374151;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .table th {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-bottom-color: #4b5563;
+}
+
+:global(.dark) .table td {
+  color: #d1d5db;
+  border-bottom-color: #374151;
+}
+
+/* Link styles */
+.link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #1d4ed8;
+}
+
+:global(.dark) .link {
+  color: #60a5fa;
+}
+
+:global(.dark) .link:hover {
+  color: #93c5fd;
+}
+
+/* Add this to your page.module.css */
+
+/* Remove all custom styling - back to native HTML defaults */
+.container blockquote {
+  all: revert;
+  margin: 1.5rem 0;
+  padding: 0 0 0 1rem;
+}
+
+.container blockquote em {
+  all: revert;
+  display: inline;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Target the author text - it's the text node after em */
+.container blockquote {
+  font-weight: 700;
+}
+
+/* Make the text after em bold - this targets the author */
+.container blockquote em + br + *,
+.container blockquote em + * {
+  font-weight: 700 !important;
+  display: inline;
+}
+
+/* Add dash before author */
+.container blockquote em + br + *::before,
+.container blockquote em + *::before {
+  content: "—";
+  margin-right: 4px;
+}
+
+/* Hide line breaks */
+.container blockquote br {
+  display: none;
+}
+
+/* Make sure images are visible */
+.markdownImage {
+  max-width: 100%;
+  height: auto;
+  display: block !important;
+  margin: 1.5rem auto !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure container doesn't hide images */
+.container {
+  max-width: 100%;
+  line-height: 1.6;
+  overflow: visible !important;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
