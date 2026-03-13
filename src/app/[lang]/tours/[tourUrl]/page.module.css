@@ -153,3 +153,160 @@
         grid-template-columns: repeat(1, 1fr);
     } */
 }
+
+/* Tour Container - exactly matching the minimalist style */
+.tourContainer {
+  max-width: 100%;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+/* Native HTML heading styles - just spacing */
+.tourContainer h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.tourContainer h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tourContainer h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.tourContainer h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Paragraph spacing */
+.tourContainer p {
+  margin-bottom: 1rem;
+}
+
+/* List items - no bullets/dots */
+.tourContainer .listItem {
+  margin-bottom: 0.75rem;
+  padding-left: 0;
+}
+
+/* Emoji list items - no bullets, emoji as marker */
+.tourContainer .emojiItem {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.tourContainer .emoji {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Remove any default list styling */
+.tourContainer ul,
+.tourContainer ol {
+  margin: 1rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.tourContainer li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+/* Blockquote styling - minimal */
+.tourContainer blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* Horizontal rule */
+.tourContainer hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid currentColor;
+}
+
+/* Keep links native with underline */
+.tourContainer a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+
+.tourContainer a:hover {
+  text-decoration: none;
+}
+
+/* Strong and em stay native */
+.tourContainer strong {
+  font-weight: bold;
+}
+
+.tourContainer em {
+  font-style: italic;
+}
+
+/* Table styles - exactly matching your .table style but without colors */
+.tourContainer table {
+  border-collapse: collapse;
+  margin: 0.5rem auto 1rem auto;
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tourContainer th,
+.tourContainer td {
+  padding: 0.6rem 1rem;
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tourContainer th {
+  font-weight: 600;
+}
+
+.tourContainer td {
+}
+
+.tourContainer tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Link styles - inherit colors from parent */
+.tourContainer .link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+}
+
+/* Dark mode - remove all color overrides */
+:global(.dark) .tourContainer table,
+:global(.dark) .tourContainer th,
+:global(.dark) .tourContainer td,
+:global(.dark) .tourContainer .link,
+:global(.dark) .tourContainer .link:hover {
+  /* No color changes - inherits from parent */
+}
