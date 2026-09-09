@@ -1,0 +1,2387 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Manrope:wght@400;500;600;700&display=swap");
+
+/* Original scene styles, scoped to the home-page intro. */
+
+html.intro-loading,
+html.intro-loading body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  scroll-behavior: auto;
+}
+
+.kyrgyz-intro {
+  --night: #0d1b26;
+  --dusk: #223b4c;
+  --slate: #3c5b68;
+  --glacier: #8bb8bc;
+  --clay: #b25e34;
+  --ember: #d99648;
+  --felt: #efe6d2;
+  --felt-dim: #d9cfb8;
+  --juniper: #44573f;
+  --juniper-deep: #2c3c29;
+  --ink: #0c1512;
+  --sand: #c9a06a;
+  --intro-display-font: "Fraunces", serif;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.kyrgyz-intro * {
+  box-sizing: border-box;
+}
+.kyrgyz-intro {
+  scroll-behavior: smooth;
+}
+.kyrgyz-intro {
+  margin: 0;
+  background: var(--night);
+  color: var(--felt);
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.kyrgyz-intro h1,
+.kyrgyz-intro h2,
+.kyrgyz-intro h3 {
+  font-family: var(--intro-display-font);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.kyrgyz-intro p {
+  margin: 0;
+}
+.kyrgyz-intro a {
+  color: inherit;
+}
+.kyrgyz-intro ::selection {
+  background: var(--clay);
+  color: var(--felt);
+}
+
+.kyrgyz-intro .page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  background: rgba(27, 62, 50, 0.58);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: auto;
+  animation: intro-loader-failsafe 0s 5s forwards;
+  transition:
+    opacity 0.7s var(--ease),
+    visibility 0.7s var(--ease);
+}
+.kyrgyz-intro .page-loader.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.kyrgyz-intro.intro-enhanced .page-loader {
+  animation: none;
+}
+.kyrgyz-intro .page-loader.done .page-loader-mark {
+  transform: scale(1.4);
+  opacity: 0;
+}
+.kyrgyz-intro .page-loader.done .page-loader-emblem {
+  animation-play-state: paused;
+}
+@keyframes intro-loader-failsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.kyrgyz-intro .page-loader-mark {
+  position: relative;
+  width: min(62vw, 260px);
+  aspect-ratio: 1.5;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.22));
+  transform: scale(1);
+  opacity: 1;
+  transition:
+    transform 0.7s var(--ease),
+    opacity 0.7s var(--ease);
+}
+.kyrgyz-intro .page-loader-emblem {
+  position: absolute;
+  inset: 0;
+  animation: intro-flag-arrival 1.25s cubic-bezier(0.2, 0.7, 0.2, 1) infinite
+    alternate;
+}
+.kyrgyz-intro .page-loader-brush {
+  position: absolute;
+  inset: -55% -50%;
+  width: 200%;
+  height: 210%;
+  object-fit: contain;
+}
+.kyrgyz-intro .page-loader-flag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34%;
+  height: 51%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+@keyframes intro-flag-arrival {
+  from {
+    opacity: 0.45;
+    transform: translateY(10px) scale(0.84);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-8px) scale(1);
+  }
+}
+
+.kyrgyz-intro :focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
+
+/* ---------- layout helpers ---------- */
+.kyrgyz-intro .section {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  perspective: 1200px;
+}
+.kyrgyz-intro .layers {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.kyrgyz-intro .layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translate3d(
+    var(--parallax-x, 0px),
+    var(--parallax-y, 0px),
+    0
+  );
+  will-change: transform;
+}
+.kyrgyz-intro .content-wrap {
+  position: relative;
+  z-index: 5;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 6vw 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.kyrgyz-intro .reveal {
+  opacity: 1;
+  transform: none;
+}
+.kyrgyz-intro.intro-enhanced:not(.is-ready) .section:not(.hero) .reveal {
+  opacity: 0 !important;
+  transform: none !important;
+  animation: none !important;
+}
+.kyrgyz-intro.reveal-ready .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translate3d(0, 42px, 0);
+}
+.kyrgyz-intro .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  animation: intro-rise-in 0.75s var(--d, 0s) both;
+}
+@keyframes intro-rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes intro-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes intro-slide-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-56px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.kyrgyz-intro .eyebrow-fact.reveal.is-visible,
+.kyrgyz-intro .cta-kicker.reveal.is-visible {
+  animation-name: intro-slide-left;
+  animation-duration: 0.6s;
+}
+.kyrgyz-intro .hero-award.reveal.is-visible,
+.kyrgyz-intro .hero-stats.reveal.is-visible,
+.kyrgyz-intro .lake-facts.reveal.is-visible,
+.kyrgyz-intro .manas-meta.reveal.is-visible,
+.kyrgyz-intro .nomadic-meta.reveal.is-visible,
+.kyrgyz-intro .bishkek-highlights.reveal.is-visible,
+.kyrgyz-intro .cta-btn.reveal.is-visible {
+  animation-name: intro-scale-in;
+  animation-duration: 0.65s;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.kyrgyz-intro .section h2,
+.kyrgyz-intro .cta h2 {
+  text-wrap: balance;
+}
+.kyrgyz-intro .section p.reveal,
+.kyrgyz-intro .cta p.reveal {
+  text-wrap: pretty;
+}
+@keyframes intro-hero-intro {
+  from {
+    opacity: 0;
+    filter: blur(9px);
+    transform: translate3d(0, 44px, 0) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+.kyrgyz-intro .hero .reveal.is-visible {
+  animation: none;
+}
+/* Keep text hidden from the first paint until the loader has finished fading.
+   Match the loader failsafe when JavaScript cannot initialize. */
+.kyrgyz-intro .hero-content {
+  visibility: hidden;
+  animation: intro-content-failsafe 0s 5s forwards;
+}
+.kyrgyz-intro.intro-enhanced .hero-content {
+  animation: none;
+}
+.kyrgyz-intro.is-ready .hero-content {
+  visibility: visible;
+}
+@keyframes intro-content-failsafe {
+  to { visibility: visible; }
+}
+.kyrgyz-intro.is-ready .hero .reveal.is-visible {
+  animation: intro-hero-intro 1.15s var(--ease) both;
+  animation-delay: calc(0.18s + var(--d, 0s));
+}
+
+.kyrgyz-intro .journey-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--ember);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 101;
+  pointer-events: none;
+}
+.kyrgyz-intro .skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 201;
+  padding: 0.75rem 1rem;
+  background: var(--felt);
+  color: var(--ink);
+  transform: translateY(-160%);
+}
+.kyrgyz-intro .skip-link:focus {
+  transform: none;
+}
+.kyrgyz-intro .section-dots {
+  position: fixed;
+  z-index: 90;
+  top: 50%;
+  right: 20px;
+  display: grid;
+  gap: 2px;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 1px 3px rgba(5, 14, 18, 0.72));
+}
+.kyrgyz-intro .section-dots button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+.kyrgyz-intro .section-dots button::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  transition:
+    height 0.3s var(--ease),
+    background 0.3s var(--ease);
+}
+.kyrgyz-intro .section-dots button.active::before {
+  height: 22px;
+  background: var(--ember);
+}
+.kyrgyz-intro .section-dot-label {
+  position: absolute;
+  right: 34px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 4px;
+  background: var(--night);
+  color: var(--felt);
+  white-space: nowrap;
+  font:
+    600 0.7rem "Manrope",
+    sans-serif;
+  opacity: 0;
+  pointer-events: none;
+}
+.kyrgyz-intro .section-dots button:hover .section-dot-label,
+.kyrgyz-intro .section-dots button:focus-visible .section-dot-label {
+  opacity: 1;
+}
+@media (max-width: 760px) {
+}
+
+/* =========================================================
+     HERO
+  ========================================================= */
+.kyrgyz-intro .hero {
+  background: linear-gradient(
+    180deg,
+    #0a1620 0%,
+    #1b4255 48%,
+    #766044 72%,
+    #a56d29 100%
+  );
+}
+
+.kyrgyz-intro .hero .sky-glow {
+  top: -10%;
+  height: 70%;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(217, 150, 72, 0.35),
+    transparent 60%
+  );
+}
+.kyrgyz-intro .stars {
+  top: 0;
+  height: 55%;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20% 20%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 60% 10%, #fff, transparent),
+    radial-gradient(1px 1px at 80% 35%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 45%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 90% 15%, #fff, transparent),
+    radial-gradient(1px 1px at 10% 55%, #fff, transparent);
+  opacity: 0.5;
+}
+.kyrgyz-intro .sun {
+  top: 12%;
+  left: 64%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--ember) 0%,
+    rgba(217, 150, 72, 0.15) 70%,
+    transparent 75%
+  );
+  box-shadow: 0 0 90px 20px rgba(217, 150, 72, 0.25);
+}
+.kyrgyz-intro .peak-far {
+  left: -14%;
+  right: -14%;
+  top: 0;
+  bottom: auto;
+  height: min(56vh, 560px);
+  background: url("/intro/sky-clouds-hero.png") center 12% / 118% 118% no-repeat;
+  filter: saturate(0.82) contrast(1.06);
+  opacity: 1;
+}
+.kyrgyz-intro .peak-mid {
+  left: -14%;
+  right: -14%;
+  bottom: 17%;
+  height: min(48vw, 500px);
+  background: url("/intro/mountain-midground-v3.png") center bottom / 100% 100%
+    no-repeat;
+  filter: saturate(0.9) contrast(1.03);
+  z-index: 1;
+}
+.kyrgyz-intro .peak-near {
+  left: -14%;
+  right: -14%;
+  bottom: -20%;
+  height: min(42vw, 450px);
+  background: url("/intro/mountain-foreground-v3.png") center bottom / 100% 100%
+    no-repeat;
+  filter: saturate(0.88) contrast(1.05);
+  z-index: 2;
+}
+.kyrgyz-intro .snowcap {
+  bottom: 0;
+  height: 40%;
+  background: transparent;
+  clip-path: polygon(10% 52%, 14% 46%, 18% 52%, 12% 56%);
+}
+.kyrgyz-intro .hero-birds {
+  top: 30%;
+  height: 20%;
+  z-index: 4;
+  pointer-events: none;
+}
+.kyrgyz-intro .hero-bird-foreground {
+  top: 0;
+  height: 100%;
+  z-index: 6;
+  pointer-events: none;
+}
+.kyrgyz-intro .hero-content {
+  width: min(950px, 92%);
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+.kyrgyz-intro .hero .content-wrap {
+  display: grid;
+  min-height: 100svh;
+  height: auto;
+  padding-block: 2rem;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .kyrgyz-intro .peak-far {
+    height: 68svh;
+    background-size: auto 118%;
+  }
+  .kyrgyz-intro .peak-mid {
+    bottom: 20%;
+    height: 34svh;
+    background-size: auto 100%;
+  }
+  .kyrgyz-intro .peak-near {
+    bottom: -2%;
+    height: 32svh;
+    background-size: auto 100%;
+  }
+}
+.kyrgyz-intro .hero h1 {
+  margin: 22px 0;
+  font-size: clamp(3.8rem, 8.5vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  color: var(--felt);
+  text-align: center;
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.78),
+    0 18px 42px rgba(0, 0, 0, 0.42);
+}
+.kyrgyz-intro .hero-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid rgba(240, 210, 122, 0.7);
+  border-radius: 999px;
+  color: #f0d27a;
+  background: rgba(16, 42, 44, 0.5);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+.kyrgyz-intro .hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 19px;
+  color: #f0d27a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.kyrgyz-intro .hero-kicker::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+}
+.kyrgyz-intro .hero-tagline {
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  font:
+    400 clamp(1.1rem, 2vw, 1.45rem) / 1.55 var(--intro-display-font);
+  line-height: 1.55;
+  color: #fff;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #0a1620,
+    -1px -1px 0 #0a1620,
+    0 3px 12px rgba(0, 0, 0, 0.72);
+}
+.kyrgyz-intro .hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  width: min(800px, 100%);
+  max-width: 800px;
+  margin-top: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 8px;
+}
+.kyrgyz-intro .hero-stat {
+  min-width: 130px;
+  padding: 17px 20px;
+}
+.kyrgyz-intro .hero-stat strong,
+.kyrgyz-intro .hero-stat span {
+  display: block;
+}
+.kyrgyz-intro .hero-stat strong {
+  color: #f0d27a;
+  font:
+    600 1.55rem var(--intro-display-font);
+}
+.kyrgyz-intro .hero-stat span {
+  font-size: 0.57rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+.kyrgyz-intro .scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--felt-dim);
+}
+.kyrgyz-intro .scroll-cue .line {
+  width: 1px;
+  height: 34px;
+  background: rgba(239, 230, 210, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.kyrgyz-intro .scroll-cue .line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -40%;
+  width: 100%;
+  height: 40%;
+  background: var(--ember);
+  animation: intro-cueDrop 1.8s ease-in-out infinite;
+}
+@keyframes intro-cueDrop {
+  0% {
+    top: -40%;
+  }
+  60% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* bird svg */
+.kyrgyz-intro .bird {
+  position: absolute;
+  width: 88px;
+  opacity: 0.78;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.22));
+}
+.kyrgyz-intro .hero-bird-foreground .bird {
+  width: 118px;
+}
+.kyrgyz-intro .bird svg,
+.kyrgyz-intro .bird img {
+  width: 100%;
+  display: block;
+}
+.kyrgyz-intro .bird img,
+.kyrgyz-intro .eagle img {
+  height: auto;
+  animation: intro-eagleGlide 2.6s ease-in-out infinite alternate;
+}
+.kyrgyz-intro .eagle-right {
+  transform: scaleX(-1);
+}
+.kyrgyz-intro .bird-fly {
+  animation: intro-flyAcross linear infinite;
+}
+.kyrgyz-intro .eagle-wing {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: intro-wingBeat 1.15s ease-in-out infinite alternate;
+}
+.kyrgyz-intro .eagle-wing--right {
+  animation-delay: -0.57s;
+}
+@keyframes intro-wingBeat {
+  from {
+    transform: rotate(-7deg) scaleY(0.96);
+  }
+  to {
+    transform: rotate(8deg) scaleY(1.04);
+  }
+}
+@keyframes intro-eagleGlide {
+  from {
+    transform: translateY(2px) rotate(-1.5deg) scale(0.98);
+  }
+  to {
+    transform: translateY(-4px) rotate(1.5deg) scale(1.02);
+  }
+}
+@keyframes intro-flyAcross {
+  0% {
+    transform: translateX(-10vw) translateY(0);
+  }
+  50% {
+    transform: translateX(55vw) translateY(-30px);
+  }
+  100% {
+    transform: translateX(110vw) translateY(10px);
+  }
+}
+
+/* =========================================================
+     ISSYK-KUL LAKE
+  ========================================================= */
+.kyrgyz-intro .lake {
+  background: url("/intro/issyk-cartoon-sky.png") center / cover fixed no-repeat;
+  perspective: none;
+}
+.kyrgyz-intro .lake::before {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(236, 244, 237, 0) 35%,
+    rgba(236, 244, 237, 0.16) 60%,
+    rgba(236, 244, 237, 0.48) 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+.kyrgyz-intro .lake .layers {
+  z-index: 1;
+}
+.kyrgyz-intro .issyk-mountains {
+  right: -14%;
+  bottom: 18%;
+  left: -14%;
+  z-index: 1;
+  height: max(76svh, 48vw);
+  background: url("/intro/issyk-cartoon-mountains.png") center bottom / auto 100%
+    no-repeat;
+}
+.kyrgyz-intro .issyk-lakefront {
+  right: -11%;
+  bottom: -14%;
+  left: -11%;
+  z-index: 2;
+  height: max(105svh, 68vw);
+  background: url("/intro/issyk-cartoon-lake.png") center bottom / auto 100%
+    no-repeat;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scale(var(--parallax-scale, 1));
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .lake-ship {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  z-index: 3;
+  width: min(15vw, 190px);
+  pointer-events: none;
+  filter: drop-shadow(0 9px 7px rgba(4, 19, 24, 0.28));
+}
+.kyrgyz-intro .lake-ship img {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: intro-lake-float 5.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes intro-lake-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.7deg);
+  }
+  50% {
+    transform: translate3d(12px, -7px, 0) rotate(0.7deg);
+  }
+}
+.kyrgyz-intro .lake .content-wrap {
+  min-height: 100svh;
+  justify-content: flex-end;
+  z-index: 6;
+}
+.kyrgyz-intro .lake-copy {
+  position: relative;
+  margin-left: auto;
+  max-width: 510px;
+  padding: 2.2rem;
+  text-align: left;
+  text-shadow: 0 2px 10px rgba(7, 25, 31, 0.72);
+}
+.kyrgyz-intro .lake-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-top: 1.8rem;
+}
+.kyrgyz-intro .lake-fact {
+  padding: 0.8rem 0.55rem;
+  color: #13271d;
+  text-shadow: none;
+  font-size: 0.69rem;
+  line-height: 1.35;
+}
+.kyrgyz-intro .lake-fact strong {
+  display: block;
+  margin-bottom: 0.22rem;
+  color: #74441b;
+  font-size: 0.9rem;
+}
+.kyrgyz-intro .eyebrow-fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.8rem;
+  color: var(--ember);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.kyrgyz-intro .eyebrow-fact::before,
+.kyrgyz-intro .cta-kicker::before {
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+.kyrgyz-intro .lake-copy h2,
+.kyrgyz-intro .steppe-copy h2,
+.kyrgyz-intro .peaks-copy h2,
+.kyrgyz-intro .silk-copy h2,
+.kyrgyz-intro .manas-copy h2 {
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  margin-bottom: 1.1rem;
+}
+.kyrgyz-intro .lake-copy h2 {
+  color: #13271d;
+  text-shadow: none;
+}
+.kyrgyz-intro .lake-copy p,
+.kyrgyz-intro .steppe-copy p,
+.kyrgyz-intro .peaks-copy p,
+.kyrgyz-intro .silk-copy p,
+.kyrgyz-intro .manas-copy p,
+.kyrgyz-intro .nomadic-copy p,
+.kyrgyz-intro .cta p.lead {
+  max-width: 62ch;
+  line-height: 1.7;
+  color: var(--felt-dim);
+  font-size: 1.02rem;
+}
+.kyrgyz-intro .hero-tagline,
+.kyrgyz-intro .lake-copy p,
+.kyrgyz-intro .steppe-copy p,
+.kyrgyz-intro .peaks-copy p,
+.kyrgyz-intro .silk-copy p,
+.kyrgyz-intro .manas-copy p,
+.kyrgyz-intro .nomadic-copy p,
+.kyrgyz-intro .cta p.lead {
+  padding: 1rem 1.1rem;
+  background: rgba(243, 235, 210, 0.34);
+  backdrop-filter: blur(3px);
+}
+.kyrgyz-intro .lake-copy p::first-letter,
+.kyrgyz-intro .steppe-copy p::first-letter,
+.kyrgyz-intro .peaks-copy p::first-letter,
+.kyrgyz-intro .silk-copy p::first-letter,
+.kyrgyz-intro .manas-copy p::first-letter,
+.kyrgyz-intro .nomadic-copy p::first-letter,
+.kyrgyz-intro .cta p.lead::first-letter {
+  float: left;
+  margin: 0.12em 0.12em 0 0;
+  color: var(--ember);
+  font-family: var(--intro-display-font);
+  font-size: 3.1em;
+  font-weight: 600;
+  line-height: 0.72;
+}
+
+/* =========================================================
+     STEPPE / NOMAD LIFE
+  ========================================================= */
+.kyrgyz-intro .steppe {
+  background: #8fcde4;
+  isolation: isolate;
+  perspective: none;
+}
+.kyrgyz-intro .steppe::before {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 235, 210, 0) 28%,
+    rgba(243, 235, 210, 0.12) 52%,
+    rgba(243, 235, 210, 0.52) 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+.kyrgyz-intro .steppe .layers {
+  display: block;
+  z-index: 1;
+}
+/* Equal bounds keep the three extracted plates aligned. Extra coverage prevents
+   gaps at the viewport edges as each depth moves at a different speed. */
+.kyrgyz-intro .jailoo-background,
+.kyrgyz-intro .jailoo-mountains,
+.kyrgyz-intro .jailoo-foreground {
+  inset: -16%;
+}
+.kyrgyz-intro .jailoo-background { z-index: 0; }
+.kyrgyz-intro .jailoo-mountains { z-index: 1; }
+.kyrgyz-intro .jailoo-foreground { z-index: 2; }
+.kyrgyz-intro .jailoo-background img,
+.kyrgyz-intro .jailoo-mountains img,
+.kyrgyz-intro .jailoo-foreground img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kyrgyz-intro .steppe > .pattern-divider {
+  position: relative;
+  z-index: 2;
+}
+.kyrgyz-intro .jailoo-yurts {
+  right: auto;
+  bottom: 13%;
+  left: 6%;
+  z-index: 4;
+  width: min(24vw, 340px);
+  filter: drop-shadow(0 13px 12px rgba(22, 51, 22, 0.2));
+}
+.kyrgyz-intro .jailoo-yurts img,
+.kyrgyz-intro .jailoo-horses img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .jailoo-horses {
+  top: 57%;
+  right: auto;
+  --horse-start: -12vw;
+  --horse-end: 105vw;
+  left: var(--horse-start);
+  z-index: 3;
+  width: min(10.5vw, 150px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  animation: intro-jailoo-run-across 16s linear infinite;
+}
+.kyrgyz-intro .jailoo-horses .jailoo-horse-frame {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  animation: intro-jailoo-horse-frame 0.64s linear infinite;
+}
+.kyrgyz-intro .jailoo-horses .jailoo-horse-frame:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.kyrgyz-intro .jailoo-horses .jailoo-horse-frame:nth-child(3) {
+  animation-delay: -0.32s;
+}
+.kyrgyz-intro .jailoo-horses .jailoo-horse-frame:nth-child(4) {
+  animation-delay: -0.479s;
+}
+@keyframes intro-jailoo-horse-frame {
+  0%,
+  24.99% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes intro-jailoo-run-across {
+  from {
+    left: var(--horse-start);
+  }
+  to {
+    left: var(--horse-end);
+  }
+}
+.kyrgyz-intro .steppe .content-wrap {
+  min-height: 100svh;
+  justify-content: flex-end;
+  align-items: center;
+}
+.kyrgyz-intro .steppe .steppe-copy {
+  width: min(465px, 42vw);
+  margin-left: auto;
+  padding: 2.25rem;
+  color: #13271d;
+  text-align: left;
+}
+.kyrgyz-intro .steppe .steppe-copy h2 {
+  color: #13271d;
+}
+.kyrgyz-intro .steppe .eyebrow-fact {
+  color: #13271d;
+}
+.kyrgyz-intro .steppe .steppe-copy p {
+  color: rgba(19, 39, 29, 0.9);
+}
+.kyrgyz-intro .song-kul-midground {
+  right: -12%;
+  bottom: 18%;
+  left: -12%;
+  z-index: 1;
+  height: 56%;
+  background: url("/intro/song-kul-midground.png") center bottom / 100% auto
+    no-repeat;
+}
+.kyrgyz-intro .song-kul-yurts {
+  right: auto;
+  bottom: 23%;
+  left: 7%;
+  z-index: 2;
+  width: min(28vw, 380px);
+  filter: drop-shadow(0 14px 14px rgba(16, 33, 18, 0.22));
+}
+.kyrgyz-intro .song-kul-yurts img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .song-kul-horses {
+  inset: -7%;
+  z-index: 3;
+  background: url("/intro/song-kul-horses.png") center / cover no-repeat;
+  clip-path: polygon(
+    12% 100%,
+    12% 38%,
+    18% 32%,
+    31% 33%,
+    45% 34%,
+    55% 38%,
+    62% 50%,
+    66% 66%,
+    66% 100%
+  );
+  filter: drop-shadow(0 9px 9px rgba(16, 33, 18, 0.16));
+}
+.kyrgyz-intro .song-kul-meadow {
+  right: -14%;
+  bottom: -5%;
+  left: -14%;
+  z-index: 4;
+  height: 48%;
+  background: url("/intro/song-kul-meadow-foreground.png") center bottom / 100%
+    auto no-repeat;
+}
+.kyrgyz-intro .steppe .sun2 {
+  top: 6%;
+  left: 12%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #f4d9a3,
+    rgba(244, 217, 163, 0.1) 70%
+  );
+}
+.kyrgyz-intro .hill-far {
+  bottom: 30%;
+  height: 35%;
+  background: #7c8a52;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scaleX(1.6);
+  left: -20%;
+  right: -20%;
+  opacity: 0.85;
+}
+.kyrgyz-intro .hill-near {
+  bottom: 0;
+  height: 36%;
+  background: #4a5a38;
+  border-radius: 60% 40% 0 0 / 100% 100% 0 0;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scaleX(1.8);
+  left: -30%;
+  right: -30%;
+}
+.kyrgyz-intro .yurt {
+  position: absolute;
+  width: 96px;
+  height: 70px;
+}
+.kyrgyz-intro .yurt .dome {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: var(--felt);
+  border-radius: 50% 50% 0 0 / 90% 90% 0 0;
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.08);
+}
+.kyrgyz-intro .yurt .roofring {
+  position: absolute;
+  bottom: 22px;
+  left: 44%;
+  width: 12px;
+  height: 12px;
+  background: var(--ink);
+  border-radius: 50%;
+}
+.kyrgyz-intro .yurt .base {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  width: 88%;
+  height: 24px;
+  background: var(--clay);
+  border-radius: 2px;
+}
+.kyrgyz-intro .yurt .base::after {
+  content: "";
+  position: absolute;
+  inset: 4px 8px;
+  border: 1px dashed rgba(239, 230, 210, 0.5);
+}
+.kyrgyz-intro .rider {
+  position: absolute;
+  width: 120px;
+}
+.kyrgyz-intro .rider svg {
+  width: 100%;
+  display: block;
+}
+.kyrgyz-intro .gallop {
+  animation: intro-gallop 9s linear infinite;
+}
+@keyframes intro-gallop {
+  0% {
+    transform: translateX(-15vw) scaleX(1);
+  }
+  48% {
+    transform: translateX(60vw) scaleX(1);
+  }
+  50% {
+    transform: translateX(62vw) scaleX(1);
+  }
+  98% {
+    transform: translateX(-15vw) scaleX(1);
+  }
+  100% {
+    transform: translateX(-15vw) scaleX(1);
+  }
+}
+.kyrgyz-intro .steppe-copy {
+  max-width: 480px;
+}
+
+.kyrgyz-intro .pattern-divider {
+  height: 32px;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 72px 28px;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='28' viewBox='0 0 72 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 14C9 4 18 4 27 14s18 10 27 0c6-6 12-6 18 0' fill='none' stroke='%23efe6d2' stroke-opacity='.82' stroke-width='1.15'/%3E%3Ccircle cx='36' cy='14' r='2.15' fill='%23d99648'/%3E%3C/svg%3E");
+  opacity: 0.86;
+}
+
+/* =========================================================
+     TIEN SHAN PEAKS / TREKKING
+  ========================================================= */
+.kyrgyz-intro .peaks {
+  background: linear-gradient(
+    180deg,
+    #72cce1 0%,
+    #bce8ee 62%,
+    #dcefed 100%
+  );
+}
+.kyrgyz-intro .peaks::before {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 25, 34, 0) 35%,
+    rgba(5, 25, 34, 0.12) 54%,
+    rgba(5, 25, 34, 0.62) 100%
+  );
+  content: "";
+}
+.kyrgyz-intro .peaks .layers {
+  z-index: 1;
+}
+.kyrgyz-intro .trek-clouds {
+  top: -5%;
+  right: -18%;
+  left: -18%;
+  z-index: 0;
+  height: 56%;
+  opacity: 0.78;
+  background: url("/intro/trekking-clouds.png") 43% center / auto 112% no-repeat;
+  animation: intro-cloud-drift 30s ease-in-out infinite alternate;
+}
+@keyframes intro-cloud-drift {
+  from {
+    background-position: 42% center;
+  }
+  to {
+    background-position: 58% center;
+  }
+}
+.kyrgyz-intro .trek-mountains {
+  right: -14%;
+  bottom: -2%;
+  left: -14%;
+  z-index: 1;
+  height: max(78svh, 50vw);
+  background: url("/intro/trekking-mountains.png") center bottom / auto 100%
+    no-repeat;
+}
+.kyrgyz-intro .trek-foreground {
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+  z-index: 2;
+  height: max(105svh, 68vw);
+  background: url("/intro/trekking-foreground.png") center bottom / auto 100%
+    no-repeat;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scale(var(--parallax-scale, 1));
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .trek-backpacker {
+  right: auto;
+  bottom: 6%;
+  left: 40%;
+  z-index: 4;
+  width: min(25vw, 360px);
+  filter: drop-shadow(0 10px 8px rgba(5, 25, 34, 0.24));
+}
+.kyrgyz-intro .trek-backpacker img {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: intro-trail-step 3.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+@keyframes intro-trail-step {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.8deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0.8deg);
+  }
+}
+.kyrgyz-intro .eagle {
+  position: absolute;
+  z-index: 4;
+  width: 118px;
+  top: 40%;
+  left: 48%;
+  offset-path: path(
+    "M -160,0 C -160,-90 160,-90 160,0 C 160,90 -160,90 -160,0"
+  );
+  offset-rotate: auto;
+  animation: intro-circleFly 16s linear infinite;
+}
+.kyrgyz-intro .eagle svg,
+.kyrgyz-intro .eagle img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.3));
+}
+@keyframes intro-circleFly {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+.kyrgyz-intro .peaks .content-wrap {
+  min-height: 100svh;
+  justify-content: flex-end;
+}
+.kyrgyz-intro .peaks-copy {
+  margin-left: auto;
+  width: min(475px, 42vw);
+  max-width: none;
+  padding: 2.2rem;
+  text-shadow: 0 2px 10px rgba(5, 25, 34, 0.72);
+}
+
+/* =========================================================
+     SILK ROAD
+  ========================================================= */
+.kyrgyz-intro .silk {
+  background: #c57b43;
+  perspective: none;
+}
+.kyrgyz-intro .silk::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: linear-gradient(
+    90deg,
+    rgba(41, 20, 16, 0.02) 30%,
+    rgba(41, 20, 16, 0.18) 56%,
+    rgba(31, 15, 17, 0.66) 100%
+  );
+}
+.kyrgyz-intro .silk .layers {
+  z-index: auto;
+}
+.kyrgyz-intro .silk-sky {
+  top: -4%;
+  right: -4%;
+  bottom: -4%;
+  left: -4%;
+  z-index: 0;
+  background: url("/intro/silk-road-sky.png") center / cover no-repeat;
+}
+.kyrgyz-intro .silk-mountains,
+.kyrgyz-intro .silk-foreground {
+  right: -6%;
+  left: -6%;
+}
+.kyrgyz-intro .silk-mountains {
+  right: -3%;
+  bottom: 23%;
+  left: -3%;
+  z-index: 1;
+  width: auto;
+}
+.kyrgyz-intro .silk-foreground {
+  bottom: -4%;
+  z-index: 3;
+}
+.kyrgyz-intro .silk-mountains img,
+.kyrgyz-intro .silk-foreground img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .silk-tower {
+  right: auto;
+  bottom: 32%;
+  left: 5%;
+  z-index: 5;
+  width: min(22vw, 310px);
+  filter: drop-shadow(0 14px 12px rgba(55, 24, 16, 0.3));
+}
+.kyrgyz-intro .silk-tower img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .caravan-track {
+  position: absolute;
+  right: 0;
+  bottom: 12%;
+  left: 0;
+  z-index: 5;
+  height: min(22vw, 260px);
+}
+.kyrgyz-intro .caravan {
+  position: absolute;
+  bottom: 0;
+  width: min(31vw, 450px);
+  filter: drop-shadow(0 12px 8px rgba(42, 20, 12, 0.26));
+}
+.kyrgyz-intro .caravan img {
+  width: 100%;
+  display: block;
+  animation: intro-caravanGait 0.9s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .caravan-move {
+  animation: intro-caravanMove 30s linear infinite;
+}
+@keyframes intro-caravanMove {
+  0% {
+    transform: translate3d(-36vw, 0, 0);
+  }
+  45% {
+    transform: translate3d(48vw, -3px, 0);
+  }
+  100% {
+    transform: translate3d(122vw, 0, 0);
+  }
+}
+@keyframes intro-caravanGait {
+  from {
+    transform: translateY(0) scaleY(1);
+  }
+  to {
+    transform: translateY(-3px) scaleY(0.985);
+  }
+}
+.kyrgyz-intro .silk .content-wrap {
+  min-height: 100svh;
+  justify-content: flex-end;
+}
+.kyrgyz-intro .silk-copy {
+  max-width: 480px;
+  text-shadow: 0 2px 14px rgba(27, 12, 12, 0.78);
+}
+
+/* =========================================================
+     MANAS / LIVING HERITAGE
+  ========================================================= */
+.kyrgyz-intro .manas {
+  background: transparent;
+  perspective: none;
+}
+.kyrgyz-intro .manas .layers {
+  z-index: 1;
+}
+.kyrgyz-intro .manas-warrior {
+  right: auto;
+  bottom: -15%;
+  left: -4%;
+  z-index: 1;
+  width: min(43vw, 570px);
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.62));
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scale(var(--parallax-scale, 1));
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .manas-eagle {
+  right: -2%;
+  bottom: 13%;
+  left: auto;
+  z-index: 3;
+  width: min(28vw, 390px);
+  filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.7));
+}
+.kyrgyz-intro .manas-warrior img,
+.kyrgyz-intro .manas-eagle img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .manas .content-wrap {
+  min-height: 100svh;
+  justify-content: flex-end;
+}
+.kyrgyz-intro .manas-copy {
+  max-width: 535px;
+  color: var(--felt);
+  text-shadow: 0 3px 16px rgba(3, 12, 10, 0.88);
+}
+.kyrgyz-intro .manas-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+.kyrgyz-intro .manas-meta span {
+  color: var(--felt);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+     NOMADIC TRADITION
+  ========================================================= */
+.kyrgyz-intro .nomadic {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 28%, #516e7b 0%, transparent 48%),
+    linear-gradient(180deg, #263b43 0%, #5a5a45 58%, #453b2c 100%);
+}
+.kyrgyz-intro .nomadic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(4, 19, 15, 0.04) 0%,
+    rgba(4, 19, 15, 0.38) 76%
+  );
+}
+.kyrgyz-intro .nomadic .layers {
+  z-index: 1;
+}
+.kyrgyz-intro .nomadic-crowd,
+.kyrgyz-intro .nomadic-action,
+.kyrgyz-intro .nomadic-goal {
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+.kyrgyz-intro .nomadic-crowd {
+  bottom: 40%;
+  z-index: 1;
+  opacity: 0.74;
+  filter: blur(2px);
+}
+.kyrgyz-intro .nomadic-action {
+  right: 2%;
+  bottom: -11%;
+  left: auto;
+  width: min(60vw, 900px);
+  z-index: 2;
+  filter: drop-shadow(0 20px 26px rgba(6, 13, 12, 0.42));
+}
+.kyrgyz-intro .nomadic-goal {
+  right: -3%;
+  bottom: -9%;
+  left: auto;
+  width: min(48vw, 720px);
+  z-index: 3;
+  filter: drop-shadow(0 14px 18px rgba(6, 13, 12, 0.4));
+}
+.kyrgyz-intro .nomadic-crowd img,
+.kyrgyz-intro .nomadic-action img,
+.kyrgyz-intro .nomadic-goal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.kyrgyz-intro .nomadic-goal img.nomadic-goal-mark {
+  position: absolute;
+  top: 53%;
+  left: 43.5%;
+  width: 13%;
+  height: auto;
+  filter: drop-shadow(0 1px 1px rgba(3, 18, 12, 0.38));
+}
+.kyrgyz-intro .nomadic .content-wrap {
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.kyrgyz-intro .nomadic-copy {
+  max-width: 700px;
+  color: var(--felt);
+  text-shadow: 0 3px 18px rgba(3, 12, 10, 0.9);
+}
+.kyrgyz-intro .nomadic-copy h2 {
+  margin: 0.85rem 0 1.1rem;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  line-height: 0.94;
+}
+.kyrgyz-intro .nomadic-copy p {
+  color: var(--felt-dim);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+}
+.kyrgyz-intro .nomadic-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+.kyrgyz-intro .nomadic-meta span {
+  color: var(--felt);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+     BISHKEK / CAPITAL GUIDE
+  ========================================================= */
+.kyrgyz-intro .bishkek {
+  isolation: isolate;
+  background: #d9c393;
+  perspective: none;
+}
+.kyrgyz-intro .bishkek .layers {
+  z-index: 1;
+  overflow: hidden;
+}
+.kyrgyz-intro .bishkek-scene {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(128%, calc(var(--scene-height, 100svh) * 2.2744));
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+.kyrgyz-intro .bishkek-sky,
+.kyrgyz-intro .bishkek-mountains,
+.kyrgyz-intro .bishkek-road,
+.kyrgyz-intro .bishkek-city,
+.kyrgyz-intro .bishkek-foreground {
+  inset: 0;
+  overflow: visible;
+}
+.kyrgyz-intro .bishkek-sky {
+  z-index: 0;
+}
+.kyrgyz-intro .bishkek-mountains {
+  z-index: 1;
+}
+.kyrgyz-intro .bishkek-road {
+  z-index: 2;
+  clip-path: polygon(
+    0 77%,
+    20% 76.4%,
+    40% 75.6%,
+    60% 74.6%,
+    80% 73.2%,
+    90% 72.7%,
+    100% 72.7%,
+    100% 100%,
+    0 100%
+  );
+}
+.kyrgyz-intro .bishkek-city {
+  z-index: 3;
+}
+.kyrgyz-intro .bishkek-foreground {
+  z-index: 4;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scale(var(--parallax-scale, 1));
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .bishkek-sky img,
+.kyrgyz-intro .bishkek-mountains img,
+.kyrgyz-intro .bishkek-road img,
+.kyrgyz-intro .bishkek-city img,
+.kyrgyz-intro .bishkek-foreground img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kyrgyz-intro .bishkek::before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 235, 210, 0.9) 0%,
+    rgba(246, 235, 210, 0.62) 42%,
+    rgba(246, 235, 210, 0.08) 73%
+  );
+  content: "";
+}
+.kyrgyz-intro .bishkek .content-wrap {
+  min-height: 100svh;
+  align-items: center;
+  z-index: 3;
+}
+.kyrgyz-intro .bishkek-copy {
+  width: min(100%, 1040px);
+  color: #13271d;
+}
+.kyrgyz-intro .bishkek-copy .eyebrow-fact {
+  color: #8a482d;
+}
+.kyrgyz-intro .bishkek-copy h2 {
+  max-width: 13ch;
+  margin: 0.85rem 0 1.1rem;
+  color: #13271d;
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  line-height: 0.92;
+}
+.kyrgyz-intro .bishkek-lead,
+.kyrgyz-intro .bishkek-card p {
+  background: rgba(243, 235, 210, 0.34);
+  backdrop-filter: blur(3px);
+  color: #13271d;
+}
+.kyrgyz-intro .bishkek-lead {
+  max-width: 62ch;
+  padding: 1rem 1.1rem;
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+.kyrgyz-intro .bishkek-lead::first-letter {
+  float: left;
+  margin: 0.12em 0.12em 0 0;
+  color: #b25e34;
+  font-family: var(--intro-display-font);
+  font-size: 3.1em;
+  font-weight: 600;
+  line-height: 0.72;
+}
+.kyrgyz-intro .bishkek-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 3.25rem);
+  max-width: 1000px;
+  margin-top: 2.25rem;
+}
+.kyrgyz-intro .bishkek-card h3 {
+  margin-bottom: 0.6rem;
+  color: #13271d;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+.kyrgyz-intro .bishkek-card p {
+  padding: 0.8rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+     CTA / FOOTER
+  ========================================================= */
+.kyrgyz-intro .hospitality {
+  isolation: isolate;
+  perspective: none;
+  background: #59412b;
+}
+.kyrgyz-intro .hospitality .layers {
+  z-index: 0;
+  overflow: hidden;
+}
+.kyrgyz-intro .hospitality-scene {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(112%, calc(var(--scene-height, 100svh) * 1.99));
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+.kyrgyz-intro .hospitality-outside,
+.kyrgyz-intro .hospitality-interior,
+.kyrgyz-intro .hospitality-table {
+  inset: 0;
+  transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    )
+    scale(var(--parallax-scale, 1));
+  transform-origin: center bottom;
+}
+.kyrgyz-intro .hospitality-outside { z-index: 0; }
+.kyrgyz-intro .hospitality-interior { z-index: 1; }
+.kyrgyz-intro .hospitality-table { z-index: 3; }
+.kyrgyz-intro .hospitality-scene img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.kyrgyz-intro .hospitality-light {
+  z-index: 2;
+  inset: -20%;
+  background: linear-gradient(
+    115deg,
+    transparent 27%,
+    rgba(255, 229, 173, 0.13) 38%,
+    transparent 52%
+  );
+  mix-blend-mode: screen;
+}
+.kyrgyz-intro .hospitality::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 20, 13, 0.58),
+    rgba(27, 20, 13, 0.24) 39%,
+    transparent 62%
+  );
+}
+.kyrgyz-intro .hospitality .content-wrap {
+  min-height: 100svh;
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 48svh;
+}
+.kyrgyz-intro .hospitality-copy {
+  width: min(100%, 510px);
+  text-shadow: 0 2px 14px rgba(27, 20, 13, 0.65);
+}
+.kyrgyz-intro .hospitality-copy .eyebrow-fact {
+  color: #f8dca8;
+}
+.kyrgyz-intro .hospitality-copy h2 {
+  margin: 0.8rem 0 1rem;
+  color: #fff7e8;
+  font-size: clamp(2.8rem, 5.1vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.kyrgyz-intro .hospitality-copy p {
+  max-width: 42ch;
+  padding: 0.85rem 1rem;
+  background: rgba(243, 235, 210, 0.64);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  color: #13271d;
+  font-size: clamp(0.94rem, 1.2vw, 1.06rem);
+  line-height: 1.65;
+  text-shadow: none;
+}
+.kyrgyz-intro .cta {
+  background: var(--felt);
+  color: var(--ink);
+  min-height: 100svh;
+  padding: 0;
+  perspective: none;
+}
+.kyrgyz-intro .cta .content-wrap {
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: auto;
+  padding-block: 2rem 4rem;
+  text-align: center;
+}
+.kyrgyz-intro .cta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--clay);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.kyrgyz-intro .cta h2 {
+  max-width: none;
+  margin: 1.15rem 0;
+  color: var(--ink);
+  font-size: clamp(3.7rem, 8vw, 7.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+}
+.kyrgyz-intro .cta p.lead {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a4238;
+}
+.kyrgyz-intro .season-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.kyrgyz-intro .chip {
+  border: 1px solid rgba(12, 21, 18, 0.25);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+.kyrgyz-intro .chip[aria-pressed="true"],
+.kyrgyz-intro .chip:hover {
+  background: var(--ink);
+  color: var(--felt);
+  border-color: var(--ink);
+}
+.kyrgyz-intro .cta-btn {
+  margin-top: 2rem;
+  display: inline-block;
+  color: var(--ink);
+  padding: 0 0 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: underline;
+  text-decoration-color: var(--clay);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    text-decoration-color 0.3s var(--ease);
+}
+.kyrgyz-intro .cta-btn:hover {
+  color: var(--clay);
+  text-decoration-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.kyrgyz-intro footer {
+  border-top: 1px solid rgba(12, 21, 18, 0.15);
+  padding: 2.4rem 6vw 2.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #665c4d;
+}
+.kyrgyz-intro footer .foot-links {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.kyrgyz-intro footer a {
+  text-decoration: none;
+  color: #4a4238;
+}
+.kyrgyz-intro footer a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .kyrgyz-intro .section-dots {
+    right: 0;
+    gap: 2px;
+  }
+  .kyrgyz-intro .section {
+    min-height: 100svh;
+  }
+  .kyrgyz-intro .content-wrap {
+    align-items: flex-end;
+    padding: 2.5rem 8vw 4rem;
+  }
+  .kyrgyz-intro .hospitality .content-wrap {
+    padding-top: 1.25rem;
+    padding-bottom: 46svh;
+    justify-content: center;
+  }
+  .kyrgyz-intro .hospitality-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+  .kyrgyz-intro .hospitality-scene {
+    transform: translate(-25%, -50%);
+  }
+  .kyrgyz-intro .hospitality-table {
+    left: -23%;
+    right: 23%;
+  }
+  .kyrgyz-intro .hero-content {
+    width: 100%;
+    gap: 1.1rem;
+    padding: 0;
+  }
+  .kyrgyz-intro .hero h1 {
+    font-size: clamp(3.15rem, 16vw, 4.8rem);
+  }
+  .kyrgyz-intro .hero-tagline {
+    font-size: 1rem;
+    max-width: 32ch;
+  }
+  .kyrgyz-intro .hero-award {
+    font-size: 0.56rem;
+  }
+  .kyrgyz-intro .hero-kicker {
+    margin-top: 8px;
+    font-size: 0.58rem;
+  }
+  .kyrgyz-intro .hero-stats {
+    width: 100%;
+    margin-top: 26px;
+  }
+  .kyrgyz-intro .hero-stat {
+    width: calc(50% - 4px);
+    min-width: 0;
+    padding: 12px 8px;
+  }
+  .kyrgyz-intro .peaks-copy,
+  .kyrgyz-intro .steppe-copy,
+  .kyrgyz-intro .silk-copy,
+  .kyrgyz-intro .manas-copy {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 1.15rem;
+  }
+  .kyrgyz-intro .lake-copy h2,
+  .kyrgyz-intro .steppe-copy h2,
+  .kyrgyz-intro .peaks-copy h2,
+  .kyrgyz-intro .silk-copy h2,
+  .kyrgyz-intro .manas-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+  .kyrgyz-intro .lake-copy p,
+  .kyrgyz-intro .steppe-copy p,
+  .kyrgyz-intro .peaks-copy p,
+  .kyrgyz-intro .silk-copy p,
+  .kyrgyz-intro .manas-copy p {
+    font-size: 0.95rem;
+    line-height: 1.58;
+  }
+  .kyrgyz-intro .lake {
+    background-position: 58% center;
+  }
+  .kyrgyz-intro .lake .content-wrap {
+    min-height: 100svh;
+  }
+  .kyrgyz-intro .issyk-mountains {
+    right: -46%;
+    bottom: 14%;
+    left: -46%;
+    height: 72svh;
+  }
+  .kyrgyz-intro .issyk-lakefront {
+    right: -30%;
+    bottom: -12%;
+    left: -30%;
+    height: 78svh;
+  }
+  .kyrgyz-intro .jailoo-background img,
+  .kyrgyz-intro .jailoo-mountains img,
+  .kyrgyz-intro .jailoo-foreground img {
+    object-position: 38% center;
+  }
+  .kyrgyz-intro .steppe::before {
+    background: linear-gradient(
+      0deg,
+      rgba(243, 235, 210, 0.56),
+      rgba(243, 235, 210, 0.08) 72%
+    );
+  }
+  .kyrgyz-intro .steppe .content-wrap {
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+  .kyrgyz-intro .steppe .steppe-copy {
+    width: 100%;
+    padding: 1.35rem;
+  }
+  .kyrgyz-intro .jailoo-yurts {
+    bottom: 16%;
+    left: -4%;
+    width: 54vw;
+  }
+  .kyrgyz-intro .jailoo-horses {
+    top: 56%;
+    --horse-start: -26vw;
+    width: 24vw;
+  }
+  .kyrgyz-intro .silk-sky {
+    background-position: 26% center;
+  }
+  .kyrgyz-intro .silk-mountains {
+    right: -78%;
+    bottom: 12%;
+    left: -78%;
+  }
+  .kyrgyz-intro .silk-foreground {
+    right: -22%;
+    bottom: -7%;
+    left: -22%;
+  }
+  .kyrgyz-intro .silk::before {
+    background: linear-gradient(
+      0deg,
+      rgba(29, 13, 16, 0.72),
+      rgba(29, 13, 16, 0.06) 74%
+    );
+  }
+  .kyrgyz-intro .silk-tower {
+    bottom: 22%;
+    left: -4%;
+    width: 42vw;
+  }
+  .kyrgyz-intro .caravan-track {
+    bottom: 22%;
+    height: 25vw;
+  }
+  .kyrgyz-intro .caravan {
+    width: 62vw;
+  }
+  .kyrgyz-intro .manas-warrior {
+    bottom: -11%;
+    left: -25%;
+    width: 96vw;
+  }
+  .kyrgyz-intro .manas-eagle {
+    right: -17%;
+    bottom: 42%;
+    width: 54vw;
+  }
+  .kyrgyz-intro .nomadic-crowd {
+    right: -62%;
+    bottom: 44%;
+    left: -62%;
+    opacity: 0.6;
+  }
+  .kyrgyz-intro .nomadic-action {
+    right: -28%;
+    bottom: -1%;
+    width: 112vw;
+  }
+  .kyrgyz-intro .nomadic-goal {
+    right: -38%;
+    bottom: -6%;
+    width: 98vw;
+  }
+  .kyrgyz-intro .bishkek {
+    --scene-height: 100svh;
+  }
+  .kyrgyz-intro .bishkek::before {
+    background: linear-gradient(
+      0deg,
+      rgba(246, 235, 210, 0.88) 0%,
+      rgba(246, 235, 210, 0.44) 76%
+    );
+  }
+  .kyrgyz-intro .bishkek .content-wrap {
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+  .kyrgyz-intro .bishkek-copy h2 {
+    max-width: 12ch;
+    font-size: clamp(2.4rem, 11vw, 3.6rem);
+  }
+  .kyrgyz-intro .bishkek-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .kyrgyz-intro .bishkek-card p {
+    max-width: 42ch;
+  }
+  .kyrgyz-intro .peaks {
+    background: linear-gradient(
+      180deg,
+      #72cce1 0%,
+      #bce8ee 62%,
+      #dcefed 100%
+    );
+  }
+  .kyrgyz-intro .peaks::before {
+    background: linear-gradient(
+      0deg,
+      rgba(5, 25, 34, 0.72),
+      rgba(5, 25, 34, 0.08) 72%
+    );
+  }
+  .kyrgyz-intro .peaks .content-wrap {
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+  .kyrgyz-intro .peaks .peaks-copy {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.35rem;
+    background: transparent;
+    backdrop-filter: none;
+  }
+  .kyrgyz-intro .trek-mountains {
+    right: -45%;
+    bottom: 2%;
+    left: -45%;
+    height: 74svh;
+  }
+  .kyrgyz-intro .trek-clouds {
+    right: -45%;
+    left: -45%;
+    height: 48%;
+    background-size: auto 100%;
+  }
+  .kyrgyz-intro .trek-foreground {
+    right: -28%;
+    bottom: -7%;
+    left: -28%;
+    height: 78svh;
+  }
+  .kyrgyz-intro .trek-backpacker {
+    bottom: 4%;
+    left: 32%;
+    width: 215px;
+  }
+  .kyrgyz-intro .song-kul-yurts {
+    bottom: 27%;
+    left: -5%;
+    width: 54vw;
+  }
+  .kyrgyz-intro .song-kul-horses {
+    inset: -15%;
+    background-position: 55% center;
+  }
+  .kyrgyz-intro .song-kul-midground {
+    right: -38%;
+    bottom: 23%;
+    left: -38%;
+    height: 46%;
+  }
+  .kyrgyz-intro .song-kul-meadow {
+    right: -45%;
+    bottom: -3%;
+    left: -45%;
+    height: 43%;
+  }
+  .kyrgyz-intro .lake-ship {
+    top: 60%;
+    left: 22%;
+    width: 118px;
+  }
+  .kyrgyz-intro .lake-copy {
+    padding: 1.35rem;
+  }
+  .kyrgyz-intro .lake-facts {
+    gap: 0.45rem;
+    margin-top: 1.25rem;
+  }
+  .kyrgyz-intro .lake-fact {
+    padding: 0.65rem 0.4rem;
+    font-size: 0.59rem;
+  }
+  .kyrgyz-intro .lake-fact strong {
+    font-size: 0.73rem;
+  }
+  .kyrgyz-intro .yurt:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kyrgyz-intro *,
+  .kyrgyz-intro *::before,
+  .kyrgyz-intro *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .kyrgyz-intro .layer {
+    transform: none !important;
+  }
+  .kyrgyz-intro.reveal-ready .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .kyrgyz-intro .page-loader {
+    display: none;
+  }
+  .kyrgyz-intro .hero-content {
+    visibility: visible;
+  }
+  .kyrgyz-intro .jailoo-horses {
+    left: 22%;
+  }
+  .kyrgyz-intro .jailoo-horses .jailoo-horse-frame {
+    opacity: 0;
+  }
+  .kyrgyz-intro .jailoo-horses .jailoo-horse-frame:first-child {
+    opacity: 1;
+  }
+}
+.kyrgyz-intro.page-hidden *,
+.kyrgyz-intro.page-hidden *::before,
+.kyrgyz-intro.page-hidden *::after {
+  animation-play-state: paused !important;
+}
+.kyrgyz-intro .scene-offscreen .layers *,
+.kyrgyz-intro .scene-offscreen .hero-bird-foreground * {
+  animation-play-state: paused !important;
+}
+
+.kyrgyz-intro .hero-tagline,
+.kyrgyz-intro .lake-copy p,
+.kyrgyz-intro .steppe .steppe-copy p,
+.kyrgyz-intro .peaks-copy p,
+.kyrgyz-intro .silk-copy p,
+.kyrgyz-intro .manas-copy p,
+.kyrgyz-intro .nomadic-copy p,
+.kyrgyz-intro .cta p.lead {
+  color: #13271d;
+  text-shadow: none;
+}
+.kyrgyz-intro .hero-tagline {
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(5, 16, 22, 0.72);
+}
+.kyrgyz-intro .manas-copy p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(3, 12, 10, 0.75);
+}
+.kyrgyz-intro .nomadic-copy p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(3, 12, 10, 0.75);
+}
+.kyrgyz-intro .nomadic-copy p::first-letter,
+.kyrgyz-intro .cta p.lead::first-letter {
+  float: none;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+@media (max-width: 760px) {
+  .kyrgyz-intro .cta h2 {
+    font-size: clamp(2.5rem, 12vw, 3.7rem);
+  }
+}
+@media (max-height: 540px) and (min-width: 761px) {
+  .kyrgyz-intro .hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+  .kyrgyz-intro .hero-stats {
+    margin-top: 1rem;
+  }
+}
+@media (max-height: 540px) {
+  .kyrgyz-intro .section-dots {
+    top: calc(50% + 30px);
+    gap: 0;
+  }
+  .kyrgyz-intro .section-dots button {
+    height: 24px;
+  }
+}
+    
+
+/* The loader is visible in server HTML, over the already-rendered hero.
+   Its CSS failsafe releases the page if JavaScript never initializes. */
+
+.kyrgyz-intro .section-dots[hidden],
+.kyrgyz-intro .journey-progress[hidden] { display: none; }
+
+/* Cyrillic display typography with a classic travel-journal feel. */
+.kyrgyz-intro[lang="ru"] {
+  --intro-display-font: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+.kyrgyz-intro[lang="ru"] h1,
+.kyrgyz-intro[lang="ru"] h2,
+.kyrgyz-intro[lang="ru"] h3 {
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+.kyrgyz-intro[lang="ru"] .hero-tagline {
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Let translated headings wrap within the original scene compositions. */
+.kyrgyz-intro h1,
+.kyrgyz-intro h2,
+.kyrgyz-intro h3 {
+  overflow-wrap: anywhere;
+}
+
+/* Text follows Arabic reading order; artwork keeps its original placement. */
+.kyrgyz-intro[dir="rtl"] .lake-copy,
+.kyrgyz-intro[dir="rtl"] .steppe-copy,
+.kyrgyz-intro[dir="rtl"] .peaks-copy,
+.kyrgyz-intro[dir="rtl"] .silk-copy,
+.kyrgyz-intro[dir="rtl"] .manas-copy,
+.kyrgyz-intro[dir="rtl"] .bishkek-copy,
+.kyrgyz-intro[dir="rtl"] .hospitality-copy {
+  text-align: right;
+}
+
+/* Avoid detached Arabic letters and oversized CJK drop caps. */
+.kyrgyz-intro:is([dir="rtl"], :lang(ja), :lang(ko), :lang(zh)) p::first-letter {
+  float: none;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.kyrgyz-intro:is([dir="rtl"], :lang(ja), :lang(ko), :lang(zh)) h1,
+.kyrgyz-intro:is([dir="rtl"], :lang(ja), :lang(ko), :lang(zh)) h2,
+.kyrgyz-intro:is([dir="rtl"], :lang(ja), :lang(ko), :lang(zh)) h3 {
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+.kyrgyz-intro[dir="rtl"] .eyebrow-fact,
+.kyrgyz-intro[dir="rtl"] .hero-kicker,
+.kyrgyz-intro[dir="rtl"] .hero-stat span,
+.kyrgyz-intro[dir="rtl"] .manas-meta span,
+.kyrgyz-intro[dir="rtl"] .nomadic-meta span,
+.kyrgyz-intro[dir="rtl"] .cta-kicker,
+.kyrgyz-intro[dir="rtl"] .cta-btn {
+  letter-spacing: normal;
+}

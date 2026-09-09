@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Bai_Jamjuree, Exo_2 } from 'next/font/google'
 import { Locale, i18n } from '@/lib/i18n.config'
 import Footer from './Components/Footer'
+import FooterVisibility from './Components/FooterVisibility'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Navbar from './Components/Navbar'
@@ -42,7 +43,9 @@ export default function RootLayout({
           <section className={styles.section}>
           {children}
           </section>
-          <Footer lang={params.lang}/>
+          <FooterVisibility>
+            <Footer lang={params.lang}/>
+          </FooterVisibility>
           <ContactButton lang={params.lang}/>
           <Flags lang={params.lang}/>
         </main>
