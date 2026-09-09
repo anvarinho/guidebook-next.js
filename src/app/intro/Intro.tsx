@@ -146,13 +146,13 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
         <section className="section steppe" id="steppe" data-parallax="">
           <div className="layers" aria-hidden="true">
             <div className="layer jailoo-background" data-speed="0.04" data-drift="-0.015">
-              <img src="/intro/jailoo-sky-layer.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+              <img src="/intro/jailoo-sky-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-mountains" data-speed="0.16" data-drift="-0.04">
-              <img src="/intro/jailoo-mountains-layer.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+              <img src="/intro/jailoo-mountains-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-foreground" data-speed="0.34" data-drift="0.06">
-              <img src="/intro/jailoo-foreground-layer.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+              <img src="/intro/jailoo-foreground-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-horses" data-speed="0.34" data-drift="0.06">
               <img
@@ -481,13 +481,13 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
           <div className="layers" aria-hidden="true">
             <div className="hospitality-scene">
               <div className="layer hospitality-outside" data-speed="0.012" data-drift="-0.008">
-                <img src="/intro/yurt-doorway-view.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+                <img src="/intro/yurt-doorway-view.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-interior" data-speed="0.065" data-drift="0.005">
-                <img src="/intro/yurt-interior-layer.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+                <img src="/intro/yurt-interior-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-table" data-speed="-0.28" data-drift="-0.10" data-zoom="0.12">
-                <img src="/intro/yurt-table-food.png" loading="lazy" decoding="async" width="1672" height="941" alt="" />
+                <img src="/intro/yurt-table-food.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-light" data-speed="0.08" data-drift="-0.18"></div>
             </div>
