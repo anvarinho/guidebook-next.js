@@ -21,7 +21,6 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
     const sectionDots = root.querySelector<HTMLElement>("#section-dots")!;
     const sections = Array.from(root.querySelectorAll<HTMLElement>("[data-parallax], .cta"));
     const timers: number[] = [];
-    const loaderStarted = performance.now();
     let disposed = false;
     let frameId = 0;
     let activeIndex = -1;
@@ -31,6 +30,7 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
     let journeyHeight = 0;
     let revealObserver: IntersectionObserver | undefined;
     let sceneObserver: IntersectionObserver | undefined;
+    let imageObserver: IntersectionObserver | undefined;
     let resizeObserver: ResizeObserver | undefined;
 
     // A fresh intro always starts on the hero. Keep browser scroll restoration
@@ -63,10 +63,9 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
       }, motionEnabled() ? 750 : 0);
     }
 
-    // Keep the flag briefly visible, including on a warm cache. Decode
-    // every hero plate before fading out so the landscape appears together.
+    // Show the landscape as soon as its images decode, including on a warm cache.
     const heroLoaded = () => {
-      if (!disposed) schedule(dismissLoader, Math.max(0, 1050 - (performance.now() - loaderStarted)));
+      if (!disposed) dismissLoader();
     };
     schedule(dismissLoader, 2500);
     if (motionPreference.matches) dismissLoader();
@@ -190,6 +189,17 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
     }
 
     if ("IntersectionObserver" in window) {
+      // CSS backgrounds have no native lazy loading. Fetch each scene shortly
+      // before it enters the viewport, then retain it for scrolling back.
+      imageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("images-ready");
+          imageObserver!.unobserve(entry.target);
+        });
+      }, { rootMargin: "600px 0px" });
+      sections.filter(section => !section.classList.contains("hero"))
+        .forEach(section => imageObserver!.observe(section));
       revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
@@ -203,6 +213,8 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
         entries.forEach(entry => entry.target.classList.toggle("scene-offscreen", !entry.isIntersecting));
       }, { rootMargin: "20% 0px" });
       sections.forEach(section => sceneObserver!.observe(section));
+    } else {
+      sections.forEach(section => section.classList.add("images-ready"));
     }
     if ("ResizeObserver" in window) {
       resizeObserver = new ResizeObserver(resizeScene);
@@ -226,6 +238,7 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
       window.cancelAnimationFrame(frameId);
       revealObserver?.disconnect();
       sceneObserver?.disconnect();
+      imageObserver?.disconnect();
       resizeObserver?.disconnect();
       motionPreference.removeEventListener("change", onMotionChange);
       window.removeEventListener("scroll", requestFrame);
