@@ -28,7 +28,7 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
         </div>
       </div>
       <noscript>
-        <style>{`.kyrgyz-intro .page-loader { display: none; } .kyrgyz-intro .hero-content { visibility: visible; animation: none; }`}</style>
+        <style>{`.kyrgyz-intro .page-loader { display: none; } .kyrgyz-intro .hero-content { visibility: visible; animation: none; } .kyrgyz-intro [data-scene-background] { background-image: var(--scene-image) !important; }`}</style>
       </noscript>
       <nav
         className="section-dots"
@@ -102,15 +102,15 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
         </header>
 
         {/* ============ ISSYK-KUL ============ */}
-        <section className="section lake" id="lake" data-parallax="">
+        <section className="section lake" data-scene-background="" id="lake" data-parallax="">
           <div className="layers">
             <div
-              className="layer issyk-mountains"
+              className="layer issyk-mountains" data-scene-background=""
               data-speed="0.15"
               data-drift="-0.06"
             ></div>
             <div
-              className="layer issyk-lakefront"
+              className="layer issyk-lakefront" data-scene-background=""
               data-speed="0.4"
               data-drift="0.14"
               data-zoom="0.07"
@@ -210,17 +210,17 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
         <section className="section peaks" id="peaks" data-parallax="">
           <div className="layers">
             <div
-              className="layer trek-clouds"
+              className="layer trek-clouds" data-scene-background=""
               data-speed="0.05"
               data-drift="-0.03"
             ></div>
             <div
-              className="layer trek-mountains"
+              className="layer trek-mountains" data-scene-background=""
               data-speed="0.16"
               data-drift="-0.06"
             ></div>
             <div
-              className="layer trek-foreground"
+              className="layer trek-foreground" data-scene-background=""
               data-speed="0.42"
               data-drift="0.14"
               data-zoom="0.15"
@@ -253,7 +253,7 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
         <section className="section silk" id="silk" data-parallax="">
           <div className="layers">
             <div
-              className="layer silk-sky"
+              className="layer silk-sky" data-scene-background=""
               data-speed="0.06"
               data-drift="-0.03"
             ></div>

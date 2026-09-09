@@ -687,7 +687,8 @@ html.intro-loading body {
      ISSYK-KUL LAKE
   ========================================================= */
 .kyrgyz-intro .lake {
-  background: url("/intro/issyk-cartoon-sky.png") center / cover fixed no-repeat;
+  --scene-image: url("/intro/issyk-cartoon-sky.png");
+  background: var(--scene-image) center / cover fixed no-repeat;
   perspective: none;
 }
 .kyrgyz-intro .lake::before {
@@ -712,7 +713,8 @@ html.intro-loading body {
   left: -14%;
   z-index: 1;
   height: max(76svh, 48vw);
-  background: url("/intro/issyk-cartoon-mountains.png") center bottom / auto 100%
+  --scene-image: url("/intro/issyk-cartoon-mountains.png");
+  background: var(--scene-image) center bottom / auto 100%
     no-repeat;
 }
 .kyrgyz-intro .issyk-lakefront {
@@ -721,7 +723,8 @@ html.intro-loading body {
   left: -11%;
   z-index: 2;
   height: max(105svh, 68vw);
-  background: url("/intro/issyk-cartoon-lake.png") center bottom / auto 100%
+  --scene-image: url("/intro/issyk-cartoon-lake.png");
+  background: var(--scene-image) center bottom / auto 100%
     no-repeat;
   transform: translate3d(
       var(--parallax-x, 0px),
@@ -995,7 +998,8 @@ html.intro-loading body {
   left: -12%;
   z-index: 1;
   height: 56%;
-  background: url("/intro/song-kul-midground.png") center bottom / 100% auto
+  --scene-image: url("/intro/song-kul-midground.png");
+  background: var(--scene-image) center bottom / 100% auto
     no-repeat;
 }
 .kyrgyz-intro .song-kul-yurts {
@@ -1014,7 +1018,8 @@ html.intro-loading body {
 .kyrgyz-intro .song-kul-horses {
   inset: -7%;
   z-index: 3;
-  background: url("/intro/song-kul-horses.png") center / cover no-repeat;
+  --scene-image: url("/intro/song-kul-horses.png");
+  background: var(--scene-image) center / cover no-repeat;
   clip-path: polygon(
     12% 100%,
     12% 38%,
@@ -1034,7 +1039,8 @@ html.intro-loading body {
   left: -14%;
   z-index: 4;
   height: 48%;
-  background: url("/intro/song-kul-meadow-foreground.png") center bottom / 100%
+  --scene-image: url("/intro/song-kul-meadow-foreground.png");
+  background: var(--scene-image) center bottom / 100%
     auto no-repeat;
 }
 .kyrgyz-intro .steppe .sun2 {
@@ -1191,7 +1197,8 @@ html.intro-loading body {
   z-index: 0;
   height: 56%;
   opacity: 0.78;
-  background: url("/intro/trekking-clouds.png") 43% center / auto 112% no-repeat;
+  --scene-image: url("/intro/trekking-clouds.png");
+  background: var(--scene-image) 43% center / auto 112% no-repeat;
   animation: intro-cloud-drift 30s ease-in-out infinite alternate;
 }
 @keyframes intro-cloud-drift {
@@ -1208,7 +1215,8 @@ html.intro-loading body {
   left: -14%;
   z-index: 1;
   height: max(78svh, 50vw);
-  background: url("/intro/trekking-mountains.png") center bottom / auto 100%
+  --scene-image: url("/intro/trekking-mountains.png");
+  background: var(--scene-image) center bottom / auto 100%
     no-repeat;
 }
 .kyrgyz-intro .trek-foreground {
@@ -1217,7 +1225,8 @@ html.intro-loading body {
   left: -10%;
   z-index: 2;
   height: max(105svh, 68vw);
-  background: url("/intro/trekking-foreground.png") center bottom / auto 100%
+  --scene-image: url("/intro/trekking-foreground.png");
+  background: var(--scene-image) center bottom / auto 100%
     no-repeat;
   transform: translate3d(
       var(--parallax-x, 0px),
@@ -1317,7 +1326,8 @@ html.intro-loading body {
   bottom: -4%;
   left: -4%;
   z-index: 0;
-  background: url("/intro/silk-road-sky.png") center / cover no-repeat;
+  --scene-image: url("/intro/silk-road-sky.png");
+  background: var(--scene-image) center / cover no-repeat;
 }
 .kyrgyz-intro .silk-mountains,
 .kyrgyz-intro .silk-foreground {
@@ -2384,4 +2394,10 @@ html.intro-loading body {
 .kyrgyz-intro[dir="rtl"] .cta-kicker,
 .kyrgyz-intro[dir="rtl"] .cta-btn {
   letter-spacing: normal;
+}
+
+/* Keep later scenes from competing with the hero image downloads. */
+.kyrgyz-intro .section:not(.images-ready)[data-scene-background],
+.kyrgyz-intro .section:not(.images-ready) [data-scene-background] {
+  background-image: none;
 }
