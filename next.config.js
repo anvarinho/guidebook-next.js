@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
+
 const nextConfig = {
   // i18n:{
   //     locales:['en-US', 'fr'],
@@ -609,4 +611,8 @@ const nextConfig = {
 
 
 // Export the combined config
-module.exports = nextConfig;
+// Keep production builds from overwriting chunks used by a running dev server.
+module.exports = (phase) => ({
+  ...nextConfig,
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next' : '.next-build',
+});
