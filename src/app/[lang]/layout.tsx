@@ -8,7 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
-import styles from './page.module.css'
+import LanguageShell from './Components/LanguageShell'
 import Flags from './Components/Flags'
 import Meta from './metalayout';
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   params: { lang: Locale }
 }) {
   return (
-    <html lang={params.lang}>
+    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[params.lang] ?? params.lang}>
       <head>
         {/* <title>GuideBook of Kyrgyzstan</title> */}
         <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
@@ -38,17 +38,13 @@ export default function RootLayout({
       <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
       <body className={params.lang === 'ru' ? russianfont.className : font.className}>
-        <main className={styles.main}>
-          <Navbar lang={params.lang}/>
-          <section className={styles.section}>
+        <LanguageShell
+          navbar={<Navbar lang={params.lang}/>}
+          footer={<FooterVisibility><Footer lang={params.lang}/></FooterVisibility>}
+          controls={<><ContactButton lang={params.lang}/><Flags lang={params.lang}/></>}
+        >
           {children}
-          </section>
-          <FooterVisibility>
-            <Footer lang={params.lang}/>
-          </FooterVisibility>
-          <ContactButton lang={params.lang}/>
-          <Flags lang={params.lang}/>
-        </main>
+        </LanguageShell>
       </body>
     </html>
   )

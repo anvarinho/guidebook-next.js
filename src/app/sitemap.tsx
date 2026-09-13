@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
     const places = await sitemapPlaces()
     const articles = await sitemapArticles()
     const tours = await sitemapTours()
-    const routes = ["/", "/places", "/tours", "/about", "/articles"];
+    const routes = ["/", "/places", "/tours", "/about", "/articles", "/manas-airport-transfers"];
     const currentDate = new Date().toISOString();
     
     const pages = [];
