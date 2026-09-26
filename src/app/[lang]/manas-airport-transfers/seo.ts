@@ -1,19 +1,15 @@
 import type { Locale } from "@/lib/i18n.config";
 import { providers, type ProviderId } from "./transfer-data";
-import { transferLanguages, type TransferMessages } from "./translations";
+import { createTranslator, transferLanguages, type TransferMessages } from "./translations";
+import { getTransferFaq } from "./content";
 
 const origin = "https://central-asia.live";
+export const transferUpdated = "2026-09-13";
 export const transferUrl = (lang: Locale) => `${origin}/${lang}/manas-airport-transfers`;
 export const transferAlternates = {
   ...Object.fromEntries(Object.entries(transferLanguages).map(([lang, language]) => [language.tag, transferUrl(lang as Locale)])),
   "x-default": transferUrl("en"),
 };
-
-// Keep structured answers identical to the visible, translated FAQ.
-export const transferFaq = [
-  ["s193", "s194"], ["s195", "s196"], ["s197", "s198"],
-  ["s199", "s200"], ["s201", "s202"],
-] as const;
 
 export function getTransferStructuredData(lang: Locale, messages: TransferMessages) {
   const url = transferUrl(lang);
@@ -40,7 +36,7 @@ export function getTransferStructuredData(lang: Locale, messages: TransferMessag
     "@graph": [
       {
         "@type": "CollectionPage", "@id": `${url}#webpage`, url,
-        name: messages.s250, description: messages.s247, inLanguage: language,
+        name: messages.s250, description: messages.s247, inLanguage: language, dateModified: transferUpdated,
         publisher: { "@type": "Organization", name: "Central Asia", url: `${origin}/${lang}` },
         mainEntity: { "@id": `${url}#providers` },
         breadcrumb: { "@id": `${url}#breadcrumbs` },
@@ -65,9 +61,9 @@ export function getTransferStructuredData(lang: Locale, messages: TransferMessag
       {
         "@type": "FAQPage", "@id": `${url}#questions`, inLanguage: language,
         isPartOf: { "@id": `${url}#webpage` },
-        mainEntity: transferFaq.map(([question, answer]) => ({
-          "@type": "Question", name: messages[question],
-          acceptedAnswer: { "@type": "Answer", text: messages[answer] },
+        mainEntity: getTransferFaq(createTranslator(messages)).map(({ question, answer }) => ({
+          "@type": "Question", name: question,
+          acceptedAnswer: { "@type": "Answer", text: answer },
         })),
       },
       {

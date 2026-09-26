@@ -18,7 +18,10 @@ export const transferLanguages: Record<Locale, { tag: string; name: string; og: 
 const keys = Object.fromEntries(Object.entries(english).map(([key, text]) => [text, key])) as Record<string, keyof TransferMessages>;
 export function createTranslator(messages: TransferMessages): Translate {
   return (text, values = {}) => {
-    const translated = messages[keys[text]] ?? text;
+    // Stable dictionary keys keep translated copy working when English is edited.
+    // English lookup remains available for dynamic labels such as vehicle names.
+    const key = Object.prototype.hasOwnProperty.call(english, text) ? text as keyof TransferMessages : keys[text];
+    const translated = messages[key] ?? text;
     return translated.replace(/\{(\w+)\}/g, (token, key: string) => String(values[key] ?? token));
   };
 }

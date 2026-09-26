@@ -3,6 +3,7 @@
 
 import { useRef, type CSSProperties } from "react";
 import { useIntroAnimations } from "./useIntroAnimations";
+import HeroEagle from "./HeroEagle";
 import type { IntroMessages } from "./translations";
 import "./intro.css";
 
@@ -56,10 +57,10 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
             ></div>
             <div className="layer hero-birds" data-speed="0.4" data-drift="0.3">
               <div
-                className="bird bird-fly"
-                style={{ "top": "55%", "animationDuration": "30s", "animationDelay": "-6s" } as CSSProperties}
+                className="bird bird-fly hero-eagle hero-eagle--distant"
+                style={{ "top": "55%", "animationDuration": "26s", "animationDelay": "-6s" } as CSSProperties}
               >
-                <img src="/intro/eagle-flight-illustrated.png" alt="" />
+                <HeroEagle />
               </div>
             </div>
           </div>
@@ -69,10 +70,10 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
             data-drift="0.16"
           >
             <div
-              className="bird bird-fly"
-              style={{ "top": "35%", "animationDuration": "27s", "animationDelay": "-10s" } as CSSProperties}
+              className="bird bird-fly hero-eagle hero-eagle--near"
+              style={{ "top": "35%", "animationDuration": "23.5s", "animationDelay": "-10s" } as CSSProperties}
             >
-              <img src="/intro/eagle-flight-illustrated.png" alt="" />
+              <HeroEagle />
             </div>
           </div>
           <div className="content-wrap">

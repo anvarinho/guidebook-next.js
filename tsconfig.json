@@ -1,29 +1,61 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
-      "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "bundler",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "preserve",
-      "incremental": true,
-      "types": ["./types.d.ts"],
-      "plugins": [
-        {
-          "name": "next"
-        }
-      ],
-      "paths": {
-        "@/*": ["./src/*"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": [
+      "./types.d.ts"
+    ],
+    "plugins": [
+      {
+        "name": "next"
       }
-    },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/places/[placeUrl]", "src/app/[lang]/Components/NavItem.jsx", "src/app/[lang]/articles/[articleUrl]/components/Article.jsx", "src/app/[lang]/Components/HomePlaces.jsx", "src/app/admin/ui/dashboard/pagination/pagination.jsx", "src/app/admin/places/page.jsx", "src/app/admin/ui/dashboard/search/search.jsx", "src/app/admin/users", "src/app/admin/ui/dashboard/sidebar/menuLink/menuLink.jsx", "src/app/login/page.jsx", "src/app/admin/ui/loginForm/loginForm.jsx", "src/app/admin/tours/page.jsx", "src/app/admin/articles/page.jsx", "src/app/admin/ui/loginForm/login.js", "src/lib/auth.js", "src/app/[lang]/Components/meta/JsonLD.js"],
-    "exclude": ["node_modules"],
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/places/[placeUrl]",
+    "src/app/[lang]/Components/NavItem.jsx",
+    "src/app/[lang]/articles/[articleUrl]/components/Article.jsx",
+    "src/app/[lang]/Components/HomePlaces.jsx",
+    "src/app/admin/ui/dashboard/pagination/pagination.jsx",
+    "src/app/admin/places/page.jsx",
+    "src/app/admin/ui/dashboard/search/search.jsx",
+    "src/app/admin/users",
+    "src/app/admin/ui/dashboard/sidebar/menuLink/menuLink.jsx",
+    "src/app/login/page.jsx",
+    "src/app/admin/ui/loginForm/loginForm.jsx",
+    "src/app/admin/tours/page.jsx",
+    "src/app/admin/articles/page.jsx",
+    "src/app/admin/ui/loginForm/login.js",
+    "src/lib/auth.js",
+    "src/app/[lang]/Components/meta/JsonLD.js",
+    ".next-build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -271,7 +271,8 @@
                   {
                     "text": "ツアー",
                     "url": "/tours"
-                  }
+                  },
+            {"text": "空港送迎", "url": "/manas-airport-transfers"}
                 ]
               },
               {

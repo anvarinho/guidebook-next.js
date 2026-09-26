@@ -18,6 +18,9 @@
   padding: 1rem;
 }
 
+.airportTransferLink { margin-block: 1.5rem; padding: 1rem; border: 1px solid #d6dfd7; border-radius: 8px; }
+.airportTransferLink a { color: #264b3f; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
 .main p {
   text-align: left;
   white-space: pre-wrap;

@@ -298,7 +298,8 @@
             {
               "text": "Tours",
               "url": "/tours"
-            }
+            },
+            {"text": "Airport transfers", "url": "/manas-airport-transfers"}
           ]
         },
         {

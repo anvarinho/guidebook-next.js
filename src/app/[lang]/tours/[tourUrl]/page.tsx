@@ -11,6 +11,7 @@ import Meta from "./meta";
 import { notFound } from "next/navigation";
 import ImageRenderer from "../../Components/image/ImageRenderer";
 import TourDescription from "./TourDescription";
+import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
 
 type Params = {
   params: {
@@ -25,6 +26,7 @@ export default async function Tour({ params: { tourUrl, lang } }: Params) {
   const tourData: Promise<TourInfo> = getTour(tourUrl, lang);
   const data = await tourData;
   if (!data) notFound();
+  const transferMessages = tourUrl === "manas-airport-transfers" ? await getTransferMessages(lang) : null;
   return (
     <div className={styles.main}>
       <Meta lang={lang} tour={data} page={page} />
@@ -49,6 +51,11 @@ export default async function Tour({ params: { tourUrl, lang } }: Params) {
               {data.price[data.price.length - 1]}$
             </p>
           </div>
+          {transferMessages && (
+            <p className={styles.transferComparison}>
+              <Link href={`/${lang}/manas-airport-transfers`}>{transferMessages.s216} →</Link>
+            </p>
+          )}
           <TourDescription description={data.description} lang={lang} />
           <h3>{page.tours.tourPage.details}</h3>
           <div className={styles.daysNavigation}>

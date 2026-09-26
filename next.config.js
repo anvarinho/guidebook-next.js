@@ -10,6 +10,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/manas-airport-transfers",
+        destination: "/en/manas-airport-transfers",
+        permanent: true,
+      },
+      {
         source: "/",
         destination: "/en", // Matched parameters can be used in the destination
         permanent: true,

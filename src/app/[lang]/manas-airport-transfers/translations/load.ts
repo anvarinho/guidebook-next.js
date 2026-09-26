@@ -1,4 +1,5 @@
 import "server-only";
+import { notFound } from "next/navigation";
 import type { Locale } from "@/lib/i18n.config";
 import type { TransferMessages } from "./index";
 
@@ -14,4 +15,7 @@ const dictionaries: Record<Locale, () => Promise<TransferMessages>> = {
   cn: () => import("./cn.json").then(m => m.default),
   ru: () => import("./ru.json").then(m => m.default),
 };
-export const getTransferMessages = (lang: Locale) => dictionaries[lang]();
+export const getTransferMessages = (lang: Locale) => {
+  if (!Object.prototype.hasOwnProperty.call(dictionaries, lang)) notFound();
+  return dictionaries[lang]();
+};
