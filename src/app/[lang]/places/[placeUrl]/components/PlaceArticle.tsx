@@ -8,6 +8,8 @@ import Link from "next/link";
 import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
 import ShareButtons from "@/app/[lang]/Components/ShareButtons";
 import PlaceDescripiton from "./PlaceDescripiton";
+import { destinationGuides } from "../../../manas-airport-transfers/content";
+import { getTransferMessages } from "../../../manas-airport-transfers/translations/load";
 
 type Props = {
   promise: Promise<Place>;
@@ -26,6 +28,8 @@ export default async function PlaceArticle({ promise, lang }: Props) {
       ? await getPlacesByURLs(lang, place.sights)
       : [];
   const createdDate = place.created ? new Date(place.created) : null;
+  const transferGuide = destinationGuides.find(guide => guide.slug === place.url);
+  const transferMessages = transferGuide ? await getTransferMessages(lang) : null;
   return (
     <article className={styles.main}>
       <h1>{place.title}</h1>
@@ -47,6 +51,11 @@ export default async function PlaceArticle({ promise, lang }: Props) {
         highlights={page.sights.highlights}
         name={place.name}
       />
+      {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
+        <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
+          {transferMessages.s217.replace("{destination}", transferMessages[transferGuide.labelKey])} →
+        </Link>
+      </p>}
       <br />
       {/* <ShareButtons/> */}
       {place.videoID && (

@@ -7,6 +7,8 @@ import { transferLanguages } from "./translations";
 import type { Locale } from "@/lib/i18n.config";
 import { useTransferDirectory } from "./useTransferDirectory";
 import styles from "./transfers.module.css";
+import { getTransferFaq } from "./content";
+import { ArrivalGuide, OnwardGuides } from "./JourneyGuide";
 import { ComparisonTable, ProviderPrice } from "./TransferComparison";
 import { contactHref, destinations, type Destination, type Vehicle, type Sort, type ProviderId } from "./transfer-data";
 
@@ -32,7 +34,7 @@ case "central": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("An easy start to your trip, with a name-sign welcome, flight monitoring and a ride to your accommodation.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s5")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -59,7 +61,7 @@ case "central": return (
                       <use href="#clock" />
                     </svg>{" "}{t("24/7 support")}</span>
                 </div>
-                    <p>{" "}{t("Sedans, minivans and SUVs. The published Bishkek options start at $18, $35 and $50 respectively. Confirm your luggage, waiting allowance and final total when booking. Free cancellation is listed up to 24 hours before pickup.")}{" "}</p>
+                    <p>{" "}{t("s12")}{" "}</p>
                     <a target="_blank" rel="noopener noreferrer" href={`/${lang}/tours/manas-airport-transfers`}>{t("View published service information")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
                   </div>
@@ -81,7 +83,7 @@ case "compass": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("Contact Compass Transfer to discuss your airport pickup or regional journey and request a price for your group.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s18")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -106,7 +108,7 @@ case "compass": return (
                       <use href="#pin" />
                     </svg>{" "}{t("Confirm your route")}</span>
                 </div>
-                    <p>{" "}{t("Contact supplied by the directory owner. Confirm route availability, vehicle size, luggage capacity, waiting policy and the total fare directly. No published price or website has been verified.")}{" "}</p>
+                    <p>{" "}{t("s24")}{" "}</p>
                   </div>
                 </details>
               </article>
@@ -127,7 +129,7 @@ case "manas": return (
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
                 <p className="contact-update">{" "}{t("Contact number updated by the directory owner.")}{" "}</p>
-                <p className="provider-description">{" "}{t("Airport and intercity rides with published route prices, online booking and round-the-clock availability.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s30")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -154,7 +156,7 @@ case "manas": return (
                       <use href="#clock" />
                     </svg>{" "}{t("24/7 service")}</span>
                 </div>
-                    <p>{" "}{t("The provider lists sedans, minivans and premium transfer services. Route prices do not specify a vehicle category; ask for the fare for your chosen vehicle and whether meet-and-greet is included.")}{" "}</p>
+                    <p>{" "}{t("s35")}{" "}</p>
                     <a href="https://manastaxi.kg/en" target="_blank" rel="noopener noreferrer">{t("View published service information")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a><a href="https://manastaxi.kg/en/contacts" target="_blank" rel="noopener noreferrer">{t("Contact source")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
@@ -176,7 +178,7 @@ case "advantour": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("Pre-arranged private transfers with a choice of cars, vans and larger vehicles for group travel.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s42")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -203,7 +205,7 @@ case "advantour": return (
                       <use href="#bag" />
                     </svg>{" "}{t("Meet & greet")}</span>
                 </div>
-                    <p>{" "}{t("The Bishkek route lists sedans, SUVs, minivans, minibuses and buses. Book at least one business day before arrival. Confirm flight-delay arrangements and the final price for your party.")}{" "}</p>
+                    <p>{" "}{t("s46")}{" "}</p>
                     <a href="https://www.advantour.com/kyrgyzstan/transfers.htm" target="_blank" rel="noopener noreferrer">{t("View published route prices")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a><a href="https://www.advantour.com/kyrgyzstan/contacts.htm" target="_blank" rel="noopener noreferrer">{t("Contact source")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
@@ -225,7 +227,7 @@ case "concept": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("Airport and regional transfers with a designated meeting point, luggage assistance and a range of vehicles.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s53")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -251,7 +253,7 @@ case "concept": return (
                       <use href="#bag" />
                     </svg>{" "}{t("Luggage assistance")}</span>
                 </div>
-                    <p>{" "}{t("The published fleet includes minivans, SUVs and minibuses. Two hours of waiting for a delayed flight are listed as free. Request vehicle availability, luggage capacity and a route-specific quote.")}{" "}</p>
+                    <p>{" "}{t("s58")}{" "}</p>
                     <a href="https://kyrgyzconcept.kg/en/trp/transfer/" target="_blank" rel="noopener noreferrer">{t("View published service information")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
                   </div>
@@ -272,7 +274,7 @@ case "welcome": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("Pre-book airport pickups and journeys to Karakol or Issyk-Kul through an international transfer booking service.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s64")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -298,7 +300,7 @@ case "welcome": return (
                       <use href="#users" />
                     </svg>{" "}{t("Vehicle choice when booking")}</span>
                 </div>
-                    <p>{" "}{t("Enter your route, date, passengers and luggage in the booking form to see available vehicles. Confirm meet-and-greet and waiting charges. The listed phone is the UK customer support number; local driver details are supplied with the booking.")}{" "}</p>
+                    <p>{" "}{t("s69")}{" "}</p>
                     <a href="https://welcome.taxi/en/airports/bsz" target="_blank" rel="noopener noreferrer">{t("WelcomeTaxi service information")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a><a href="https://welcome.taxi/en/contacts" target="_blank" rel="noopener noreferrer">{t("Contact source")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
@@ -320,7 +322,7 @@ case "cat": return (
                   </div>
                   <ProviderPrice id={id} destination={destination} vehicle={vehicle} />
                 </div>
-                <p className="provider-description">{" "}{t("A Bishkek travel company offering Manas Airport transfers and transport arrangements around Kyrgyzstan.")}{" "}</p>
+                <p className="provider-description">{" "}{t("s75")}{" "}</p>
                 
                 
                 <div className="provider-footer">
@@ -346,7 +348,7 @@ case "cat": return (
                       <use href="#users" />
                     </svg>{" "}{t("Group transport enquiries")}</span>
                 </div>
-                    <p>{" "}{t("Contact the transport team for a route-specific quote, available vehicle sizes and inclusions. The company lists transport throughout Kyrgyzstan; confirm availability for your Karakol or Cholpon-Ata trip. No current transfer fare was verified.")}{" "}</p>
+                    <p>{" "}{t("s80")}{" "}</p>
                     <a href="https://cat.kg/en/" target="_blank" rel="noopener noreferrer">{t("C.A.T. Company service information")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a><a href="https://cat.kg/en/" target="_blank" rel="noopener noreferrer">{t("Contact source")}{" "}<svg className="icon" aria-hidden="true">
                         <use href="#external" /></svg></a>
@@ -468,12 +470,12 @@ export default function Transfers({ lang }: { lang: Locale }) {
             <div className="hero-copy">
               <p className="eyebrow">{t("PRIVATE AIRPORT TRANSFERS · KYRGYZSTAN")}</p>
               <h1>{t("Manas Airport transfers to Bishkek & beyond")}</h1>
-              <p className="hero-description">{t("Start your Kyrgyzstan journey with a ride that suits you. Compare seven transfer companies for trips from Manas Airport to Bishkek, Karakol and Cholpon-Ata. Explore starting fares and vehicle options, then contact your chosen company directly.")}</p>
+              <p className="hero-description">{t("s98")}</p>
               <div className="hero-actions"><a className="button button-orange" href="#providers">{t("Compare companies")}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a><a className="text-link" href="#route-search">{t("Book a transfer")}</a></div>
               <div className="hero-points"><span><svg className="icon" aria-hidden="true"><use href="#check" /></svg>{" "}{t("City & regional routes")}</span><span><svg className="icon" aria-hidden="true"><use href="#check" /></svg>{" "}{t("Contact directly")}</span></div>
             </div>
             <div className="hero-visual">
-              <img src="/manas-airport-transfers/airport-pickup.webp" srcSet="                   /manas-airport-transfers/airport-pickup-640.webp  640w,                   /manas-airport-transfers/airport-pickup.webp     1280w                 " sizes="(max-width: 600px) calc(100vw - 36px), 580px" width="1280" height="853" alt={t("AI-generated illustration of a traveler approaching a minivan outside an airport")} fetchPriority="high" />
+              <img src="/manas-airport-transfers/airport-pickup.webp" srcSet="                   /manas-airport-transfers/airport-pickup-640.webp  640w,                   /manas-airport-transfers/airport-pickup.webp     1280w                 " sizes="(max-width: 600px) calc(100vw - 36px), 580px" width="1280" height="853" alt={t("s99")} fetchPriority="high" />
               <div className="photo-shade"></div>
               
               
@@ -492,46 +494,46 @@ export default function Transfers({ lang }: { lang: Locale }) {
             <h2 id="route-prices-title">{t("Airport transfer routes & starting prices")}</h2>
           </div>
         </div>
-        <p className="section-intro">{t("Private transfers to the city, the mountains or Issyk-Kul. Central Asia’s published route starting fares are below; confirm your exact vehicle and total when booking.")}</p>
+        <p className="section-intro">{t("s133")}</p>
         
         <div className="route-tips">
           <article>
             <figure className="route-tip-photo">
-              <img src="/manas-airport-transfers/bishkek-city-640.webp" srcSet="/manas-airport-transfers/bishkek-city-640.webp 640w, /manas-airport-transfers/bishkek-city.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("AI-generated illustration of a transfer car on a tree-lined boulevard inspired by Bishkek")} loading="lazy" decoding="async" fetchPriority="auto" />
+              <img src="/manas-airport-transfers/bishkek-city-640.webp" srcSet="/manas-airport-transfers/bishkek-city-640.webp 640w, /manas-airport-transfers/bishkek-city.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("s134")} loading="lazy" decoding="async" fetchPriority="auto" />
               <figcaption>{t("AI-generated travel illustration")}</figcaption>
             </figure>
             <h3>{t("Manas Airport to Bishkek")}</h3>
-            <p>{" "}{t("Give the provider your exact hotel or apartment address. Ask whether the fare covers that address, airport parking, meet-and-greet and waiting after landing. The drive into central Bishkek usually takes 30–50 minutes depending on traffic.")}{" "}</p>
+            <p>{" "}{t("s136")}{" "}</p>
             
             <p className="route-starting-price">{t("Central Asia · from $18 per transfer")}</p><a className="text-link route-book" href="?destination=bishkek&vehicle=all&sort=featured#route-search" data-destination="bishkek" onClick={(event) => navigateRoute(event, "bishkek", true)}>{t("Book a Bishkek transfer")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
             <a className="text-link route-filter" href="?destination=bishkek&vehicle=all&sort=featured#providers" data-destination="bishkek" onClick={(event) => navigateRoute(event, "bishkek", false)} aria-current={destination === "bishkek" ? "true" : undefined}>{t("Compare Bishkek transfers")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
           </article>
           <article className="karakol-tip">
             <figure className="route-tip-photo">
-              <img src="/manas-airport-transfers/karakol-road-640.webp" srcSet="/manas-airport-transfers/karakol-road-640.webp 640w, /manas-airport-transfers/karakol-road.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("AI-generated lakeside road scene inspired by the journey toward Karakol")} loading="lazy" fetchPriority="auto" />
+              <img src="/manas-airport-transfers/karakol-road-640.webp" srcSet="/manas-airport-transfers/karakol-road-640.webp 640w, /manas-airport-transfers/karakol-road.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("s140")} loading="lazy" fetchPriority="auto" />
               <figcaption>{t("AI-generated travel illustration")}</figcaption>
             </figure>
             <h3>{t("Manas Airport to Karakol")}</h3>
-            <p>{" "}{t("For a longer transfer, confirm rest stops and luggage capacity. Mention ski equipment or trekking bags when requesting your vehicle and quote. The route around the eastern end of Issyk-Kul takes roughly 5–7 hours.")}{" "}</p>
+            <p>{" "}{t("s142")}{" "}</p>
             
             <p className="route-starting-price">{t("Central Asia · from $160 per transfer")}</p><a className="text-link route-book" href="?destination=karakol&vehicle=all&sort=featured#route-search" data-destination="karakol" onClick={(event) => navigateRoute(event, "karakol", true)}>{t("Book a Karakol transfer")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
             <a className="text-link route-filter" href="?destination=karakol&vehicle=all&sort=featured#providers" data-destination="karakol" onClick={(event) => navigateRoute(event, "karakol", false)} aria-current={destination === "karakol" ? "true" : undefined}>{t("Compare Karakol transfers")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
           </article>
           <article>
             <figure className="route-tip-photo">
-              <img src="/manas-airport-transfers/cholpon-ata-lake-640.webp" srcSet="/manas-airport-transfers/cholpon-ata-lake-640.webp 640w, /manas-airport-transfers/cholpon-ata-lake.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("AI-generated illustration of a minivan approaching Issyk-Kul’s northern shore near Cholpon-Ata")} loading="lazy" decoding="async" fetchPriority="auto" />
+              <img src="/manas-airport-transfers/cholpon-ata-lake-640.webp" srcSet="/manas-airport-transfers/cholpon-ata-lake-640.webp 640w, /manas-airport-transfers/cholpon-ata-lake.webp 1280w" sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 900px) 30vw, 382px" width="640" height="427" alt={t("s146")} loading="lazy" decoding="async" fetchPriority="auto" />
               <figcaption>{t("AI-generated travel illustration")}</figcaption>
             </figure>
             <h3>{t("Manas Airport to Cholpon-Ata")}</h3>
-            <p>{" "}{t("Share the name and address of your accommodation. Confirm whether your destination is in Cholpon-Ata or a different lakeside town before agreeing on the fare. Allow around 3–4 hours for the drive to the northern shore.")}{" "}</p>
+            <p>{" "}{t("s148")}{" "}</p>
             
             <p className="route-starting-price">{t("Central Asia · from $120 per transfer")}</p><a className="text-link route-book" href="?destination=cholpon&vehicle=all&sort=featured#route-search" data-destination="cholpon" onClick={(event) => navigateRoute(event, "cholpon", true)}>{t("Book a Cholpon-Ata transfer")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
             <a className="text-link route-filter" href="?destination=cholpon&vehicle=all&sort=featured#providers" data-destination="cholpon" onClick={(event) => navigateRoute(event, "cholpon", false)} aria-current={destination === "cholpon" ? "true" : undefined}>{t("Compare Cholpon-Ata transfers")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
           </article>
         </div>
-      <details className="all-prices"><summary>{t("Compare starting prices from all seven companies")}</summary><div className="table-scroll" role="region" aria-label={t("Airport route price comparison, scroll horizontally on smaller screens")} tabIndex={0}>
+      <details className="all-prices"><summary>{t("Compare starting prices from all seven companies")}</summary><div className="table-scroll" role="region" aria-label={t("s153")} tabIndex={0}>
           <table className="price-table">
-            <caption>{" "}{t("Manas Airport departures · checked 12 September 2026 · starting prices in USD")}{" "}</caption>
+            <caption>{" "}{t("s154")}{" "}</caption>
             <thead>
               <tr>
                 <th scope="col">{t("Destination")}</th>
@@ -584,7 +586,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
             </tbody>
           </table>
         </div></details>
-        <p className="table-note">{" "}{t("Source: each company’s linked transfer page above. These are not live quotes or like-for-like vehicle offers. Manas Taxi also publishes KGS prices; the USD amounts shown here are its listed equivalents.")}{" "}</p>
+        <p className="table-note">{" "}{t("s156")}{" "}</p>
 </section>
 
       
@@ -598,13 +600,26 @@ export default function Transfers({ lang }: { lang: Locale }) {
           </div>
           <a href="#how-it-works" className="text-link">{t("How it works")}{" "}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a>
         </div>
-        <p className="section-intro comparison-intro">{t("Your trip, your choice of company. Compare published starting prices, vehicle options and pickup details from Central Asia, Compass Transfer, Manas Taxi and other providers. Shortlist up to three to compare side by side, then call, message or book through their website.")}</p>
+        <p className="section-intro comparison-intro">{t("s251")}</p>
+        <fieldset className="company-filters">
+          <legend className="sr-only">{t("Compare companies")}</legend>
+          <label htmlFor="compare-destination">{t("Destination")}
+            <select id="compare-destination" value={destination} onChange={event => changeRoute({ destination: event.currentTarget.value as Destination })}>
+              <option value="bishkek">{t("Bishkek city")}</option><option value="karakol">{t("Karakol")}</option><option value="cholpon">{t("Cholpon-Ata")}</option>
+            </select>
+          </label>
+          <label htmlFor="compare-vehicle">{t("Vehicle")}
+            <select id="compare-vehicle" value={vehicle} onChange={event => changeRoute({ vehicle: event.currentTarget.value as Vehicle })}>
+              <option value="all">{t("Any suitable vehicle")}</option><option value="sedan">{t("Sedan")}</option><option value="minivan">{t("Minivan")}</option><option value="suv">{t("SUV")}</option>
+            </select>
+          </label>
+        </fieldset>
         <div className="route-context" id="route-context" hidden={destination === "bishkek"}>
           
           <div>
             <p className="eyebrow">{t("YOUR SELECTED JOURNEY")}</p>
             <h3 id="route-context-title">{t("Manas Airport to")}{" "}{t(destinations[destination])}</h3>
-            <p id="route-context-description">{destination === "karakol" ? t("Plan your journey to Karakol with a comparison of published fares and direct quotes. Ask about rest stops, skis or large bags, and your hotel’s exact address.") : t("Compare transfers to Cholpon-Ata on Issyk-Kul. Share your hotel or resort address, luggage and passenger count to get a complete quote.")}</p>
+            <p id="route-context-description">{destination === "karakol" ? t("s219") : t("s220")}</p>
             <div className="route-facts" id="route-facts"><span>{published}{" "}{t("published fares")}</span><span>{ids.length - published}{" "}{t("quotes on request")}</span></div>
           </div>
         </div>
@@ -623,7 +638,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
           <div className="table-scroll" tabIndex={0} role="region" aria-label={t("Selected transfer company comparison")}>
             <ComparisonTable ids={shortlist} destination={destination} vehicle={vehicle} message={message} />
           </div>
-          <p>{" "}{t("These are starting amounts, not confirmed reservations. Request a total for the same vehicle and trip details from each provider.")}{" "}</p>
+          <p>{" "}{t("s172")}{" "}</p>
         </section>
         <div className="directory-layout">
           <div className="results-column">
@@ -636,8 +651,8 @@ export default function Transfers({ lang }: { lang: Locale }) {
                 </select></label>
             </div>
             <div className="provider-list" id="provider-list">{ids.map(id => <ProviderCard lang={lang} key={id} id={id} destination={destination} vehicle={vehicle} message={message} comparing={comparing} shortlist={shortlist} onToggle={toggleProvider} />)}</div>
-            <p className="results-note">{" "}{t("Prices are published starting amounts, not live quotes. Vehicle, destination, waiting time and extras may change your total. USD amounts are as listed by each provider.")}{" "}</p>
-            <noscript><p className="noscript-note">{" "}{t("Showing all seven providers for Manas Airport to Bishkek. Enable JavaScript to filter routes, vehicles and prices.")}{" "}</p></noscript>
+            <p className="results-note">{" "}{t("s180")}{" "}</p>
+            <noscript><p className="noscript-note">{" "}{t("s181")}{" "}</p></noscript>
           </div>
 
           
@@ -667,8 +682,8 @@ export default function Transfers({ lang }: { lang: Locale }) {
               <label htmlFor="trip-address" className="booking-wide">{t("Hotel or drop-off address")}<input id="trip-address" maxLength={180} placeholder={t("Hotel name or full address")} autoComplete="off" required name="address" /></label>
               <label htmlFor="trip-notes" className="booking-wide">{t("Extra requirements")}{" "}<span>{t("(optional)")}</span><textarea id="trip-notes" maxLength={300} rows={2} placeholder={t("Child seats, ski equipment, extra stops…")} name="notes"></textarea></label>
             </div>
-            <div className="booking-actions"><button className="button button-orange" id="book-transfer" type="submit">{t("Book a transfer")}{" "}<svg className="icon" aria-hidden="true"><use href="#chat" /></svg></button><p id="booking-note">{t("Opens WhatsApp with your trip details. Send the message to confirm availability and the final price.")}</p></div>
-            <div id="booking-handoff" role="status" hidden={!handoff}><p>{t("Your WhatsApp draft is ready. Your booking is confirmed only after our team replies.")}</p><a id="booking-whatsapp" target="_blank" rel="noopener noreferrer" href={contactHref("central", message)}>{t("Continue to WhatsApp")}</a></div>
+            <div className="booking-actions"><button className="button button-orange" id="book-transfer" type="submit">{t("Book a transfer")}{" "}<svg className="icon" aria-hidden="true"><use href="#chat" /></svg></button><p id="booking-note">{t("s125")}</p></div>
+            <div id="booking-handoff" role="status" hidden={!handoff}><p>{t("s126")}</p><a id="booking-whatsapp" target="_blank" rel="noopener noreferrer" href={contactHref("central", message)}>{t("Continue to WhatsApp")}</a></div>
             <noscript><p>{t("To send the form details, enable JavaScript. You can also")}{" "}<a href="https://wa.me/996500490806">{t("contact Central Asia on WhatsApp")}</a>{" "}{t("and share your trip details directly.")}</p></noscript>
           </form>
       </section>
@@ -681,26 +696,28 @@ export default function Transfers({ lang }: { lang: Locale }) {
               <h2>{t("How to book your airport transfer")}</h2>
             </div>
           </div>
-          <p className="section-intro">{t("Choose a company in the comparison above to contact it directly. For a transfer with Central Asia, use the form and follow these three steps.")}</p>
+          <p className="section-intro">{t("s252")}</p>
           <div className="steps-grid">
             <article>
               <span className="step-number">01</span>
               <h3>{t("Share your trip")}</h3>
-              <p>{" "}{t("Choose your route and enter your arrival time, passengers and drop-off address.")}{" "}</p>
+              <p>{" "}{t("s185")}{" "}</p>
             </article>
             <article>
               <span className="step-number">02</span>
               <h3>{t("Send on WhatsApp")}</h3>
-              <p>{" "}{t("Select “Book a transfer” to open a WhatsApp draft with all the details you entered. Review it and send it to Central Asia.")}{" "}</p>
+              <p>{" "}{t("s187")}{" "}</p>
             </article>
             <article>
               <span className="step-number">03</span>
               <h3>{t("Confirm your pickup")}</h3>
-              <p>{" "}{t("Our team confirms availability, your total fare and the meeting point. Save the agreed pickup details.")}{" "}</p>
+              <p>{" "}{t("s189")}{" "}</p>
             </article>
           </div>
         </div>
       </section>
+
+      <ArrivalGuide />
 
       <section className="faq-section container" id="questions">
         <div>
@@ -708,40 +725,17 @@ export default function Transfers({ lang }: { lang: Locale }) {
           <h2>{t("Manas Airport transfer questions")}</h2>
           <p className="faq-intro">{" "}{t("Prices, booking details and what to confirm before you travel.")}{" "}</p>
         </div>
-        <div className="faq-list"><details id="what-to-consider"><summary>{t("What is included in my transfer?")}<svg className="icon" aria-hidden="true"><use href="#chevron" /></svg></summary><p>{t("Central Asia lists flight monitoring and name-sign pickup, with child seats available on request. Confirm luggage space, airport parking, waiting time, any extra stops, payment currency and cancellation terms when agreeing on your total fare.")}</p></details>
-          <details>
-            <summary>{" "}{t("Am I booking with Central Asia or the provider?")}<svg className="icon" aria-hidden="true">
-                <use href="#chevron" />
-              </svg>
-            </summary>
-            <p>{" "}{t("The main booking form sends a WhatsApp draft to Central Asia. Your booking is confirmed after our team agrees on availability, the price and pickup details with you. The comparison cards also provide direct contacts for other companies.")}{" "}</p>
+        <div className="faq-list">{getTransferFaq(t).map(({ id, question, answer }) => (
+          <details id={id} key={id}>
+            <summary>{question}<svg className="icon" aria-hidden="true"><use href="#chevron" /></svg></summary>
+            <p>{answer}</p>
           </details>
-          <details>
-            <summary>{" "}{t("Are these prices guaranteed?")}<svg className="icon" aria-hidden="true">
-                <use href="#chevron" />
-              </svg>
-            </summary>
-            <p>{" "}{t("No. These are starting prices published by the providers, checked on 12 September 2026. They are not live availability or final quotes. Confirm the vehicle, route, currency, waiting time and any extras before booking.")}{" "}</p>
-          </details>
-          <details>
-            <summary>{" "}{t("What should I send when booking?")}<svg className="icon" aria-hidden="true">
-                <use href="#chevron" />
-              </svg>
-            </summary>
-            <p>{" "}{t("Send your flight number, arrival date and time, destination address, passenger count and luggage details. Mention child seats or oversized equipment and ask for the final price and meeting point.")}{" "}</p>
-          </details>
-          <details>
-            <summary>{" "}{t("What if my flight is delayed?")}<svg className="icon" aria-hidden="true">
-                <use href="#chevron" />
-              </svg>
-            </summary>
-            <p>{" "}{t("Waiting policies vary. Some providers list flight tracking or a waiting allowance. Confirm the exact policy with your chosen company and share your flight number before arrival.")}{" "}</p>
-          </details>
-          
-        </div>
+        ))}</div>
       </section>
 
-      <section className="booking-reminder container" aria-label={t("Book your airport transfer")}><div><h2>{t("Ready to arrange your pickup?")}</h2><p>{t("City stay, mountain adventure or time by Issyk-Kul? Tell Central Asia where you’re heading and request a pickup quote.")}</p></div><a className="button button-orange" href="#route-search">{t("Book a transfer")}</a></section>
+      <OnwardGuides lang={lang} />
+
+      <section className="booking-reminder container" aria-label={t("Book your airport transfer")}><div><h2>{t("Ready to arrange your pickup?")}</h2><p>{t("s205")}</p></div><a className="button button-orange" href="#route-search">{t("Book a transfer")}</a></section>
     </main>
 
     <footer className="site-footer container">

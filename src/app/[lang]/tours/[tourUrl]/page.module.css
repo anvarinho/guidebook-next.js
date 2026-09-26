@@ -15,6 +15,9 @@
   /* transition-duration: 500ms; */
 }
 
+.transferComparison { margin: 1rem 0; padding: 1rem; border: 1px solid #d6dfd7; border-radius: 8px; }
+.transferComparison a { color: #264b3f; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+
 .article h2 {
   padding: 1rem 0;
   white-space: pre-line;

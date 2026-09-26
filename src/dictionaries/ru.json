@@ -297,7 +297,8 @@
             {
               "text": "Туры",
               "url": "/tours"
-            }
+            },
+            {"text": "Трансферы из аэропорта", "url": "/manas-airport-transfers"}
           ]
         },
         {

@@ -46,11 +46,15 @@ Researched 12 September 2026. These are public provider claims, not independent 
 
 ## Updating
 
-Provider data used for interactive filtering is in `transfer-data.js`. Also update the static cards in `index.html` so they remain accurate without JavaScript. Keep the researched date in the hero, FAQ and this document synchronized when facts are rechecked.
+Provider data used for interactive filtering is in `transfer-data.ts`. Also review provider descriptions and the full comparison table in `Transfers.tsx`. The price FAQ uses that data directly; visible and structured FAQ answers share `content.ts`. Keep translated research dates synchronized only when the relevant provider facts have been rechecked.
 
 Providers with known fleets are filtered by listed vehicle classes. Providers with unverified fleets remain visible with a request to confirm availability. A provider may support a route and vehicle separately without publishing their combination; the directory requests confirmation rather than inferring a fare. Prices sort by the listed USD starting amounts, with unknown amounts last. The featured placement applies only to the default order; price and name sorting respect the visitor's choice.
 
-The page is static, collects no submitted data, and does not confirm reservations. It has not been published to central-asia.live.
+The Next.js page renders its initial directory content on the server. Booking details form an English WhatsApp draft; submitting the form does not itself confirm a reservation. Deployment and live indexing were not verified during the 13 September SEO review; see `SEO-AUDIT.md`.
+
+## Targeted SEO fact check — 13 September 2026
+
+Revisited Central Asia's service page, Manas Taxi's routes page and Advantour's Bishkek page for the pricing FAQ and vehicle guidance. Their displayed Bishkek starting fares remain USD 18, USD 10 / KGS 800 and USD 60 respectively. Manas Taxi lists Karakol at USD 106 and Cholpon-Ata at USD 71, with indicative drives of 5 h 30 min and 3 h 30 min. This targeted check does not change the full directory's original research date or verify owner-supplied telephone numbers.
 
 ## Additional listings
 

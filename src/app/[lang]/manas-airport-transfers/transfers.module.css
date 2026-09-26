@@ -514,6 +514,30 @@
 }
 
 /* Page-specific reading rhythm, including longer translated headings. */
+.transfers-page :global(.company-filters) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto 24px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.transfers-page :global(.company-filters label) { min-width: 0; color: var(--green); font-size: 14px; font-weight: 600; }
+.transfers-page :global(.company-filters select) { display: block; width: 100%; min-width: 0; min-height: 48px; margin-top: 6px; padding: 10px; border: 1px solid #aeb9ac; border-radius: 8px; background: #fff; font-size: 16px; }
+.transfers-page :global(.arrival-guide) { padding-block: 48px; }
+.transfers-page :global(.arrival-steps) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 0; }
+.transfers-page :global(.arrival-steps li) { min-width: 0; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+.transfers-page :global(.arrival-icon) { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 18px; border-radius: 10px; background: #fbefe7; color: var(--orange); }
+.transfers-page :global(.arrival-steps h3) { margin-bottom: 12px; font-size: 21px; letter-spacing: -.02em; }
+.transfers-page :global(.arrival-steps p) { color: var(--muted); font-size: 16px; line-height: 1.8; }
+.transfers-page :global(.onward-guide) { padding-block: 30px; border-top: 1px solid var(--line); }
+.transfers-page :global(.destination-links) { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.transfers-page :global(.destination-links a) { display: flex; align-items: center; gap: 18px; padding: 12px 16px; min-height: 48px; border: 1px solid var(--line); border-radius: 8px; color: var(--green); }
+.transfers-page :global(.destination-links a:hover) { border-color: var(--green); background: var(--paper); }
+.transfers-page :global(.publisher-note) { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 28px; color: var(--muted); font-size: 14px; }
+.transfers-page :global(.publisher-note a) { text-decoration: underline; text-underline-offset: 3px; }
+.transfers-page[dir="rtl"] :global(.destination-links .icon) { transform: rotate(180deg); }
+@media (max-width: 800px) {
+  .transfers-page :global(.arrival-steps) { grid-template-columns: 1fr; gap: 16px; }
+  .transfers-page :global(.arrival-steps li) { padding: 20px; }
+  .transfers-page :global(.arrival-guide) { padding-block: 32px; }
+}
+@media (max-width: 400px) {
+  .transfers-page :global(.company-filters) { grid-template-columns: 1fr; padding: 16px; }
+}
 .transfers-page :global(h1) { font-size: clamp(36px, 4.2vw, 56px); line-height: 1.12; letter-spacing: -.035em; text-wrap: balance; overflow-wrap: break-word; }
 .transfers-page :global(h2), .transfers-page :global(h3) { text-wrap: balance; overflow-wrap: break-word; }
 .transfers-page :global(.hero-grid) { align-items: center; }

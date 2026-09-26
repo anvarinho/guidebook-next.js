@@ -277,7 +277,8 @@
                   {
                     "text": "旅游",
                     "url": "/tours"
-                  }
+                  },
+            {"text": "机场接送", "url": "/manas-airport-transfers"}
                 ]
               },
               {

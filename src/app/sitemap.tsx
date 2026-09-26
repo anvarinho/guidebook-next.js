@@ -3,6 +3,7 @@ import { i18n } from '@/lib/i18n.config';
 import { sitemapPlaces } from '@/lib/getAllPlaces';
 import { sitemapArticles } from '@/lib/getAllArticles';
 import { sitemapTours } from '@/lib/getAllTours';
+import { transferUpdated } from './[lang]/manas-airport-transfers/seo';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
     const URL = "https://central-asia.live";
@@ -19,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
         for (const route of routes) {
             pages.push({
                 url: `${URL}/${lang}${route}`,
-                lastModified: currentDate,
+                lastModified: route === '/manas-airport-transfers' ? transferUpdated : currentDate,
                 changeFrequency: 'weekly' as const,
                 priority: 0.8
             });
