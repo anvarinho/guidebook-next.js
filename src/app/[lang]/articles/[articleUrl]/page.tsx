@@ -8,6 +8,8 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 import Meta from './meta';
 import { getDictionary } from '@/lib/dictionary'
 import { notFound } from 'next/navigation'
+import shared from '../../places/page.module.css';
+import { PlacesReveal } from '../../places/components/PlacesMotion';
 
 type Params = {
   params: {
@@ -23,9 +25,25 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   const article = await data
   if (!article) notFound()
   return (
-    <div className={styles.main}>
+    <div className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
       <Meta lang={lang} article={article} page={page}/>
       <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
+        <header className={styles.articleHeader}>
+          <PlacesReveal className={styles.headerCopy}>
+            <a href={`/${lang}/articles`} className={styles.breadcrumb}>
+              <span aria-hidden="true">{lang === 'ae' ? '→' : '←'}</span>{page.articles.name}
+            </a>
+            <p className={shared.eyebrow}>{page.articles.name}</p>
+            <h1>{article.title}</h1>
+            <p className={styles.subtitle}>{article.subtitle}</p>
+            <div className={styles.articleMeta}>
+              <time dateTime={new Date(article.createdAt).toISOString()}>{new Date(article.createdAt).toLocaleDateString(page.langCode, { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
+              <span aria-hidden="true">·</span>
+              <span>{page.info.seen}{new Intl.NumberFormat(page.langCode).format(article.viewCount)}</span>
+            </div>
+          </PlacesReveal>
+          <PlacesReveal className={styles.headerRule} order={1} aria-hidden="true"><span/></PlacesReveal>
+        </header>
         <Article article={article} lang={lang}/>
       </Suspense>
     </div>

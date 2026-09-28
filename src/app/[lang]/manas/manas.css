@@ -1,0 +1,300 @@
+/* The epic uses the shared site palette, with its original illustrations. */
+.manas-page { --ink: rgb(var(--foreground-rgb)); --paper: rgb(var(--background-end-rgb)); --muted: rgba(var(--foreground-rgb), .64); --line: rgba(var(--foreground-rgb), .13); --surface: rgba(var(--callout-rgb), .5); --accent: var(--main-active-color); position: relative; isolation: isolate; color: var(--ink); background: var(--paper); font-family: inherit; }
+.manas-page *, .manas-page *::before, .manas-page *::after { box-sizing: border-box; }
+.manas-page :where(h1,h2,h3,p,blockquote,figure) { margin: 0; }
+.manas-page :where(button,a,summary) { -webkit-tap-highlight-color: transparent; }
+.manas-page button { font: inherit; color: inherit; cursor: pointer; }
+.manas-page img { display: block; max-width: 100%; }
+.manas-page svg { display: inline-block; vertical-align: middle; }
+.manas-page :where(section[id],#sources,#main) { scroll-margin-top: 96px; }
+.manas-page :is(a,button,summary):focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.manas-page .container { width: min(1360px,calc(100% - 80px)); margin-inline: auto; }
+.manas-page .eyebrow { font-size: 11px; line-height: 1.7; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.manas-page .red { color: var(--accent); }
+.manas-page h2 { font-size: clamp(34px,4.1vw,58px); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; text-wrap: balance; }
+.manas-page h2 em { font-style: normal; color: var(--muted); }
+.manas-page h3 { font-weight: 500; line-height: 1.3; letter-spacing: -.025em; text-wrap: balance; }
+.manas-page .skip { position: fixed; top: 8px; inset-inline-start: 16px; z-index: 2000; padding: 12px 18px; border-radius: 12px; background: var(--accent); color: #141414; transform: translateY(-150%); }
+.manas-page .skip:focus { transform: none; }
+.manas-page .hero { width: min(1360px,calc(100% - 80px)); margin-inline: auto; padding-block: 136px 64px; }
+.manas-page .hero-stage { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px,5vw,80px); position: relative; align-items: center; }
+.manas-page .hero-content { grid-column: 1; grid-row: 1; width: 100%; min-width: 0; margin: 0; padding-block: 32px; }
+.manas-page .hero-kicker { max-width: 38ch; margin-bottom: 30px; }
+.manas-page .little-diamond { display: inline-block; width: 6px; height: 6px; margin-inline-end: 8px; border-radius: 50%; background: var(--accent); vertical-align: middle; }
+.manas-page h1 { font-size: clamp(60px,7.8vw,112px); font-weight: 500; line-height: 1; letter-spacing: -.075em; direction: ltr; unicode-bidi: isolate; }
+.manas-page .latin-title { margin-top: 20px; font-size: 11px; letter-spacing: .5em; color: var(--accent); }
+.manas-page .hero-subtitle { max-width: 26ch; margin-top: 32px; font-size: clamp(23px,2.4vw,32px); line-height: 1.4; letter-spacing: -.025em; text-wrap: balance; }
+.manas-page .hero-kyrgyz { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.manas-page .hero-copy { margin-top: 24px; max-width: 44ch; font-size: 15px; line-height: 1.85; color: var(--muted); }
+.manas-page .primary-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 30px; padding: 15px 20px; min-height: 52px; border-radius: 14px; background: var(--accent); color: #141414; font-size: 13px; font-weight: 600; }
+.manas-page .primary-link .arrow { font-size: 24px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .primary-link:hover .arrow { transform: rotate(45deg); }
+.manas-page .hero-art { grid-column: 2; grid-row: 1; position: relative; height: clamp(560px,46vw,680px); overflow: hidden; isolation: isolate; border-radius: 28px; background: #d9d9ce; }
+.manas-page .hero-layer { position: absolute; inset: 0; }
+.manas-page .hero-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 77% center; }
+.manas-page .hero-landscape { z-index: 0; }
+.manas-page .hero-army { z-index: 1; }
+.manas-page .hero-manas { z-index: 2; }
+.manas-page .hero-quote { position: relative; grid-column: 2; grid-row: 1; align-self: end; z-index: 3; margin: 18px; padding: 18px 22px; border: 1px solid #ffffff38; border-radius: 17px; color: #fff; background: rgba(18,24,28,.58); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.manas-page .hero-quote blockquote { font-size: clamp(17px,1.6vw,22px); line-height: 1.45; }
+.manas-page .hero-quote p { margin-top: 8px; font-size: 11px; line-height: 1.7; color: #ffffffbf; }
+.manas-page .heritage-strip { padding-block: 0 24px; }
+.manas-page .heritage-inner { display: grid; grid-template-columns: repeat(3,1fr) 1.25fr; gap: 16px; }
+.manas-page .heritage-item, .manas-page .heritage-note { display: flex; align-items: center; gap: 18px; padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.manas-page .stat-number { font-size: 38px; font-weight: 500; letter-spacing: -.05em; line-height: 1; }
+.manas-page .stat-label { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.manas-page .heritage-note { font-size: 11px; line-height: 1.8; color: var(--muted); }
+.manas-page .heritage-note svg { width: 32px; height: 32px; flex-shrink: 0; color: var(--accent); }
+.manas-page .heritage-note:hover { border-color: var(--accent); }
+.manas-page .chapter { padding-block: 88px; }
+.manas-page .chapter-top { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.manas-page .chapter-number { font-size: 12px; color: var(--accent); font-variant-numeric: tabular-nums; }
+.manas-page .rule { width: 36px; height: 1px; background: var(--line); }
+.manas-page .kyrgyz-title { margin-top: 18px; color: var(--accent); font-size: 13px; line-height: 1.6; }
+.manas-page .prose { max-width: 58ch; margin-top: 26px; font-size: 16px; line-height: 1.9; color: var(--muted); }
+.manas-page .prose p + p { margin-top: 20px; }
+.manas-page .text-link { display: inline-flex; align-items: center; gap: 24px; margin-top: 28px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 500; }
+.manas-page .text-link span { font-size: 24px; color: var(--accent); transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .text-link:hover span { transform: rotate(45deg); }
+.manas-page .origin-layout, .manas-page .voice-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px,7vw,110px); align-items: center; }
+.manas-page .origin-art, .manas-page .voice-image { min-width: 0; }
+.manas-page .art-frame { overflow: hidden; border-radius: 24px; }
+.manas-page .origin-image { width: 100%; height: auto; aspect-ratio: 1.2; object-fit: cover; transition: transform 1.2s cubic-bezier(.16,1,.3,1); }
+.manas-page .art-frame:hover img { transform: scale(1.035); }
+.manas-page .art-caption { display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.manas-page .ornament-divider { display: flex; align-items: center; gap: 24px; width: min(1360px,calc(100% - 80px)); margin-inline: auto; color: var(--accent); }
+.manas-page .ornament-divider::before, .manas-page .ornament-divider::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.manas-page .ornament-divider svg { width: 100px; height: 26px; }
+.manas-page .section-heading { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 64px; margin-bottom: 36px; }
+.manas-page .section-intro { max-width: 54ch; margin-top: 16px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+.manas-page .comrade-gallery { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; }
+.manas-page .comrade-card { position: relative; display: flex; flex-direction: column; align-items: stretch; min-width: 0; overflow: hidden; padding: 0; border: 1px solid var(--line); border-radius: 24px; text-align: start; background: var(--surface); }
+.manas-page .card-top { position: absolute; z-index: 1; inset: 14px 14px auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #fff; font-size: 10px; line-height: 1.5; text-shadow: 0 1px 8px #000b; }
+.manas-page .card-top > span { padding: 6px 10px; border: 1px solid #ffffff40; border-radius: 99px; background: #12181c88; backdrop-filter: blur(12px); }
+.manas-page .card-portrait { display: block; aspect-ratio: .75; overflow: hidden; }
+.manas-page .card-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.manas-page .card-content { position: relative; z-index: 1; flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -72px 10px 10px; padding: 17px 15px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.82); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.manas-page .card-details { min-width: 0; }
+.manas-page .card-name { display: block; font-size: 22px; font-weight: 500; line-height: 1.3; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.manas-page .card-role { display: block; margin-top: 6px; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.manas-page .card-arrow { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; font-size: 23px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .comrade-card:hover .card-portrait img { transform: scale(1.065); }
+.manas-page .comrade-card:is(:hover,:focus-visible) .card-arrow { transform: rotate(45deg); }
+.manas-page .forty-label { display: flex; justify-content: space-between; gap: 16px; margin-block: 32px 16px; font-size: 11px; line-height: 1.7; color: var(--muted); }
+.manas-page .forty-badges { display: grid; grid-template-columns: repeat(20,minmax(0,1fr)); gap: 8px; }
+.manas-page .warrior-badge { display: grid; place-items: center; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 10px; color: var(--accent); background: var(--surface); }
+.manas-page .warrior-badge svg { width: 60%; height: 60%; }
+.manas-page .gallery-note, .manas-page .no-js-note { margin-top: 18px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.manas-page .battle { background: rgba(var(--callout-rgb), .24); border-block: 1px solid var(--line); }
+.manas-page .battle-panels { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+.manas-page .battle-main { position: relative; overflow: hidden; min-height: 560px; border-radius: 24px; }
+.manas-page .battle-main > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 75% center; }
+.manas-page .panel-caption { position: absolute; inset: auto 16px 16px; padding: 20px; border: 1px solid #ffffff38; border-radius: 17px; background: #12181c99; color: white; font-size: 16px; line-height: 1.7; backdrop-filter: blur(18px); }
+.manas-page .battle-note { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.manas-page .kanykey-portrait { width: 100%; height: 280px; object-fit: cover; object-position: center 15%; }
+.manas-page .kanykey-copy { padding: 28px; }
+.manas-page .kanykey-copy > svg { float: inline-end; width: 32px; height: 32px; color: var(--accent); }
+.manas-page .kanykey-copy h3 { font-size: 28px; }
+.manas-page .kanykey-copy p { margin-top: 16px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.manas-page .battle-footer { display: flex; justify-content: space-between; align-items: start; gap: 32px; margin-top: 26px; }
+.manas-page .battle-footer p { max-width: 70ch; font-size: 13px; line-height: 1.8; color: var(--muted); }
+.manas-page .battle-footer > span { font-size: 17px; line-height: 1.7; color: var(--accent); }
+.manas-page .comic-reading-hint { color: var(--muted); font-size: 12px; line-height: 1.8; margin-bottom: 24px; }
+.manas-page .comic-page { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.manas-page .comic-panel { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.manas-page .comic-panel > img { width: 100%; height: auto; aspect-ratio: 1.55; object-fit: cover; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.manas-page .comic-panel:hover > img { transform: scale(1.035); }
+.manas-page .comic-panel figcaption { position: relative; flex: 1; z-index: 1; margin: -32px 12px 12px; padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.86); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); color: var(--muted); font-size: 14px; line-height: 1.85; }
+.manas-page .comic-panel figcaption strong { color: var(--ink); font-weight: 600; }
+.manas-page .comic-panel-number { position: absolute; top: 18px; inset-inline-start: 18px; z-index: 1; font-size: 11px; color: #fff; background: #12181c88; border: 1px solid #ffffff38; border-radius: 99px; padding: 8px 11px; font-variant-numeric: tabular-nums; }
+.manas-page .comic-impact { position: absolute; top: 27%; inset-inline-start: 7%; color: #fff; background: #12181ca6; padding: 8px 14px; border-radius: 12px; font-size: clamp(18px,2vw,28px); font-weight: 600; }
+.manas-page .comic-expand { position: absolute; z-index: 2; inset: 0; border: 0; padding: 0; background: transparent; text-align: start; }
+.manas-page .comic-expand > span { position: absolute; top: 12px; inset-inline-end: 12px; display: flex; align-items: center; gap: 16px; max-width: calc(100% - 80px); padding: 10px 14px; border: 1px solid #ffffff38; border-radius: 12px; background: #12181ca6; color: #fff; font-size: 11px; line-height: 1.5; backdrop-filter: blur(14px); }
+.manas-page .comic-expand > span > span { font-size: 21px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .comic-expand:hover > span > span { transform: rotate(45deg); }
+.manas-page .comic-expand:focus-visible { outline-offset: -5px; border-radius: 24px; }
+.manas-page .episode-background { margin-top: 28px; padding-inline: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.manas-page .episode-background summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; list-style: none; padding-block: 22px; cursor: pointer; font-size: 14px; line-height: 1.6; }
+.manas-page summary::-webkit-details-marker { display: none; }
+.manas-page .episode-background summary span { font-size: 24px; color: var(--accent); transition: transform .4s; }
+.manas-page .episode-background[open] summary span { transform: rotate(45deg); }
+.manas-page .episode-background-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; padding-block: 8px 28px; }
+.manas-page .episode-background h3 { font-size: 20px; margin-bottom: 12px; }
+.manas-page .episode-background p { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.manas-page .comic-footnote { display: flex; justify-content: space-between; gap: 32px; margin-top: 24px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.manas-page .comic-footnote p { max-width: 75ch; }
+.manas-page .comic-footnote a { text-decoration: underline; text-underline-offset: 4px; }
+.manas-page .comic-interlude { display: flex; justify-content: center; align-items: center; gap: 24px; width: min(1360px,calc(100% - 80px)); margin-inline: auto; padding-block: 24px; border-block: 1px solid var(--line); font-size: 11px; color: var(--muted); line-height: 1.7; }
+.manas-page .comic-interlude svg { width: 30px; height: 30px; flex-shrink: 0; color: var(--accent); }
+.manas-page .legacy-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.manas-page .generation { min-width: 0; padding: 24px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.manas-page .generation-id { font-size: 11px; line-height: 1.7; color: var(--accent); }
+.manas-page .generation-portrait { height: 310px; margin-block: 22px; overflow: hidden; border-radius: 16px; background: rgba(var(--foreground-rgb),.06); }
+.manas-page .generation-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
+.manas-page .generation-manas img { object-position: 84% center; }
+.manas-page .generation h3 { font-size: 27px; }
+.manas-page .generation-kyrgyz { display: block; margin-top: 8px; color: var(--accent); font-size: 12px; }
+.manas-page .generation p { margin-top: 20px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.manas-page .generation-motto { display: block; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.7; }
+.manas-page .voice-image > img { width: 100%; height: auto; border-radius: 24px; }
+.manas-page .audio-box { display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.manas-page .play-button { display: grid; place-items: center; flex: 0 0 48px; height: 48px; padding: 0; border: 0; border-radius: 14px; background: var(--accent); color: #141414; }
+.manas-page .play-button svg { width: 20px; height: 20px; fill: currentColor; }
+.manas-page .audio-info { min-width: 0; }
+.manas-page .audio-title { font-size: 13px; font-weight: 500; line-height: 1.6; }
+.manas-page .audio-credit { margin-top: 4px; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.manas-page .waveform { display: flex; align-items: center; justify-content: end; gap: 3px; flex: 1; height: 32px; }
+.manas-page .waveform i { width: 2px; flex-shrink: 0; border-radius: 3px; background: var(--accent); opacity: .5; }
+.manas-page .listen-note { margin-top: 18px; color: var(--muted); font-size: 11px; line-height: 1.85; }
+.manas-page .closing { position: relative; width: min(1360px,calc(100% - 80px)); margin: 0 auto 64px; padding: 64px 32px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); text-align: center; }
+.manas-page .closing-symbol { width: 76px; height: 76px; margin-bottom: 26px; color: var(--accent); }
+.manas-page .closing h2 { max-width: 22ch; margin-inline: auto; }
+.manas-page .closing p { margin-top: 24px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.manas-page .footer { border-top: 1px solid var(--line); padding-block: 32px 130px; }
+.manas-page .footer-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.manas-page .footer-brand { font-size: 24px; font-weight: 500; direction: ltr; unicode-bidi: isolate; }
+.manas-page .footer-tag { color: var(--muted); font-size: 12px; }
+.manas-page .footer-links { display: flex; gap: 24px; font-size: 12px; }
+.manas-page .footer a:hover { color: var(--accent); }
+.manas-page .credits { margin-top: 28px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.manas-page .credits summary { cursor: pointer; padding-block: 12px; }
+.manas-page .credits p { margin-top: 16px; }
+.manas-page .credits a { text-decoration: underline; text-underline-offset: 3px; }
+.manas-page .chapter-current { position: fixed; bottom: 20px; left: 50%; z-index: 40; display: flex; align-items: center; max-width: calc(100% - 112px); padding: 5px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 40px #0002; opacity: 0; visibility: hidden; transform: translate(-50%,12px); transition: transform .45s, opacity .45s, visibility .45s; }
+.manas-page .chapter-current.is-visible, .manas-page .chapter-current:focus-within { visibility: visible; opacity: 1; transform: translate(-50%,0); }
+.manas-page .chapter-current button, .manas-page .chapter-current a { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 42px; padding: 8px 12px; border: 0; border-radius: 12px; background: transparent; font-size: 12px; }
+.manas-page #chapter-open { min-width: 0; }
+.manas-page .chapter-current-number { color: var(--accent); font-size: 11px; }
+.manas-page .chapter-current-label { max-width: 24ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.manas-page .chapter-current .journey-next { font-size: 22px; border-inline: 1px solid var(--line); border-radius: 0; }
+.manas-page .motion-toggle svg { width: 13px; height: 13px; fill: currentColor; }
+.manas-page .motion-play { display: none; }
+.manas-page .motion-paused .motion-play { display: block; }
+.manas-page.motion-paused .motion-play { display: block; }
+.manas-page.motion-paused .motion-pause { display: none; }
+.manas-page .motion-toggle:disabled { opacity: .45; cursor: default; }
+.manas-page .dialog { position: fixed; inset: 0; width: min(640px,calc(100% - 40px)); max-width: none; max-height: calc(100dvh - 48px); overflow: auto; overscroll-behavior: contain; margin: auto; padding: 40px; border: 1px solid var(--line); border-radius: 26px; color: var(--ink); background: var(--paper); box-shadow: 0 32px 100px #0004; }
+.manas-page .dialog::backdrop { background: #0c10146b; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.manas-page .dialog-close { position: absolute; top: 14px; inset-inline-end: 14px; z-index: 5; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: rgb(var(--callout-rgb)); font-size: 25px; line-height: 1; }
+.manas-page .dialog h2 { font-size: clamp(30px,4vw,44px); }
+.manas-page .dialog-portrait { width: calc(100% + 80px); max-width: none; height: 290px; margin: -40px -40px 26px; object-fit: cover; object-position: center 14%; }
+.manas-page .dialog-symbol { width: 30px; height: 30px; margin-bottom: 18px; color: var(--accent); }
+.manas-page #person-story { margin-block: 22px; font-size: 16px; line-height: 1.85; color: var(--muted); }
+.manas-page .chapter-map { padding-top: 60px; }
+.manas-page .chapter-map h2 { margin-block: 16px 30px; }
+.manas-page .chapter-map-links { display: grid; gap: 8px; }
+.manas-page .chapter-map-links a { display: flex; align-items: center; gap: 18px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; }
+.manas-page .chapter-map-links a[aria-current] { border-color: var(--accent); background: var(--surface); }
+.manas-page .chapter-map-links a > span:first-child, .manas-page .chapter-map-links a > span:last-child { font-size: 13px; color: var(--accent); }
+.manas-page .chapter-map-links a > span:nth-child(2) { flex: 1; }
+.manas-page .chapter-map-links strong { display: block; font-weight: 500; font-size: 15px; }
+.manas-page .chapter-map-links small { display: block; margin-top: 5px; font-size: 11px; color: var(--muted); }
+.manas-page .chapter-map-note { margin-top: 24px; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.manas-page .comic-reader { width: min(1200px,calc(100% - 40px)); padding: 0; }
+.manas-page .comic-reader-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 24px; border-bottom: 1px solid var(--line); background: var(--paper); }
+.manas-page .comic-reader-header .dialog-close { position: static; flex-shrink: 0; }
+.manas-page .comic-reader-counter { margin-top: 5px; color: var(--muted); font-size: 11px; }
+.manas-page .comic-reader-body { display: grid; grid-template-columns: 1.2fr 1fr; }
+.manas-page .comic-reader-art { display: flex; flex-direction: column; justify-content: center; min-width: 0; background: var(--surface); border-inline-end: 1px solid var(--line); }
+.manas-page .comic-reader-art img { width: 100%; height: auto; max-height: 62dvh; object-fit: contain; }
+.manas-page .comic-reader-art figcaption { padding: 20px 24px; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.manas-page .comic-swipe-hint { padding: 0 24px 18px; font-size: 11px; color: var(--muted); }
+.manas-page .comic-reader-story { padding: 30px; min-width: 0; }
+.manas-page .comic-reader-story h2 { margin-block: 16px 24px; }
+.manas-page .comic-reader-story p { margin-top: 16px; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.manas-page .comic-reader-detail { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.manas-page .comic-reader-detail h3 { color: var(--accent); font-size: 13px; }
+.manas-page .comic-reader-source { display: inline-block; margin-top: 24px; font-size: 12px; line-height: 1.8; text-decoration: underline; text-underline-offset: 4px; }
+.manas-page .comic-reader-controls { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-top: 1px solid var(--line); background: var(--paper); }
+.manas-page .comic-reader-controls button { min-width: 40px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 12px; }
+.manas-page .comic-reader-controls button:disabled { opacity: .35; cursor: default; }
+.manas-page .comic-reader-pages { display: flex; gap: 6px; }
+.manas-page .comic-reader-pages button[aria-current] { background: var(--accent); border-color: transparent; color: #141414; }
+.manas-page .video-dialog { width: min(960px,calc(100% - 40px)); padding-top: 64px; }
+.manas-page .video-frame { aspect-ratio: 16/9; margin-top: 24px; overflow: hidden; border-radius: 16px; background: #111; }
+.manas-page .video-frame iframe { width: 100%; height: 100%; border: 0; }
+.manas-page .video-dialog p { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.manas-page .video-dialog a { text-decoration: underline; }
+.manas-page .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.manas-page.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+.manas-page.js .reveal.visible { opacity: 1; transform: none; }
+.manas-page.motion-paused .reveal { opacity: 1; transform: none; }
+.manas-page.motion-paused * { animation: none !important; transition: none !important; }
+.manas-page[dir="rtl"] :is(h1,h2,h3,.eyebrow,.card-name) { letter-spacing: 0; }
+.manas-page[dir="rtl"] #hero-title { direction: ltr; unicode-bidi: isolate; text-align: right; letter-spacing: -.075em; }
+.manas-page[dir="rtl"] :is(h2,h3) { line-height: 1.4; }
+.manas-page[dir="rtl"] .journey-next { transform: scaleX(-1); }
+.manas-page [lang="ky"] { unicode-bidi: isolate; }
+@media(max-width:1100px) { .manas-page .heritage-inner { grid-template-columns: repeat(2,minmax(0,1fr)); } .manas-page .comrade-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } .manas-page .card-portrait { aspect-ratio: .95; } .manas-page .generation { padding: 20px; } .manas-page .generation-portrait { height: 250px; } .manas-page .waveform { display: none; } }
+@media(max-width:991px) { .manas-page .container, .manas-page .hero, .manas-page .closing, .manas-page .ornament-divider, .manas-page .comic-interlude { width: calc(100% - 48px); } .manas-page .hero { padding-top: 112px; } .manas-page .hero-stage { gap: 30px; } .manas-page h1 { font-size: clamp(50px,8vw,78px); } .manas-page .hero-art { height: 590px; } .manas-page .section-heading { gap: 36px; } .manas-page .chapter { padding-block: 64px; } .manas-page .comic-reader-body { grid-template-columns: 1fr; } .manas-page .comic-reader-art { border-inline-end: 0; border-bottom: 1px solid var(--line); } .manas-page .comic-reader-art img { max-height: 48dvh; } }
+@media(max-width:760px) {
+  .manas-page .container, .manas-page .hero, .manas-page .closing, .manas-page .ornament-divider, .manas-page .comic-interlude { width: calc(100% - 32px); }
+  .manas-page .hero { padding-block: 104px 36px; }
+  .manas-page .hero-stage { grid-template-columns: 1fr; gap: 28px; }
+  .manas-page .hero-content { grid-column: 1; grid-row: 1; padding: 0; }
+  .manas-page h1 { font-size: clamp(64px,17vw,108px); }
+  .manas-page .hero-kicker { margin-bottom: 24px; }
+  .manas-page .hero-subtitle { margin-top: 24px; font-size: 26px; }
+  .manas-page .hero-copy { font-size: 14px; margin-top: 20px; }
+  .manas-page .hero-art { grid-column: 1; grid-row: 2; height: 500px; border-radius: 24px; }
+  .manas-page .hero-quote { grid-column: 1; grid-row: 2; margin: 12px; padding: 16px; }
+  .manas-page .heritage-inner { gap: 10px; }
+  .manas-page .heritage-item, .manas-page .heritage-note { padding: 16px; gap: 12px; border-radius: 17px; }
+  .manas-page .stat-number { font-size: 32px; }
+  .manas-page .stat-label, .manas-page .heritage-note { font-size: 10px; }
+  .manas-page .chapter { padding-block: 52px; }
+  .manas-page .origin-layout, .manas-page .voice-layout, .manas-page .section-heading { grid-template-columns: 1fr; gap: 28px; }
+  .manas-page h2 { font-size: clamp(32px,8vw,46px); }
+  .manas-page .prose { font-size: 15px; }
+  .manas-page .section-heading { margin-bottom: 28px; }
+  .manas-page .section-heading .kyrgyz-title { margin-top: 0; }
+  .manas-page .comrade-gallery { gap: 12px; }
+  .manas-page .card-portrait { aspect-ratio: .7; }
+  .manas-page .card-content { flex-wrap: wrap; margin: -48px 8px 8px; padding: 14px 12px; gap: 10px; border-radius: 14px; }
+  .manas-page .card-details { flex: 1 1 100%; }
+  .manas-page .card-name { font-size: 20px; }
+  .manas-page .card-role { font-size: 11px; }
+  .manas-page .card-arrow { width: 34px; height: 34px; margin-inline-start: auto; }
+  .manas-page .card-top { inset: 10px 10px auto; font-size: 8px; }
+  .manas-page .card-top svg { display: none; }
+  .manas-page .forty-label { flex-direction: column; gap: 4px; }
+  .manas-page .forty-badges { grid-template-columns: repeat(10,minmax(0,1fr)); gap: 5px; }
+  .manas-page .warrior-badge { border-radius: 7px; }
+  .manas-page .battle-panels { grid-template-columns: 1fr; }
+  .manas-page .battle-main { min-height: 410px; }
+  .manas-page .battle-footer { flex-direction: column; gap: 20px; }
+  .manas-page .kanykey-portrait { height: 320px; }
+  .manas-page .kanykey-copy { padding: 24px; }
+  .manas-page .comic-page { grid-template-columns: 1fr; gap: 20px; }
+  .manas-page .comic-panel figcaption { margin: -24px 10px 10px; padding: 18px; }
+  .manas-page .comic-panel > img { aspect-ratio: 1.4; }
+  .manas-page .comic-expand > span { font-size: 10px; }
+  .manas-page .episode-background { padding-inline: 20px; }
+  .manas-page .episode-background-grid { grid-template-columns: 1fr; }
+  .manas-page .comic-footnote { flex-direction: column; gap: 12px; }
+  .manas-page .comic-interlude { gap: 18px; font-size: 10px; }
+  .manas-page .legacy-grid { grid-template-columns: 1fr; }
+  .manas-page .generation-portrait { height: 360px; }
+  .manas-page .closing { padding: 40px 24px; margin-bottom: 40px; border-radius: 24px; }
+  .manas-page .footer-top { gap: 18px; }
+  .manas-page .footer-tag { width: 100%; order: 3; }
+  .manas-page .footer-links { gap: 18px; }
+  .manas-page .chapter-current { max-width: calc(100% - 24px); bottom: 12px; }
+  .manas-page .chapter-current button, .manas-page .chapter-current a { gap: 8px; padding: 8px 10px; }
+  .manas-page .chapter-current-label { max-width: 15ch; }
+  .manas-page .motion-toggle-label { display: none; }
+  .manas-page .dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); padding: 26px; border-radius: 22px; }
+  .manas-page .dialog-portrait { width: calc(100% + 52px); margin: -26px -26px 24px; height: 250px; }
+  .manas-page .chapter-map { padding-top: 60px; }
+  .manas-page .comic-reader { padding: 0; }
+  .manas-page .comic-reader-header { padding: 14px 16px; }
+  .manas-page .comic-reader-header .eyebrow { font-size: 10px; }
+  .manas-page .comic-reader-story { padding: 24px; }
+  .manas-page .comic-reader-controls { padding: 12px; gap: 6px; }
+  .manas-page .comic-reader-controls > button { padding-inline: 12px; font-size: 18px; }
+  .manas-page .comic-reader-controls > button > span { display: none; }
+  .manas-page .comic-reader-pages { gap: 4px; }
+  .manas-page .comic-reader-pages button { min-width: 34px; padding-inline: 8px; }
+  .manas-page .video-dialog { padding-top: 64px; }
+}
+@media(prefers-reduced-motion:reduce) { .manas-page *, .manas-page *::before, .manas-page *::after { animation: none !important; transition: none !important; } .manas-page.js .reveal { opacity: 1; transform: none; } }

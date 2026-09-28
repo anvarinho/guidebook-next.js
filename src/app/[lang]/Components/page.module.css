@@ -6,6 +6,81 @@
     z-index: 1000;
     /* padding: 1rem 1rem 1rem 1rem; */
 }
+
+.mobileLogo { display: none; }
+.logo:focus-visible { outline: 2px solid #d4a017; outline-offset: 4px; border-radius: 50%; }
+.flags .flaglist { visibility: hidden; pointer-events: none; }
+.flags .flaglist.active { visibility: visible; pointer-events: auto; }
+
+/* A quiet, paper-colored navigation bar for the illustrated Manas story. */
+:global([data-page="manas"]) .header {
+  inset: 0 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0 24px;
+  background: rgba(248, 245, 240, .96);
+  border-bottom: 1px solid #d8d3c8;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+:global([data-page="manas"]) .header .flex {
+  min-height: 76px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 60px;
+}
+:global([data-page="manas"]) .header .flex .logo h3 {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #a61c2e;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+:global([data-page="manas"]) .navbar a { color: #45483f; padding-inline: 12px; }
+:global([data-page="manas"]) .navbar a:hover,
+:global([data-page="manas"]) .navbar a.active { color: #a61c2e; }
+:global([data-page="manas"]) .navbar a:focus-visible { outline: 2px solid #a61c2e; outline-offset: 4px; }
+:global([data-page="manas"]) .flags {
+  top: 16px;
+  right: max(24px, calc((100vw - 1440px) / 2));
+  left: auto;
+  bottom: auto;
+  width: 44px;
+  z-index: 1001;
+}
+:global([data-page="manas"]) .flags button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--foreground-rgb), .14);
+  background: rgba(var(--callout-rgb), .85);
+}
+:global([data-page="manas"]) .flags button:focus-visible { outline: 2px solid var(--main-active-color); outline-offset: 3px; }
+:global([data-page="manas"]) .flags .flaglist,
+:global([data-page="manas"]) .flags .flaglist.active {
+  position: absolute;
+  inset: 54px -8px auto auto;
+  box-sizing: border-box;
+  width: 60px;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px 7px;
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  background: rgb(var(--callout-rgb));
+  border: 1px solid rgba(var(--foreground-rgb), .14);
+  border-radius: 24px;
+  box-shadow: 0 8px 28px #25282118;
+}
+:global([data-page="manas"]) .flaglist a { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+:global([data-page="manas"]) .flags .flagtext { width: 32px; height: 32px; display: grid; place-items: center; }
+:global([data-page="manas"]) .flags .flag { display: block; width: 32px; height: 32px; object-fit: contain; }
   
 .header .flex{
     display: flex;
@@ -91,6 +166,42 @@
   .menuBtn:hover{
     color: #000;
     background-color: rgba(240, 240, 240, 0.4);
+  }
+
+  .menuGlyph {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 18px;
+    margin: auto;
+  }
+  .menuGlyph span {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transform-origin: center;
+    transition: transform .42s cubic-bezier(.22, 1, .36, 1), opacity .2s ease;
+  }
+  .menuGlyph span:first-child { transform: translateY(-7px); }
+  .menuGlyph span:last-child { transform: translateY(7px); }
+  .menuBtn[aria-expanded="true"] .menuGlyph span:first-child { transform: rotate(45deg); }
+  .menuBtn[aria-expanded="true"] .menuGlyph span:nth-child(2) { transform: scaleX(0); opacity: 0; }
+  .menuBtn[aria-expanded="true"] .menuGlyph span:last-child { transform: rotate(-45deg); }
+
+  .emblemRays {
+    -webkit-mask-image: radial-gradient(circle closest-side, transparent 59%, #000 60%);
+    mask-image: radial-gradient(circle closest-side, transparent 59%, #000 60%);
+    animation: emblem-orbit 24s linear infinite;
+  }
+  .emblemCenter { clip-path: circle(29.5% at 50% 50%); }
+  @keyframes emblem-orbit { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .emblemRays { animation: none; }
+    .menuGlyph span { transition: none; }
   }
 
   .contactBtn{
@@ -362,6 +473,65 @@
   }
 }
 
+@media (max-width: 991px) {
+  .header .flex .logo h3 { display: none; }
+  .mobileLogo {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: 1rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #a61c2e;
+    border: 1px solid #c24143;
+    box-shadow: 0 2px 8px #25282118;
+  }
+  .mobileLogo img { grid-area: 1 / 1; display: block; width: 30px; height: 30px; object-fit: contain; }
+  .header .flex .menuBtn { width: 44px; height: 44px; padding: 0; scale: 1; }
+  :global([data-page="manas"]) .header { padding: 0 16px; }
+  :global([data-page="manas"]) .header .flex { min-height: 72px; padding-right: 0; }
+  :global([data-page="manas"]) .mobileLogo { margin: 0; }
+  :global([data-page="manas"]) .header .flex .menuBtn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    scale: 1;
+    border-radius: 50%;
+    color: #a61c2e;
+    background: transparent;
+    border: 1px solid #d8d3c8;
+    font-size: 18px;
+  }
+  :global([data-page="manas"]) .menuBtn:focus-visible { outline: 2px solid #a61c2e; outline-offset: 3px; }
+  :global([data-page="manas"]) .header .navbar {
+    top: 80px;
+    left: 16px;
+    right: 16px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #d8d3c8;
+    border-radius: 16px;
+    background: #f8f5f0;
+    box-shadow: 0 12px 32px #25282118;
+    scale: 1;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  :global([data-page="manas"]) .header .navbar.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  :global([data-page="manas"]) .navbar a { padding: 12px; font-size: 16px; }
+  :global([data-page="manas"]) .flags { top: 14px; right: 72px; }
+  :global([data-page="manas"]) .flags { transition: transform .4s cubic-bezier(.16,1,.3,1); }
+  :global([data-page="manas"]):has(:global(header[data-hidden="true"])) .flags:not(:focus-within) { transform: translateY(-100px); }
+}
+
   @keyframes shake {
     0%, 100% {
       transform: translateX(0);
@@ -375,56 +545,52 @@
   }
 
 
-  /* Loading Animation */
-  .center{
-    position: relative;
+  /* Quiet loading state shared by async page sections. */
+  .center {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    min-height: 220px;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center;
+    gap: 18px;
+    color: rgba(var(--foreground-rgb), .62);
+    text-align: center;
   }
-  .ring{
-    position: absolute;
-    width: 80px;
-    height: 80px;
+  .ring {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(var(--foreground-rgb), .14);
     border-radius: 50%;
-    animation: ring 1s linear infinite;
+    animation: loadingOrbit 1.4s cubic-bezier(.45, 0, .55, 1) infinite;
   }
-  @keyframes ring {
-    0%{
-      transform: rotate(0deg);
-      box-shadow: 1px 1px 2px #ffa;
-    }
-    50%{
-      transform: rotate(180deg);
-      box-shadow: 1px 1px 2px #aaa;
-    }
-    100%{
-      transform: rotate(360deg);
-      box-shadow: 1px 1px 2px #fff;
-    }
-  }
-  .ring:before{
+  .ring::before,
+  .ring::after {
     position: absolute;
     content: '';
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255,255,255,.3);
   }
-  .loadingText{
-    color: #737373;
-    font-size: 7px;
+  .ring::before {
+    inset: 5px;
+    border: 2px solid transparent;
+    border-inline-start-color: var(--main-active-color);
+    border-block-start-color: var(--main-active-color);
+  }
+  .ring::after {
+    inset: 16px;
+    background: var(--main-active-color);
+    box-shadow: 0 0 0 5px rgba(var(--main-active-color-rgb, 255, 101, 0), .1);
+  }
+  @keyframes loadingOrbit { to { transform: rotate(360deg); } }
+  .loadingText {
+    max-width: 26ch;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    line-height: 1.5;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 50px;
-    animation: text 2s ease-in-out infinite;
   }
-  @keyframes text {
-    50%{
-      color: black;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    .ring { animation: none; }
+    :global([data-page="manas"]) .flags { transition: none; }
   }

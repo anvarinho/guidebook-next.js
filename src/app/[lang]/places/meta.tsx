@@ -1,62 +1,78 @@
 import { Locale } from "@/lib/i18n.config";
 
 interface Props {
-    lang: Locale
-    places: [PlaceAlias]// Assuming 'tour' is a string, adjust the type accordingly if it's different
-    page: any
+  lang: Locale;
+  places: PlaceAlias[];
+  page: any;
 }
 
-// import React from 'react';
+const origin = (process.env.NEXT_PUBLIC_URL || "").replace(/\/$/, "");
+const absoluteUrl = (path: string) => origin ? `${origin}${path}` : path;
 
-const Meta: React.FC<Props> = ({ lang, places, page }) => {
-  const itemListElement = places.map((place, index) => {
-    return {
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Place",
-        "name": place.name,
-        "title": place.title,
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": place.region,
-          "addressCountry": "Kyrgyzstan"
-        },
-        "image":`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`,
-        "telephone": `${process.env.NEXT_PUBLIC_PHONE_NUMBER}`,
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": place.location.latitude,
-          "longitude": place.location.longitude
-        }
-      }
-    };
-});
-
+export default function Meta({ lang, places, page }: Props) {
+  const url = absoluteUrl(`/${lang}/places/`);
+  const listId = `${url}#places`;
+  const breadcrumbId = `${url}#breadcrumb`;
   const data = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": itemListElement,
-    "breadcrumb": {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": page.sights.name,
-            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/places`
-          }
-        ]
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: page.sights.title,
+        description: page.sights.description,
+        inLanguage: page.langCode,
+        breadcrumb: { "@id": breadcrumbId },
+        mainEntity: { "@id": listId },
       },
+      {
+        "@type": "ItemList",
+        "@id": listId,
+        name: page.sights.title,
+        numberOfItems: places.length,
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        itemListElement: places.map((place, index) => {
+          const placeUrl = absoluteUrl(`/${lang}/places/${place.url}`);
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            url: placeUrl,
+            name: place.title,
+            image: absoluteUrl(`/${place.images[0]}`),
+            item: {
+              "@type": "TouristAttraction",
+              "@id": `${placeUrl}#place`,
+              url: placeUrl,
+              name: place.name,
+              description: place.title,
+              image: absoluteUrl(`/${place.images[0]}`),
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: place.region,
+                addressCountry: "KG",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: Number(place.location.latitude),
+                longitude: Number(place.location.longitude),
+              },
+            },
+          };
+        }),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [{
+          "@type": "ListItem",
+          position: 1,
+          name: page.sights.name,
+          item: url,
+        }],
+      },
+    ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
-};
-
-export default Meta;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}

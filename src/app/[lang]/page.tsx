@@ -18,5 +18,5 @@ export const viewport: Viewport = { themeColor: "#1b3e32" };
 
 export default async function Home({ params }: HomeProps) {
   const messages = await getIntroMessages(params.lang);
-  return <Intro key={params.lang} messages={messages} language={introLanguages[params.lang]} />;
+  return <Intro key={params.lang} messages={messages} language={introLanguages[params.lang]} locale={params.lang} />;
 }

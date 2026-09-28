@@ -40,10 +40,12 @@ export async function generateMetadata({
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const place = await placeData
     if (!place) notFound()
-    const description = place.description.substring(0, 200)
+    const siteUrl = (process.env.NEXT_PUBLIC_URL || '').replace(/\/$/, '')
+    const pageUrl = `${siteUrl}/${lang}/places/${place.url}/`
+    const description = place.description.replace(/\s+/g, ' ').trim().substring(0, 160)
     const images = place.images.map(image => ({
-        secureUrl: `${process.env.NEXT_PUBLIC_URL}/${image}`,
-        url: `${process.env.NEXT_PUBLIC_URL}/${image}`,
+        secureUrl: `${siteUrl}/${image}`,
+        url: `${siteUrl}/${image}`,
         width: 800,
         height: 600,
         alt: `Image of ${place.name}`,
@@ -56,6 +58,7 @@ export async function generateMetadata({
         }
     }
     return {
+        metadataBase: siteUrl ? new URL(`${siteUrl}/`) : undefined,
         title: {
             absolute: place.title
         },
@@ -66,14 +69,14 @@ export async function generateMetadata({
         openGraph: {
             title: place.title,
             description: description,
-            url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
+            url: pageUrl,
             siteName: 'GuideBook of Kyrgyzstan',
             images: images,
             locale: page.langCode.replace("-",'_'),
             type: 'website',
         },
         alternates: {
-            canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
+            canonical: pageUrl,
             languages: {
                 "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/${place.url}`,
                 "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/${place.url}`,
@@ -108,14 +111,13 @@ export async function generateMetadata({
               app_name: "GuideBook of Kyrgyzstan"
             },
             web: {
-                url: `${process.env.NEXT_PUBLIC_URL}/${lang}/places/${place.url}`,
+                url: pageUrl,
                 should_fallback: true,
               }
         },
         robots: {
             index: true,
             follow: true,
-            nocache: true,
             "max-image-preview":"large",
             googleBot: {
                 index: true,

@@ -23,25 +23,28 @@ export default function Flags({ lang }: { lang: Locale }) {
     }
 
     useEffect(() => {
-        window.onscroll = () =>{
-            if (!showFlags){
-                handleToggleNavbar()
-                const navbarElement = document.querySelector(`.${styles.flaglist}`);
-                if (navbarElement) {
-                    navbarElement.classList.remove(`${styles.active}`);
-                }
-            }
-        }
-      }, [showFlags]);
+        const closeMenu = () => setShowFlags(true);
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') closeMenu();
+        };
+        closeMenu();
+        window.addEventListener('scroll', closeMenu, { passive: true });
+        document.addEventListener('keydown', onKeyDown);
+        return () => {
+            window.removeEventListener('scroll', closeMenu);
+            document.removeEventListener('keydown', onKeyDown);
+        };
+    }, [pathName]);
 
     return (
-        <div className={styles.flags}>
-            <div className={`${styles.flaglist} ${showFlags ? '' : styles.active}`}>
+        <div className={styles.flags} data-language-switcher>
+            <div id="site-languages" className={`${styles.flaglist} ${showFlags ? '' : styles.active}`}>
                 {i18n.locales.map((locale, i) => (
                     locale != lang && 
                         <Link key={i}
                             href={redirectedPathName(locale)}
-                            onClick={() => {handleToggleNavbar; Cookies.set('lang', locale, { expires: 365 })}}
+                            hrefLang={locale === 'ae' ? 'ar' : locale === 'jp' ? 'ja' : locale === 'kr' ? 'ko' : locale === 'cn' ? 'zh-CN' : locale}
+                            onClick={() => {setShowFlags(true); Cookies.set('lang', locale, { expires: 365 })}}
                         >
                             <div className={styles.flagtext}>
                                 <Image
@@ -57,7 +60,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                         </Link>
                 ))}
             </div>
-            <button onClick={handleToggleNavbar} aria-label="Toggle language menu">
+            <button onClick={handleToggleNavbar} aria-label="Toggle language menu" aria-expanded={!showFlags} aria-controls="site-languages">
                 <div className={styles.flagtext}>
                     <Image
                         src={`/${lang}.png`}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Locale } from "@/lib/i18n.config";
 import Link from "next/link";
 import getBase64 from "@/lib/getLocalBase64"
+import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
     paragraph: Paragraph,
@@ -14,7 +15,7 @@ export default async function Article({ paragraph, lang, priority}: Props) {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const blurDataURL = paragraph.image ? await getBase64(baseUrl + paragraph.image) : ""
     return (
-        <div className={styles.hero}>
+        <PlacesReveal className={styles.paragraph}>
                 {paragraph.image && (
                     <picture className={styles.image}>
                         <Image
@@ -30,13 +31,14 @@ export default async function Article({ paragraph, lang, priority}: Props) {
                 )}
             
             
+            <div className={styles.paragraphCopy}>
             {paragraph.link ? (
             <Link href={`${baseUrl}${lang}/${paragraph.link}`} target='_blank'>
                 <h2>{paragraph.title}</h2>
             </Link>
             ): <h2>{paragraph.title}</h2>}
             <p>{paragraph.text}</p>
-            <br />
-        </div>
+            </div>
+        </PlacesReveal>
     )
-} 
+}

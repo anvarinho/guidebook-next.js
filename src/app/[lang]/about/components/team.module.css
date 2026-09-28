@@ -1,112 +1,18 @@
-.team {
-    width: 100%;
-    /* height: 100vh; */
-    min-height: 100vh;
-    text-align: center;
-    padding: 5rem 1rem 1rem 1rem;
-    background: url('../../../../../public/yurt-bg.jpg') no-repeat rgba(0,0,0,0.6);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    background-blend-mode: multiply;
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
-    color: #eef3db;
- }
- 
-.team__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding-bottom: 3rem;
-}
-
-
-.team__member{ 
-    background-color: var(--light-bg);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter:blur(1rem);
-    padding: 2rem;
-    border-radius: 2.5rem;
-    position: relative;
-    overflow: hidden;
- }
- 
- .team__member:hover{
-    background-color: var(--light-black);
- }
- 
- .team__member_image img {
-    filter: saturate(1);
-    object-fit: cover;
-    width: 100%;
-    aspect-ratio: 1/1.12;
-    border-radius: 1rem;
- }
- 
- .team__member:hover img {
-    filter: saturate(0);
- }
- 
- .team__member-info * {
-    text-align: center;
-    margin-top: 1.4rem;
- }
- 
- .team__member-info h4 {
-    font-size: 2rem;
-    color: #eef3db;
- }
- 
- .team__member-info p {
-    color: var(--main-color);
- }
- 
- .team__member-socials a {
-    padding: 1rem;
- }
-
- /* ========== Media Queries ========== */
-
-@media screen and (max-width: 1024px) {
-    .team__container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-    .team__member {
-        padding: 1rem;
-    }
- }
- 
- /* ========== Media Queries - Mobile ========== */
- 
- @media screen and (max-width: 600px) {
-    .team__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-    }
- 
-    .team__member p {
-        margin-bottom: 1.5rem;
-    }
- }
-
- .floatingButton {
-    display: inline-block;
-    padding: 10px 30px;
-    background: rgba(255,255,255,.4); /* Change the background color on hover */
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter:blur(3px);
-    border-radius: 12px;
-  
-    text-decoration: none;
-    font-weight:bolder;
-    transition: all 0.3s ease-in;
-    margin: 1rem;
-  }
-  
-  .floatingButton:hover {
-    background: rgba(0,0,0,.4);
-  }
-
- 
+.team { padding: 80px max(40px, calc((100vw - 1360px) / 2)); color: rgb(var(--foreground-rgb)); background: rgba(var(--callout-rgb), .3); border-block: 1px solid rgba(var(--foreground-rgb), .1); }
+.team > div:first-child { margin-bottom: 36px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; color: var(--main-active-color); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--main-active-color); }
+.team h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 600; line-height: 1.1; letter-spacing: -.045em; }
+.team__container { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.team__member { position: relative; min-width: 0; overflow: hidden; border: 1px solid rgba(var(--foreground-rgb), .14); border-radius: 22px; background: rgba(var(--callout-rgb), .56); }
+.team__member_image { aspect-ratio: .86; overflow: hidden; background: rgba(var(--foreground-rgb), .06); }
+.team__member_image img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.82); transition: transform 900ms cubic-bezier(.16, 1, .3, 1), filter 500ms ease; }
+.team__member:hover img { transform: scale(1.04); filter: saturate(1); }
+.team__member_info { position: absolute; inset: auto 10px 10px; padding: 15px 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(14, 18, 20, .65); color: #fff; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.team .team__member_info h3 { font-size: 17px; font-weight: 500; }
+.team > div:last-child { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.floatingButton { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 12px; background: rgba(var(--callout-rgb), .5); font-size: 12px; font-weight: 600; transition: border-color .3s ease, transform .3s ease; }
+.floatingButton:hover { border-color: var(--main-active-color); }
+@media (max-width: 991px) { .team { padding: 68px 24px; } .team__container { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .team { padding: 56px 16px; } .team__container { gap: 10px; } .team__member { border-radius: 17px; } .team__member_info { inset: auto 6px 6px; padding: 11px 12px; } .team .team__member_info h3 { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .team__member_image img, .floatingButton { transition: none; } }

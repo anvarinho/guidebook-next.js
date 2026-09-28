@@ -1,145 +1,100 @@
-import styles from "../page.module.css";
-import { getPlacesByURLs } from "@/lib/getAllPlaces";
-import { getPlacesByRegion } from "@/lib/getAllPlaces";
-import { GoogleMapsEmbed, YouTubeEmbed } from "@next/third-parties/google";
-import { Locale } from "@/lib/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
-import Link from "next/link";
-import ImageRenderer from "@/app/[lang]/Components/image/ImageRenderer";
-import ShareButtons from "@/app/[lang]/Components/ShareButtons";
-import PlaceDescripiton from "./PlaceDescripiton";
-import { destinationGuides } from "../../../manas-airport-transfers/content";
-import { getTransferMessages } from "../../../manas-airport-transfers/translations/load";
+import styles from '../page.module.css';
+import { getPlacesByURLs, getPlacesByRegion } from '@/lib/getAllPlaces';
+import { GoogleMapsEmbed, YouTubeEmbed } from '@next/third-parties/google';
+import type { Locale } from '@/lib/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
+import Link from 'next/link';
+import PlaceDescription from './PlaceDescripiton';
+import PlaceGallery from './PlaceGallery';
+import PlaceCard from '../../components/PlaceCard';
+import { destinationGuides } from '../../../manas-airport-transfers/content';
+import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
-type Props = {
-  promise: Promise<Place>;
-  lang: Locale;
-};
-
-export default async function PlaceArticle({ promise, lang }: Props) {
+export default async function PlaceArticle({ promise, lang }: {
+  promise: Promise<Place>; lang: Locale;
+}) {
   const { page } = await getDictionary(lang);
-  // const baseUrl = 'http://159.65.95.44/';
   const place = await promise;
-  const placesByRegionData = getPlacesByRegion(lang, place.region, place.url);
-  const places: any[] = await placesByRegionData;
-  // const blurDataURL = await getBase64(baseUrl + place.images[0])
-  const sights =
-    place.sights && place.sights.length > 0
-      ? await getPlacesByURLs(lang, place.sights)
-      : [];
-  const createdDate = place.created ? new Date(place.created) : null;
+  const [regionResults, sightResults] = await Promise.all([
+    getPlacesByRegion(lang, place.region, place.url),
+    place.sights?.length ? getPlacesByURLs(lang, place.sights) : Promise.resolve([]),
+  ]);
+  const places: Place[] = regionResults ?? [];
+  const sights: Place[] = sightResults ?? [];
+  const created = place.created ? new Date(place.created) : null;
+  const createdDate = created && !Number.isNaN(created.getTime()) ? created : null;
   const transferGuide = destinationGuides.find(guide => guide.slug === place.url);
   const transferMessages = transferGuide ? await getTransferMessages(lang) : null;
+  const coordinates = `${place.location.latitude},${place.location.longitude}`;
+  const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+
   return (
-    <article className={styles.main}>
-      <h1>{place.title}</h1>
-      <ImageRenderer images={place.images} priority />
-
-      <div className={styles.info}>
-        <time dateTime={createdDate?.toLocaleString()}>
-          {page.info.created}
-          {createdDate?.toLocaleDateString()}
-        </time>
-        <p>
-          {page.info.seen}
-          {Math.floor(place.viewCount)}
-        </p>
-      </div>
-      <br />
-      <PlaceDescripiton
-        text={place.description}
-        highlights={page.sights.highlights}
-        name={place.name}
-      />
-      {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
-        <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
-          {transferMessages.s217.replace("{destination}", transferMessages[transferGuide.labelKey])} →
-        </Link>
-      </p>}
-      <br />
-      {/* <ShareButtons/> */}
-      {place.videoID && (
-        <>
-          <div className={styles.video}>
-            <YouTubeEmbed
-              videoid={place.videoID}
-              // height={400}
-              width={700}
-              params="controls=0"
-            />
-          </div>
-          <br />
-        </>
-      )}
-
-      <GoogleMapsEmbed
-        aria-label={`Google Maps ${place.name}`}
-        apiKey={`${process.env.GOOGLE_MAPS_API_KEY}`}
-        height={300}
-        width="100%"
-        mode="place"
-        q={`${place.location.latitude},${place.location.longitude}`}
-        zoom="12"
-        // q={`${place.url}, ${place.region}`}
-        // center={`${place.location.latitude},${place.location.longitude}`}
-      />
-
-      {sights.length > 0 && (
-        <div>
-          <br />
-          <h3>
-            {place.name}: {page.sights.sights}
-          </h3>
+    <article className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+      <nav className={styles.breadcrumb} aria-label={page.sights.name}>
+        <Link href={`/${lang}/places`}><span aria-hidden="true">←</span> {page.sights.name}</Link>
+        <span aria-hidden="true">/</span>
+        <span>{place.region}</span>
+      </nav>
+      <header className={styles.articleHeader}>
+        <h1>{place.title}</h1>
+        <div className={styles.info}>
+          {createdDate && <time dateTime={createdDate.toISOString()}>
+            {page.info.created}{createdDate.toLocaleDateString(page.langCode, { day: 'numeric', month: 'long', year: 'numeric' })}
+          </time>}
+          <span>{page.info.seen}{Math.floor(place.viewCount).toLocaleString(page.langCode)}</span>
         </div>
-      )}
-      <br />
-      {sights.map((sight: any, index: number) => {
-        return (
-          <>
-            <ImageRenderer images={sight.images} priority={false} />
-            <br />
-            <h4>{sight.title}</h4>
-            <br />
-            <p key={index}>
-              <Link
-                href={`/${lang}/places/${sight.url}`}
-                style={{ color: "var(--main-active-color)" }}
-              >
-                {" "}
-                {sight.description}... {page.home.button3}
-              </Link>
-            </p>
-            <br />
-          </>
-        );
-      })}
-      <div>
-        {/* <br /> */}
-        <h3>
-          {place.region}: {page.sights.sights}
-        </h3>
-        <br />
+      </header>
+      <PlaceGallery images={place.images} name={place.name} lang={lang}/>
+
+      <div className={styles.articleLayout}>
+        <div className={styles.articleBody}>
+          <PlaceDescription text={place.description} highlights={page.sights.highlights} name={place.name} lang={lang}/>
+          {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
+            <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
+              {transferMessages.s217.replace('{destination}', transferMessages[transferGuide.labelKey])}
+              <span aria-hidden="true">↗</span>
+            </Link>
+          </p>}
+          {place.videoID && <div className={styles.video}>
+            <YouTubeEmbed videoid={place.videoID} width={800}/>
+          </div>}
+        </div>
+        <aside className={styles.locationCard} aria-label={`Google Maps — ${place.name}`}>
+          <div className={styles.locationHeading}>
+            <p>{place.region}</p>
+            <h2>{place.name}</h2>
+          </div>
+          <div className={styles.map}>
+            {mapsApiKey ? <GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
+              apiKey={mapsApiKey} height={280} width="100%"
+              mode="place" q={coordinates} zoom="12"/> : <div className={styles.mapPreview}>
+              <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M32 56S13 38 13 24a19 19 0 0 1 38 0c0 14-19 32-19 32Z"/>
+                <circle cx="32" cy="24" r="7"/>
+              </svg>
+              <p dir="ltr">{Number(place.location.latitude).toFixed(4)}, {Number(place.location.longitude).toFixed(4)}</p>
+            </div>}
+          </div>
+          <Link className={styles.mapLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates)}`}
+            target="_blank" rel="noopener noreferrer">Google Maps <span aria-hidden="true">↗</span></Link>
+        </aside>
       </div>
-      {places.map((sight: any, index: number) => {
-        return (
-          <>
-            <ImageRenderer images={sight.images} priority={false} />
-            <br />
-            <h4>{sight.name}</h4>
-            <br />
-            <p key={index}>
-              <Link
-                href={`/${lang}/places/${sight.url}`}
-                style={{ color: "var(--main-active-color)" }}
-              >
-                {" "}
-                {sight.title}... {page.home.button3}
-              </Link>
-            </p>
-            <br />
-          </>
-        );
-      })}
+
+      {sights.length > 0 && <section className={styles.related} aria-labelledby="local-sights-title">
+        <h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2>
+        <div className={styles.relatedGrid}>
+          {sights.map(sight => <div className={styles.relatedItem} key={sight._id}>
+            <PlaceCard place={sight} lang={lang}/>
+            {sight.description && <p className={styles.relatedSummary}>{sight.description}</p>}
+          </div>)}
+        </div>
+      </section>}
+      {places.length > 0 && <section className={styles.related} aria-labelledby="region-sights-title">
+        <h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2>
+        <div className={styles.relatedGrid}>
+          {places.map(sight => <PlaceCard key={sight._id} place={sight} lang={lang}/>)}
+        </div>
+      </section>}
     </article>
   );
 }

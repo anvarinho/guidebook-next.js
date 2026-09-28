@@ -1,45 +1,50 @@
-import styles from './articles.module.css'
-import { Metadata } from 'next'
-import { Locale } from '@/lib/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
-import Image from "next/image";
+import styles from './articles.module.css';
+import shared from '../places/page.module.css';
+import { Metadata } from 'next';
+import { Locale } from '@/lib/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
 import getAllArticles from '@/lib/getAllArticles';
 import ArticleListItem from './components/ArticleListItem';
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import { Suspense } from 'react';
 import LoadingSpinner from '../Components/LoadingSpinner';
+import { PlacesReveal } from '../places/components/PlacesMotion';
 import Meta from './meta';
 
+export default async function Articles({ params: { lang } }: { params: { lang: Locale } }) {
+  const { page } = await getDictionary(lang);
+  const articles: Article[] = await getAllArticles(lang);
+  const featured = articles.length >= 3;
 
-export default async function Home({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}) {
-  const { page } = await getDictionary(lang)
-  const data: Promise<[Article]> = getAllArticles(lang)
-    const placesData = await data
-    // const arrayImages = placesData.places.map((place) => place.image)
-    // const images = getBlurredDataUrls(arrayImages)
-    const content = placesData.map(async (article, i) => {
-      return (
-          <ArticleListItem key={i} article={article} lang={lang}/>
-      )
-    })
   return (
-        <div className={styles.main}>
-          <Meta articles={placesData} lang={lang} page={page}/>
+    <div className={shared.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+      <Meta articles={articles} lang={lang} page={page}/>
+      <header className={`${shared.pageIntro} ${styles.intro}`}>
+        <PlacesReveal className={shared.introTitle}>
+          <p className={shared.eyebrow}>{page.articles.name}</p>
           <h1>{page.articles.title}</h1>
-          <h2>{page.articles.description}</h2>
-          <div className={styles.articlesDiv}>
-            <div className={styles.articlesList}>
-              <Suspense fallback={<LoadingSpinner text={page.loading} />}>
-                  {content}
-                  <br />
-              </Suspense>
-            </div>
+        </PlacesReveal>
+        <PlacesReveal className={shared.introAside} order={1}>
+          <p className={shared.description}>{page.articles.description}</p>
+          <a href="#articles" className={shared.exploreLink}>{page.articles.name}<span aria-hidden="true">↓</span></a>
+        </PlacesReveal>
+      </header>
+      <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
+        <section id="articles" className={shared.featuredSection} aria-label={page.articles.name}>
+          {featured && <div className={`${shared.featuredGrid} ${styles.featuredGrid}`}>
+            {articles.slice(0, 3).map((article, i) => <ArticleListItem key={article._id} article={article} lang={lang} featured order={i}/>)}
+          </div>}
+          {articles.length > 3 && <PlacesReveal className={shared.collectionHeading}>
+            <h2>{page.articles.name}</h2>
+            <span className={shared.collectionLine} aria-hidden="true"/>
+            <span aria-hidden="true">↙</span>
+          </PlacesReveal>}
+          <div className={shared.placesList}>
+            {articles.slice(featured ? 3 : 0).map((article, i) => <ArticleListItem key={article._id} article={article} lang={lang} order={i}/>)}
           </div>
-        </div>
-  )
+        </section>
+      </Suspense>
+    </div>
+  );
 }
 
 export async function generateMetadata({
