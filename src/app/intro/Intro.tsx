@@ -4,10 +4,12 @@
 import { useRef, type CSSProperties } from "react";
 import { useIntroAnimations } from "./useIntroAnimations";
 import HeroEagle from "./HeroEagle";
+import Link from "next/link";
+import type { Locale } from "@/lib/i18n.config";
 import type { IntroMessages } from "./translations";
 import "./intro.css";
 
-export default function Intro({ messages: t, language }: { messages: IntroMessages; language: string }) {
+export default function Intro({ messages: t, language, locale }: { messages: IntroMessages; language: string; locale: Locale }) {
   const introRef = useRef<HTMLDivElement>(null);
   useIntroAnimations(introRef, t);
 
@@ -335,6 +337,9 @@ export default function Intro({ messages: t, language }: { messages: IntroMessag
                 <span>{t.manasEpic}</span><span>{t.manasRegion}</span
                 ><span>{t.manasMemory}</span>
               </div>
+              <Link href={`/${locale}/manas`} className="manas-read-more reveal" style={{ "--d": "0.4s" } as CSSProperties}>
+                {t.manasReadMore} <span aria-hidden="true">↗</span>
+              </Link>
             </div>
           </div>
         </section>

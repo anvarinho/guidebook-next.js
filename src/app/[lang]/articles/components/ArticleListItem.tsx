@@ -1,39 +1,34 @@
-import styles from '../articles.module.css'
-import Link from "next/link";
 import getBase64 from "@/lib/getLocalBase64"
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-
-import Image from "next/image";
+import ArticleCard from './ArticleCard';
 
 type Props = {
   article: Article,
   lang: Locale,
+  featured?: boolean,
+  order?: number,
 }
 
-export default async function ArticleListItem({ article, lang }: Props) {
+export default async function ArticleListItem({ article, lang, featured, order }: Props) {
   const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-  
-  let imageUrl = article.image ? article.image : article.paragraphs[0].image
-  const blurDataURL = await getBase64(baseUrl + imageUrl)
+  const { page } = await getDictionary(lang);
+  const image = article.image || article.paragraphs.find(paragraph => paragraph.image)?.image;
+  const imageUrl = image ? baseUrl + image : undefined;
+  const blurDataURL = imageUrl ? await getBase64(imageUrl) : undefined;
+  const date = new Date(article.createdAt);
+  const validDate = !Number.isNaN(date.getTime());
+  const dateLabel = validDate ? new Intl.DateTimeFormat(page.langCode, {
+    day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
+  }).format(date) : undefined;
+  const viewsLabels: Record<Locale, string> = {
+    en: 'Views', ru: 'Просмотры', ae: 'المشاهدات', fr: 'Vues', de: 'Aufrufe',
+    it: 'Visualizzazioni', es: 'Visualizaciones', jp: '閲覧数', kr: '조회수', cn: '浏览量',
+  };
   return (
-    <Link href={`articles/${article.url}`} key={article._id} className={styles.articleBox}>
-        <Image
-            src={baseUrl + imageUrl}
-            alt={`${article.image}`}
-            className={styles.articleImg}
-            height={150}
-            width={150}
-            placeholder="blur" 
-            blurDataURL={blurDataURL} 
-            priority/>
-        <div className={styles.cardContent}>
-            <h4>{article.title}</h4>
-            <p>{article.subtitle.substring(0,160)} ...</p>
-            <div className={styles.cardBottom}>
-                <h6>{String(article.createdAt)}</h6><h6>{article.viewCount}</h6>
-            </div>
-        </div> 
-    </Link>
+    <ArticleCard title={article.title} subtitle={article.subtitle} href={`/${lang}/articles/${article.url}`}
+      imageUrl={imageUrl} blurDataURL={blurDataURL} featured={featured} order={order}
+      dateLabel={dateLabel} dateTime={validDate ? date.toISOString() : undefined}
+      views={new Intl.NumberFormat(page.langCode).format(article.viewCount)} viewsLabel={viewsLabels[lang]}/>
   )
 }

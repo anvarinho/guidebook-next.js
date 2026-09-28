@@ -1,7 +1,7 @@
 import { Locale } from "@/lib/i18n.config";
 
 interface Props {
-    articles: [Article];
+    articles: Article[];
     lang: Locale
     page: any
 }

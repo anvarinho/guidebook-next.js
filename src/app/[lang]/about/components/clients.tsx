@@ -1,126 +1,77 @@
 'use client'
+
 import styles from './clients.module.css'
 import { Locale } from '@/lib/i18n.config'
-import { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 import getReviews from '@/lib/getReviews'
+import Image from 'next/image'
+import Link from 'next/link'
+import { aboutContent } from '../content'
+import { PlacesReveal } from '../../places/components/PlacesMotion'
 
 interface Review {
-    _id: string;
-    name: string;
-    avatar: string;
-    review: string;
-    rating: number;
+  _id: string;
+  name: string;
+  avatar: string;
+  review: string;
+  rating: number;
 }
 
-export default function Clients({
-    params: { lang }
-  }: {
-    params: { lang: Locale };
-  }) {
-    const [reviews, setReviews] = useState<Review[]>([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [showItems, setShowItems] = useState<number>(2);
+const stars = (rating: number) => Math.max(0, Math.min(5, Math.round(rating || 0)))
 
-    const whatClientsSayTranslations = {
-      "en": "What Our Clients Say",
-      "fr": "Témoignages",
-      "de": "Was unsere Kunden sagen",
-      "es": "Lo que dicen nuestros clientes",
-      "ae": "ما يقوله عملاؤنا",
-      "kr": "고객들의 이야기",
-      "jp": "お客様の声",
-      "cn": "客户评价",
-      "ru": "Что говорят наши клиенты",
-      "it": "Cosa dicono i nostri clienti"
-    };
-  
-    useEffect(() => {
-      
-      const interval = setInterval(() => {
-        setCurrentIndex(prevIndex =>
-          prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 5000);
-  
-      return () => clearInterval(interval);
-    }, [currentIndex]);
+export default function Clients({ params: { lang } }: { params: { lang: Locale } }) {
+  const copy = aboutContent[lang]
+  const [reviews, setReviews] = useState<Review[]>([])
+  const [loading, setLoading] = useState(true)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [showItems, setShowItems] = useState(2)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-              const data = await getReviews();
-              setReviews(data);
-            } catch (error) {
-              console.error('Error fetching reviews:', error);
-            }
-          };
-      
-          fetchData();
-    },[])
-  
-    useLayoutEffect(() => {
-      const handleResize = () => {
-        if (window.innerWidth <= 900) {
-          setShowItems(1);
-        } else {
-          setShowItems(2);
-        }
-      };
-  
-      handleResize();
-  
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-  
-    return (
-      <section className={styles.testimonials} id="clients">
-        <header>
-          <h1>{whatClientsSayTranslations[lang]}</h1>
+  useEffect(() => {
+    let active = true
+    getReviews().then(data => {
+      if (active) {
+        setReviews(Array.isArray(data) ? data : [])
+        setLoading(false)
+      }
+    })
+    return () => { active = false }
+  }, [])
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 900px)')
+    const update = () => { setShowItems(media.matches ? 1 : 2) }
+    update()
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [])
+
+  const visibleReviews = Array.from({ length: Math.min(showItems, reviews.length) }, (_, slot) => reviews[(currentIndex + slot) % reviews.length])
+
+  return (
+    <section className={styles.testimonials} id="clients" aria-labelledby="reviews-heading">
+      <PlacesReveal>
+        <header className={styles.header}>
+          <div><p className={styles.eyebrow}>03 / {copy.reviews}</p><h2 id="reviews-heading">{copy.reviews}</h2></div>
+          {reviews.length > showItems && <div className={styles.controls}>
+            <button type="button" aria-label={copy.previous} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index - showItems + reviews.length) % reviews.length)}><span aria-hidden="true">←</span></button>
+            <button type="button" aria-label={copy.next} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index + showItems) % reviews.length)}><span aria-hidden="true">→</span></button>
+          </div>}
         </header>
-        <div className={`${styles.testimonials_container}`}>
-          {reviews !== undefined &&
-            reviews.slice(currentIndex, currentIndex + showItems).map((review, index) => (
-              <div className={`item ${styles.testimonial_card}`} key={index}>
-                <main className={styles.test_card_body}>
-                  <div className={styles.quote}>
-                    <h2>
-                      <span>{"\u201C"}</span>
-                    </h2>
-                  </div>
-                  <p>{review.review}</p>
-                  <div className={styles.ratings}>
-                    {Array.from({ length: review.rating }, (_, i) => (
-                      <span key={i}>&#x2605;</span>
-                    ))}
-                  </div>
-                </main>
-                <div className={styles.profile}>
-                  <div className={styles.profile_image}>
-                    <img
-                      src={"https://central-asia.live/uploads/" + review.avatar}
-                      alt="Profile"
-                    />
-                  </div>
-                  <div className={styles.profile_desc}>
-                    <span>{review.name}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-        </div>
-        <div className={styles.slider_indicators}>
-          {reviews.map((image, idx) => (
-            <span
-              key={idx}
-              className={
-                idx === currentIndex ? styles.active : styles.indicator
-              }
-            ></span>
+        <div className={styles.testimonials_container} id="review-cards" aria-busy={loading}>
+          {loading ? <p className={styles.status} role="status">{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> ↗</span></Link> : visibleReviews.map((review, slot) => (
+            <figure className={styles.testimonial_card} key={`${review._id}-${slot}`}>
+              <span className={styles.quote} aria-hidden="true">“</span>
+              <blockquote tabIndex={0} className={styles.reviewText} dir="auto"><p>{review.review}</p></blockquote>
+              <figcaption className={styles.profile}>
+                <div className={styles.profile_image}><Image src={review.avatar ? `https://central-asia.live/uploads/${review.avatar}` : '/avatar.jpg'} alt="" width={44} height={44}/></div>
+                <span className={styles.profile_name} dir="auto">{review.name}</span>
+                <span className={styles.ratings} aria-label={`${stars(review.rating)} / 5`}><span aria-hidden="true">{'★'.repeat(stars(review.rating))}</span></span>
+              </figcaption>
+            </figure>
           ))}
         </div>
-      </section>
-    );
+        {reviews.length > showItems && <p className={styles.position} aria-live="polite" aria-atomic="true"><bdi>{currentIndex + 1} / {reviews.length}</bdi></p>}
+      </PlacesReveal>
+    </section>
+  )
 }

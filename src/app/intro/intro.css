@@ -2451,3 +2451,19 @@ html.intro-loading body {
 .kyrgyz-intro .section:not(.images-ready) [data-scene-background] {
   background-image: none;
 }
+
+.kyrgyz-intro .manas-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  padding: .85rem 1.4rem;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.kyrgyz-intro .manas-read-more:hover { background: var(--felt); color: var(--ink); }
+.kyrgyz-intro .manas-read-more:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }

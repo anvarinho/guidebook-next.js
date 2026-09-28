@@ -7,6 +7,7 @@ import Paragraph from './Paragraph'
 import { getDictionary } from '@/lib/dictionary'
 
 import Image from "next/image";
+import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
   article: Article,
@@ -21,9 +22,8 @@ export default async function Article({ article, lang }: Props) {
   const { page } = await getDictionary(lang)
   return (
     <article className={styles.article}>
-        <div className={styles.hero}>
-          
-            {article.image && (
+        {article.image && (
+          <PlacesReveal className={styles.heroImage}>
               <picture className={styles.image}>
                 <Image
                 src={baseUrl + article.image} 
@@ -35,19 +35,25 @@ export default async function Article({ article, lang }: Props) {
                 priority
                 />
               </picture>
-            )}
-          
-            
-            <h1>{article.title}</h1>
-            <h3>{article.subtitle}</h3>
-            <br />
+          </PlacesReveal>
+        )}
+        <div className={styles.articleLayout}>
+          <div className={styles.body}>
+            {article.paragraphs.map((paragraph, index) => (
+              <Paragraph key={index} paragraph={paragraph} lang={lang} priority={index === 0 && !article.image}/>
+            ))}
+          </div>
+          <aside className={styles.aside}>
+            <div className={styles.asideInner}>
+              <p className={styles.asideLabel}>{page.articles.name}</p>
+              <p className={styles.asideText}>{article.title}</p>
+              <a href="#article-end" className={styles.asideLink}>↓ <span>{page.info.seen}{article.viewCount}</span></a>
+            </div>
+          </aside>
         </div>
-        {article.paragraphs.map((paragraph, index) => (
-          <Paragraph key={index} paragraph={paragraph} lang={lang} priority={index == 0 && article.image == null ? true : false}/>
-        ))}
-        <div className={styles.info}>
-                <time dateTime={article.createdAt.toLocaleString()}>{page.info.created}{dayOfMonth}</time>
-                <p>{page.info.seen}{article.viewCount}</p>
+        <div id="article-end" className={styles.info}>
+          <time dateTime={article.createdAt.toLocaleString()}>{page.info.created}{dayOfMonth}</time>
+          <span>{page.info.seen}{new Intl.NumberFormat(page.langCode).format(article.viewCount)}</span>
         </div>
       </article>
   )

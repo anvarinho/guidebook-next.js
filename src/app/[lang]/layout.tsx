@@ -11,6 +11,8 @@ import ContactButton from './Components/ContactButton'
 import LanguageShell from './Components/LanguageShell'
 import Flags from './Components/Flags'
 import Meta from './metalayout';
+import { getDictionary } from '@/lib/dictionary'
+import ContactDialog from './contact/components/ContactDialog'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
@@ -19,13 +21,15 @@ export async function generateStaticParams() {
 const font = Bai_Jamjuree({weight: ['200','300','400','500','600','700'],style: 'normal', subsets: ['latin'], display: 'swap' })
 const russianfont = Exo_2({weight: ['200','300','400','500','600','700'],style: 'normal',subsets: ['cyrillic'], display: 'swap' })
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params
 }: {
   children: React.ReactNode,
   params: { lang: Locale }
 }) {
+  const { page } = await getDictionary(params.lang)
+  const contact = page.footer.sections.find(section => section.info)?.info
   return (
     <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[params.lang] ?? params.lang}>
       <head>
@@ -45,6 +49,10 @@ export default function RootLayout({
         >
           {children}
         </LanguageShell>
+        <ContactDialog lang={params.lang} title={page.about.buttons.contact_us}
+          phone={process.env.NEXT_PUBLIC_PHONE_NUMBER || contact?.phone || '+996 500 490 806'}
+          email={process.env.NEXT_PUBLIC_EMAIL || contact?.email || 'anvarinho@gmail.com'}
+          address={contact?.address || ''}/>
       </body>
     </html>
   )

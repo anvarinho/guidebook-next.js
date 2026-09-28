@@ -14,7 +14,6 @@ function processDescription(content: string, highlights: string[]): string {
   // FIRST: Convert markdown images to HTML img tags (do this before any other processing)
   const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
   html = html.replace(imageRegex, (match, alt, src) => {
-    console.log("Found image:", { alt, src }); // Debug log
     // Clean the src URL
     let cleanSrc = src;
     if (
@@ -89,14 +88,13 @@ function processDescription(content: string, highlights: string[]): string {
     );
 
     // Single wrapper div for centering with no extra margins
-    let tableHtml =
-      '<div style="display: flex; justify-content: center; width: 100%;">';
+    let tableHtml = `<div class="${styles.tableScroll}">`;
     tableHtml += '<table class="' + styles.table + '">';
 
     // Headers
     tableHtml += "<thead><tr>";
     headers.forEach((header) => {
-      tableHtml += `<th class="${styles.tableHeader}">${header}</th>`;
+      tableHtml += `<th>${header}</th>`;
     });
     tableHtml += "</tr></thead>";
 
@@ -105,7 +103,7 @@ function processDescription(content: string, highlights: string[]): string {
     rows.forEach((row) => {
       tableHtml += "<tr>";
       row.forEach((cell) => {
-        tableHtml += `<td class="${styles.tableCell}">${cell}</td>`;
+        tableHtml += `<td>${cell}</td>`;
       });
       tableHtml += "</tr>";
     });
@@ -129,7 +127,7 @@ function processDescription(content: string, highlights: string[]): string {
 
   // Restore protected HTML tables
   html = html.replace(/§§TABLE_(\d+)§§/g, (_, index) => {
-    return tablePlaceholders[parseInt(index)];
+    return `<div class="${styles.tableScroll}">${tablePlaceholders[parseInt(index)]}</div>`;
   });
 
   // Process blockquotes to separate citation and author
@@ -165,6 +163,20 @@ function processDescription(content: string, highlights: string[]): string {
     return match;
   });
 
+  // Format text only: underscores in image URLs and CSS classes are not Markdown.
+  const inlineTags: string[] = [];
+  html = html.replace(/<[^>]*>/g, tag => {
+    inlineTags.push(tag);
+    return `\uE000${inlineTags.length - 1}\uE001`;
+  })
+    .replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/___(.*?)___/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/__(.*?)__/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/_(.*?)_/g, '<em>$1</em>')
+    .replace(/\uE000(\d+)\uE001/g, (_, index) => inlineTags[Number(index)]);
+
   // Convert markdown syntax to HTML (using native HTML elements)
   html = html
     // Headers - convert h1 to h2
@@ -172,14 +184,6 @@ function processDescription(content: string, highlights: string[]): string {
     .replace(/^## (.*$)/gm, `<h3>$1</h3>`)
     .replace(/^### (.*$)/gm, `<h4>$1</h4>`)
     .replace(/^#### (.*$)/gm, `<h5>$1</h5>`)
-
-    // Bold and italic - using native HTML
-    .replace(/\*\*\*(.*?)\*\*\*/g, `<strong><em>$1</em></strong>`)
-    .replace(/___(.*?)___/g, `<strong><em>$1</em></strong>`)
-    .replace(/\*\*(.*?)\*\*/g, `<strong>$1</strong>`)
-    .replace(/__(.*?)__/g, `<strong>$1</strong>`)
-    .replace(/\*(.*?)\*/g, `<em>$1</em>`)
-    .replace(/_(.*?)_/g, `<em>$1</em>`)
 
     // Horizontal rule
     .replace(/^---$/gm, `<hr />`)
@@ -234,9 +238,7 @@ export default function PlaceDescription({
       ? text
       : text[lang] || text.en || Object.values(text)[0] || "";
 
-  console.log("Original content:", content.substring(0, 200)); // Debug log
   const processedHtml = processDescription(content, highlights);
-  console.log("Processed HTML:", processedHtml.substring(0, 200)); // Debug log
 
   return (
     <div

@@ -11,6 +11,7 @@ import Image from "next/image";
 const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const isManas = pathname.split("/")[2] === "manas";
   const contactMe = {
     en: "Any Questions?",
     es: "¿Alguna pregunta?",
@@ -38,6 +39,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
   };
 
   useEffect(() => {
+    if (isManas) return;
     // Function to handle the scroll event
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -59,7 +61,9 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled]);
+  }, [isManas]);
+
+  if (isManas) return null;
 
   return (
     <div className={`${styles.contactBtn} ${isScrolled ? "" : styles.active}`}>
