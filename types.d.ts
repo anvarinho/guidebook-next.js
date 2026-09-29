@@ -16,6 +16,7 @@ type Place = {
     "sights": [string]?,
     "viewCount": number,
     "location": GeoLocation,
+    "weather"?: Weather | null,
     "videoID": string?
 }
 

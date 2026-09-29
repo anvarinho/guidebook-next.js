@@ -44,11 +44,11 @@ export default async function Article({ article, lang }: Props) {
             ))}
           </div>
           <aside className={styles.aside}>
-            <div className={styles.asideInner}>
+            <PlacesReveal className={styles.asideInner}>
               <p className={styles.asideLabel}>{page.articles.name}</p>
               <p className={styles.asideText}>{article.title}</p>
               <a href="#article-end" className={styles.asideLink}>↓ <span>{page.info.seen}{article.viewCount}</span></a>
-            </div>
+            </PlacesReveal>
           </aside>
         </div>
         <div id="article-end" className={styles.info}>

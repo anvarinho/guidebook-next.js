@@ -21,7 +21,7 @@ export default function TourCard({ tour, lang, blurDataURL, duration, fromLabel,
   useReveal(ref, order);
 
   return (
-    <Link ref={ref} href={`/${lang}/tours/${tour.url}`}
+    <Link ref={ref} data-reveal-group href={`/${lang}/tours/${tour.url}`}
       className={`${shared.placeBox} ${styles.tourCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
         <div className={shared.imageFrame} data-reveal-image>

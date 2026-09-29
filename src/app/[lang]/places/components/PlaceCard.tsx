@@ -19,7 +19,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
   useReveal(cardRef, order);
 
   return (
-    <Link ref={cardRef} href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
+    <Link ref={cardRef} data-reveal-group href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
         <div className={styles.imageFrame} data-reveal-image>
         <Image
@@ -45,8 +45,8 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
       </div>
       <div className={styles.placeContent}>
         <div className={styles.placeDetails}>
-          <p className={styles.region}>{place.region}</p>
-          <h2>{place.title}</h2>
+          <p className={styles.region} data-reveal-copy>{place.region}</p>
+          <h2 data-reveal-copy>{place.title}</h2>
         </div>
         <span className={styles.cardArrow} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
       </div>

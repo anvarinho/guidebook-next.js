@@ -7,6 +7,7 @@ import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import LoadingSpinner from "../../Components/LoadingSpinner"
 import Meta from "./meta"
+import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
 
 type Params = {
     params: {
@@ -40,29 +41,16 @@ export async function generateMetadata({
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const place = await placeData
     if (!place) notFound()
-    const siteUrl = (process.env.NEXT_PUBLIC_URL || '').replace(/\/$/, '')
-    const pageUrl = `${siteUrl}/${lang}/places/${place.url}/`
-    const description = place.description.replace(/\s+/g, ' ').trim().substring(0, 160)
-    const images = place.images.map(image => ({
-        secureUrl: `${siteUrl}/${image}`,
-        url: `${siteUrl}/${image}`,
-        width: 800,
-        height: 600,
-        alt: `Image of ${place.name}`,
-        type:"image/jpeg"
+    const pageUrl = absoluteSiteUrl(`${lang}/places/${encodeURIComponent(place.url)}`)
+    const description = metaDescription(place.description)
+    const images = place.images.slice(0, 4).map(image => ({
+        url: absoluteSiteUrl(image),
+        alt: `${place.name} in ${place.region}, Kyrgyzstan`,
     }))
-
-    if (!place){
-        return {
-            title: "Place Not found"
-        }
-    }
     return {
-        metadataBase: siteUrl ? new URL(`${siteUrl}/`) : undefined,
-        title: {
-            absolute: place.title
-        },
-        description: description,
+        metadataBase: new URL(`${siteUrl}/`),
+        title: place.title || `${place.name} in ${place.region}, Kyrgyzstan`,
+        description,
         keywords: place.keywords,
         applicationName: 'GuideBook of Kyrgyzstan',
         category: "Travel",
@@ -72,58 +60,26 @@ export async function generateMetadata({
             url: pageUrl,
             siteName: 'GuideBook of Kyrgyzstan',
             images: images,
-            locale: page.langCode.replace("-",'_'),
+            locale: page.langCode.replace("-", "_"),
             type: 'website',
         },
         alternates: {
             canonical: pageUrl,
-            languages: {
-                "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/${place.url}`,
-                "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/${place.url}`,
-                "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/places/${place.url}`,
-                "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/places/${place.url}`,
-                "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/places/${place.url}`,
-                "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/places/${place.url}`,
-                "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/places/${place.url}`,
-                "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/places/${place.url}`,
-                "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/places/${place.url}`,
-                "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/places/${place.url}`
-            }
+            languages: localizedAlternates("places", place.url),
         },
         twitter: {
             card: "summary_large_image",
             title: place.title,
             description: description,
-            siteId: "",
             creator: "@anvarinho",
-            creatorId: "@anvarinho",
-            images: images
-        },
-        appLinks: {
-            ios: {
-              url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
-              app_store_id: "id1575382810",
-              app_name: "GuideBook of Kyrgyzstan"
-            },
-            android: {
-              url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
-              package: "com.anvarinho.guidebook",
-              app_name: "GuideBook of Kyrgyzstan"
-            },
-            web: {
-                url: pageUrl,
-                should_fallback: true,
-              }
+            images: images.map(image => image.url),
         },
         robots: {
             index: true,
             follow: true,
-            "max-image-preview":"large",
-            googleBot: {
-                index: true,
-                follow: true,
-                "max-image-preview":"large"
-            }
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
         }
     }
 }

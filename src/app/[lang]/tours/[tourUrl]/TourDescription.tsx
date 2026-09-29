@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import { PlacesRevealContent } from '../../places/components/PlacesMotion';
 
 interface TourDescriptionProps {
   description: string;
@@ -161,9 +162,9 @@ export default function TourDescription({
   html = processedLines.join("\n");
 
   return (
-    <div
+    <PlacesRevealContent
       className={styles.tourContainer}
-      dangerouslySetInnerHTML={{ __html: html }}
+      html={html}
     />
   );
 }

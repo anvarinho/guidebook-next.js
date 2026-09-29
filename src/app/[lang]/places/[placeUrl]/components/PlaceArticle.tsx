@@ -1,4 +1,5 @@
 import styles from '../page.module.css';
+import { Suspense } from 'react';
 import { getPlacesByURLs, getPlacesByRegion } from '@/lib/getAllPlaces';
 import { GoogleMapsEmbed, YouTubeEmbed } from '@next/third-parties/google';
 import type { Locale } from '@/lib/i18n.config';
@@ -6,7 +7,9 @@ import { getDictionary } from '@/lib/dictionary';
 import Link from 'next/link';
 import PlaceDescription from './PlaceDescripiton';
 import PlaceGallery from './PlaceGallery';
+import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
+import { PlacesReveal } from '../../components/PlacesMotion';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
@@ -36,6 +39,7 @@ export default async function PlaceArticle({ promise, lang }: {
         <span>{place.region}</span>
       </nav>
       <header className={styles.articleHeader}>
+        <PlacesReveal>
         <h1>{place.title}</h1>
         <div className={styles.info}>
           {createdDate && <time dateTime={createdDate.toISOString()}>
@@ -43,8 +47,11 @@ export default async function PlaceArticle({ promise, lang }: {
           </time>}
           <span>{page.info.seen}{Math.floor(place.viewCount).toLocaleString(page.langCode)}</span>
         </div>
+        </PlacesReveal>
       </header>
-      <PlaceGallery images={place.images} name={place.name} lang={lang}/>
+      <PlacesReveal>
+        <PlaceGallery images={place.images} name={place.name} lang={lang}/>
+      </PlacesReveal>
 
       <div className={styles.articleLayout}>
         <div className={styles.articleBody}>
@@ -60,10 +67,13 @@ export default async function PlaceArticle({ promise, lang }: {
           </div>}
         </div>
         <aside className={styles.locationCard} aria-label={`Google Maps — ${place.name}`}>
-          <div className={styles.locationHeading}>
+          <Suspense fallback={null}>
+            <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather}/>
+          </Suspense>
+          <PlacesReveal className={styles.locationHeading}>
             <p>{place.region}</p>
             <h2>{place.name}</h2>
-          </div>
+          </PlacesReveal>
           <div className={styles.map}>
             {mapsApiKey ? <GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
               apiKey={mapsApiKey} height={280} width="100%"
@@ -81,16 +91,16 @@ export default async function PlaceArticle({ promise, lang }: {
       </div>
 
       {sights.length > 0 && <section className={styles.related} aria-labelledby="local-sights-title">
-        <h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2>
+        <PlacesReveal className={styles.relatedHeading}><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></PlacesReveal>
         <div className={styles.relatedGrid}>
           {sights.map(sight => <div className={styles.relatedItem} key={sight._id}>
             <PlaceCard place={sight} lang={lang}/>
-            {sight.description && <p className={styles.relatedSummary}>{sight.description}</p>}
+            {sight.description && <PlacesReveal><p className={styles.relatedSummary}>{sight.description}</p></PlacesReveal>}
           </div>)}
         </div>
       </section>}
       {places.length > 0 && <section className={styles.related} aria-labelledby="region-sights-title">
-        <h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2>
+        <PlacesReveal className={styles.relatedHeading}><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></PlacesReveal>
         <div className={styles.relatedGrid}>
           {places.map(sight => <PlaceCard key={sight._id} place={sight} lang={lang}/>)}
         </div>

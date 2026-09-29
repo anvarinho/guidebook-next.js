@@ -54,29 +54,27 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
       if (loaderDismissed) return;
       loaderDismissed = true;
       pageLoader.classList.add("done");
+      // Reveal the scene underneath the fading veil, so the two motions overlap.
+      root!.classList.add("is-ready");
       schedule(() => {
         resetIntroScroll();
         introReady = true;
         document.documentElement.classList.remove("intro-loading");
-        root!.classList.add("is-ready");
         resizeScene();
-      }, motionEnabled() ? 750 : 0);
+      }, motionEnabled() ? 450 : 0);
     }
 
     // Show the landscape as soon as its images decode, including on a warm cache.
     const heroLoaded = () => {
       if (!disposed) dismissLoader();
     };
-    schedule(dismissLoader, 2500);
+    schedule(dismissLoader, 1600);
     if (motionPreference.matches) dismissLoader();
     else {
       const heroSources = [
         "/intro/sky-clouds-hero.png",
         "/intro/mountain-midground-v3.png",
         "/intro/mountain-foreground-v3.png",
-        "/intro/eagle-flight-illustrated.png",
-        "/intro/kyrgyz-flag-brush-v2.png",
-        "/intro/flag.png",
       ];
       Promise.all(heroSources.map(src => {
         const image = new Image();

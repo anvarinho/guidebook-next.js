@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Guidebook of Kyrgyzstan
 
-## Getting Started
+A multilingual travel guide for discovering places, tours, articles, and airport transfers in Kyrgyzstan. The site is built with Next.js App Router, React, and TypeScript.
 
-First, run the development server:
+## Requirements
+
+- Node.js 18 or newer
+- npm
+- Access to the content API for places, tours, and articles
+
+## Getting started
+
+Install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The root route redirects to the English home page at `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a local `.env.local` file for environment-specific settings. At minimum, set the public site/API origin used by the server-side content fetchers:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```dotenv
+NEXT_PUBLIC_URL=http://localhost:3000
+```
 
-## Learn More
+The places, tours, and articles pages request data from `/api/places`, `/api/tours`, and `/api/articles` on this origin. Those API route handlers are not included in this repository, so point `NEXT_PUBLIC_URL` at an origin that serves the content API. The home page, static assets, and airport transfer directory can be developed without that content API.
 
-To learn more about Next.js, take a look at the following resources:
+Optional settings used by the site:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_PHONE_NUMBER` | Contact and WhatsApp number |
+| `NEXT_PUBLIC_EMAIL` | Contact email |
+| `GOOGLE_ANALYTICS_ID` | Google Analytics measurement ID |
+| `GOOGLE_MAPS_API_KEY` | Google Maps content on place pages |
+| `DB_HOST`, `DB_PORT`, `DB_NAME` | MongoDB connection for the admin area |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Keep secrets in `.env.local` and out of version control. Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser and should not contain secrets.
 
-## Deploy on Vercel
+## Useful commands
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev      # Start the local development server
+npm run lint     # Run Next.js ESLint checks
+npm run build    # Create a production build
+npm start        # Serve the production build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Run `npm run build` before deploying. Then use `npm start` to serve the generated build.
+
+## Main routes
+
+Pages are localized under `src/app/[lang]`:
+
+- `/{lang}` — home
+- `/{lang}/places` — places directory and place details
+- `/{lang}/tours` — tours directory and tour details
+- `/{lang}/articles` — articles directory and article details
+- `/{lang}/manas-airport-transfers` — Manas Airport transfer guide
+- `/{lang}/about` and `/{lang}/contact` — about and contact pages
+- `/admin` — content administration area
+
+Supported locale codes are `en`, `ru`, `fr`, `de`, `es`, `it`, `jp`, `kr`, `ae`, and `cn`. Translation dictionaries live in `src/dictionaries`; the airport transfer page has its own dictionaries alongside that page.
+
+## Project layout
+
+```text
+src/app/[lang]/       Localized pages and shared site components
+src/app/admin/        Admin pages and MongoDB models
+src/app/intro/        Home page content and parallax presentation
+src/dictionaries/     Main site translations
+src/lib/              Locale, content-fetching, and SEO helpers
+public/               Images, icons, and other static assets
+```
+
+The home page uses the intro experience in `src/app/intro`. Its scene artwork and parallax behavior are defined separately from the content styling. Place and tour details are loaded from the configured content API.
+
+## Content and deployment notes
+
+The admin area connects to MongoDB using `DB_HOST`, `DB_PORT`, and `DB_NAME`. The public place, tour, and article pages use the content API configured by `NEXT_PUBLIC_URL`; make sure that API is reachable from the server during rendering. Set `NEXT_PUBLIC_URL` to the deployed canonical site/API origin in production, and provide analytics, map, and contact settings only when those integrations are needed.
+
+Deploy the Next.js app to a Node.js-compatible host. Build the app with `npm run build`, then run `npm start` with the production environment variables configured.
