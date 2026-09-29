@@ -1,113 +1,74 @@
-// import { Locale } from "@/lib/i18n.config";
-
 import { Locale } from "@/lib/i18n.config";
+import { absoluteSiteUrl, metaDescription, safeJsonLd } from "@/lib/seo";
 
 interface Props {
   lang: Locale;
-  tour: TourInfo; // Assuming 'tour' is a string, adjust the type accordingly if it's different
+  tour: TourInfo;
   page: any;
 }
 
-const Meta: React.FC<Props> = ({ lang, tour, page }) => {
+export default function Meta({ lang, tour, page }: Props) {
+  const url = absoluteSiteUrl(`${lang}/tours/${encodeURIComponent(tour.url)}`);
+  const tourPage = page.tours.tourPage;
+  const duration = `${tour.days.length} ${tour.days.length === 1 ? tourPage.day : tourPage.days}`;
+  const prices = tour.price.map(Number).filter(price => Number.isFinite(price) && price > 0);
+  const description = metaDescription(
+    tour.description,
+    duration,
+    prices.length ? `${tourPage.from} $${Math.min(...prices)}` : "",
+  );
   const data = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: tour.title,
-    description: tour.description,
-    image: tour.images,
-    sku: tour._id,
-    brand: {
-      "@type": "Brand",
-      name: "GuideBook of Kyrgyzstan",
-    },
-    review: {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: 4,
-        bestRating: 5,
-      },
-      author: {
-        "@type": "Person",
-        name: "Fred Benson",
-      },
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.9,
-      reviewCount: 189,
-    },
-    offers: {
-      "@type": "Offer",
-      url: `${process.env.NEXT_PUBLIC_URL}/tours/${tour.url}`,
-      priceCurrency: "USD",
-      price: tour.price[0],
-      priceValidUntil: "2024-10-10",
-      availability: "https://schema.org/InStock",
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "KG",
-        returnPolicyCategory:
-          "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 60,
-        returnMethod: "https://schema.org/ReturnByMail",
-        returnFees: "https://schema.org/FreeReturn",
-      },
-      shippingDetails: {
-        "@type": "OfferShippingDetails",
-        shippingRate: {
-          "@type": "MonetaryAmount",
-          value: 1,
-          currency: "USD",
+    "@graph": [
+      {
+        "@type": "TouristTrip",
+        "@id": `${url}#trip`,
+        url,
+        name: tour.title,
+        description,
+        image: tour.images.slice(0, 6).map(image => absoluteSiteUrl(image)),
+        inLanguage: page.langCode,
+        ...(tour.days.length ? { duration: `P${tour.days.length}D` } : {}),
+        itinerary: {
+          "@type": "ItemList",
+          numberOfItems: tour.days.length,
+          itemListElement: tour.days.map((day, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: `${tourPage.day} ${index + 1}`,
+            description: day.activities.join("; "),
+          })),
         },
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          addressCountry: "KG",
-        },
-        deliveryTime: {
-          "@type": "ShippingDeliveryTime",
-          handlingTime: {
-            "@type": "QuantitativeValue",
-            minValue: 1,
-            maxValue: 1,
-            unitCode: "DAY",
+        ...(prices.length ? {
+          offers: {
+            "@type": "AggregateOffer",
+            url,
+            priceCurrency: "USD",
+            lowPrice: Math.min(...prices),
+            highPrice: Math.max(...prices),
           },
-          transitTime: {
-            "@type": "QuantitativeValue",
-            minValue: 1,
-            maxValue: 1,
-            unitCode: "DAY",
-          },
-        },
+        } : {}),
       },
-    },
-    breadcrumb: {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: page.tours.name,
-          item: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: `${tour.title}`,
-          item: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
-        },
-      ],
-    },
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: tour.title,
+        description,
+        inLanguage: page.langCode,
+        mainEntity: { "@id": `${url}#trip` },
+        breadcrumb: { "@id": `${url}#breadcrumb` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: page.tours.name, item: absoluteSiteUrl(`${lang}/tours`) },
+          { "@type": "ListItem", position: 2, name: tour.title, item: url },
+        ],
+      },
+    ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
-};
-
-export default Meta;
-
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />;
+}

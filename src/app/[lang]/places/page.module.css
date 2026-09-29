@@ -143,12 +143,29 @@
 .mustSee h2 { font-size: 24px; }
 .mustSee h3 { font-size: 18px; }
 .notfound { padding: 100px 24px; text-align: center; }
-.listingPage { padding-top: 144px; }
+.listingPage { position: relative; isolation: isolate; padding-top: 144px; }
+
 .listingPage .pageIntro { margin-bottom: 42px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
 .listingPage .description { max-width: 62ch; font-size: 15px; line-height: 1.9; text-wrap: pretty; }
 .listingPage .placeBox { transition: border-color .35s, box-shadow .35s; }
 .listingPage .placeBox:hover { border-color: rgba(var(--foreground-rgb), .24); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
 .listingPage .placeDetails { flex: 1; }
+.sleekMotion { --places-ease: cubic-bezier(.22, 1, .36, 1); }
+.sleekMotion .placeBox { transition: translate .65s var(--places-ease), border-color .45s ease, box-shadow .65s var(--places-ease); }
+.sleekMotion .placeImg { transition: transform 1.4s var(--places-ease); }
+.sleekMotion .cardArrow { transition: background .45s ease, border-color .45s ease, color .45s ease; }
+.sleekMotion .cardArrow svg { transition: transform .7s var(--places-ease); }
+.sleekMotion .placeBox:focus-visible .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+@media (hover: hover) {
+  .sleekMotion .placeBox:hover { border-color: rgba(255,101,0,.3); box-shadow: 0 18px 40px rgba(0,0,0,.11); }
+  .sleekMotion .placeBox:hover .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  /* Individual translate keeps hover motion independent of the reveal transform. */
+  .sleekMotion .placeBox:hover { translate: 0 -4px; }
+  .sleekMotion .placeBox:hover .placeImg { transform: scale(1.035); }
+  .sleekMotion .placeBox:active { translate: 0 -1px; }
+}
 .contactPanel { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 64px; padding: 36px 40px; border: 1px solid var(--line); border-radius: 24px; background: rgba(var(--callout-rgb), .45); }
 .contactPanel h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; text-wrap: balance; }
 .contactPanel p { max-width: 55ch; margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.8; }
@@ -194,6 +211,7 @@
 @media(max-width: 760px) { .contactPanel { flex-direction: column; align-items: stretch; gap: 24px; padding: 28px 24px; margin-top: 40px; } .contactPanel a { align-self: flex-start; } }
 @media(max-width: 600px) { .listingPage { padding-top: 112px; } .listingPage .pageIntro { padding-bottom: 28px; gap: 22px; } .listingPage .description { font-size: 14px; line-height: 1.8; } }
 @media(prefers-reduced-motion: reduce) {
+  .sleekMotion .placeBox, .sleekMotion .placeImg, .sleekMotion .cardArrow, .sleekMotion .cardArrow svg { transition: none; }
   .listingPage .placeBox, .contactPanel a span { transition: none; }
   .placeImg { transition: none; }
   .cardArrow svg { transition: none; }

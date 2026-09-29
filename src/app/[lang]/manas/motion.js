@@ -253,7 +253,6 @@ export function initializeManas(root, t) {
         });
     });
     root.querySelectorAll('a[href="#sources"]').forEach(link => listen(link, 'click', () => { root.querySelector('#sources').open = true; }));
-    const hero = root.querySelector('.hero');
     const chapterBar = root.querySelector('#chapter-current');
     const chapterMap = root.querySelector('#chapter-map');
     const chapterSections = [...root.querySelectorAll('#main>section[id]')];
@@ -289,13 +288,62 @@ export function initializeManas(root, t) {
         chapterBar.classList.toggle('is-visible', hero.getBoundingClientRect().bottom < window.innerHeight * .75);
     }
     const requestJourney = () => { if (!scrollFrame) scrollFrame = scheduleFrame(updateJourney); };
-    listen(window, 'scroll', requestJourney, { passive: true });
-    listen(window, 'resize', requestJourney);
+    const hero = root.querySelector('.hero');
+    const heroLayers = [...root.querySelectorAll('.hero-layer img')];
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    let targetScroll = window.scrollY, smoothScroll = targetScroll;
+    let targetX = 0, targetY = 0, smoothX = 0, smoothY = 0;
+    let parallaxFrame = 0;
+    function renderParallax() {
+        parallaxFrame = 0;
+        const rect = hero.getBoundingClientRect();
+        const travel = Math.max(0, Math.min(hero.offsetHeight, -rect.top));
+        const mobile = window.innerWidth <= 760;
+        heroLayers.forEach((image, index) => {
+            const depth = index + 1;
+            const x = mobile ? 0 : smoothX * depth * -8;
+            const y = -travel * depth * .035 + (mobile ? 0 : smoothY * depth * -5);
+            image.style.transform = 'translate3d(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px,0) scale(1.055)';
+        });
+        const easing = .18;
+        smoothScroll += (targetScroll - smoothScroll) * easing;
+        smoothX += (targetX - smoothX) * easing;
+        smoothY += (targetY - smoothY) * easing;
+        if (Math.abs(targetScroll - smoothScroll) > .3 || Math.abs(targetX - smoothX) > .004 || Math.abs(targetY - smoothY) > .004) {
+            parallaxFrame = window.requestAnimationFrame(time => {
+                frames.delete(parallaxFrame);
+                renderParallax(time);
+            });
+            frames.add(parallaxFrame);
+        }
+    }
+    const requestParallax = () => {
+        targetScroll = window.scrollY;
+        if (!parallaxFrame) {
+            parallaxFrame = window.requestAnimationFrame(time => {
+                frames.delete(parallaxFrame);
+                parallaxFrame = 0;
+                renderParallax(time);
+            });
+            frames.add(parallaxFrame);
+        }
+    };
+    listen(window, 'scroll', () => { requestJourney(); requestParallax(); }, { passive: true });
+    listen(window, 'resize', () => { requestJourney(); requestParallax(); });
+    listen(hero, 'pointermove', event => {
+        if (!finePointer.matches || event.pointerType !== 'mouse' || reducedMotion.matches || manuallyPaused) return;
+        const bounds = hero.getBoundingClientRect();
+        targetX = Math.max(-.5, Math.min(.5, (event.clientX - bounds.left) / bounds.width - .5));
+        targetY = Math.max(-.5, Math.min(.5, (event.clientY - bounds.top) / bounds.height - .5));
+        requestParallax();
+    }, { passive: true });
+    listen(hero, 'pointerleave', () => { targetX = targetY = 0; requestParallax(); });
     listen(root.querySelector('#chapter-open'), 'click', () => chapterMap.showModal());
     chapterMap.querySelectorAll('a').forEach(link => listen(link, 'click', () => chapterMap.close()));
     function refreshMotionPreference() {
         const paused = manuallyPaused || reducedMotion.matches;
         root.classList.toggle('motion-paused', paused);
+        root.classList.toggle('motion-enabled', !paused);
         root.querySelectorAll('[data-motion-toggle]').forEach(button => {
             button.setAttribute('aria-pressed', String(paused));
             button.disabled = reducedMotion.matches;
@@ -305,6 +353,11 @@ export function initializeManas(root, t) {
         if (paused) {
             animations.forEach(animation => animation.cancel());
             root.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+            heroLayers.forEach(image => { image.style.transform = ''; });
+            smoothX = targetX = smoothY = targetY = 0;
+        } else {
+            smoothScroll = targetScroll = window.scrollY;
+            requestParallax();
         }
     }
     listen(reducedMotion, 'change', refreshMotionPreference);
@@ -349,6 +402,7 @@ export function initializeManas(root, t) {
     root.querySelectorAll('dialog').forEach(dialog => dialogObserver.observe(dialog, { attributes: true, attributeFilter: ['open'] }));
     refreshMotionPreference();
     updateJourney();
+    requestParallax();
     animate(root.querySelector('.hero-content'), [{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }]);
     animate(root.querySelector('.hero-art'), [{ opacity: 0, transform: 'scale(1.025)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 1200 });
     return () => {
@@ -356,6 +410,7 @@ export function initializeManas(root, t) {
         observers.forEach(observer => observer.disconnect());
         frames.forEach(frame => window.cancelAnimationFrame(frame));
         animations.forEach(animation => animation.cancel());
+        heroLayers.forEach(image => { image.style.transform = ''; });
         root.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
         document.documentElement.style.overflow = originalOverflow;
         root.querySelectorAll('.forty-badges > *, .waveform > *').forEach(element => element.remove());

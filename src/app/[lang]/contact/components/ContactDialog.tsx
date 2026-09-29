@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import Image from 'next/image'
 import type { Locale } from '@/lib/i18n.config'
 import ContactForm from './ContactForm'
 import { contactCopy } from '../content'
@@ -70,7 +69,7 @@ export default function ContactDialog({ lang, title, phone, email, address }: { 
       <button type="button" className={styles.close} onClick={close} aria-label={copy.close} autoFocus><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
       <div className={styles.layout}>
         <div className={styles.intro}>
-          <span className={styles.emblem} aria-hidden="true"><Image src="/intro/flag.png" alt="" width={36} height={36}/></span>
+          <span className={styles.emblem} aria-hidden="true"/>
           <h2 id="contact-dialog-title">{title}</h2>
           <p id="contact-dialog-intro">{copy.intro}</p>
           <div className={styles.directLinks}>

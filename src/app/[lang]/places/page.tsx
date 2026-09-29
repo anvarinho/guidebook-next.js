@@ -21,16 +21,16 @@ export default async function Places({
     const data: Promise<PlaceAlias[]> = getAllPlaces(lang)
     const places = await data
     return (
-        <div className={`${styles.main} ${styles.listingPage}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+        <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
           <Meta lang={lang} places={places} page={page}/>
             <header className={styles.pageIntro}>
               <PlacesReveal className={styles.introTitle}>
-                <p className={styles.eyebrow}>{page.sights.name}</p>
-                <h1>{page.sights.title}</h1>
+                <p className={styles.eyebrow} data-reveal-copy>{page.sights.name}</p>
+                <h1 data-reveal-copy>{page.sights.title}</h1>
               </PlacesReveal>
               <PlacesReveal className={styles.introAside} order={1}>
-                <p className={styles.description}>{page.sights.description}</p>
-                <a href="#destinations" className={styles.exploreLink}>{page.sights.sights}<span aria-hidden="true">↓</span></a>
+                <p className={styles.description} data-reveal-copy>{page.sights.description}</p>
+                <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true">↓</span></a>
               </PlacesReveal>
             </header>
             <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
@@ -39,7 +39,7 @@ export default async function Places({
               </div>
             </section>
             <PlacesReveal className={styles.collectionHeading}>
-              <h2>{page.sights.sights}</h2>
+              <h2 data-reveal-copy>{page.sights.sights}</h2>
               <span className={styles.collectionLine} aria-hidden="true"/>
               <span aria-hidden="true">↙</span>
             </PlacesReveal>
@@ -55,8 +55,8 @@ export default async function Places({
               </div>
             </div>
             <PlacesReveal className={styles.contactPanel}>
-              <div><h2>{aboutContent[lang].invitation}</h2><p>{aboutContent[lang].invitationBody}</p></div>
-              <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link>
+              <div><h2 data-reveal-copy>{aboutContent[lang].invitation}</h2><p data-reveal-copy>{aboutContent[lang].invitationBody}</p></div>
+              <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link>
             </PlacesReveal>
         </div>
     )

@@ -1,4 +1,5 @@
 import styles from "../page.module.css";
+import { PlacesRevealContent } from '../../components/PlacesMotion';
 
 interface Props {
   text: string | { [key: string]: string };
@@ -241,9 +242,9 @@ export default function PlaceDescription({
   const processedHtml = processDescription(content, highlights);
 
   return (
-    <div
+    <PlacesRevealContent
       className={styles.container}
-      dangerouslySetInnerHTML={{ __html: processedHtml }}
+      html={processedHtml}
     />
   );
 }

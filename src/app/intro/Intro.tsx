@@ -8,13 +8,17 @@ import Link from "next/link";
 import type { Locale } from "@/lib/i18n.config";
 import type { IntroMessages } from "./translations";
 import "./intro.css";
+import "./intro-content.css";
 
-export default function Intro({ messages: t, language, locale }: { messages: IntroMessages; language: string; locale: Locale }) {
+export default function Intro({ messages: t, language, locale, links }: {
+  messages: IntroMessages; language: string; locale: Locale;
+  links: { label: string; href: string; image: string }[];
+}) {
   const introRef = useRef<HTMLDivElement>(null);
   useIntroAnimations(introRef, t);
 
   return (
-    <div ref={introRef} className="kyrgyz-intro" lang={language} dir={language === "ar" ? "rtl" : "ltr"}>
+    <div ref={introRef} className="kyrgyz-intro home-refresh" lang={language} dir={language === "ar" ? "rtl" : "ltr"}>
 
       <a className="skip-link" href="#journey">{t.skipLink}</a>
       <div
@@ -80,12 +84,22 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
           </div>
           <div className="content-wrap">
             <div className="hero-content">
-              <div className="hero-award reveal is-visible" lang="en" dir="ltr">
-                🏆 #1 adventure destination
-              </div>
               <div className="hero-kicker reveal is-visible" style={{ "--d": "0.08s" } as CSSProperties}>{t.heroKicker}</div>
               <h1 className="reveal is-visible" style={{ "--d": "0.16s" } as CSSProperties}>{t.heroTitle}</h1>
               <p className="hero-tagline reveal is-visible" style={{ "--d": "0.15s" } as CSSProperties}>{t.heroDescription}</p>
+              <div className="home-actions reveal is-visible" style={{ "--d": "0.24s" } as CSSProperties}>
+                {links.slice(0, 2).map((link, index) => <Link href={link.href} className={index === 0 ? "home-button home-button-primary" : "home-button"} key={link.href}>
+                  <span className="home-button-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      {index === 0 ? <><path d="m2 19 7-12 5 8 3-5 5 9H2Z"/><path d="m6.5 11.3 2.5 2 2.5-2"/><circle cx="17" cy="5" r="2"/></> : <><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></>}
+                    </svg>
+                  </span>
+                  <span className="home-button-label">{link.label}</span>
+                  <span className="home-button-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 18 18 6M6 6h12v12"/></svg>
+                  </span>
+                </Link>)}
+              </div>
               <div className="hero-stats reveal is-visible" style={{ "--d": "0.3s" } as CSSProperties}>
                 <div className="hero-stat">
                   <strong>{t.populationValue}</strong><span>{t.populationLabel}</span>
@@ -129,7 +143,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="lake-copy">
+            <div className="lake-copy story-panel">
               <span className="eyebrow-fact reveal">{t.lakeKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.lakeTitle}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.lakeDescription}</p>
@@ -197,7 +211,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="steppe-copy">
+            <div className="steppe-copy story-panel">
               <span className="eyebrow-fact reveal">{t.steppeKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.steppeTitle}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.steppeDescription}</p>
@@ -242,7 +256,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="peaks-copy">
+            <div className="peaks-copy story-panel">
               <span className="eyebrow-fact reveal"
               >{t.peaksKicker}</span
               >
@@ -300,7 +314,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="silk-copy">
+            <div className="silk-copy story-panel">
               <span className="eyebrow-fact reveal">{t.silkKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.silkTitle}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.silkDescription}</p>
@@ -329,7 +343,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="manas-copy">
+            <div className="manas-copy story-panel">
               <span className="eyebrow-fact reveal">{t.manasKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.manasTitle}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.manasDescription}</p>
@@ -384,7 +398,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="nomadic-copy">
+            <div className="nomadic-copy story-panel">
               <span className="eyebrow-fact reveal">{t.nomadicKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.nomadicTitle}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.nomadicDescription}</p>
@@ -456,7 +470,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="bishkek-copy">
+            <div className="bishkek-copy story-panel">
               <span className="eyebrow-fact reveal">{t.bishkekKicker}</span>
               <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.bishkekTitle}</h2>
               <p className="bishkek-lead reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.bishkekDescription}</p>
@@ -499,7 +513,7 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             </div>
           </div>
           <div className="content-wrap">
-            <div className="hospitality-copy">
+            <div className="hospitality-copy story-panel">
               <span className="eyebrow-fact reveal">{t.hospitalityKicker}</span>
               <h2 className="reveal" id="hospitality-title" style={{ "--d": "0.1s" } as CSSProperties}>{t.hospitalityTitleFirst}<br />{t.hospitalityTitleSecond}</h2>
               <p className="reveal" style={{ "--d": "0.2s" } as CSSProperties}>{t.hospitalityDescription}</p>
@@ -513,6 +527,12 @@ export default function Intro({ messages: t, language, locale }: { messages: Int
             <span className="cta-kicker reveal">{t.ctaKicker}</span>
             <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.ctaTitleFirst}<br />{t.ctaTitleSecond}</h2>
             <p className="lead reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.ctaDescription}</p>
+            <div className="home-portals">
+              {links.map((link, index) => <Link href={link.href} className="home-portal reveal" key={link.href} style={{ "--d": `${index * .06}s` } as CSSProperties}>
+                <div className="portal-image"><img src={link.image} alt="" width="640" height="427" loading="lazy" decoding="async" /></div>
+                <div className="portal-caption"><span>{link.label}</span><span className="home-arrow" aria-hidden="true">↗</span></div>
+              </Link>)}
+            </div>
             <a className="cta-btn reveal" style={{ "--d": "0.2s" } as CSSProperties} href="#top"
             >{t.ctaButton}</a
             >

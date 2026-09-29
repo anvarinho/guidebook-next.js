@@ -21,7 +21,7 @@
 .manas-page .hero-content { grid-column: 1; grid-row: 1; width: 100%; min-width: 0; margin: 0; padding-block: 32px; }
 .manas-page .hero-kicker { max-width: 38ch; margin-bottom: 30px; }
 .manas-page .little-diamond { display: inline-block; width: 6px; height: 6px; margin-inline-end: 8px; border-radius: 50%; background: var(--accent); vertical-align: middle; }
-.manas-page h1 { font-size: clamp(60px,7.8vw,112px); font-weight: 500; line-height: 1; letter-spacing: -.075em; direction: ltr; unicode-bidi: isolate; }
+.manas-page h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(68px,8.5vw,116px); font-weight: 700; line-height: .95; letter-spacing: -.07em; direction: ltr; unicode-bidi: isolate; color: var(--accent); }
 .manas-page .latin-title { margin-top: 20px; font-size: 11px; letter-spacing: .5em; color: var(--accent); }
 .manas-page .hero-subtitle { max-width: 26ch; margin-top: 32px; font-size: clamp(23px,2.4vw,32px); line-height: 1.4; letter-spacing: -.025em; text-wrap: balance; }
 .manas-page .hero-kyrgyz { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
@@ -32,6 +32,8 @@
 .manas-page .hero-art { grid-column: 2; grid-row: 1; position: relative; height: clamp(560px,46vw,680px); overflow: hidden; isolation: isolate; border-radius: 28px; background: #d9d9ce; }
 .manas-page .hero-layer { position: absolute; inset: 0; }
 .manas-page .hero-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 77% center; }
+.manas-page .hero-layer img { will-change: auto; }
+.manas-page.motion-enabled .hero-layer img { will-change: transform; }
 .manas-page .hero-landscape { z-index: 0; }
 .manas-page .hero-army { z-index: 1; }
 .manas-page .hero-manas { z-index: 2; }
@@ -232,7 +234,7 @@
   .manas-page .hero { padding-block: 104px 36px; }
   .manas-page .hero-stage { grid-template-columns: 1fr; gap: 28px; }
   .manas-page .hero-content { grid-column: 1; grid-row: 1; padding: 0; }
-  .manas-page h1 { font-size: clamp(64px,17vw,108px); }
+  .manas-page h1 { font-size: clamp(68px,17vw,108px); letter-spacing: -.06em; }
   .manas-page .hero-kicker { margin-bottom: 24px; }
   .manas-page .hero-subtitle { margin-top: 24px; font-size: 26px; }
   .manas-page .hero-copy { font-size: 14px; margin-top: 20px; }
@@ -297,4 +299,4 @@
   .manas-page .comic-reader-pages button { min-width: 34px; padding-inline: 8px; }
   .manas-page .video-dialog { padding-top: 64px; }
 }
-@media(prefers-reduced-motion:reduce) { .manas-page *, .manas-page *::before, .manas-page *::after { animation: none !important; transition: none !important; } .manas-page.js .reveal { opacity: 1; transform: none; } }
+@media(prefers-reduced-motion:reduce) { .manas-page *, .manas-page *::before, .manas-page *::after { animation: none !important; transition: none !important; } .manas-page.js .reveal { opacity: 1; transform: none; } .manas-page .hero-layer img { will-change: auto; transform: none !important; } }

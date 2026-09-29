@@ -22,7 +22,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     twitter: { card: "summary_large_image", title: messages.s246, description: messages.s247, images: [localizedImage] },
   };
 }
-export const viewport: Viewport = { themeColor: "#f8f7f4" };
+export const viewport: Viewport = { themeColor: [
+  { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  { media: "(prefers-color-scheme: dark)", color: "#000000" },
+] };
 
 export default async function TransfersPage({ params }: PageProps) {
   const messages = await getTransferMessages(params.lang);

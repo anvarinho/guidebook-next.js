@@ -10,6 +10,7 @@ import { getDictionary } from '@/lib/dictionary'
 import { notFound } from 'next/navigation'
 import shared from '../../places/page.module.css';
 import { PlacesReveal } from '../../places/components/PlacesMotion';
+import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
 
 type Params = {
   params: {
@@ -51,87 +52,49 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
 }
 
 export async function generateMetadata({ params: {articleUrl, lang}}: Params): Promise<Metadata> {
-  const data: Promise<Article> = getArticle(articleUrl, lang)
-  const article = await data
+  const article = await getArticle(articleUrl, lang)
   if (!article) notFound()
-  let imageUrl = article.image ? article.image : article.paragraphs[0].image
+  const { page } = await getDictionary(lang)
+  const imagePath = article.image || article.paragraphs.find((paragraph: Paragraph) => paragraph.image)?.image
+  const description = metaDescription(article.subtitle, article.paragraphs[0]?.text)
+  const pageUrl = absoluteSiteUrl(`${lang}/articles/${encodeURIComponent(article.url)}`)
+  const images = imagePath ? [{ url: absoluteSiteUrl(imagePath), alt: article.title }] : []
+  const publishedTime = new Date(article.createdAt).toISOString()
   return {
-      title: {
-        absolute: article.title
-      },
-      description: article.subtitle,
-      keywords: article.keywords,
-      applicationName: 'GuideBook of Kyrgyzstan',
-      category: "Travel",
-      openGraph: {
-          title: article.title,
-          description: article.subtitle,
-          url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
-          siteName: 'GuideBook of Kyrgyzstan',
-          images: [{
-            url: `${process.env.NEXT_PUBLIC_URL}/${imageUrl}`,
-            secureUrl: `${process.env.NEXT_PUBLIC_URL}/${imageUrl}`,
-            width: 800,
-            height: 600,
-            alt: article.title,
-            type:"image/jpeg"
-          }],
-          locale: 'en_US',
-          type: 'website',
-      },
-      alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
-        languages: {
-            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/${article.url}`,
-            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/${article.url}`,
-            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/articles/${article.url}`,
-            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/articles/${article.url}`,
-            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/articles/${article.url}`,
-            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/articles/${article.url}`,
-            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/articles/${article.url}`,
-            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/articles/${article.url}`,
-            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/articles/${article.url}`,
-            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/articles/${article.url}`
-        }
+    metadataBase: new URL(`${siteUrl}/`),
+    title: article.title,
+    description,
+    keywords: article.keywords,
+    applicationName: 'GuideBook of Kyrgyzstan',
+    category: 'Travel',
+    openGraph: {
+      title: article.title,
+      description,
+      url: pageUrl,
+      siteName: 'GuideBook of Kyrgyzstan',
+      images,
+      locale: page.langCode.replace('-', '_'),
+      type: 'article',
+      publishedTime,
+      authors: ['Anvar Jumabaev'],
+    },
+    alternates: {
+      canonical: pageUrl,
+      languages: localizedAlternates('articles', article.url),
     },
     twitter: {
-      card: "summary_large_image",
+      card: images.length ? 'summary_large_image' : 'summary',
       title: article.title,
-      description: article.subtitle,
-      siteId: "@anvarinho",
-      creator: "@anvarinho",
-      creatorId: "@anvarinho",
-      images: [{
-        url: `${process.env.URL}/${imageUrl}`,
-        width: 800,
-        height: 600,
-        alt: article.title
-      }]
-    },
-    appLinks: {
-      ios: {
-        url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
-        app_store_id: "id1575382810",
-        app_name: "GuideBook of Kyrgyzstan"
-      },
-      android: {
-        url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
-        package: "com.anvarinho.guidebook",
-        app_name: "GuideBook of Kyrgyzstan"
-      },
-      web: {
-        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
-        should_fallback: true,
-      }
+      description,
+      creator: '@anvarinho',
+      images: images.map(image => image.url),
     },
     robots: {
-        index: true,
-        follow: true,
-        nocache: true,
-        googleBot: {
-            index: true,
-            follow: true,
-        }
-    }
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   }
 }

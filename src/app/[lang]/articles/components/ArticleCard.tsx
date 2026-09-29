@@ -20,7 +20,7 @@ export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataU
   useReveal(ref, order);
 
   return (
-    <Link ref={ref} href={href} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
+    <Link ref={ref} data-reveal-group href={href} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
         <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`} data-reveal-image>
           {imageUrl && <Image src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}

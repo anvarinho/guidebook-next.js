@@ -1,4 +1,4 @@
-.about { --about-line: rgba(var(--foreground-rgb), .13); color: rgb(var(--foreground-rgb)); background: rgb(var(--background-end-rgb)); overflow: clip; padding-bottom: 96px; }
+.about { --about-line: rgba(var(--foreground-rgb), .13); color: rgb(var(--foreground-rgb)); background: transparent; overflow: clip; padding-bottom: 96px; }
 .container { width: min(1360px, calc(100% - 80px)); margin-inline: auto; }
 .hero { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(36px, 6vw, 96px); padding-block: 150px 100px; }
 .heroCopy { min-width: 0; }

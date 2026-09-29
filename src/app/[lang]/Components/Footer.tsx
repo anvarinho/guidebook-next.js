@@ -42,7 +42,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
         <div className={styles.grid}>
           <Link href={`/${lang}`} className={styles.brand}>
-            <span className={styles.brandMark} aria-hidden="true"><Image src="/intro/flag.png" alt="" width={40} height={40}/></span>
+            <span className={styles.brandMark} aria-hidden="true"/>
             <span>{page.name}</span>
           </Link>
           {sections.map((section, index) => {

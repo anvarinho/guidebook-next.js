@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Locale } from '@/lib/i18n.config'
 import MenuButton from './MenuButton'
 import styles from './navbar.module.css'
@@ -86,8 +85,8 @@ export default function Navigation({ lang, name, links, contactLabel }: {
       <div className={styles.bar}>
         <Link href={`/${lang}`} className={styles.brand} aria-label={name} onClick={() => setOpen(false)}>
           <span className={styles.emblem} aria-hidden="true">
-            <Image className={styles.emblemRays} src="/intro/flag.png" alt="" width={32} height={32}/>
-            <Image className={styles.emblemCenter} src="/intro/flag.png" alt="" width={32} height={32}/>
+            <span className={styles.emblemRays}/>
+            <span className={styles.emblemCenter}/>
           </span>
           <span className={styles.brandName}>{name}</span>
         </Link>

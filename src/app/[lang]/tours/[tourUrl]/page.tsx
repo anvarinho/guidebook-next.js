@@ -14,6 +14,7 @@ import TourGallery from "./TourGallery";
 import TourDescription from "./TourDescription";
 import { PlacesReveal } from "../../places/components/PlacesMotion";
 import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
+import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
 type Params = {
   params: { tourUrl: string; lang: Locale };
@@ -121,86 +122,54 @@ export async function generateMetadata({
   const tourData: Promise<TourInfo> = getTour(tourUrl, lang);
   const tour = await tourData;
   if (!tour) notFound();
-  const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-  const description = tour.description.substring(0, 159);
   const { page } = await getDictionary(lang);
+  const tourPage = page.tours.tourPage;
+  const duration = `${tour.days.length} ${tour.days.length === 1 ? tourPage.day : tourPage.days}`;
+  const availablePrices = tour.price.filter(price => Number.isFinite(price) && price > 0);
+  const startingPrice = availablePrices.length ? Math.min(...availablePrices) : null;
+  const description = metaDescription(
+    tour.description,
+    duration,
+    startingPrice === null ? "" : `${tourPage.from} $${startingPrice}`,
+  );
+  const pageUrl = absoluteSiteUrl(`${lang}/tours/${encodeURIComponent(tour.url)}`);
+  const images = tour.images.slice(0, 4).map(image => ({
+    url: absoluteSiteUrl(image),
+    alt: `${tour.title} in Kyrgyzstan`,
+  }));
   return {
-    title: {
-      absolute: tour.title,
-    },
-    description: description,
+    metadataBase: new URL(`${siteUrl}/`),
+    title: tour.title,
+    description,
     keywords: tour.keywords,
     applicationName: "GuideBook of Kyrgyzstan",
     category: "Travel",
     openGraph: {
-      title: tour.title + " | " + "GuideBook of Kyrgyzstan",
+      title: tour.title,
       description: description,
-      url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
+      url: pageUrl,
       siteName: "GuideBook of Kyrgyzstan",
-      images: {
-        url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
-        secureUrl: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
-        width: 800,
-        height: 600,
-        alt: tour.title,
-        type: "image/jpeg",
-      },
+      images,
       locale: page.langCode.replace("-", "_"),
       type: "website",
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
-      languages: {
-        "en-US": `${process.env.NEXT_PUBLIC_URL}/en/tours/${tour.url}`,
-        "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/tours/${tour.url}`,
-        "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/tours/${tour.url}`,
-        "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/tours/${tour.url}`,
-        "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/tours/${tour.url}`,
-        "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/tours/${tour.url}`,
-        "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/tours/${tour.url}`,
-        "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/tours/${tour.url}`,
-        "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/tours/${tour.url}`,
-        "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/tours/${tour.url}`,
-      },
+      canonical: pageUrl,
+      languages: localizedAlternates("tours", tour.url),
     },
     twitter: {
       card: "summary_large_image",
       title: tour.title,
       description: description,
-      siteId: "",
       creator: "@anvarinho",
-      creatorId: "@anvarinho",
-      images: {
-        url: `${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`,
-        width: 800,
-        height: 600,
-        alt: tour.title,
-      },
-    },
-    appLinks: {
-      ios: {
-        url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
-        app_store_id: "id1575382810",
-        app_name: "GuideBook of Kyrgyzstan",
-      },
-      android: {
-        url: "https://play.google.com/store/apps/details?id=com.anvarinho.guidebook",
-        package: "com.anvarinho.guidebook",
-        app_name: "GuideBook of Kyrgyzstan",
-      },
-      web: {
-        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/${tour.url}`,
-        should_fallback: true,
-      },
+      images: images.map(image => image.url),
     },
     robots: {
       index: true,
       follow: true,
-      nocache: true,
-      googleBot: {
-        index: true,
-        follow: true,
-      },
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   };
 }
