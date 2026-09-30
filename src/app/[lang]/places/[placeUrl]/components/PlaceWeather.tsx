@@ -9,10 +9,10 @@ const labels: Record<Locale, string> = {
   it: 'Meteo locale', jp: '現地の天気', kr: '현지 날씨', cn: '当地天气', ae: 'الطقس المحلي',
 };
 
-export default async function PlaceWeather({ url, lang, language, weather, location }: {
-  url: string; lang: Locale; language: string; weather?: Weather | null; location: GeoLocation;
+export default async function PlaceWeather({ url, lang, language, weather }: {
+  url: string; lang: Locale; language: string; weather?: Weather | null;
 }) {
-  const conditions = await getPlaceWeather(url, lang, location, weather);
+  const conditions = await getPlaceWeather(url, lang, weather);
   const temperature = Number.parseFloat(String(conditions?.temp ?? ''));
   if (!conditions || !Number.isFinite(temperature)) return null;
 

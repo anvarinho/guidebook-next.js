@@ -5,7 +5,6 @@ import { getDictionary } from '../../lib/dictionary'
 import { Metadata } from 'next'
 
 // import { config } from "@fortawesome/fontawesome-svg-core";
-// import getWeatherData from "@/lib/getWeatherData";
 // import getWikiResults from "@/lib/getWikiResults";
 // Tell Font Awesome to skip adding the CSS automatically 
 // since it's already imported above
