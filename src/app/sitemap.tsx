@@ -1,70 +1,47 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
 import { i18n } from '@/lib/i18n.config';
 import { sitemapPlaces } from '@/lib/getAllPlaces';
 import { sitemapArticles } from '@/lib/getAllArticles';
 import { sitemapTours } from '@/lib/getAllTours';
+import { absoluteSiteUrl, localizedPageAlternates } from '@/lib/seo';
 import { transferUpdated } from './[lang]/manas-airport-transfers/seo';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap>  {
-    const URL = "https://central-asia.live";
-    const languages = i18n.locales;
-    const places = await sitemapPlaces()
-    const articles = await sitemapArticles()
-    const tours = await sitemapTours()
-    const routes = ["/", "/places", "/tours", "/about", "/articles", "/manas-airport-transfers"];
-    const currentDate = new Date().toISOString();
-    
-    const pages = [];
+export const revalidate = 3600;
 
-    for (const lang of languages) {
-        for (const route of routes) {
-            pages.push({
-                url: `${URL}/${lang}${route}`,
-                lastModified: route === '/manas-airport-transfers' ? transferUpdated : currentDate,
-                changeFrequency: 'weekly' as const,
-                priority: 0.8
-            });
-        }
-        for (const place of places) {
-            // console.log(`${placeItem.lastModified}:  ${placeItem.placeUrl}`)
-            pages.push({
-                url: `${URL}/${lang}/places/${place.placeUrl}`,
-                lastModified: place.lastModified,
-                changeFrequency: 'weekly' as const,
-                priority: 0.8,
-                // alternates:{
-                //     languages: {
-                //         en:""
-                //     }
-                // }
-            });
-        }
-        for (const article of articles) {
-            const isoString = new Date(article.lastModified).toISOString()
-            pages.push({
-                url: `${URL}/${lang}/articles/${article.placeUrl}`,
-                lastModified: isoString,
-                changeFrequency: 'weekly' as const,
-                priority: 0.9
-            });
-        }
-        for (const tour of tours) {
-            pages.push({
-                url: `${URL}/${lang}/tours/${tour.tourUrl}`,
-                lastModified: "2024-04-04T19:51:29.199Z",
-                changeFrequency: 'weekly' as const,
-                priority: 1
-            });
-        }
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [places, articles, tours] = await Promise.all([
+    sitemapPlaces(), sitemapArticles(), sitemapTours(),
+  ]);
+  const pages: MetadataRoute.Sitemap = [];
+  const routes = ['', 'places', 'tours', 'about', 'articles', 'contact', 'manas', 'manas-airport-transfers'];
+  const modified = (value: string | Date | undefined) => {
+    if (!value) return undefined;
+    const date = new Date(value instanceof Date ? value.getTime() : value);
+    return Number.isNaN(date.getTime()) ? undefined : date.toISOString();
+  };
+  for (const lang of i18n.locales) {
+    for (const route of routes) {
+      pages.push({
+        url: absoluteSiteUrl(`${lang}${route ? `/${route}` : ''}`),
+        lastModified: route === 'manas-airport-transfers' ? transferUpdated : undefined,
+        alternates: { languages: localizedPageAlternates(route) },
+      });
     }
-    return pages;
+    for (const place of places) {
+      const path = `places/${encodeURIComponent(place.placeUrl)}`;
+      pages.push({ url: absoluteSiteUrl(`${lang}/${path}`), lastModified: modified(place.lastModified),
+        alternates: { languages: localizedPageAlternates(path) } });
+    }
+    for (const article of articles) {
+      const path = `articles/${encodeURIComponent(article.placeUrl)}`;
+      pages.push({ url: absoluteSiteUrl(`${lang}/${path}`), lastModified: modified(article.lastModified),
+        alternates: { languages: localizedPageAlternates(path) } });
+    }
+    for (const tour of tours) {
+      const path = `tours/${encodeURIComponent(tour.tourUrl)}`;
+      pages.push({ url: absoluteSiteUrl(`${lang}/${path}`),
+        alternates: { languages: localizedPageAlternates(path) } });
+    }
+  }
+  return pages;
 }
-
-// export async function getServerSideProps() {
-//     const pages = await sitemap();
-//     return {
-//         props: {
-//             pages,
-//         },
-//     };
-// }

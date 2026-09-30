@@ -2,6 +2,11 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  async headers() {
+    return [{ source: "/manas/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }] }];
+  },
   // i18n:{
   //     locales:['en-US', 'fr'],
   //     defaultLocale: 'en-US',
@@ -602,11 +607,12 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ["159.65.95.44","central-asia.live", "https://central-asia.live", "127.0.0.1"], // Add your external image domains here
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 86400,
+    domains: ["159.65.95.44", "central-asia.live", "127.0.0.1"], // Add your external image domains here
     // unoptimized: true,
   },
   webpack(config) {
-    config.infrastructureLogging = { debug: /PackFileCache/ };
     return config;
   }
   // experimental: {

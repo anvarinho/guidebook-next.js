@@ -1,5 +1,6 @@
+import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import { Suspense } from "react";
-import getAllPlaces from "@/lib/getAllPlaces";
+import getPlacesWithWeather from "@/lib/getPlacesWithWeather";
 import styles from './page.module.css'
 import { Metadata } from 'next'
 import PlaceListItem from "./components/PlaceListItem";
@@ -18,7 +19,7 @@ export default async function Places({
   params: {lang : Locale}
 }) {
     const { page } = await getDictionary(lang)
-    const data: Promise<PlaceAlias[]> = getAllPlaces(lang)
+    const data: Promise<PlaceAlias[]> = getPlacesWithWeather(lang)
     const places = await data
     return (
         <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
@@ -68,7 +69,6 @@ export async function generateMetadata({
   params: {lang : Locale}
 }): Promise<Metadata> {
   const { page } = await getDictionary(lang)
-  const siteUrl = (process.env.NEXT_PUBLIC_URL || '').replace(/\/$/, '')
   const pageUrl = `${siteUrl}/${lang}/places/`
   const description = page.sights.description.replace(/\s+/g, ' ').trim().slice(0, 160)
   const imageUrl = `${siteUrl}/uploads/kel-suu1.jpg`
@@ -129,18 +129,7 @@ export async function generateMetadata({
       },
       alternates: {
         canonical: pageUrl,
-        languages: {
-            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/places/`,
-            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/places/`,
-            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/places/`,
-            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/places/`,
-            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/places/`,
-            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/places/`,
-            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/places/`,
-            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/places/`,
-            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/places/`,
-            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/places/`
-        }
+        languages: localizedPageAlternates("places")
     },
     robots: {
       index: true,

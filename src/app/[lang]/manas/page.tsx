@@ -1,9 +1,18 @@
 import type { Metadata, Viewport } from "next";
+import { Cormorant_SC } from "next/font/google";
+import assets from "./assets.json";
 import Manas from "./Manas";
+import { interactiveMessages } from "./interactive-messages";
 import ManasContent from "./ManasContent";
+import { absoluteSiteUrl, localizedPageAlternates, safeJsonLd, hreflangByLocale } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n.config";
 import { getManasMessages, manasLanguages } from "./translations";
 import "./manas.css";
+
+const panelFont = Cormorant_SC({
+  weight: "700", subsets: ["latin", "latin-ext", "cyrillic"],
+  variable: "--font-manas-panel", display: "swap", preload: false,
+});
 
 type PageProps = { params: { lang: Locale } };
 
@@ -14,11 +23,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
   title: { absolute: title },
   description,
+  alternates: { canonical: absoluteSiteUrl(`${params.lang}/manas`), languages: localizedPageAlternates("manas") },
   openGraph: {
     title,
     description,
     type: "website",
-    images: [{ url: "/manas/manas-hero.jpg", width: 1983, height: 793, alt: messages.metaImage }],
+    url: absoluteSiteUrl(`${params.lang}/manas`),
+    locale: hreflangByLocale[params.lang].replace("-", "_"),
+    images: [{ url: "/manas/manas-hero.jpg", width: assets["/manas/manas-hero.jpg"].width, height: assets["/manas/manas-hero.jpg"].height, alt: messages.metaImage }],
   },
   twitter: { card: "summary_large_image", title, description, images: ["/manas/manas-hero.jpg"] },
   };
@@ -31,5 +43,11 @@ export const viewport: Viewport = { themeColor: [
 
 export default async function ManasPage({ params }: PageProps) {
   const messages = await getManasMessages(params.lang);
-  return <Manas key={params.lang} messages={messages} language={manasLanguages[params.lang]}><ManasContent messages={messages} /></Manas>;
+  return <Manas className={panelFont.variable} key={params.lang} messages={interactiveMessages(messages)} language={manasLanguages[params.lang]}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
+    "@context": "https://schema.org", "@type": "WebPage",
+    name: messages.metaTitle, description: messages.metaDescription,
+    url: absoluteSiteUrl(`${params.lang}/manas`), inLanguage: manasLanguages[params.lang],
+    image: absoluteSiteUrl("manas/manas-hero.jpg"),
+    isPartOf: { "@type": "WebSite", name: "GuideBook of Kyrgyzstan", url: absoluteSiteUrl("/") },
+  }) }} /><ManasContent messages={messages} /></Manas>;
 }

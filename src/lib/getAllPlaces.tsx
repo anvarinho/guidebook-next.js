@@ -2,7 +2,7 @@ export default async function getAllPlaces(lang: string) {
     const url = `${process.env.NEXT_PUBLIC_URL}/api/places?lang=${lang}`;
     
     try {
-      const res = await fetch(url);
+      const res = await fetch(url, { next: { revalidate: 60 } });
       // console.log(res)
       if (!res.ok) {
         throw new Error('Failed to fetch data');

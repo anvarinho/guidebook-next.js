@@ -32,7 +32,7 @@ export default async function PlaceArticle({ promise, lang }: {
   const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 
   return (
-    <article className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <article data-place-page className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
       <nav className={styles.breadcrumb} aria-label={page.sights.name}>
         <Link href={`/${lang}/places`}><span aria-hidden="true">←</span> {page.sights.name}</Link>
         <span aria-hidden="true">/</span>
@@ -66,27 +66,38 @@ export default async function PlaceArticle({ promise, lang }: {
             <YouTubeEmbed videoid={place.videoID} width={800}/>
           </div>}
         </div>
-        <aside className={styles.locationCard} aria-label={`Google Maps — ${place.name}`}>
+        <aside className={styles.locationSidebar} aria-label={`Google Maps — ${place.name}`}>
           <Suspense fallback={null}>
-            <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather}/>
+            <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather} location={place.location}/>
           </Suspense>
-          <PlacesReveal className={styles.locationHeading}>
-            <p>{place.region}</p>
-            <h2>{place.name}</h2>
-          </PlacesReveal>
-          <div className={styles.map}>
-            {mapsApiKey ? <GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
-              apiKey={mapsApiKey} height={280} width="100%"
-              mode="place" q={coordinates} zoom="12"/> : <div className={styles.mapPreview}>
-              <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M32 56S13 38 13 24a19 19 0 0 1 38 0c0 14-19 32-19 32Z"/>
-                <circle cx="32" cy="24" r="7"/>
+          <section className={styles.locationCard}>
+            <PlacesReveal className={styles.locationHeading}>
+              <p>{place.region}</p>
+              <h2>{place.name}</h2>
+            </PlacesReveal>
+
+            <div className={styles.map}>
+              {mapsApiKey ? <GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
+                apiKey={mapsApiKey} height={240} width="100%"
+                mode="place" q={coordinates} zoom="12"/> : <div className={styles.mapPreview}>
+                <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M32 56S13 38 13 24a19 19 0 0 1 38 0c0 14-19 32-19 32Z"/>
+                  <circle cx="32" cy="24" r="7"/>
+                </svg>
+                <p dir="ltr">{Number(place.location.latitude).toFixed(4)}, {Number(place.location.longitude).toFixed(4)}</p>
+              </div>}
+            </div>
+            <Link className={styles.mapLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates)}`}
+              target="_blank" rel="noopener noreferrer">
+              <svg className={styles.mapLinkPin} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>
               </svg>
-              <p dir="ltr">{Number(place.location.latitude).toFixed(4)}, {Number(place.location.longitude).toFixed(4)}</p>
-            </div>}
-          </div>
-          <Link className={styles.mapLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates)}`}
-            target="_blank" rel="noopener noreferrer">Google Maps <span aria-hidden="true">↗</span></Link>
+              <span>Google Maps</span>
+              <svg className={styles.mapLinkArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10"/>
+              </svg>
+            </Link>
+          </section>
         </aside>
       </div>
 

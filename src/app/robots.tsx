@@ -1,12 +1,9 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
+import { absoluteSiteUrl } from '@/lib/seo';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/admin/',
-    },
-    sitemap: 'https://central-asia.live/sitemap.xml',
-  }
+    rules: { userAgent: '*', allow: '/', disallow: ['/admin', '/login', '/api/'] },
+    sitemap: absoluteSiteUrl('sitemap.xml'),
+  };
 }

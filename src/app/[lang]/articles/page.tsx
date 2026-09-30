@@ -1,3 +1,4 @@
+import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import styles from './articles.module.css';
 import shared from '../places/page.module.css';
 import { Metadata } from 'next';
@@ -64,11 +65,11 @@ export async function generateMetadata({
       openGraph:{
         title:page.articles.title,
         description: page.articles.description,
-        url: `${process.env.NEXT_PUBLIC_URL}/articles`,
+        url: absoluteSiteUrl(`${lang}/articles`),
         siteName: 'GuideBook of Kyrgyzstan',
         images: {
-            url: `${process.env.NEXT_PUBLIC_URL}/uploads/alakul.jpg`,
-            secureUrl: `${process.env.NEXT_PUBLIC_URL}/uploads/alakul.jpg`,
+            url: `${siteUrl}/uploads/alakul.jpg`,
+            secureUrl: `${siteUrl}/uploads/alakul.jpg`,
             width: 800,
             height: 600,
             alt: "Kel-Suu Lake",
@@ -85,7 +86,7 @@ export async function generateMetadata({
         creator: "@anvarinho",
         creatorId: "@anvarinho",
         images: {
-            url: `${process.env.NEXT_PUBLIC_URL}/uploads/alakul.jpg`,
+            url: `${siteUrl}/uploads/alakul.jpg`,
             width: 800,
             height: 600,
             alt: "Kel-Suu Lake"
@@ -103,24 +104,13 @@ export async function generateMetadata({
           app_name: "GuideBook of Kyrgyzstan"
         },
         web: {
-          url: `${process.env.NEXT_PUBLIC_URL}/articles`,
+          url: absoluteSiteUrl(`${lang}/articles`),
           should_fallback: true,
         }
       },
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/`,
-        languages: {
-            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/articles/`,
-            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/articles/`,
-            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/articles/`,
-            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/articles/`,
-            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/articles/`,
-            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/articles/`,
-            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/articles/`,
-            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/articles/`,
-            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/articles/`,
-            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/articles/`
-        }
+        canonical: `${siteUrl}/${lang}/articles/`,
+        languages: localizedPageAlternates("articles")
     },
   }
 }

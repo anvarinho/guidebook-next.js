@@ -9,6 +9,7 @@ import { isAuthenticatedAdmin } from "@/lib/auth"
 
 
 export const metadata = {
+  robots: { index: false, follow: false },
   title: 'Admin Dashboard',
   description: 'GuideBook of Kyrgyzstan',
 }

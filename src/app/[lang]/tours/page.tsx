@@ -1,3 +1,4 @@
+import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import React, { Suspense } from "react";
 import styles from './page.module.css'
 import { Metadata } from 'next'
@@ -85,11 +86,11 @@ export async function generateMetadata({
       openGraph: {
         title: page.tours.title,
         description: description,
-        url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/`,
+        url: `${siteUrl}/${lang}/tours/`,
         siteName: 'GuideBook of Kyrgyzstan',
         images: {
-            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
-            secureUrl: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            url: `${siteUrl}/uploads/kel-suu1.jpg`,
+            secureUrl: `${siteUrl}/uploads/kel-suu1.jpg`,
             width: 800,
             height: 600,
             alt: "Kel-Suu Lake",
@@ -106,7 +107,7 @@ export async function generateMetadata({
         creator: "@anvarinho",
         creatorId: "@anvarinho",
         images: {
-            url: `${process.env.NEXT_PUBLIC_URL}/uploads/kel-suu1.jpg`,
+            url: `${siteUrl}/uploads/kel-suu1.jpg`,
             width: 800,
             height: 600,
             alt: "Kel-Suu Lake"
@@ -124,24 +125,13 @@ export async function generateMetadata({
           app_name: "GuideBook of Kyrgyzstan"
         },
         web: {
-          url: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`,
+          url: `${siteUrl}/${lang}/tours`,
           should_fallback: true,
         }
       },
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_URL}/${lang}/tours/`,
-        languages: {
-            "en-US": `${process.env.NEXT_PUBLIC_URL}/en/tours/`,
-            "fr-FR": `${process.env.NEXT_PUBLIC_URL}/fr/tours/`,
-            "de-DE": `${process.env.NEXT_PUBLIC_URL}/de/tours/`,
-            "es-ES": `${process.env.NEXT_PUBLIC_URL}/es/tours/`,
-            "ru-RU": `${process.env.NEXT_PUBLIC_URL}/ru/tours/`,
-            "it-IT": `${process.env.NEXT_PUBLIC_URL}/it/tours/`,
-            "ja-JP": `${process.env.NEXT_PUBLIC_URL}/jp/tours/`,
-            "ko-KR": `${process.env.NEXT_PUBLIC_URL}/kr/tours/`,
-            "ar-AE": `${process.env.NEXT_PUBLIC_URL}/ae/tours/`,
-            "zh-CN": `${process.env.NEXT_PUBLIC_URL}/cn/tours/`
-        }
+        canonical: `${siteUrl}/${lang}/tours/`,
+        languages: localizedPageAlternates("tours")
     },
   }
 }

@@ -1,6 +1,7 @@
+import { unstable_cache } from "next/cache"
 import { getPlaiceholder } from "plaiceholder"
 
-export default async function getBase64(imageUrl: string) {
+async function createBase64(imageUrl: string) {
     try {
         const res = await fetch(imageUrl)
 
@@ -20,3 +21,6 @@ export default async function getBase64(imageUrl: string) {
         if (e instanceof Error) console.log(e.stack)
     }
 }
+
+// Cache the generated placeholder as well as the fetch; image decoding is expensive.
+export default unstable_cache(createBase64, ["image-placeholder-v1"], { revalidate: 86400 });

@@ -2,7 +2,7 @@ import type { Locale } from "@/lib/i18n.config";
 
 export const siteUrl = (process.env.NEXT_PUBLIC_URL || "https://central-asia.live").replace(/\/+$/, "");
 
-const hreflangByLocale: Record<Locale, string> = {
+export const hreflangByLocale: Record<Locale, string> = {
   en: "en-US",
   fr: "fr-FR",
   de: "de-DE",
@@ -21,15 +21,16 @@ export function absoluteSiteUrl(path: string): string {
 }
 
 export function localizedAlternates(section: "places" | "tours" | "articles", slug: string) {
-  const languages = Object.fromEntries(
-    Object.entries(hreflangByLocale).map(([locale, language]) => [
-      language,
-      absoluteSiteUrl(`${locale}/${section}/${encodeURIComponent(slug)}`),
-    ]),
-  );
+  return localizedPageAlternates(`${section}/${encodeURIComponent(slug)}`);
+}
+
+export function localizedPageAlternates(path = "") {
+  const suffix = path ? `/${path.replace(/^\/+|\/+$/g, "")}` : "";
   return {
-    ...languages,
-    "x-default": absoluteSiteUrl(`en/${section}/${encodeURIComponent(slug)}`),
+    ...Object.fromEntries(Object.entries(hreflangByLocale).map(([locale, language]) => [
+      language, absoluteSiteUrl(`${locale}${suffix}`),
+    ])),
+    "x-default": absoluteSiteUrl(`en${suffix}`),
   };
 }
 

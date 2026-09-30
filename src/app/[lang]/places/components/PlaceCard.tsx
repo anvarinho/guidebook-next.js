@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+import WeatherIcon from '../../Components/weather/WeatherIcon';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
@@ -38,7 +39,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
         {featured && <span className={styles.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
         {place.weather?.temp && (
           <span className={styles.weather}>
-            <Image src={`/${place.weather.icon}.png`} alt="" width={28} height={28} />
+            <WeatherIcon icon={place.weather.icon} size={28} />
             <span>{parseInt(place.weather.temp)}°C</span>
           </span>
         )}

@@ -1,0 +1,132 @@
+{
+  "/manas/almambet.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/almambet-480.webp 480w, /manas/almambet.webp 640w"
+  },
+  "/manas/bakai.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/bakai-480.webp 480w, /manas/bakai.webp 640w"
+  },
+  "/manas/chubak.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/chubak-480.webp 480w, /manas/chubak.webp 640w"
+  },
+  "/manas/comic-aftermath.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/comic-aftermath-480.webp 480w, /manas/comic-aftermath.webp 960w"
+  },
+  "/manas/comic-challenge.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/comic-challenge-480.webp 480w, /manas/comic-challenge.webp 960w"
+  },
+  "/manas/comic-clash.webp": {
+    "width": 960,
+    "height": 384,
+    "srcSet": "/manas/comic-clash-480.webp 480w, /manas/comic-clash.webp 960w"
+  },
+  "/manas/comic-feast.webp": {
+    "width": 960,
+    "height": 384,
+    "srcSet": "/manas/comic-feast-480.webp 480w, /manas/comic-feast.webp 960w"
+  },
+  "/manas/emblem.jpg": {
+    "width": 225,
+    "height": 225,
+    "srcSet": "/manas/emblem.jpg 225w"
+  },
+  "/manas/flight-crossing.webp": {
+    "width": 960,
+    "height": 480,
+    "srcSet": "/manas/flight-crossing-480.webp 480w, /manas/flight-crossing.webp 960w"
+  },
+  "/manas/flight-departure.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/flight-departure-480.webp 480w, /manas/flight-departure.webp 960w"
+  },
+  "/manas/flight-guardian.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/flight-guardian-480.webp 480w, /manas/flight-guardian.webp 960w"
+  },
+  "/manas/flight-reunion.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/flight-reunion-480.webp 480w, /manas/flight-reunion.webp 960w"
+  },
+  "/manas/hero-army.webp": {
+    "width": 1983,
+    "height": 793,
+    "srcSet": "/manas/hero-army.webp 1983w"
+  },
+  "/manas/hero-background.webp": {
+    "width": 1983,
+    "height": 793,
+    "srcSet": "/manas/hero-background.webp 1983w"
+  },
+  "/manas/hero-manas.webp": {
+    "width": 1983,
+    "height": 793,
+    "srcSet": "/manas/hero-manas.webp 1983w"
+  },
+  "/manas/kanykey.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/kanykey-480.webp 480w, /manas/kanykey.webp 640w"
+  },
+  "/manas/koshoy-blessing.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/koshoy-blessing-480.webp 480w, /manas/koshoy-blessing.webp 960w"
+  },
+  "/manas/koshoy-challenge.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/koshoy-challenge-480.webp 480w, /manas/koshoy-challenge.webp 960w"
+  },
+  "/manas/koshoy-kandagai.webp": {
+    "width": 960,
+    "height": 720,
+    "srcSet": "/manas/koshoy-kandagai-480.webp 480w, /manas/koshoy-kandagai.webp 960w"
+  },
+  "/manas/koshoy-victory.webp": {
+    "width": 960,
+    "height": 480,
+    "srcSet": "/manas/koshoy-victory-480.webp 480w, /manas/koshoy-victory.webp 960w"
+  },
+  "/manas/manas-hero.jpg": {
+    "width": 1200,
+    "height": 480,
+    "srcSet": "/manas/manas-hero-480.webp 480w, /manas/manas-hero.jpg 1200w"
+  },
+  "/manas/manaschi.jpg": {
+    "width": 800,
+    "height": 800,
+    "srcSet": "/manas/manaschi-480.webp 480w, /manas/manaschi.jpg 800w"
+  },
+  "/manas/origin.jpg": {
+    "width": 1024,
+    "height": 683,
+    "srcSet": "/manas/origin-480.webp 480w, /manas/origin.jpg 1024w"
+  },
+  "/manas/semetey.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/semetey-480.webp 480w, /manas/semetey.webp 640w"
+  },
+  "/manas/seytek.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/seytek-480.webp 480w, /manas/seytek.webp 640w"
+  },
+  "/manas/syrgak.webp": {
+    "width": 640,
+    "height": 800,
+    "srcSet": "/manas/syrgak-480.webp 480w, /manas/syrgak.webp 640w"
+  }
+}
