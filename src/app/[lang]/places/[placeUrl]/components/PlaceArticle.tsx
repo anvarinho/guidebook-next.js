@@ -68,7 +68,7 @@ export default async function PlaceArticle({ promise, lang }: {
         </div>
         <aside className={styles.locationSidebar} aria-label={`Google Maps — ${place.name}`}>
           <Suspense fallback={null}>
-            <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather} location={place.location}/>
+            <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather}/>
           </Suspense>
           <section className={styles.locationCard}>
             <PlacesReveal className={styles.locationHeading}>
