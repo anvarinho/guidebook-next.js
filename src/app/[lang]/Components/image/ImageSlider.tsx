@@ -23,11 +23,11 @@ const ImageSlider: React.FC<{ items: [String], priority: boolean }> = ({ items, 
 
     useEffect(() => {
         const interval = setInterval(() => {
-            changeSlide(1);
+            setIndex(current => current >= items.length ? 1 : current + 1);
         }, 5000); // Change slide every 5 seconds
 
         return () => clearInterval(interval);
-    }, [index]);
+    }, [items.length]);
 
     return (
         <div className={styles.slider_wrapper}>
@@ -35,7 +35,7 @@ const ImageSlider: React.FC<{ items: [String], priority: boolean }> = ({ items, 
                 <div className={styles.slider_items}>
                     {items.map((image, idx) => (
                         <picture key={idx} className={`${styles.slider_item} ${idx + 1 === index ? styles.active : ''}`}>
-                            <Image fill src={baseUrl + image} alt={`${image}`} objectFit="cover" title={`${image}`}
+                            <Image fill src={baseUrl + image} alt={`${image}`} sizes="(max-width: 991px) 100vw, 900px" style={{ objectFit: "cover" }} title={`${image}`}
                              priority={idx == 0 && priority ? true : false}
                              loading={idx == 0 && priority ? 'eager' : 'lazy'}
                              />

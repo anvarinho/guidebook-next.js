@@ -12,7 +12,7 @@ import "./intro-content.css";
 
 export default function Intro({ messages: t, language, locale, links }: {
   messages: IntroMessages; language: string; locale: Locale;
-  links: { label: string; href: string; image: string }[];
+  links: { label: string; href: string }[];
 }) {
   const introRef = useRef<HTMLDivElement>(null);
   useIntroAnimations(introRef, t);
@@ -527,15 +527,10 @@ export default function Intro({ messages: t, language, locale, links }: {
             <span className="cta-kicker reveal">{t.ctaKicker}</span>
             <h2 className="reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.ctaTitleFirst}<br />{t.ctaTitleSecond}</h2>
             <p className="lead reveal" style={{ "--d": "0.1s" } as CSSProperties}>{t.ctaDescription}</p>
-            <div className="home-portals">
-              {links.map((link, index) => <Link href={link.href} className="home-portal reveal" key={link.href} style={{ "--d": `${index * .06}s` } as CSSProperties}>
-                <div className="portal-image"><img src={link.image} alt="" width="640" height="427" loading="lazy" decoding="async" /></div>
-                <div className="portal-caption"><span>{link.label}</span><span className="home-arrow" aria-hidden="true">↗</span></div>
-              </Link>)}
-            </div>
-            <a className="cta-btn reveal" style={{ "--d": "0.2s" } as CSSProperties} href="#top"
-            >{t.ctaButton}</a
-            >
+            <Link href={`/${locale}/tours`} className="home-tours-link reveal" style={{ "--d": "0.2s" } as CSSProperties}>
+              <span>{links[1].label}</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
+            </Link>
           </div>
         </section>
       </div>

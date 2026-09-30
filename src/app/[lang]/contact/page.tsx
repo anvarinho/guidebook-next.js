@@ -1,3 +1,4 @@
+import { localizedPageAlternates } from "@/lib/seo";
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n.config'
@@ -21,5 +22,5 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const { page } = await getDictionary(lang)
-  return { title: page.about.buttons.contact_us, description: contactCopy[lang].intro, alternates: { canonical: `/${lang}/contact` } }
+  return { title: page.about.buttons.contact_us, description: contactCopy[lang].intro, alternates: { canonical: `/${lang}/contact`, languages: localizedPageAlternates("contact") } }
 }

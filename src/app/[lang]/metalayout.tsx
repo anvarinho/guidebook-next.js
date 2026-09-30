@@ -1,3 +1,4 @@
+import { absoluteSiteUrl, safeJsonLd } from "@/lib/seo";
 import { Locale } from "@/lib/i18n.config";
 
 interface Props {
@@ -9,12 +10,12 @@ const Meta: React.FC<Props> = ({ lang }) => {
         "@context" : "https://schema.org",
         "@type" : "WebSite",
         "name" : "GuideBook of Kyrgyzstan",
-        "url": `${process.env.NEXT_PUBLIC_URL}/${lang}`,
+        "url": absoluteSiteUrl(lang),
     }  
     return (
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }}
       />
     );
   };

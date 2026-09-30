@@ -1,3 +1,4 @@
+import { siteUrl } from "@/lib/seo";
 import './globals.css'
 import type { Metadata } from 'next'
 import { Bai_Jamjuree, Exo_2 } from 'next/font/google'
@@ -39,9 +40,10 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <Meta lang={params.lang}/>
       </head>
-      <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
+
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
       <body className={params.lang === 'ru' ? russianfont.className : font.className}>
+        {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
           navbar={<Navbar lang={params.lang}/>}
           footer={<FooterVisibility><Footer lang={params.lang}/></FooterVisibility>}
@@ -59,7 +61,7 @@ export default async function RootLayout({
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://central-asia.live"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "GuideBook of Kyrgyzstan",
     template: `%s | GuideBook of Kyrgyzstan`
@@ -69,15 +71,16 @@ export const metadata: Metadata = {
   description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
   keywords: "Kyrgyzstan travel guide, Central Asia tourism, Bishkek city attractions, Issyk-Kul Lake, Tien Shan mountains, Silk Road history, Karakol trekking routes, Nomadic culture, Ala Archa National Park, Osh bazaar, Cultural festivals, Burana Tower, Kyrgyz cuisine, Son-Kul Lake, Sary-Chelek Nature Reserve, Historical sites, Petroglyphs, Kyrgyz yurts, Horseback riding tours, Pamir Highway, Arslanbob walnut forests, Kyrgyz handicrafts, Nomadic yurt stays, Song Kol horse trek, Sary-Mogol village, Tash Rabat caravanserai, Jyrgalan Valley, Sulaiman-Too Sacred Mountain, Kyrgyz art and music, Cultural etiquette in Kyrgyzstan",
   category: 'Travel',
+  robots: { index: true, follow: true, 'max-image-preview': 'large' },
   openGraph: {
     siteName:"GuideBook of Kyrgyzstan",
     title: "Welcome to Kyrgyzstan! | GuideBook of Kyrgyzstan",
     description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
-    url: `${process.env.NEXT_PUBLIC_URL}/en/`,
+    url: `${siteUrl}/en/`,
     type: "website",
     images:{
-      url: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
-      secureUrl: `${process.env.NEXT_PUBLIC_URL}/karakolcablelift.jpg`,
+      url: `${siteUrl}/karakolcablelift.jpg`,
+      secureUrl: `${siteUrl}/karakolcablelift.jpg`,
       width: 800,
       height: 600,
       alt: "Karakol Cable Lift",
@@ -109,7 +112,7 @@ export const metadata: Metadata = {
     title: "Welcome to Kyrgyzstan!",
     description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
     images:{
-      url: `${process.env.NEXT_PUBLIC_URL}/uploads/bozteri.jpg`,
+      url: `${siteUrl}/uploads/bozteri.jpg`,
       width: 800,
       height: 600,
       alt: "Karakol Cable Lift"

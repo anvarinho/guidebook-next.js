@@ -4,7 +4,7 @@ import { formatMessage as format } from "./translations/format";
  * Progressive enhancement for the converted Manas artwork and readers.
  * Queries stay inside the route; all browser resources are released on navigation.
  * @param {HTMLDivElement} root
- * @param {import("./translations").ManasMessages} t
+ * @param {import("./interactive-messages").InteractiveMessages} t
  * @returns {() => void}
  */
 export function initializeManas(root, t) {
@@ -70,7 +70,7 @@ export function initializeManas(root, t) {
     }
     const people = { almambet: { name: t.s038, role: t.s039, kyrgyz: 'Алмамбет', story: t.s260 }, chubak: { name: t.s042, role: t.s043, kyrgyz: 'Чубак', story: t.s261 }, syrgak: { name: t.s046, role: t.s047, kyrgyz: 'Сыргак', story: t.s262 }, bakai: { name: t.s050, role: t.s051, kyrgyz: 'Бакай', story: t.s263 } };
     const personDialog = root.querySelector('#person-dialog');
-    root.querySelectorAll('[data-person]').forEach(button => listen(button, 'click', () => { const person = people[button.dataset.person]; const portrait = button.querySelector('.card-portrait img'); const dialogPortrait = root.querySelector('#person-portrait'); dialogPortrait.src = portrait.currentSrc || portrait.src; dialogPortrait.alt = portrait.alt; root.querySelector('#person-title').textContent = person.name; root.querySelector('#person-role').textContent = person.role; root.querySelector('#person-story').textContent = person.story; root.querySelector('#person-kyrgyz').textContent = person.kyrgyz; personDialog.showModal(); }));
+    root.querySelectorAll('[data-person]').forEach(button => listen(button, 'click', () => { const person = people[button.dataset.person]; const portrait = button.querySelector('.card-portrait img'); const dialogPortrait = root.querySelector('#person-portrait'); dialogPortrait.src = portrait.src; dialogPortrait.alt = portrait.alt; root.querySelector('#person-title').textContent = person.name; root.querySelector('#person-role').textContent = person.role; root.querySelector('#person-story').textContent = person.story; root.querySelector('#person-kyrgyz').textContent = person.kyrgyz; personDialog.showModal(); }));
     const videoDialog = root.querySelector('#video-dialog');
     listen(root.querySelector('#listen'), 'click', () => { const iframe = document.createElement('iframe'); iframe.src = 'https://www.youtube-nocookie.com/embed/5C5OZC7kXo4?autoplay=1'; iframe.title = t.s264; iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; iframe.allowFullscreen = true; root.querySelector('#video-frame').replaceChildren(iframe); videoDialog.showModal(); });
     listen(videoDialog, 'close', () => root.querySelector('#video-frame').replaceChildren());
@@ -188,7 +188,7 @@ export function initializeManas(root, t) {
         const previousComicIndex = comicIndex;
         comicIndex = Math.max(0, Math.min(comicStories.length - 1, index));
         const story = comicStories[comicIndex], panel = comicPanels[comicIndex], source = panel.querySelector('img'), image = root.querySelector('#comic-reader-image');
-        image.src = source.currentSrc || source.src;
+        image.src = source.src;
         image.alt = source.alt;
         root.querySelector('#comic-reader-episode').textContent = activeComicEpisode.label;
         root.querySelector('.comic-reader-source').href = story.source || activeComicEpisode.source;
@@ -296,7 +296,9 @@ export function initializeManas(root, t) {
     let parallaxFrame = 0;
     function renderParallax() {
         parallaxFrame = 0;
+        if (manuallyPaused || reducedMotion.matches || document.hidden) return;
         const rect = hero.getBoundingClientRect();
+        if (rect.bottom <= 0 || rect.top >= window.innerHeight) return;
         const travel = Math.max(0, Math.min(hero.offsetHeight, -rect.top));
         const mobile = window.innerWidth <= 760;
         heroLayers.forEach((image, index) => {
@@ -318,6 +320,7 @@ export function initializeManas(root, t) {
         }
     }
     const requestParallax = () => {
+        if (manuallyPaused || reducedMotion.matches || document.hidden) return;
         targetScroll = window.scrollY;
         if (!parallaxFrame) {
             parallaxFrame = window.requestAnimationFrame(time => {

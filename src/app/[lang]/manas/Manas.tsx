@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import { initializeManas } from "./motion";
-import type { ManasMessages } from "./translations";
+import type { InteractiveMessages } from "./interactive-messages";
 
-export default function Manas({ children, messages, language }: {
-  children: ReactNode; messages: ManasMessages; language: string;
+export default function Manas({ children, messages, language, className = "" }: {
+  children: ReactNode; messages: InteractiveMessages; language: string; className?: string;
 }) {
   const root = useRef<HTMLDivElement>(null);
 
@@ -13,5 +13,5 @@ export default function Manas({ children, messages, language }: {
     if (root.current) return initializeManas(root.current, messages);
   }, [messages]);
 
-  return <div ref={root} className="manas-page" lang={language} dir={language === "ar" ? "rtl" : "ltr"}>{children}</div>;
+  return <div ref={root} className={`manas-page ${className}`} lang={language} dir={language === "ar" ? "rtl" : "ltr"}>{children}</div>;
 }
