@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Locale } from '@/lib/i18n.config';
 import getPlaceWeather from '@/lib/getPlaceWeather';
-import WeatherIcon, { weatherIconCode } from '../../../Components/weather/WeatherIcon';
+import WeatherIcon, { weatherIconCode, weatherAssetSource } from '../../../Components/weather/WeatherIcon';
 import styles from '../page.module.css';
 
 const labels: Record<Locale, string> = {
@@ -23,7 +23,7 @@ export default async function PlaceWeather({ url, lang, language, weather, locat
 
   return (
     <section className={styles.weatherPanel} aria-label={labels[lang]} data-night={icon.endsWith('n')}
-      data-condition={icon.slice(0, 2)} style={{ '--weather-art': `url("/weather/${icon}.svg")` } as CSSProperties}>
+      data-condition={icon.slice(0, 2)} style={{ '--weather-art': `url("${weatherAssetSource(icon)}")` } as CSSProperties}>
       <div className={styles.weatherHeading}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M9 14.5V5a3 3 0 0 1 6 0v9.5a5 5 0 1 1-6 0Z"/><path d="M12 8v9"/><circle cx="12" cy="18" r="1.5" fill="currentColor" stroke="none"/>
