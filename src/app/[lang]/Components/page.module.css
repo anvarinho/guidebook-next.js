@@ -590,6 +590,21 @@
     line-height: 1.5;
     text-transform: uppercase;
   }
+  .detailCenter {
+    position: fixed;
+    inset: 76px 0 0;
+    z-index: 900;
+    min-height: 0;
+    padding: 24px;
+    gap: 22px;
+    background: rgba(var(--background-end-rgb), .86);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .detailCenter .ring { width: 58px; height: 58px; border-width: 2px; }
+  .detailCenter .ring::before { inset: 7px; }
+  .detailCenter .ring::after { inset: 22px; box-shadow: 0 0 0 7px rgba(var(--main-active-color-rgb, 255, 101, 0), .1); }
+  .detailCenter .loadingText { font-size: 13px; }
   @media (prefers-reduced-motion: reduce) {
     .ring { animation: none; }
     :global([data-page="manas"]) .flags { transition: none; }

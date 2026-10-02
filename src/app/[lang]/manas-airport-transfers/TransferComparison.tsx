@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import { useTransferText } from "./TransferI18n";
 import { providers, destinations, vehicleNames, fareFor, contactHref, type ProviderId, type Destination, type Vehicle } from "./transfer-data";
 
@@ -20,7 +21,7 @@ export function ProviderPrice({ id, destination, vehicle }: TripProps & { id: Pr
 export function ComparisonTable({ ids, destination, vehicle, message }: TripProps & { ids: ProviderId[]; message: string }) {
   const t = useTransferText();
   return <table className="price-table" id="comparison-table">
-    <caption>{t("Manas Airport")} → {t(destinations[destination])} · {t(vehicleNames[vehicle])}</caption>
+    <caption>{t("Manas Airport")} <ArrowIcon direction="right"/> {t(destinations[destination])} · {t(vehicleNames[vehicle])}</caption>
     <thead><tr><th scope="col">{t("Compare")}</th>{ids.map(id => <th scope="col" key={id}>{providers[id].name}</th>)}</tr></thead>
     <tbody>
       <tr><th scope="row">{t("Starting fare")}</th>{ids.map(id => {

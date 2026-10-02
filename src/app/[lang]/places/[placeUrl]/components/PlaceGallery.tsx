@@ -1,4 +1,5 @@
 'use client';
+import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -52,9 +53,9 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
           placeholder={index === 0 && blurDataURL ? 'blur' : 'empty'} blurDataURL={index === 0 ? blurDataURL : undefined} />
         {images.length > 1 && <>
           <button type="button" className={`${styles.galleryControl} ${styles.previous}`}
-            onClick={() => move(-1)} aria-label={t[1]}><span aria-hidden="true">←</span></button>
+            onClick={() => move(-1)} aria-label={t[1]}><span aria-hidden="true"><ArrowIcon direction="left"/></span></button>
           <button type="button" className={`${styles.galleryControl} ${styles.next}`}
-            onClick={() => move(1)} aria-label={t[2]}><span aria-hidden="true">→</span></button>
+            onClick={() => move(1)} aria-label={t[2]}><span aria-hidden="true"><ArrowIcon direction="right"/></span></button>
           <span className={styles.galleryCounter} aria-live="polite" aria-atomic="true">
             {index + 1} / {images.length}
           </span>

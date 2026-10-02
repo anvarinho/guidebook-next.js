@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
 import { Metadata } from 'next'
 import { Locale } from '@/lib/i18n.config'
@@ -31,7 +32,7 @@ export default async function Home({
             <h1 className={styles.heading} id="about-title">{page.about.title}</h1>
             <p className={styles.lead}>{copy.intro}</p>
             <div className={styles.heroActions}>
-              <a href="#team" className={styles.primaryButton}>{page.about.buttons.our_team}<span aria-hidden="true">↘</span></a>
+              <a href="#team" className={styles.primaryButton}>{page.about.buttons.our_team}<span aria-hidden="true"><ArrowIcon direction="down-right"/></span></a>
               <Link href={`/${lang}/contact`} className={styles.secondaryButton}>{page.about.buttons.contact_us}</Link>
             </div>
           </PlacesReveal>
@@ -50,14 +51,14 @@ export default async function Home({
         </header>
         <section className={styles.story} aria-labelledby="story-heading">
           <PlacesReveal><p className={styles.eyebrow}>01 / {page.about.subtitle}</p><h2 id="story-heading">{copy.story}</h2></PlacesReveal>
-          <PlacesReveal order={1}><p className={styles.storyText}>{page.about.description}</p><a href="#clients" className={styles.textLink}>{page.about.buttons.our_clients}<span aria-hidden="true">↗</span></a></PlacesReveal>
+          <PlacesReveal order={1}><p className={styles.storyText}>{page.about.description}</p><a href="#clients" className={styles.textLink}>{page.about.buttons.our_clients}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a></PlacesReveal>
         </section>
         <section className={styles.explore} aria-labelledby="explore-heading">
           <PlacesReveal><h2 id="explore-heading">{copy.explore}</h2></PlacesReveal>
           <div className={styles.exploreGrid}>
             {copy.cards.map(([title, body], index) => <PlacesReveal key={destinations[index]} order={index} className={styles.exploreReveal}>
               <Link href={`/${lang}/${destinations[index]}`} className={styles.exploreCard}>
-                <span className={styles.cardTop}><span className={styles.cardNumber} aria-hidden="true">0{index + 1}</span><span className={styles.arrow} aria-hidden="true">↗</span></span>
+                <span className={styles.cardTop}><span className={styles.cardNumber} aria-hidden="true">0{index + 1}</span><span className={styles.arrow} aria-hidden="true"><ArrowIcon direction="up-right"/></span></span>
                 <h3>{title}</h3><p>{body}</p>
               </Link>
             </PlacesReveal>)}
@@ -72,7 +73,7 @@ export default async function Home({
           <ol className={styles.steps}>{copy.steps.map(([title, body], index) => <li key={title}><PlacesReveal order={index}><span className={styles.stepNumber} aria-hidden="true">0{index + 1}</span><h3>{title}</h3><p>{body}</p></PlacesReveal></li>)}</ol>
         </section>
         <PlacesReveal className={styles.invitation}>
-          <div className={styles.invitationCopy}><h2>{copy.invitation}</h2><p>{copy.invitationBody}</p><Link href={`/${lang}/contact`} className={styles.primaryButton}>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link></div>
+          <div className={styles.invitationCopy}><h2>{copy.invitation}</h2><p>{copy.invitationBody}</p><Link href={`/${lang}/contact`} className={styles.primaryButton}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link></div>
           <div className={styles.invitationArt} aria-hidden="true"><span/><span/><span/></div>
         </PlacesReveal>
       </div>

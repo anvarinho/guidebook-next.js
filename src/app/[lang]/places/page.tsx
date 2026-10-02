@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import { Suspense } from "react";
 import getPlacesWithWeather from "@/lib/getPlacesWithWeather";
@@ -31,7 +32,7 @@ export default async function Places({
               </PlacesReveal>
               <PlacesReveal className={styles.introAside} order={1}>
                 <p className={styles.description} data-reveal-copy>{page.sights.description}</p>
-                <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true">↓</span></a>
+                <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
               </PlacesReveal>
             </header>
             <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
@@ -42,7 +43,7 @@ export default async function Places({
             <PlacesReveal className={styles.collectionHeading}>
               <h2 data-reveal-copy>{page.sights.sights}</h2>
               <span className={styles.collectionLine} aria-hidden="true"/>
-              <span aria-hidden="true">↙</span>
+              <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
             </PlacesReveal>
             <div className={styles.placesDiv}>
               <div className={styles.placesList}>
@@ -57,7 +58,7 @@ export default async function Places({
             </div>
             <PlacesReveal className={styles.contactPanel}>
               <div><h2 data-reveal-copy>{aboutContent[lang].invitation}</h2><p data-reveal-copy>{aboutContent[lang].invitationBody}</p></div>
-              <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link>
+              <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
             </PlacesReveal>
         </div>
     )

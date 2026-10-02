@@ -1,4 +1,5 @@
 'use client'
+import ArrowIcon from '@/components/ArrowIcon';
 
 import styles from './clients.module.css'
 import { Locale } from '@/lib/i18n.config'
@@ -53,12 +54,12 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
         <header className={styles.header}>
           <div><p className={styles.eyebrow}>03 / {copy.reviews}</p><h2 id="reviews-heading">{copy.reviews}</h2></div>
           {reviews.length > showItems && <div className={styles.controls}>
-            <button type="button" aria-label={copy.previous} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index - showItems + reviews.length) % reviews.length)}><span aria-hidden="true">←</span></button>
-            <button type="button" aria-label={copy.next} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index + showItems) % reviews.length)}><span aria-hidden="true">→</span></button>
+            <button type="button" aria-label={copy.previous} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index - showItems + reviews.length) % reviews.length)}><span aria-hidden="true"><ArrowIcon direction="left"/></span></button>
+            <button type="button" aria-label={copy.next} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index + showItems) % reviews.length)}><span aria-hidden="true"><ArrowIcon direction="right"/></span></button>
           </div>}
         </header>
         <div className={styles.testimonials_container} id="review-cards" aria-busy={loading}>
-          {loading ? <p className={styles.status} role="status">{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> ↗</span></Link> : visibleReviews.map((review, slot) => (
+          {loading ? <p className={styles.status} role="status">{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> <ArrowIcon direction="up-right"/></span></Link> : visibleReviews.map((review, slot) => (
             <figure className={styles.testimonial_card} key={`${review._id}-${slot}`}>
               <span className={styles.quote} aria-hidden="true">“</span>
               <blockquote tabIndex={0} className={styles.reviewText} dir="auto"><p>{review.review}</p></blockquote>

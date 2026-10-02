@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import styles from '../page.module.css';
 import { Suspense } from 'react';
 import { getPlacesByURLs, getPlacesByRegion } from '@/lib/getAllPlaces';
@@ -10,6 +11,7 @@ import PlaceGallery from './PlaceGallery';
 import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
 import { PlacesReveal } from '../../components/PlacesMotion';
+import getBase64 from '@/lib/getLocalBase64';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
@@ -18,9 +20,10 @@ export default async function PlaceArticle({ promise, lang }: {
 }) {
   const { page } = await getDictionary(lang);
   const place = await promise;
-  const [regionResults, sightResults] = await Promise.all([
+  const [regionResults, sightResults, blurDataURL] = await Promise.all([
     getPlacesByRegion(lang, place.region, place.url),
     place.sights?.length ? getPlacesByURLs(lang, place.sights) : Promise.resolve([]),
+    place.images?.[0] ? getBase64(`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`) : Promise.resolve(undefined),
   ]);
   const places: Place[] = regionResults ?? [];
   const sights: Place[] = sightResults ?? [];
@@ -34,7 +37,7 @@ export default async function PlaceArticle({ promise, lang }: {
   return (
     <article data-place-page className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
       <nav className={styles.breadcrumb} aria-label={page.sights.name}>
-        <Link href={`/${lang}/places`}><span aria-hidden="true">←</span> {page.sights.name}</Link>
+        <Link href={`/${lang}/places`}><span aria-hidden="true"><ArrowIcon direction="left"/></span> {page.sights.name}</Link>
         <span aria-hidden="true">/</span>
         <span>{place.region}</span>
       </nav>
@@ -50,7 +53,7 @@ export default async function PlaceArticle({ promise, lang }: {
         </PlacesReveal>
       </header>
       <PlacesReveal>
-        <PlaceGallery images={place.images} name={place.name} lang={lang}/>
+        <PlaceGallery images={place.images} name={place.name} lang={lang} blurDataURL={blurDataURL}/>
       </PlacesReveal>
 
       <div className={styles.articleLayout}>
@@ -59,7 +62,7 @@ export default async function PlaceArticle({ promise, lang }: {
           {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
             <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
               {transferMessages.s217.replace('{destination}', transferMessages[transferGuide.labelKey])}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true"><ArrowIcon direction="up-right"/></span>
             </Link>
           </p>}
           {place.videoID && <div className={styles.video}>

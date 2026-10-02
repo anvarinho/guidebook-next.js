@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
 import { Metadata } from 'next'
 import { Locale } from '@/lib/i18n.config'
@@ -28,11 +29,11 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   return (
     <div className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
       <Meta lang={lang} article={article} page={page}/>
-      <Suspense fallback={<LoadingSpinner text={"page.loading"}/>}>
+      <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
         <header className={styles.articleHeader}>
           <PlacesReveal className={styles.headerCopy}>
             <a href={`/${lang}/articles`} className={styles.breadcrumb}>
-              <span aria-hidden="true">{lang === 'ae' ? '→' : '←'}</span>{page.articles.name}
+              <span aria-hidden="true"><ArrowIcon direction={lang === 'ae' ? 'right' : 'left'}/></span>{page.articles.name}
             </a>
             <p className={shared.eyebrow}>{page.articles.name}</p>
             <h1>{article.title}</h1>

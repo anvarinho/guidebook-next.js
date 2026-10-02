@@ -10,6 +10,9 @@
    margin-top: 2.5rem;
 }
 
+.main:has([data-service-state]) > footer { display: none; }
+.main:has([data-service-state]) > .section > [data-flag-sun] { display: none; }
+
 
 
 .section {
