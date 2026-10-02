@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import styles from './footer.module.css'
 import Image from 'next/image'
 import { Locale } from '@/lib/i18n.config'
@@ -80,7 +81,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
         <div className={styles.bottom}>
           <p><bdi>© {currentYear} GuideBook of Kyrgyzstan</bdi></p>
-          <Link href={`/${lang}/contact`} className={styles.contactLink}>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link>
+          <Link href={`/${lang}/contact`} className={styles.contactLink}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
         </div>
       </div>
     </footer>

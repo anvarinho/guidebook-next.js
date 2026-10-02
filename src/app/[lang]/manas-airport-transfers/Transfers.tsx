@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element, react/no-unescaped-entities */
 "use client";
+import ArrowIcon from '@/components/ArrowIcon';
+
 
 import { useRouter } from "next/navigation";
 import { useTransferText } from "./TransferI18n";
@@ -478,7 +480,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
             <PlacesReveal className="hero-visual" order={1}>
               <img src="/manas-airport-transfers/airport-pickup.webp" srcSet="                   /manas-airport-transfers/airport-pickup-640.webp  640w,                   /manas-airport-transfers/airport-pickup.webp     1280w                 " sizes="(max-width: 600px) calc(100vw - 36px), 580px" width="1280" height="853" alt={t("s99")} fetchPriority="high" />
               <div className="photo-shade"></div>
-              <div className="hero-photo-caption"><span className="photo-icon"><svg className="icon" aria-hidden="true"><use href="#plane" /></svg></span><div><span>{t("Airport transfers")}</span><strong>{t("Manas Airport")}</strong></div><span className="photo-arrow" aria-hidden="true">↗</span></div>
+              <div className="hero-photo-caption"><span className="photo-icon"><svg className="icon" aria-hidden="true"><use href="#plane" /></svg></span><div><span>{t("Airport transfers")}</span><strong>{t("Manas Airport")}</strong></div><span className="photo-arrow" aria-hidden="true"><ArrowIcon direction="up-right"/></span></div>
               <span className="photo-credit">{t("AI-generated travel illustration")}</span>
             </PlacesReveal>
           </div>

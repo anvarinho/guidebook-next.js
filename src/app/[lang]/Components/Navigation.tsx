@@ -1,4 +1,5 @@
 'use client'
+import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
@@ -95,10 +96,10 @@ export default function Navigation({ lang, name, links, contactLabel }: {
           <ul className={styles.links}>
             {links.map(link => {
               const active = currentPath === link.url || (link.url !== '/' && currentPath.startsWith(`${link.url}/`))
-              return <li key={link.url}><Link href={`/${lang}${link.url}`} className={styles.navLink} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}><span>{link.text}</span><span className={styles.mobileArrow} aria-hidden="true">↗</span></Link></li>
+              return <li key={link.url}><Link href={`/${lang}${link.url}`} className={styles.navLink} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}><span>{link.text}</span><span className={styles.mobileArrow} aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link></li>
             })}
           </ul>
-          <Link href={`/${lang}/contact`} className={styles.contact} aria-current={currentPath === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>{contactLabel}<span aria-hidden="true">↗</span></Link>
+          <Link href={`/${lang}/contact`} className={styles.contact} aria-current={currentPath === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>{contactLabel}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
         </nav>
       </div>
     </header>

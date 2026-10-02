@@ -24,7 +24,7 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
 
     if (!data) notFound()
     return (
-            <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
+            <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
                 {/* <JsonLD data={metaData} /> */}
                 <Meta lang={lang} place={data} page={page}/>
                 <PlaceArticle promise={placeData} lang={lang}/>

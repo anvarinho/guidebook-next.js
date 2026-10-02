@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import ArrowIcon from '@/components/ArrowIcon';
+
 
 import { useRef, type CSSProperties } from "react";
 import { useIntroAnimations } from "./useIntroAnimations";
@@ -352,7 +354,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 ><span>{t.manasMemory}</span>
               </div>
               <Link href={`/${locale}/manas`} className="manas-read-more reveal" style={{ "--d": "0.4s" } as CSSProperties}>
-                {t.manasReadMore} <span aria-hidden="true">↗</span>
+                {t.manasReadMore} <span aria-hidden="true"><ArrowIcon direction="up-right"/></span>
               </Link>
             </div>
           </div>

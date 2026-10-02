@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import styles from './articles.module.css';
 import shared from '../places/page.module.css';
@@ -26,7 +27,7 @@ export default async function Articles({ params: { lang } }: { params: { lang: L
         </PlacesReveal>
         <PlacesReveal className={shared.introAside} order={1}>
           <p className={shared.description}>{page.articles.description}</p>
-          <a href="#articles" className={shared.exploreLink}>{page.articles.name}<span aria-hidden="true">↓</span></a>
+          <a href="#articles" className={shared.exploreLink}>{page.articles.name}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
         </PlacesReveal>
       </header>
       <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
@@ -37,7 +38,7 @@ export default async function Articles({ params: { lang } }: { params: { lang: L
           {articles.length > 3 && <PlacesReveal className={shared.collectionHeading}>
             <h2>{page.articles.name}</h2>
             <span className={shared.collectionLine} aria-hidden="true"/>
-            <span aria-hidden="true">↙</span>
+            <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
           </PlacesReveal>}
           <div className={shared.placesList}>
             {articles.slice(featured ? 3 : 0).map((article, i) => <ArticleListItem key={article._id} article={article} lang={lang} order={i}/>)}

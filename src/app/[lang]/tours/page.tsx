@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import React, { Suspense } from "react";
 import styles from './page.module.css'
@@ -32,7 +33,7 @@ export default async function Tours({
           </PlacesReveal>
           <PlacesReveal className={shared.introAside} order={1}>
             <p className={shared.description}>{page.tours.description}</p>
-            <a href="#tours" className={shared.exploreLink}>{page.tours.name}<span aria-hidden="true">↓</span></a>
+            <a href="#tours" className={shared.exploreLink}>{page.tours.name}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
           </PlacesReveal>
         </header>
         <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
@@ -44,7 +45,7 @@ export default async function Tours({
               <PlacesReveal className={shared.collectionHeading}>
                 <h2>{page.tours.name}</h2>
                 <span className={shared.collectionLine} aria-hidden="true"/>
-                <span aria-hidden="true">↙</span>
+                <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
               </PlacesReveal>
               <div className={shared.placesList}>
                 {toursData.slice(3).map((tour, i) => <TourListItem key={tour._id} tour={tour} lang={lang} order={i}/>)}
@@ -62,7 +63,7 @@ export default async function Tours({
         </section>
         <PlacesReveal className={shared.contactPanel}>
           <div><h2>{aboutContent[lang].invitation}</h2><p>{aboutContent[lang].invitationBody}</p></div>
-          <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true">↗</span></Link>
+          <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
         </PlacesReveal>
       </div>
     )

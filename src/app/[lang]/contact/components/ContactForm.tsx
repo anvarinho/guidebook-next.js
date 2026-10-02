@@ -1,4 +1,5 @@
 'use client'
+import ArrowIcon from '@/components/ArrowIcon';
 
 import type { FormEvent } from 'react'
 import type { Locale } from '@/lib/i18n.config'
@@ -23,7 +24,7 @@ export default function ContactForm({ lang, email }: { lang: Locale; email: stri
       </div>
       <label>{copy.message}<textarea name="message" rows={5} required maxLength={4000}/></label>
       <p className={styles.hint} id="contact-email-hint">{copy.hint}</p>
-      <button type="submit" className={styles.submit} aria-describedby="contact-email-hint">{copy.send}<span aria-hidden="true">↗</span></button>
+      <button type="submit" className={styles.submit} aria-describedby="contact-email-hint">{copy.send}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></button>
     </form>
   )
 }

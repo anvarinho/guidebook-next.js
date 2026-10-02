@@ -1,0 +1,26 @@
+# GuideBook of Kyrgyzstan
+
+> A multilingual travel guide to Kyrgyzstan featuring destination information, travel articles, curated tours, airport transfer comparisons, and cultural guides.
+
+GuideBook of Kyrgyzstan helps travelers discover places, plan trips, and learn about the country's culture. The site is available in English, French, German, Italian, Spanish, Russian, Arabic, Chinese, Japanese, and Korean.
+
+## Start here
+
+- [Home](https://central-asia.live/en): Main guide and overview of Kyrgyzstan.
+- [Places](https://central-asia.live/en/places): Destination guides for cities, nature, and cultural sites.
+- [Tours](https://central-asia.live/en/tours): Curated tours and itineraries.
+- [Articles](https://central-asia.live/en/articles): Travel advice, destination stories, and practical guides.
+- [About](https://central-asia.live/en/about): About the GuideBook team and project.
+- [Contact](https://central-asia.live/en/contact): Contact information and enquiries.
+
+## Travel planning
+
+- [Manas Airport transfers](https://central-asia.live/en/manas-airport-transfers): Compare transfer providers and options for travel from Manas International Airport.
+- [Manas epic](https://central-asia.live/en/manas): Explore the Kyrgyz epic of Manas and its cultural history.
+
+## Site discovery
+
+- [Sitemap](https://central-asia.live/sitemap.xml): Canonical public pages, destination guides, articles, tours, and language alternates.
+- [Robots rules](https://central-asia.live/robots.txt): Crawler access rules for the public site.
+
+Place, tour, and article detail pages are linked from their respective index pages and the sitemap. Use each page's canonical URL when referencing information. Transfer provider details and travel conditions can change; verify current details with the linked provider or official source before travel.

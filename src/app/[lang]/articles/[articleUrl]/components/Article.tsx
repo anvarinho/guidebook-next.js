@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import styles from '../page.module.css'
 // import Link from "next/link";
 import getBase64 from "@/lib/getLocalBase64"
@@ -47,7 +48,7 @@ export default async function Article({ article, lang }: Props) {
             <PlacesReveal className={styles.asideInner}>
               <p className={styles.asideLabel}>{page.articles.name}</p>
               <p className={styles.asideText}>{article.title}</p>
-              <a href="#article-end" className={styles.asideLink}>↓ <span>{page.info.seen}{article.viewCount}</span></a>
+              <a href="#article-end" className={styles.asideLink}><ArrowIcon direction="down"/> <span>{page.info.seen}{article.viewCount}</span></a>
             </PlacesReveal>
           </aside>
         </div>

@@ -1,3 +1,4 @@
+import ArrowIcon from '@/components/ArrowIcon';
 import { Locale } from "@/lib/i18n.config";
 import getTour from "@/lib/getTour";
 import styles from "./page.module.css";
@@ -35,7 +36,7 @@ export default async function Tour({ params: { tourUrl, lang } }: Params) {
         <header className={styles.header}>
           <PlacesReveal className={styles.heading}>
             <Link href={`/${lang}/tours`} className={styles.breadcrumb}>
-              <span aria-hidden="true">{lang === 'ae' ? '→' : '←'}</span>{page.tours.name}
+              <span aria-hidden="true"><ArrowIcon direction={lang === 'ae' ? 'right' : 'left'}/></span>{page.tours.name}
             </Link>
             <h1>{data.title}</h1>
           </PlacesReveal>
@@ -51,13 +52,13 @@ export default async function Tour({ params: { tourUrl, lang } }: Params) {
             </a>
           </PlacesReveal>
         </header>
-        <Suspense fallback={<LoadingSpinner text={page.loading} />}>
+        <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
           <PlacesReveal className={styles.heroGallery}>
             <TourGallery images={data.images} name={data.title} lang={lang} priority/>
           </PlacesReveal>
           <div className={styles.overview}>
             {transferMessages && <p className={styles.transferComparison}>
-              <Link href={`/${lang}/manas-airport-transfers`}>{transferMessages.s216} <span aria-hidden="true">↗</span></Link>
+              <Link href={`/${lang}/manas-airport-transfers`}>{transferMessages.s216} <span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
             </p>}
             <TourDescription description={data.description} lang={lang} />
           </div>

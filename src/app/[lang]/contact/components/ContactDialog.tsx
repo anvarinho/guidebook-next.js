@@ -1,4 +1,5 @@
 'use client'
+import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
@@ -73,9 +74,9 @@ export default function ContactDialog({ lang, title, phone, email, address }: { 
           <h2 id="contact-dialog-title">{title}</h2>
           <p id="contact-dialog-intro">{copy.intro}</p>
           <div className={styles.directLinks}>
-            <a href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><span aria-hidden="true">↗</span></a>
-            <a href={`tel:${phone.replace(/[^+\d]/g, '')}`}><bdi>{phone}</bdi><span aria-hidden="true">↗</span></a>
-            <a href={`mailto:${email}`}><bdi>{email}</bdi><span aria-hidden="true">↗</span></a>
+            <a href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a>
+            <a href={`tel:${phone.replace(/[^+\d]/g, '')}`}><bdi>{phone}</bdi><span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a>
+            <a href={`mailto:${email}`}><bdi>{email}</bdi><span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a>
           </div>
           <p className={styles.address}>{address}</p>
         </div>
