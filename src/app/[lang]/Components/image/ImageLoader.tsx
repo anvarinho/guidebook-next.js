@@ -1,3 +1,5 @@
+import getBase64 from '@/lib/getLocalBase64';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Image from "next/image";
 import styles from './imageSlider.module.css'
 
@@ -7,6 +9,7 @@ export default async function ImageLoader({ image, priority }: { image: String, 
     <div className={styles.slider}>
       <picture className={styles.active}>
           <Image
+            {...imagePlaceholder(getBase64(String(image)))}
             fill 
             src={baseUrl + image}
             alt={`${image}`}

@@ -1,0 +1,227 @@
+/* Locally hosted fonts keep compilation independent of Google Fonts. */
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:200;
+  font-display:swap;
+  src:url(/fonts/03937bfe6091b706-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:200;
+  font-display:swap;
+  src:url(/fonts/c92454cded8c6c76-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:200;
+  font-display:swap;
+  src:url(/fonts/0408c26e42871bfc-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:200;
+  font-display:swap;
+  src:url(/fonts/0260ff06fcf37a93-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+  src:url(/fonts/bd07166b4bfc61e8-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+  src:url(/fonts/cfcec813dc3a08e9-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+  src:url(/fonts/36fd679057d5a2c4-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+  src:url(/fonts/c7264a3a2106b0d0-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url(/fonts/2dd011bd4b4fc303-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url(/fonts/958a711b2e583ad1-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url(/fonts/c6a2710c82995c59-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url(/fonts/46fe284ea6b208dc-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url(/fonts/36eb08c333fd876e-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url(/fonts/d3d40dfafe168921-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url(/fonts/257a6a4ad8e88015-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url(/fonts/dcb7dbe335a6f155-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url(/fonts/346ee2e552632e34-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url(/fonts/18302be3738c81c5-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url(/fonts/f3bb21e89cf2f112-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url(/fonts/62f8ef394edf20f4-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url(/fonts/c746c9eb8f9978c2-s.woff2) format("woff2");
+  unicode-range:u+02d7,u+0303,u+0331,u+0e01-0e5b,u+200c-200d,u+25cc;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url(/fonts/2b72e4f74070c77f-s.woff2) format("woff2");
+  unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url(/fonts/87e817c59b3ec25d-s.woff2) format("woff2");
+  unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url(/fonts/b682ab4e94fdbfaf-s.p.woff2) format("woff2");
+  unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree Fallback";
+  src:local("Arial");
+  ascent-override:96.70%;
+  descent-override:24.18%;
+  line-gap-override:0.00%;
+  size-adjust:103.41%;
+}
+
+.font-bai-jamjuree { font-family: "Bai Jamjuree", "Bai Jamjuree Fallback", sans-serif; }

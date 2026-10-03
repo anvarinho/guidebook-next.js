@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_SC } from "next/font/google";
+import "../../cormorant-sc.css";
 import assets from "./assets.json";
 import Manas from "./Manas";
 import { interactiveMessages } from "./interactive-messages";
@@ -8,11 +8,6 @@ import { absoluteSiteUrl, localizedPageAlternates, safeJsonLd, hreflangByLocale 
 import type { Locale } from "@/lib/i18n.config";
 import { getManasMessages, manasLanguages } from "./translations";
 import "./manas.css";
-
-const panelFont = Cormorant_SC({
-  weight: "700", subsets: ["latin", "latin-ext", "cyrillic"],
-  variable: "--font-manas-panel", display: "swap", preload: false,
-});
 
 type PageProps = { params: { lang: Locale } };
 
@@ -43,7 +38,7 @@ export const viewport: Viewport = { themeColor: [
 
 export default async function ManasPage({ params }: PageProps) {
   const messages = await getManasMessages(params.lang);
-  return <Manas className={panelFont.variable} key={params.lang} messages={interactiveMessages(messages)} language={manasLanguages[params.lang]}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
+  return <Manas className="font-manas-panel" key={params.lang} messages={interactiveMessages(messages)} language={manasLanguages[params.lang]}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
     "@context": "https://schema.org", "@type": "WebPage",
     name: messages.metaTitle, description: messages.metaDescription,
     url: absoluteSiteUrl(`${params.lang}/manas`), inLanguage: manasLanguages[params.lang],

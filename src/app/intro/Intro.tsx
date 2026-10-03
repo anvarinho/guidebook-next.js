@@ -12,15 +12,17 @@ import type { IntroMessages } from "./translations";
 import "./intro.css";
 import "./intro-content.css";
 
-export default function Intro({ messages: t, language, locale, links }: {
+export default function Intro({ messages: t, language, locale, links, heroBlurDataURL }: {
   messages: IntroMessages; language: string; locale: Locale;
   links: { label: string; href: string }[];
+  heroBlurDataURL?: string;
 }) {
   const introRef = useRef<HTMLDivElement>(null);
   useIntroAnimations(introRef, t);
 
   return (
-    <div ref={introRef} className="kyrgyz-intro home-refresh" lang={language} dir={language === "ar" ? "rtl" : "ltr"}>
+    <div ref={introRef} className="kyrgyz-intro home-refresh" lang={language} dir={language === "ar" ? "rtl" : "ltr"}
+      style={heroBlurDataURL ? { "--hero-blur": `url("${heroBlurDataURL}")` } as CSSProperties : undefined}>
 
       <a className="skip-link" href="#journey">{t.skipLink}</a>
       <div

@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n.config';
 import { useReveal } from '../../places/components/useReveal';
@@ -28,7 +29,7 @@ export default function TourCard({ tour, lang, blurDataURL, duration, fromLabel,
           <Image src={`${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`} alt={tour.title}
             className={shared.placeImg} width={640} height={420}
             sizes={featured ? `(max-width: 600px) calc(100vw - 32px), (max-width: 850px) ${order === 0 ? '94vw' : '46vw'}, (max-width: 1440px) ${order === 0 ? '60vw' : '38vw'}, ${order === 0 ? '835px' : '505px'}` : '(max-width: 600px) calc(100vw - 32px), (max-width: 991px) 46vw, (max-width: 1440px) 31vw, 440px'}
-            placeholder={blurDataURL ? 'blur' : 'empty'} blurDataURL={blurDataURL} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>
+            {...imagePlaceholder(blurDataURL)} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>
         </div>
         {featured && <span className={shared.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
         <span className={styles.duration}>

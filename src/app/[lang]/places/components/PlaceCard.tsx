@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import WeatherIcon from '../../Components/weather/WeatherIcon';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n.config';
@@ -30,8 +31,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
           height={360}
           width={640}
           sizes={featured ? `(max-width: 600px) calc(100vw - 32px), (max-width: 850px) ${order === 0 ? '94vw' : '46vw'}, (max-width: 1440px) ${order === 0 ? '60vw' : '38vw'}, ${order === 0 ? '835px' : '505px'}` : '(max-width: 600px) calc(100vw - 32px), (max-width: 991px) 46vw, (max-width: 1440px) 31vw, 440px'}
-          placeholder={blurDataURL ? 'blur' : 'empty'}
-          blurDataURL={blurDataURL}
+          {...imagePlaceholder(blurDataURL)}
           priority={priority}
           loading={priority ? 'eager' : 'lazy'}
         />

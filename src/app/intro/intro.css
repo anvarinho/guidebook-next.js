@@ -414,7 +414,9 @@ html.intro-loading body {
   top: 0;
   bottom: auto;
   height: min(56vh, 560px);
-  background: url("/intro/optimized/sky-clouds-hero.webp") center 12% / 118% 118% no-repeat;
+  /* The opaque full image covers its tiny inline preview as soon as it loads. */
+  background: url("/intro/optimized/sky-clouds-hero.webp") center 12% / 118% 118% no-repeat,
+    var(--hero-blur, none) center 12% / 118% 118% no-repeat;
   filter: saturate(0.82) contrast(1.06);
   opacity: 1;
 }

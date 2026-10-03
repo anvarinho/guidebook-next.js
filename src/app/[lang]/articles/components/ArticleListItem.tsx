@@ -1,3 +1,4 @@
+import getBase64 from '@/lib/getLocalBase64';
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ArticleCard from './ArticleCard';
@@ -24,7 +25,7 @@ export default async function ArticleListItem({ article, lang, featured, order }
     it: 'Visualizzazioni', es: 'Visualizaciones', jp: '閲覧数', kr: '조회수', cn: '浏览量',
   };
   return (
-    <ArticleCard title={article.title} subtitle={article.subtitle} href={`/${lang}/articles/${article.url}`}
+    <ArticleCard blurDataURL={getBase64(imageUrl)} title={article.title} subtitle={article.subtitle} href={`/${lang}/articles/${article.url}`}
       imageUrl={imageUrl} featured={featured} order={order}
       dateLabel={dateLabel} dateTime={validDate ? date.toISOString() : undefined}
       views={new Intl.NumberFormat(page.langCode).format(article.viewCount)} viewsLabel={viewsLabels[lang]}/>
