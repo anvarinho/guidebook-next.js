@@ -13,8 +13,7 @@ import { PlacesReveal } from '../places/components/PlacesMotion';
 import Meta from './meta';
 
 export default async function Articles({ params: { lang } }: { params: { lang: Locale } }) {
-  const { page } = await getDictionary(lang);
-  const articles: Article[] = await getAllArticles(lang);
+  const [{ page }, articles] = await Promise.all([getDictionary(lang), getAllArticles(lang)]);
   const featured = articles.length >= 3;
 
   return (

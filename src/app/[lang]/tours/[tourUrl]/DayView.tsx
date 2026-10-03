@@ -15,13 +15,12 @@ type Params = {
 }
 
 export default async function DayView({ params: {day, index, lang}}: Params) {
-    const sights = await getPlacesByURLs(lang, day.places)
-    const { page } = await getDictionary(lang)
+    const [sights, { page }] = await Promise.all([getPlacesByURLs(lang, day.places), getDictionary(lang)])
     return (
         <section id={`day${index + 1}`} className={styles.daySection} aria-labelledby={`day-title-${index + 1}`}>
           <PlacesReveal className={`${styles.day} ${!day.images.length ? styles.dayWithoutImages : ''}`}>
             {day.images.length > 0 && <div className={styles.dayImages}>
-              <TourGallery images={day.images} name={`${page.tours.tourPage.day} ${index + 1}`} lang={lang} priority={index === 0}/>
+              <TourGallery images={day.images} name={`${page.tours.tourPage.day} ${index + 1}`} lang={lang}/>
             </div>}
             <div className={styles.dayContent}>
               <div className={styles.dayHeading}>
@@ -35,7 +34,7 @@ export default async function DayView({ params: {day, index, lang}}: Params) {
               {sights.length > 0 && <>
                 <h4>{page.tours.tourPage.places}</h4>
                 <div className={styles.sights}>
-                  {sights.map((sight: PlaceAlias) => (
+                  {sights.map((sight) => (
                     <Link href={`/${lang}/places/${sight.url}`} className={styles.button} key={sight.url}>
                       {sight.name}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
                     </Link>

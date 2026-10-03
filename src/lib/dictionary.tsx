@@ -1,4 +1,5 @@
 import 'server-only'
+import { cache } from 'react'
 import type { Locale } from './i18n.config'
 import { notFound } from 'next/navigation'
 
@@ -15,8 +16,8 @@ const dictionaries = {
   cn: () => import('@/dictionaries/cn.json').then(module => module.default),
 }
 
-export const getDictionary = async (lang: Locale = 'en') => {
+export const getDictionary = cache(async (lang: Locale = 'en') => {
   const loadDictionary = dictionaries[lang]
   if (!loadDictionary) notFound()
   return loadDictionary()
-}
+})

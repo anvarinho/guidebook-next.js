@@ -19,9 +19,7 @@ export default async function Places({
 }: {
   params: {lang : Locale}
 }) {
-    const { page } = await getDictionary(lang)
-    const data: Promise<PlaceAlias[]> = getPlacesWithWeather(lang)
-    const places = await data
+  const [{ page }, places] = await Promise.all([getDictionary(lang), getPlacesWithWeather(lang)]);
     return (
         <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
           <Meta lang={lang} places={places} page={page}/>
@@ -37,7 +35,7 @@ export default async function Places({
             </header>
             <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
               <div className={styles.featuredGrid}>
-                {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority featured order={i}/>)}
+                {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority={i === 0} featured order={i}/>)}
               </div>
             </section>
             <PlacesReveal className={styles.collectionHeading}>
@@ -51,7 +49,7 @@ export default async function Places({
                     <div className={styles.loadingSpinnerWrapper}>
                       <LoadingSpinner text={page.loading} />
                     </div>}>
-                    {places.slice(3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority order={i}/>)}
+                    {places.slice(3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} order={i}/>)}
                     <LoadMore key={lang} lang={lang} initialIds={places.map(place => place._id)}/>
                   </Suspense>
               </div>

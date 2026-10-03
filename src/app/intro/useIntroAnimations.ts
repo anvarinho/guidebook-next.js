@@ -72,9 +72,9 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
     if (motionPreference.matches) dismissLoader();
     else {
       const heroSources = [
-        "/intro/sky-clouds-hero.png",
-        "/intro/mountain-midground-v3.png",
-        "/intro/mountain-foreground-v3.png",
+        "/intro/optimized/sky-clouds-hero.webp",
+        "/intro/optimized/mountain-midground-v3.webp",
+        "/intro/optimized/mountain-foreground-v3.webp",
       ];
       Promise.all(heroSources.map(src => {
         const image = new Image();

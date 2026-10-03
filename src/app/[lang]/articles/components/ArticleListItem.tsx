@@ -1,4 +1,3 @@
-import getBase64 from "@/lib/getLocalBase64"
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ArticleCard from './ArticleCard';
@@ -15,7 +14,6 @@ export default async function ArticleListItem({ article, lang, featured, order }
   const { page } = await getDictionary(lang);
   const image = article.image || article.paragraphs.find(paragraph => paragraph.image)?.image;
   const imageUrl = image ? baseUrl + image : undefined;
-  const blurDataURL = imageUrl ? await getBase64(imageUrl) : undefined;
   const date = new Date(article.createdAt);
   const validDate = !Number.isNaN(date.getTime());
   const dateLabel = validDate ? new Intl.DateTimeFormat(page.langCode, {
@@ -27,7 +25,7 @@ export default async function ArticleListItem({ article, lang, featured, order }
   };
   return (
     <ArticleCard title={article.title} subtitle={article.subtitle} href={`/${lang}/articles/${article.url}`}
-      imageUrl={imageUrl} blurDataURL={blurDataURL} featured={featured} order={order}
+      imageUrl={imageUrl} featured={featured} order={order}
       dateLabel={dateLabel} dateTime={validDate ? date.toISOString() : undefined}
       views={new Intl.NumberFormat(page.langCode).format(article.viewCount)} viewsLabel={viewsLabels[lang]}/>
   )
