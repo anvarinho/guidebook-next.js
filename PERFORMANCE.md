@@ -11,8 +11,8 @@ October 2026 performance pass
   Dimensions and alpha channels are preserved exactly; color compression uses
   quality 80. Regenerate with `node scripts/optimize-intro.cjs`.
 - Removed render-time remote-image downloads and blur generation from listing
-  cards, article images and place/tour galleries. Images now render immediately
-  into their existing frames; there is no photographic blur while loading.
+  cards, article images and place/tour galleries. Next.js `placeholder="blur"`
+  now uses precomputed inline WebP previews (at most 16 pixels per side).
 - Consolidated place, tour and article API calls into `src/lib/contentApi.ts`.
   Public content uses 60-second revalidation, and legacy detail imports reuse
   the same function and fetch options. Next.js can deduplicate identical GETs
@@ -67,7 +67,7 @@ Shared improvements
 - Lazy loading for lower tour/article cards; only the first featured card has priority.
 - Responsive sizes in shared image renderers; single-image rendering no longer
   waits for an additional full-image fetch and blur generation.
-- Persistent caching of generated blur placeholders for other renderers.
+- Precomputed blur previews shared by cards, galleries and article images.
 - WebP negotiation and one-day caching for Next.js optimized images.
 - One-day caching with stale revalidation for Manas assets; response compression.
 - Manas parallax stops off-screen, in hidden tabs, and when motion is paused.
@@ -79,6 +79,34 @@ Shared improvements
 - Login/admin noindex metadata; robots exclusions for private routes/API.
 
 Image sizes and caching follow the [Next.js 14 image documentation](https://nextjs.org/docs/14/app/api-reference/components/image).
+
+Lightweight blur previews
+-------------------------
+
+`getLocalBase64` now performs a synchronous lookup in a server-only manifest.
+It never fetches or decodes a source image during page rendering. Only previews
+for the rendered images are passed to client components, so the full manifest
+and image-processing libraries stay out of client bundles. Next.js handles
+removing the blur when each image loads. Gallery previews follow the selected
+image. Pagination responses include image-specific previews. Images without a generated
+preview use an empty placeholder rather than unrelated fallback artwork.
+
+The homepage's opaque sky CSS background uses a tiny inline preview beneath the
+full artwork. It requires no extra request or client decoding. Transparent
+foreground layers retain their transparency.
+
+After adding images, generate previews before building and deploying:
+
+```sh
+npm run images:placeholders
+npm run build
+```
+
+The generator reads public place, tour and article content, bounds input size and
+download time, and uses four bounded workers. Existing previews are reused.
+Use `npm run images:placeholders -- --refresh` when images are replaced at the
+same URL. Failures preserve existing entries; missing previews use an empty placeholder.
+For local homepage artwork only, run `node scripts/generate-image-placeholders.cjs`.
 
 These are measured asset-size reductions, not measured Core Web Vitals or
 Lighthouse scores. Production performance should be assessed with real device
@@ -96,3 +124,20 @@ Validation
 - Manas JSON-LD, asset manifest references, actual image dimensions, and hero
   transparency checked; localized Manas/contact sitemap entries verified.
 - Representative compressed comic artwork inspected visually.
+
+October 2026 regression fixes
+----------------------------
+
+- Hosted Bai Jamjuree, Exo 2, Cormorant SC and Jura locally, preserving weights,
+  language subsets and font fallback metrics. Compilation no longer downloads
+  these fonts from Google. Font licenses are included in `public/fonts`.
+- Fixed place-list response handling in the preview generator so place detail
+  photos are included. Photo previews use 16-pixel WebP images from each source.
+- Removed generic fallback artwork and added server-side preview lookup to
+  paginated place responses. Page rendering still performs no image decoding.
+
+Validation for these fixes: TypeScript and all 13 regression tests passed. ESLint
+passed with existing warnings. English and Russian Manas pages returned HTTP
+200 without compile-time font retries. All 374 previews (330 content photos and
+44 local artwork assets) decoded successfully at no more than 16 pixels per
+side. A paginated response returned all 12 cards with image-specific previews.

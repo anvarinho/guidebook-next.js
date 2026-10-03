@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "images:placeholders": "node scripts/generate-image-placeholders.cjs --remote"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",

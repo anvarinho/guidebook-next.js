@@ -3,8 +3,7 @@ export const metadata = {
   description: 'Разработка веб-сайтов и мобильных приложений. Полный спектр услуг: создание, продвижение, разработка под iOS и Android. Качественно, недорого, в срок. Контакты: anvarinho@gmail.com.',
 }
 
-import { Jura } from 'next/font/google'
-const font = Jura({weight: ['300','400','500','600','700'],style: 'normal', subsets: ['latin'], display: 'swap' })
+import '../jura.css'
 
 export default function RootLayout({
   children,
@@ -12,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={font.className}>
+    <html lang="ru" className="font-jura">
       <head>
         <link rel="shortcut icon" href="/favicon.png" sizes="any" />
       </head>

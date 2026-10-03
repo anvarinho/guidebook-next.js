@@ -3,6 +3,7 @@ import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
 
@@ -19,8 +20,8 @@ const labels = {
   cn: ['照片图库', '上一张照片', '下一张照片', '照片'],
 };
 
-export default function PlaceGallery({ images, name, lang, priority = true, blurDataURL }: {
-  images: string[]; name: string; lang: Locale; priority?: boolean; blurDataURL?: string;
+export default function PlaceGallery({ images, name, lang, priority = true, blurDataURLs = [] }: {
+  images: string[]; name: string; lang: Locale; priority?: boolean; blurDataURLs?: string[];
 }) {
   const [index, setIndex] = useState(0);
   const thumbnails = useRef<HTMLDivElement>(null);
@@ -47,10 +48,10 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
         }
       }}>
       <div className={styles.galleryStage}>
-        <Image src={imageUrl(images[index])} alt={`${name} — ${t[3]} ${index + 1}`}
+        <Image key={images[index]} src={imageUrl(images[index])} alt={`${name} — ${t[3]} ${index + 1}`}
           fill sizes="(max-width: 1200px) 100vw, 1200px" priority={priority && index === 0}
           loading={priority && index === 0 ? 'eager' : 'lazy'}
-          placeholder={index === 0 && blurDataURL ? 'blur' : 'empty'} blurDataURL={index === 0 ? blurDataURL : undefined} />
+          {...imagePlaceholder(blurDataURLs[index])} />
         {images.length > 1 && <>
           <button type="button" className={`${styles.galleryControl} ${styles.previous}`}
             onClick={() => move(-1)} aria-label={t[1]}><span aria-hidden="true"><ArrowIcon direction="left"/></span></button>
@@ -64,7 +65,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
       {images.length > 1 && <div ref={thumbnails} className={styles.thumbnails}>
         {images.map((image, i) => <button type="button" key={`${image}-${i}`}
           aria-label={`${t[3]} ${i + 1}`} aria-pressed={index === i} onClick={() => setIndex(i)}>
-          <Image src={imageUrl(image)} alt="" fill sizes="88px" />
+          <Image {...imagePlaceholder(blurDataURLs[i])} src={imageUrl(image)} alt="" fill sizes="88px" />
         </button>)}
       </div>}
     </section>

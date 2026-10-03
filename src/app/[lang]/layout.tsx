@@ -1,7 +1,8 @@
 import { siteUrl } from "@/lib/seo";
 import './globals.css'
 import type { Metadata } from 'next'
-import { Bai_Jamjuree, Exo_2 } from 'next/font/google'
+import '../bai-jamjuree.css'
+import '../exo-2.css'
 import { Locale, i18n } from '@/lib/i18n.config'
 import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
@@ -18,9 +19,6 @@ import ContactDialog from './contact/components/ContactDialog'
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
 }
-
-const font = Bai_Jamjuree({weight: ['200','300','400','500','600','700'],style: 'normal', subsets: ['latin'], display: 'swap' })
-const russianfont = Exo_2({weight: ['200','300','400','500','600','700'],style: 'normal',subsets: ['cyrillic'], display: 'swap' })
 
 export default async function RootLayout({
   children,
@@ -42,7 +40,7 @@ export default async function RootLayout({
       </head>
 
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
-      <body className={params.lang === 'ru' ? russianfont.className : font.className}>
+      <body className={params.lang === 'ru' ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
           navbar={<Navbar lang={params.lang}/>}

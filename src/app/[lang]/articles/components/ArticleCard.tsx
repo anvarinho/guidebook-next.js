@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
 import { useReveal } from '../../places/components/useReveal';
 import shared from '../../places/page.module.css';
@@ -25,7 +26,7 @@ export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataU
         <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`} data-reveal-image>
           {imageUrl && <Image src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}
             sizes={featured ? '(max-width: 600px) 100vw, (max-width: 991px) 60vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw'}
-            placeholder={blurDataURL ? 'blur' : 'empty'} blurDataURL={blurDataURL} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>}
+            {...imagePlaceholder(blurDataURL)} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>}
         </div>
         {featured && <span className={shared.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
       </div>

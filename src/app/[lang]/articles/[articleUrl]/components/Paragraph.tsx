@@ -1,3 +1,5 @@
+import getBase64 from '@/lib/getLocalBase64';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import styles from '../page.module.css'
 import Image from "next/image";
 import { Locale } from "@/lib/i18n.config";
@@ -17,6 +19,7 @@ export default function Article({ paragraph, lang, priority}: Props) {
                 {paragraph.image && (
                     <picture className={styles.image}>
                         <Image
+                {...imagePlaceholder(getBase64(paragraph.image))}
                         src={baseUrl + paragraph.image}
                         alt={paragraph.title}
                         fill

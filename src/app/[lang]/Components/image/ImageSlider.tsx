@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import styles from './imageSlider.module.css'
 import Image from "next/image";
+import { imagePlaceholder } from "@/lib/imagePlaceholder";
 
-const ImageSlider: React.FC<{ items: [String], priority: boolean }> = ({ items, priority }) => {
+const ImageSlider: React.FC<{ items: [String], priority: boolean, blurDataURLs?: string[] }> = ({ items, priority, blurDataURLs = [] }) => {
     const [index, setIndex] = useState(1);
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
 
@@ -35,7 +36,7 @@ const ImageSlider: React.FC<{ items: [String], priority: boolean }> = ({ items, 
                 <div className={styles.slider_items}>
                     {items.map((image, idx) => (
                         <picture key={idx} className={`${styles.slider_item} ${idx + 1 === index ? styles.active : ''}`}>
-                            <Image fill src={baseUrl + image} alt={`${image}`} sizes="(max-width: 991px) 100vw, 900px" style={{ objectFit: "cover" }} title={`${image}`}
+                            <Image {...imagePlaceholder(blurDataURLs[idx])} fill src={baseUrl + image} alt={`${image}`} sizes="(max-width: 991px) 100vw, 900px" style={{ objectFit: "cover" }} title={`${image}`}
                              priority={idx == 0 && priority ? true : false}
                              loading={idx == 0 && priority ? 'eager' : 'lazy'}
                              />

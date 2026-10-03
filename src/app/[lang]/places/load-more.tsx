@@ -20,7 +20,7 @@ const labels: Record<Locale, { loading: string; more: string; retry: string; end
 }
 
 export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: string[] }) {
-  const [places, setPlaces] = useState<PlaceAlias[]>([])
+  const [places, setPlaces] = useState<(PlaceAlias & { blurDataURL?: string })[]>([])
   const [offset, setOffset] = useState(initialIds.length)
   const [loading, setLoading] = useState(false)
   const [hasMore, setHasMore] = useState(initialIds.length >= 12)
@@ -39,11 +39,11 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
     setLoading(true)
     setFailed(false)
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/places/more?lang=${lang}&offset=${offset}&limit=12`, { signal: request.signal })
+      const response = await fetch(`/api/places/more?lang=${lang}&offset=${offset}`, { signal: request.signal })
       if (!response.ok) throw new Error('Could not load places')
       const data = await response.json()
       if (!Array.isArray(data.places)) throw new Error('Invalid places response')
-      const next: PlaceAlias[] = data.places
+      const next: (PlaceAlias & { blurDataURL?: string })[] = data.places
       const unique = next.filter(place => {
         if (seen.current.has(place._id)) return false
         seen.current.add(place._id)
@@ -68,7 +68,7 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
   useEffect(() => () => { controller.current?.abort() }, [])
 
   return <>
-    {places.map((place, index) => <PlaceCard key={place._id} place={place} lang={lang} order={index}/>)}
+    {places.map((place, index) => <PlaceCard key={place._id} place={place} lang={lang} order={index} blurDataURL={place.blurDataURL}/>)}
     <div className={styles.listStatus} ref={ref} aria-busy={loading}>
       {loading ? <span role="status">{copy.loading}</span> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
     </div>

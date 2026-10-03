@@ -1,26 +1,12 @@
-import { unstable_cache } from "next/cache"
-import { getPlaiceholder } from "plaiceholder"
+import 'server-only';
+import placeholders from './generated/image-placeholders.json';
 
-async function createBase64(imageUrl: string) {
-    try {
-        const res = await fetch(imageUrl)
+const manifest: Record<string, string> = placeholders;
 
-        if (!res.ok) {
-            throw new Error(`Failed to fetch image: ${res.status} ${res.statusText}`)
-        }
-
-        const buffer = await res.arrayBuffer()
-
-        const { base64 } = await getPlaiceholder(Buffer.from(buffer))
-
-        // console.log(`base64: ${base64}`)
-
-        return base64
-
-    } catch (e) {
-        if (e instanceof Error) console.log(e.stack)
-    }
+// Lookup only: no network requests, image decoding or filesystem reads per render.
+export default function getBase64(imageUrl?: string): string {
+  if (!imageUrl) return '';
+  const url = new URL(imageUrl, `${process.env.NEXT_PUBLIC_URL || 'https://central-asia.live'}/`);
+  return manifest[url.href] || (url.origin === new URL(process.env.NEXT_PUBLIC_URL || 'https://central-asia.live').origin
+    ? manifest[url.pathname] : undefined) || '';
 }
-
-// Cache the generated placeholder as well as the fetch; image decoding is expensive.
-export default unstable_cache(createBase64, ["image-placeholder-v1"], { revalidate: 86400 });

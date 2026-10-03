@@ -1,3 +1,5 @@
+import getBase64 from '@/lib/getLocalBase64';
+import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from '../page.module.css'
 // import Link from "next/link";
@@ -25,6 +27,7 @@ export default async function Article({ article, lang }: Props) {
           <PlacesReveal className={styles.heroImage}>
               <picture className={styles.image}>
                 <Image
+                {...imagePlaceholder(getBase64(article.image))}
                 src={baseUrl + article.image} 
                 alt={article.title}
                 sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"

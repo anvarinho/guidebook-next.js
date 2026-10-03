@@ -1,3 +1,5 @@
+import getBase64 from '@/lib/getLocalBase64';
+import getBlurredDataUrls from '@/lib/getBlurredDataUrls';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from '../page.module.css';
 import { Suspense } from 'react';
@@ -51,7 +53,7 @@ export default async function PlaceArticle({ promise, lang }: {
         </PlacesReveal>
       </header>
       <PlacesReveal>
-        <PlaceGallery images={place.images} name={place.name} lang={lang}/>
+        <PlaceGallery blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang}/>
       </PlacesReveal>
 
       <div className={styles.articleLayout}>
@@ -106,7 +108,7 @@ export default async function PlaceArticle({ promise, lang }: {
         <PlacesReveal className={styles.relatedHeading}><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></PlacesReveal>
         <div className={styles.relatedGrid}>
           {sights.map(sight => <div className={styles.relatedItem} key={sight._id}>
-            <PlaceCard place={sight} lang={lang}/>
+            <PlaceCard blurDataURL={getBase64(sight.images[0])} place={sight} lang={lang}/>
             {sight.description && <PlacesReveal><p className={styles.relatedSummary}>{sight.description}</p></PlacesReveal>}
           </div>)}
         </div>
@@ -114,7 +116,7 @@ export default async function PlaceArticle({ promise, lang }: {
       {places.length > 0 && <section className={styles.related} aria-labelledby="region-sights-title">
         <PlacesReveal className={styles.relatedHeading}><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></PlacesReveal>
         <div className={styles.relatedGrid}>
-          {places.map(sight => <PlaceCard key={sight._id} place={sight} lang={lang}/>)}
+          {places.map(sight => <PlaceCard blurDataURL={getBase64(sight.images[0])} key={sight._id} place={sight} lang={lang}/>)}
         </div>
       </section>}
     </article>
