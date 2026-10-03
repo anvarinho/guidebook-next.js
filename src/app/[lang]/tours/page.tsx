@@ -19,9 +19,7 @@ export default async function Tours({
 }: {
   params: {lang : Locale}
 }) {
-    const { page } = await getDictionary(lang)
-    const data: Promise<[Tour]> = getAllTours(lang)
-    const toursData = await data
+  const [{ page }, toursData] = await Promise.all([getDictionary(lang), getAllTours(lang)]);
 
     return (
       <div className={`${shared.main} ${shared.listingPage}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>

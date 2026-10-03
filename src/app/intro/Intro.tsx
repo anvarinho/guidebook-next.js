@@ -31,8 +31,8 @@ export default function Intro({ messages: t, language, locale, links }: {
       <div className="page-loader" id="page-loader" aria-hidden="true">
         <div className="page-loader-mark" role="img" aria-label={t.flagLabel}>
           <div className="page-loader-emblem">
-            <img className="page-loader-brush" src="/intro/kyrgyz-flag-brush-v2.png" alt="" />
-            <img className="page-loader-flag" src="/intro/flag.png" alt="" />
+            <img className="page-loader-brush" src="/intro/optimized/kyrgyz-flag-brush-v2.webp" alt="" />
+            <img className="page-loader-flag" src="/intro/optimized/flag.webp" alt="" />
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/issyk-cartoon-ship.png"
+                  src="/intro/optimized/issyk-cartoon-ship.webp"
                   alt=""
                 />
               </div>
@@ -165,41 +165,41 @@ export default function Intro({ messages: t, language, locale, links }: {
         <section className="section steppe" id="steppe" data-parallax="">
           <div className="layers" aria-hidden="true">
             <div className="layer jailoo-background" data-speed="0.04" data-drift="-0.015">
-              <img src="/intro/jailoo-sky-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+              <img src="/intro/optimized/jailoo-sky-layer.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-mountains" data-speed="0.16" data-drift="-0.04">
-              <img src="/intro/jailoo-mountains-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+              <img src="/intro/optimized/jailoo-mountains-layer.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-foreground" data-speed="0.34" data-drift="0.06">
-              <img src="/intro/jailoo-foreground-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+              <img src="/intro/optimized/jailoo-foreground-layer.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
             </div>
             <div className="layer jailoo-horses" data-speed="0.34" data-drift="0.06">
               <img
                 loading="lazy"
                 decoding="async"
                 className="jailoo-horse-frame"
-                src="/intro/jailoo-run-1.png"
+                src="/intro/optimized/jailoo-run-1.webp"
                 alt=""
               />
               <img
                 loading="lazy"
                 decoding="async"
                 className="jailoo-horse-frame"
-                src="/intro/jailoo-run-2.png"
+                src="/intro/optimized/jailoo-run-2.webp"
                 alt=""
               />
               <img
                 loading="lazy"
                 decoding="async"
                 className="jailoo-horse-frame"
-                src="/intro/jailoo-run-3.png"
+                src="/intro/optimized/jailoo-run-3.webp"
                 alt=""
               />
               <img
                 loading="lazy"
                 decoding="async"
                 className="jailoo-horse-frame"
-                src="/intro/jailoo-run-4.png"
+                src="/intro/optimized/jailoo-run-4.webp"
                 alt=""
               />
             </div>
@@ -207,7 +207,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/jailoo-cartoon-yurts.png"
+                src="/intro/optimized/jailoo-cartoon-yurts.webp"
                 alt=""
               />
             </div>
@@ -252,7 +252,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/trekking-backpacker.png"
+                src="/intro/optimized/trekking-backpacker.webp"
                 alt=""
               />
             </div>
@@ -280,7 +280,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/silk-road-mountains-bold.png"
+                src="/intro/optimized/silk-road-mountains-bold.webp"
                 alt=""
               />
             </div>
@@ -292,7 +292,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/silk-road-foreground-cutout.png"
+                src="/intro/optimized/silk-road-foreground-cutout.webp"
                 alt=""
               />
             </div>
@@ -300,7 +300,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/silk-road-burana-tower.png"
+                src="/intro/optimized/silk-road-burana-tower.webp"
                 alt=""
               />
             </div>
@@ -309,7 +309,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/silk-road-caravan-cutout.png"
+                  src="/intro/optimized/silk-road-caravan-cutout.webp"
                   alt=""
                 />
               </div>
@@ -336,12 +336,12 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/manas-warrior.png"
+                src="/intro/optimized/manas-warrior.webp"
                 alt=""
               />
             </div>
             <div className="layer manas-eagle" data-speed="0.48" data-drift="0.14">
-              <img loading="lazy" decoding="async" src="/intro/manas-eagle.png" alt="" />
+              <img loading="lazy" decoding="async" src="/intro/optimized/manas-eagle.webp" alt="" />
             </div>
           </div>
           <div className="content-wrap">
@@ -371,7 +371,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/kok-boru-crowd-cartoon-v2.png"
+                src="/intro/optimized/kok-boru-crowd-cartoon-v2.webp"
                 alt=""
               />
             </div>
@@ -379,7 +379,7 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/kok-boru-riders-cartoon.png"
+                src="/intro/optimized/kok-boru-riders-cartoon.webp"
                 alt=""
               />
             </div>
@@ -387,14 +387,14 @@ export default function Intro({ messages: t, language, locale, links }: {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/intro/kok-boru-goal-base.png"
+                src="/intro/optimized/kok-boru-goal-base.webp"
                 alt=""
               />
               <img
                 loading="lazy"
                 decoding="async"
                 className="nomadic-goal-mark"
-                src="/intro/kok-boru-source-emblem.png"
+                src="/intro/optimized/kok-boru-source-emblem.webp"
                 alt=""
               />
             </div>
@@ -424,7 +424,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/bishkek-sky.png"
+                  src="/intro/optimized/bishkek-sky.webp"
                   alt=""
                 />
               </div>
@@ -432,7 +432,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/bishkek-road.png"
+                  src="/intro/optimized/bishkek-road.webp"
                   alt=""
                 />
               </div>
@@ -444,7 +444,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/bishkek-mountains.png"
+                  src="/intro/optimized/bishkek-mountains.webp"
                   alt=""
                 />
               </div>
@@ -452,7 +452,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/bishkek-city-midground.png"
+                  src="/intro/optimized/bishkek-city-midground.webp"
                   alt=""
                 />
               </div>
@@ -465,7 +465,7 @@ export default function Intro({ messages: t, language, locale, links }: {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/intro/bishkek-foreground.png"
+                  src="/intro/optimized/bishkek-foreground.webp"
                   alt=""
                 />
               </div>
@@ -503,13 +503,13 @@ export default function Intro({ messages: t, language, locale, links }: {
           <div className="layers" aria-hidden="true">
             <div className="hospitality-scene">
               <div className="layer hospitality-outside" data-speed="0.012" data-drift="-0.008">
-                <img src="/intro/yurt-doorway-view.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+                <img src="/intro/optimized/yurt-doorway-view.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-interior" data-speed="0.065" data-drift="0.005">
-                <img src="/intro/yurt-interior-layer.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+                <img src="/intro/optimized/yurt-interior-layer.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-table" data-speed="-0.28" data-drift="-0.10" data-zoom="0.12">
-                <img src="/intro/yurt-table-food.png" loading="lazy" decoding="async" width="1024" height="576" alt="" />
+                <img src="/intro/optimized/yurt-table-food.webp" loading="lazy" decoding="async" width="1024" height="576" alt="" />
               </div>
               <div className="layer hospitality-light" data-speed="0.08" data-drift="-0.18"></div>
             </div>

@@ -11,7 +11,6 @@ import PlaceGallery from './PlaceGallery';
 import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
 import { PlacesReveal } from '../../components/PlacesMotion';
-import getBase64 from '@/lib/getLocalBase64';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
@@ -20,10 +19,9 @@ export default async function PlaceArticle({ promise, lang }: {
 }) {
   const { page } = await getDictionary(lang);
   const place = await promise;
-  const [regionResults, sightResults, blurDataURL] = await Promise.all([
+  const [regionResults, sightResults] = await Promise.all([
     getPlacesByRegion(lang, place.region, place.url),
     place.sights?.length ? getPlacesByURLs(lang, place.sights) : Promise.resolve([]),
-    place.images?.[0] ? getBase64(`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`) : Promise.resolve(undefined),
   ]);
   const places: Place[] = regionResults ?? [];
   const sights: Place[] = sightResults ?? [];
@@ -53,7 +51,7 @@ export default async function PlaceArticle({ promise, lang }: {
         </PlacesReveal>
       </header>
       <PlacesReveal>
-        <PlaceGallery images={place.images} name={place.name} lang={lang} blurDataURL={blurDataURL}/>
+        <PlaceGallery images={place.images} name={place.name} lang={lang}/>
       </PlacesReveal>
 
       <div className={styles.articleLayout}>

@@ -1,0 +1,266 @@
+{
+  "bishkek-city-midground": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 114309,
+    "bytes": 67724
+  },
+  "bishkek-foreground": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 107285,
+    "bytes": 72838
+  },
+  "bishkek-mountains": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 92333,
+    "bytes": 43830
+  },
+  "bishkek-road": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 310992,
+    "bytes": 92102
+  },
+  "bishkek-sky": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 216691,
+    "bytes": 30864
+  },
+  "eagle-flight-illustrated": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 197844,
+    "bytes": 97716
+  },
+  "flag": {
+    "width": 960,
+    "height": 960,
+    "originalBytes": 36040,
+    "bytes": 70864
+  },
+  "issyk-cartoon-lake": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 165282,
+    "bytes": 69876
+  },
+  "issyk-cartoon-mountains": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 86924,
+    "bytes": 49894
+  },
+  "issyk-cartoon-ship": {
+    "width": 1024,
+    "height": 410,
+    "originalBytes": 82052,
+    "bytes": 54326
+  },
+  "issyk-cartoon-sky": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 89779,
+    "bytes": 20718
+  },
+  "jailoo-cartoon-yurts": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 204872,
+    "bytes": 75862
+  },
+  "jailoo-foreground-layer": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 162299,
+    "bytes": 42438
+  },
+  "jailoo-mountains-layer": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 166478,
+    "bytes": 44940
+  },
+  "jailoo-run-1": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 142681,
+    "bytes": 65334
+  },
+  "jailoo-run-2": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 122030,
+    "bytes": 63064
+  },
+  "jailoo-run-3": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 123472,
+    "bytes": 58788
+  },
+  "jailoo-run-4": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 124638,
+    "bytes": 59646
+  },
+  "jailoo-sky-layer": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 82870,
+    "bytes": 22348
+  },
+  "kok-boru-crowd-cartoon-v2": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 123097,
+    "bytes": 74614
+  },
+  "kok-boru-goal-base": {
+    "width": 1024,
+    "height": 512,
+    "originalBytes": 159298,
+    "bytes": 47448
+  },
+  "kok-boru-riders-cartoon": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 294813,
+    "bytes": 198498
+  },
+  "kok-boru-source-emblem": {
+    "width": 220,
+    "height": 220,
+    "originalBytes": 5391,
+    "bytes": 8358
+  },
+  "kyrgyz-flag-brush-v2": {
+    "width": 1024,
+    "height": 682,
+    "originalBytes": 139272,
+    "bytes": 60882
+  },
+  "manas-eagle": {
+    "width": 1024,
+    "height": 1075,
+    "originalBytes": 311167,
+    "bytes": 141266
+  },
+  "manas-warrior": {
+    "width": 1024,
+    "height": 1536,
+    "originalBytes": 793580,
+    "bytes": 301404
+  },
+  "mountain-foreground-v3": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 159375,
+    "bytes": 70484
+  },
+  "mountain-midground-v3": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 147329,
+    "bytes": 63748
+  },
+  "silk-road-burana-tower": {
+    "width": 1024,
+    "height": 1536,
+    "originalBytes": 436113,
+    "bytes": 102090
+  },
+  "silk-road-caravan-cutout": {
+    "width": 1024,
+    "height": 366,
+    "originalBytes": 85762,
+    "bytes": 68574
+  },
+  "silk-road-foreground-cutout": {
+    "width": 1024,
+    "height": 394,
+    "originalBytes": 154330,
+    "bytes": 78368
+  },
+  "silk-road-mountains-bold": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 116942,
+    "bytes": 48742
+  },
+  "silk-road-sky": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 152881,
+    "bytes": 13934
+  },
+  "sky-clouds-hero": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 138855,
+    "bytes": 40694
+  },
+  "song-kul-horses": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 119792,
+    "bytes": 75544
+  },
+  "song-kul-meadow-foreground": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 134275,
+    "bytes": 68906
+  },
+  "song-kul-midground": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 58859,
+    "bytes": 26478
+  },
+  "trekking-backpacker": {
+    "width": 1024,
+    "height": 1536,
+    "originalBytes": 178099,
+    "bytes": 71966
+  },
+  "trekking-clouds": {
+    "width": 1024,
+    "height": 342,
+    "originalBytes": 26196,
+    "bytes": 39294
+  },
+  "trekking-foreground": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 150873,
+    "bytes": 78066
+  },
+  "trekking-mountains": {
+    "width": 1024,
+    "height": 372,
+    "originalBytes": 92045,
+    "bytes": 48454
+  },
+  "yurt-doorway-view": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 30461,
+    "bytes": 13130
+  },
+  "yurt-interior-layer": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 430029,
+    "bytes": 169314
+  },
+  "yurt-table-food": {
+    "width": 1024,
+    "height": 576,
+    "originalBytes": 155525,
+    "bytes": 60508
+  }
+}

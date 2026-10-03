@@ -5,7 +5,10 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   async headers() {
-    return [{ source: "/manas/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }] }];
+    return ["/manas/:path*", "/intro/:path*", "/manas-airport-transfers/:path*"].map(source => ({
+      source,
+      headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+    }));
   },
   // i18n:{
   //     locales:['en-US', 'fr'],
@@ -607,7 +610,8 @@ const nextConfig = {
     ];
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    // WebP costs less CPU to encode on a cold image cache than AVIF.
+    formats: ["image/webp"],
     minimumCacheTTL: 86400,
     domains: ["159.65.95.44", "central-asia.live", "127.0.0.1"], // Add your external image domains here
     // unoptimized: true,

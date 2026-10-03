@@ -6,7 +6,7 @@ import { useId } from "react";
 // All three image references share one cached asset; the head and body stay still.
 export default function HeroEagle() {
   const id = `hero-eagle-${useId().replace(/:/g, "")}`;
-  const artwork = "/intro/eagle-flight-illustrated.png";
+  const artwork = "/intro/optimized/eagle-flight-illustrated.webp";
   return (
     <svg className="hero-eagle-art" viewBox="0 0 1024 682" width="1024" height="682" aria-hidden="true" focusable="false">
       <defs>

@@ -2,7 +2,7 @@ import { Locale } from "@/lib/i18n.config";
 
 interface Props {
     lang: Locale
-    tours: [Tour]; // Assuming 'tour' is a string, adjust the type accordingly if it's different
+    tours: Tour[]; // Assuming 'tour' is a string, adjust the type accordingly if it's different
     page: any
 }
 

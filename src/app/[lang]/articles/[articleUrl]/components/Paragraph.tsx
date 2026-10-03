@@ -2,7 +2,6 @@ import styles from '../page.module.css'
 import Image from "next/image";
 import { Locale } from "@/lib/i18n.config";
 import Link from "next/link";
-import getBase64 from "@/lib/getLocalBase64"
 import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
@@ -11,9 +10,8 @@ type Props = {
     priority: boolean
 }
 
-export default async function Article({ paragraph, lang, priority}: Props) {
+export default function Article({ paragraph, lang, priority}: Props) {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
-    const blurDataURL = paragraph.image ? await getBase64(baseUrl + paragraph.image) : ""
     return (
         <PlacesReveal className={styles.paragraph}>
                 {paragraph.image && (
@@ -23,7 +21,6 @@ export default async function Article({ paragraph, lang, priority}: Props) {
                         alt={paragraph.title}
                         fill
                         sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
-                        placeholder="blur" blurDataURL={blurDataURL}
                         priority={priority}
                         loading={priority ? 'eager' : 'lazy'}
                          />
