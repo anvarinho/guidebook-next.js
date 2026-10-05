@@ -26,7 +26,6 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
       url: absoluteSiteUrl(params.lang), type: "website", locale: hreflangByLocale[params.lang].replace("-", "_"),
       images: [heroImage] },
     twitter: { card: "summary_large_image", title: messages.metaTitle, description: messages.metaDescription, images: [heroImage] },
-    icons: { icon: "/intro/flag.png" },
   };
 }
 

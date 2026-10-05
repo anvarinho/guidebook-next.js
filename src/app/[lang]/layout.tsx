@@ -32,10 +32,6 @@ export default async function RootLayout({
   return (
     <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[params.lang] ?? params.lang}>
       <head>
-        {/* <title>GuideBook of Kyrgyzstan</title> */}
-        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <Meta lang={params.lang}/>
       </head>
 
@@ -60,6 +56,13 @@ export default async function RootLayout({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+  },
   title: {
     default: "GuideBook of Kyrgyzstan",
     template: `%s | GuideBook of Kyrgyzstan`
