@@ -1,84 +1,163 @@
+<div align="center">
+
+<img src="public/manas/hero-background.webp" alt="Illustrated Kyrgyz mountain landscape beneath a red sun" width="100%" />
+
 # Guidebook of Kyrgyzstan
 
-A multilingual travel guide for discovering places, tours, articles, and airport transfers in Kyrgyzstan. The site is built with Next.js App Router, React, and TypeScript.
+**Mountain trails. Nomadic culture. Your next adventure.**
 
-## Requirements
+A multilingual travel guide to Kyrgyzstan — explore places, discover tours,<br />
+read local stories, and plan your journey from Manas Airport.
 
-- Node.js 18 or newer
-- npm
-- Access to the content API for places, tours, and articles
+![Next.js 14](https://img.shields.io/badge/Next.js-14-171717?style=flat-square&logo=nextdotjs&logoColor=white)
+![React 18](https://img.shields.io/badge/React-18-149ECA?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Languages](https://img.shields.io/badge/Languages-10-1B3E32?style=flat-square)
 
-## Getting started
+[Explore](#explore) · [Quick start](#quick-start) · [Configuration](#configuration) · [Project map](#project-map) · [Deployment](#deployment)
 
-Install dependencies and start the development server:
+</div>
+
+---
+
+## Explore
+
+| | Experience |
+| :--- | :--- |
+| 🏔️ **Places** | Discover destinations with galleries, descriptions, and weather information. |
+| 🧭 **Tours** | Browse trips and explore their itineraries and photo galleries. |
+| 📖 **Stories** | Read articles about Kyrgyzstan and its destinations. |
+| 🦅 **Culture** | Explore the epic of Manas through an illustrated, interactive experience. |
+| 🚐 **Airport transfers** | Compare transfer options and plan onward travel from Manas Airport. |
+| 🎨 **Immersive home page** | Explore layered artwork and parallax scenes inspired by Kyrgyz landscapes and culture. |
+| 🌍 **Ten languages** | Access localized pages, navigation, and travel content. |
+| ⚙️ **Administration** | Manage content and users through the MongoDB-backed admin area. |
+
+Built with **Next.js App Router**, **React**, and **TypeScript**, with CSS Modules for styling, optimized imagery, and localized SEO metadata.
+
+## Quick start
+
+You’ll need **Node.js 18.17 or newer** and **npm**. Content-driven pages also require access to the project’s content API.
+
+### 1. Install dependencies
 
 ```bash
-npm install
-npm run dev
+npm ci
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The root route redirects to the English home page at `/en`.
+### 2. Configure your environment
 
-Create a local `.env.local` file for environment-specific settings. At minimum, set the public site/API origin used by the server-side content fetchers:
+Create `.env.local` in the project root:
 
 ```dotenv
 NEXT_PUBLIC_URL=http://localhost:3000
 ```
 
-The places, tours, and articles pages request data from `/api/places`, `/api/tours`, and `/api/articles` on this origin. Those API route handlers are not included in this repository, so point `NEXT_PUBLIC_URL` at an origin that serves the content API. The home page, static assets, and airport transfer directory can be developed without that content API.
+> **Content API:** Places, tours, and articles fetch data from `/api/places`, `/api/tours`, and `/api/articles` at `NEXT_PUBLIC_URL`. Those API handlers are not included in this repository. For these pages, replace the local URL with an origin that serves the content API. You can develop the home page, static assets, and airport transfer directory without it.
 
-Optional settings used by the site:
+### 3. Start exploring
+
+```bash
+npm run dev
+```
+
+Open **[localhost:3000](http://localhost:3000)**. The root route redirects to the English home page at `/en`.
+
+## Configuration
+
+Set environment-specific values in `.env.local`:
 
 | Variable | Purpose |
-| --- | --- |
+| :--- | :--- |
+| `NEXT_PUBLIC_URL` | Site/API origin used by content fetchers and canonical metadata |
 | `NEXT_PUBLIC_PHONE_NUMBER` | Contact and WhatsApp number |
 | `NEXT_PUBLIC_EMAIL` | Contact email |
 | `GOOGLE_ANALYTICS_ID` | Google Analytics measurement ID |
 | `GOOGLE_MAPS_API_KEY` | Google Maps content on place pages |
-| `DB_HOST`, `DB_PORT`, `DB_NAME` | MongoDB connection for the admin area |
+| `DB_HOST` | MongoDB host for the admin area |
+| `DB_PORT` | MongoDB port for the admin area |
+| `DB_NAME` | MongoDB database name for the admin area |
 
-Keep secrets in `.env.local` and out of version control. Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser and should not contain secrets.
+Keep secrets out of version control. Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser and must not contain secrets.
 
-## Useful commands
+## Development commands
 
-```bash
-npm run dev      # Start the local development server
-npm run lint     # Run Next.js ESLint checks
-npm run build    # Create a production build
-npm start        # Serve the production build
-```
+| Command | What it does |
+| :--- | :--- |
+| `npm run dev` | Start the local development server |
+| `npm run lint` | Run Next.js ESLint checks |
+| `npm run build` | Create a production build |
+| `npm start` | Serve the production build |
+| `npm run images:placeholders` | Generate image blur placeholders, including remote content images |
 
-Run `npm run build` before deploying. Then use `npm start` to serve the generated build.
+## Routes & languages
 
-## Main routes
+Public pages live under `src/app/[lang]`. Replace `{lang}` with a supported locale code.
 
-Pages are localized under `src/app/[lang]`:
+| Route | Destination |
+| :--- | :--- |
+| `/{lang}` | Home and illustrated introduction |
+| `/{lang}/places` | Places directory |
+| `/{lang}/places/{placeUrl}` | Place details |
+| `/{lang}/tours` | Tours directory |
+| `/{lang}/tours/{tourUrl}` | Tour details and itinerary |
+| `/{lang}/articles` | Articles directory |
+| `/{lang}/articles/{articleUrl}` | Article details |
+| `/{lang}/manas` | Illustrated Manas experience |
+| `/{lang}/manas-airport-transfers` | Airport transfer guide |
+| `/{lang}/about` · `/{lang}/contact` | About and contact pages |
+| `/admin` | Content administration |
 
-- `/{lang}` — home
-- `/{lang}/places` — places directory and place details
-- `/{lang}/tours` — tours directory and tour details
-- `/{lang}/articles` — articles directory and article details
-- `/{lang}/manas-airport-transfers` — Manas Airport transfer guide
-- `/{lang}/about` and `/{lang}/contact` — about and contact pages
-- `/admin` — content administration area
+**Supported languages**
 
-Supported locale codes are `en`, `ru`, `fr`, `de`, `es`, `it`, `jp`, `kr`, `ae`, and `cn`. Translation dictionaries live in `src/dictionaries`; the airport transfer page has its own dictionaries alongside that page.
+English `en` · Russian `ru` · French `fr` · German `de` · Spanish `es` · Italian `it` · Japanese `jp` · Korean `kr` · Arabic `ae` · Chinese `cn`
 
-## Project layout
+Main translation dictionaries live in [`src/dictionaries`](src/dictionaries). The [intro](src/app/intro/translations), [Manas experience](src/app/%5Blang%5D/manas/translations), and [airport transfer guide](src/app/%5Blang%5D/manas-airport-transfers/translations) have their own translations alongside their page content.
+
+## Project map
 
 ```text
-src/app/[lang]/       Localized pages and shared site components
-src/app/admin/        Admin pages and MongoDB models
-src/app/intro/        Home page content and parallax presentation
-src/dictionaries/     Main site translations
-src/lib/              Locale, content-fetching, and SEO helpers
-public/               Images, icons, and other static assets
+src/
+├── app/
+│   ├── [lang]/                 Localized pages and shared site components
+│   │   ├── places/             Destination directory and details
+│   │   ├── tours/              Tours, galleries, and itineraries
+│   │   ├── articles/           Travel articles
+│   │   ├── manas/              Illustrated cultural experience
+│   │   └── manas-airport-transfers/
+│   │                           Transfer directory and journey guide
+│   ├── admin/                  Admin pages, data access, and MongoDB models
+│   └── intro/                  Home page scenes and parallax presentation
+├── dictionaries/               Main site translations
+└── lib/                        Content fetching, locales, imagery, and SEO
+public/                         Images, icons, fonts, and static assets
+scripts/                        Image optimization and placeholder generation
 ```
 
-The home page uses the intro experience in `src/app/intro`. Its scene artwork and parallax behavior are defined separately from the content styling. Place and tour details are loaded from the configured content API.
+The home page uses the intro experience in `src/app/intro`, with scene artwork and animation behavior defined separately from content styling. Public place, tour, and article content comes from the configured API; the admin area connects to MongoDB.
 
-## Content and deployment notes
+## Deployment
 
-The admin area connects to MongoDB using `DB_HOST`, `DB_PORT`, and `DB_NAME`. The public place, tour, and article pages use the content API configured by `NEXT_PUBLIC_URL`; make sure that API is reachable from the server during rendering. Set `NEXT_PUBLIC_URL` to the deployed canonical site/API origin in production, and provide analytics, map, and contact settings only when those integrations are needed.
+Configure the production environment, then build and serve the app on a Node.js-compatible host:
 
-Deploy the Next.js app to a Node.js-compatible host. Build the app with `npm run build`, then run `npm start` with the production environment variables configured.
+```bash
+npm run build
+npm start
+```
+
+- Set `NEXT_PUBLIC_URL` to the deployed canonical site/API origin before building.
+- Ensure the content API is reachable from the server during rendering.
+- Configure `DB_HOST`, `DB_PORT`, and `DB_NAME` when using the admin area.
+- Add contact, analytics, and map settings as needed.
+
+Development output lives in `.next`; production output lives in `.next-build`, so building does not overwrite chunks used by a running development server.
+
+---
+
+<div align="center">
+
+**Discover Kyrgyzstan, one journey at a time.**
+
+[Back to top ↑](#guidebook-of-kyrgyzstan)
+
+</div>
