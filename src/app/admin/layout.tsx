@@ -14,12 +14,12 @@ export const metadata = {
   description: 'GuideBook of Kyrgyzstan',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const isAdmin = isAuthenticatedAdmin()
+  const isAdmin = await isAuthenticatedAdmin()
   // console.log(isAdmin)
   if(!isAdmin){
     redirect('/login')

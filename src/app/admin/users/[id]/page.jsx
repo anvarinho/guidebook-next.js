@@ -6,7 +6,8 @@ import Image from "next/image";
 
   
 
-const SinglePlacePage = async ({ params }) => {
+const SinglePlacePage = async props => {
+  const params = await props.params;
   const { id } = params;
   const product = await readUser(id);
 

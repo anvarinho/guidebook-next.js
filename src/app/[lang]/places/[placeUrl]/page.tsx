@@ -10,14 +10,21 @@ import Meta from "./meta"
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
 
 type Params = {
-    params: {
+    params: Promise<{
         placeUrl: string,
         name: string,
         lang: Locale
-    }
+    }>
 }
 
-export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
+export default async function PlacePage(props: Params) {
+    const params = await props.params;
+
+    const {
+        placeUrl,
+        lang
+    } = params;
+
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const data = await placeData
     const { page } = await getDictionary(lang)
@@ -32,11 +39,18 @@ export default async function PlacePage({ params: {placeUrl, lang}}: Params) {
     )
 }
 
-export async function generateMetadata({
-    params: { lang, placeUrl }
-  }: {
-    params: { lang: Locale; placeUrl: string }
-  }): Promise<Metadata> {
+export async function generateMetadata(
+    props: {
+        params: Promise<{ lang: Locale; placeUrl: string }>
+      }
+): Promise<Metadata> {
+    const params = await props.params;
+
+    const {
+        lang,
+        placeUrl
+    } = params;
+
     const { page } = await getDictionary(lang)
     const placeData: Promise<Place> = getPlace(placeUrl, lang)
     const place = await placeData

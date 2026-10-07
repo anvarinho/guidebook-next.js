@@ -4,9 +4,9 @@ import { redirect } from 'next/navigation'
 import { readUser } from '@/app/admin/lib/data';
 
 // Function to check if the user is authenticated
-export const isAuthenticatedAdmin = () => {
+export const isAuthenticatedAdmin = async () => {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userId = cookieStore.get('userID');
     const token = cookieStore.get('token');
 
@@ -38,7 +38,7 @@ export const isAuthenticatedAdmin = () => {
 
 // Function to sign out the user
 export const signOut = async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   cookieStore.delete('token');
   cookieStore.delete('isAdmin');
   redirect('/login');

@@ -3,7 +3,7 @@
 import { useEffect, type RefObject } from 'react';
 
 /** Progressive enhancement: server-rendered content is visible without JavaScript. */
-export function useReveal(ref: RefObject<HTMLElement>, order = 0, individual = false) {
+export function useReveal(ref: RefObject<HTMLElement | null>, order = 0, individual = false) {
   useEffect(() => {
     const root = ref.current;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');

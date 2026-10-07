@@ -7,9 +7,10 @@ import { getDictionary } from "@/lib/dictionary";
 import introImages from "../../../public/intro/optimized/manifest.json";
 import getBase64 from "@/lib/getLocalBase64";
 
-type HomeProps = { params: { lang: Locale } };
+type HomeProps = { params: Promise<{ lang: Locale }> };
 
-export async function generateMetadata({ params }: HomeProps): Promise<Metadata> {
+export async function generateMetadata(props: HomeProps): Promise<Metadata> {
+  const params = await props.params;
   const messages = await getIntroMessages(params.lang);
   const heroImage = {
     url: absoluteSiteUrl("/intro/optimized/mountain-midground-v3.webp"),
@@ -31,7 +32,8 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
 
 export const viewport: Viewport = { themeColor: "#1b3e32" };
 
-export default async function Home({ params }: HomeProps) {
+export default async function Home(props: HomeProps) {
+  const params = await props.params;
   const [messages, { page }] = await Promise.all([
     getIntroMessages(params.lang), getDictionary(params.lang),
   ]);
