@@ -36,7 +36,7 @@ export default async function RootLayout(
   const { page } = await getDictionary(lang)
   const contact = page.footer.sections.find(section => section.info)?.info
   return (
-    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[lang] ?? lang}>
+    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[lang] ?? lang} data-scroll-behavior="smooth">
       <head>
         <Meta lang={lang}/>
       </head>

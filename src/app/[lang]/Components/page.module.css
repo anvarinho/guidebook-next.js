@@ -225,13 +225,24 @@
     align-items: center;
   }
 
-  .contactBox h4{
+  .contactBox h4 {
+    position: relative;
+    isolation: isolate;
     padding: .5rem;
     margin: .5rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    background-color: rgba(124, 124, 124, 0.4);
     border-radius: .5rem;
+  }
+
+  .contactBox h4::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(var(--callout-rgb), .5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    content: "";
+    pointer-events: none;
   }
 
   .imageSlider {
@@ -556,32 +567,6 @@
     color: rgba(var(--foreground-rgb), .62);
     text-align: center;
   }
-  .ring {
-    position: relative;
-    width: 42px;
-    height: 42px;
-    border: 1px solid rgba(var(--foreground-rgb), .14);
-    border-radius: 50%;
-    animation: loadingOrbit 1.4s cubic-bezier(.45, 0, .55, 1) infinite;
-  }
-  .ring::before,
-  .ring::after {
-    position: absolute;
-    content: '';
-    border-radius: 50%;
-  }
-  .ring::before {
-    inset: 5px;
-    border: 2px solid transparent;
-    border-inline-start-color: var(--main-active-color);
-    border-block-start-color: var(--main-active-color);
-  }
-  .ring::after {
-    inset: 16px;
-    background: var(--main-active-color);
-    box-shadow: 0 0 0 5px rgba(var(--main-active-color-rgb, 255, 101, 0), .1);
-  }
-  @keyframes loadingOrbit { to { transform: rotate(360deg); } }
   .loadingText {
     max-width: 26ch;
     font-size: 11px;
@@ -597,15 +582,8 @@
     min-height: 0;
     padding: 24px;
     gap: 22px;
-    background: rgba(var(--background-end-rgb), .86);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
   }
-  .detailCenter .ring { width: 58px; height: 58px; border-width: 2px; }
-  .detailCenter .ring::before { inset: 7px; }
-  .detailCenter .ring::after { inset: 22px; box-shadow: 0 0 0 7px rgba(var(--main-active-color-rgb, 255, 101, 0), .1); }
   .detailCenter .loadingText { font-size: 13px; }
   @media (prefers-reduced-motion: reduce) {
-    .ring { animation: none; }
     :global([data-page="manas"]) .flags { transition: none; }
   }

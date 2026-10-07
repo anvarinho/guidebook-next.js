@@ -18,6 +18,9 @@
 .socialIcon { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border: 1px solid #373737; border-radius: 9px; background: #202020; color: #fff; }
 .socialIcon img, .socialIcon svg { display: block; width: 18px; height: 18px; object-fit: contain; }
 .social .links { display: flex; flex-direction: column; gap: 5px; }
+.social .links li { min-width: 0; max-width: 100%; }
+.social .link { max-width: 100%; }
+.social .link bdi { min-width: 0; white-space: nowrap; }
 .contactDetails { font-style: normal; }
 .contactDetails p { max-width: 24ch; margin-top: 10px; font-size: 13px; line-height: 1.8; color: rgba(var(--foreground-rgb), .64); }
 .bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 24px 80px; border-top: 1px solid rgba(var(--foreground-rgb), .12); }
@@ -39,7 +42,10 @@
   .social .links { flex-direction: row; flex-wrap: wrap; gap: 6px 22px; }
   .column h3 { margin-bottom: 10px; }
   .link, .contactDetails a { min-height: 42px; }
-  .bottom { flex-wrap: wrap; gap: 12px 24px; padding-block: 20px 88px; }
+  .bottom { flex-wrap: nowrap; gap: 8px; padding-block: 20px 88px; }
+  .bottom p { flex: 1; min-width: 0; white-space: nowrap; font-size: 10px; }
+  .contactLink { flex-shrink: 0; gap: 8px; font-size: 11px; }
+  .contactLink span { width: 30px; height: 30px; }
 }
 @media (max-width: 400px) { .appPanel { padding: 24px 16px; } .grid { column-gap: 16px; } }
 @media (prefers-reduced-motion: reduce) { .footer *, .footer *::before, .footer *::after { transition: none !important; } }

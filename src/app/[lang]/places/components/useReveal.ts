@@ -13,6 +13,7 @@ export function useReveal(ref: RefObject<HTMLElement | null>, order = 0, individ
 
       // Enable coordinated copy and image entrances on the travel pages.
       const sleek = Boolean(element.closest('[data-page-motion]'));
+      const hasGlassPanel = Boolean(element.querySelector('.placeContent'));
       const easing = sleek ? 'cubic-bezier(.22, 1, .36, 1)' : 'cubic-bezier(.16, 1, .3, 1)';
       let revealed = false;
       const animations: Animation[] = [];
@@ -23,7 +24,10 @@ export function useReveal(ref: RefObject<HTMLElement | null>, order = 0, individ
         observer.disconnect();
         if (immediate || reduced.matches) return;
         const delay = window.innerWidth > 600 ? ((order + index) % 3) * (sleek ? 80 : 50) : 0;
-        animations.push(element.animate([
+        animations.push(element.animate(hasGlassPanel ? [
+          { opacity: 0 },
+          { opacity: 1 },
+        ] : [
           { opacity: 0, transform: sleek ? 'translateY(12px)' : 'translateY(18px)' },
           { opacity: 1, transform: 'translateY(0)' },
         ], { duration: sleek ? 800 : 900, delay, easing, fill: 'backwards' }));

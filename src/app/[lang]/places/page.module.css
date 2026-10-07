@@ -95,6 +95,7 @@
 .weather > span { direction: ltr; unicode-bidi: isolate; }
 .placeContent {
   position: relative;
+  isolation: isolate;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -106,10 +107,10 @@
   padding: 18px 18px 16px;
   border: 1px solid rgba(var(--foreground-rgb), .14);
   border-radius: 17px;
-  background: rgba(var(--callout-rgb), .82);
+  background: rgba(var(--callout-rgb), .42);
   box-shadow: 0 10px 26px rgba(0, 0, 0, .08);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 .placeDetails { min-width: 0; }
 .region { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; line-height: 1.5; color: rgba(var(--foreground-rgb), .6); }
