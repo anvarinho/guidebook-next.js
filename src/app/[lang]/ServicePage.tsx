@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { i18n, type Locale } from '@/lib/i18n.config'
 import FlagSun from './Components/FlagSun'
+import LoadingRing from './Components/LoadingRing'
 import styles from './service-page.module.css'
 
 type Copy = {
@@ -45,11 +46,7 @@ export default function ServicePage({ state, reset }: { state: 'notFound' | 'err
     return (
       <section className={styles.loadingPage} data-service-state="loading" role="status" aria-live="polite" dir={lang === 'ae' ? 'rtl' : 'ltr'}>
         <FlagSun />
-        <div className={styles.loadingCard}>
-          <div className={styles.loadingEyebrow} aria-hidden="true"><span className={styles.loadingMark}>✳</span> GuideBook <span className={styles.loadingDivider}>/</span> {message.eyebrow}</div>
-          <div className={styles.loadingStatus}><span className={styles.loadingDot} aria-hidden="true" /><span>{message.description}</span></div>
-          <div className={styles.loadingTrack} aria-hidden="true"><span /></div>
-        </div>
+        <LoadingRing large />
       </section>
     )
   }

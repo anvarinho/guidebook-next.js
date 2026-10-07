@@ -36,10 +36,12 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement | null>, m
     // A fresh intro always starts on the hero. Keep browser scroll restoration
     // and user scrolling from changing the scene underneath the glass loader.
     const previousScrollRestoration = window.history.scrollRestoration;
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
     window.history.scrollRestoration = "manual";
+    document.documentElement.style.scrollBehavior = "auto";
     document.documentElement.classList.add("intro-loading");
     function resetIntroScroll() {
-      if (!introReady) window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+      if (!introReady) window.scrollTo(0, 0);
     }
     resetIntroScroll();
     root.classList.add("intro-enhanced");
@@ -59,6 +61,7 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement | null>, m
       schedule(() => {
         resetIntroScroll();
         introReady = true;
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
         document.documentElement.classList.remove("intro-loading");
         resizeScene();
       }, motionEnabled() ? 450 : 0);
@@ -233,6 +236,7 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement | null>, m
     return () => {
       disposed = true;
       window.history.scrollRestoration = previousScrollRestoration;
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
       document.documentElement.classList.remove("intro-loading");
       timers.forEach(timer => window.clearTimeout(timer));
       window.cancelAnimationFrame(frameId);

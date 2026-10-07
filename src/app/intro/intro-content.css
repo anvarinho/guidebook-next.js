@@ -77,6 +77,9 @@
 .kyrgyz-intro.home-refresh .hero-stat strong { font-family: inherit; font-weight: 500; font-size: clamp(21px, 2.2vw, 30px); line-height: 1.3; color: #fff; letter-spacing: -.04em; overflow-wrap: anywhere; }
 .kyrgyz-intro.home-refresh .hero-stat span { margin-top: 5px; color: #ffffffba; opacity: 1; font-size: 10px; letter-spacing: .1em; }
 .kyrgyz-intro.home-refresh .section .story-panel { width: min(100%, 550px); max-width: 550px; padding: clamp(24px, 3.2vw, 44px); border: 1px solid var(--home-line); border-radius: 28px; background: rgba(var(--callout-rgb), .52); color: var(--home-ink); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); text-shadow: none; text-align: start; box-shadow: 0 20px 64px #00000012; }
+.kyrgyz-intro.home-refresh .section .story-panel { position: relative; isolation: isolate; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.kyrgyz-intro.home-refresh .section .story-panel::before { content: ''; position: absolute; z-index: 0; inset: 0; border-radius: inherit; background: rgba(var(--callout-rgb), .52); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); pointer-events: none; }
+.kyrgyz-intro.home-refresh .section .story-panel > * { position: relative; z-index: 1; }
 .kyrgyz-intro.home-refresh .section .story-panel h2 { max-width: 18ch; margin: 18px 0 22px; font-size: clamp(32px, 3.8vw, 54px); line-height: 1.06; letter-spacing: -.05em; color: var(--home-ink); text-shadow: none; }
 .kyrgyz-intro.home-refresh .section .story-panel p { padding: 0; margin: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; color: var(--home-muted); font-size: 15px; line-height: 1.85; text-shadow: none; }
 .kyrgyz-intro.home-refresh .section .story-panel p::first-letter,

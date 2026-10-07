@@ -34,6 +34,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
           {...imagePlaceholder(blurDataURL)}
           priority={priority}
           loading={priority ? 'eager' : 'lazy'}
+          unoptimized={process.env.NODE_ENV === 'development'}
         />
         </div>
         {featured && <span className={styles.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}

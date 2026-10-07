@@ -2,6 +2,7 @@
 import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n.config'
@@ -28,12 +29,16 @@ export default function Navigation({ lang, name, links, contactLabel }: {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [portalReady, setPortalReady] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
+  const navigationRef = useRef<HTMLElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const copy = labels[lang]
   const currentPath = (pathname.replace(`/${lang}`, '') || '/').replace(/\/$/, '') || '/'
 
   useEffect(() => { setOpen(false) }, [pathname])
+  useEffect(() => { setPortalReady(true) }, [])
 
   useEffect(() => {
     let previousY = Math.max(0, window.scrollY)
@@ -55,7 +60,11 @@ export default function Navigation({ lang, name, links, contactLabel }: {
 
   useEffect(() => {
     const desktop = window.matchMedia('(min-width: 992px)')
-    const onResize = () => { if (desktop.matches) setOpen(false) }
+    const onResize = () => {
+      setIsMobile(!desktop.matches)
+      if (desktop.matches) setOpen(false)
+    }
+    onResize()
     desktop.addEventListener('change', onResize)
     return () => desktop.removeEventListener('change', onResize)
   }, [])
@@ -63,7 +72,8 @@ export default function Navigation({ lang, name, links, contactLabel }: {
   useEffect(() => {
     if (!open) return
     const onPointer = (event: PointerEvent) => {
-      if (!headerRef.current?.contains(event.target as Node)) setOpen(false)
+      const target = event.target as Node
+      if (!headerRef.current?.contains(target) && !navigationRef.current?.contains(target)) setOpen(false)
     }
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -79,29 +89,40 @@ export default function Navigation({ lang, name, links, contactLabel }: {
     }
   }, [open])
 
-  return (
-    <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-hidden={hidden && !open} data-open={open} dir={lang === 'ae' ? 'rtl' : 'ltr'} onFocus={() => setHidden(false)} onBlur={event => {
-      if (!event.currentTarget.contains(event.relatedTarget as Node)) setOpen(false)
+  const navigation = (
+    <nav ref={navigationRef} id="site-navigation" className={styles.navigation} data-open={open} aria-label={copy.navigation} dir={lang === 'ae' ? 'rtl' : 'ltr'} onBlur={event => {
+      const next = event.relatedTarget as Node | null
+      if (!headerRef.current?.contains(next) && !event.currentTarget.contains(next)) setOpen(false)
     }}>
-      <div className={styles.bar}>
-        <Link href={`/${lang}`} className={styles.brand} aria-label={name} onClick={() => setOpen(false)}>
-          <span className={styles.emblem} aria-hidden="true">
-            <span className={styles.emblemRays}/>
-            <span className={styles.emblemCenter}/>
-          </span>
-          <span className={styles.brandName}>{name}</span>
-        </Link>
-        <MenuButton ref={buttonRef} open={open} label={open ? copy.close : copy.open} onClick={() => setOpen(value => !value)}/>
-        <nav id="site-navigation" className={styles.navigation} data-open={open} aria-label={copy.navigation}>
-          <ul className={styles.links}>
-            {links.map(link => {
-              const active = currentPath === link.url || (link.url !== '/' && currentPath.startsWith(`${link.url}/`))
-              return <li key={link.url}><Link href={`/${lang}${link.url}`} className={styles.navLink} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}><span>{link.text}</span><span className={styles.mobileArrow} aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link></li>
-            })}
-          </ul>
-          <Link href={`/${lang}/contact`} className={styles.contact} aria-current={currentPath === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>{contactLabel}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
-        </nav>
-      </div>
-    </header>
+      <ul className={styles.links}>
+        {links.map(link => {
+          const active = currentPath === link.url || (link.url !== '/' && currentPath.startsWith(`${link.url}/`))
+          return <li key={link.url}><Link href={`/${lang}${link.url}`} className={styles.navLink} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}><span>{link.text}</span><span className={styles.mobileArrow} aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link></li>
+        })}
+      </ul>
+      <Link href={`/${lang}/contact`} className={styles.contact} aria-current={currentPath === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>{contactLabel}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
+    </nav>
+  )
+
+  return (
+    <>
+      <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-hidden={hidden && !open} data-open={open} dir={lang === 'ae' ? 'rtl' : 'ltr'} onFocus={() => setHidden(false)} onBlur={event => {
+        const next = event.relatedTarget as Node | null
+        if (!event.currentTarget.contains(next) && !navigationRef.current?.contains(next)) setOpen(false)
+      }}>
+        <div className={styles.bar}>
+          <Link href={`/${lang}`} className={styles.brand} aria-label={name} onClick={() => setOpen(false)}>
+            <span className={styles.emblem} aria-hidden="true">
+              <span className={styles.emblemRays}/>
+              <span className={styles.emblemCenter}/>
+            </span>
+            <span className={styles.brandName}>{name}</span>
+          </Link>
+          <MenuButton ref={buttonRef} open={open} label={open ? copy.close : copy.open} onClick={() => setOpen(value => !value)}/>
+          {!isMobile && navigation}
+        </div>
+      </header>
+      {portalReady && isMobile && open && createPortal(navigation, document.body)}
+    </>
   )
 }
