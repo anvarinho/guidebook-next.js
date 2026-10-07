@@ -14,6 +14,8 @@ export const metadata = {
   description: 'GuideBook of Kyrgyzstan',
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function RootLayout({
   children,
 }: {
