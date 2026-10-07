@@ -3,7 +3,8 @@ import { readPlace } from "../../lib/data";
 import styles from "./place.module.css";
 import Image from "next/image";
 
-const SinglePlacePage = async ({ params }) => {
+const SinglePlacePage = async props => {
+  const params = await props.params;
   const { url } = params;
   const product = await readPlace(url);
 

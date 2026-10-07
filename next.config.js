@@ -613,12 +613,13 @@ const nextConfig = {
     // WebP costs less CPU to encode on a cold image cache than AVIF.
     formats: ["image/webp"],
     minimumCacheTTL: 86400,
-    domains: ["159.65.95.44", "central-asia.live", "127.0.0.1"], // Add your external image domains here
+    remotePatterns: [
+      { hostname: "159.65.95.44" },
+      { hostname: "central-asia.live" },
+      { hostname: "127.0.0.1" },
+    ],
     // unoptimized: true,
   },
-  webpack(config) {
-    return config;
-  }
   // experimental: {
   //   serverActions: true,
   // }

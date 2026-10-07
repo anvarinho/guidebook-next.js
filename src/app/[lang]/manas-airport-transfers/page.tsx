@@ -7,9 +7,10 @@ import { transferLanguages } from "./translations";
 import { getTransferStructuredData, transferAlternates, transferUrl } from "./seo";
 
 const image = { url: "/manas-airport-transfers/airport-pickup.webp", width: 1280, height: 853, alt: "AI-generated illustration of an airport pickup" };
-type PageProps = { params: { lang: Locale } };
+type PageProps = { params: Promise<{ lang: Locale }> };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const messages = await getTransferMessages(params.lang);
   const url = transferUrl(params.lang);
   const localizedImage = { ...image, alt: messages.s248 };
@@ -27,7 +28,8 @@ export const viewport: Viewport = { themeColor: [
   { media: "(prefers-color-scheme: dark)", color: "#000000" },
 ] };
 
-export default async function TransfersPage({ params }: PageProps) {
+export default async function TransfersPage(props: PageProps) {
+  const params = await props.params;
   const messages = await getTransferMessages(params.lang);
   const jsonLd = JSON.stringify(getTransferStructuredData(params.lang, messages)).replace(/</g, "\\u003c");
   return <TransferI18n messages={messages}>

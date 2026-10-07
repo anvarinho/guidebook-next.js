@@ -3,7 +3,7 @@ import { i18n } from '@/lib/i18n.config'
 
 const rootRoutes = new Set(['admin', 'login', 'privacy-policy', 'website-creation-bishkek'])
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const firstSegment = pathname.split('/')[1]
 

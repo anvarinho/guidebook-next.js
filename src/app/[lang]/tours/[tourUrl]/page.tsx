@@ -18,10 +18,17 @@ import { getTransferMessages } from "../../manas-airport-transfers/translations/
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
 type Params = {
-  params: { tourUrl: string; lang: Locale };
+  params: Promise<{ tourUrl: string; lang: Locale }>;
 };
 
-export default async function Tour({ params: { tourUrl, lang } }: Params) {
+export default async function Tour(props: Params) {
+  const params = await props.params;
+
+  const {
+    tourUrl,
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang);
   const data: TourInfo = await getTour(tourUrl, lang);
   if (!data) notFound();
@@ -117,9 +124,14 @@ export default async function Tour({ params: { tourUrl, lang } }: Params) {
   );
 }
 
-export async function generateMetadata({
-  params: { tourUrl, lang },
-}: Params): Promise<Metadata> {
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    tourUrl,
+    lang
+  } = params;
+
   const tourData: Promise<TourInfo> = getTour(tourUrl, lang);
   const tour = await tourData;
   if (!tour) notFound();

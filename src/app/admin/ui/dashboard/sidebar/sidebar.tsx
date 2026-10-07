@@ -22,7 +22,6 @@ import {
 
 // import { auth, signOut } from "@/app/auth";
 import { signOut } from "@/lib/auth";
-import React, { useEffect } from "react";
 import { readUser } from "@/app/admin/lib/data";
 import { cookies } from "next/headers";
 
@@ -100,7 +99,7 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const userID = cookieStore.get("userID")?.value || null;
   const isAdmin = cookieStore.get("isAdmin")?.value || null;
   const user = isAdmin ? await readUser(userID) : "";
@@ -146,4 +145,3 @@ const Sidebar = async () => {
 };
 
 export default Sidebar;
-

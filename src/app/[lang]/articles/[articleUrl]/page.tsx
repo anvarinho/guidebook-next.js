@@ -14,14 +14,21 @@ import { PlacesReveal } from '../../places/components/PlacesMotion';
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
 
 type Params = {
-  params: {
+  params: Promise<{
       articleUrl: string,
       name: string,
       lang: Locale
-  }
+  }>
 }
 
-export default async function Home({ params: {articleUrl, lang}}: Params) {
+export default async function Home(props: Params) {
+  const params = await props.params;
+
+  const {
+    articleUrl,
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang)
   const data: Promise<Article> = getArticle(articleUrl, lang)
   const article = await data
@@ -52,7 +59,14 @@ export default async function Home({ params: {articleUrl, lang}}: Params) {
   )
 }
 
-export async function generateMetadata({ params: {articleUrl, lang}}: Params): Promise<Metadata> {
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    articleUrl,
+    lang
+  } = params;
+
   const article = await getArticle(articleUrl, lang)
   if (!article) notFound()
   const { page } = await getDictionary(lang)

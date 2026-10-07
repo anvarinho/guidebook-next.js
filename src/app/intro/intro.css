@@ -663,7 +663,7 @@ html.intro-loading body {
 .kyrgyz-intro .hero-eagle-wing {
   transform-box: view-box;
   transform-origin: 516px 410px;
-  animation: intro-hero-eagle-near-wing 7.3s cubic-bezier(.45, 0, .55, 1) infinite;
+  animation: intro-hero-eagle-near-wing 4.8s ease-in-out infinite;
   animation-delay: var(--eagle-wing-delay);
 }
 .kyrgyz-intro .hero-eagle-wing--far {
@@ -672,14 +672,16 @@ html.intro-loading body {
 }
 /* Small shoulder movements preserve the feather detail during a long glide. */
 @keyframes intro-hero-eagle-near-wing {
-  0%, 24%, 48%, 100% { transform: rotate(0deg) scaleY(1); }
-  12%, 36% { transform: rotate(-3deg) scaleY(.94); }
-  72% { transform: rotate(.5deg) scaleY(1); }
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  24% { transform: rotate(-3deg) scaleY(.94); }
+  50% { transform: rotate(0deg) scaleY(1); }
+  74% { transform: rotate(-2deg) scaleY(.96); }
 }
 @keyframes intro-hero-eagle-far-wing {
-  0%, 24%, 48%, 100% { transform: rotate(0deg) scaleY(1); }
-  12%, 36% { transform: rotate(3deg) scaleY(.95); }
-  72% { transform: rotate(-.5deg) scaleY(1); }
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  24% { transform: rotate(3deg) scaleY(.95); }
+  50% { transform: rotate(0deg) scaleY(1); }
+  74% { transform: rotate(2deg) scaleY(.97); }
 }
 @keyframes intro-hero-eagle-bank {
   0%, 100% { transform: translateY(1px) rotate(-.6deg); }

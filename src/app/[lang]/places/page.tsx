@@ -14,59 +14,71 @@ import { PlacesReveal } from './components/PlacesMotion';
 import Link from 'next/link';
 import { aboutContent } from '../about/content';
 
-export default async function Places({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}) {
+export default async function Places(
+  props: {
+    params: Promise<{lang : Locale}>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const [{ page }, places] = await Promise.all([getDictionary(lang), getPlacesWithWeather(lang)]);
-    return (
-        <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
-          <Meta lang={lang} places={places} page={page}/>
-            <header className={styles.pageIntro}>
-              <PlacesReveal className={styles.introTitle}>
-                <p className={styles.eyebrow} data-reveal-copy>{page.sights.name}</p>
-                <h1 data-reveal-copy>{page.sights.title}</h1>
-              </PlacesReveal>
-              <PlacesReveal className={styles.introAside} order={1}>
-                <p className={styles.description} data-reveal-copy>{page.sights.description}</p>
-                <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
-              </PlacesReveal>
-            </header>
-            <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
-              <div className={styles.featuredGrid}>
-                {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority={i === 0} featured order={i}/>)}
-              </div>
-            </section>
-            <PlacesReveal className={styles.collectionHeading}>
-              <h2 data-reveal-copy>{page.sights.sights}</h2>
-              <span className={styles.collectionLine} aria-hidden="true"/>
-              <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
+  return (
+      <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+        <Meta lang={lang} places={places} page={page}/>
+          <header className={styles.pageIntro}>
+            <PlacesReveal className={styles.introTitle}>
+              <p className={styles.eyebrow} data-reveal-copy>{page.sights.name}</p>
+              <h1 data-reveal-copy>{page.sights.title}</h1>
             </PlacesReveal>
-            <div className={styles.placesDiv}>
-              <div className={styles.placesList}>
-                  <Suspense fallback={
-                    <div className={styles.loadingSpinnerWrapper}>
-                      <LoadingSpinner text={page.loading} />
-                    </div>}>
-                    {places.slice(3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} order={i}/>)}
-                    <LoadMore key={lang} lang={lang} initialIds={places.map(place => place._id)}/>
-                  </Suspense>
-              </div>
+            <PlacesReveal className={styles.introAside} order={1}>
+              <p className={styles.description} data-reveal-copy>{page.sights.description}</p>
+              <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
+            </PlacesReveal>
+          </header>
+          <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
+            <div className={styles.featuredGrid}>
+              {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority={i === 0} featured order={i}/>)}
             </div>
-            <PlacesReveal className={styles.contactPanel}>
-              <div><h2 data-reveal-copy>{aboutContent[lang].invitation}</h2><p data-reveal-copy>{aboutContent[lang].invitationBody}</p></div>
-              <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
-            </PlacesReveal>
-        </div>
-    )
+          </section>
+          <PlacesReveal className={styles.collectionHeading}>
+            <h2 data-reveal-copy>{page.sights.sights}</h2>
+            <span className={styles.collectionLine} aria-hidden="true"/>
+            <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
+          </PlacesReveal>
+          <div className={styles.placesDiv}>
+            <div className={styles.placesList}>
+                <Suspense fallback={
+                  <div className={styles.loadingSpinnerWrapper}>
+                    <LoadingSpinner text={page.loading} />
+                  </div>}>
+                  {places.slice(3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} order={i}/>)}
+                  <LoadMore key={lang} lang={lang} initialIds={places.map(place => place._id)}/>
+                </Suspense>
+            </div>
+          </div>
+          <PlacesReveal className={styles.contactPanel}>
+            <div><h2 data-reveal-copy>{aboutContent[lang].invitation}</h2><p data-reveal-copy>{aboutContent[lang].invitationBody}</p></div>
+            <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
+          </PlacesReveal>
+      </div>
+  )
 }
 
-export async function generateMetadata({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{lang : Locale}>
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang)
   const pageUrl = `${siteUrl}/${lang}/places/`
   const description = page.sights.description.replace(/\s+/g, ' ').trim().slice(0, 160)

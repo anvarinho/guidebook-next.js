@@ -9,9 +9,10 @@ import type { Locale } from "@/lib/i18n.config";
 import { getManasMessages, manasLanguages } from "./translations";
 import "./manas.css";
 
-type PageProps = { params: { lang: Locale } };
+type PageProps = { params: Promise<{ lang: Locale }> };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const params = await props.params;
   const messages = await getManasMessages(params.lang);
   const title = messages.metaTitle;
   const description = messages.metaDescription;
@@ -36,7 +37,8 @@ export const viewport: Viewport = { themeColor: [
   { media: '(prefers-color-scheme: dark)', color: '#000000' },
 ] };
 
-export default async function ManasPage({ params }: PageProps) {
+export default async function ManasPage(props: PageProps) {
+  const params = await props.params;
   const messages = await getManasMessages(params.lang);
   return <Manas className="font-manas-panel" key={params.lang} messages={interactiveMessages(messages)} language={manasLanguages[params.lang]}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
     "@context": "https://schema.org", "@type": "WebPage",

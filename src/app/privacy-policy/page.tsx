@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function PrivacyPolicy() {
     const styles = getPrivacyPolicyStyles();
@@ -39,7 +40,7 @@ export default function PrivacyPolicy() {
         <div>
             <header>
             <style dangerouslySetInnerHTML={{ __html: styles }} />
-                <a href="/" className="logo">GuideBook</a>
+                <Link href="/" className="logo">GuideBook</Link>
             </header>
             <section>
                 <img id="stars" src="/privacy/stars.png" alt="stars" />
@@ -331,4 +332,3 @@ const getPrivacyPolicyStyles = () => {
         }
     `;
 };
-

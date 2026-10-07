@@ -7,7 +7,8 @@ import Pagination from "../ui/dashboard/pagination/pagination";
 // import { fetchProducts } from "@/app/lib/data";
 // import { deleteProduct } from "@/app/lib/actions";
 
-const ProductsPage = async ({ searchParams }) => {
+const ProductsPage = async props => {
+  const searchParams = await props.searchParams;
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   // const { count, products } = await fetchProducts(q, page);

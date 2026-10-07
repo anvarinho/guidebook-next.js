@@ -14,11 +14,17 @@ import lake from '../../../../public/bozteri.jpg'
 import yurt from '../../../../public/bozuy.jpg'
 
 
-export default async function Home({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}) {
+export default async function Home(
+  props: {
+    params: Promise<{lang : Locale}>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang)
   const copy = aboutContent[lang]
   const destinations = ['places', 'tours', 'articles']
@@ -82,11 +88,17 @@ export default async function Home({
   )
 }
 
-export async function generateMetadata({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{lang : Locale}>
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang)
   const siteUrl = (process.env.NEXT_PUBLIC_URL || 'https://central-asia.live').replace(/\/$/, '')
   const pageUrl = `${siteUrl}/${lang}/about/`

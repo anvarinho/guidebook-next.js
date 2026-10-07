@@ -12,7 +12,13 @@ import LoadingSpinner from '../Components/LoadingSpinner';
 import { PlacesReveal } from '../places/components/PlacesMotion';
 import Meta from './meta';
 
-export default async function Articles({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function Articles(props: { params: Promise<{ lang: Locale }> }) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const [{ page }, articles] = await Promise.all([getDictionary(lang), getAllArticles(lang)]);
   const featured = articles.length >= 3;
 
@@ -48,11 +54,17 @@ export default async function Articles({ params: { lang } }: { params: { lang: L
   );
 }
 
-export async function generateMetadata({
-  params: {lang}
-}: {
-  params: {lang : Locale}
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{lang : Locale}>
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const { page } = await getDictionary(lang)
   return {
       title: {

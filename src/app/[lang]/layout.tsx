@@ -20,32 +20,38 @@ export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
 }
 
-export default async function RootLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode,
-  params: { lang: Locale }
-}) {
-  const { page } = await getDictionary(params.lang)
+export default async function RootLayout(
+  props: {
+    children: React.ReactNode,
+    params: Promise<{ lang: string }>
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
+  const lang = params.lang as Locale
+  const { page } = await getDictionary(lang)
   const contact = page.footer.sections.find(section => section.info)?.info
   return (
-    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[params.lang] ?? params.lang}>
+    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[lang] ?? lang}>
       <head>
-        <Meta lang={params.lang}/>
+        <Meta lang={lang}/>
       </head>
 
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
-      <body className={params.lang === 'ru' ? 'font-exo-2' : 'font-bai-jamjuree'}>
+      <body className={lang === 'ru' ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
-          navbar={<Navbar lang={params.lang}/>}
-          footer={<FooterVisibility><Footer lang={params.lang}/></FooterVisibility>}
-          controls={<><ContactButton lang={params.lang}/><Flags lang={params.lang}/></>}
+          navbar={<Navbar lang={lang}/>}
+          footer={<FooterVisibility><Footer lang={lang}/></FooterVisibility>}
+          controls={<><ContactButton lang={lang}/><Flags lang={lang}/></>}
         >
           {children}
         </LanguageShell>
-        <ContactDialog lang={params.lang} title={page.about.buttons.contact_us}
+        <ContactDialog lang={lang} title={page.about.buttons.contact_us}
           phone={process.env.NEXT_PUBLIC_PHONE_NUMBER || contact?.phone || '+996 500 490 806'}
           email={process.env.NEXT_PUBLIC_EMAIL || contact?.email || 'anvarinho@gmail.com'}
           address={contact?.address || ''}/>

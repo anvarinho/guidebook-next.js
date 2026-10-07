@@ -3,7 +3,7 @@
 import { useEffect, type RefObject } from "react";
 import type { IntroMessages } from "./translations";
 
-export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages: IntroMessages) {
+export function useIntroAnimations(introRef: RefObject<HTMLDivElement | null>, messages: IntroMessages) {
   useEffect(() => {
     const root = introRef.current;
     if (!root) return;
@@ -116,7 +116,9 @@ export function useIntroAnimations(introRef: RefObject<HTMLDivElement>, messages
       // Restoration can happen after mount or load; measure only after resetting.
       if (!introReady && (window.scrollX || window.scrollY)) resetIntroScroll();
       const viewportHeight = window.innerHeight;
-      const intensity = window.innerWidth <= 760 ? 0.22 : 0.42;
+      // Give scroll input a little more visible response while keeping the
+      // movement restrained enough that foreground elements stay readable.
+      const intensity = window.innerWidth <= 760 ? 0.28 : 0.5;
       const bounds = groups.map(group => group.section.getBoundingClientRect());
       if (boundsDirty) {
         journeyHeight = root!.offsetHeight;
