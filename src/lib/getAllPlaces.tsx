@@ -16,8 +16,8 @@ export function getPlacesByRegion(lang: string, region: string, url: string) {
 }
 
 export async function sitemapPlaces() {
-  const data = await getContent<Places>('places/more', { offset: '0', limit: '200' });
-  return data.places.map(place => ({ placeUrl: place.url, lastModified: place.created }));
+  const places = await getAllPlaces('en');
+  return places.map(place => ({ placeUrl: place.url, lastModified: place.created }));
 }
 
 export function getHomePlaces(lang: string) {
