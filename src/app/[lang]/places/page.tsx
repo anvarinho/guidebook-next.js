@@ -80,7 +80,7 @@ export async function generateMetadata(
   } = params;
 
   const { page } = await getDictionary(lang)
-  const pageUrl = `${siteUrl}/${lang}/places/`
+  const pageUrl = absoluteSiteUrl(`${lang}/places`)
   const description = page.sights.description.replace(/\s+/g, ' ').trim().slice(0, 160)
   const imageUrl = `${siteUrl}/uploads/kel-suu1.jpg`
   return {

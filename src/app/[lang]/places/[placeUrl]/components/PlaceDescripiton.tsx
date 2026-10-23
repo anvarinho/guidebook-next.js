@@ -1,5 +1,6 @@
 import styles from "../page.module.css";
 import { PlacesRevealContent } from '../../components/PlacesMotion';
+import { localizedContentHref } from '@/lib/links';
 
 interface Props {
   text: string | { [key: string]: string };
@@ -9,7 +10,7 @@ interface Props {
 }
 
 // Helper function to process text
-function processDescription(content: string, highlights: string[]): string {
+function processDescription(content: string, highlights: string[], lang: string): string {
   let html = content;
 
   // FIRST: Convert markdown images to HTML img tags (do this before any other processing)
@@ -118,12 +119,14 @@ function processDescription(content: string, highlights: string[]): string {
   // Convert markdown links
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   html = html.replace(linkRegex, (match, text, url) => {
-    // Check if it's an internal link (no http/https)
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return `<a href="/places/${url}" class="${styles.link}">${text}</a>`;
+    const reference = url.trim();
+    if (/^(https?:)?\/\//i.test(reference)) {
+      return `<a href="${reference}" target="_blank" rel="noopener noreferrer" class="${styles.link}">${text}</a>`;
     }
-    // External link
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="${styles.link}">${text}</a>`;
+    if (/^(mailto:|tel:|#)/i.test(reference)) {
+      return `<a href="${reference}" class="${styles.link}">${text}</a>`;
+    }
+    return `<a href="${localizedContentHref(reference, lang)}" class="${styles.link}">${text}</a>`;
   });
 
   // Restore protected HTML tables
@@ -239,7 +242,7 @@ export default function PlaceDescription({
       ? text
       : text[lang] || text.en || Object.values(text)[0] || "";
 
-  const processedHtml = processDescription(content, highlights);
+  const processedHtml = processDescription(content, highlights, lang);
 
   return (
     <PlacesRevealContent
