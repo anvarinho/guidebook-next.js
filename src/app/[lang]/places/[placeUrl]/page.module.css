@@ -4,12 +4,13 @@
   padding: 108px 40px 80px;
   color: rgb(var(--foreground-rgb));
 }
+.breadcrumbMotion { margin-bottom: 28px; }
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 0;
   font-size: 13px;
   line-height: 1.6;
   color: rgba(var(--foreground-rgb), .65);
@@ -32,8 +33,32 @@
   border-radius: 24px;
   overflow: hidden;
   background: rgba(var(--foreground-rgb), .06);
+  isolation: isolate;
 }
-.galleryStage > img { object-fit: cover; }
+.gallery[data-place-detail-motion] .galleryStage { touch-action: pan-y; }
+.galleryPhotoViewport { position: absolute; inset: 0; }
+.gallery[data-place-detail-motion] .galleryPhotoViewport { inset: -2%; transform: scale(1.015); }
+.galleryPhoto { position: absolute; inset: 0; overflow: hidden; }
+.galleryPhoto :global(img) { object-fit: cover; }
+.gallery[data-place-detail-motion] .galleryPhotoPreload { z-index: 1; opacity: 0; pointer-events: none; }
+.gallery[data-place-detail-motion] .galleryPhotoPreload[data-direction="1"] { transform: translateX(8px) scale(1.008); }
+.gallery[data-place-detail-motion] .galleryPhotoPreload[data-direction="-1"] { transform: translateX(-8px) scale(1.008); }
+.gallery[data-place-detail-motion] .galleryPhotoIncoming { z-index: 1; opacity: 0; transition: opacity 320ms cubic-bezier(.22,1,.36,1), transform 320ms cubic-bezier(.22,1,.36,1); }
+.gallery[data-place-detail-motion] .galleryPhotoIncoming[data-direction="1"] { transform: translateX(8px) scale(1.008); }
+.gallery[data-place-detail-motion] .galleryPhotoIncoming[data-direction="-1"] { transform: translateX(-8px) scale(1.008); }
+.gallery[data-place-detail-motion] .galleryPhotoIncoming.galleryPhotoEntered { opacity: 1; transform: translateX(0) scale(1); }
+.gallery[data-place-detail-motion] .galleryPhotoOutgoing { z-index: 0; opacity: 1; transition: opacity 320ms cubic-bezier(.22,1,.36,1), transform 320ms cubic-bezier(.22,1,.36,1); }
+.gallery[data-place-detail-motion] .galleryPhotoOutgoing[data-direction="1"] { transform: translateX(-6px) scale(.998); opacity: 0; }
+.gallery[data-place-detail-motion] .galleryPhotoOutgoing[data-direction="-1"] { transform: translateX(6px) scale(.998); opacity: 0; }
+.gallery[data-place-detail-motion] .galleryStage:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 4px; }
+@keyframes gallery-settle { from { transform: scale(1.035); } to { transform: scale(1.015); } }
+@supports (animation-timeline: view()) {
+  .gallery[data-place-detail-motion] .galleryPhotoViewport {
+    animation: gallery-settle auto linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 36%;
+  }
+}
 .galleryControl {
   position: absolute;
   top: 50%;
@@ -53,14 +78,22 @@
   transition: background .2s ease;
 }
 .galleryControl:hover { background: rgba(0,0,0,.75); }
+.gallery[data-place-detail-motion] .galleryControl { transition: background .2s ease, transform .22s cubic-bezier(.22,1,.36,1); }
+.gallery[data-place-detail-motion] .galleryControl:active { transform: translateY(-50%) scale(.96); }
+.gallery[data-place-detail-motion] .galleryControl:focus-visible { outline: 2px solid white; outline-offset: 3px; }
 .previous { left: 20px; }
 .next { right: 20px; }
 .galleryCounter { position: absolute; bottom: 20px; right: 20px; padding: 7px 14px; border-radius: 999px; background: rgba(0,0,0,.6); color: white; font-size: 13px; font-variant-numeric: tabular-nums; }
+.gallery[data-place-detail-motion] .galleryCounterValue { display: inline-block; animation: counter-appear 220ms cubic-bezier(.22,1,.36,1) both; }
+@keyframes counter-appear { from { opacity: .55; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
 .thumbnails { display: flex; gap: 10px; overflow-x: auto; padding: 14px 4px 4px; scrollbar-width: thin; }
 .thumbnails button { position: relative; flex: 0 0 88px; height: 62px; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: rgba(var(--foreground-rgb), .08); cursor: pointer; opacity: .6; transition: opacity .2s ease; }
+.gallery[data-place-detail-motion] .thumbnails button { transition: opacity .2s ease, border-color .22s ease, transform .22s cubic-bezier(.22,1,.36,1); }
 .thumbnails button img { object-fit: cover; }
 .thumbnails button[aria-pressed="true"] { border-color: var(--main-active-color); opacity: 1; }
 .thumbnails button:hover { opacity: 1; }
+.gallery[data-place-detail-motion] .thumbnails button:active { transform: scale(.97); }
+.gallery[data-place-detail-motion] .thumbnails button:focus-visible { outline: 2px solid var(--main-active-color); outline-offset: 3px; }
 .main :is(a, button):focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 4px; }
 .articleLayout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: start; gap: clamp(32px, 5vw, 72px); }
 .articleBody { min-width: 0; }
@@ -102,6 +135,7 @@
   padding: 2px 4px 12px; margin: -2px -4px -4px;
   scrollbar-width: thin; scrollbar-color: rgba(var(--foreground-rgb), .2) transparent;
 }
+.weatherMotion, .locationCardMotion { min-width: 0; }
 .locationCard, .weatherPanel {
   overflow: hidden; border: 1px solid rgba(var(--foreground-rgb), .12); border-radius: 24px;
   background: rgba(var(--callout-rgb), .65); color: rgb(var(--foreground-rgb));
@@ -155,7 +189,10 @@
 .mapLink svg { width: 18px; height: 18px; flex-shrink: 0; }
 .mapLinkPin { color: var(--main-active-color); }
 .mapLinkArrow { margin-inline-start: auto; color: rgba(var(--foreground-rgb), .55); }
+.mapLinkArrow { transition: transform .22s cubic-bezier(.22,1,.36,1); }
 .mapLink:hover { background: rgba(var(--foreground-rgb), .07); border-color: var(--main-active-color); }
+.mapLink:hover .mapLinkArrow { transform: translate(2px, -2px); }
+.main[dir="rtl"] .mapLink:hover .mapLinkArrow { transform: translate(-2px, -2px); }
 .mapLink:focus-visible { outline: 2px solid var(--main-active-color); outline-offset: 3px; }
 .airportTransferLink { margin-block: 32px; padding: 22px 24px; border: 1px solid rgba(var(--foreground-rgb), .16); border-inline-start: 3px solid var(--main-active-color); border-radius: 12px; background: rgba(var(--callout-rgb), .65); }
 .airportTransferLink a { display: flex; align-items: center; justify-content: space-between; gap: 20px; line-height: 1.6; font-weight: 600; }
@@ -166,12 +203,15 @@
 .relatedGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .relatedItem { min-width: 0; }
 .relatedSummary { margin: 16px 4px 0; color: rgba(var(--foreground-rgb), .7); font-size: 14px; line-height: 1.8; white-space: pre-line; }
+.readingProgress { position: fixed; z-index: 1001; inset: 76px 0 auto; display: block; height: 2px; background: var(--main-active-color); transform: scaleX(0); transform-origin: left center; pointer-events: none; }
+.main[dir="rtl"] .readingProgress { transform-origin: right center; }
 .main[dir="rtl"] .articleHeader h1 { letter-spacing: 0; line-height: 1.4; }
 .main[dir="rtl"] .breadcrumb a span { transform: rotate(180deg); }
 .notfound { padding: 100px 24px; text-align: center; }
 .buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; padding: 24px; }
 .floatingButton { padding: 12px 20px; border-radius: 12px; background: rgba(var(--callout-rgb), .8); border: 1px solid rgba(var(--foreground-rgb), .15); }
 @media(max-width: 991px) {
+  .readingProgress { top: 72px; }
   .main { padding: 104px 24px 64px; }
   .articleLayout { grid-template-columns: 1fr; }
   .locationSidebar { --place-map-height: 240px; position: static; max-height: none; overflow: visible; }
@@ -197,5 +237,14 @@
   .relatedGrid { grid-template-columns: 1fr; }
 }
 @media(prefers-reduced-motion: reduce) {
-  .galleryControl, .thumbnails button, .mapLink { transition: none; }
+  .galleryControl, .thumbnails button { transition: none; }
+  .gallery[data-place-detail-motion] .galleryPhotoViewport { animation: none !important; transform: scale(1.015); }
+  .gallery[data-place-detail-motion] .galleryPhotoIncoming,
+  .gallery[data-place-detail-motion] .galleryPhotoOutgoing,
+  .gallery[data-place-detail-motion] .galleryControl,
+  .gallery[data-place-detail-motion] .thumbnails button,
+  .gallery[data-place-detail-motion] .galleryCounterValue { transition: none; animation: none; }
+  .gallery[data-place-detail-motion] .galleryPhotoIncoming { opacity: 1; transform: none; }
+  .gallery[data-place-detail-motion] .galleryPhotoOutgoing { opacity: 0; }
+  .readingProgress { display: none; }
 }
