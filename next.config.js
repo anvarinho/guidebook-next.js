@@ -28,8 +28,43 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/index.html",
+        destination: "/en",
+        permanent: true,
+      },
+      {
+        source: "/lander",
+        destination: "/en/manas-airport-transfers",
+        permanent: true,
+      },
+      {
         source: "/places",
         destination: "/en/places", // Matched parameters can be used in the destination
+        permanent: true,
+      },
+      {
+        source: "/places/en/places/ysyk-kol-lake",
+        destination: "/en/places/ysyk-kol-lake",
+        permanent: true,
+      },
+      {
+        source: "/places/en/tours",
+        destination: "/en/tours",
+        permanent: true,
+      },
+      {
+        source: "/places/en/tours/:path*",
+        destination: "/en/tours/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:lang/places/en/tours",
+        destination: "/:lang/tours",
+        permanent: true,
+      },
+      {
+        source: "/:lang/places/en/tours/:path*",
+        destination: "/:lang/tours/:path*",
         permanent: true,
       },
       {
@@ -240,6 +275,11 @@ const nextConfig = {
       {
         source: '/place/panorama', // Use the wildcard :slug* to match all deeper URLs
         destination: '/en/places/panorama', // Redirect to the equivalent URL in the /en/places path
+        permanent: true,
+      },
+      {
+        source: '/place/ata-beyit-memorial-complex',
+        destination: '/en/places/ata-beyit-memorial-complex',
         permanent: true,
       },
       {

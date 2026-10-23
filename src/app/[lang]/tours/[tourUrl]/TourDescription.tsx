@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { PlacesRevealContent } from '../../places/components/PlacesMotion';
+import { localizedContentHref } from '@/lib/links';
 
 interface TourDescriptionProps {
   description: string;
@@ -56,12 +57,14 @@ export default function TourDescription({
   // Convert markdown links
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   html = html.replace(linkRegex, (match, text, url) => {
-    // Check if it's an internal link (no http/https)
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return `<a href="/${lang}/places/${url}" class="${styles.link}">${text}</a>`;
+    const reference = url.trim();
+    if (/^(https?:)?\/\//i.test(reference)) {
+      return `<a href="${reference}" target="_blank" rel="noopener noreferrer" class="${styles.link}">${text}</a>`;
     }
-    // External link
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="${styles.link}">${text}</a>`;
+    if (/^(mailto:|tel:|#)/i.test(reference)) {
+      return `<a href="${reference}" class="${styles.link}">${text}</a>`;
+    }
+    return `<a href="${localizedContentHref(reference, lang)}" class="${styles.link}">${text}</a>`;
   });
 
   // Convert URLs to clickable links (if not already linked)
