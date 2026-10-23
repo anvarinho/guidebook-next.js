@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { Locale } from '@/lib/i18n.config';
 import getPlaceWeather from '@/lib/getPlaceWeather';
 import WeatherIcon, { weatherIconCode, weatherAssetSource } from '../../../Components/weather/WeatherIcon';
+import { PlacesReveal } from '../../components/PlacesMotion';
 import styles from '../page.module.css';
 
 const labels: Record<Locale, string> = {
@@ -22,6 +23,7 @@ export default async function PlaceWeather({ url, lang, language, weather }: {
     .format(Math.round(temperature) || 0);
 
   return (
+    <PlacesReveal className={styles.weatherMotion} order={1}>
     <section className={styles.weatherPanel} aria-label={labels[lang]} data-night={icon.endsWith('n')}
       data-condition={icon.slice(0, 2)} style={{ '--weather-art': `url("${weatherAssetSource(icon)}")` } as CSSProperties}>
       <div className={styles.weatherHeading}>
@@ -36,5 +38,6 @@ export default async function PlaceWeather({ url, lang, language, weather }: {
       </div>
       {description && <p className={styles.weatherDescription}>{description}</p>}
     </section>
+    </PlacesReveal>
   );
 }

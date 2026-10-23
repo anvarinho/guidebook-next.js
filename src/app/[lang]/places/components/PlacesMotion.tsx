@@ -1,15 +1,15 @@
 'use client';
 
-import { useLayoutEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { useReveal } from './useReveal';
 
-export function PlacesReveal({ children, className, order = 0 }: {
-  children: ReactNode; className?: string; order?: number;
+export function PlacesReveal({ children, className, order = 0, gallery = false }: {
+  children: ReactNode; className?: string; order?: number; gallery?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useReveal(ref, order);
-  return <div ref={ref} className={className} data-reveal-group>{children}</div>;
+  return <div ref={ref} className={className} data-reveal-group data-reveal-gallery={gallery || undefined}>{children}</div>;
 }
 
 /** Observe each rendered description block without adding layout wrappers. */
@@ -19,28 +19,29 @@ export function PlacesRevealContent({ html, className }: { html: string; classNa
   return <div ref={ref} className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-/** Place detail routes should always open at their title, not a restored list offset. */
+/** Preserve hash and browser history scroll positions while resetting new detail visits. */
 export function PlaceScrollReset() {
   const pathname = usePathname();
+  const traversedPath = useRef<string | null>(null);
+  const mounted = useRef(false);
+  useEffect(() => {
+    const markTraversal = () => { traversedPath.current = window.location.pathname; };
+    window.addEventListener('popstate', markTraversal);
+    return () => window.removeEventListener('popstate', markTraversal);
+  }, []);
+
   useLayoutEffect(() => {
-    if (!/^\/[a-z]{2}\/places\/[^/]+\/?$/i.test(pathname)) return;
-    const html = document.documentElement;
-    const previousBehavior = html.style.scrollBehavior;
-    const previousRestoration = window.history.scrollRestoration;
-    html.style.scrollBehavior = 'auto';
-    window.history.scrollRestoration = 'manual';
-    const reset = () => window.scrollTo(0, 0);
-    reset();
-    const frame = window.requestAnimationFrame(reset);
-    const secondFrame = window.requestAnimationFrame(() => window.requestAnimationFrame(reset));
-    const timer = window.setTimeout(reset, 240);
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.cancelAnimationFrame(secondFrame);
-      window.clearTimeout(timer);
-      html.style.scrollBehavior = previousBehavior;
-      window.history.scrollRestoration = previousRestoration;
-    };
+    const restoredPath = traversedPath.current === pathname;
+    traversedPath.current = null;
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    if (restoredPath || window.location.hash || !/^\/[a-z]{2}\/places\/[^/]+\/?$/i.test(pathname)) return;
+
+    // Next.js owns route scrolling and browser history restoration. Keep this immediate
+    // fallback for pushed detail routes without overriding a later Back/Forward restore.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
   }, [pathname]);
   return null;
 }

@@ -9,19 +9,21 @@ import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
 import { useReveal } from './useReveal';
 
-export default function PlaceCard({ place, lang, blurDataURL, priority = false, featured = false, order = 0 }: {
+export default function PlaceCard({ place, lang, blurDataURL, priority = false, featured = false, order = 0, detailPage = false }: {
   place: Pick<PlaceAlias, 'url' | 'images' | 'name' | 'title' | 'region'> & { weather?: Weather | null };
   lang: Locale;
   blurDataURL?: string;
   priority?: boolean;
   featured?: boolean;
   order?: number;
+  detailPage?: boolean;
 }) {
   const cardRef = useRef<HTMLAnchorElement>(null);
   useReveal(cardRef, order);
 
   return (
-    <Link ref={cardRef} data-reveal-group href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
+    <Link ref={cardRef} data-reveal-group data-place-detail-card={detailPage || undefined}
+      href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
         <div className={styles.imageFrame} data-reveal-image>
         <Image
