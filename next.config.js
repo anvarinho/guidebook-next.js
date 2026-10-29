@@ -5,10 +5,30 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   async headers() {
-    return ["/manas/:path*", "/intro/:path*", "/manas-airport-transfers/:path*"].map(source => ({
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          // Keep prerendering, inline artwork, maps, and analytics working.
+          { key: 'Content-Security-Policy', value: "base-uri 'self'; object-src 'none'; frame-ancestors 'self'" },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), payment=()' },
+          ...(process.env.NODE_ENV === 'production' ? [
+            { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          ] : []),
+        ],
+      },
+      ...['/admin/:path*', '/login', '/api/auth/:path*'].map(source => ({
+        source,
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      })),
+      ...["/manas/:path*", "/intro/:path*", "/manas-airport-transfers/:path*"].map(source => ({
       source,
       headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
-    }));
+      })),
+    ];
   },
   // i18n:{
   //     locales:['en-US', 'fr'],

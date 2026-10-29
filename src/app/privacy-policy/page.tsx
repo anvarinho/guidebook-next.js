@@ -1,11 +1,14 @@
 "use client"
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PrivacyPolicy() {
     const styles = getPrivacyPolicyStyles();
     useEffect(() => {
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
         const handleScroll = () => {
+          if (motion.matches) return;
           let value = window.scrollY;
           let moon = document.getElementById('moon');
           let stars = document.getElementById('stars');
@@ -43,12 +46,12 @@ export default function PrivacyPolicy() {
                 <Link href="/" className="logo">GuideBook</Link>
             </header>
             <section>
-                <img id="stars" src="/privacy/stars.png" alt="stars" />
-                <img id="moon" src="/privacy/moon.png" alt="moon" />
-                <img id="mountains_behind" src="/privacy/mountains_behind.png" alt="mountains" />
+                <Image id="stars" src="/privacy/stars.png" alt="" fill sizes="100vw" unoptimized />
+                <Image id="moon" src="/privacy/moon.png" alt="" fill sizes="100vw" unoptimized />
+                <Image id="mountains_behind" src="/privacy/mountains_behind.png" alt="" fill sizes="100vw" unoptimized />
                 <h2 id="text">Privacy Policy</h2>
                 <a href="#sec" id="btn">Privacy Policy</a>
-                <img id="mountains_front" src="/privacy/mountains_front.png" alt="mountains_front" />
+                <Image id="mountains_front" src="/privacy/mountains_front.png" alt="" fill sizes="100vw" unoptimized />
             </section>
             <div className="sec" id="sec">
                 <h2>Privacy Policy</h2>
@@ -259,6 +262,7 @@ const getPrivacyPolicyStyles = () => {
             height: 100px;
             background: linear-gradient(to top, #1c0522, transparent);
             z-index: 1000;
+            pointer-events: none;
         }
 
         section img {
@@ -329,6 +333,11 @@ const getPrivacyPolicyStyles = () => {
         .sec p {
             font-size: 1em;
             color: #fff;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto; transition: none; }
+            #text { right: auto; }
         }
     `;
 };

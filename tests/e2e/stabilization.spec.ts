@@ -48,6 +48,8 @@ test('root preference is private, allowlisted, and does not override explicit UR
 });
 
 test('public pages render with production canonical URLs and localized alternates', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
   for (const path of ['/en', '/ru/manas', '/en/places', '/en/places/fixture-lake', '/en/manas-airport-transfers', '/en/articles/fixture-story']) {
     const response = await page.goto(path);
     expect(response?.status()).toBe(200);
@@ -57,6 +59,43 @@ test('public pages render with production canonical URLs and localized alternate
     await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1);
     await expect(page.locator('body')).not.toContainText('Application error');
   }
+  expect(errors).toEqual([]);
+});
+
+test('production responses protect content and keep admin routes out of search', async ({ request }) => {
+  for (const path of ['/en', '/en/places', '/login', '/admin', '/api/auth/session']) {
+    const response = await request.get(path, { maxRedirects: 0 });
+    const headers = response.headers();
+    expect(headers['x-content-type-options']).toBe('nosniff');
+    expect(headers['referrer-policy']).toBe('strict-origin-when-cross-origin');
+    expect(headers['x-frame-options']).toBe('SAMEORIGIN');
+    expect(headers['content-security-policy']).toContain("frame-ancestors 'self'");
+    expect(headers['content-security-policy']).toContain("object-src 'none'");
+    expect(headers['strict-transport-security']).toBe('max-age=31536000');
+    expect(headers['permissions-policy']).toContain('camera=()');
+    expect(headers['x-powered-by']).toBeUndefined();
+    if (path !== '/en' && path !== '/en/places') {
+      expect(headers['x-robots-tag']).toBe('noindex, nofollow');
+    }
+    if (path === '/admin') expect(headers['cache-control']).toContain('no-store');
+  }
+});
+
+test('login metadata is descriptive and privacy artwork respects reduced motion', async ({ page }) => {
+  await page.goto('/login');
+  await expect(page).toHaveTitle('Admin login | GuideBook');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/privacy-policy');
+  await expect(page.locator('#text')).toBeInViewport();
+  const moon = page.locator('#moon');
+  await page.evaluate(async () => {
+    window.scrollTo(0, 500);
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  });
+  expect(await moon.evaluate(element => element.style.top)).toBe('0px');
+  await expect(page.locator('section img[alt=""]')).toHaveCount(4);
 });
 
 test('login renders and admin rejects missing and forged legacy cookies', async ({ page, context }) => {

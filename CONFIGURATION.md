@@ -1,5 +1,15 @@
 # Configuration and deployment after stabilization
 
+## Release verification
+
+Run `npm run lint`, `npm test`, and `npm run test:e2e` before release. Browser checks build against an isolated local fixture API and verify canonical URLs, production headers, admin access rejection, reduced motion, and contact failure feedback without production credentials. Rust and Playwright Chromium are required for those checks.
+
+For the actual deployment, set `CONTENT_API_URL` in the hosting environment **before** `npm run build`; an ignored developer `.env.local` is not shipped by Git. The content API must be reachable during prerendering. Restart `npm run dev` after changing local environment configuration. Build with `npm run build`, then serve with `npm start`; retain the `.next-build` output and required runtime dependencies/assets.
+
+The application sends `nosniff`, a cross-origin referrer policy, same-origin framing restrictions, and permissions restrictions. Its CSP restricts objects, base URLs, and framing; it does not yet restrict script sources. It preserves existing inline artwork, external maps, analytics, and static rendering. Production responses enable one year of HSTS for the current hostname only; terminate TLS at the ingress and redirect HTTP to HTTPS there. Do not cache authenticated pages, `/api/auth/*`, or contact submissions at the CDN. Verify these response headers after ingress/CDN configuration, since intermediaries may override them.
+
+Public builds do not establish that administration or contact storage is provisioned. Before launch, configure and verify the admin database, HTTPS `NEXTAUTH_URL`, and strong `NEXTAUTH_SECRET` below. Provision the dedicated contact inbox and assign a staff owner following `CONTACT.md`. Exercise both integrations on isolated staging. Credentials previously committed to Git require rotation through their providers; ignoring a local file does not revoke old credentials. No production database writes or credential rotation are performed by the test suite.
+
 Copy the non-secret `.env.example` to an ignored local file, or set variables in your deployment's secret manager. Never commit populated environment files. `NEXT_PUBLIC_*` values are public build-time image/contact configuration, not backend credentials.
 
 ## Site, API, and assets are separate
