@@ -34,7 +34,7 @@ const SinglePlacePage = async props => {
           <label>Email</label>
           <input type="text" name="name" placeholder={product.email} />
           <label>Password</label>
-          <input type="text" name="region" placeholder={product.password} />
+          <input type="password" name="password" placeholder="Password is never displayed" autoComplete="new-password" disabled />
           <button>Update</button>
         </form>
       </div>

@@ -44,7 +44,7 @@ export default function Flags({ lang }: { lang: Locale }) {
                         <Link key={i}
                             href={redirectedPathName(locale)}
                             hrefLang={locale === 'ae' ? 'ar' : locale === 'jp' ? 'ja' : locale === 'kr' ? 'ko' : locale === 'cn' ? 'zh-CN' : locale}
-                            onClick={() => {setShowFlags(true); Cookies.set('lang', locale, { expires: 365 })}}
+                            onClick={() => {setShowFlags(true); Cookies.set('lang', locale, { expires: 365, path: '/', sameSite: 'lax', secure: window.location.protocol === 'https:' })}}
                         >
                             <div className={styles.flagtext}>
                                 <Image

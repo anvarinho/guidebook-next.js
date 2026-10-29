@@ -1,0 +1,20 @@
+{
+  "_id": "fixture-place",
+  "url": "fixture-lake",
+  "name": "Fixture lake",
+  "title": "Fixture lake in Kyrgyzstan",
+  "description": "# Fixture guide\n\nA **test-only** destination.\n\n| Route | Time |\n| --- | --- |\n| Lake | One day |",
+  "region": "Chuy",
+  "images": [
+    "bozteri.jpg",
+    "karakolcablelift.jpg"
+  ],
+  "keywords": "fixture",
+  "viewCount": 0,
+  "created": "2026-01-01T00:00:00Z",
+  "location": {
+    "latitude": "42.8",
+    "longitude": "74.6"
+  },
+  "sights": []
+}

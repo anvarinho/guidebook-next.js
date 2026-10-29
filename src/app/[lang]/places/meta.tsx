@@ -1,5 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
-import { absoluteSiteUrl } from "@/lib/seo";
+import { absoluteSiteUrl, safeJsonLd } from "@/lib/seo";
 
 interface Props {
   lang: Locale;
@@ -50,11 +50,11 @@ export default function Meta({ lang, places, page }: Props) {
                 addressLocality: place.region,
                 addressCountry: "KG",
               },
-              geo: {
+              geo: place.location ? {
                 "@type": "GeoCoordinates",
                 latitude: Number(place.location.latitude),
                 longitude: Number(place.location.longitude),
-              },
+              } : undefined,
             },
           };
         }),
@@ -72,5 +72,5 @@ export default function Meta({ lang, places, page }: Props) {
     ],
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />;
 }

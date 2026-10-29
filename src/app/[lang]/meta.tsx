@@ -1,4 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
+import { safeJsonLd } from '@/lib/seo';
 
 interface Props {
     lang: Locale
@@ -81,7 +82,7 @@ const Meta: React.FC<Props> = ({ lang, page }) => {
     return (
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(newData) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(newData) }}
       />
     );
   };

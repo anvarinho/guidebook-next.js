@@ -22,11 +22,7 @@ const nextConfig = {
         destination: "/en/manas-airport-transfers",
         permanent: true,
       },
-      {
-        source: "/",
-        destination: "/en", // Matched parameters can be used in the destination
-        permanent: true,
-      },
+
       {
         source: "/index.html",
         destination: "/en",

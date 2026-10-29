@@ -86,6 +86,8 @@
 .emoji { flex-shrink: 0; }
 .tourContainer :is(ul, ol) { padding-inline-start: 24px; margin-block: 20px; }
 .tourContainer li { margin-bottom: 10px; }
+.tourContainer .markdownList { padding-inline-start: 0; margin-block: 0; list-style: none; }
+.tourContainer .markdownList > li { margin-bottom: 12px; }
 .tourContainer blockquote { margin: 28px 0; padding: 18px 24px; border-inline-start: 3px solid var(--main-active-color); border-radius: 12px; background: rgba(var(--foreground-rgb), .04); }
 .tourContainer hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
 .tourContainer .link { text-decoration: underline; text-underline-offset: 4px; }

@@ -29,6 +29,9 @@
 }
 
 .slider .slider_controls {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
     cursor: pointer;
     position: absolute;
     top: 42%;
@@ -89,7 +92,9 @@
     z-index: 101;
 }
 
-.slider .slider_indicators span {
+.slider .slider_indicators button {
+    padding: 0;
+    border: 0;
     cursor: pointer;
     margin: 0 4px;
     width: 8px;
@@ -99,6 +104,36 @@
     background-color: #ccc;
 }
 
-.slider .slider_indicators span.active {
+.slider .slider_indicators button.active {
     background-color: #555;
+}
+
+.rotation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 101;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #eef3db;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.slider button:focus-visible {
+    outline: 3px solid #eef3db;
+    outline-offset: -3px;
+}
+
+.slider .slider_indicators button:focus-visible {
+    outline-offset: 3px;
+}
+
+.slider_item[aria-hidden="true"] { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .slider_wrapper, .slider .slider_items .slider_item, .slider .slider_controls, .slider .slider_indicators button {
+        transition: none;
+    }
 }

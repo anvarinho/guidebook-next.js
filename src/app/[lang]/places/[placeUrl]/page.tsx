@@ -25,7 +25,7 @@ export default async function PlacePage(props: Params) {
         lang
     } = params;
 
-    const placeData: Promise<Place> = getPlace(placeUrl, lang)
+    const placeData = getPlace(placeUrl, lang)
     const data = await placeData
     const { page } = await getDictionary(lang)
 
@@ -34,7 +34,7 @@ export default async function PlacePage(props: Params) {
             <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
                 {/* <JsonLD data={metaData} /> */}
                 <Meta lang={lang} place={data} page={page}/>
-                <PlaceArticle promise={placeData} lang={lang}/>
+                <PlaceArticle promise={Promise.resolve(data)} lang={lang}/>
             </Suspense>
     )
 }
@@ -52,7 +52,7 @@ export async function generateMetadata(
     } = params;
 
     const { page } = await getDictionary(lang)
-    const placeData: Promise<Place> = getPlace(placeUrl, lang)
+    const placeData = getPlace(placeUrl, lang)
     const place = await placeData
     if (!place) notFound()
     const pageUrl = absoluteSiteUrl(`${lang}/places/${encodeURIComponent(place.url)}`)

@@ -1,33 +1,19 @@
-// Import the required modules
+import 'server-only';
 import { MongoClient } from 'mongodb';
 
-// Define the connection URL and the database name
-const url = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}`;
-const dbName = `${process.env.DB_NAME}`;
+let connection;
 
-// Create a global variable to store the database connection
-let cachedDb = null;
-
-// Create a helper function that connects to the database and returns the database object
 export async function connectToDatabase() {
-  // Check if the database connection is cached
-  if (cachedDb) {
-    // Return the cached connection
-    return cachedDb;
+  if (!connection) {
+    const { ADMIN_MONGODB_URI, DB_HOST, DB_PORT, DB_NAME } = process.env;
+    if (!DB_NAME || (!ADMIN_MONGODB_URI && (!DB_HOST || !DB_PORT))) throw new Error('Database is not configured');
+    const uri = ADMIN_MONGODB_URI || `mongodb://${DB_HOST}:${DB_PORT}`;
+    connection = MongoClient.connect(uri, { serverSelectionTimeoutMS: 5000, connectTimeoutMS: 5000, socketTimeoutMS: 10000 })
+      .then(client => client.db(DB_NAME))
+      .catch(() => {
+        connection = undefined;
+        throw new Error('Database unavailable');
+      });
   }
-
-  // Create a new connection to the database
-  const client = await MongoClient.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-
-  // Select the database
-  const db = await client.db(dbName);
-
-  // Cache the database connection
-  cachedDb = db;
-  console.log("Connected:", db.databaseName)
-  // Return the database object
-  return db;
+  return connection;
 }

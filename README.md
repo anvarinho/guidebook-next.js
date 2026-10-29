@@ -9,9 +9,9 @@
 A multilingual travel guide to Kyrgyzstan — explore places, discover tours,<br />
 read local stories, and plan your journey from Manas Airport.
 
-![Next.js 14](https://img.shields.io/badge/Next.js-14-171717?style=flat-square&logo=nextdotjs&logoColor=white)
-![React 18](https://img.shields.io/badge/React-18-149ECA?style=flat-square&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Next.js 16](https://img.shields.io/badge/Next.js-16-171717?style=flat-square&logo=nextdotjs&logoColor=white)
+![React 19](https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Languages](https://img.shields.io/badge/Languages-10-1B3E32?style=flat-square)
 
 [Explore](#explore) · [Quick start](#quick-start) · [Configuration](#configuration) · [Project map](#project-map) · [Deployment](#deployment)
@@ -37,7 +37,7 @@ Built with **Next.js App Router**, **React**, and **TypeScript**, with CSS Modul
 
 ## Quick start
 
-You’ll need **Node.js 18.17 or newer** and **npm**. Content-driven pages also require access to the project’s content API.
+You’ll need **Node.js 22 or newer** and **npm** (CI uses Node 24). Content-driven pages also require access to the project’s content API. Rust and Playwright Chromium are needed only for the isolated browser/build checks.
 
 ### 1. Install dependencies
 
@@ -50,10 +50,12 @@ npm ci
 Create `.env.local` in the project root:
 
 ```dotenv
-NEXT_PUBLIC_URL=http://localhost:3000
+SITE_URL=http://localhost:3000
+CONTENT_API_URL=http://localhost:4000
+NEXT_PUBLIC_URL=
 ```
 
-> **Content API:** Places, tours, and articles fetch data from `/api/places`, `/api/tours`, and `/api/articles` at `NEXT_PUBLIC_URL`. Those API handlers are not included in this repository. For these pages, replace the local URL with an origin that serves the content API. You can develop the home page, static assets, and airport transfer directory without it.
+> **Content API:** Set server-only `CONTENT_API_URL` to your backend origin (without `/api`). The backend must serve places, tours, articles, and reviews; its implementation is not included here. Do not point development or CI at production by accident. `SITE_URL` controls canonical/SEO URLs independently. `NEXT_PUBLIC_URL` is retained only as a public image/asset origin; empty uses same-origin images. See [.env.example](.env.example), [CONFIGURATION.md](CONFIGURATION.md), and [CONTACT.md](CONTACT.md).
 
 ### 3. Start exploring
 
@@ -61,7 +63,7 @@ NEXT_PUBLIC_URL=http://localhost:3000
 npm run dev
 ```
 
-Open **[localhost:3000](http://localhost:3000)**. The root route redirects to the English home page at `/en`.
+Open **[localhost:3000](http://localhost:3000)**. The root route honors a valid saved language preference, otherwise redirecting to `/en`.
 
 ## Configuration
 
@@ -69,7 +71,11 @@ Set environment-specific values in `.env.local`:
 
 | Variable | Purpose |
 | :--- | :--- |
-| `NEXT_PUBLIC_URL` | Site/API origin used by content fetchers and canonical metadata |
+| `SITE_URL` | Canonical public origin; defaults to `https://central-asia.live` |
+| `CONTENT_API_URL` | Required server-only backend origin, without `/api` |
+| `CONTENT_API_TIMEOUT_MS` | Backend timeout, default 10000 ms |
+| `NEXT_PUBLIC_URL` | Public image/asset origin only; never backend credentials |
+| `NEXTAUTH_URL` / `NEXTAUTH_SECRET` | Authentication origin and server-only signing/encryption secret |
 | `NEXT_PUBLIC_PHONE_NUMBER` | Contact and WhatsApp number |
 | `NEXT_PUBLIC_EMAIL` | Contact email |
 | `GOOGLE_ANALYTICS_ID` | Google Analytics measurement ID |
@@ -86,6 +92,8 @@ Keep secrets out of version control. Variables prefixed with `NEXT_PUBLIC_` are 
 | :--- | :--- |
 | `npm run dev` | Start the local development server |
 | `npm run lint` | Run Next.js ESLint checks |
+| `npm test` | Run credential-free unit and regression tests |
+| `npm run test:e2e` | Build against a local Rust fixture API and run browser checks |
 | `npm run build` | Create a production build |
 | `npm start` | Serve the production build |
 | `npm run images:placeholders` | Generate image blur placeholders, including remote content images |
@@ -145,9 +153,9 @@ npm run build
 npm start
 ```
 
-- Set `NEXT_PUBLIC_URL` to the deployed canonical site/API origin before building.
+- Set `SITE_URL` to the canonical site origin, `CONTENT_API_URL` to the backend origin, and `NEXT_PUBLIC_URL` to the public image/asset origin before building.
 - Ensure the content API is reachable from the server during rendering.
-- Configure `DB_HOST`, `DB_PORT`, and `DB_NAME` when using the admin area.
+- Configure NextAuth and the admin database as described in [CONFIGURATION.md](CONFIGURATION.md). Configure the separate contact inbox using [CONTACT.md](CONTACT.md).
 - Add contact, analytics, and map settings as needed.
 
 Development output lives in `.next`; production output lives in `.next-build`, so building does not overwrite chunks used by a running development server.

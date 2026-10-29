@@ -30,7 +30,7 @@ export default async function Home(props: Params) {
   } = params;
 
   const { page } = await getDictionary(lang)
-  const data: Promise<Article> = getArticle(articleUrl, lang)
+  const data = getArticle(articleUrl, lang)
   const article = await data
   if (!article) notFound()
   return (

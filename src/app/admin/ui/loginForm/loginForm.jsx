@@ -1,11 +1,11 @@
 "use client";
 
 import styles from "./loginForm.module.css";
-import signIn from '@/lib/login'
+import { signIn } from 'next-auth/react';
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Cookies from 'js-cookie'
+
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -18,33 +18,19 @@ const LoginForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signIn(email, password);
+      const response = await signIn('credentials', { email, password, redirect: false, callbackUrl: '/admin' });
 
-      if (!response) {
+      if (!response?.ok || response.error) {
         // Handle invalid response or error from signIn function
         setError('Invalid email or password');
         return;
       }
 
-      // Assuming successful login, you can handle the token here
-      const { token, user } = response;
-      // For example, save the token to local storage
-      // localStorage.setItem('token', token);
-      Cookies.set('token', token)
-      // console.log(user[0].isAdmin)
-      Cookies.set('isAdmin', user[0].isAdmin)
-      Cookies.set('userID', user[0]._id)
-      if (user[0].isAdmin) {
-        router.push(`/admin`);
-      } else {
-        // Show an error message for non-admin users
-        setError('You do not have admin privileges.');
-      }
-      // Redirect or do something else upon successful login
-      console.log('Login successful!');
+      router.push('/admin');
+      router.refresh();
     } catch (error) {
       // Handle any other errors that might occur
-      console.error('Error:', error.message);
+
       setError('An error occurred. Please try again later.');
     }
   };

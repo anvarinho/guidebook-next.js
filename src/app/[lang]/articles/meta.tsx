@@ -1,4 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
+import { safeJsonLd, siteUrl } from '@/lib/seo';
 
 interface Props {
     articles: Article[];
@@ -15,7 +16,7 @@ const Meta: React.FC<Props> = ({ lang, articles, page }) => {
       "item": {
         "@type": "Article",
         "headline": article.title,
-        "url": `${process.env.NEXT_PUBLIC_URL}/${lang}/articles/${article.url}`,
+        "url": `${siteUrl}/${lang}/articles/${article.url}`,
         "datePublished": dateModifiedISO,
         "dateModified": dateModifiedISO,
         "author": {
@@ -28,19 +29,19 @@ const Meta: React.FC<Props> = ({ lang, articles, page }) => {
           "name": "GuideBook of Kyrgyzstan",
           "logo": {
             "@type": "ImageObject",
-            "url": `${process.env.NEXT_PUBLIC_URL}/favicon.ico`
+            "url": `${siteUrl}/favicon.ico`
           }
         },
         "description": article.subtitle,
         "image": {
           "@type": "ImageObject",
-          "url": `${process.env.NEXT_PUBLIC_URL}/${article.image ? article.image : article.paragraphs[0].image}`,
+          "url": `${siteUrl}/${article.image || article.paragraphs[0]?.image || 'bozteri.jpg'}`,
           "width": 800,
           "height": 600
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `${process.env.NEXT_PUBLIC_URL}/articles/${article.url}`
+          "@id": `${siteUrl}/${lang}/articles/${article.url}`
         }
       },
       "breadcrumb": {
@@ -51,7 +52,7 @@ const Meta: React.FC<Props> = ({ lang, articles, page }) => {
             "@type": "ListItem",
             "position": 1,
             "name": page.articles.name,
-            "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/articles`
+            "item": `${siteUrl}/${lang}/articles`
           }
         ]
       },
@@ -67,7 +68,7 @@ const Meta: React.FC<Props> = ({ lang, articles, page }) => {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }}
     />
   );
 };

@@ -1,0 +1,17 @@
+{
+  "_id": "fixture-article",
+  "url": "fixture-story",
+  "title": "Fixture story",
+  "subtitle": "Test-only travel content",
+  "image": "bozteri.jpg",
+  "viewCount": 0,
+  "createdAt": "2026-01-01T00:00:00Z",
+  "keywords": "fixture",
+  "paragraphs": [
+    {
+      "title": "Fixture paragraph",
+      "text": "A safe **formatted** story.",
+      "image": "bozteri.jpg"
+    }
+  ]
+}
