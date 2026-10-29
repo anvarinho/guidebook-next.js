@@ -1,5 +1,5 @@
 import ArrowIcon, { ArrowText } from '@/components/ArrowIcon';
-/* eslint-disable @next/next/no-img-element, react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 // Source illustrations retain their registered dimensions and transparent layers.
 import ManasImage from "./ManasImage";
 import type { ManasMessages } from "./translations";

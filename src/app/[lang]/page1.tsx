@@ -13,6 +13,7 @@ import styles from './page.module.css'
 import Image from "next/image";
 import DownloadApps from './Components/DownloadApps'
 import HomePlaces from './Components/home/HomePlaces';
+import { getHomePlaces } from '@/lib/getAllPlaces';
 import Meta from './meta';
 import Link from 'next/link';
 
@@ -22,6 +23,7 @@ export default async function Home({
   params: {lang : Locale}
 }) {
   const { page } = await getDictionary(lang)
+  const places = await getHomePlaces(lang)
 
   const translations = {
     en: "Choose language",
@@ -117,7 +119,7 @@ export default async function Home({
         </div>
         <h2>{page.home.subtitle5}</h2>
       </div>
-      <HomePlaces lang={lang}/>
+      <HomePlaces key={lang} lang={lang} places={places}/>
       {/* <div className={styles.travel}>
       <h2>{page.home.FirstTimeInKyrgyzstan.title}</h2>
         <div>

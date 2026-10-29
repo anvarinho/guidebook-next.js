@@ -1,20 +1,18 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from './homeplaces.module.css'
 import { Locale } from "@/lib/i18n.config";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { getHomePlaces } from "@/lib/getAllPlaces";
 import {
     faArrowLeft,
     faArrowRight
   } from "@fortawesome/free-solid-svg-icons";
 
-const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
+const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, places }) => {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [places, setPlaces] = useState<any[]>([]);
     
     const handleSlideLeft = () => {
         if (currentSlide > 0) {
@@ -27,13 +25,6 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
             setCurrentSlide(currentSlide + 1);
         }
     };    
-    useEffect(() => {
-        const fetchData = async () => {
-            const places = await getHomePlaces(lang)
-            setPlaces(places)
-        };
-        fetchData();
-    }, []);
     
     const dictionary = {
         morePlaces : {
@@ -127,7 +118,7 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
             {places.length > 0 ? (
                 places.slice(currentSlide, currentSlide + 12).map((place) => (
                     <div key={place._id} className={styles.slideImages}>
-                        <Image fill src={baseUrl + place.images[0]} alt={'arrow down'} loading="lazy" objectFit='cover'/>
+                        <Image fill src={baseUrl + place.images[0]} alt={place.name} loading="lazy" sizes="100vw" style={{ objectFit: 'cover' }}/>
                         {/* <ImageLoader image={place.images[0]}/> */}
                         <div className={styles.coverGradient}></div>
                         <div className={styles.blurGradient}></div>
@@ -159,7 +150,7 @@ const HomePlaces: React.FC<{ lang: Locale }> = ({ lang }) => {
                     <button onClick={handleSlideLeft} aria-label="Previous Place" disabled={currentSlide === 0}>
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </button>
-                    <button onClick={handleSlideRight} aria-label="Next Place" disabled={currentSlide === places.length - 2}>
+                    <button onClick={handleSlideRight} aria-label="Next Place" disabled={currentSlide >= places.length - 1}>
                         <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                 </div>
