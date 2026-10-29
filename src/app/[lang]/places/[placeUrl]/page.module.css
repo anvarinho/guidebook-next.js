@@ -107,6 +107,8 @@
 .container p { margin-bottom: 22px; white-space: pre-line; }
 .container :is(ul,ol) { padding-inline-start: 24px; margin-block: 20px; }
 .container li { margin-bottom: 10px; }
+.container .markdownList { padding-inline-start: 0; margin-block: 0; list-style: none; }
+.container .markdownList > li { margin-bottom: 12px; }
 .listItem { position: relative; padding-inline-start: 20px; margin-bottom: 12px; }
 .listItem::before { content: ''; position: absolute; inset-inline-start: 2px; top: .8em; width: 5px; height: 5px; border-radius: 50%; background: var(--main-active-color); }
 .emojiItem { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; }

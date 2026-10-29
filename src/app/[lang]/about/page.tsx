@@ -100,7 +100,7 @@ export async function generateMetadata(
   } = params;
 
   const { page } = await getDictionary(lang)
-  const siteUrl = (process.env.NEXT_PUBLIC_URL || 'https://central-asia.live').replace(/\/$/, '')
+  const siteUrl = (process.env.SITE_URL || 'https://central-asia.live').replace(/\/$/, '')
   const pageUrl = `${siteUrl}/${lang}/about/`
   const imageUrl = `${siteUrl}/bozteri.jpg`
   return {

@@ -7,6 +7,17 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const firstSegment = pathname.split('/')[1]
 
+  if (pathname === '/') {
+    const preference = request.cookies.get('lang')?.value
+    const locale = i18n.locales.find(value => value === preference) || i18n.defaultLocale
+    const destination = request.nextUrl.clone()
+    destination.pathname = `/${locale}`
+    const response = NextResponse.redirect(destination, 307)
+    response.headers.set('Cache-Control', 'private, no-store, max-age=0')
+    response.headers.set('Vary', 'Cookie')
+    return response
+  }
+
   // Recover the malformed legacy URL instead of rewriting it to a 5xx route.
   if (pathname === '/$') {
     const destination = new URL('/en', request.url)

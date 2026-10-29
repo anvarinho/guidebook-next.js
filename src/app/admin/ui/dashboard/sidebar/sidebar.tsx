@@ -21,9 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { auth, signOut } from "@/app/auth";
-import { signOut } from "@/lib/auth";
-import { readUser } from "@/app/admin/lib/data";
-import { cookies } from "next/headers";
+import { requireAdmin, signOut } from "@/lib/auth";
 
 const menuItems = [
   {
@@ -99,11 +97,7 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-  const cookieStore = await cookies();
-  const userID = cookieStore.get("userID")?.value || null;
-  const isAdmin = cookieStore.get("isAdmin")?.value || null;
-  const user = isAdmin ? await readUser(userID) : "";
-  // console.log(user)
+  const user = await requireAdmin();
   return (
     <div className={styles.container}>
       <div className={styles.user}>

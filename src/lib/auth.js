@@ -1,45 +1,37 @@
-// import { useRouter } from 'next/navigation';
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
-import { readUser } from '@/app/admin/lib/data';
+import 'server-only';
+import { getServerSession } from 'next-auth';
+import { getToken } from 'next-auth/jwt';
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { authOptions, requireAuthConfiguration, sessionCookieName } from '@/app/admin/lib/auth';
+import { revokeAdminSession } from '@/app/admin/lib/sessions';
 
-// Function to check if the user is authenticated
-export const isAuthenticatedAdmin = async () => {
-  try {
-    const cookieStore = await cookies();
-    const userId = cookieStore.get('userID');
-    const token = cookieStore.get('token');
-
-    if (typeof userId.value !== 'string') {
-      throw new Error('Invalid user ID type');
-    }
-
-    const user = readUser(userId.value);
-    console.log(token)
-    if (user.isAdmin && token) {
-      console.log("Loggen in")
-      return true;
-    } else {
-      console.log("Not Loggen in")
-      return false; // User not found or isAdmin property not a boolean
-    }
-  } catch (error) {
-    console.error('Error checking admin status:', error);
-    // Handle the error gracefully, e.g., return false
-    return false;
+export async function requireAdmin() {
+  requireAuthConfiguration();
+  const session = await getServerSession(authOptions);
+  if (!session?.user || session.user.isAdmin !== true || session.user.isActive !== true) {
+    throw new Error('Unauthorized');
   }
-};
+  return session.user;
+}
 
-// Function to redirect the user
-// export const redirect = (path: string): void => {
-//   // const router = useRouter();
-//   router.push(path);
-// };
+export async function isAuthenticatedAdmin() {
+  try { await requireAdmin(); return true; } catch { return false; }
+}
 
-// Function to sign out the user
-export const signOut = async () => {
-  const cookieStore = await cookies();
-  cookieStore.delete('token');
-  cookieStore.delete('isAdmin');
+export async function signOut() {
+  'use server';
+  requireAuthConfiguration();
+  const store = await cookies();
+  const token = await getToken({
+    req: { cookies: Object.fromEntries(store.getAll().map(({ name, value }) => [name, value])), headers: {} },
+    secret: process.env.NEXTAUTH_SECRET,
+    cookieName: sessionCookieName,
+  });
+  // Revoke before clearing. A DB failure must not report a successful logout.
+  await revokeAdminSession(token);
+  for (const { name } of store.getAll()) {
+    if (name === sessionCookieName || name.startsWith(`${sessionCookieName}.`) || ['token', 'userID', 'isAdmin'].includes(name)) store.delete(name);
+  }
   redirect('/login');
-};
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "fixture-tour",
+  "url": "fixture-tour",
+  "title": "Fixture tour",
+  "description": "A **test-only** itinerary.",
+  "images": [
+    "bozteri.jpg"
+  ],
+  "daysCount": 1,
+  "lastPrice": 100,
+  "level": "Easy",
+  "price": [
+    100
+  ],
+  "viewCount": 0,
+  "days": [
+    {
+      "activities": [
+        "A fixture activity"
+      ],
+      "images": [
+        "bozteri.jpg",
+        "karakolcablelift.jpg"
+      ],
+      "places": []
+    }
+  ],
+  "includings": [
+    "Guide"
+  ],
+  "excludings": [
+    "Flights"
+  ]
+}

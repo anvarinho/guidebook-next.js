@@ -1,7 +1,8 @@
 import { Locale } from '@/lib/i18n.config';
+import { safeJsonLd, siteUrl } from '@/lib/seo';
 
 export default function Meta({ lang, page }: { lang: Locale; page: any }) {
-  const siteUrl = (process.env.NEXT_PUBLIC_URL || 'https://central-asia.live').replace(/\/$/, '');
+
   const pageUrl = `${siteUrl}/${lang}/about/`;
   const data = {
     '@context': 'https://schema.org',
@@ -57,5 +58,5 @@ export default function Meta({ lang, page }: { lang: Locale; page: any }) {
     ],
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />;
 }

@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n.config";
 
-export const siteUrl = (process.env.NEXT_PUBLIC_URL || "https://central-asia.live").replace(/\/+$/, "");
+export const siteUrl = (process.env.SITE_URL || "https://central-asia.live").replace(/\/+$/, "");
 
 export const hreflangByLocale: Record<Locale, string> = {
   en: "en-US",

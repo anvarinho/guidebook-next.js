@@ -1,4 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
+import { safeJsonLd, siteUrl } from '@/lib/seo';
 
 interface Props {
     lang: Locale
@@ -48,7 +49,7 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
           "@type": "ProductGroup",
           "name": page.tours.title,
           "description": page.tours.description,
-          "url": `${process.env.NEXT_PUBLIC_URL}/tours`,
+          "url": `${siteUrl}/${lang}/tours`,
           "brand": {
             "@type": "Brand",
             "name": "GuideBook of Kyrgyzstan"
@@ -67,7 +68,7 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": page.tours.name,
-                "item": `${process.env.NEXT_PUBLIC_URL}/${lang}/tours`
+                "item": `${siteUrl}/${lang}/tours`
               }
             ]
           },
@@ -77,7 +78,7 @@ const Meta: React.FC<Props> = ({ lang, tours, page }) => {
     return (
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }}
       />
     );
   };

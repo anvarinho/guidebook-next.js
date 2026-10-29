@@ -80,7 +80,7 @@ export default function ContactDialog({ lang, title, phone, email, address }: { 
           </div>
           <p className={styles.address}>{address}</p>
         </div>
-        <ContactForm lang={lang} email={email}/>
+        <ContactForm lang={lang}/>
       </div>
     </dialog>
   )

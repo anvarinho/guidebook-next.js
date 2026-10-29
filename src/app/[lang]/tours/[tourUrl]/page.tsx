@@ -30,7 +30,7 @@ export default async function Tour(props: Params) {
   } = params;
 
   const { page } = await getDictionary(lang);
-  const data: TourInfo = await getTour(tourUrl, lang);
+  const data = await getTour(tourUrl, lang);
   if (!data) notFound();
   const t = page.tours.tourPage;
   const preparation = page.tours.TourPreparation;
@@ -132,7 +132,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     lang
   } = params;
 
-  const tourData: Promise<TourInfo> = getTour(tourUrl, lang);
+  const tourData = getTour(tourUrl, lang);
   const tour = await tourData;
   if (!tour) notFound();
   const { page } = await getDictionary(lang);

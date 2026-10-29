@@ -16,9 +16,12 @@ function loadContentModules(fetch) {
       compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
     });
     vm.runInNewContext(outputText, {
-      module, exports: module.exports, fetch, URLSearchParams,
-      process: { env: { NEXT_PUBLIC_URL: 'https://example.test/' } },
+      module, exports: module.exports, fetch, URLSearchParams, URL, AbortSignal,
+      process: { env: { CONTENT_API_URL: 'https://example.test/' } },
       require: name => {
+        if (name === 'server-only') return {};
+        if (name === 'react') return { cache: fn => fn };
+        if (!name.startsWith('.')) return require(name);
         const base = path.resolve(path.dirname(file), name);
         return load(fs.existsSync(`${base}.ts`) ? `${base}.ts` : `${base}.tsx`);
       },
@@ -59,7 +62,11 @@ test('legacy detail imports reuse the same loader and encoded request URL', asyn
   const requests = [];
   const load = loadContentModules(async url => {
     requests.push(url);
-    return { ok: true, json: async () => ({ title: 'Test' }) };
+    const common = { _id: 'fixture', url: 'test', title: 'Test', images: ['bozteri.jpg'], description: 'Description', viewCount: 0 };
+    const data = url.includes('/places/') ? { ...common, name: 'Lake', region: 'Chuy', location: { latitude: '42', longitude: '74' } }
+      : url.includes('/tours/') ? { ...common, level: 'Easy', price: [100], days: [{ activities: [], images: [], places: [] }], includings: [], excludings: [] }
+      : { ...common, subtitle: 'Subtitle', createdAt: '2026-01-01', paragraphs: [] };
+    return { ok: true, json: async () => data };
   });
   for (const name of ['Place', 'Tour', 'Article']) {
     const detail = load(`src/lib/get${name}.tsx`).default;

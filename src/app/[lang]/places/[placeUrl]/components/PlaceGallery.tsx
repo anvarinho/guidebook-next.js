@@ -102,7 +102,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
       setSwap(current => current?.token === token ? null : current);
     }, 380);
     return () => window.clearTimeout(timeout);
-  }, [swap?.token]);
+  }, [swap]);
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -182,8 +182,11 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
             </div>
             {detailMotion && pending && <div className={`${styles.galleryPhoto} ${styles.galleryPhotoPreload}`} data-direction={pending.direction}
               key={`photo-${pending.index}`}>
-              {photo(pending.index, `photo-${pending.index}`, event => { void commitLoadedPhoto(event, pending); },
-                () => failPendingPhoto(pending), true)}
+              <Image src={imageUrl(images[pending.index])} alt="" aria-hidden
+                fill sizes="(max-width: 1200px) 100vw, 1200px" priority={priority && pending.index === 0}
+                loading="eager" {...imagePlaceholder(blurDataURLs[pending.index])}
+                onLoad={event => { void commitLoadedPhoto(event, pending); }}
+                onError={() => failPendingPhoto(pending)} />
             </div>}
           </>}
         </div>

@@ -26,8 +26,8 @@ export default async function PlaceArticle({ promise, lang }: {
     getPlacesByRegion(lang, place.region, place.url),
     place.sights?.length ? getPlacesByURLs(lang, place.sights) : Promise.resolve([]),
   ]);
-  const places: Place[] = regionResults ?? [];
-  const sights: Place[] = sightResults ?? [];
+  const places: PlaceAlias[] = regionResults ?? [];
+  const sights: PlaceAlias[] = sightResults ?? [];
   const created = place.created ? new Date(place.created) : null;
   const createdDate = created && !Number.isNaN(created.getTime()) ? created : null;
   const transferGuide = destinationGuides.find(guide => guide.slug === place.url);
