@@ -89,6 +89,19 @@ test('nested malformed content and unsafe image URLs are rejected', async () => 
   }
 });
 
+test('regional summaries omit database IDs while still validating public card fields', async () => {
+  const fixture = JSON.parse(fs.readFileSync('tests/fixtures/place.json', 'utf8'));
+  const { _id, ...summary } = fixture;
+  const load = loadApi(async () => ({ ok: true, json: async () => [summary] }));
+  const places = await load('src/lib/getAllPlaces.tsx').getPlacesByRegion('en', summary.region, 'another-place');
+  assert.equal(places[0].url, summary.url);
+  assert.equal(places[0]._id, undefined);
+  const malformed = loadApi(async () => ({ ok: true, json: async () => [{ ...summary, images: [] }] }));
+  await assert.rejects(malformed('src/lib/getAllPlaces.tsx').getPlacesByRegion('en', summary.region, 'another-place'), /Invalid content response/);
+  const detail = loadApi(async () => ({ ok: true, json: async () => summary }));
+  await assert.rejects(detail('src/lib/getPlace.tsx').default(summary.url, 'en'), /Invalid content response/);
+});
+
 test('canonical site configuration is independent of API and asset origins', () => {
   const load = loadApi(async () => { throw Error('Unexpected network'); }, { NEXT_PUBLIC_URL: 'https://assets.example.test' });
   const seo = load('src/lib/seo.ts');

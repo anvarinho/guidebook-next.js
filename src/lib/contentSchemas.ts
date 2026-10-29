@@ -25,6 +25,8 @@ export const placeSchema = placeAliasSchema.extend({
   created: date.optional(), videoID: z.string().optional(),
 });
 export const placesSchema = z.array(placeAliasSchema);
+// The region endpoint projects public summaries without MongoDB IDs.
+export const regionalPlacesSchema = z.array(placeAliasSchema.omit({ _id: true }));
 export const paginatedPlacesSchema = z.object({
   count: z.number().int().nonnegative(), places: placesSchema,
 });

@@ -58,6 +58,10 @@ test('public pages render with production canonical URLs and localized alternate
     await expect(page.locator('link[rel="alternate"][hreflang="ru-RU"], link[rel="alternate"][hreflang="ru"]')).toHaveCount(1);
     await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1);
     await expect(page.locator('body')).not.toContainText('Application error');
+    if (path === '/en/places/fixture-lake') {
+      await expect(page.locator('[data-place-page]')).toBeVisible();
+      await expect(page.locator('[data-place-detail-card]').first()).toBeVisible();
+    }
   }
   expect(errors).toEqual([]);
 });

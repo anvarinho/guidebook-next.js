@@ -1,5 +1,5 @@
 import { getContent } from './contentApi';
-import { placesSchema, paginatedPlacesSchema } from './contentSchemas';
+import { placesSchema, paginatedPlacesSchema, regionalPlacesSchema } from './contentSchemas';
 
 export { default as getPlace } from './getPlace';
 
@@ -13,7 +13,7 @@ export function getPlacesByURLs(lang: string, urls: string[] | null) {
 }
 
 export function getPlacesByRegion(lang: string, region: string, url: string) {
-  return getContent('places/region', placesSchema, { lang, region, url });
+  return getContent('places/region', regionalPlacesSchema, { lang, region, url });
 }
 
 export async function sitemapPlaces() {
