@@ -23,9 +23,10 @@ fn main() -> std::io::Result<()> {
         let article = include_str!("article.json").trim();
         let (status, body) = match path {
             "/health" => (200, "{}".to_owned()),
-            "/api/places" | "/api/places/home" | "/api/places/region" => {
+            "/api/places" | "/api/places/home" => {
                 (200, format!("[{place}]"))
             }
+            "/api/places/region" => (200, include_str!("region.json").to_owned()),
             "/api/places/more" => {
                 let first_page = target
                     .split('?')
