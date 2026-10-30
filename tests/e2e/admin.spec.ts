@@ -28,7 +28,7 @@ test('login labels, password visibility, generic failures and mobile layout',asy
 });
 test('admin login, real counts, pagination, search, save user and logout',async ({ page }) => {
   await login(page);
-  await expect(page.getByRole('heading',{name:'A clear view of your guidebook.'})).toBeVisible();
+  await expect(page.getByRole('heading',{name:/Your guidebook/})).toBeVisible();
   await page.screenshot({path:'test-results/admin-desktop.png',fullPage:true});
   await expect(page.locator('.stat-card').filter({hasText:'Users'})).toContainText('25');
   await page.getByRole('link',{name:'Team & users',exact:true}).click();
@@ -46,6 +46,7 @@ test('admin login, real counts, pagination, search, save user and logout',async 
   await page.getByLabel('Account status').selectOption('false');
   await page.getByRole('button',{name:'Save user'}).click();
   await expect(page.getByRole('alert').filter({hasText:'cannot deactivate'})).toBeVisible();
+  page.once('dialog',dialog=>dialog.accept());
   await page.getByRole('button',{name:'Sign out',exact:true}).first().click();
   await expect(page).toHaveURL(/\/login$/);
   await page.goto('/admin/users'); await expect(page).toHaveURL(/\/login$/);
@@ -97,6 +98,75 @@ test('user creation and tour/article editors save real records',async ({ page })
     const member = await client.db('guidebook_admin_fixture').collection('users').findOne({email:'new-member@example.test'});
     expect(member!.isAdmin).toBe(false); expect(member!.password).not.toBe('fixture-new-member-password');
   } finally { await client.close(); }
+});
+test('overview sums counter windows and legacy requests across exact UTC date boundaries',async ({page})=>{
+  await login(page);
+  await page.goto('/admin?from=2024-02-29&to=2024-02-29');
+  await expect(page.locator('.response-summary > div').first().locator('strong')).toHaveText('35');
+  await expect(page.locator('.response-summary > div').nth(1).locator('strong')).toHaveText('11.43%');
+  await expect(page.getByRole('img',{name:/Daily recorded API responses/})).toBeVisible();
+  await expect(page.getByText('1 stored record has an unsupported shape')).toBeVisible();
+  await page.getByText('Explore daily values',{exact:false}).click();
+  await expect(page.getByRole('table',{name:'Recorded responses by UTC day'})).toBeVisible();
+  await page.getByRole('link',{name:'2024-02-29',exact:true}).click();
+  await expect(page).toHaveURL(/\/admin\/reports\?.*from=2024-02-29/);
+  await expect(page.locator('tbody tr')).toHaveCount(5);
+  await expect(page.getByText('Unsupported record',{exact:true})).toBeVisible();
+  const html=await page.content();
+  expect(html).not.toContain('never-expose-fixture-token');expect(html).not.toContain('192.0.2.99');expect(html).not.toContain('never-expose-session');
+});
+test('empty and invalid overview periods give honest states and accessible mobile data',async ({page})=>{
+  await login(page);
+  await page.setViewportSize({width:390,height:844});
+  await expect(page.getByRole('heading',{name:/Your guidebook/})).toBeVisible();
+  await page.screenshot({path:'test-results/admin-overview-mobile.png',fullPage:true});
+  await page.goto('/admin?from=2024-01-01&to=2024-01-01');
+  await expect(page.getByText('No responses recorded in this date range.',{exact:false})).toBeVisible();
+  await expect(page.locator('.response-summary > div').nth(1).locator('strong')).toHaveText('—');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/admin?from=2024-02-30&to=2024-03-01');
+  await expect(page.getByRole('alert').filter({hasText:'Choose valid dates'})).toBeVisible();
+});
+test('translation drilldowns, server sorting, state filters and pagination retain URL choices',async ({page})=>{
+  await login(page);
+  await page.getByRole('link',{name:/Review missing French text in places/}).click();
+  await expect(page).toHaveURL(/state=missing&lang=fr/);
+  await page.getByLabel('Sort by').selectOption('name');
+  await page.getByRole('button',{name:'Search',exact:true}).click();
+  await expect(page).toHaveURL(/sort=name/);await expect(page).toHaveURL(/lang=fr/);
+  await expect(page.locator('tbody tr')).toHaveCount(1);
+  await page.goto('/admin/users?state=member&sort=name&q=member');
+  await expect(page.locator('tbody tr')).toHaveCount(20);
+  await expect(page.locator('tbody tr').first()).toContainText('member-0');
+  await page.getByRole('link',{name:'Next',exact:true}).click();
+  await expect(page).toHaveURL(/state=member/);await expect(page).toHaveURL(/sort=name/);await expect(page).toHaveURL(/page=2/);
+});
+test('editor previews sanitize HTML and leaving unsaved content requires confirmation',async ({page})=>{
+  await login(page);await page.goto('/admin/places/admin-fixture-lake');
+  const description=page.getByRole('textbox',{name:'Description',exact:true});
+  await description.fill('# Draft preview\n\n<script>window.previewExecuted=true</script><img src=x onerror="window.previewExecuted=true">');
+  await page.getByRole('button',{name:'Preview body',exact:true}).click();
+  await expect(page.getByRole('region',{name:'Content preview'}).getByRole('heading',{name:'Draft preview'})).toBeVisible();
+  expect(await page.evaluate(()=>Reflect.get(window,'previewExecuted'))).toBeUndefined();
+  expect(await page.locator('.preview-body script,.preview-body [onerror]').count()).toBe(0);
+  await expect(page.locator('.save-state')).toHaveText('Unsaved changes');
+  page.once('dialog',dialog=>dialog.dismiss());
+  await page.getByRole('link',{name:'Back to places'}).click();
+  await expect(page).toHaveURL(/\/admin\/places\/admin-fixture-lake$/);
+  await expect(description).toHaveValue(/Draft preview/);
+  page.once('dialog',dialog=>dialog.accept());
+  await page.getByRole('link',{name:'Back to places'}).click();
+  await expect(page).toHaveURL(/\/admin\/places$/);
+});
+test('failed saves preserve entered account fields',async ({page})=>{
+  await login(page);await page.goto('/admin/users/add');
+  await page.getByLabel('Username',{exact:true}).fill('fixture-admin');
+  await page.getByLabel('Email address').fill('duplicate-check@example.test');
+  await page.getByLabel(/^Initial password/).fill('fixture-duplicate-password');
+  await page.getByRole('button',{name:'Create user',exact:true}).click();
+  await expect(page.getByRole('alert').filter({hasText:'Unable to save'})).toBeVisible();
+  await expect(page.getByLabel('Email address')).toHaveValue('duplicate-check@example.test');
+  await expect(page.locator('.save-state')).toHaveText('Unsaved changes');
 });
 test('operator reset invalidates a live session and preserves account privileges',async ({ page, context }) => {
   await login(page);

@@ -95,6 +95,12 @@ exists. Missing configuration and storage failures also fail closed.
   links. Forms have labels, pending feedback and visible errors. Reduced motion
   is respected. No analytics charts or financial metrics are fabricated.
 
+## Editorial overview
+
+See [ADMIN-OVERVIEW.md](ADMIN-OVERVIEW.md) for metric definitions, query budgets,
+server filters, editor previews, index review and verification of the editorial
+workspace redesign. It requires no new environment variables or permissions.
+
 ## Verification
 
 `npm test` covers guards, forged/expired tokens, revocation, changed roles/passwords,

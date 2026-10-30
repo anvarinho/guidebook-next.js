@@ -8,6 +8,14 @@ import { requireAdmin } from '@/lib/auth';
 import { connectToDatabase } from './mongodb';
 import { ObjectId } from 'mongodb';
 
+export async function previewContent(formData) {
+  await requireAdmin();
+  const result = z.object({text:z.string().max(200000),locale:z.enum(['en','it','fr','de','es','jp','kr','ae','cn','ru'])}).strict().safeParse(Object.fromEntries(formData));
+  if (!result.success) return { ok:false,html:'',message:'The preview is too long. Preview up to 200,000 characters at a time.' };
+  const { renderContentHtml } = await import('@/lib/contentHtml.server');
+  return { ok:true,html:renderContentHtml(result.data.text,{lang:result.data.locale}),message:'' };
+}
+
 export async function saveUser(_state, formData) {
   const actor = await requireAdmin();
   const fields = [...formData.entries()].filter(([key]) => !key.startsWith('$ACTION_'));
