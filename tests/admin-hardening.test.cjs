@@ -47,6 +47,7 @@ test('new user and content mutations reject unauthenticated direct invocation',a
   const actions=load('src/app/admin/lib/actions.js',{'@/lib/auth':{requireAdmin:async()=>{throw Error('Unauthorized');}},'./mongodb':{connectToDatabase:async()=>{connected=true;}},'next/cache':{},'next/navigation':{}});
   await assert.rejects(actions.saveUser({},new FormData()),/Unauthorized/);
   await assert.rejects(actions.saveContent({},new FormData()),/Unauthorized/);
+  await assert.rejects(actions.previewContent(new FormData()),/Unauthorized/);
   assert.equal(connected,false);
 });
 test('user editing rejects extra fields, password changes and self demotion before DB access',async () => {

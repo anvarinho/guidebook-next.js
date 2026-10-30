@@ -262,3 +262,44 @@ work. No production CPU/memory improvement is claimed for this redesign.
 Admin list queries now return 20 projected records rather than unbounded result
 sets; the MongoDB connection pool is capped at five with a 60-second idle timeout.
 The admin/login styles use system fonts and no new animation or UI library.
+
+### Editorial overview redesign: authenticated local workload (2026-10-30)
+
+Measured with `scripts/admin-workload-benchmark.rs`, the production build on
+localhost:3218, Node 26.10.0 and isolated MongoDB 8.3.9. Baseline and final builds
+used equivalent fresh synthetic databases: 1,001 places, 121 tours, 81 articles,
+25 users and 4,000 four-route counter windows. Benchmark mode preserves the
+original seed fields; normal browser fixtures include extra boundary cases and
+translation/update examples. No production traffic/data was accessed.
+
+A synthetic admin signs in normally; its cookie is read from a private temporary
+file, never printed or passed as a command argument. Each path gets five warmups
+and 20 sequential authenticated HTML requests. No polling or shared metric cache.
+
+| Path, 20 requests | Node CPU before → final | Mongo CPU before → final | Wall before → final | Node RSS before → final | Mongo RSS before → final |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| /admin | 220 → 920 ms | 50 → 1,360 ms | 143 → 1,516 ms | 179.8 → 199.3 MiB | 202.8 → 205.0 MiB |
+| /admin/places?sort=views | 230 → 270 ms | 40 → 90 ms | 148 → 224 ms | 191.7 → 206.9 MiB | 203.0 → 205.1 MiB |
+| /admin/reports | 330 → 270 ms | 230 → 20 ms | 369 → 130 ms | 196.4 → 216.7 MiB | 203.3 → 205.2 MiB |
+
+The overview performs substantially more work than the old four-count page;
+these results do not show an overall CPU or memory improvement. The places sort
+now actually sorts and computes field status. Reports benefit from the bounded
+date range and smaller response projections. In the final sample the overview
+averaged 75.8 ms per server response, excluding browser rendering.
+
+CPU is /proc user+system time, RSS is resident process memory, and wall time is
+whole batches, not browser render time or a percentile. Both processes were
+started fresh and warmed without forcing GC. MongoDB background/cache behavior
+and local scheduling affect these values. This is a single paired local sample,
+not a production capacity forecast. Query time/scan budgets and unavailable states
+are described in ADMIN-OVERVIEW.md. Full browser checks ran before the final
+measurement; no application source was changed afterward.
+
+```bash
+rustc scripts/admin-workload-benchmark.rs -o /tmp/admin-workload-benchmark
+# Start ADMIN_BENCHMARK=1 node tests/fixtures/admin-server.mjs and the production
+# Next.js build on localhost:3218 using the isolated fixture environment.
+# Authenticate the synthetic admin and store only its Cookie header in a private file:
+/tmp/admin-workload-benchmark NODE_PID MONGO_PID COOKIE_FILE 3218
+```

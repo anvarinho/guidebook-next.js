@@ -7,5 +7,5 @@ export const dynamic = 'force-dynamic';
 export default async function AdminLayout({ children }: { children:React.ReactNode }) {
   let user;
   try { user = await requireAdmin(); } catch { redirect('/login'); }
-  return <html lang="en"><body><AdminShell user={user} logoutAction={signOut}>{children}</AdminShell></body></html>;
+  return <html lang="en"><body className="admin-body"><AdminShell user={user} logoutAction={signOut}>{children}</AdminShell></body></html>;
 }

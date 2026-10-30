@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { readOverview } from './lib/data';
-export default async function Overview() {
-  const counts = await readOverview();
-  return <><div className="page-heading"><div><p className="eyebrow">Workspace overview</p><h1>A clear view of your guidebook.</h1><p className="muted">Manage destinations, stories, and the people behind them.</p></div></div><div className="stats-grid">{Object.entries(counts).map(([name,count]) => <Link prefetch={false} key={name} href={'/admin/'+name} className="stat-card"><span>{name[0].toUpperCase()+name.slice(1)}</span><strong>{Number(count).toLocaleString('en')}</strong><span>View collection →</span></Link>)}</div><div className="split-grid"><section className="panel"><p className="eyebrow">Content</p><h2>Keep your travel guides current</h2><p className="muted">Search existing places, tours, and articles, then review and edit their content.</p><Link href="/admin/places">Browse places →</Link></section><section className="panel"><p className="eyebrow">Access</p><h2>Your team, with clear permissions</h2><p className="muted">Review active accounts and grant administrator access only to trusted team members.</p><Link href="/admin/users">Manage users →</Link></section></div></>;
+import OverviewDashboard from './ui/OverviewDashboard';
+export default async function Overview({searchParams}:{searchParams:Promise<Record<string,string|string[]|undefined>>}) {
+  const data=await readOverview(await searchParams);
+  return <OverviewDashboard data={data}/>;
 }

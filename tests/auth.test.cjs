@@ -12,6 +12,7 @@ function load(file, mocks = {}, env = {}) {
   vm.runInNewContext(source, { module, exports: module.exports, require(name) {
     if (Object.hasOwn(mocks, name)) return mocks[name];
     if (name === 'server-only') return {};
+    if (name === './metrics') return require('../src/app/admin/lib/metrics.ts');
     if (name === './loginLimit') return { consumeLoginLimit: async () => true };
     return require(name);
   }, process: { env }, Buffer, Date, URL, console: { log() { throw Error('Unexpected logging'); }, error() { throw Error('Unexpected logging'); } } }, { filename });
