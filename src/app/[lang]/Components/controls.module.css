@@ -1,0 +1,166 @@
+/* Shared floating controls and loaders. Legacy page styles stay in page.module.css. */
+.flags .flaglist { visibility: hidden; pointer-events: none; }
+.flags .flaglist.active { visibility: visible; pointer-events: auto; }
+:global([data-page="manas"]) .flags {
+  top: 16px;
+  right: max(24px, calc((100vw - 1440px) / 2));
+  left: auto;
+  bottom: auto;
+  width: 44px;
+  z-index: 1001;
+}
+:global([data-page="manas"]) .flags button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--foreground-rgb), .14);
+  background: rgba(var(--callout-rgb), .85);
+}
+:global([data-page="manas"]) .flags button:focus-visible { outline: 2px solid var(--main-active-color); outline-offset: 3px; }
+:global([data-page="manas"]) .flags .flaglist,
+:global([data-page="manas"]) .flags .flaglist.active {
+  position: absolute;
+  inset: 54px -8px auto auto;
+  box-sizing: border-box;
+  width: 60px;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px 7px;
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  background: rgb(var(--callout-rgb));
+  border: 1px solid rgba(var(--foreground-rgb), .14);
+  border-radius: 24px;
+  box-shadow: 0 8px 28px #25282118;
+}
+:global([data-page="manas"]) .flaglist a { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+:global([data-page="manas"]) .flags .flagtext { width: 32px; height: 32px; display: grid; place-items: center; }
+:global([data-page="manas"]) .flags .flag { display: block; width: 32px; height: 32px; object-fit: contain; }
+
+  .contactBtn{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 100;
+    transition: all 0.3s ease;
+  }
+
+  .contactBtn.active{
+    right: -14rem;
+  }
+
+  .contactBtn:hover{
+    animation: shake 0.4s;
+  }
+
+  .contactBox{
+    display: flex;
+    align-items: center;
+  }
+
+  .contactBox h4 {
+    position: relative;
+    isolation: isolate;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .5rem;
+  }
+
+  .contactBox h4::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(var(--callout-rgb), .5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    content: "";
+    pointer-events: none;
+  }
+
+  .flags{
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: 60px;
+    /* height: 40px; */
+    z-index: 100;
+    
+  }
+
+  .flags button{
+    background-color: transparent;
+    border: none;
+  }
+  .flags .flaglist {
+    position: relative;
+    left: -5rem;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+  }
+  .flags .flaglist.active {
+    left: 0;
+  }
+
+  .flagtext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+  }
+  .flagtext:hover{
+    transform: scale(1.15);
+  }
+
+@media (max-width: 991px) {
+  :global([data-page="manas"]) .flags { top: 14px; right: 72px; }
+  :global([data-page="manas"]) .flags { transition: transform .4s cubic-bezier(.16,1,.3,1); }
+  :global([data-page="manas"]):has(:global(header[data-hidden="true"])) .flags:not(:focus-within) { transform: translateY(-100px); }
+}
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(2px);
+    }
+  }
+  .center {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: rgba(var(--foreground-rgb), .62);
+    text-align: center;
+  }
+  .loadingText {
+    max-width: 26ch;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .detailCenter {
+    position: fixed;
+    inset: 76px 0 0;
+    z-index: 900;
+    min-height: 0;
+    padding: 24px;
+    gap: 22px;
+  }
+  .detailCenter .loadingText { font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) {
+    :global([data-page="manas"]) .flags { transition: none; }
+  }
