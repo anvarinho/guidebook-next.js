@@ -30,11 +30,7 @@ export function useReveal(ref: RefObject<HTMLElement | null>, order = 0, individ
           window.innerWidth > 600 ? ((order + index) % 3) * (sleek ? 80 : 50) : 0;
         const duration = detail ? 360 : sleek ? 800 : 900;
         if (galleryEntrance) {
-          // The first hero photograph stays visible while only its frame settles.
-          animations.push(element.animate([
-            { transform: 'translateY(8px)' },
-            { transform: 'translateY(0)' },
-          ], { duration: 380, delay, easing, fill: 'backwards' }));
+          // Keep the LCP photo/frame stable through hydration; animate controls only.
           const controls = Array.from(element.querySelectorAll('[data-gallery-control], [data-gallery-thumbnails]'))
             .filter(node => owns(node));
           controls.forEach((control, controlIndex) => animations.push(control.animate([
