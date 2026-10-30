@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import styles from './page.module.css'
+import styles from './controls.module.css'
 import Image from "next/image";
 import { usePathname } from 'next/navigation'
 import { Locale, i18n } from "@/lib/i18n.config";
