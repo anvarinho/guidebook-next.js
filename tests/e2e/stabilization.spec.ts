@@ -175,6 +175,22 @@ test('analytics preserves early events and loads the library with the idle strat
   }))).toBe(true);
 });
 
+test('shared control styles preserve keyboard language selection and the contact button', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/en/places/fixture-lake');
+  const languages = page.locator('#site-languages');
+  await expect(languages).toBeHidden();
+  const toggle = page.getByRole('button', { name: 'Toggle language menu', exact: true });
+  await toggle.focus();
+  await page.keyboard.press('Enter');
+  await expect(languages).toBeVisible();
+  await expect(languages.getByRole('link', { name: 'fr', exact: true })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(languages).toBeHidden();
+  await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
+  await expect(page.getByRole('link', { name: 'Whatsapp contact', exact: true })).toBeInViewport();
+});
+
 test('carousel controls work by keyboard and interaction suspends autoplay', async ({ page }) => {
   await page.clock.install();
   await page.goto('/login');

@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "./page.module.css";
+import styles from "./controls.module.css";
 import { usePathname } from "next/navigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
 import { sendAnalyticsEvent } from "@/lib/analytics";

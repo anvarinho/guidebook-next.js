@@ -1,4 +1,4 @@
-import styles from './page.module.css'
+import styles from './controls.module.css'
 import LoadingRing from './LoadingRing'
 
 export default function LoadingSpinner({ text, detail = false }: { text: string; detail?: boolean }) {

@@ -199,3 +199,24 @@ Measurements used 30 sequential requests directly to `http://127.0.0.1:3000/en/p
 Warm repeat-request CPU fell about 83%. Memory is an observed comparison across a process restart, not proof that caching alone caused the difference or that RSS cannot grow. An initial post-deployment batch overlapping background regeneration used 1,600 ms CPU, 41 ms median, and 432 ms p95, with 20 stale and 10 fresh cached responses; first generation and regeneration still cost CPU. The private candidate independently used 560 ms CPU with all 30 requests cached.
 
 The server build and all 70 unit/regression tests passed. All 11 browser checks passed, including localized full-page cache hits, 404s, and uncached admin redirects. Public HTTPS smoke checks passed for home, places, English/Russian Bishkek, and Ala-Archa. No production enquiry or account was created.
+
+## Remaining PageSpeed warnings: shared control styles
+
+The language switcher, floating contact control, and loading state now import `controls.module.css` (4,088 bytes) instead of the entire legacy component stylesheet (14,159 bytes). The original stylesheet stays available to its legacy callers. The active rules, media queries, and keyframes were preserved; an unused Font Awesome import was removed. Analytics remains on `lazyOnload`, preserving non-interacting visits as requested. No compatibility polyfills were removed from Next.js.
+
+A local three-run Chromium comparison used a 390×844 viewport, 2x scale, 150 ms simulated network latency, 1.6 Mbps download throughput, reduced motion, and blocked third-party HTTPS. It covered both cold and repeat visits. Median results:
+
+| Measure | Before | After |
+| --- | ---: | ---: |
+| Cold CSS transfer | 18,202 bytes | 16,876 bytes |
+| Cold CSS requests | 3 | 3 |
+| Cold FCP | 776 ms | 780 ms |
+| Cold LCP | 900 ms | 816 ms |
+| Cold Chromium CPU | 880 ms | 930 ms |
+| Repeat Chromium CPU | 870 ms | 820 ms |
+
+The verified transfer reduction is 1,326 bytes. These small samples do not establish a CPU improvement or a field Web Vitals gain. The graph CSS chunking experiment increased CSS requests/bytes and was discarded; extra font preloads and a gallery stylesheet split were also discarded because they did not justify their request/priority tradeoffs. External stylesheets retain independent caching rather than being duplicated into every HTML response. The live nginx server already negotiates HTTP/2.
+
+Google's library cannot be tree-shaken by this repository, and loading it only on interaction would lose some visits. The reported first-party chunk is Next.js/React bootstrap code, including guarded framework compatibility shims; its initial unused-code estimate is not a safe list of removable modules. Those warnings may remain. No PageSpeed score improvement is claimed.
+
+The production build, lint, and 12 browser checks passed, including keyboard language selection and the contact control after scrolling. This follow-up is local and has not been deployed.
