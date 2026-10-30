@@ -1,6 +1,7 @@
 import 'server-only';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { createAdminSession, validateAdminSession, revokeAdminSession } from './sessions';
+import { consumeLoginLimit } from './loginLimit';
 
 export const SESSION_MAX_AGE = 8 * 60 * 60;
 export const secureCookies = process.env.NODE_ENV === 'production' || process.env.NEXTAUTH_URL?.startsWith('https://') === true;
@@ -10,8 +11,12 @@ export function requireAuthConfiguration() {
   if (!process.env.NEXTAUTH_SECRET || process.env.NEXTAUTH_SECRET.length < 32) {
     throw new Error('Authentication is not configured');
   }
-  if (process.env.NODE_ENV === 'production' && !process.env.NEXTAUTH_URL?.startsWith('https://')) {
-    throw new Error('Authentication requires an HTTPS NEXTAUTH_URL');
+  if (process.env.NODE_ENV === 'production') {
+    let origin;
+    try { origin = new URL(process.env.NEXTAUTH_URL); } catch {}
+    if (!origin || origin.protocol !== 'https:' || origin.username || origin.password || origin.pathname !== '/' || origin.search || origin.hash) {
+      throw new Error('Authentication requires an HTTPS NEXTAUTH_URL origin');
+    }
   }
 }
 
@@ -30,9 +35,10 @@ export const authOptions = {
   providers: [CredentialsProvider({
     name: 'Credentials',
     credentials: { email: { type: 'email' }, password: { type: 'password' } },
-    async authorize(credentials) {
+    async authorize(credentials, request) {
       try {
         requireAuthConfiguration();
+        if (!await consumeLoginLimit(credentials?.email || '', request?.headers)) return null;
         return await createAdminSession(credentials);
       } catch {
         // NextAuth includes thrown authorize messages in redirects. Keep failures generic.

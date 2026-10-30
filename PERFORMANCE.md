@@ -240,3 +240,25 @@ A three-run local Chromium trace used a 390×844 viewport, 2x scale, normal moti
 The earlier placeholder-based LCP times are not comparable to the final real-photo times. The local baseline did not reproduce the reported 1,780 ms render delay, and these samples do not prove a field-score improvement. The verified result is that image visibility no longer depends on a JavaScript streaming reveal or initial hero motion. Re-test the deployed page with the original audit conditions.
 
 Production build, lint, 70 regression tests, and 14 browser tests passed. The new checks cover native rendering without JavaScript, a stable initial hero, scroll activation, and reduced-motion changes. This follow-up remains local and is not deployed automatically.
+
+### Admin redesign: local server benchmark (2026-10-30)
+
+The same production-build command, Node v26.10.0, localhost port 3218 and Rust
+`admin-benchmark.rs` runner were used before and after. Each run sends five
+warmups followed by 50 sequential GET /login requests with Connection: close.
+The server is freshly started for each build; CPU is the Node process's
+user+system time from /proc, and memory is end-of-run RSS.
+
+| Measurement | Before | After |
+| --- | ---: | ---: |
+| CPU, 50 warm login requests | 170 ms | 180 ms |
+| Wall time | 80 ms | 85 ms |
+| Node RSS | 125,024 KiB (122.1 MiB) | 125,920 KiB (123.0 MiB) |
+
+This single-pair sample shows approximately unchanged serving cost, not a
+performance improvement. It measures the login HTML response only, excluding
+browser hydration, authenticated dashboard queries, MongoDB memory and bcrypt
+work. No production CPU/memory improvement is claimed for this redesign.
+Admin list queries now return 20 projected records rather than unbounded result
+sets; the MongoDB connection pool is capped at five with a 60-second idle timeout.
+The admin/login styles use system fonts and no new animation or UI library.

@@ -1,36 +1,6 @@
-import { cards } from "./lib/data";
-export const dynamic = "force-dynamic";
-import Card from "./ui/dashboard/card/card";
-import Rightbar from "./ui/dashboard/rightbar/rightbar";
-// import Chart from "./ui/dashboard/chart/chart";
-import styles from "./dashboard.module.css";
-
-export default async function Home() {
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.main}>
-        <div className={styles.cards}>
-          {cards.map((item) => (
-            <Card item={item} key={item.id} />
-          ))}
-        </div>
-        {/* <h1>{token}</h1> */}
-        {/* <Transactions /> */}
-        {/* <Chart /> */}
-      </div>
-      <div className={styles.side}>
-        <Rightbar />
-      </div>
-    </div>
-  );
+import Link from 'next/link';
+import { readOverview } from './lib/data';
+export default async function Overview() {
+  const counts = await readOverview();
+  return <><div className="page-heading"><div><p className="eyebrow">Workspace overview</p><h1>A clear view of your guidebook.</h1><p className="muted">Manage destinations, stories, and the people behind them.</p></div></div><div className="stats-grid">{Object.entries(counts).map(([name,count]) => <Link prefetch={false} key={name} href={'/admin/'+name} className="stat-card"><span>{name[0].toUpperCase()+name.slice(1)}</span><strong>{Number(count).toLocaleString('en')}</strong><span>View collection →</span></Link>)}</div><div className="split-grid"><section className="panel"><p className="eyebrow">Content</p><h2>Keep your travel guides current</h2><p className="muted">Search existing places, tours, and articles, then review and edit their content.</p><Link href="/admin/places">Browse places →</Link></section><section className="panel"><p className="eyebrow">Access</p><h2>Your team, with clear permissions</h2><p className="muted">Review active accounts and grant administrator access only to trusted team members.</p><Link href="/admin/users">Manage users →</Link></section></div></>;
 }
-
-// export default function Page() {
-//   const cookieStore = cookies()
-//   return cookieStore.getAll().map((cookie) => (
-//     <div key={cookie.name}>
-//       <p>Name: {cookie.name}</p>
-//       <p>Value: {cookie.value}</p>
-//     </div>
-//   ))
-// }

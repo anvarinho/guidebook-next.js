@@ -1,7 +1,3 @@
-export default async function Home() {
-    return (
-      <div>
-        <h1>Transactions</h1>
-      </div>
-    )
-  }
+import { redirect } from 'next/navigation';
+import { requireAdmin } from '@/lib/auth';
+export default async function Transactions() { await requireAdmin(); redirect('/admin/reports'); }
