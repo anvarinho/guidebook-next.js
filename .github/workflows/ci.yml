@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -19,7 +19,15 @@ jobs:
       - run: npm run lint
       - run: npm test
       - run: npx playwright install --with-deps chromium
-      # Playwright starts a test-only Rust API, executes npm run build, then
+      # Official MongoDB Ubuntu repository; only the server binary is needed.
+      # https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/
+      - name: Install isolated browser database runtime
+        run: |
+          curl -fsSL https://pgp.mongodb.com/server-8.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-8.0.gpg
+          echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-org-server
+      # Playwright starts test-only MongoDB and a Rust API, executes npm run build, then
       # starts production Next. No production services or secrets are required.
       - name: Production build and browser smoke tests
         run: npm run test:e2e

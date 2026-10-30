@@ -1,5 +1,6 @@
 import 'server-only';
 import { requireAdmin } from '@/lib/auth';
+import { notFound } from 'next/navigation';
 import { ObjectId } from 'mongodb';
 import { connectToDatabase } from './mongodb';
 
@@ -14,65 +15,56 @@ function validateSlug(value) {
   if (typeof value !== 'string' || value.length < 1 || value.length > 200 || !/^[\p{L}\p{N}_-]+$/u.test(value)) throw new Error('Invalid URL');
 }
 
+const PAGE_SIZE = 20;
+function pageNumber(page) {
+  if (!/^[1-9]\d{0,5}$/.test(String(page))) throw new Error('Invalid page');
+  return Number(page);
+}
+async function list(collectionName, filter, page, projection) {
+  const offset = pageNumber(page);
+  const db = await connectToDatabase();
+  const collection = db.collection(collectionName);
+  const [count, places] = await Promise.all([
+    collection.countDocuments(filter),
+    collection.find(filter, projection ? { projection } : {}).sort({ _id:-1 }).skip((offset-1)*PAGE_SIZE).limit(PAGE_SIZE).toArray(),
+  ]);
+  return { count, places };
+}
 export async function readPlaces(query = '', page = 1) {
   await requireAdmin();
-  const searchPattern = searchRegex(query);
-  if (!/^[1-9]\d{0,5}$/.test(String(page)) || !Number.isSafeInteger(Number(page))) throw new Error('Invalid page');
-  const db = await connectToDatabase();
-  const collection = db.collection('places');
-  const filter = { 'name.en': { $regex: searchPattern } };
-  const count = await collection.countDocuments(filter);
-  const places = await collection.find(filter).skip((Number(page) - 1) * 20).limit(20).toArray();
-  return { count, places };
+  return list('places', { 'name.en': { $regex:searchRegex(query) } }, page, { name:1, url:1, region:1, viewCount:1 });
 }
-
-export async function readTours(query = '') {
+export async function readTours(query = '', page = 1) {
   await requireAdmin();
-  const filter = { title: searchRegex(query) };
-  const db = await connectToDatabase();
-  const collection = db.collection('tours');
-  const count = await collection.countDocuments(filter);
-  const places = await collection.find(filter).toArray();
-  return { count, places };
+  return list('tours', { $or:[{ title:searchRegex(query) }, { 'title.en':searchRegex(query) }] }, page, { title:1,url:1,viewCount:1,level:1 });
 }
-
-export async function readArticles() {
+export async function readArticles(query = '', page = 1) {
   await requireAdmin();
-  const db = await connectToDatabase();
-  const collection = db.collection('articles');
-  const count = await collection.countDocuments();
-  const places = await collection.find().sort({ createdAt: -1 }).toArray();
-  return { count, places };
+  return list('articles', { 'title.en':searchRegex(query) }, page, { title:1,url:1,viewCount:1,createdAt:1 });
 }
-
-export async function readStats() {
+export async function readStats(query = '', page = 1) {
+  await requireAdmin();
+  return list('statistics', { route:searchRegex(query) }, page, { timestamp:1,route:1,statusCode:1,'query.lang':1 });
+}
+export async function readUsers(query = '', page = 1) {
+  await requireAdmin();
+  const pattern = searchRegex(query);
+  const result = await list('users', { $or:[{ username:pattern },{ email:pattern }] }, page, userProjection);
+  return { ...result, places:result.places.map(userDTO) };
+}
+export async function readOverview() {
   await requireAdmin();
   const db = await connectToDatabase();
-  const collection = db.collection('statistics');
-  const count = await collection.countDocuments();
-  const records = await collection.find().sort({ timestamp: -1 }).toArray();
-  const places = records.map(place => ({
-    id: place._id, lang: place.query?.lang || '', sessionID: place.sessionID,
-    route: place.route, userAgent: place.requestHeaders?.['user-agent'] || '',
-    statusCode: place.statusCode, timestamp: place.timestamp, ip: place.remoteAddress,
-  }));
-  return { count, places };
-}
-
-export async function readUsers() {
-  await requireAdmin();
-  const db = await connectToDatabase();
-  const collection = db.collection('users');
-  const count = await collection.countDocuments();
-  const places = (await collection.find({}, { projection: userProjection }).toArray()).map(userDTO);
-  return { count, places };
+  const names = ['places','tours','articles','users'];
+  const counts = await Promise.all(names.map(name => db.collection(name).countDocuments()));
+  return Object.fromEntries(names.map((name,index) => [name,counts[index]]));
 }
 
 async function readContent(collectionName, url) {
   validateSlug(url);
   const db = await connectToDatabase();
   const record = await db.collection(collectionName).findOne({ url });
-  if (!record) throw new Error('Content not found');
+  if (!record) notFound();
   return record;
 }
 
@@ -93,12 +85,6 @@ export async function readUser(id) {
   if (typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id)) throw new Error('Invalid user ID');
   const db = await connectToDatabase();
   const user = await db.collection('users').findOne({ _id: new ObjectId(id) }, { projection: userProjection });
-  if (!user) throw new Error('User not found');
+  if (!user) notFound();
   return userDTO(user);
 }
-
-export const cards = [
-  { id: 1, title: 'Total Users', number: 10.928, change: 12 },
-  { id: 2, title: 'Stock', number: 8.236, change: -2 },
-  { id: 3, title: 'Revenue', number: 6.642, change: 18 },
-];

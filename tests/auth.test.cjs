@@ -12,6 +12,7 @@ function load(file, mocks = {}, env = {}) {
   vm.runInNewContext(source, { module, exports: module.exports, require(name) {
     if (Object.hasOwn(mocks, name)) return mocks[name];
     if (name === 'server-only') return {};
+    if (name === './loginLimit') return { consumeLoginLimit: async () => true };
     return require(name);
   }, process: { env }, Buffer, Date, URL, console: { log() { throw Error('Unexpected logging'); }, error() { throw Error('Unexpected logging'); } } }, { filename });
   return module.exports;
@@ -128,7 +129,7 @@ test('every admin data function authorizes before touching the database', async 
     if (typeof fn !== 'function') continue;
     await assert.rejects(fn(), /Unauthorized/, name);
   }
-  assert.equal(checks, 9);
+  assert.equal(checks, 10);
   assert.equal(connections, 0);
 });
 
@@ -180,7 +181,7 @@ test('user reads return allowlisted DTOs, never passwords or session material', 
   const doc = { _id: new (require('mongodb').ObjectId)(), username: 'admin', password: 'hash', sessionSecret: 'secret', email: 'admin@example.test', isActive: true, isAdmin: true };
   const data = load('src/app/admin/lib/data.js', {
     '@/lib/auth': { requireAdmin: async () => ({ isAdmin: true }) },
-    './mongodb': { connectToDatabase: async () => ({ collection: () => ({ countDocuments: async () => 1, findOne: async () => doc, find: () => ({ toArray: async () => [doc] }) }) }) },
+    './mongodb': { connectToDatabase: async () => ({ collection: () => ({ countDocuments: async () => 1, findOne: async () => doc, find: () => ({ sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [doc] }) }) }) },
   });
   const single = await data.readUser(String(doc._id));
   const list = await data.readUsers();
@@ -203,7 +204,7 @@ test('all admin lookup input is bounded and literal, not Mongo or regex operator
   let connected = 0;
   const data = load('src/app/admin/lib/data.js', {
     '@/lib/auth': { requireAdmin: async () => ({ isAdmin: true }) },
-    './mongodb': { connectToDatabase: async () => { connected++; return { collection: () => ({ countDocuments: async () => 0, find: (value) => { filter = value; return { count: async () => 0, skip() { return this; }, limit() { return this; }, toArray: async () => [] }; } }) }; } },
+    './mongodb': { connectToDatabase: async () => { connected++; return { collection: () => ({ countDocuments: async () => 0, find: (value) => { filter = value; return { count: async () => 0, sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [] }; } }) }; } },
   });
   await assert.rejects(data.readUser({ $ne: null }), /Invalid/);
   await assert.rejects(data.readPlace({ $ne: null }), /Invalid/);
@@ -329,6 +330,9 @@ test('authentication fails closed without secrets and does not require them at i
   assert.throws(() => config({}).requireAuthConfiguration(), /not configured/);
   assert.throws(() => config({ NEXTAUTH_SECRET: 'short' }).requireAuthConfiguration(), /not configured/);
   assert.throws(() => config({ NEXTAUTH_SECRET: 'x'.repeat(32), NODE_ENV: 'production', NEXTAUTH_URL: 'http://localhost' }).requireAuthConfiguration(), /HTTPS/);
+  for (const origin of ['https://', 'https://user:password@example.test', 'https://example.test/path', 'https://example.test?token=private']) {
+    assert.throws(() => config({ NEXTAUTH_SECRET: 'x'.repeat(32), NODE_ENV: 'production', NEXTAUTH_URL: origin }).requireAuthConfiguration(), /HTTPS/);
+  }
   assert.doesNotThrow(() => config({ NEXTAUTH_SECRET: 'x'.repeat(32), NODE_ENV: 'production', NEXTAUTH_URL: 'https://example.test' }).requireAuthConfiguration());
 });
 

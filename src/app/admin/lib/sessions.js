@@ -9,6 +9,7 @@ const durableWrite = { writeConcern: { w: 'majority', j: true, wtimeoutMS: 5000 
 const digest = (value) => createHash('sha256').update(value).digest('hex');
 const validId = (value) => typeof value === 'string' && /^[a-f\d]{24}$/i.test(value);
 const validHandle = (value) => typeof value === 'string' && /^[a-f\d]{64}$/i.test(value);
+const dummyHash = '$2b$12$c29TdB61gfKr8s266BbVLuq01qJyVSfUww7C5e3iHJk4KvFmVxRKS';
 
 // Explicit allowlist: never return hashes, session handles, or arbitrary DB fields.
 export function adminDTO(user) {
@@ -21,8 +22,9 @@ export async function createAdminSession(credentials) {
       typeof credentials.password !== 'string' || credentials.password.length < 1 || Buffer.byteLength(credentials.password, 'utf8') > 72) return null;
   const db = await connectToDatabase();
   const user = await db.collection('users').findOne({ email: credentials.email.trim().toLowerCase() });
-  if (!user || user.isAdmin !== true || user.isActive !== true || typeof user.password !== 'string') return null;
-  if (!await bcrypt.compare(credentials.password, user.password)) return null;
+  const eligible = user?.isAdmin === true && user?.isActive === true && typeof user?.password === 'string';
+  const matches = await bcrypt.compare(credentials.password, eligible ? user.password : dummyHash);
+  if (!eligible || !matches) return null;
   const sid = randomBytes(32).toString('hex');
   const sessions = db.collection('admin_sessions');
   await sessions.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });

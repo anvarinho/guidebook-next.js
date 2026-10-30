@@ -125,7 +125,7 @@ test('login metadata is descriptive and privacy artwork respects reduced motion'
 
 test('login renders and admin rejects missing and forged legacy cookies', async ({ page, context }) => {
   await page.goto('/login');
-  await expect(page.getByRole('button', { name: 'Login', exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Sign in', exact: true })).toBeVisible();
   await page.goto('/admin');
   await expect(page).toHaveURL(/\/login/);
   await context.addCookies([

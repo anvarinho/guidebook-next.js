@@ -2,7 +2,9 @@
   "name": "guidebook",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +12,9 @@
     "lint": "eslint .",
     "test": "node --import tsx --test tests/*.test.cjs tests/*.test.ts",
     "test:e2e": "playwright test",
-    "images:placeholders": "node scripts/generate-image-placeholders.cjs --remote"
+    "images:placeholders": "node scripts/generate-image-placeholders.cjs --remote",
+    "admin:account": "node scripts/admin-account.mjs",
+    "admin:check": "node scripts/admin-check.mjs"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.9.0",
