@@ -17,6 +17,9 @@ import { PlacesReveal } from "../../places/components/PlacesMotion";
 import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
+export const revalidate = 60;
+export async function generateStaticParams() { return []; }
+
 type Params = {
   params: Promise<{ tourUrl: string; lang: Locale }>;
 };

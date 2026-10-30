@@ -141,3 +141,61 @@ passed with existing warnings. English and Russian Manas pages returned HTTP
 200 without compile-time font retries. All 374 previews (330 content photos and
 44 local artwork assets) decoded successfully at no more than 16 pixels per
 side. A paginated response returned all 12 cards with image-specific previews.
+
+## 2026-10-30 detail-page performance verification
+
+The 2026-10-30 changes preserve image quality, typography, and gallery/map dimensions. They were verified locally and subsequently deployed with the server caching pass below.
+
+- The initial gallery image uses eager loading with high fetch priority. Browser tests check that priority is present in the initial server HTML.
+- Thumbnail `sizes` matches the existing 72px mobile / 88px desktop CSS. The image-width allowlist includes matching 1x, 2x, and 3x variants; quality stays at 75.
+- Latin and Russian body/heading font files are preloaded to avoid discovery only after CSS downloads. Other scripts keep their existing font behavior.
+- Reveal effects use IntersectionObserver geometry. Reading progress caches article geometry and invalidates it when the article/body or viewport resizes.
+- Google Maps mounts within 200px of the viewport. Its space remains reserved and the external Google Maps link remains available. Maps still downloads its own scripts when needed.
+- Analytics queues initialization and interaction events, then downloads its library using Next.js `lazyOnload`. This preserves page views rather than requiring an interaction before tracking. Lighthouse may still report unused third-party JavaScript after it loads.
+- The earlier flag change uses the unchanged PNG through a hashed CSS asset with one-year immutable caching.
+
+### Measurements
+
+The two reported thumbnails were fetched through the production image optimizer as WebP, quality 75. A 72px thumbnail on a 2x display previously selected 256px; it can now select 144px. The first thumbnail can reuse the already-downloaded hero instead of fetching another variant.
+
+| Image | 256px bytes | 144px bytes |
+| --- | ---: | ---: |
+| botanical-garden.jpg | 12,566 | 4,158 |
+| opera-and-balet.jpg | 9,374 | 3,560 |
+| Total | 21,940 | 7,718 |
+
+The measured reduction is 14,222 bytes (13.9 KiB), without reducing compression quality.
+
+A controlled A/B rebuild used the same local production server, headless Chromium, 390×844 viewport, 2x display scale, five fresh contexts, and 40 animation-frame scroll steps per run. Fonts were ready before scrolling; third-party HTTPS was blocked in both versions. The CPU counter sums Chromium processes. Layout time comes from Chrome DevTools Performance counters.
+
+| Median per scroll scenario | Before | After |
+| --- | ---: | ---: |
+| Chromium CPU | 1,320 ms | 1,360 ms |
+| Main-thread task time | 352 ms | 356 ms |
+| Layout time | 16 ms | 14 ms |
+
+CPU is effectively unchanged in this small local sample; no CPU reduction is claimed. Earlier runs varied more, so these measurements do not predict field LCP/INP or Google Maps execution cost. The verified improvements are request priority/discovery, thumbnail bytes, and delaying third-party work until its intended loading phase.
+
+`npm run lint`, `npm test` (70 tests), `npm run test:e2e` (10 browser tests), and `npm run build` passed. Browser fixtures use synthetic Maps/analytics IDs and intercepted third-party requests, and exercise deferred maps, analytics queues, thumbnails, image priority, font hints, reduced motion, and scrolling.
+
+The flagged compatibility polyfills are supplied by Next.js. They have not been patched out of the runtime or removed by narrowing supported browsers. Stylesheets required to render the existing layout remain render-blocking. Re-run Lighthouse on the deployed build and use subsequent field data to assess real-user improvement.
+
+## 2026-10-30 production server load reduction
+
+Public place, tour, and article detail pages now generate on demand and cache their complete HTML/RSC output for 60 seconds. Previously only fetched data was cached, so React rendering, content validation, and Markdown sanitization repeated on every visit. Admin/auth/contact remain dynamic. The server-only content API uses the verified loopback endpoint on port 4001 instead of public HTTPS. The active working directory remains `/var/www/frontend`.
+
+The Next.js RAM cache is bounded at 16 MiB, the single PM2 frontend uses a 256 MiB V8 old-space limit, and PM2 checks for a 512 MiB RSS restart threshold. The existing image cache was carried forward to avoid re-encoding all images after deployment. Appearance, image quality, localization, SEO, and the one-minute revalidation target are preserved.
+
+Measurements used 30 sequential requests directly to `http://127.0.0.1:3000/en/places/bishkek-city`, after warming the route. CPU is the frontend process's Linux user/system CPU ticks converted using `CLK_TCK`; RSS is read from `/proc/PID/status`. These are small production samples, not a saturation load test.
+
+| Measure | Before | Live warm cache after |
+| --- | ---: | ---: |
+| Frontend CPU for 30 requests | 2,350 ms | 390 ms |
+| Median response time | 82 ms | 19 ms |
+| 95th percentile response time | 240 ms | 49 ms |
+| RSS after requests | 248 MiB | 143 MiB |
+| Full-page cache hits | 0 / 30 | 30 / 30 |
+
+Warm repeat-request CPU fell about 83%. Memory is an observed comparison across a process restart, not proof that caching alone caused the difference or that RSS cannot grow. An initial post-deployment batch overlapping background regeneration used 1,600 ms CPU, 41 ms median, and 432 ms p95, with 20 stale and 10 fresh cached responses; first generation and regeneration still cost CPU. The private candidate independently used 560 ms CPU with all 30 requests cached.
+
+The server build and all 70 unit/regression tests passed. All 11 browser checks passed, including localized full-page cache hits, 404s, and uncached admin redirects. Public HTTPS smoke checks passed for home, places, English/Russian Bishkek, and Ala-Archa. No production enquiry or account was created.

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
-import { sendGAEvent } from "@next/third-parties/google";
+import { sendAnalyticsEvent } from "@/lib/analytics";
 import Image from "next/image";
 
 const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
@@ -79,7 +79,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
             title="Whatsapp contact"
             target="_blank"
             onClick={() =>
-              sendGAEvent({
+              sendAnalyticsEvent({
                 event: "buttonClicked",
                 value: "4FJFCJuVic8YELL_7YUq",
               })

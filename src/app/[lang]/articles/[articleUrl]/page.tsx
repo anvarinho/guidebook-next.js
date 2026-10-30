@@ -13,6 +13,9 @@ import shared from '../../places/page.module.css';
 import { PlacesReveal } from '../../places/components/PlacesMotion';
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
 
+export const revalidate = 60;
+export async function generateStaticParams() { return []; }
+
 type Params = {
   params: Promise<{
       articleUrl: string,

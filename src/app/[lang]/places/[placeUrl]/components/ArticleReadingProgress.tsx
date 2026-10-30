@@ -14,33 +14,45 @@ export default function ArticleReadingProgress({ bodyId }: { bodyId: string }) {
     if (!body || !bar) return;
 
     let frame = 0;
+    let geometryDirty = true;
+    let start = 0;
+    let amount = 1;
     const update = () => {
       frame = 0;
-      const rect = body.getBoundingClientRect();
       const scrollTop = window.scrollY;
-      const headerOffset = window.innerWidth <= 991 ? 72 : 76;
-      const start = scrollTop + rect.top - headerOffset;
-      const end = scrollTop + rect.bottom - document.documentElement.clientHeight;
-      const amount = Math.max(1, end - start);
+      if (geometryDirty) {
+        const rect = body.getBoundingClientRect();
+        const headerOffset = window.innerWidth <= 991 ? 72 : 76;
+        start = scrollTop + rect.top - headerOffset;
+        const end = scrollTop + rect.bottom - document.documentElement.clientHeight;
+        amount = Math.max(1, end - start);
+        geometryDirty = false;
+      }
       const value = Math.min(1, Math.max(0, (scrollTop - start) / amount));
       bar.style.transform = `scaleX(${value})`;
     };
     const scheduleUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
     };
+    const measure = () => {
+      geometryDirty = true;
+      scheduleUpdate();
+    };
 
     update();
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
-    window.addEventListener('resize', scheduleUpdate, { passive: true });
-    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(scheduleUpdate);
+    window.addEventListener('resize', measure, { passive: true });
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
     observer?.observe(body);
+    const article = body.closest('[data-place-page]');
+    if (article) observer?.observe(article);
     return () => {
       window.removeEventListener('scroll', scheduleUpdate);
-      window.removeEventListener('resize', scheduleUpdate);
+      window.removeEventListener('resize', measure);
       observer?.disconnect();
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, [bodyId, pathname]);
 
-  return <span ref={progress} className={styles.readingProgress} aria-hidden="true" />;
+  return <span ref={progress} className={styles.readingProgress} data-reading-progress aria-hidden="true" />;
 }

@@ -9,6 +9,10 @@ import LoadingSpinner from "../../Components/LoadingSpinner"
 import Meta from "./meta"
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
 
+// Public content is shared by visitors; render once per locale/slug per minute.
+export const revalidate = 60;
+export async function generateStaticParams() { return []; }
+
 type Params = {
     params: Promise<{
         placeUrl: string,

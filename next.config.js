@@ -2,6 +2,8 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const nextConfig = {
+  // Keep hot public pages in RAM without consuming the default 50 MiB cache.
+  cacheMaxMemorySize: 16 * 1024 * 1024,
   compress: true,
   poweredByHeader: false,
   async headers() {
@@ -669,6 +671,8 @@ const nextConfig = {
     // WebP costs less CPU to encode on a cold image cache than AVIF.
     formats: ["image/webp"],
     minimumCacheTTL: 86400,
+    // Match gallery thumbnails at 1x/2x/3x without downloading 256/384px images.
+    imageSizes: [32, 48, 64, 72, 88, 96, 128, 144, 176, 216, 256, 264, 384],
     remotePatterns: [
       { hostname: "159.65.95.44" },
       { hostname: "central-asia.live" },

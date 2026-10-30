@@ -30,6 +30,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
   const [pending, setPending] = useState<PendingPhoto | null>(null);
   const [swap, setSwap] = useState<PhotoSwap | null>(null);
   const thumbnails = useRef<HTMLDivElement>(null);
+  const thumbnailsMounted = useRef(false);
   const activeIndex = useRef(0);
   const requestedIndex = useRef<number | null>(null);
   const requestToken = useRef(0);
@@ -114,6 +115,11 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
   }, []);
 
   useEffect(() => {
+    // The first thumbnail starts in view; avoid a layout read during hydration.
+    if (!thumbnailsMounted.current) {
+      thumbnailsMounted.current = true;
+      return;
+    }
     const strip = thumbnails.current;
     const selected = strip?.children[index] as HTMLElement | undefined;
     if (!strip || !selected) return;
@@ -143,7 +149,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
     onError?: () => void, preload = false) => (
     <Image key={key} src={imageUrl(images[photoIndex])}
       alt={preload ? '' : `${name} — ${t[3]} ${photoIndex + 1}`} aria-hidden={preload || undefined}
-      fill sizes="(max-width: 1200px) 100vw, 1200px" priority={priority && photoIndex === 0}
+      fill sizes="(max-width: 1200px) 100vw, 1200px" fetchPriority={priority && photoIndex === 0 ? 'high' : undefined}
       loading={detailMotion || (priority && photoIndex === 0) ? 'eager' : 'lazy'}
       {...imagePlaceholder(blurDataURLs[photoIndex])} onLoad={onLoad} onError={onError} />
   );
@@ -183,7 +189,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
             {detailMotion && pending && <div className={`${styles.galleryPhoto} ${styles.galleryPhotoPreload}`} data-direction={pending.direction}
               key={`photo-${pending.index}`}>
               <Image src={imageUrl(images[pending.index])} alt="" aria-hidden
-                fill sizes="(max-width: 1200px) 100vw, 1200px" priority={priority && pending.index === 0}
+                fill sizes="(max-width: 1200px) 100vw, 1200px"
                 loading="eager" {...imagePlaceholder(blurDataURLs[pending.index])}
                 onLoad={event => { void commitLoadedPhoto(event, pending); }}
                 onError={() => failPendingPhoto(pending)} />
@@ -210,7 +216,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
             const distance = (i - activeIndex.current + images.length) % images.length;
             void selectPhoto(i, distance <= images.length / 2 ? 1 : -1);
           }}>
-          <Image {...imagePlaceholder(blurDataURLs[i])} src={imageUrl(image)} alt="" fill sizes="88px" />
+          <Image {...imagePlaceholder(blurDataURLs[i])} src={imageUrl(image)} alt="" fill sizes="(max-width: 600px) 72px, 88px" />
         </button>)}
       </div>}
     </section>

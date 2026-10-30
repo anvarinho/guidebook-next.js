@@ -57,6 +57,9 @@ test('public pages render with production canonical URLs and localized alternate
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://central-asia.live${path}`);
     await expect(page.locator('link[rel="alternate"][hreflang="ru-RU"], link[rel="alternate"][hreflang="ru"]')).toHaveCount(1);
     await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1);
+    await expect(page.locator('link[rel="preload"][as="font"]')).toHaveCount(2);
+    // Static pages emit HTML links; streamed pages may use the HTTP Link header.
+    expect(`${response!.headers()['link'] || ''}${await response!.text()}`).toContain('as="font"');
     await expect(page.locator('body')).not.toContainText('Application error');
     if (path === '/en/places/fixture-lake') {
       await expect(page.locator('[data-place-page]')).toBeVisible();
@@ -83,6 +86,24 @@ test('production responses protect content and keep admin routes out of search',
     }
     if (path === '/admin') expect(headers['cache-control']).toContain('no-store');
   }
+});
+
+test('public detail pages reuse one-minute cached renders without caching private responses', async ({ request }) => {
+  for (const path of ['/en/places/fixture-lake', '/ru/places/fixture-lake', '/en/tours/fixture-tour', '/en/articles/fixture-story']) {
+    const first = await request.get(path);
+    expect(first.status()).toBe(200);
+    const repeat = await request.get(path);
+    expect(repeat.status()).toBe(200);
+    expect(repeat.headers()['x-nextjs-cache']).toBe('HIT');
+    expect(repeat.headers()['cache-control']).toContain('s-maxage=60');
+    expect(await repeat.text()).toContain('https://central-asia.live' + path);
+  }
+  const admin = await request.get('/admin', { maxRedirects: 0 });
+  expect(admin.status()).toBe(307);
+  expect(admin.headers()['cache-control']).toContain('no-store');
+  expect(admin.headers()['x-nextjs-cache']).toBeUndefined();
+  const missing = await request.get('/en/places/unknown-destination');
+  expect(missing.status()).toBe(404);
 });
 
 test('login metadata is descriptive and privacy artwork respects reduced motion', async ({ page }) => {
@@ -114,6 +135,44 @@ test('login renders and admin rejects missing and forged legacy cookies', async 
   ]);
   await page.goto('/admin/users/add');
   await expect(page).toHaveURL(/\/login/);
+});
+
+test('mobile detail prioritizes its hero, sizes thumbnails, and waits to load the map', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const response = await page.goto('/en/places/fixture-lake');
+  const hero = page.getByRole('img', { name: 'Fixture lake — Photo 1', exact: true });
+  await expect(hero).toHaveAttribute('fetchpriority', 'high');
+  await expect(hero).toHaveAttribute('loading', 'eager');
+  expect(await response!.text()).toMatch(/<link[^>]+as="image"[^>]+fetchPriority="high"/);
+  const map = page.locator('[data-place-map]');
+  await expect(map).toHaveCount(1);
+  await expect(map.locator('iframe')).toHaveCount(0);
+  // The first thumbnail may reuse the already-downloaded hero at a larger width.
+  const thumbnail = page.locator('[data-gallery-thumbnails] img').nth(1);
+  await expect(thumbnail).toHaveAttribute('sizes', '(max-width: 600px) 72px, 88px');
+  await thumbnail.scrollIntoViewIfNeeded();
+  await expect.poll(async () => new URL(await thumbnail.evaluate(image => (image as HTMLImageElement).currentSrc)).searchParams.get('w')).toBe('72');
+  await map.scrollIntoViewIfNeeded();
+  await expect(map.locator('iframe')).toHaveCount(1);
+  await expect(map.locator('iframe')).toHaveAttribute('src', /google\.com\/maps\/embed/);
+  // Scrolling and resizing must not leave the cached progress geometry stale.
+  await page.setViewportSize({ width: 600, height: 844 });
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await expect(page.locator('[data-reading-progress]')).toHaveCSS('transform', 'matrix(0, 0, 0, 1, 0, 0)');
+});
+
+test('analytics preserves early events and loads the library with the idle strategy', async ({ page }) => {
+  await page.addInitScript(() => { window.dataLayer = [{ event: 'early-test-event' }]; });
+  await page.route('https://www.googletagmanager.com/**', route => route.fulfill({
+    contentType: 'application/javascript', body: 'window.testAnalyticsLoaded = true;',
+  }));
+  await page.goto('/en');
+  await expect(page.locator('#guidebook-analytics')).toHaveAttribute('data-nscript', 'lazyOnload');
+  expect(await page.evaluate(() => window.dataLayer?.some(event => (event as { event?: string }).event === 'early-test-event'))).toBe(true);
+  expect(await page.evaluate(() => window.dataLayer?.some(event => {
+    const command = Array.from(event as ArrayLike<unknown>);
+    return command[0] === 'config' && command[1] === 'G-TESTONLY';
+  }))).toBe(true);
 });
 
 test('carousel controls work by keyboard and interaction suspends autoplay', async ({ page }) => {
