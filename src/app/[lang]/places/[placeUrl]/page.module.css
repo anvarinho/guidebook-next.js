@@ -53,7 +53,7 @@
 .gallery[data-place-detail-motion] .galleryStage:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 4px; }
 @keyframes gallery-settle { from { transform: scale(1.035); } to { transform: scale(1.015); } }
 @supports (animation-timeline: view()) {
-  .gallery[data-place-detail-motion] .galleryPhotoViewport {
+  .gallery[data-place-detail-motion][data-gallery-scrolled] .galleryPhotoViewport {
     animation: gallery-settle auto linear both;
     animation-timeline: view(block);
     animation-range: entry 0% cover 36%;

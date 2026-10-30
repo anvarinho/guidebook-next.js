@@ -220,3 +220,23 @@ The verified transfer reduction is 1,326 bytes. These small samples do not estab
 Google's library cannot be tree-shaken by this repository, and loading it only on interaction would lose some visits. The reported first-party chunk is Next.js/React bootstrap code, including guarded framework compatibility shims; its initial unused-code estimate is not a safe list of removable modules. Those warnings may remain. No PageSpeed score improvement is claimed.
 
 The production build, lint, and 12 browser checks passed, including keyboard language selection and the contact control after scrolling. This follow-up is local and has not been deployed.
+
+## Hero render-delay follow-up
+
+The language-level `loading.tsx` and the place page's outer Suspense boundary could leave completed article HTML hidden behind a loading fallback until React's streaming-reveal script ran. A JavaScript-disabled browser reproduced this: only the loading screen was visible, despite the photo being present in the response. Removing those page-wide boundaries makes the native server-rendered hero visible without JavaScript. Explicit in-page boundaries, including weather, remain; navigation no longer uses the language-wide loading cover.
+
+The hero frame no longer starts a delayed entrance transform during hydration. Gallery control entrances and photo-swap transitions remain, and the existing scroll-linked image effect starts after the first window scroll. Reduced-motion behavior is preserved. The first high-priority detail photo uses an empty placeholder; other photos and thumbnails retain their image-specific blur previews. This avoids confusing the blur background with the real photo in LCP measurements.
+
+A three-run local Chromium trace used a 390×844 viewport, 2x scale, normal motion, 4x CPU throttling, 150 ms latency, 1.6 Mbps download throughput, and blocked third-party HTTPS. Each run observed five seconds after DOMContentLoaded. Results:
+
+| Measure | Before | Final change |
+| --- | ---: | ---: |
+| Median Chromium process CPU | 7,730 ms | 7,110 ms |
+| LCP entries identifying the actual photo | 1 / 3 | 3 / 3 |
+| Actual photo paint after resource completion | 56 ms in the one comparable run | 28–53 ms, median 46 ms |
+| Raw median reported LCP | 812 ms, mostly blur placeholders | 960 ms, real photo |
+| Hero visible with JavaScript disabled | No | Yes |
+
+The earlier placeholder-based LCP times are not comparable to the final real-photo times. The local baseline did not reproduce the reported 1,780 ms render delay, and these samples do not prove a field-score improvement. The verified result is that image visibility no longer depends on a JavaScript streaming reveal or initial hero motion. Re-test the deployed page with the original audit conditions.
+
+Production build, lint, 70 regression tests, and 14 browser tests passed. The new checks cover native rendering without JavaScript, a stable initial hero, scroll activation, and reduced-motion changes. This follow-up remains local and is not deployed automatically.

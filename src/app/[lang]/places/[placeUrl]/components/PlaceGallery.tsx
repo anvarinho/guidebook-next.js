@@ -29,6 +29,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
   const [index, setIndex] = useState(0);
   const [pending, setPending] = useState<PendingPhoto | null>(null);
   const [swap, setSwap] = useState<PhotoSwap | null>(null);
+  const gallery = useRef<HTMLElement>(null);
   const thumbnails = useRef<HTMLDivElement>(null);
   const thumbnailsMounted = useRef(false);
   const activeIndex = useRef(0);
@@ -37,6 +38,13 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
   const pointerStart = useRef<{ x: number; y: number; pointerId: number } | null>(null);
   const t = labels[lang];
   const imageUrl = useCallback((path: string) => `${process.env.NEXT_PUBLIC_URL}/${path}`, []);
+
+  useEffect(() => {
+    if (!detailMotion) return;
+    const startScrollMotion = () => gallery.current?.setAttribute('data-gallery-scrolled', '');
+    window.addEventListener('scroll', startScrollMotion, { passive: true, once: true });
+    return () => window.removeEventListener('scroll', startScrollMotion);
+  }, [detailMotion]);
 
   const selectPhoto = useCallback((target: number, direction: -1 | 1) => {
     if (target === activeIndex.current) {
@@ -151,11 +159,12 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
       alt={preload ? '' : `${name} — ${t[3]} ${photoIndex + 1}`} aria-hidden={preload || undefined}
       fill sizes="(max-width: 1200px) 100vw, 1200px" fetchPriority={priority && photoIndex === 0 ? 'high' : undefined}
       loading={detailMotion || (priority && photoIndex === 0) ? 'eager' : 'lazy'}
-      {...imagePlaceholder(blurDataURLs[photoIndex])} onLoad={onLoad} onError={onError} />
+      {...(detailMotion && priority && photoIndex === 0 ? { placeholder: 'empty' as const } : imagePlaceholder(blurDataURLs[photoIndex]))}
+      onLoad={onLoad} onError={onError} />
   );
 
   return (
-    <section className={styles.gallery} data-place-detail-motion={detailMotion || undefined}
+    <section ref={gallery} className={styles.gallery} data-place-detail-motion={detailMotion || undefined}
       aria-label={`${name} — ${t[0]}`} dir="ltr"
       onKeyDown={event => {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {

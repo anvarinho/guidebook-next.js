@@ -175,6 +175,49 @@ test('analytics preserves early events and loads the library with the idle strat
   }))).toBe(true);
 });
 
+test('initial hero is stable through hydration and scroll motion starts on scrolling', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.addInitScript(() => {
+    const state = window as typeof window & { heroFrameAnimations: number };
+    state.heroFrameAnimations = 0;
+    const animate = Element.prototype.animate;
+    Element.prototype.animate = function (keyframes, options) {
+      if (this.hasAttribute('data-reveal-gallery')) state.heroFrameAnimations++;
+      return animate.call(this, keyframes, options);
+    };
+  });
+  await page.goto('/en/places/fixture-lake');
+  const hero = page.getByRole('img', { name: 'Fixture lake — Photo 1', exact: true });
+  await expect(hero).toHaveCSS('background-image', 'none');
+  const gallery = page.locator('section[data-place-detail-motion]');
+  const viewport = hero.locator('..').locator('..');
+  await expect(viewport).toHaveCSS('animation-name', 'none');
+  expect(await page.evaluate(() => (window as typeof window & { heroFrameAnimations: number }).heroFrameAnimations)).toBe(0);
+  await page.evaluate(() => window.scrollTo({ top: 150, behavior: 'instant' }));
+  await expect(gallery).toHaveAttribute('data-gallery-scrolled', '');
+  if (await page.evaluate(() => CSS.supports('animation-timeline: view()'))) {
+    expect(await viewport.evaluate(element => getComputedStyle(element).animationName)).not.toBe('none');
+  }
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect(viewport).toHaveCSS('animation-name', 'none');
+});
+
+test('first photo renders without waiting for JavaScript hydration', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  try {
+    await context.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
+    const page = await context.newPage();
+    await page.goto('http://127.0.0.1:3217/en/places/fixture-lake');
+    const hero = page.getByRole('img', { name: 'Fixture lake — Photo 1', exact: true });
+    await expect(hero).toBeVisible();
+    await expect(hero).toHaveCSS('background-image', 'none');
+    await expect.poll(() => hero.evaluate(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0)).toBe(true);
+  } finally {
+    await context.close();
+  }
+});
+
 test('shared control styles preserve keyboard language selection and the contact button', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/en/places/fixture-lake');

@@ -1,11 +1,9 @@
 import getPlace from "@/lib/getPlace"
-import { Suspense } from "react"
 import PlaceArticle from "./components/PlaceArticle"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
-import LoadingSpinner from "../../Components/LoadingSpinner"
 import Meta from "./meta"
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
 
@@ -35,11 +33,10 @@ export default async function PlacePage(props: Params) {
 
     if (!data) notFound()
     return (
-            <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
-                {/* <JsonLD data={metaData} /> */}
+            <>
                 <Meta lang={lang} place={data} page={page}/>
                 <PlaceArticle promise={Promise.resolve(data)} lang={lang}/>
-            </Suspense>
+            </>
     )
 }
 
