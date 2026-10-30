@@ -2,6 +2,10 @@
 
 ## Release verification
 
+Public place, tour, and article detail routes now generate on first visit and reuse the full rendered page for 60 seconds, rather than repeating React/Markdown work for every visitor. Revalidation happens in the background; a backend failure preserves an existing successful page. The first request for an uncached slug still depends on the backend, and missing content remains a 404. Admin, authentication, contact submissions, and language-preference redirects remain dynamic/private.
+
+The production Next.js memory cache is limited to 16 MiB (disk caching remains enabled). PM2 runs one frontend process with a 256 MiB V8 old-space limit and a 512 MiB RSS restart threshold. These limits leave headroom on the current 1 GiB server; the V8 limit is not a total process-memory limit, and PM2 checks memory periodically. Monitor restarts and RSS under real traffic, and adjust on larger hosts if needed. Rebuilds should run in an isolated directory, with a verified release switched into `/var/www/frontend` only after smoke checks.
+
 Run `npm run lint`, `npm test`, and `npm run test:e2e` before release. Browser checks build against an isolated local fixture API and verify canonical URLs, production headers, admin access rejection, reduced motion, and contact failure feedback without production credentials. Rust and Playwright Chromium are required for those checks.
 
 For the actual deployment, set `CONTENT_API_URL` in the hosting environment **before** `npm run build`; an ignored developer `.env.local` is not shipped by Git. The content API must be reachable during prerendering. Restart `npm run dev` after changing local environment configuration. Build with `npm run build`, then serve with `npm start`; retain the `.next-build` output and required runtime dependencies/assets.

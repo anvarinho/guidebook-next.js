@@ -3,7 +3,7 @@
   "url": "fixture-lake",
   "name": "Fixture lake",
   "title": "Fixture lake in Kyrgyzstan",
-  "description": "# Fixture guide\n\nA **test-only** destination.\n\n| Route | Time |\n| --- | --- |\n| Lake | One day |",
+  "description": "# Fixture guide\n\nA **test-only** destination.\n\n## Planning a visit\n\nThis synthetic travel guide provides enough article content to exercise the mobile layout before the location card enters the viewport. Visitors can read about the route, prepare for changing weather, and review transport options before exploring related destinations. No production enquiry or database record is created by this fixture.\n\nAllow time to explore the surroundings and check local travel conditions before setting out. The gallery, article, and location information remain accessible when scrolling with a keyboard or using reduced motion. This paragraph deliberately represents a normal destination description rather than an empty test page.\n\n| Route | Time |\n| --- | --- |\n| Lake | One day |",
   "region": "Chuy",
   "images": [
     "bozteri.jpg",

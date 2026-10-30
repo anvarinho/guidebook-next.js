@@ -14,6 +14,7 @@ import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
 import { PlacesReveal } from '../../components/PlacesMotion';
 import ArticleReadingProgress from './ArticleReadingProgress';
+import ViewportMap from './ViewportMap';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
@@ -85,9 +86,9 @@ export default async function PlaceArticle({ promise, lang }: {
             </div>
 
             <div className={styles.map}>
-              {mapsApiKey ? <GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
+              {mapsApiKey ? <ViewportMap><GoogleMapsEmbed aria-label={`Google Maps ${place.name}`}
                 apiKey={mapsApiKey} height={240} width="100%"
-                mode="place" q={coordinates} zoom="12"/> : <div className={styles.mapPreview}>
+                mode="place" q={coordinates} zoom="12"/></ViewportMap> : <div className={styles.mapPreview}>
                 <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M32 56S13 38 13 24a19 19 0 0 1 38 0c0 14-19 32-19 32Z"/>
                   <circle cx="32" cy="24" r="7"/>

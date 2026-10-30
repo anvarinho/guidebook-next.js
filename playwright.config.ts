@@ -1,6 +1,7 @@
 import { defineConfig } from '@playwright/test';
 
-// Both servers are local. Empty integrations override any developer .env values.
+// Local servers only. Database credentials are empty; Maps/analytics IDs are synthetic.
+// Browser tests intercept third-party requests so no real integrations are contacted.
 export const fixtureEnvironment = {
   CONTENT_API_URL: 'http://127.0.0.1:4329',
   CONTENT_API_TIMEOUT_MS: '5000',
@@ -9,7 +10,7 @@ export const fixtureEnvironment = {
   NEXTAUTH_URL: 'http://127.0.0.1:3217', NEXTAUTH_SECRET: '',
   ADMIN_MONGODB_URI: '', DB_HOST: '', DB_PORT: '', DB_NAME: '', MONGODB_URI: '',
   CONTACT_MONGODB_URI: '', CONTACT_MONGODB_DATABASE: '', CONTACT_ORIGIN: '',
-  CONTACT_RATE_LIMIT_SECRET: '', GOOGLE_ANALYTICS_ID: '', GOOGLE_MAPS_API_KEY: '',
+  CONTACT_RATE_LIMIT_SECRET: '', GOOGLE_ANALYTICS_ID: 'G-TESTONLY', GOOGLE_MAPS_API_KEY: 'test-only-not-a-valid-key',
 };
 
 export default defineConfig({

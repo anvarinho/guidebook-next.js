@@ -98,10 +98,12 @@ export function useReveal(ref: RefObject<HTMLElement | null>, order = 0, individ
 
       const observer = new IntersectionObserver(entries => {
         if (entries.some(entry => entry.isIntersecting)) reveal();
+        else if (!revealed && !galleryEntrance && entries.some(entry => entry.boundingClientRect.top >= window.innerHeight)) {
+          element.style.opacity = '0';
+        }
       }, { rootMargin: detail ? '0px 0px -20px' : sleek ? '0px 0px -24px' : '0px 0px 40px', threshold: individual ? 0 : .05 });
 
-      // Only hide blocks that have not entered the viewport; SSR remains fully visible.
-      if (!galleryEntrance && element.getBoundingClientRect().top >= window.innerHeight) element.style.opacity = '0';
+      // IntersectionObserver supplies geometry without interleaved DOM reads/writes.
       observer.observe(element);
       const onFocus = () => { reveal(true); animations.forEach(animation => animation.finish()); };
       const onPreference = () => { if (reduced.matches) onFocus(); };

@@ -6,7 +6,8 @@ import '../exo-2.css'
 import { Locale, i18n } from '@/lib/i18n.config'
 import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import Analytics from './Components/Analytics'
+import FontPreloads from './Components/FontPreloads'
 
 import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
@@ -38,12 +39,13 @@ export default async function RootLayout(
   return (
     <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[lang] ?? lang} data-scroll-behavior="smooth">
       <head>
+        <FontPreloads lang={lang}/>
         <Meta lang={lang}/>
       </head>
 
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
       <body className={lang === 'ru' ? 'font-exo-2' : 'font-bai-jamjuree'}>
-        {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID}/>}
+        {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
           navbar={<Navbar lang={lang}/>}
           footer={<FooterVisibility><Footer lang={lang}/></FooterVisibility>}
