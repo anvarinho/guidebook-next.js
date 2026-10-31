@@ -1,5 +1,6 @@
 "use client";
 
+import { isRtlLocale } from '@/lib/localeMetadata';
 import { useEffect, useRef, type ReactNode } from "react";
 import { initializeManas } from "./motion";
 import type { InteractiveMessages } from "./interactive-messages";
@@ -13,5 +14,5 @@ export default function Manas({ children, messages, language, className = "" }: 
     if (root.current) return initializeManas(root.current, messages);
   }, [messages]);
 
-  return <div ref={root} className={`manas-page ${className}`} lang={language} dir={language === "ar" ? "rtl" : "ltr"}>{children}</div>;
+  return <div ref={root} className={`manas-page ${className}`} lang={language} dir={isRtlLocale(language) ? "rtl" : "ltr"}>{children}</div>;
 }

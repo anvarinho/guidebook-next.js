@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "ms-MY",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Memuatkan...",
+    "contactButton": "Sebarang pertanyaan?",
+    "navigation": [
+      {
+        "text": "Laman utama",
+        "url": "/"
+      },
+      {
+        "text": "Tempat menarik",
+        "url": "/places"
+      },
+      {
+        "text": "Pakej pelancongan",
+        "url": "/tours"
+      },
+      {
+        "text": "Artikel",
+        "url": "/articles"
+      },
+      {
+        "text": "Tentang kami",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Panduan Perjalanan Kyrgyzstan",
+      "description": "Susuri denai gunung, berenang di Issyk-Kul atau bermalam di yurt bersama keluarga tempatan. Pilih laluan yang sesuai dengan minat anda.",
+      "subtitle": "Panduan Perjalanan Kyrgyzstan",
+      "subtitle1": "Mengapa Melawat Kyrgyzstan?",
+      "subtitle2": "Meneroka Alam Luar yang Hebat",
+      "subtitle3": "Penerokaan Tanpa Kesudahan",
+      "subtitle4": "Rancang Perjalanan Anda",
+      "subtitle5": "Kyrgyzstan tempat yang mesti dilawati",
+      "paragraph": "Negara yang indah dan terkurung daratan ini, yang dahulunya sebahagian daripada Kesatuan Soviet, dengan cepat menjadi salah satu destinasi pelancongan paling popular di Asia Tengah. Industri pelancongan Kyrgyzstan berkembang pesat, menawarkan peluang kepada pelancong untuk menerokai salah satu negara paling menakjubkan di dunia.",
+      "paragraph1": "Kyrgyzstan telah menyaksikan peningkatan dramatik dalam pelancongan sejak beberapa tahun kebelakangan ini apabila pengembara berpusu-pusu untuk mendaki, berkhemah dan meredah kuda melalui landskapnya yang menakjubkan. Sebagai negara Asia Tengah pertama yang melonggarkan polisi visanya—menawarkan kemasukan tanpa visa untuk kebanyakan negara Barat dan maju—rangkaian pelancongan yang kukuh telah dibangunkan.",
+      "paragraph2": "Daripada inisiatif Pelancongan Berasaskan Komuniti (CBT) di seluruh negara kepada rumah tamu dan pemandu bebas, terdapat banyak cara untuk merasai pemandangan Kyrgyzstan yang menakjubkan. Pejalan kaki boleh memulakan pengembaraan yang mengagumkan dari Karakol, Kochkor, Arslanbob, dan juga ibu kota, Bishkek. Ambil perhatian bahawa mendaki di sini selalunya memerlukan tahap kecergasan yang munasabah, kerana banyak denai menawarkan lebih daripada sekadar berjalan-jalan santai. Kebanyakan trek berkisar antara 1 hingga 5 hari, walaupun pengembaraan yang lebih panjang tersedia.\r\n\r\nBagi mereka yang ingin menyelamatkan kaki mereka, menunggang kuda adalah alternatif yang popular. Ikuti trek kuda yang paling menakjubkan di negara ini ke Song Kol, atau luangkan masa beberapa hari untuk berehat dan berenang di Tasik Issyk-Kul yang indah.",
+      "paragraph3": "Dengan destinasi, pengembaraan dan denai yang tidak terkira banyaknya, peluang untuk meneroka adalah tidak terhad. Sama ada anda sedang mencari pengembaraan atau bersantai, Kyrgyzstan mempunyai sesuatu untuk semua orang.",
+      "paragraph4": "Untuk maklumat lebih khusus tentang tarikan, cara untuk ke sana dan sekitar, dan petua perjalanan lain, pastikan anda membaca panduan perjalanan Kyrgyzstan kami yang komprehensif. Tingkatkan pengalaman perjalanan anda dengan apl yang disyorkan untuk navigasi, terjemahan dan cerapan tempatan untuk memanfaatkan sepenuhnya perjalanan anda.\r\n\r\nNikmati perjalanan anda dan alami keindahan dan budaya unik Kyrgyzstan",
+      "keywords": "Pemandu pelancong Kyrgyzstan, pemandu pelancong, Kemudahan perjalanan, Tarikan tempatan, Perkhidmatan pelancong, Petua perjalanan Kyrgyz, Pengalaman budaya, Perancangan pelancongan, Bersiar-siar, Perjalanan pengembaraan, Lawatan mudah, Pemandu bandar Bishkek, Tarikan pelancong Kyrgyzstan, Tempat pelancongan, Tempat berhampiran saya untuk bersiar-siar, Tempat untuk dilawati berhampiran saya, Tempat pelancong, Destinasi pelancongan, Destinasi terindah di dunia, Destinasi terindah di dunia, Tempat terindah di dunia dengan panduan, Panduan untuk perjalanan, Tempat yang indah, Bishkek di Kyrgyzstan, City Bishkek, Pelancong dan pemandu, Tarikan pelancong PR, Tarikan berdekatan dan cara melaksanakannya",
+      "button": "Mari Ketahui!",
+      "button1": "Ke Mana Nak Pergi!",
+      "button2": "Apa yang perlu dilakukan!",
+      "button3": "baca lagi",
+      "button4": "Lawatan Kami",
+      "Transportation": {
+        "title": "Pengangkutan di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Bersiar-siar di Kyrgyzstan boleh menjadi satu pengembaraan. Inilah yang anda perlu tahu:",
+        "Options": {
+          "Penerbangan Domestik": "Untuk jarak yang lebih jauh, terutamanya jika masa menjadi kekangan, penerbangan domestik tersedia antara bandar utama seperti Bishkek, Osh dan Tamchy (berhampiran Cholpon-Ata di Wilayah Issyk-Kul). Semak syarikat penerbangan untuk jadual dan tempahan.",
+          "Marshrutkas (Minibus)": "Ini adalah cara pengangkutan yang paling biasa dan kos efektif untuk jarak pendek hingga sederhana. Mereka mengikuti laluan tetap antara bandar dan pekan dan sangat popular di kalangan penduduk tempatan.",
+          "Teksi Kongsi": "Teksi kongsi menawarkan alternatif yang lebih pantas tetapi lebih mahal berbanding marshrutka. Mereka biasanya keluar apabila penuh, dan harga boleh dirundingkan.",
+          "Kereta Sewa": "Untuk lebih fleksibiliti, menyewa kereta adalah pilihan yang baik. Jalan raya di kawasan luar bandar boleh menjadi kasar, jadi 4x4 disyorkan. Pastikan anda mempunyai permit memandu antarabangsa.",
+          "Kereta api": "Perkhidmatan kereta api terhad disediakan, terutamanya menghubungkan Bishkek ke Balykchy berhampiran Tasik Issyk-Kul. Ia adalah laluan yang indah tetapi lebih perlahan daripada perjalanan jalan raya.",
+          "Bas": "Bas biasa beroperasi di bandar-bandar utama, menawarkan cara yang selesa untuk perjalanan. Walau bagaimanapun, mereka mungkin tidak meliputi kawasan terpencil.",
+          "HitchHiking": "adalah amalan biasa di kawasan luar bandar Kyrgyzstan, di mana pilihan pengangkutan formal mungkin terhad. Ia agak selamat dan diterima secara budaya, tetapi berhati-hati dan gunakan pertimbangan anda apabila menerima tunggangan daripada orang yang tidak dikenali."
+        },
+        "details": "Untuk mendapatkan pandangan terperinci tentang pilihan pengangkutan, lawati panduan yang disediakan."
+      },
+      "Accommodations": {
+        "title": "Penginapan di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Daripada rumah tamu yang selesa hingga ke resort mewah, Kyrgyzstan menawarkan pelbagai pilihan penginapan yang sesuai dengan pilihan dan bajet setiap pengembara. Berikut adalah beberapa pilihan untuk dipertimbangkan:",
+        "Options": {
+          "Hotel": "Bandar utama Kyrgyzstan seperti Bishkek dan Osh mempunyai pelbagai hotel yang memenuhi bajet dan pilihan yang berbeza. Daripada rangkaian antarabangsa hingga hotel butik, anda akan menemui penginapan yang selesa dengan kemudahan seperti Wi-Fi, penghawa dingin dan pilihan tempat makan dalaman.",
+          "Rumah tumpangan": "Untuk pengalaman yang lebih tulen, pertimbangkan untuk menginap di rumah tamu yang dikendalikan oleh keluarga tempatan. Pertubuhan yang selesa ini menawarkan sambutan hangat dan peluang untuk merasai layanan mesra Kyrgyz. Anda selalunya berpeluang menikmati hidangan buatan sendiri dan belajar tentang adat dan tradisi tempatan.",
+          "Yurts": "Di kawasan luar bandar dan kawasan pergunungan, yurt tradisional menyediakan pengalaman penginapan yang unik. Struktur mudah alih seperti khemah ini menawarkan penginapan asas tetapi selesa, selalunya dengan pemandangan landskap sekeliling yang menakjubkan. Penginapan Yurt mungkin termasuk makanan dan aktiviti kebudayaan.",
+          "Homestay": "Alami kehidupan bersama keluarga Kyrgyz dengan memilih homestay. Anda akan berpeluang untuk tinggal bersama penduduk tempatan, berkongsi makanan dan mengambil bahagian dalam aktiviti harian. Homestay menawarkan pertukaran budaya asli dan pandangan tentang cara hidup tradisional Kyrgyzstan.",
+          "Eco-Lodges": "Untuk pengembara yang mementingkan eko, pondok eko menyediakan pilihan penginapan yang mampan dalam persekitaran semula jadi. Rumah persinggahan ini mengutamakan pemuliharaan alam sekitar dan sering menawarkan aktiviti seperti mendaki, memerhati burung dan penglibatan komuniti.",
+          "Perkhemahan": "ialah pilihan popular untuk pengembara yang mencari pengembaraan dan kesendirian. Sama ada anda memasang khemah di kawasan perkhemahan yang ditetapkan atau perkhemahan liar di lokasi terpencil, pastikan anda mengikuti prinsip Leave No Trace dan dapatkan sebarang permit yang diperlukan."
+        },
+        "details": "Untuk cadangan khusus dan pilihan tempahan, rujuk tapak web pelancongan, platform tempahan dalam talian dan pejabat pelancongan tempatan."
+      },
+      "Food": {
+        "title": "Makanan di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Meneroka masakan Kyrgyz adalah sebahagian daripada pengalaman perjalanan. Inilah yang anda perlu tahu:",
+        "Options": {
+          "Masakan Tradisional": "Masakan Kyrgyz kaya dengan rasa dan warisan, dengan hidangan tradisional seperti beshbarmak (daging dan mi), manty (ladu), dan laghman (mi sup) sebagai makanan ruji. Jangan ketinggalan mencuba susu kuda betina yang ditapai dikenali sebagai kumis, minuman popular.",
+          "Pengaruh nomad": "Mencerminkan warisan nomadnya, masakan Kyrgyz selalunya menampilkan hidangan lazat yang diperbuat daripada bahan seperti daging (terutamanya daging kambing dan kuda), produk tenusu (seperti kymyz dan airan), dan bijirin (termasuk nasi dan gandum). Yurt, khemah nomad tradisional, mungkin menawarkan pengalaman menjamu selera yang asli di kawasan luar bandar.",
+          "Pasaran Tempatan": "Lawati pasar tempatan seperti Osh Bazaar di Bishkek untuk mencuba pelbagai hidangan dan snek Kyrgyz, termasuk shashlik (daging lidi panggang), samsa (pastri berperisa) dan plov (pilaf). Pasaran ini juga menawarkan peluang untuk membeli buah-buahan segar, kacang dan rempah ratus.",
+          "Kedai Teh dan Kafe": "Kedai teh (chaykhana) dan kafe terdapat di mana-mana di Kyrgyzstan, menyajikan teh (chai) dan kopi (kofe) bersama pastri, roti dan makanan ringan. Nikmati suasana santai dan layanan sambil menikmati hidangan tradisional Kyrgyz seperti baursak (doh goreng) dan kurut (bebola yogurt kering).",
+          "Masakan Antarabangsa": "Di kawasan bandar seperti Bishkek, anda akan menemui pelbagai jenis masakan antarabangsa, termasuk Rusia, Cina, Korea dan Eropah. Terokai restoran, bistro dan medan selera yang bergaya untuk merasai citarasa global di samping layanan mesra Kyrgyzstan.",
+          "Makanan Jalanan": "Terokai jalan-jalan di Kyrgyzstan untuk menemui pelbagai penjual makanan jalanan yang menawarkan makanan ringan yang cepat dan beraroma. Cuba makanan jalanan yang popular seperti somsas (goreng atau bakar yang diisi dengan daging atau sayur-sayuran), mi goreng laghman dan jagung bakar.",
+          "Lawatan Makanan dan Kelas Memasak": "Mulakan lawatan makanan atau sertai kelas memasak untuk mendalami masakan Kyrgyz dan tradisi masakan. Ketahui cara menyediakan hidangan tradisional, lawati ladang dan pengeluar tempatan, serta tenggelamkan diri anda dalam suasana masakan Kyrgyzstan yang meriah."
+        },
+        "details": "Untuk maklumat lanjut tentang masakan Kyrgyz dan pilihan tempat makan, rujuk panduan yang disediakan."
+      },
+      "Safety": {
+        "title": "Keselamatan di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Perjalanan ke Kyrgyzstan secara amnya selamat, tetapi penting untuk mengetahui potensi risiko dan mengambil langkah berjaga-jaga yang diperlukan. Inilah yang anda perlu tahu:",
+        "Options": {
+          "Kestabilan Politik": "Kyrgyzstan pernah mengalami ketidakstabilan politik pada masa lalu, termasuk protes dan pergolakan sekali-sekala. Walaupun kebanyakan kawasan pelancongan kekal tidak terjejas, kekalkan maklumat tentang perkembangan tempatan dan elakkan perhimpunan besar atau demonstrasi.",
+          "Jenayah": "Jenayah kecil seperti penyeluk saku dan kecurian boleh berlaku terutamanya di kawasan sesak dan kawasan tumpuan pelancong. Pastikan barang-barang anda selamat dan berwaspada.",
+          "Keganasan": "Ancaman keganasan di Kyrgyzstan adalah rendah, tetapi pelancong harus terus berwaspada, terutamanya di kawasan sempadan. Ikuti sebarang nasihat perjalanan yang dikeluarkan oleh kerajaan anda dan kekal dimaklumkan.",
+          "Bahaya Semula Jadi": "Kyrgyzstan terdedah kepada bahaya semula jadi seperti gempa bumi, runtuhan salji dan tanah runtuh, terutamanya di kawasan pergunungan. Bersedia dan ikuti garis panduan keselamatan, terutamanya semasa mendaki atau melakukan aktiviti luar.",
+          "Keselamatan Jalan Raya": "Keadaan jalan raya di Kyrgyzstan boleh berbeza-beza dan pemanduan boleh menjadi mencabar, terutamanya di kawasan luar bandar. Berhati-hati, patuhi undang-undang lalu lintas tempatan, dan pertimbangkan untuk mengupah pemandu yang bereputasi.",
+          "Risiko Kesihatan": "Walaupun Kyrgyzstan tidak menimbulkan risiko kesihatan yang ketara, pengembara harus mendapat maklumat terkini tentang vaksinasi rutin dan mengambil langkah berjaga-jaga terhadap makanan dan penyakit bawaan air.",
+          "Penyakit Ketinggian": "Pelancong yang melawat kawasan altitud tinggi harus sedar tentang risiko penyakit ketinggian. Ambil masa untuk menyesuaikan diri dan elakkan aktiviti fizikal yang berat sehingga badan anda menyesuaikan diri.",
+          "Insurans Perjalanan": "Adalah penting untuk mempunyai insurans perjalanan yang meliputi perbelanjaan perubatan, pemindahan kecemasan dan pembatalan/gangguan perjalanan. Pastikan polisi insurans anda termasuk perlindungan untuk aktiviti yang anda rancang untuk terlibat."
+        },
+        "details": "Untuk maklumat keselamatan yang lebih terperinci dan nasihat perjalanan, rujuk sumber rasmi kerajaan dan panduan perjalanan."
+      },
+      "Prices": {
+        "title": "Harga di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Memahami kos sara hidup dan perbelanjaan di Kyrgyzstan boleh membantu anda merancang belanjawan anda dengan berkesan. Berikut ialah gambaran keseluruhan harga untuk item dan perkhidmatan biasa:",
+        "Options": {
+          "Penginapan": "Kos penginapan di Kyrgyzstan berbeza-beza bergantung pada jenis penginapan dan lokasi. Pengembara bajet boleh menemui pilihan mampu milik seperti rumah tamu dan asrama, manakala hotel dan resort mewah memenuhi keperluan mereka yang mencari kemudahan kelas atas. Harga berkisar dari serendah $10 semalam untuk penginapan bajet hingga lebih $100 semalam untuk pertubuhan mewah.",
+          "Makanan dan Makan": "Menjamu selera di Kyrgyzstan biasanya berpatutan, terutamanya di kedai makan tempatan dan gerai makanan jalanan. Hidangan tradisional seperti beshbarmak dan plov adalah murah dan mengenyangkan, biasanya berharga antara $3 hingga $7 setiap hidangan di restoran tempatan. Masakan antarabangsa dan pilihan menjamu selera mungkin lebih mahal, dengan makanan purata $10 hingga $20 atau lebih setiap orang.",
+          "Pengangkutan": "Kos pengangkutan di Kyrgyzstan berbeza-beza bergantung pada cara perjalanan dan jarak. Penerbangan domestik antara bandar utama seperti Bishkek dan Osh boleh berkisar antara $50 hingga $150 atau lebih, manakala teksi kongsi dan marshrutka (bas mini) menawarkan pilihan mesra bajet untuk jarak yang lebih pendek, biasanya berharga $1 hingga $10 bergantung pada laluan. Menyewa kereta boleh menelan kos $30 hingga $100 atau lebih setiap hari, bergantung pada jenis kenderaan dan syarikat penyewaan.",
+          "Aktiviti dan Tarikan": "Kos aktiviti dan tarikan di Kyrgyzstan berbeza-beza bergantung kepada pengalaman. Bayaran masuk ke muzium, tapak bersejarah dan taman negara secara amnya berpatutan, antara $1 hingga $10 seorang. Lawatan berpandu, lawatan luar dan aktiviti pengembaraan seperti menunggang kuda dan trekking mungkin dikenakan kos tambahan, dengan harga berbeza-beza berdasarkan tempoh dan kerumitan.",
+          "Membeli-belah": "Membeli-belah di Kyrgyzstan menawarkan pelbagai pilihan, daripada kraftangan tradisional dan cenderahati kepada barangan moden dan elektronik. Harga berbeza-beza bergantung pada item dan lokasi, tetapi tawar-menawar adalah perkara biasa di pasar dan bazar. Bersedia untuk berunding untuk mendapatkan harga terbaik, terutamanya apabila membeli tekstil, barang kemas dan kraf tangan.",
+          "Mata Wang dan Kadar Pertukaran": "Mata wang rasmi Kyrgyzstan ialah Kyrgyzstani som (KGS). Kadar pertukaran berubah-ubah, jadi anda dinasihatkan untuk menyemak kadar semasa sebelum menukar wang. Kad kredit utama diterima di bandar besar dan kawasan pelancongan, tetapi anda disyorkan untuk membawa wang tunai untuk transaksi di bandar dan kawasan luar bandar yang lebih kecil. (1$ = 85-90soms)"
+        },
+        "details": "Untuk mendapatkan maklumat yang paling tepat dan terkini tentang harga di Kyrgyzstan, rujuk sumber tempatan dan panduan perjalanan terkini."
+      },
+      "Travel_Seasons": {
+        "title": "Musim Perjalanan di Kyrgyzstan | Panduan Perjalanan",
+        "Description": "Memahami musim perjalanan di Kyrgyzstan boleh membantu anda merancang perjalanan anda dan memanfaatkan lawatan anda sepenuhnya. Berikut ialah gambaran keseluruhan musim yang berbeza dan perkara yang boleh dijangkakan:",
+        "Options": {
+          "Musim bunga (Mac hingga Mei)": "Musim bunga ialah masa yang indah untuk melawat Kyrgyzstan, dengan landskap menjadi hidup apabila bunga mekar dan sungai membengkak dengan salji cair. Cuacanya sederhana, menjadikannya ideal untuk aktiviti luar seperti mendaki, trekking dan menunggang kuda. Walau bagaimanapun, bersedia untuk hujan sekali-sekala, terutamanya pada bulan April dan Mei.",
+          "Musim panas (Jun hingga Ogos)": "Musim panas adalah musim kemuncak pelancong di Kyrgyzstan, dengan hari yang panjang, suhu panas dan langit cerah. Ia adalah masa yang sesuai untuk pengembaraan luar seperti berkhemah, mendaki gunung dan meneroka tasik alpine. Perayaan dan acara popular berlangsung pada masa ini, termasuk Sukan Nomad Dunia pada bulan September.",
+          "Musim luruh (September hingga November)": "Musim luruh ialah musim yang menakjubkan di Kyrgyzstan, dengan landskap dicat dalam warna merah, oren dan emas yang terang apabila daun berubah warna. Cuaca kekal menyenangkan, menjadikannya masa yang sesuai untuk trekking, melihat hidupan liar dan pengalaman kebudayaan. September adalah bulan yang sesuai untuk dikunjungi untuk Sukan Nomad Dunia.",
+          "Musim sejuk (Disember hingga Februari)": "Musim sejuk mengubah Kyrgyzstan menjadi kawasan ajaib musim sejuk, dengan gunung yang dilitupi salji dan tasik beku mencipta pemandangan yang menakjubkan. Walaupun suhu boleh turun di bawah paras beku, peminat sukan musim sejuk berpusu-pusu ke pusat peranginan ski seperti Karakol dan Jyrgalan untuk bermain ski, papan salji dan luncur ais. Februari menandakan perayaan permainan nomad tradisional, Kok Boru (Buzkashi)."
+        },
+        "details": "Untuk mendapatkan maklumat lanjut tentang aktiviti tertentu, acara dan keadaan cuaca pada setiap musim, rujuk panduan perjalanan dan sumber pelancongan tempatan."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Kali Pertama di Kyrgyzstan?",
+        "Description": "Jika anda melawat Kyrgyzstan buat kali pertama, berikut ialah panduan komprehensif untuk membantu anda memanfaatkan sepenuhnya perjalanan anda:",
+        "Options": {
+          "Ketibaan dan Bersiar-siar": "Kebanyakan pelancong antarabangsa tiba di Lapangan Terbang Antarabangsa Manas di Bishkek. Teksi dan bas sedia ada untuk pengangkutan ke bandar. Di Kyrgyzstan, anda boleh menggunakan penerbangan domestik, bas, marshrutka (bas mini) dan teksi kongsi untuk bersiar-siar.",
+          "Kad SIM dan Internet": "Kekal berhubung di Kyrgyzstan adalah mudah dengan kad SIM tempatan. Anda boleh membeli kad SIM di lapangan terbang atau daripada pembekal rangkaian mudah alih di bandar. Pembekal utama termasuk Beeline, O!, dan Megacom. Pastikan telefon anda dibuka kunci sebelum membeli kad SIM. Liputan Internet secara amnya baik di bandar dan pekan, tetapi boleh menjadi jerawatan di kawasan luar bandar.",
+          "Harga Internet": "Harga Internet di Kyrgyzstan pada umumnya berpatutan. Pakej data asas 1GB boleh berharga sekitar 100 KGS (kira-kira $1.20 USD), manakala pakej yang lebih besar, seperti 10GB, mungkin berharga sekitar 500 KGS (kira-kira $6 USD). Pelan data tanpa had untuk sebulan boleh berkisar antara 800 hingga 1500 KGS (kira-kira $9.50 hingga $18 USD) bergantung pada pembekal dan kelajuan sambungan.",
+          "Mata Wang dan Pembayaran": "Mata wang tempatan ialah Kyrgyzstani Som (KGS). ATM boleh didapati di bandar utama, tetapi dinasihatkan untuk membawa wang tunai di kawasan luar bandar. Kad kredit dan debit diterima di banyak tempat di bandar, tetapi kurang di kawasan terpencil. Perkhidmatan pertukaran mata wang tersedia di lapangan terbang, bank dan pejabat pertukaran.",
+          "Bahasa": "Bahasa Kyrgyz dan Rusia adalah bahasa rasmi. Di bandar utama, anda mungkin menemui beberapa penutur bahasa Inggeris, terutamanya di kawasan pelancongan, tetapi di kawasan luar bandar, adalah berguna untuk mengetahui beberapa frasa asas Kyrgyz atau Rusia. Apl terjemahan atau buku frasa boleh sangat membantu.",
+          "Kesihatan dan Keselamatan": "Kyrgyzstan umumnya selamat untuk pengembara, tetapi adalah bijak untuk mengambil langkah berjaga-jaga standard. Minum air botol atau air masak untuk mengelakkan penyakit bawaan air. Pastikan anda mempunyai insurans perjalanan yang melindungi kesihatan dan kemalangan. Perkhidmatan perubatan kecemasan tersedia di bandar, tetapi boleh dihadkan di kawasan luar bandar.",
+          "Iklim dan Pakaian": "Kyrgyzstan mempunyai iklim kontinental dengan musim sejuk yang sejuk dan musim panas yang panas. Di pergunungan, suhu boleh menjadi lebih sejuk, jadi bungkuslah dengan sewajarnya. Pakaian berlapis, kasut berjalan kaki yang kukuh dan pelindung matahari adalah disyorkan. Pada musim sejuk, bawa pakaian hangat, termasuk jaket, sarung tangan dan topi yang berkualiti baik.",
+          "Elektrik dan Palam": "Voltan standard ialah 220V, dan frekuensi ialah 50Hz. Palam dan soket kuasa adalah daripada jenis C dan F. Anda dinasihatkan untuk membawa penyesuai perjalanan universal untuk memastikan anda boleh mengecas peranti elektronik anda."
+        },
+        "details": "Untuk maklumat dan petua yang lebih terperinci, rujuk panduan perjalanan dan sumber tempatan. Nikmati perjalanan pertama anda ke Kyrgyzstan dan buat kenangan yang tidak dapat dilupakan!"
+      },
+      "TravelPreparation": {
+        "title": "Bersedia untuk Perjalanan Anda ke Kyrgyzstan",
+        "Description": "Pastikan perjalanan yang lancar dan menyeronokkan ke Kyrgyzstan dengan menjaga persediaan perjalanan yang penting ini.",
+        "Options": {
+          "Visa dan Pasport": "Semak keperluan visa untuk kewarganegaraan anda dan pastikan pasport anda sah untuk sekurang-kurangnya enam bulan selepas penginapan yang anda inginkan.",
+          "Kesihatan dan Pemvaksinan": "Rujuk pembekal penjagaan kesihatan anda untuk sebarang vaksinasi yang diperlukan atau langkah berjaga-jaga kesihatan untuk perjalanan ke Kyrgyzstan.",
+          "Insurans Perjalanan": "Pertimbangkan untuk membeli insurans perjalanan untuk menampung kecemasan yang tidak dijangka, seperti perbelanjaan perubatan atau pembatalan perjalanan.",
+          "Perkara Mata Wang dan Wang": "Biasakan diri anda dengan mata wang tempatan (Kyrgyzstani Som) dan tukarkan sedikit wang sebelum perjalanan anda. ATM boleh didapati di bandar-bandar utama.",
+          "Bahasa": "Walaupun bahasa Rusia dan Kyrgyz adalah bahasa rasmi, bahasa Inggeris tidak digunakan secara meluas. Pertimbangkan untuk mempelajari beberapa frasa asas dalam bahasa Rusia atau Kyrgyz.",
+          "Cuaca dan Pakaian": "Bungkus pakaian yang sesuai untuk keadaan cuaca semasa lawatan anda. Kyrgyzstan mengalami musim panas yang panas dan musim sejuk yang sejuk, jadi bawa berlapis-lapis.",
+          "Keselamatan dan Keselamatan": "Kekal dimaklumkan tentang situasi semasa di Kyrgyzstan dan berhati-hati, terutamanya di kawasan terpencil. Pastikan barang-barang anda selamat dan berhati-hati dengan persekitaran anda.",
+          "Adab Budaya": "Hormati adat dan tradisi tempatan, seperti menanggalkan kasut anda sebelum memasuki rumah seseorang dan meminta kebenaran sebelum mengambil gambar orang."
+        },
+        "details": "Untuk petua perjalanan tambahan dan nasihat khusus untuk perjalanan anda ke Kyrgyzstan, rujuk panduan perjalanan komprehensif kami."
+      }
+    },
+    "sights": {
+      "name": "Tempat menarik",
+      "title": "Tempat menarik di Kyrgyzstan",
+      "subtitle": "Ke mana hendak pergi di Kyrgyzstan?  Selain itu, sentiasa dimaklumkan tentang keadaan cuaca di bandar dan pusat serantau untuk memanfaatkan sepenuhnya perjalanan anda dengan selesa dan bersiap sedia menghadapi cuaca yang sentiasa berubah-ubah di negara yang indah ini.",
+      "description": "Cari tempat untuk dilawati di seluruh Kyrgyzstan, dari tasik gunung dan taman negara ke pekan dan tapak bersejarah. Pilih wilayah untuk mula meneroka.",
+      "keywords": "Tempat Kyrgyzstan, perjalanan Kyrgyzstan, teroka Kyrgyzstan, destinasi Kyrgyzstan, pelancongan Kyrgyzstan, tempat yang mesti dilawati di Kyrgyzstan, tarikan utama Kyrgyzstan, landskap Kyrgyzstan, tapak budaya Kyrgyzstan, keajaiban alam semulajadi Kyrgyzstan, tempat terbaik untuk dilawati di Kyrgyzstan",
+      "sights": "Ke Mana Nak Pergi!",
+      "must-see": {
+        "subtitle": "Destinasi Mesti Dilihat Kyrgyzstan mengikut wilayah",
+        "description1": "Kyrgyzstan terkenal dengan landskap semula jadi yang indah, dari pergunungan yang megah hingga tasik yang tenang. Berikut adalah beberapa tempat yang paling indah di setiap wilayah:",
+        "chuyregion": "Wilayah Chuy",
+        "alaarchatitle": "Taman Negara Ala Archa:",
+        "alaarchadescription": "Menawarkan pemandangan yang menakjubkan dan denai mendaki.",
+        "buranatitle": "Menara Burana:",
+        "buranadescription": "Menara bersejarah dengan pemandangan lembah yang indah.",
+        "issykulregion": "Wilayah Issyk-Kul",
+        "lakeissykkultitle": "Tasik Issyk-Kul:",
+        "lakeissykkuldescription": "Tasik masin yang besar dengan pantai dan pusat peranginan.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Terkenal dengan formasi batuan merahnya.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Pintu masuk ke tapak gunung yang indah seperti Altyn Arashan.",
+        "narynregion": "Wilayah Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Karavanserai batu bersejarah di lembah yang indah.",
+        "sonkultitle": "Tasik Son-Kul:",
+        "sonkuldescription": "Tasik altitud tinggi dengan matahari terbenam yang menakjubkan.",
+        "jalalabadregion": "Wilayah Jalal-Abad",
+        "sarychelextitle": "Rizab Biosfera Sary-Chelek:",
+        "sarychelekdescription": "Mempunyai tasik dan hutan yang masih asli.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Rumah kepada hutan walnut terbesar dan air terjun yang indah.",
+        "oshregion": "Wilayah Osh",
+        "sulaymanmountaintitle": "Gunung Sulayman:",
+        "sulaymanmountaindescription": "Gunung suci dengan pemandangan panoramik.",
+        "alayvalleytitle": "Lembah Alay:",
+        "alayvalleydescription": "Menawarkan pemandangan Pergunungan Pamir yang menakjubkan.",
+        "batkenregion": "Wilayah Batken",
+        "batkenvalleytitle": "Lembah Batken:",
+        "batkenvalleydescription": "Terkenal dengan pokok aprikot dan formasi batuan yang unik.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Mempunyai lembah sungai yang indah.",
+        "talasregion": "Wilayah Talas",
+        "beshtashtitle": "Taman Negara Besh-Tash:",
+        "beshtashdescription": "Mempunyai sungai yang indah dan padang rumput alpine.",
+        "manasordotitle": "Kompleks Manas Ordo:",
+        "manasordodescription": "Tapak budaya yang didedikasikan untuk wira Manas."
+      },
+      "highlights": [
+        "Bagaimana untuk ke",
+        "Pengangkutan",
+        "Tempat Tinggal",
+        "Apa yang hendak dimakan",
+        "Apa yang perlu dilakukan",
+        "musim"
+      ]
+    },
+    "tours": {
+      "name": "Pakej pelancongan",
+      "title": "Pakej lawatan Kyrgyzstan",
+      "subtitle": "Lawatan Persendirian dan Kumpulan Kecil di Kyrgyzstan",
+      "description": "Terokai laluan mendaki, menunggang kuda, lawatan budaya dan perjalanan berkereta di Kyrgyzstan. Sertai kumpulan kecil atau pilih lawatan peribadi mengikut minat anda.",
+      "description1": "Perjalanan boleh termasuk denai gunung, malam di khemah tradisional atau beberapa hari di sebelah Issyk-Kul. Pilih laluan yang sesuai dengan minat anda dan masa yang anda ada.\n\nPasukan kami boleh membantu dengan panduan, pengangkutan dan penginapan. Hubungi untuk membincangkan tarikh anda, saiz kumpulan dan kelajuan pilihan anda.",
+      "keywords": "Lawatan Kyrgyzstan, Lawatan Kyrgyzstan Terbaik, Lawatan di Kyrgyzstan, Syarikat Lawatan Kyrgyzstan Terbaik, Agensi Pelancongan di Kyrgyzstan, pelancongan pengembaraan Kyrgyzstan, lawatan berpandu Kyrgyzstan, lawatan kebudayaan Kyrgyzstan, lawatan trekking Kyrgyzstan, pelancongan menunggang kuda Kyrgyzstan tanpa pengalaman Kyrgyzstan, pakej pelancongan Kyrgyzstan lawatan terbaik di Kyrgyzstan, teroka Kyrgyzstan melalui lawatan",
+      "tourPage": {
+        "level": "Tahap",
+        "duration": "Tempoh",
+        "price": "harga",
+        "day": "Hari",
+        "days": "hari-hari",
+        "details": "Butiran",
+        "things": "Aktiviti",
+        "places": "Tempat yang dilawati",
+        "addInfo": "Maklumat tambahan",
+        "includings": "Termasuk dalam harga",
+        "excludings": "Tidak termasuk dalam harga",
+        "from": "Bermula daripada",
+        "note": "Nota",
+        "person": "Orang",
+        "persons": "Orang",
+        "andMore": "dan banyak lagi"
+      },
+      "TourPreparation": {
+        "title": "Perkara-perkara Penting untuk Perjalanan di Kyrgyzstan",
+        "Description": "Senarai lengkap barangan penting untuk dibawa semasa perjalanan anda ke Kyrgyzstan untuk memastikan keselesaan, keselamatan dan kesediaan untuk pelbagai keadaan cuaca dan aktiviti luar.",
+        "Options": {
+          "Kasut": "Bawa kasut berjalan kaki yang selesa untuk lawatan bandar, kasut hiking yang kukuh untuk pendakian sederhana, but hiking tahan lasak untuk trekking dan sandal cepat kering sebagai pasangan tambahan.",
+          "Topi": "Jangan lupa untuk membungkus topi bertepi lebar atau topi matahari dengan kepak leher untuk melindungi daripada matahari terik di ketinggian tinggi.",
+          "Krim UV": "Jangan lupa untuk membungkus pelindung matahari spektrum luas SPF tinggi untuk melindungi kulit anda daripada sinaran UV yang sengit, terutamanya di kawasan yang lebih tinggi di Kyrgyzstan.",
+          "pakaian": "Pek lapisan pakaian yang sesuai untuk suhu dan keadaan cuaca yang berbeza-beza, memandangkan suhu boleh berubah dengan ketara mengikut perubahan ketinggian. Bersedia untuk salji atau hujan, terutamanya di kawasan pergunungan.",
+          "Bantuan Perubatan": "Ingatlah untuk membawa alat bantuan perubatan peribadi seperti ubat-ubatan yang diperlukan, band-aid, penghilang rasa sakit, dan apa-apa barang khusus untuk keadaan perubatan yang sedia ada sebagai langkah berjaga-jaga."
+        },
+        "overview": "Tanya kami apa yang perlu dibawa untuk laluan anda dan musim."
+      }
+    },
+    "articles": {
+      "name": "Artikel",
+      "title": "Budaya dan alam Kyrgyzstan",
+      "description": "Kenali masyarakat, tradisi, makanan dan keindahan alam Kyrgyzstan.",
+      "keywords": [
+        "budaya Kyrgyz",
+        "Tradisi Kyrgyz",
+        "alam Kyrgyz",
+        "Burkut memburu",
+        "Kok-boru",
+        "Alabai anjing",
+        "Taigan",
+        "sejarah Kyrgyz",
+        "Budaya Asia Tengah",
+        "Warisan nomad",
+        "Penerokaan budaya",
+        "Sukan tradisional",
+        "Pemandangan Kyrgyzstan",
+        "Pengalaman budaya",
+        "Pengembaraan di Kyrgyzstan",
+        "Baka warisan",
+        "Tradisi budaya",
+        "Pengalaman unik",
+        "Gaya hidup Kyrgyz"
+      ]
+    },
+    "about": {
+      "title": "Tentang kami",
+      "subtitle": "Siapa Kita?",
+      "description": "Kami membantu anda merancang perjalanan ke Kyrgyzstan. Kongsikan tarikh dan minat anda supaya kita dapat memilih laluan, pemandu pelancong dan penginapan yang sesuai.",
+      "keywords": "Tentang kami, Kisah kami, Penggemar Kyrgyzstan, Keghairahan melancong, Pengalaman luar biasa, Pasukan, Nilai, Misi",
+      "buttons": {
+        "our_team": "Pasukan Kami",
+        "our_clients": "Pelanggan Kami",
+        "contact_us": "Hubungi Kami"
+      }
+    },
+    "info": {
+      "seen": "Lawatan: ",
+      "created": "Dicipta: ",
+      "modified": "Terakhir diubah suai: "
+    },
+    "download": {
+      "text": "Simpan peta, tempat dan maklumat perjalanan berguna dengan apl mudah alih kami."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Pautan Berguna",
+          "links": [
+            {
+              "text": "Laman utama",
+              "url": "/"
+            },
+            {
+              "text": "Tempat menarik",
+              "url": "/places"
+            },
+            {
+              "text": "Pakej pelancongan",
+              "url": "/tours"
+            },
+            {
+              "text": "Pemindahan lapangan terbang",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privasi dan Undang-undang",
+          "links": [
+            {
+              "text": "Tentang kami",
+              "url": "/about"
+            },
+            {
+              "text": "Hubungi Kami",
+              "url": "/contact"
+            },
+            {
+              "text": "Dasar Privasi",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Maklumat Hubungan",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Akaun Sosial",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "pemaju",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

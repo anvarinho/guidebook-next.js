@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "fi-FI",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Ladataan...",
+    "contactButton": "Onko sinulla kysyttävää?",
+    "navigation": [
+      {
+        "text": "Etusivu",
+        "url": "/"
+      },
+      {
+        "text": "Nähtävyydet",
+        "url": "/places"
+      },
+      {
+        "text": "Matkat",
+        "url": "/tours"
+      },
+      {
+        "text": "Artikkelit",
+        "url": "/articles"
+      },
+      {
+        "text": "Tietoa meistä",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Kirgisian matkaopas",
+      "description": "Patikoi vuoristossa, ui Issyk-Kulissa tai yövy paikallisen perheen jurtassa. Valitse itsellesi sopiva reitti.",
+      "subtitle": "Kirgisian matkaopas",
+      "subtitle1": "Miksi käydä Kirgisiassa?",
+      "subtitle2": "Tutustuminen upeaan ulkoilmaan",
+      "subtitle3": "Loputon tutkiminen",
+      "subtitle4": "Suunnittele matkasi",
+      "subtitle5": "Kirgisian pakolliset paikat",
+      "paragraph": "Tästä kauniista, sisämaattomasta maasta, joka oli entinen osa Neuvostoliittoa, on nopeasti tulossa yksi Keski-Aasian suosituimmista matkakohteista. Kirgisian matkailuala kasvaa nopeasti ja tarjoaa matkailijoille mahdollisuuden tutustua yhteen maailman upeimmista maista.",
+      "paragraph1": "Kirgisian matkailu on lisääntynyt dramaattisesti viime vuosina, kun seikkailijat kerääntyvät patikoimaan, leirimään ja hevosretkelle upeiden maisemien läpi. Ensimmäisenä Keski-Aasian maana, joka on höllentänyt viisumipolitiikkaansa – joka tarjoaa viisumivapaan maahantulon useimmille länsimaisille ja kehittyneille maille – on kehittynyt vahva matkailuverkosto.",
+      "paragraph2": "On olemassa lukuisia tapoja kokea Kirgisian henkeäsalpaavat maisemat yhteisöpohjaisesta matkailusta (Community Based Tourism, CBT) eri puolilla maata majataloihin ja riippumattomiin oppaisiin. Vaeltajat voivat lähteä kunnioitusta herättäville vaelluksille Karakolista, Kochkorista, Arslanbobista ja jopa pääkaupungista Biškekistä. Huomaa, että täällä vaellus vaatii usein kohtuullista kuntoa, sillä monet polut tarjoavat muutakin kuin rauhallista kävelyä. Useimmat vaellukset vaihtelevat 1–5 päivää, vaikka pidempiä seikkailuja on saatavilla.\r\n\r\nNiille, jotka haluavat säästää jalkojaan, ratsastus on suosittu vaihtoehto. Lähde maan upeimmalle hevosvaellukselle Song Koliin tai vietä muutama päivä rentoutuen ja uimaan kauniilla Issyk-Kul-järvellä.",
+      "paragraph3": "Lukemattomien syrjäisten kohteiden, vaellusten ja polkujen ansiosta mahdollisuudet tutkia ovat rajattomat. Etsitpä sitten seikkailua tai rentoutumista, Kirgisiasta löytyy jokaiselle jotakin.",
+      "paragraph4": "Jos haluat tarkempaa tietoa nähtävyyksistä, miten sinne pääsee, ja muita matkailuvinkkejä, muista lukea kattava Kirgisia-matkaoppaamme. Paranna matkakokemustasi suositelluilla navigointi- ja käännössovelluksilla ja paikallisilla tiedoilla saadaksesi kaiken irti matkastasi.\r\n\r\nNauti matkastasi ja koe Kirgisian ainutlaatuinen kauneus ja kulttuuri",
+      "keywords": "Kirgisian turistiopas, turistiopas, Matkustusmukavuus, Paikalliset nähtävyydet, Matkailupalvelut, Kirgisian matkavinkit, Kulttuurielämyksiä, Retken suunnittelu, Kiertoajelut, Seikkailumatkat, Kätevät retket, Biškekin kaupunkiopas, Kirgisian matkailukohteet, Turistikohde, Paikat lähellä minua nähtävyyksiin, Matkakohteet, Maailman kauneimmat kohteet, Matkailukohteet, Maailman kauneimmat paikat, Turisti paikat, Maailman kauneimmat kohteet, Matkustaminen oppaan kanssa, Matkaopas, Kauniit paikat, Biškek Kirgisiassa, Biškekin kaupunki, Turisti ja opas, PR-matkailukohteet, Läheiset nähtävyydet ja miten se toteutetaan",
+      "button": "Otetaan selvää!",
+      "button1": "Minne mennä!",
+      "button2": "Mitä tehdä!",
+      "button3": "lue lisää",
+      "button4": "Matkamme",
+      "Transportation": {
+        "title": "Kuljetus Kirgisiassa | Matkaopas",
+        "Description": "Kirgisiassa liikkuminen voi olla seikkailu sinänsä. Sinun on tiedettävä seuraavat asiat:",
+        "Options": {
+          "Kotimaan lennot": "Pidemmillä matkoilla, varsinkin jos aika on rajoitus, kotimaan lennot ovat saatavilla suurten kaupunkien, kuten Bishkek, Osh ja Tamchy välillä (lähellä Cholpon-Ataa Issyk-Kul-alueella). Tarkista lentoyhtiöiden aikataulut ja varaukset.",
+          "Marshrutkat (minibussit)": "Nämä ovat yleisin ja kustannustehokkain kuljetusmuoto lyhyillä ja keskipitkillä matkoilla. Ne kulkevat kiinteitä reittejä kaupunkien ja kaupunkien välillä ja ovat erittäin suosittuja paikallisten keskuudessa.",
+          "Jaetut taksit": "Yhteiset taksit tarjoavat nopeamman mutta hieman kalliimman vaihtoehdon marshrutkoille. Yleensä ne lähtevät, kun ne ovat täynnä, ja hinnoista voidaan neuvotella.",
+          "Autonvuokraus": "Jos haluat lisää joustavuutta, auton vuokraaminen on hyvä vaihtoehto. Maaseutualueiden tiet voivat olla epätasaisia, joten 4x4 on suositeltavaa. Varmista, että sinulla on kansainvälinen ajokortti.",
+          "Junat": "Saatavilla on rajoitettuja junayhteyksiä, jotka yhdistävät ensisijaisesti Biškekistä Balykchyin Issyk-Kul-järven lähellä. Se on luonnonkaunis reitti, mutta hitaampi kuin maantieliikenne.",
+          "Bussit": "Säännölliset bussit liikennöivät suurimmissa kaupungeissa ja tarjoavat mukavan tavan matkustaa. Ne eivät kuitenkaan välttämättä kata syrjäisiä alueita.",
+          "Lippausvaellus": "on yleinen käytäntö Kirgisian maaseutualueilla, joilla viralliset kuljetusmahdollisuudet voivat olla rajallisia. Se on suhteellisen turvallista ja kulttuurisesti hyväksyttyä, mutta ole varovainen ja käytä harkintakykyäsi, kun otat kyytiä tuntemattomilta."
+        },
+        "details": "Saat yksityiskohtaisia ​​tietoja kuljetusvaihtoehdoista mukana toimitetusta oppaasta."
+      },
+      "Accommodations": {
+        "title": "Majoitukset Kirgisiassa | Matkaopas",
+        "Description": "Viihtyisistä majataloista luksuslomakohteisiin Kirgisia tarjoaa erilaisia ​​majoitusvaihtoehtoja jokaisen matkailijan mieltymyksiin ja budjettiin. Tässä on joitain vaihtoehtoja, joita kannattaa harkita:",
+        "Options": {
+          "Hotellit": "Kirgisian suurissa kaupungeissa, kuten Biškekissa ja Oshissa, on valikoima hotelleja, jotka sopivat erilaisiin budjetteihin ja mieltymyksiin. Kansainvälisistä ketjuista boutique-hotelleihin löydät viihtyisiä majoitusvaihtoehtoja, kuten Wi-Fi-yhteyden, ilmastoinnin ja omat ruokailumahdollisuudet.",
+          "Vierastalot": "Saadaksesi autenttisemman kokemuksen, harkitse majoittumista paikallisten perheiden ylläpitämään guesthouseen. Nämä kodikkaat tilat tarjoavat lämpimän vastaanoton ja mahdollisuuden kokea kirgisian vieraanvaraisuutta. Sinulla on usein mahdollisuus nauttia kotitekoisia aterioita ja oppia paikallisista tavoista ja perinteistä.",
+          "Jurtat": "Maaseudulla ja vuoristoisilla alueilla perinteiset jurtat tarjoavat ainutlaatuisen majoituskokemuksen. Nämä kannettavat, telttamaiset rakenteet tarjoavat perustason mutta mukavan majoituksen, josta on usein upeat näkymät ympäröiviin maisemiin. Jurtassa oleskeluun voi sisältyä aterioita ja kulttuuritoimintaa.",
+          "Kotimajoitus": "Koe elämä kirgisian perheen kanssa valitsemalla kotimajoitus. Sinulla on mahdollisuus asua paikallisten kanssa, jakaa aterioita ja osallistua päivittäiseen toimintaan. Kotimajoitus tarjoaa aitoa kulttuurivaihtoa ja käsityksen Kirgisian perinteisestä elämäntyylistä.",
+          "Eco-Lodges": "Ympäristötietoisille matkailijoille eco-lodget tarjoavat kestäviä majoitusvaihtoehtoja luonnonympäristöissä. Nämä mökit asettavat etusijalle ympäristönsuojelun ja tarjoavat usein aktiviteetteja, kuten patikointia, lintujen tarkkailua ja yhteisön toimintaa.",
+          "Telttailu": "on suosittu vaihtoehto matkailijoille, jotka etsivät seikkailua ja yksinäisyyttä. Pystytpä sitten teltan nimetylle leirintäalueelle tai villileirille syrjäisille paikoille, muista noudattaa Leave No Trace -periaatteita ja hankkia tarvittavat luvat."
+        },
+        "details": "Tarkempia suosituksia ja varausvaihtoehtoja saat matkasivustoilta, online-varausalustoista ja paikallisista matkailutoimistoista."
+      },
+      "Food": {
+        "title": "Ruoka Kirgisiassa | Matkaopas",
+        "Description": "Kirgisian keittiöön tutustuminen on olennainen osa matkakokemusta. Sinun on tiedettävä seuraavat asiat:",
+        "Options": {
+          "Perinteinen keittiö": "Kirgisian keittiössä on runsaasti makua ja perintöä, ja perinteiset ruoat, kuten beshbarmak (liha ja nuudelit), manty (nyytit) ja laghman (nuudelikeitto), ovat perustuotteita. Älä missaa fermentoitua tammanmaitoa, joka tunnetaan nimellä kumis, suosittu juoma.",
+          "Nomadinen vaikutus": "Kirgisian keittiössä on nomadiperintöä, ja se sisältää usein runsaita ruokia, jotka on valmistettu lihasta (erityisesti lampaan- ja hevosenlihasta), maitotuotteista (kuten kymyz ja airan) ja jyvistä (mukaan lukien riisi ja vehnä). Jurtat, perinteiset nomaditeltat, voivat tarjota aitoja ruokailuelämyksiä maaseudulla.",
+          "Paikalliset markkinat": "Vieraile paikallisilla markkinoilla, kuten Osh Bazaar Bishkekissä, maistelemaan erilaisia ​​kirgisian ruokia ja välipaloja, kuten shashlik (grillattu vartaassa), samsa (suolaiset leivonnaiset) ja plov (pilaf). Nämä markkinat tarjoavat myös mahdollisuuden ostaa tuoreita hedelmiä, pähkinöitä ja mausteita.",
+          "Teehuoneet ja kahvilat": "Teehuoneita (chaykhana) ja kahviloita on kaikkialla Kirgisiassa, ja niissä tarjoillaan teetä (chai) ja kahvia (kofe) leivonnaisten, leivän ja kevyiden aterioiden lisäksi. Nauti rennosta ilmapiiristä ja vieraanvaraisuudesta samalla kun nautit perinteisistä kirgisialaisista herkuista, kuten baursakista (paistettu taikina) ja kurut (kuivatut jogurttipallot).",
+          "Kansainvälinen keittiö": "Kaupunkialueilla, kuten Bishkek, löydät monipuolisen valikoiman kansainvälisiä ruokia, kuten venäläisiä, kiinalaisia, korealaisia ​​ja eurooppalaisia. Tutustu trendikkäisiin ravintoloihin, bistroihin ja ruokakentille maistaaksesi kansainvälisiä makuja kirgisian vieraanvaraisuuden ohella.",
+          "Street Food": "Lähde Kirgisian kaduille löytääksesi joukon katuruokamyyjiä, jotka tarjoavat nopeita ja maukkaita välipaloja. Kokeile suosittuja katuruokia, kuten somsoja (lihalla tai vihanneksilla täytettynä paistettua tai paistettua leivonnaista), paistettuja laghman-nuudeleita ja grillattua maissintähkä.",
+          "Ruokaretket ja ruoanlaittokurssit": "Lähde ruokaretkille tai liity ruoanlaittokursseille syvemmälle kirgisian keittiöön ja kulinaarisiin perinteisiin. Opi valmistamaan perinteisiä ruokia, vieraile paikallisilla maatiloilla ja tuottajilla ja uppoudu Kirgisian eloisaan kulinaariseen maailmaan."
+        },
+        "details": "Saat lisätietoja kirgisian keittiöstä ja ruokailumahdollisuuksista mukana toimitetusta oppaasta."
+      },
+      "Safety": {
+        "title": "Turvallisuus Kirgisiassa | Matkaopas",
+        "Description": "Kirgisiaan matkustaminen on yleensä turvallista, mutta on tärkeää olla tietoinen mahdollisista riskeistä ja ryhtyä tarvittaviin varotoimiin. Sinun on tiedettävä seuraavat asiat:",
+        "Options": {
+          "Poliittinen vakaus": "Kirgisia on kokenut aiemmin poliittista epävakautta, mukaan lukien mielenosoitukset ja satunnaiset levottomuudet. Vaikka useimmat turistialueet säilyvät ennallaan, pysy ajan tasalla paikallisesta kehityksestä ja vältä suuria kokoontumisia tai mielenosoituksia.",
+          "Rikollisuus": "Pieniä rikoksia, kuten taskuvarkaita ja varkauksia, voi tapahtua etenkin ruuhkaisilla alueilla ja turistikohdissa. Pidä tavarasi turvassa ja ole valppaana.",
+          "Terrorismi": "Terrorismin uhka Kirgisiassa on alhainen, mutta matkustajien tulee pysyä valppaina erityisesti raja-alueilla. Noudata hallituksenne antamia matkustusohjeita ja pysy ajan tasalla.",
+          "Luonnolliset vaarat": "Kirgisia on altis luonnonuhkille, kuten maanjäristyksille, lumivyöryille ja maanvyörymille, erityisesti vuoristoisilla alueilla. Ole valmis ja noudata turvallisuusohjeita, varsinkin vaeltaessasi tai harrastaessasi ulkoilua.",
+          "Liikenneturvallisuus": "Tieolosuhteet Kirgisiassa voivat vaihdella, ja ajaminen voi olla haastavaa etenkin maaseudulla. Ole varovainen, noudata paikallisia liikennelakeja ja harkitse hyvämaineisen kuljettajan palkkaamista.",
+          "Terveysriskit": "Vaikka Kirgisia ei aiheuta merkittäviä terveysriskejä, matkustajien tulee olla ajan tasalla rutiinirokotuksista ja ryhtyä varotoimiin ruoka- ja vesivälitteisiä sairauksia vastaan.",
+          "Korkeussairaus": "Korkealla vuoristoalueella vierailevien matkustajien tulee olla tietoisia korkeussairauden vaarasta. Varaa aikaa tottuaksesi ja vältä rasittavaa fyysistä toimintaa, kunnes kehosi tottuu.",
+          "Matkavakuutus": "On välttämätöntä, että sinulla on matkavakuutus, joka kattaa sairauskulut, hätäevakuoinnin ja matkan peruuntumisen/keskeytyksen. Varmista, että vakuutuksesi sisältää toiminnan, johon aiot osallistua."
+        },
+        "details": "Tarkempia turvallisuustietoja ja matkustusohjeita saat virallisista viranomaislähteistä ja matkaoppaista."
+      },
+      "Prices": {
+        "title": "Hinnat Kirgisiassa | Matkaopas",
+        "Description": "Kirgisian elinkustannusten ja kulujen ymmärtäminen voi auttaa sinua suunnittelemaan budjettisi tehokkaasti. Tässä on yleiskatsaus tavaroiden ja palveluiden hinnoista:",
+        "Options": {
+          "Majoitus": "Majoituksen hinta Kirgisiassa vaihtelee majoitustyypin ja sijainnin mukaan. Budjettimatkailijat voivat löytää edullisia vaihtoehtoja, kuten majataloja ja hostelleja, kun taas luksushotellit ja lomakeskukset palvelevat niitä, jotka etsivät tasokkaita mukavuuksia. Hinnat vaihtelevat niinkin alhaisesta 10 dollarista per yö budjettimajoituksessa kuin yli 100 dollaria per yö luksusmajoituspaikoissa.",
+          "Ruoka ja ruokailu": "Ulkona syöminen Kirgisiassa on yleensä edullista, etenkin paikallisissa ravintoloissa ja katuruokakojuissa. Perinteiset ruoat, kuten beshbarmak ja plov, ovat halpoja ja täyttäviä, ja ne maksavat tyypillisesti 3–7 dollaria per ateria paikallisissa ravintoloissa. Kansainvälinen keittiö ja hienot ruokailumahdollisuudet voivat olla kalliimpia, ja ateriat maksavat keskimäärin 10–20 dollaria tai enemmän per henkilö.",
+          "Kuljetus": "Kuljetuskustannukset Kirgisiassa vaihtelevat matkustustavan ja etäisyyden mukaan. Kotimaan lennot suurten kaupunkien, kuten Bishkek ja Osh, välillä voivat vaihdella 50–150 dollarista tai enemmän, kun taas jaetut taksit ja marshrutkat (minibussit) tarjoavat edullisia vaihtoehtoja lyhyemmille matkoille, jotka yleensä maksavat 1–10 dollaria reitistä riippuen. Auton vuokraus voi maksaa 30–100 dollaria tai enemmän päivässä ajoneuvotyypistä ja vuokrayhtiöstä riippuen.",
+          "Aktiviteetit ja nähtävyydet": "Kirgisian aktiviteettien ja nähtävyyksien hinnat vaihtelevat suuresti kokemuksen mukaan. Pääsymaksut museoihin, historiallisiin kohteisiin ja kansallispuistoihin ovat yleensä edullisia, 1–10 dollaria per henkilö. Opastetut kierrokset, ulkoretket ja seikkailuaktiviteetit, kuten ratsastus ja vaellus, voivat aiheuttaa lisäkustannuksia, joiden hinnat vaihtelevat keston ja monimutkaisuuden mukaan.",
+          "Ostokset": "Ostokset Kirgisiassa tarjoavat valikoiman vaihtoehtoja perinteisistä käsitöistä ja matkamuistoista moderneihin tuotteisiin ja elektroniikkaan. Hinnat vaihtelevat kohteen ja sijainnin mukaan, mutta neuvottelut ovat yleisiä markkinoilla ja basaareissa. Ole valmis neuvottelemaan parhaasta hinnasta, etenkin ostaessasi tekstiilejä, koruja ja käsintehtyjä askartelutuotteita.",
+          "Valuutta ja valuuttakurssit": "Kirgisian virallinen valuutta on KGS (Kyrgyzstani som). Valuuttakurssit vaihtelevat, joten on suositeltavaa tarkistaa nykyiset kurssit ennen rahan vaihtoa. Yleisimmät luottokortit hyväksytään suuremmissa kaupungeissa ja turistialueilla, mutta käteistä kannattaa kuljettaa mukana asioinnissa pienissä kaupungeissa ja maaseudulla. (1 $ = 85-90 soms)"
+        },
+        "details": "Tarkimmat ja ajantasaisimmat tiedot Kirgisian hinnoista saat paikallisista lähteistä ja viimeaikaisista matkaoppaista."
+      },
+      "Travel_Seasons": {
+        "title": "Matkailukaudet Kirgisiassa | Matkaopas",
+        "Description": "Kirgisian matkailukausien ymmärtäminen voi auttaa sinua suunnittelemaan matkaasi ja saamaan vierailustasi kaiken irti. Tässä on yleiskatsaus eri vuodenaikoihin ja mitä odottaa:",
+        "Options": {
+          "Kevät (maaliskuu-toukokuu)": "Kevät on kaunista aikaa vierailla Kirgisiassa, kun maisema herää eloon kukkien kukkiessa ja jokien paisuessa sulasta lumesta. Sää on leuto, joten se on ihanteellinen ulkoiluun, kuten patikointiin, vaellukseen ja ratsastukseen. Varaudu kuitenkin satunnaisiin sadekuuroihin, etenkin huhti- ja toukokuussa.",
+          "Kesä (kesäkuusta elokuuhun)": "Kesä on turistisesonkiaika Kirgisiassa pitkiä päiviä, lämpimiä lämpötiloja ja selkeää taivasta pitkin. Se on täydellinen aika ulkoilmaseikkailuille, kuten retkeilyyn, vuorikiipeilyyn ja alppijärviin tutustumiseen. Tänä aikana järjestetään suosittuja festivaaleja ja tapahtumia, mukaan lukien World Nomad Games syyskuussa.",
+          "Syksy (syyskuusta marraskuuhun)": "Syksy on upea vuodenaika Kirgisiassa, ja maisemat maalataan kirkkailla punaisen, oranssin ja kullan sävyillä lehtien vaihtaessa väriä. Sää pysyy miellyttävänä, mikä tekee siitä erinomaisen ajan retkeilyyn, villieläinten tarkkailuun ja kulttuurielämyksiin. Syyskuu on ihanteellinen kuukausi vierailla World Nomad Gamesissa.",
+          "Talvi (joulukuusta helmikuuhun)": "Talvi muuttaa Kirgisian talven ihmemaaksi, jossa lumen peittämät vuoret ja jäätyneet järvet luovat henkeäsalpaavia maisemia. Vaikka lämpötilat voivat laskea alle pakkasen, talviurheilun harrastajat kerääntyvät hiihtokeskuksiin, kuten Karakol ja Jyrgalan hiihtämään, lumilautailemaan ja luistelemaan. Helmikuussa juhlitaan perinteistä nomadipeliä Kok Borua (Buzkashi)."
+        },
+        "details": "Lisätietoja tietyistä aktiviteeteista, tapahtumista ja sääolosuhteista kunkin kauden aikana saat matkaoppaista ja paikallisista matkailuresursseista."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Ensimmäistä kertaa Kirgisiassa?",
+        "Description": "Jos vierailet Kirgisiassa ensimmäistä kertaa, tässä on kattava opas, jonka avulla saat kaiken irti matkastasi:",
+        "Options": {
+          "Saapuminen ja liikkuminen": "Suurin osa kansainvälisistä matkustajista saapuu Manasin kansainväliselle lentokentälle Biškekissä. Taksit ja bussit ovat helposti saatavilla kuljetukseen kaupunkiin. Kirgisiassa voit käyttää kotimaan lentoja, busseja, marshrutkoja (minibusseja) ja jaettuja takseja liikkumiseen.",
+          "SIM-kortit ja Internet": "Kirgisiassa yhteydenpito on helppoa paikallisella SIM-kortilla. Voit ostaa SIM-kortteja lentokentältä tai kaupungin matkapuhelinoperaattoreista. Tärkeimpiä palveluntarjoajia ovat Beeline, O! ja Megacom. Varmista, että puhelimesi on avattu ennen SIM-kortin ostamista. Internetin kattavuus on yleensä hyvä kaupungeissa, mutta maaseudulla se voi olla epäselvä.",
+          "Internet hinnat": "Internetin hinnat Kirgisiassa ovat yleensä edullisia. 1 Gt:n perustietopaketti voi maksaa noin 100 KGS (noin 1,20 USD), kun taas suuremmat paketit, kuten 10 Gt, voivat maksaa noin 500 KGS (noin 6 USD). Kuukauden rajoittamattomat datasuunnitelmat voivat vaihdella välillä 800–1500 KGS (noin 9,50–18 USD) riippuen palveluntarjoajasta ja yhteyden nopeudesta.",
+          "Valuutta ja maksut": "Paikallinen valuutta on Kyrgyzstani Som (KGS). Pankkiautomaatteja on saatavilla suurimmissa kaupungeissa, mutta käteistä kannattaa kuljettaa maaseudulla. Luotto- ja pankkikortit hyväksytään monissa paikoissa kaupungeissa, mutta vähemmän syrjäisillä alueilla. Valuutanvaihtopalveluita on saatavilla lentokentillä, pankeissa ja valuutanvaihtopisteissä.",
+          "Kieli": "Kirgisia ja venäjä ovat virallisia kieliä. Suurissa kaupungeissa saatat löytää joitain englanninkielisiä, etenkin turistialueilla, mutta maaseudulla on hyödyllistä osata kirgisian tai venäjän peruslauseita. Käännössovellus tai sanakirja voi olla erittäin hyödyllinen.",
+          "Terveys ja turvallisuus": "Kirgisia on yleensä turvallinen matkailijoille, mutta on viisasta noudattaa tavallisia varotoimia. Juo pullotettua tai keitettyä vettä välttääksesi vesivälitteisiä sairauksia. Varmista, että sinulla on matkavakuutus, joka kattaa sairauden ja tapaturmat. Ensiapupalveluja on saatavilla kaupungeissa, mutta niitä voidaan rajoittaa maaseudulla.",
+          "Ilmasto ja vaatteet": "Kirgisiassa vallitsee mannerilmasto, jossa on kylmiä talvia ja kuumia kesiä. Vuorilla lämpötilat voivat olla huomattavasti viileämpiä, joten pakkaa vastaavasti. Kerrospukeutumista, tukevia kävelykenkiä ja aurinkosuojaa suositellaan. Talvella mukaan lämpimät vaatteet, mukaan lukien laadukas takki, käsineet ja hatut.",
+          "Sähkö ja pistokkeet": "Vakiojännite on 220 V ja taajuus 50 Hz. Virtapistokkeet ja pistorasiat ovat tyyppiä C ja F. On suositeltavaa ottaa mukaan yleismatkasovitin varmistaaksesi, että voit ladata elektroniikkalaitteitasi."
+        },
+        "details": "Tarkempia tietoja ja vinkkejä saat matkaoppaista ja paikallisista resursseista. Nauti ensimmäisestä matkastasi Kirgisiaan ja tee unohtumattomia muistoja!"
+      },
+      "TravelPreparation": {
+        "title": "Valmistaudu matkallesi Kirgisiaan",
+        "Description": "Varmista sujuva ja nautinnollinen matka Kirgisiaan huolehtimalla näistä välttämättömistä matkavalmisteluista.",
+        "Options": {
+          "Visa ja passi": "Tarkista kansalaisuutesi viisumivaatimukset ja varmista, että passisi on voimassa vähintään kuusi kuukautta aiotun oleskelusi jälkeen.",
+          "Terveys ja rokotukset": "Pyydä terveydenhuollon tarjoajaasi tarvittavista rokotuksista tai terveyteen liittyvistä varotoimista Kirgisiaan matkustamista varten.",
+          "Matkavakuutus": "Harkitse matkavakuutuksen ostamista odottamattomien hätätilanteiden, kuten sairauskulujen tai matkan peruuntumisen, kattamiseksi.",
+          "Valuutta ja raha ovat tärkeitä": "Tutustu paikalliseen valuuttaan (Kyrgyzstani Som) ja vaihda rahaa ennen matkaa. Pankkiautomaatteja on saatavilla suurimmissa kaupungeissa.",
+          "Kieli": "Vaikka Venäjä ja Kirgisia ovat viralliset kielet, englantia ei puhuta laajalti. Harkitse peruslauseiden oppimista venäjäksi tai kirgisiksi.",
+          "Sää ja vaatteet": "Pakkaa sääolosuhteisiin sopivat vaatteet vierailusi ajaksi. Kirgisia kokee kuumia kesiä ja kylmiä talvia, joten tuo kerroksia.",
+          "Turvallisuus": "Pysy ajan tasalla Kirgisian nykytilanteesta ja noudata varovaisuutta erityisesti syrjäisillä alueilla. Pidä tavarasi turvassa ja ole tietoinen ympäristöstäsi.",
+          "Kulttuurinen etiketti": "Kunnioita paikallisia tapoja ja perinteitä, kuten kenkien riisuminen ennen jonkun kotiin tuloa ja luvan pyytäminen ennen ihmisten valokuvaamista."
+        },
+        "details": "Lisää Kirgisia-matkaasi koskevia matkailuvinkkejä ja neuvoja löydät kattavasta matkaoppaastamme."
+      }
+    },
+    "sights": {
+      "name": "Nähtävyydet",
+      "title": "Nähtävää Kirgisiassa",
+      "subtitle": "Minne mennä Kirgisiassa?  Pysy myös ajan tasalla kaupunkien ja aluekeskusten sääolosuhteista, jotta saat kaiken irti matkastasi mukavasti ja valmistaudu tämän kauniin maan jatkuvasti muuttuviin sääolosuhteisiin.",
+      "description": "Löydä vierailukohteita kaikkialta Kirgisiasta vuoristojärvistä ja kansallispuistoista kaupunkeihin ja historiallisiin kohteisiin. Aloita tutkiminen valitsemalla alue.",
+      "keywords": "Kirgisia-paikat, Kirgisia-matkailu, tutustu Kirgisiaan, Kirgisia-kohteita, Kirgisia-matkailu, pakolliset nähtävyydet Kirgisiassa, tärkeimmät nähtävyydet Kirgisia, Kirgisian maisemat, kulttuurikohteet Kirgisia, luonnonihmeitä Kirgisia, parhaat käyntikohteet Kirgisiassa",
+      "sights": "Minne mennä!",
+      "must-see": {
+        "subtitle": "Kirgisian pakolliset kohteet alueittain",
+        "description1": "Kirgisia tunnetaan kauniista luonnonmaisemistaan ​​majesteettisista vuorista rauhallisiin järviin. Tässä on joitain kunkin alueen kauneimmista paikoista:",
+        "chuyregion": "Chuyn alue",
+        "alaarchatitle": "Ala Archan kansallispuisto:",
+        "alaarchadescription": "Tarjoaa henkeäsalpaavat näkymät ja vaellusreittejä.",
+        "buranatitle": "Burana Tower:",
+        "buranadescription": "Historiallinen minareetti, josta on kauniit näkymät laaksoon.",
+        "issykulregion": "Issyk-Kulin alue",
+        "lakeissykkultitle": "Issyk-Kul-järvi:",
+        "lakeissykkuldescription": "Suuri suolainen järvi rantoja ja lomakohteita.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Kuuluisa punaisista kivimuodostelmistaan.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Portti kauniille vuoristokohteille, kuten Altyn Arashan.",
+        "narynregion": "Narynin alue",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Historiallinen kivikaravanserai viehättävässä laaksossa.",
+        "sonkultitle": "Son-Kul-järvi:",
+        "sonkuldescription": "Korkealla sijaitseva järvi upeilla auringonlaskuilla.",
+        "jalalabadregion": "Jalal-Abadin alue",
+        "sarychelextitle": "Sary-Chelekin biosfäärialue:",
+        "sarychelekdescription": "Sisältää koskemattomia järviä ja metsiä.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Suurin pähkinämetsä ja kauniit vesiputoukset.",
+        "oshregion": "Oshin alue",
+        "sulaymanmountaintitle": "Sulayman-vuori:",
+        "sulaymanmountaindescription": "Pyhä vuori, josta on panoraamanäkymät.",
+        "alayvalleytitle": "Alay Valley:",
+        "alayvalleydescription": "Huoneesta on upeat näkymät Pamir-vuorille.",
+        "batkenregion": "Batkenin alue",
+        "batkenvalleytitle": "Batken Valley:",
+        "batkenvalleydescription": "Tunnettu aprikoosipuistaan ​​ja ainutlaatuisista kivimuodostelmistaan.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Sisältää kauniita jokilaaksoja.",
+        "talasregion": "Talasin alue",
+        "beshtashtitle": "Besh-Tashin kansallispuisto:",
+        "beshtashdescription": "On luonnonkauniita jokia ja alppiniityt.",
+        "manasordotitle": "Manas Ordo -kompleksi:",
+        "manasordodescription": "Sankari Manasille omistettu kulttuurisivusto."
+      },
+      "highlights": [
+        "Miten päästä",
+        "Kuljetus",
+        "Missä yöpyä",
+        "Mitä syödä",
+        "Mitä tehdä",
+        "Kausi"
+      ]
+    },
+    "tours": {
+      "name": "Matkat",
+      "title": "Matkat Kirgisiaan",
+      "subtitle": "Yksityiset ja pienryhmämatkat Kirgisiassa",
+      "description": "Löydä Kirgisian vaellus-, ratsastus-, kulttuuri- ja automatkat. Liity pieneen ryhmään tai valitse omiin kiinnostuksenkohteisiisi sopiva yksityismatka.",
+      "description1": "Retki voi sisältää vuoristopolkuja, yöpymisen perinteisessä huopateltassa tai muutaman päivän Issyk-Kulin vieressä. Valitse reitti, joka vastaa kiinnostuksen kohteitasi ja käytettävissä olevaa aikaa.\n\nTiimimme voi auttaa oppaissa, kuljetuksissa ja majoituksessa. Ota yhteyttä niin sovitaan päivämäärät, ryhmäkoko ja haluamasi tahti.",
+      "keywords": "Kirgisia-matkat, Parhaat Kirgisia-matkat, Matkat Kirgisiassa, Parhaat Kyrgyzstan Tours Companies, Matkatoimisto Kirgisiassa, Seikkailumatkat Kirgisia, Opastetut kierrokset Kirgisia, Kulttuurimatkat Kirgisia, Vaellusmatkat Kirgisia, Kirgisia, Ratsastus, Kirgisia, Kirgisia, Kirgisia Kirgisia-matkapaketit, parhaat matkat Kirgisiassa, tutustu Kirgisiaan matkojen kautta",
+      "tourPage": {
+        "level": "Taso",
+        "duration": "Kesto",
+        "price": "Hinta",
+        "day": "Päivä",
+        "days": "päivää",
+        "details": "Yksityiskohdat",
+        "things": "Aktiviteetit",
+        "places": "Matkan kohteet",
+        "addInfo": "Lisätietoja",
+        "includings": "Sisältyy hintaan",
+        "excludings": "Ei sisälly hintaan",
+        "from": "Alkaen",
+        "note": "Huom",
+        "person": "Henkilö",
+        "persons": "Henkilöt",
+        "andMore": "ja enemmän"
+      },
+      "TourPreparation": {
+        "title": "Essentials matkustamiseen Kirgisiassa",
+        "Description": "Kattava luettelo tärkeimmistä esineistä, jotka on otettava mukaan matkallesi Kirgisiaan varmistaaksesi mukavuuden, turvallisuuden ja valmiuden vaihteleviin sääolosuhteisiin ja ulkoiluun.",
+        "Options": {
+          "Kengät": "Ota mukaasi mukavat kävelykengät kaupunkikierroksille, tukevat vaelluskengät kohtalaiseen vaellukseen, kestävät vaelluskengät retkeilyyn ja nopeasti kuivuvat sandaalit lisäparina.",
+          "Hattu": "Älä unohda pakata mukaan leveälieristä hattua tai aurinkolakkia, jossa on kaulaläppä suojaamaan voimakkaalta auringolta korkealla.",
+          "UV-voide": "Älä unohda pakata mukaan korkean SPF:n laajakirjoista aurinkovoidetta suojaamaan ihoasi voimakkailta UV-säteiltä, ​​etenkin korkeammilla korkeuksilla Kirgisiassa.",
+          "Vaatteet": "Pakkaa sopivat vaatekerrokset vaihteleviin lämpötiloihin ja sääolosuhteisiin ottaen huomioon, että lämpötilat voivat vaihdella merkittävästi korkeuden muutosten mukaan. Varaudu lumeen tai sateeseen, etenkin vuoristoisilla alueilla.",
+          "Lääketieteellinen apu": "Muista ottaa mukaan henkilökohtaisia ​​lääketieteellisiä apuvälineitä, kuten tarvittavia lääkkeitä, sideaineita, kipulääkkeitä ja muita erityisiä tarvikkeita olemassa oleviin sairauksiin varotoimina."
+        },
+        "overview": "Kysy mitä otat mukaan reitille ja vuodenajalle."
+      }
+    },
+    "articles": {
+      "name": "Artikkelit",
+      "title": "Kirgisian kulttuuri ja luonto",
+      "description": "Tutustu Kirgisian ihmisiin, perinteisiin, ruokaan ja maisemiin.",
+      "keywords": [
+        "Kirgisian kulttuuri",
+        "Kirgisian perinteet",
+        "Kirgisian luonto",
+        "Burkutin metsästys",
+        "Kok-boru",
+        "Alabai koirat",
+        "Taigan",
+        "Kirgisian historia",
+        "Keski-Aasian kulttuuri",
+        "Paimentolaisperintö",
+        "Kulttuuritutkimus",
+        "Perinteiset urheilulajit",
+        "Kirgisian vinttikoiria",
+        "Kulttuurikokemuksia",
+        "Seikkailu Kirgisiassa",
+        "Perintörodut",
+        "Kulttuuriperinteet",
+        "Ainutlaatuisia kokemuksia",
+        "Kirgisian elämäntapa"
+      ]
+    },
+    "about": {
+      "title": "Tietoa meistä",
+      "subtitle": "Keitä me olemme?",
+      "description": "Autamme sinua suunnittelemaan matkan Kirgisiaan. Kerro, milloin haluat tulla ja mistä olet kiinnostunut, niin etsimme yhdessä sopivat reitit, oppaat ja majoituksen.",
+      "keywords": "Meistä, Tarinamme, Kirgisia-harrastajat, Matkustamisen intohimo, Poikkeukselliset kokemukset, Tiimi, Arvot, Missio",
+      "buttons": {
+        "our_team": "Meidän tiimi",
+        "our_clients": "Asiakkaamme",
+        "contact_us": "Ota yhteyttä"
+      }
+    },
+    "info": {
+      "seen": "Vierailut: ",
+      "created": "Luotu: ",
+      "modified": "Viimeksi muokattu: "
+    },
+    "download": {
+      "text": "Pidä kartat, paikat ja matkatiedot käden ulottuvilla mobiilisovellustemme avulla."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Hyödyllisiä linkkejä",
+          "links": [
+            {
+              "text": "Etusivu",
+              "url": "/"
+            },
+            {
+              "text": "Nähtävyydet",
+              "url": "/places"
+            },
+            {
+              "text": "Matkat",
+              "url": "/tours"
+            },
+            {
+              "text": "Lentokenttäkuljetukset",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Yksityisyys ja laki",
+          "links": [
+            {
+              "text": "Tietoa meistä",
+              "url": "/about"
+            },
+            {
+              "text": "Ota yhteyttä",
+              "url": "/contact"
+            },
+            {
+              "text": "Tietosuojakäytäntö",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Yhteystiedot",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biškek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sosiaaliset tilit",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "kehittäjä",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import React, { Suspense } from "react";
@@ -28,7 +29,7 @@ export default async function Tours(
   const [{ page }, toursData] = await Promise.all([getDictionary(lang), getAllTours(lang)]);
 
   return (
-    <div className={`${shared.main} ${shared.listingPage}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <div className={`${shared.main} ${shared.listingPage}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} tours={toursData} page={page} />
       <header className={shared.pageIntro}>
         <PlacesReveal className={shared.introTitle}>

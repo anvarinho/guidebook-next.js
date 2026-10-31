@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import '../bai-jamjuree.css'
 import '../exo-2.css'
 import { Locale, i18n } from '@/lib/i18n.config'
+import { localeMetadata } from '@/lib/localeMetadata'
 import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
 import Analytics from './Components/Analytics'
@@ -37,14 +38,14 @@ export default async function RootLayout(
   const { page } = await getDictionary(lang)
   const contact = page.footer.sections.find(section => section.info)?.info
   return (
-    <html lang={({ jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN" } as Partial<Record<Locale, string>>)[lang] ?? lang} data-scroll-behavior="smooth">
+    <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
       <head>
         <FontPreloads lang={lang}/>
         <Meta lang={lang}/>
       </head>
 
       {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
-      <body className={lang === 'ru' ? 'font-exo-2' : 'font-bai-jamjuree'}>
+      <body className={['ru', 'kz', 'kg', 'tg', 'uk', 'mn', 'be', 'sr', 'bg', 'mk'].includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
           navbar={<Navbar lang={lang}/>}

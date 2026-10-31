@@ -1,0 +1,242 @@
+{
+  "uz": {
+    "title": "Tilingizni tanlang",
+    "search": "Tillarni qidirish",
+    "close": "Yopish",
+    "empty": "Hech qanday til topilmadi. Boshqa nom yoki kodni sinab ko'ring."
+  },
+  "kz": {
+    "title": "Тіліңізді таңдаңыз",
+    "search": "Тілдерді іздеу",
+    "close": "Жабу",
+    "empty": "Тілдер табылмады. Басқа атауды немесе кодты қолданып көріңіз."
+  },
+  "kg": {
+    "title": "Тилиңизди тандаңыз",
+    "search": "Тилдерди издөө",
+    "close": "Жабуу",
+    "empty": "Тилдер табылган жок. Башка ат же кодду байкап көрүңүз."
+  },
+  "tr": {
+    "title": "Dilinizi seçin",
+    "search": "Dilleri ara",
+    "close": "Kapat",
+    "empty": "Dil bulunamadı. Başka bir ad veya kod deneyin."
+  },
+  "hi": {
+    "title": "अपनी भाषा चुनें",
+    "search": "भाषाएँ खोजें",
+    "close": "बंद करें",
+    "empty": "कोई भाषा नहीं मिली. कोई अन्य नाम या कोड आज़माएँ."
+  },
+  "ur": {
+    "title": "اپنی زبان کا انتخاب کریں۔",
+    "search": "زبانیں تلاش کریں۔",
+    "close": "بند کریں",
+    "empty": "کوئی زبانیں نہیں ملی۔ دوسرا نام یا کوڈ آزمائیں۔"
+  },
+  "tg": {
+    "title": "Забони худро интихоб кунед",
+    "search": "Ҷустуҷӯи забонҳо",
+    "close": "Пӯшидан",
+    "empty": "Ягон забон ёфт нашуд. Ном ё рамзи дигарро санҷед."
+  },
+  "ms": {
+    "title": "Pilih bahasa anda",
+    "search": "Cari bahasa",
+    "close": "Tutup",
+    "empty": "Tiada bahasa ditemui. Cuba nama atau kod lain."
+  },
+  "fa": {
+    "title": "زبان خود را انتخاب کنید",
+    "search": "جستجوی زبان ها",
+    "close": "بستن",
+    "empty": "هیچ زبانی یافت نشد نام یا کد دیگری را امتحان کنید."
+  },
+  "az": {
+    "title": "Dilinizi seçin",
+    "search": "Dilləri axtarın",
+    "close": "Bağla",
+    "empty": "Heç bir dil tapılmadı. Başqa ad və ya kodu sınayın."
+  },
+  "uk": {
+    "title": "Виберіть свою мову",
+    "search": "Пошук мов",
+    "close": "Закрити",
+    "empty": "Мови не знайдено. Спробуйте інше ім’я чи код."
+  },
+  "pl": {
+    "title": "Wybierz swój język",
+    "search": "Wyszukaj języki",
+    "close": "Zamknij",
+    "empty": "Nie znaleziono języków. Wypróbuj inną nazwę lub kod."
+  },
+  "nl": {
+    "title": "Kies uw taal",
+    "search": "Zoek talen",
+    "close": "Sluiten",
+    "empty": "Geen talen gevonden. Probeer een andere naam of code."
+  },
+  "he": {
+    "title": "בחר את השפה שלך",
+    "search": "חיפוש שפות",
+    "close": "סגירה",
+    "empty": "לא נמצאו שפות. נסה שם או קוד אחר."
+  },
+  "cs": {
+    "title": "Vyberte si jazyk",
+    "search": "Hledat jazyky",
+    "close": "Zavřít",
+    "empty": "Nebyly nalezeny žádné jazyky. Zkuste jiné jméno nebo kód."
+  },
+  "pt": {
+    "title": "Escolha seu idioma",
+    "search": "Idiomas de pesquisa",
+    "close": "Fechar",
+    "empty": "Nenhum idioma encontrado. Tente outro nome ou código."
+  },
+  "id": {
+    "title": "Pilih bahasa Anda",
+    "search": "Cari bahasa",
+    "close": "Tutup",
+    "empty": "Tidak ada bahasa yang ditemukan. Coba nama atau kode lain."
+  },
+  "th": {
+    "title": "เลือกภาษาของคุณ",
+    "search": "ค้นหาภาษา",
+    "close": "ปิด",
+    "empty": "ไม่พบภาษา ลองใช้ชื่อหรือรหัสอื่น"
+  },
+  "bn": {
+    "title": "আপনার ভাষা চয়ন করুন",
+    "search": "ভাষা অনুসন্ধান করুন",
+    "close": "বন্ধ করুন",
+    "empty": "কোনো ভাষা পাওয়া যায়নি। অন্য নাম বা কোড চেষ্টা করুন."
+  },
+  "ne": {
+    "title": "आफ्नो भाषा छान्नुहोस्",
+    "search": "भाषाहरू खोज्नुहोस्",
+    "close": "बन्द गर्नुहोस्",
+    "empty": "कुनै भाषा भेटिएन। अर्को नाम वा कोड प्रयास गर्नुहोस्।"
+  },
+  "vi": {
+    "title": "Chọn ngôn ngữ của bạn",
+    "search": "Tìm kiếm ngôn ngữ",
+    "close": "Đóng",
+    "empty": "Không tìm thấy ngôn ngữ nào. Hãy thử tên hoặc mã khác."
+  },
+  "ka": {
+    "title": "აირჩიეთ თქვენი ენა",
+    "search": "ენების ძიება",
+    "close": "დახურვა",
+    "empty": "ენები ვერ მოიძებნა. სცადეთ სხვა სახელი ან კოდი."
+  },
+  "hy": {
+    "title": "Ընտրեք ձեր լեզուն",
+    "search": "Լեզուների որոնում",
+    "close": "Փակել",
+    "empty": "Լեզուներ չեն գտնվել: Փորձեք մեկ այլ անուն կամ ծածկագիր:"
+  },
+  "mn": {
+    "title": "Хэлээ сонго",
+    "search": "Хэл хайх",
+    "close": "Хаах",
+    "empty": "Ямар ч хэл олдсонгүй. Өөр нэр эсвэл кодыг оролдоно уу."
+  },
+  "be": {
+    "title": "Выберыце сваю мову",
+    "search": "Пошук моў",
+    "close": "Закрыць",
+    "empty": "Мовы не знойдзены. Паспрабуйце іншае імя або код."
+  },
+  "ro": {
+    "title": "Alegeți limba dvs",
+    "search": "Căutați limbi",
+    "close": "Închide",
+    "empty": "Nu s-au găsit limbi. Încercați alt nume sau cod."
+  },
+  "sv": {
+    "title": "Välj ditt språk",
+    "search": "Sök efter språk",
+    "close": "Stäng",
+    "empty": "Inga språk hittades. Försök med ett annat namn eller kod."
+  },
+  "nb": {
+    "title": "Velg ditt språk",
+    "search": "Søk etter språk",
+    "close": "Lukk",
+    "empty": "Ingen språk funnet. Prøv et annet navn eller kode."
+  },
+  "da": {
+    "title": "Vælg dit sprog",
+    "search": "Søg efter sprog",
+    "close": "Luk",
+    "empty": "Ingen sprog fundet. Prøv et andet navn eller kode."
+  },
+  "fi": {
+    "title": "Valitse kieli",
+    "search": "Hae kieliä",
+    "close": "Sulje",
+    "empty": "Kieliä ei löytynyt. Kokeile toista nimeä tai koodia."
+  },
+  "el": {
+    "title": "Επιλέξτε τη γλώσσα σας",
+    "search": "Αναζήτηση γλωσσών",
+    "close": "Κλείσιμο",
+    "empty": "Δεν βρέθηκαν γλώσσες. Δοκιμάστε άλλο όνομα ή κωδικό."
+  },
+  "hr": {
+    "title": "Odaberite svoj jezik",
+    "search": "Traži jezike",
+    "close": "Zatvori",
+    "empty": "Nema pronađenih jezika. Pokušajte s drugim imenom ili kodom."
+  },
+  "sr": {
+    "title": "Изаберите свој језик",
+    "search": "Претражи језике",
+    "close": "Затвори",
+    "empty": "Ниједан језик није пронађен. Покушајте са другим именом или кодом."
+  },
+  "sk": {
+    "title": "Vyberte si jazyk",
+    "search": "Hľadať jazyky",
+    "close": "Zavrieť",
+    "empty": "Nenašli sa žiadne jazyky. Skúste iné meno alebo kód."
+  },
+  "sl": {
+    "title": "Izberite svoj jezik",
+    "search": "Iskanje jezikov",
+    "close": "Zapri",
+    "empty": "Ni jezikov. Poskusite z drugim imenom ali kodo."
+  },
+  "bg": {
+    "title": "Изберете вашия език",
+    "search": "Търсене на езици",
+    "close": "Затвори",
+    "empty": "Няма намерени езици. Опитайте с друго име или код."
+  },
+  "bs": {
+    "title": "Odaberite svoj jezik",
+    "search": "Traži jezike",
+    "close": "Zatvori",
+    "empty": "Nijedan jezik nije pronađen. Pokušajte s drugim imenom ili kodom."
+  },
+  "mk": {
+    "title": "Изберете го вашиот јазик",
+    "search": "Јазици за пребарување",
+    "close": "Затвори",
+    "empty": "Не се пронајдени јазици. Обидете се со друго име или код."
+  },
+  "sq": {
+    "title": "Zgjidhni gjuhën tuaj",
+    "search": "Kërkoni gjuhë",
+    "close": "Mbyll",
+    "empty": "Nuk u gjet asnjë gjuhë. Provoni një emër ose kod tjetër."
+  },
+  "lt": {
+    "title": "Pasirinkite savo kalbą",
+    "search": "Ieškoti kalbų",
+    "close": "Uždaryti",
+    "empty": "Kalbų nerasta. Pabandykite kitą pavadinimą arba kodą."
+  }
+}

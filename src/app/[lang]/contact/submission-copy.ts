@@ -1,6 +1,9 @@
+
+import additionalSubmissionCopy from '@/translations/ui/app-lang-contact-submission-copy-ts-submissionCopy.json';
 import type { Locale } from '@/lib/i18n.config'
 export type SubmissionCopy = { send: string; hint: string; pending: string; success: string; error: string; invalid: string; rateLimit: string }
 export const submissionCopy: Record<Locale, SubmissionCopy> = {
+    ...additionalSubmissionCopy as Record<Locale, SubmissionCopy>,
   en: { send: 'Send message', hint: 'Your message will be securely saved for our team to review.', pending: 'Sending your message…', success: 'Your message has been saved. Our team will review it.', error: 'We could not confirm receipt. Your text is kept here; please try again later or contact us directly.', invalid: 'Check your name, email and message, then try again.', rateLimit: 'Too many requests. Please wait 15 minutes before trying again.' },
   fr: { send: 'Envoyer le message', hint: 'Votre message sera enregistré pour notre équipe.', pending: 'Envoi en cours…', success: 'Votre message a été enregistré. Notre équipe le consultera.', error: 'Réception non confirmée. Votre texte est conservé ici ; réessayez plus tard ou contactez-nous directement.', invalid: 'Vérifiez votre nom, votre e-mail et votre message.', rateLimit: 'Trop de demandes. Veuillez patienter 15 minutes.' },
   de: { send: 'Nachricht senden', hint: 'Ihre Nachricht wird für unser Team sicher gespeichert.', pending: 'Nachricht wird gesendet…', success: 'Ihre Nachricht wurde gespeichert. Unser Team wird sie prüfen.', error: 'Empfang nicht bestätigt. Ihr Text bleibt hier erhalten. Versuchen Sie es später erneut oder kontaktieren Sie uns direkt.', invalid: 'Bitte prüfen Sie Name, E-Mail und Nachricht.', rateLimit: 'Zu viele Anfragen. Bitte warten Sie 15 Minuten.' },

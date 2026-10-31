@@ -1,3 +1,4 @@
+import additionalTranslations from '@/translations/ui/app-lang-page1-tsx-translations.json';
 // import Font Awesome CSS
 // import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Locale } from '@/lib/i18n.config'
@@ -26,6 +27,7 @@ export default async function Home({
   const places = await getHomePlaces(lang)
 
   const translations = {
+            ...additionalTranslations,
     en: "Choose language",
     de: "Sprache wählen",
     es: "Elegir idioma",

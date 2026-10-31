@@ -1,4 +1,9 @@
 'use client'
+import reviewedLabels from '@/translations/ui/reviewed-labels.json';
+
+import { isRtlLocale } from '@/lib/localeMetadata';
+
+import additionalCopy from '@/translations/ui/app-lang-ServicePage-tsx-copy.json';
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -17,6 +22,7 @@ type Copy = {
 }
 
 const copy: Record<Locale, Copy> = {
+    ...additionalCopy as Record<Locale, Copy>,
   en: { notFound: { eyebrow: 'A different route', title: 'Looks like this page went hiking.', description: 'It forgot to leave a trail. Let’s find you somewhere better to explore.' }, error: { eyebrow: 'A brief interruption', title: 'We hit a rough patch.', description: 'Something went wrong while loading this page. Give it another try or continue exploring.' }, loading: { eyebrow: 'Finding your way', title: 'The journey is taking shape.', description: 'We are getting your guide ready.' }, home: 'Back to the guide', places: 'Explore places', retry: 'Try again' },
   ru: { notFound: { eyebrow: 'Другой маршрут', title: 'Эта страница ушла в поход.', description: 'И забыла оставить след. Давайте найдём другое место для прогулки.' }, error: { eyebrow: 'Небольшая остановка', title: 'Что-то пошло не так.', description: 'Не удалось загрузить страницу. Попробуйте ещё раз или продолжите путешествие.' }, loading: { eyebrow: 'Прокладываем маршрут', title: 'Путешествие скоро начнётся.', description: 'Готовим для вас путеводитель.' }, home: 'К путеводителю', places: 'Смотреть места', retry: 'Повторить' },
   fr: { notFound: { eyebrow: 'Un autre itinéraire', title: 'Cette page est partie en randonnée.', description: 'Elle a oublié de laisser des traces. Trouvons un autre endroit à explorer.' }, error: { eyebrow: 'Une courte pause', title: 'Un imprévu sur le chemin.', description: 'Cette page ne s’est pas chargée. Réessayez ou poursuivez votre découverte.' }, loading: { eyebrow: 'En route', title: 'Le voyage prend forme.', description: 'Nous préparons votre guide.' }, home: 'Retour au guide', places: 'Explorer les lieux', retry: 'Réessayer' },
@@ -29,11 +35,6 @@ const copy: Record<Locale, Copy> = {
   kr: { notFound: { eyebrow: '다른 경로', title: '이 페이지는 하이킹을 떠났나 봐요.', description: '흔적을 남기는 걸 깜빡했네요. 다른 곳을 둘러볼까요?' }, error: { eyebrow: '잠시 쉬어가기', title: '가는 길에 문제가 생겼어요.', description: '페이지를 불러오지 못했어요. 다시 시도하거나 계속 둘러보세요.' }, loading: { eyebrow: '길을 찾는 중', title: '여행을 준비하고 있어요.', description: '여행 안내를 준비 중입니다.' }, home: '가이드로 돌아가기', places: '장소 둘러보기', retry: '다시 시도' },
 }
 
-const backLabels: Record<Locale, string> = {
-  en: 'Go back', ru: 'Назад', fr: 'Retour', de: 'Zurück', es: 'Volver',
-  it: 'Indietro', ae: 'العودة', cn: '返回', jp: '戻る', kr: '뒤로 가기',
-}
-
 export default function ServicePage({ state, reset }: { state: 'notFound' | 'error' | 'loading'; reset?: () => void }) {
   const router = useRouter()
   const pathname = usePathname() || ''
@@ -44,7 +45,7 @@ export default function ServicePage({ state, reset }: { state: 'notFound' | 'err
 
   if (state === 'loading') {
     return (
-      <section className={styles.loadingPage} data-service-state="loading" role="status" aria-live="polite" dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+      <section className={styles.loadingPage} data-service-state="loading" role="status" aria-live="polite" dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
         <FlagSun />
         <LoadingRing large />
       </section>
@@ -53,7 +54,7 @@ export default function ServicePage({ state, reset }: { state: 'notFound' | 'err
 
   const isNotFound = state === 'notFound'
   return (
-    <section className={styles.statusPage} data-service-state={state} dir={lang === 'ae' ? 'rtl' : 'ltr'} aria-labelledby="service-title">
+    <section className={styles.statusPage} data-service-state={state} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} aria-labelledby="service-title">
       <FlagSun />
       <span className={styles.statusCode} aria-hidden="true">{isNotFound ? '404' : '500'}</span>
       <h1 id="service-title">{message.title}</h1>
@@ -62,7 +63,7 @@ export default function ServicePage({ state, reset }: { state: 'notFound' | 'err
         {isNotFound ? <>
           <Link href={`/${lang}/places`} className={styles.orangeButton}>{content.places}<span aria-hidden="true">↗</span></Link>
           <button type="button" className={styles.darkButton} onClick={() => window.history.length > 1 ? router.back() : router.push(`/${lang}`)}>
-            <span aria-hidden="true">{lang === 'ae' ? '→' : '←'}</span>{backLabels[lang]}
+            <span aria-hidden="true">{isRtlLocale(lang) ? '→' : '←'}</span>{reviewedLabels[lang].back}
           </button>
         </> : <>
           {reset ? <button type="button" className={styles.orangeButton} onClick={reset}>{content.retry}<span aria-hidden="true">↻</span></button>

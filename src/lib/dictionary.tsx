@@ -2,8 +2,10 @@ import 'server-only'
 import { cache } from 'react'
 import type { Locale } from './i18n.config'
 import { notFound } from 'next/navigation'
+import { additionalDictionary } from '../translations/dictionary-loaders'
 
 const dictionaries = {
+  ...additionalDictionary,
   en: () => import('@/dictionaries/en.json').then(module => module.default),
   fr: () => import('@/dictionaries/fr.json').then(module => module.default),
   it: () => import('@/dictionaries/it.json').then(module => module.default),

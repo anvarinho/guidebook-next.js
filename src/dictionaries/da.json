@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "da-DK",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Indlæser...",
+    "contactButton": "Har du spørgsmål?",
+    "navigation": [
+      {
+        "text": "Forside",
+        "url": "/"
+      },
+      {
+        "text": "Seværdigheder",
+        "url": "/places"
+      },
+      {
+        "text": "Ture",
+        "url": "/tours"
+      },
+      {
+        "text": "Artikler",
+        "url": "/articles"
+      },
+      {
+        "text": "Om os",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Rejseguide til Kirgisistan",
+      "description": "Gå på bjergvandring, svøm i Issyk-Kul eller overnat i en jurte hos en lokal familie. Vælg en rute, der passer til dig.",
+      "subtitle": "Rejseguide til Kirgisistan",
+      "subtitle1": "Hvorfor besøge Kirgisistan?",
+      "subtitle2": "Udforsk det store udendørs",
+      "subtitle3": "Uendelig udforskning",
+      "subtitle4": "Planlæg din rejse",
+      "subtitle5": "Kirgisistan skal besøge steder",
+      "paragraph": "Dette smukke land uden land, der tidligere var en del af Sovjetunionen, er hurtigt ved at blive et af de mest populære rejsemål i Centralasien. Kirgisistans turistindustri vokser hurtigt og giver rejsende mulighed for at udforske et af verdens mest spektakulære lande.",
+      "paragraph1": "Kirgisistan har oplevet en dramatisk stigning i turismen i de seneste år, da eventyrere strømmer til for at vandre, campere og vandre på heste gennem dets fantastiske landskaber. Som den første centralasiatiske nation til at slække på sin visumpolitik – der tilbyder visumfri indrejse for de fleste vestlige og udviklede nationer – er der udviklet et stærkt turismenetværk.",
+      "paragraph2": "Fra Community Based Tourism (CBT) initiativer over hele landet til gæstehuse og uafhængige guider, der er adskillige måder at opleve Kirgisistans betagende natur på. Vandrere kan tage på ærefrygtindgydende vandreture fra Karakol, Kochkor, Arslanbob og endda hovedstaden Bishkek. Bemærk, at vandreture her ofte kræver et rimeligt fitnessniveau, da mange stier byder på mere end blot en afslappet spadseretur. De fleste vandreture varer fra 1 til 5 dage, selvom længere eventyr er tilgængelige.\r\n\r\nFor dem, der ønsker at redde deres ben, er ridning et populært alternativ. Tag på landets mest spektakulære hestetur til Song Kol, eller tilbring et par dage med at slappe af og svømme ved den smukke Issyk-Kul-sø.",
+      "paragraph3": "Med utallige off-the-slagne-sti destinationer, vandreture og stier er mulighederne for at udforske ubegrænsede. Uanset om du søger eventyr eller afslapning, har Kirgisistan noget for enhver smag.",
+      "paragraph4": "For mere specifik information om attraktioner, hvordan du kommer dertil og rundt og andre rejsetips, skal du sørge for at læse vores omfattende Kirgisistan rejseguide. Forbedre din rejseoplevelse med anbefalede apps til navigation, oversættelse og lokal indsigt for at få mest muligt ud af din rejse.\r\n\r\nNyd din rejse og oplev den unikke skønhed og kultur i Kirgisistan",
+      "keywords": "Kirgisistan turistguide, turistguide, Rejse bekvemmelighed, Lokale attraktioner, Turisttjenester, Kirgisistan rejsetips, Kulturelle oplevelser, Turplanlægning, Sightseeing, Eventyrrejser, Praktiske ture, Bishkek byguide, Kirgisistan turistattraktioner, Turiststed, Steder i nærheden af mig at sightsee, Steder at besøge i nærheden af mig, Turiststeder, De smukkeste steder i verden, Smukkeste steder i verden, Verdens smukkeste beliggenhed steder i verden, Rejser med guide, Rejseguide, Smukke steder, Bishkek i Kirgisistan, City Bishkek, Turist og guide, PR-turistattraktioner, Nærliggende attraktioner og hvordan man udfører det",
+      "button": "Lad os finde ud af det!",
+      "button1": "Hvor skal man hen!",
+      "button2": "Hvad skal man gøre!",
+      "button3": "læs mere",
+      "button4": "Vores ture",
+      "Transportation": {
+        "title": "Transport i Kirgisistan | Rejseguide",
+        "Description": "At komme rundt i Kirgisistan kan være et eventyr i sig selv. Her er hvad du behøver at vide:",
+        "Options": {
+          "Indenrigsflyvninger": "For længere afstande, især hvis tiden er en begrænsning, er indenrigsflyvninger tilgængelige mellem større byer som Bishkek, Osh og Tamchy (nær Cholpon-Ata i Issyk-Kul-regionen). Tjek flyselskaber for tidsplaner og reservationer.",
+          "Marshrutkas (minibusser)": "Disse er den mest almindelige og omkostningseffektive transportform for korte til mellemlange afstande. De følger faste ruter mellem byer og byer og er meget populære blandt lokalbefolkningen.",
+          "Fælles taxaer": "Delte taxaer tilbyder et hurtigere, men lidt dyrere alternativ til marshrutkaer. De går typisk, når de er fyldt op, og priserne kan forhandles.",
+          "Biludlejning": "For mere fleksibilitet er det en god mulighed at leje en bil. Veje i landdistrikter kan være ujævne, så en 4x4 anbefales. Sørg for at have et internationalt kørekort.",
+          "Tog": "Begrænsede togtjenester er tilgængelige, der primært forbinder Bishkek til Balykchy nær Issyk-Kul-søen. Det er en naturskøn rute, men langsommere end vejkørsel.",
+          "Busser": "Regelmæssige busser kører i større byer og tilbyder en behagelig måde at rejse på. De dækker dog muligvis ikke fjerntliggende områder.",
+          "HitchHiking": "er en almindelig praksis i landdistrikterne i Kirgisistan, hvor formelle transportmuligheder kan være begrænsede. Det er relativt sikkert og kulturelt accepteret, men udvis forsigtighed og brug din dømmekraft, når du accepterer forlystelser fra fremmede."
+        },
+        "details": "Besøg den medfølgende guide for detaljeret indsigt i transportmuligheder."
+      },
+      "Accommodations": {
+        "title": "Indkvartering i Kirgisistan | Rejseguide",
+        "Description": "Fra hyggelige pensionater til luksusresorts tilbyder Kirgisistan en række forskellige overnatningsmuligheder, der passer til enhver rejsendes præferencer og budget. Her er nogle valg at overveje:",
+        "Options": {
+          "Hoteller": "Kirgisistans større byer som Bishkek og Osh kan prale af en række hoteller, der passer til forskellige budgetter og præferencer. Fra internationale kæder til boutiquehoteller finder du komfortabel indkvartering med faciliteter såsom Wi-Fi, aircondition og spisemuligheder på stedet.",
+          "Gæstehuse": "For en mere autentisk oplevelse, overvej at bo i et gæstehus drevet af lokale familier. Disse hyggelige etablissementer tilbyder en varm velkomst og en chance for at opleve kirgisisk gæstfrihed. Du vil ofte have mulighed for at nyde hjemmelavede måltider og lære om lokale skikke og traditioner.",
+          "Yurter": "I landdistrikter og bjergrige områder giver traditionelle yurter en unik overnatningsoplevelse. Disse bærbare, teltlignende strukturer tilbyder enkel, men komfortabel indkvartering, ofte med en fantastisk udsigt over de omkringliggende landskaber. Yurt-ophold kan omfatte måltider og kulturelle aktiviteter.",
+          "Hjemmeophold": "Oplev livet med en kirgisisk familie ved at vælge et homestay. Du får mulighed for at bo med lokalbefolkningen, dele måltider og deltage i daglige aktiviteter. Homestays tilbyder en autentisk kulturel udveksling og indsigt i Kirgisistans traditionelle levevis.",
+          "Øko-lodges": "For miljøbevidste rejsende tilbyder øko-lodges bæredygtige overnatningsmuligheder i naturlige omgivelser. Disse hytter prioriterer miljøbevarelse og tilbyder ofte aktiviteter såsom vandreture, fuglekikkeri og samfundsengagement.",
+          "Camping": "er en populær mulighed for rejsende, der søger eventyr og ensomhed. Uanset om du slår et telt op i et udpeget campingområde eller vildlejr på afsidesliggende steder, skal du sørge for at følge principperne om efterlad ingen spor og indhente de nødvendige tilladelser."
+        },
+        "details": "For specifikke anbefalinger og reservationsmuligheder, se rejsehjemmesider, online bookingplatforme og lokale turistkontorer."
+      },
+      "Food": {
+        "title": "Mad i Kirgisistan | Rejseguide",
+        "Description": "At udforske det kirgisiske køkken er en integreret del af rejseoplevelsen. Her er hvad du behøver at vide:",
+        "Options": {
+          "Traditionelt køkken": "Det kirgisiske køkken er rigt på smag og arv, hvor traditionelle retter som beshbarmak (kød og nudler), manty (dumplings) og laghman (nudelsuppe) er hæfteklammer. Gå ikke glip af at prøve fermenteret hoppemælk kendt som kumis, en populær drik.",
+          "Nomadisk indflydelse": "Det kirgisiske køkken afspejler sin nomadiske arv og byder ofte på solide retter lavet af ingredienser som kød (især lamme- og hestekød), mejeriprodukter (såsom kymyz og airan) og korn (herunder ris og hvede). Yurter, traditionelle nomadetelte, kan tilbyde autentiske madoplevelser i landdistrikterne.",
+          "Lokale markeder": "Besøg lokale markeder som Osh Bazaar i Bishkek for at prøve et udvalg af kirgisiske retter og snacks, herunder shashlik (grillet kød med spyd), samsa (krydret kager) og plov (pilaf). Disse markeder giver også mulighed for at købe frisk frugt, nødder og krydderier.",
+          "Teahuse og caféer": "Tehuse (chaykhana) og caféer er allestedsnærværende i Kirgisistan, der serverer te (chai) og kaffe (kofe) sammen med kager, brød og lette måltider. Nyd den afslappede atmosfære og gæstfrihed, mens du nyder traditionelle kirgisiske lækkerier som baursak (stegt dej) og kurut (tørrede yoghurtkugler).",
+          "Internationalt køkken": "I byområder som Bishkek finder du en bred vifte af internationale retter, herunder russiske, kinesiske, koreanske og europæiske. Udforsk trendy restauranter, bistroer og madbaner for en smag af globale smagsoplevelser sammen med kirgisisk gæstfrihed.",
+          "Street Food": "Begiv dig ud i Kirgisistans gader for at opdage en række streetfood-sælgere, der tilbyder hurtige og smagfulde snacks. Prøv populære streetfoods som somsas (stegte eller bagte omsætninger fyldt med kød eller grøntsager), stegte laghman-nudler og grillede majskolber.",
+          "Madture og madlavningskurser": "Tag på madture eller deltag i madlavningskurser for at dykke dybere ned i det kirgisiske køkken og kulinariske traditioner. Lær, hvordan du tilbereder traditionelle retter, besøg lokale gårde og producenter, og fordyb dig i den pulserende kulinariske scene i Kirgisistan."
+        },
+        "details": "For mere information om kirgisisk køkken og spisemuligheder, se den medfølgende guide."
+      },
+      "Safety": {
+        "title": "Sikkerhed i Kirgisistan | Rejseguide",
+        "Description": "At rejse til Kirgisistan er generelt sikkert, men det er vigtigt at være opmærksom på potentielle risici og tage de nødvendige forholdsregler. Her er hvad du behøver at vide:",
+        "Options": {
+          "Politisk stabilitet": "Kirgisistan har tidligere oplevet politisk ustabilitet, herunder protester og lejlighedsvis uroligheder. Mens de fleste turistområder forbliver upåvirkede, skal du holde dig orienteret om den lokale udvikling og undgå store forsamlinger eller demonstrationer.",
+          "Forbrydelse": "Småkriminalitet som lommetyveri og tyveri kan forekomme, især i overfyldte områder og turisthotspots. Hold dine ejendele sikkert og vær på vagt.",
+          "Terrorisme": "Truslen om terrorisme i Kirgisistan er lav, men rejsende bør forblive på vagt, især i grænseområder. Følg eventuelle rejsevejledninger udstedt af din regering og hold dig informeret.",
+          "Naturlige farer": "Kirgisistan er udsat for naturlige farer såsom jordskælv, laviner og jordskred, især i bjergrige områder. Vær forberedt og følg sikkerhedsretningslinjerne, især når du vandrer eller deltager i udendørsaktiviteter.",
+          "Trafiksikkerhed": "Vejforholdene i Kirgisistan kan variere, og kørsel kan være udfordrende, især i landdistrikter. Udvis forsigtighed, overhold lokale færdselslove, og overvej at ansætte en velrenommeret chauffør.",
+          "Sundhedsrisici": "Selvom Kirgisistan ikke udgør væsentlige sundhedsrisici, bør rejsende være ajour med rutinevaccinationer og tage forholdsregler mod mad- og vandbårne sygdomme.",
+          "Højdesyge": "Rejsende, der besøger højtliggende områder, bør være opmærksomme på risikoen for højdesyge. Tag dig tid til at akklimatisere dig og undgå anstrengende fysisk aktivitet, indtil din krop har tilpasset sig.",
+          "Rejseforsikring": "Det er vigtigt at have en rejseforsikring, der dækker lægeudgifter, nødevakuering og rejseaflysning/-afbrydelse. Sørg for, at din forsikringspolice inkluderer dækning for aktiviteter, du planlægger at deltage i."
+        },
+        "details": "Se officielle regeringskilder og rejsevejledninger for mere detaljerede sikkerhedsoplysninger og rejsevejledninger."
+      },
+      "Prices": {
+        "title": "Priser i Kirgisistan | Rejseguide",
+        "Description": "At forstå leveomkostningerne og udgifterne i Kirgisistan kan hjælpe dig med at planlægge dit budget effektivt. Her er en oversigt over priser på almindelige varer og tjenester:",
+        "Options": {
+          "Indkvartering": "Udgifterne til overnatning i Kirgisistan varierer afhængigt af typen af ​​indkvartering og beliggenhed. Budgetrejsende kan finde overkommelige muligheder såsom pensionater og vandrehjem, mens luksushoteller og resorts henvender sig til dem, der søger eksklusive faciliteter. Priserne spænder fra så lave som $10 per nat for budgetovernatning til over $100 per nat for luksusvirksomheder.",
+          "Mad og spisning": "Det er generelt overkommeligt at spise ude i Kirgisistan, især på lokale spisesteder og street food boder. Traditionelle retter som beshbarmak og plov er billige og mættende og koster typisk mellem $3 og $7 pr. måltid på lokale restauranter. Internationale retter og fine spisemuligheder kan være dyrere, med måltider i gennemsnit $10 til $20 eller mere pr. person.",
+          "Transport": "Transportomkostninger i Kirgisistan varierer afhængigt af rejseformen og afstanden. Indenrigsflyvninger mellem større byer som Bishkek og Osh kan variere fra $50 til $150 eller mere, mens delte taxaer og marshrutkaer (minibusser) tilbyder budgetvenlige muligheder for kortere afstande, hvilket typisk koster $1 til $10 afhængigt af ruten. At leje en bil kan koste $30 til $100 eller mere om dagen, afhængigt af køretøjstypen og udlejningsfirmaet.",
+          "Aktiviteter og attraktioner": "Omkostningerne ved aktiviteter og attraktioner i Kirgisistan varierer meget afhængigt af oplevelsen. Indgangsgebyrer til museer, historiske steder og nationalparker er generelt overkommelige og spænder fra $1 til $10 pr. person. Guidede ture, udendørs udflugter og eventyraktiviteter som ridning og trekking kan medføre ekstra omkostninger, med priser, der varierer baseret på varighed og kompleksitet.",
+          "Shopping": "Shopping i Kirgisistan byder på en række muligheder, fra traditionelt kunsthåndværk og souvenirs til moderne varer og elektronik. Priserne varierer afhængigt af varen og placeringen, men forhandlinger er almindelige på markeder og basarer. Vær forberedt på at forhandle til den bedste pris, især når du køber tekstiler, smykker og håndlavet kunsthåndværk.",
+          "Valuta og valutakurser": "Den officielle valuta i Kirgisistan er Kyrgyzstani som (KGS). Valutakurser svinger, så det er tilrådeligt at tjekke de aktuelle kurser, før du veksler penge. Større kreditkort accepteres i større byer og turistområder, men det anbefales at medbringe kontanter til transaktioner i mindre byer og landdistrikter. (1$ = 85-90som)"
+        },
+        "details": "For den mest nøjagtige og opdaterede information om priser i Kirgisistan, se lokale kilder og seneste rejseguider."
+      },
+      "Travel_Seasons": {
+        "title": "Rejsesæsoner i Kirgisistan | Rejseguide",
+        "Description": "At forstå rejsesæsonerne i Kirgisistan kan hjælpe dig med at planlægge din rejse og få mest muligt ud af dit besøg. Her er et overblik over de forskellige årstider og hvad du kan forvente:",
+        "Options": {
+          "Forår (marts til maj)": "Foråret er et smukt tidspunkt at besøge Kirgisistan, hvor landskabet kommer til live, mens blomster blomstrer og floder svulmer op af smeltet sne. Vejret er mildt, hvilket gør det ideelt til udendørs aktiviteter som vandreture, trekking og ridning. Vær dog forberedt på lejlighedsvise regnbyger, især i april og maj.",
+          "Sommer (juni til august)": "Sommeren er den højeste turistsæson i Kirgisistan med lange dage, varme temperaturer og klar himmel. Det er det perfekte tidspunkt til udendørs eventyr såsom camping, bjergbestigning og udforskning af alpine søer. Populære festivaler og begivenheder finder sted i løbet af denne tid, herunder World Nomad Games i september.",
+          "Efterår (september til november)": "Efteråret er en fantastisk sæson i Kirgisistan, med landskaber malet i levende nuancer af rød, orange og guld, når bladene skifter farve. Vejret er fortsat behageligt, hvilket gør det til et glimrende tidspunkt for trekking, dyreliv og kulturelle oplevelser. September er en ideel måned at besøge til World Nomad Games.",
+          "Vinter (december til februar)": "Vinteren forvandler Kirgisistan til et vintervidunderland, med snedækkede bjerge og frosne søer, der skaber betagende natur. Mens temperaturerne kan falde til under frysepunktet, strømmer vintersportsentusiaster til skisportssteder som Karakol og Jyrgalan for at stå på ski, snowboard og skøjteløb. Februar markerer fejringen af ​​det traditionelle nomadespil, Kok Boru (Buzkashi)."
+        },
+        "details": "For mere information om specifikke aktiviteter, begivenheder og vejrforhold i hver sæson, se rejseguider og lokale turismeressourcer."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Første gang i Kirgisistan?",
+        "Description": "Hvis du besøger Kirgisistan for første gang, er her en omfattende guide til at hjælpe dig med at få mest muligt ud af din rejse:",
+        "Options": {
+          "Ankomst og at komme rundt": "De fleste internationale rejsende ankommer til Manas International Airport i Bishkek. Taxaer og busser er let tilgængelige for transport ind til byen. Inden for Kirgisistan kan du bruge indenrigsfly, busser, marshrutkaer (minibusser) og fælles taxaer til at komme rundt.",
+          "SIM-kort og internet": "Det er nemt at holde forbindelsen i Kirgisistan med et lokalt SIM-kort. Du kan købe SIM-kort i lufthavnen eller hos mobiludbydere i byen. Større udbydere omfatter Beeline, O! og Megacom. Sørg for, at din telefon er låst op, før du køber et SIM-kort. Internetdækningen er generelt god i byer og byer, men kan være plettet i landdistrikter.",
+          "Internet priser": "Internetpriserne i Kirgisistan er generelt overkommelige. En grundlæggende datapakke på 1GB kan koste omkring 100 KGS (ca. $1,20 USD), mens større pakker, såsom 10GB, kan koste omkring 500 KGS (ca. $6 USD). Ubegrænsede dataplaner i en måned kan variere fra 800 til 1500 KGS (ca. $9,50 til $18 USD) afhængigt af udbyderen og forbindelsens hastighed.",
+          "Valuta og betalinger": "Den lokale valuta er Kyrgyzstani Som (KGS). Hæveautomater er tilgængelige i større byer, men det er tilrådeligt at medbringe kontanter i landdistrikterne. Kredit- og betalingskort accepteres mange steder i byer, men mindre i fjerntliggende områder. Valutavekslingstjenester er tilgængelige i lufthavne, banker og vekselkontorer.",
+          "Sprog": "Kirgisisk og russisk er de officielle sprog. I større byer kan du måske finde nogle engelsktalende, især i turistområder, men i landdistrikter er det nyttigt at kende nogle grundlæggende kirgisiske eller russiske sætninger. En oversættelsesapp eller en parlør kan være meget nyttig.",
+          "Sundhed og sikkerhed": "Kirgisistan er generelt sikkert for rejsende, men det er klogt at tage standard forholdsregler. Drik vand på flaske eller kogt for at undgå vandbårne sygdomme. Sørg for, at du har en rejseforsikring, der dækker helbred og ulykker. Akutmedicinske tjenester er tilgængelige i byer, men kan være begrænset i landdistrikter.",
+          "Klima og beklædning": "Kirgisistan har et kontinentalt klima med kolde vintre og varme somre. I bjergene kan temperaturerne være betydeligt køligere, så pak derefter. Lagdelt tøj, robuste vandresko og solbeskyttelse anbefales. Om vinteren skal du medbringe varmt tøj, herunder en jakke af god kvalitet, handsker og hatte.",
+          "El og stik": "Standardspændingen er 220V, og frekvensen er 50Hz. Strømstik og -stik er af type C og F. Det anbefales at medbringe en universel rejseadapter for at sikre, at du kan oplade dine elektroniske enheder."
+        },
+        "details": "For mere detaljeret information og tip henvises til rejseguider og lokale ressourcer. Nyd din første tur til Kirgisistan og få uforglemmelige minder!"
+      },
+      "TravelPreparation": {
+        "title": "Forbered dig på din rejse til Kirgisistan",
+        "Description": "Sørg for en jævn og behagelig tur til Kirgisistan ved at tage sig af disse vigtige rejseforberedelser.",
+        "Options": {
+          "Visum og pas": "Tjek visumkravene for din nationalitet og sørg for, at dit pas er gyldigt i mindst seks måneder efter dit planlagte ophold.",
+          "Sundhed og vaccinationer": "Kontakt din sundhedsudbyder for eventuelle nødvendige vaccinationer eller sundhedsmæssige forholdsregler for at rejse til Kirgisistan.",
+          "Rejseforsikring": "Overvej at købe en rejseforsikring for at dække uventede nødsituationer, såsom lægeudgifter eller rejseaflysninger.",
+          "Valuta og penge betyder noget": "Gør dig bekendt med den lokale valuta (Kyrgyzstani Som) og veksle nogle penge inden din rejse. Hæveautomater er tilgængelige i større byer.",
+          "Sprog": "Mens russisk og kirgisisk er de officielle sprog, er engelsk ikke udbredt. Overvej at lære nogle grundlæggende sætninger på russisk eller kirgisisk.",
+          "Vejr og tøj": "Pak passende tøj til vejrforholdene under dit besøg. Kirgisistan oplever varme somre og kolde vintre, så tag lag med.",
+          "Sikkerhed og sikkerhed": "Hold dig orienteret om den aktuelle situation i Kirgisistan og udvis forsigtighed, især i fjerntliggende områder. Hold dine ejendele sikkert og vær opmærksom på dine omgivelser.",
+          "Kulturel etikette": "Respekter lokale skikke og traditioner, såsom at tage dine sko af, før du går ind i nogens hjem og bede om lov, før du tager billeder af mennesker."
+        },
+        "details": "For yderligere rejsetips og råd, der er specifikke for din rejse til Kirgisistan, henvises til vores omfattende rejseguide."
+      }
+    },
+    "sights": {
+      "name": "Seværdigheder",
+      "title": "Steder at besøge i Kirgisistan",
+      "subtitle": "Hvor skal man hen i Kirgisistan?  Derudover skal du holde dig informeret om vejrforholdene i byer og regionale centre for at få mest muligt ud af din rejse behageligt og være forberedt på konstant skiftende vejr i dette smukke land.",
+      "description": "Find steder at besøge i hele Kirgisistan, fra bjergsøer og nationalparker til byer og historiske steder. Vælg en region at begynde at udforske.",
+      "keywords": "Kirgisistan steder, Kirgisistan rejser, udforsk Kirgisistan, Kirgisistan destinationer, Kirgisistan turisme, must-besøg steder i Kirgisistan, top attraktioner Kirgisistan, Kirgisistan landskaber, kulturelle steder Kirgisistan, naturlige vidundere Kirgisistan, bedste steder at besøge i Kirgisistan",
+      "sights": "Hvor skal man hen!",
+      "must-see": {
+        "subtitle": "Must-See destinationer i Kirgisistan efter regioner",
+        "description1": "Kirgisistan er kendt for sine smukke naturlandskaber, fra majestætiske bjerge til fredfyldte søer. Her er nogle af de smukkeste steder i hver region:",
+        "chuyregion": "Chuy-regionen",
+        "alaarchatitle": "Ala Archa National Park:",
+        "alaarchadescription": "Byder på en betagende udsigt og vandrestier.",
+        "buranatitle": "Burana Tower:",
+        "buranadescription": "En historisk minaret med naturskøn udsigt over dalen.",
+        "issykulregion": "Issyk-Kul-regionen",
+        "lakeissykkultitle": "Issyk-Kul-søen:",
+        "lakeissykkuldescription": "En stor saltholdig sø med strande og feriesteder.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Berømt for sine røde klippeformationer.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Porten til smukke bjergsteder som Altyn Arashan.",
+        "narynregion": "Naryn-regionen",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "En historisk stenkaravanserai i en malerisk dal.",
+        "sonkultitle": "Son-Kul-søen:",
+        "sonkuldescription": "En højtliggende sø med fantastiske solnedgange.",
+        "jalalabadregion": "Jalal-Abad-regionen",
+        "sarychelextitle": "Sary-Chelek biosfærereservat:",
+        "sarychelekdescription": "Byder på uberørte søer og skove.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Hjem til den største valnøddeskov og smukke vandfald.",
+        "oshregion": "Osh-regionen",
+        "sulaymanmountaintitle": "Sulayman Mountain:",
+        "sulaymanmountaindescription": "Et helligt bjerg med panoramaudsigt.",
+        "alayvalleytitle": "Alay-dalen:",
+        "alayvalleydescription": "Byder på en spektakulær udsigt over Pamir-bjergene.",
+        "batkenregion": "Region Batken",
+        "batkenvalleytitle": "Batken Valley:",
+        "batkenvalleydescription": "Kendt for sine abrikostræer og unikke klippeformationer.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Har smukke floddale.",
+        "talasregion": "Talas-regionen",
+        "beshtashtitle": "Besh-Tash National Park:",
+        "beshtashdescription": "Har naturskønne floder og alpine enge.",
+        "manasordotitle": "Manas Ordo Complex:",
+        "manasordodescription": "Et kulturelt sted dedikeret til helten Manas."
+      },
+      "highlights": [
+        "Sådan kommer du til",
+        "Transportere",
+        "Hvor skal man bo",
+        "Hvad skal man spise",
+        "Hvad skal man gøre",
+        "Sæson"
+      ]
+    },
+    "tours": {
+      "name": "Ture",
+      "title": "Rejser i Kirgisistan",
+      "subtitle": "Private og små gruppeture i Kirgisistan",
+      "description": "Find vandreture, rideture, kulturrejser og bilture i Kirgisistan. Rejs med en lille gruppe, eller vælg en privat tur efter dine interesser.",
+      "description1": "En tur kan omfatte bjergstier, en nat i et traditionelt filttelt eller et par dage ved siden af ​​Issyk-Kul. Vælg en rute, der passer til dine interesser og den tid, du har.\n\nVores team kan hjælpe med guider, transport og overnatning. Kontakt os for at diskutere dine datoer, gruppestørrelse og foretrukne tempo.",
+      "keywords": "Kirgisistan ture, Bedste Kirgisistan ture, Rejser i Kirgisistan, Bedste Kirgisistan Tours Companies, Rejsebureau i Kirgisistan, eventyr ture Kirgisistan, guidede ture Kirgisistan, kulturelle ture Kirgisistan, trekking ture Kirgisistan, rideture Kirgisistan Kirgisistan rejseoplevelse Kirgisistan, ingen rejseoplevelser Kirgisistan pakker, bedste ture i Kirgisistan, udforsk Kirgisistan gennem ture",
+      "tourPage": {
+        "level": "Niveau",
+        "duration": "Varighed",
+        "price": "Pris",
+        "day": "Dag",
+        "days": "dage",
+        "details": "Detaljer",
+        "things": "Aktiviteter",
+        "places": "Steder på ruten",
+        "addInfo": "Yderligere oplysninger",
+        "includings": "Inkluderet i prisen",
+        "excludings": "Ikke inkluderet i prisen",
+        "from": "Fra",
+        "note": "Note",
+        "person": "Person",
+        "persons": "Personer",
+        "andMore": "og mere"
+      },
+      "TourPreparation": {
+        "title": "Essentials for rejser i Kirgisistan",
+        "Description": "En omfattende liste over væsentlige ting at medbringe på din rejse til Kirgisistan for at sikre komfort, sikkerhed og beredskab til varierende vejrforhold og udendørs aktiviteter.",
+        "Options": {
+          "Sko": "Medbring behagelige vandresko til byture, robuste vandresko til moderate vandreture, slidstærke vandrestøvler til trekking og hurtigtørrende sandaler som et ekstra par.",
+          "Hat": "Glem ikke at pakke en bredskygget hat eller en solhætte med nakkeklap for at beskytte mod den intense sol i store højder.",
+          "UV creme": "Glem ikke at pakke bredspektret solcreme med høj SPF for at beskytte din hud mod de intense UV-stråler, især i højereliggende områder i Kirgisistan.",
+          "Tøj": "Pak passende tøjlag til varierende temperaturer og vejrforhold, i betragtning af at temperaturerne kan variere betydeligt med højdeændringer. Vær forberedt på sne eller regn, især i bjergrige områder.",
+          "Lægehjælp": "Husk at medbringe personlige medicinske hjælpemidler såsom nødvendig medicin, plaster, smertestillende midler og eventuelle specifikke genstande til allerede eksisterende medicinske tilstande som forholdsregler."
+        },
+        "overview": "Spørg os, hvad vi skal medbringe til din rute og årstiden."
+      }
+    },
+    "articles": {
+      "name": "Artikler",
+      "title": "Kirgisistans kultur og natur",
+      "description": "Læs om Kirgisistans mennesker, traditioner, mad og landskaber.",
+      "keywords": [
+        "Kirgisisk kultur",
+        "kirgisiske traditioner",
+        "Kirgisisk natur",
+        "Burkut jagt",
+        "Kok-boru",
+        "Alabai hunde",
+        "Taigan",
+        "Kirgisisk historie",
+        "Centralasiatisk kultur",
+        "Nomadisk arv",
+        "Kulturel udforskning",
+        "Traditionel sport",
+        "Sighthounds i Kirgisistan",
+        "Kulturelle oplevelser",
+        "Eventyr i Kirgisistan",
+        "Arv yngler",
+        "Kulturelle traditioner",
+        "Unikke oplevelser",
+        "Kirgisisk livsstil"
+      ]
+    },
+    "about": {
+      "title": "Om os",
+      "subtitle": "Hvem er vi?",
+      "description": "Vi hjælper dig med at planlægge rejsen til Kirgisistan. Fortæl, hvornår du vil komme, og hvad du er interesseret i, så finder vi ruter, guider og overnatning sammen.",
+      "keywords": "Om os, Vores historie, Kirgisistan-entusiaster, Rejsepassion, Enestående oplevelser, Team, Værdier, Mission",
+      "buttons": {
+        "our_team": "Vores team",
+        "our_clients": "Vores kunder",
+        "contact_us": "Kontakt os"
+      }
+    },
+    "info": {
+      "seen": "Besøg: ",
+      "created": "Oprettet: ",
+      "modified": "Sidst ændret: "
+    },
+    "download": {
+      "text": "Hold kort, steder og rejseoplysninger ved hånden med vores mobilapps."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Nyttige links",
+          "links": [
+            {
+              "text": "Forside",
+              "url": "/"
+            },
+            {
+              "text": "Seværdigheder",
+              "url": "/places"
+            },
+            {
+              "text": "Ture",
+              "url": "/tours"
+            },
+            {
+              "text": "Lufthavnstransport",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privatliv og juridisk",
+          "links": [
+            {
+              "text": "Om os",
+              "url": "/about"
+            },
+            {
+              "text": "Kontakt os",
+              "url": "/contact"
+            },
+            {
+              "text": "Privatlivspolitik",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Kontaktoplysninger",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sociale konti",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "udvikler",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

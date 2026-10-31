@@ -1,0 +1,242 @@
+{
+  "uz": {
+    "loading": "Joylar yuklanmoqda…",
+    "more": "Ko'proq joylarni o'rganing",
+    "retry": "Joylarni yuklab bo‘lmadi. Qayta urinib ko'ring",
+    "end": "Siz bizning barcha joylarimizni ko'rib chiqdingiz."
+  },
+  "kz": {
+    "loading": "Орындар жүктелуде…",
+    "more": "Көбірек орындарды зерттеңіз",
+    "retry": "Орындар жүктелмеді. Қайтадан байқап көріңіз",
+    "end": "Сіз біздің барлық орындарды зерттедіңіз."
+  },
+  "kg": {
+    "loading": "Жерлер жүктөлүүдө…",
+    "more": "Көбүрөөк жерлерди изилдеңиз",
+    "retry": "Орундар жүктөлгөн жок. Кайра аракет кыл",
+    "end": "Сиз биздин бардык жерлерди изилдедиңиз."
+  },
+  "tr": {
+    "loading": "Yerler yükleniyor…",
+    "more": "Daha fazla yeri keşfedin",
+    "retry": "Yerler yüklenemedi. Tekrar deneyin",
+    "end": "Tüm yerlerimizi keşfettiniz."
+  },
+  "hi": {
+    "loading": "स्थान लोड हो रहे हैं...",
+    "more": "अधिक स्थानों का अन्वेषण करें",
+    "retry": "स्थान लोड नहीं किए जा सके. पुनः प्रयास करें",
+    "end": "आपने हमारे सभी स्थानों का पता लगाया है।"
+  },
+  "ur": {
+    "loading": "مقامات لوڈ ہو رہے ہیں…",
+    "more": "مزید جگہیں دریافت کریں۔",
+    "retry": "مقامات کو لوڈ نہیں کیا جا سکا۔ دوبارہ کوشش کریں۔",
+    "end": "آپ نے ہمارے تمام مقامات کو دریافت کیا ہے۔"
+  },
+  "tg": {
+    "loading": "Ҷойҳо бор карда мешавад…",
+    "more": "Ҷойҳои бештарро омӯзед",
+    "retry": "Ҷойҳоро бор кардан мумкин нест. Як бори дигар санҷед",
+    "end": "Шумо ҳама ҷойҳои моро омӯхтаед."
+  },
+  "ms": {
+    "loading": "Memuatkan tempat…",
+    "more": "Terokai lebih banyak tempat",
+    "retry": "Tidak dapat memuatkan tempat. Cuba lagi",
+    "end": "Anda telah meneroka semua tempat kami."
+  },
+  "fa": {
+    "loading": "در حال بارگیری مکان‌ها…",
+    "more": "مکان های بیشتری را کاوش کنید",
+    "retry": "مکان‌ها بارگیری نشد. دوباره امتحان کنید",
+    "end": "شما همه مکان های ما را کاوش کرده اید."
+  },
+  "az": {
+    "loading": "Yerlər yüklənir...",
+    "more": "Daha çox yer kəşf edin",
+    "retry": "Yerləri yükləmək mümkün olmadı. Yenidən cəhd edin",
+    "end": "Bütün yerlərimizi araşdırdınız."
+  },
+  "uk": {
+    "loading": "Завантаження місць…",
+    "more": "Дослідіть більше місць",
+    "retry": "Не вдалося завантажити місця. Спробуйте знову",
+    "end": "Ви дослідили всі наші місця."
+  },
+  "pl": {
+    "loading": "Ładuję miejsca…",
+    "more": "Poznaj więcej miejsc",
+    "retry": "Nie udało się wczytać miejsc. Spróbuj ponownie",
+    "end": "Odwiedziłeś wszystkie nasze miejsca."
+  },
+  "nl": {
+    "loading": "Plaatsen laden…",
+    "more": "Ontdek meer plaatsen",
+    "retry": "Kan plaatsen niet laden. Probeer het opnieuw",
+    "end": "Je hebt al onze plaatsen verkend."
+  },
+  "he": {
+    "loading": "טוען מקומות...",
+    "more": "חקור מקומות נוספים",
+    "retry": "לא ניתן היה לטעון מקומות. נסה שוב",
+    "end": "חקרת את כל המקומות שלנו."
+  },
+  "cs": {
+    "loading": "Načítání míst…",
+    "more": "Prozkoumejte další místa",
+    "retry": "Místa se nepodařilo načíst. Zkuste to znovu",
+    "end": "Prozkoumali jste všechna naše místa."
+  },
+  "pt": {
+    "loading": "Carregando lugares…",
+    "more": "Explorar mais lugares",
+    "retry": "Não foi possível carregar os lugares. Tente novamente",
+    "end": "Você explorou todos os nossos lugares."
+  },
+  "id": {
+    "loading": "Memuat tempat…",
+    "more": "Jelajahi lebih banyak tempat",
+    "retry": "Tidak dapat memuat tempat. Coba lagi",
+    "end": "Anda telah menjelajahi semua tempat kami."
+  },
+  "th": {
+    "loading": "กำลังโหลดสถานที่...",
+    "more": "สำรวจสถานที่เพิ่มเติม",
+    "retry": "ไม่สามารถโหลดสถานที่ได้ ลองอีกครั้ง",
+    "end": "คุณได้สำรวจสถานที่ของเราทั้งหมดแล้ว"
+  },
+  "bn": {
+    "loading": "স্থান লোড হচ্ছে...",
+    "more": "আরো জায়গা অন্বেষণ",
+    "retry": "জায়গা লোড করা যায়নি। আবার চেষ্টা করুন",
+    "end": "আপনি আমাদের সব জায়গা ঘুরে দেখেছেন।"
+  },
+  "ne": {
+    "loading": "स्थानहरू लोड गर्दै...",
+    "more": "थप ठाउँहरू अन्वेषण गर्नुहोस्",
+    "retry": "ठाउँहरू लोड गर्न सकिएन। पुन: प्रयास गर्नुहोस्",
+    "end": "तपाईंले हाम्रा सबै ठाउँहरू अन्वेषण गर्नुभएको छ।"
+  },
+  "vi": {
+    "loading": "Đang tải địa điểm…",
+    "more": "Khám phá nhiều địa điểm hơn",
+    "retry": "Không thể tải địa điểm. Thử lại",
+    "end": "Bạn đã khám phá tất cả các địa điểm của chúng tôi."
+  },
+  "ka": {
+    "loading": "იტვირთება ადგილები…",
+    "more": "გამოიკვლიეთ მეტი ადგილი",
+    "retry": "ადგილების ჩატვირთვა ვერ მოხერხდა. სცადეთ ხელახლა",
+    "end": "თქვენ გამოიკვლიეთ ჩვენი ყველა ადგილი."
+  },
+  "hy": {
+    "loading": "Վայրերի բեռնում…",
+    "more": "Ուսումնասիրեք ավելի շատ վայրեր",
+    "retry": "Չհաջողվեց բեռնել վայրերը: Նորից փորձեք",
+    "end": "Դուք ուսումնասիրել եք մեր բոլոր վայրերը:"
+  },
+  "mn": {
+    "loading": "Газруудыг ачаалж байна...",
+    "more": "Илүү олон газар судлаарай",
+    "retry": "Газруудыг ачаалж чадсангүй. Дахин оролдоно уу",
+    "end": "Та манай бүх газрыг судалсан."
+  },
+  "be": {
+    "loading": "Загрузка месцаў…",
+    "more": "Даследуйце больш месцаў",
+    "retry": "Не ўдалося загрузіць месцы. Паспрабуйце яшчэ раз",
+    "end": "Вы даследавалі ўсе нашы месцы."
+  },
+  "ro": {
+    "loading": "Se încarcă locurile…",
+    "more": "Explorează mai multe locuri",
+    "retry": "Nu s-au putut încărca locuri. Încearcă din nou",
+    "end": "Ne-ați explorat toate locurile."
+  },
+  "sv": {
+    "loading": "Laddar platser...",
+    "more": "Utforska fler platser",
+    "retry": "Det gick inte att ladda platser. Försök igen",
+    "end": "Du har utforskat alla våra platser."
+  },
+  "nb": {
+    "loading": "Laster inn steder …",
+    "more": "Utforsk flere steder",
+    "retry": "Kunne ikke laste inn steder. Prøv igjen",
+    "end": "Du har utforsket alle stedene våre."
+  },
+  "da": {
+    "loading": "Indlæser steder...",
+    "more": "Udforsk flere steder",
+    "retry": "Kunne ikke indlæse steder. Prøv igen",
+    "end": "Du har udforsket alle vores steder."
+  },
+  "fi": {
+    "loading": "Ladataan paikkoja…",
+    "more": "Tutustu muihin paikkoihin",
+    "retry": "Paikkoja ei voitu ladata. Yritä uudelleen",
+    "end": "Olet tutkinut kaikkia paikkojamme."
+  },
+  "el": {
+    "loading": "Φόρτωση θέσεων…",
+    "more": "Εξερευνήστε περισσότερα μέρη",
+    "retry": "Δεν ήταν δυνατή η φόρτωση μερών. Προσπαθήστε ξανά",
+    "end": "Εξερευνήσατε όλα τα μέρη μας."
+  },
+  "hr": {
+    "loading": "Učitavanje mjesta…",
+    "more": "Istražite više mjesta",
+    "retry": "Nije moguće učitati mjesta. Pokušajte ponovno",
+    "end": "Istražili ste sva naša mjesta."
+  },
+  "sr": {
+    "loading": "Учитавање места…",
+    "more": "Истражите више места",
+    "retry": "Учитавање места није успело. Покушајте поново",
+    "end": "Истражили сте сва наша места."
+  },
+  "sk": {
+    "loading": "Načítavajú sa miesta…",
+    "more": "Preskúmajte ďalšie miesta",
+    "retry": "Miesta sa nepodarilo načítať. Skúste to znova",
+    "end": "Preskúmali ste všetky naše miesta."
+  },
+  "sl": {
+    "loading": "Nalaganje mest …",
+    "more": "Raziščite več krajev",
+    "retry": "Mest ni bilo mogoče naložiti. poskusi ponovno",
+    "end": "Raziskal si vse naše kraje."
+  },
+  "bg": {
+    "loading": "Местата се зареждат...",
+    "more": "Разгледайте още места",
+    "retry": "Местата не можаха да се заредят. Опитайте отново",
+    "end": "Разгледахте всички наши места."
+  },
+  "bs": {
+    "loading": "Učitavanje mjesta…",
+    "more": "Istražite više mjesta",
+    "retry": "Nije moguće učitati mjesta. Pokušajte ponovo",
+    "end": "Istražili ste sva naša mjesta."
+  },
+  "mk": {
+    "loading": "Се вчитуваат места…",
+    "more": "Истражете повеќе места",
+    "retry": "Не може да се вчитаат местата. Обидете се повторно",
+    "end": "Ги истраживте сите наши места."
+  },
+  "sq": {
+    "loading": "Vendet po ngarkohen…",
+    "more": "Eksploroni më shumë vende",
+    "retry": "Vendet nuk mund të ngarkoheshin. Provo sërish",
+    "end": "Ju keni eksploruar të gjitha vendet tona."
+  },
+  "lt": {
+    "loading": "Įkeliamos vietos…",
+    "more": "Ištirkite daugiau vietų",
+    "retry": "Nepavyko įkelti vietų. Bandykite dar kartą",
+    "end": "Jūs ištyrėte visas mūsų vietas."
+  }
+}

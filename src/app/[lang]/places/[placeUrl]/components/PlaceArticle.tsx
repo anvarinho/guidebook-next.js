@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import getBase64 from '@/lib/getLocalBase64';
 import getBlurredDataUrls from '@/lib/getBlurredDataUrls';
 import ArrowIcon from '@/components/ArrowIcon';
@@ -37,7 +38,7 @@ export default async function PlaceArticle({ promise, lang }: {
   const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 
   return (
-    <article data-place-page className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <article data-place-page className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <PlacesReveal className={styles.breadcrumbMotion} order={0}>
         <nav className={styles.breadcrumb} aria-label={page.sights.name}>
           <Link href={`/${lang}/places`}><span aria-hidden="true"><ArrowIcon direction="left"/></span> {page.sights.name}</Link>

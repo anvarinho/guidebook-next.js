@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "cs-CZ",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Načítání...",
+    "contactButton": "Nějaké otázky?",
+    "navigation": [
+      {
+        "text": "Úvod",
+        "url": "/"
+      },
+      {
+        "text": "Zajímavá místa",
+        "url": "/places"
+      },
+      {
+        "text": "Zájezdy",
+        "url": "/tours"
+      },
+      {
+        "text": "Články",
+        "url": "/articles"
+      },
+      {
+        "text": "O nás",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Turistický průvodce Kyrgyzstánem",
+      "description": "Vydejte se po horských stezkách, zaplavte si v Issyk-kulu nebo přenocujte v jurtě u místní rodiny. Vyberte si trasu podle sebe.",
+      "subtitle": "Turistický průvodce Kyrgyzstánem",
+      "subtitle1": "Proč navštívit Kyrgyzstán?",
+      "subtitle2": "Průzkum Velké přírody",
+      "subtitle3": "Nekonečné zkoumání",
+      "subtitle4": "Naplánujte si výlet",
+      "subtitle5": "Kyrgyzstán, místa, která musíte navštívit",
+      "paragraph": "Tato krásná vnitrozemská země, dříve součást Sovětského svazu, se rychle stává jednou z nejoblíbenějších turistických destinací ve Střední Asii. Turistický průmysl Kyrgyzstánu rychle roste a cestujícím nabízí možnost prozkoumat jednu z nejpozoruhodnějších zemí světa.",
+      "paragraph1": "Kyrgyzstán zaznamenal v posledních letech dramatický nárůst cestovního ruchu, protože dobrodruzi se hrnou na túry, kempy a trek na koni jeho úžasnou krajinou. Jako první středoasijský národ, který uvolnil svou vízovou politiku – nabízí bezvízový vstup pro většinu západních a rozvinutých zemí – se rozvinula silná turistická síť.",
+      "paragraph2": "Od iniciativ Community Based Tourism (CBT) po celé zemi po penziony a nezávislé průvodce, existuje mnoho způsobů, jak zažít dechberoucí scenérii Kyrgyzstánu. Turisté se mohou vydat na úžasné treky z Karakolu, Kochkoru, Arslanbobu a dokonce i hlavního města Biškeku. Všimněte si, že pěší turistika zde často vyžaduje přiměřenou úroveň kondice, protože mnoho stezek nabízí více než jen klidnou procházku. Většina treků se pohybuje od 1 do 5 dnů, i když jsou k dispozici i delší dobrodružství.\r\n\r\nPro ty, kteří chtějí zachránit své nohy, je jízda na koni oblíbenou alternativou. Vydejte se na nejúžasnější koňský trek v zemi do Song Kol nebo strávte několik dní relaxací a koupáním u krásného jezera Issyk-Kul.",
+      "paragraph3": "S bezpočtem neznámých destinací, treků a stezek jsou příležitosti k prozkoumání neomezené. Ať už hledáte dobrodružství nebo odpočinek, Kyrgyzstán má pro každého něco.",
+      "paragraph4": "Chcete-li získat konkrétnější informace o atrakcích, jak se tam a kolem dostat, a další tipy na cesty, přečtěte si našeho komplexního cestovního průvodce Kyrgyzstán. Vylepšete své cestování pomocí doporučených aplikací pro navigaci, překlady a místní statistiky, abyste si cestu užili na maximum.\r\n\r\nUžijte si cestu a zažijte jedinečnou krásu a kulturu Kyrgyzstánu",
+      "keywords": "Turistický průvodce Kyrgyzstánem, turistický průvodce, Pohodlí cestování, Místní atrakce, Turistické služby, Kyrgyzské cestovní tipy, Kulturní zážitky, Plánování výletů, Prohlídka, Dobrodružné cestování, Pohodlné výlety, Průvodce městem Biškek, Turistické atrakce Kyrgyzstánu, Turistické místo, Místa v mém okolí k prohlídce, Místa k návštěvě v mém okolí, Turistická místa, Turistická destinace, Nejkrásnější místa na světě, Cestovní průvodce, Nejkrásnější destinace na světě, Průvodce pro cestování, Krásná místa, Biškek v Kyrgyzstánu, Město Bishkek, Turista a průvodce, PR turistické atrakce, Atrakce v okolí a jak to provést",
+      "button": "Pojďme to zjistit!",
+      "button1": "Kam jít!",
+      "button2": "Co dělat!",
+      "button3": "čtěte více",
+      "button4": "Naše výlety",
+      "Transportation": {
+        "title": "Doprava v Kyrgyzstánu | Cestovní průvodce",
+        "Description": "Cestování po Kyrgyzstánu může být samo o sobě dobrodružstvím. Zde je to, co potřebujete vědět:",
+        "Options": {
+          "Vnitrostátní lety": "Na delší vzdálenosti, zejména pokud je omezením čas, jsou k dispozici vnitrostátní lety mezi velkými městy, jako je Biškek, Osh a Tamchy (poblíž Cholpon-Ata v regionu Issyk-Kul). Zkontrolujte letecké společnosti ohledně letových řádů a rezervací.",
+          "Marshrutkas (Mikrobusy)": "Jedná se o nejběžnější a cenově nejvýhodnější způsob přepravy na krátké až střední vzdálenosti. Sledují pevné trasy mezi městy a obcemi a jsou mezi místními velmi oblíbené.",
+          "Sdílené taxi": "Sdílené taxíky nabízejí rychlejší, ale o něco dražší alternativu k marshrutkám. Obvykle odcházejí, když jsou plné, a ceny lze vyjednávat.",
+          "Půjčovny aut": "Pro větší flexibilitu je dobrou volbou pronájem auta. Silnice ve venkovských oblastech mohou být drsné, proto se doporučuje 4x4. Ujistěte se, že máte mezinárodní řidičský průkaz.",
+          "Vlaky": "K dispozici jsou omezené vlakové spoje, především spojující Biškek s Balykchy poblíž jezera Issyk-Kul. Je to malebná trasa, ale pomalejší než cestování po silnici.",
+          "Autobusy": "Ve velkých městech jezdí pravidelné autobusy, které nabízejí pohodlný způsob cestování. Nemusí však pokrývat odlehlé oblasti.",
+          "Stopování": "je běžnou praxí ve venkovských oblastech Kyrgyzstánu, kde mohou být formální možnosti dopravy omezené. Je to relativně bezpečné a kulturně přijímané, ale buďte opatrní a používejte svůj úsudek, když přijímáte jízdy od cizích lidí."
+        },
+        "details": "Podrobné informace o možnostech dopravy naleznete v přiloženém průvodci."
+      },
+      "Accommodations": {
+        "title": "Ubytování v Kyrgyzstánu | Cestovní průvodce",
+        "Description": "Od útulných penzionů po luxusní letoviska, Kyrgyzstán nabízí různé možnosti ubytování, které vyhovují preferencím a rozpočtu každého cestovatele. Zde je několik možností, které je třeba zvážit:",
+        "Options": {
+          "hotely": "Velká města Kyrgyzstánu, jako je Biškek a Osh, se mohou pochlubit řadou hotelů s různými rozpočty a preferencemi. Od mezinárodních řetězců po butikové hotely najdete pohodlné ubytování s vybavením, jako je Wi-Fi, klimatizace a vlastní stravování.",
+          "Penziony": "Pro autentičtější zážitek zvažte pobyt v penzionu provozovaném místními rodinami. Tato útulná zařízení nabízejí vřelé přivítání a možnost zažít kyrgyzskou pohostinnost. Často budete mít příležitost ochutnat domácí jídla a seznámit se s místními zvyky a tradicemi.",
+          "Jurty": "Ve venkovských oblastech a horských oblastech poskytují tradiční jurty jedinečný zážitek z ubytování. Tyto přenosné stavby podobné stanu nabízejí základní, ale pohodlné ubytování, často s úžasným výhledem na okolní krajinu. Pobyty v jurtách mohou zahrnovat stravování a kulturní aktivity.",
+          "Homestays": "Zažijte život s kyrgyzskou rodinou výběrem ubytování v rodině. Budete mít příležitost žít s místními obyvateli, sdílet jídlo a účastnit se každodenních aktivit. Ubytování v soukromí nabízí autentickou kulturní výměnu a nahlédnutí do tradičního způsobu života Kyrgyzstánu.",
+          "Ekologické chaty": "Ekologicky uvědomělým cestovatelům poskytují ekologické chaty udržitelné možnosti ubytování v přírodním prostředí. Tyto chaty upřednostňují ochranu životního prostředí a často nabízejí aktivity, jako je pěší turistika, pozorování ptáků a zapojení komunity.",
+          "Kempování": "je oblíbenou volbou pro cestovatele, kteří hledají dobrodružství a samotu. Ať už stavíte stan v určeném kempu nebo divoký kemp na odlehlých místech, nezapomeňte dodržovat zásady Leave No Trace a získat všechna potřebná povolení."
+        },
+        "details": "Konkrétní doporučení a možnosti rezervace naleznete na webových stránkách cestování, online rezervačních platformách a místních turistických kancelářích."
+      },
+      "Food": {
+        "title": "Jídlo v Kyrgyzstánu | Cestovní průvodce",
+        "Description": "Poznávání kyrgyzské kuchyně je nedílnou součástí cestovatelského zážitku. Zde je to, co potřebujete vědět:",
+        "Options": {
+          "Tradiční kuchyně": "Kyrgyzská kuchyně je bohatá na chuť a dědictví, přičemž tradiční jídla jako beshbarmak (maso a nudle), manty (knedlíky) a laghman (nudlová polévka) jsou základními pokrmy. Nenechte si ujít ochutnat fermentované kobylí mléko známé jako kumis, oblíbený nápoj.",
+          "Nomádský vliv": "Kyrgyzská kuchyně, která odráží své nomádské dědictví, často obsahuje vydatná jídla vyrobená ze surovin, jako je maso (zejména jehněčí a koňské maso), mléčné výrobky (jako je kymyz a airan) a obiloviny (včetně rýže a pšenice). Jurty, tradiční nomádské stany, mohou nabídnout autentické kulinářské zážitky ve venkovských oblastech.",
+          "Místní trhy": "Navštivte místní trhy, jako je Osh Bazaar v Biškeku, a ochutnejte různé kyrgyzské pokrmy a občerstvení, včetně šašliku (grilované maso na špízu), samsa (slané pečivo) a plov (pilaf). Tyto trhy také nabízejí možnost nákupu čerstvého ovoce, ořechů a koření.",
+          "Čajovny a kavárny": "Čajovny (chaykhana) a kavárny jsou v Kyrgyzstánu všudypřítomné, kde se vedle pečiva, chleba a lehkých jídel podává čaj (chai) a káva (kofe). Užijte si uvolněnou atmosféru a pohostinnost a vychutnejte si tradiční kyrgyzské pochoutky, jako je baursak (smažené těsto) a kurut (koule ze sušeného jogurtu).",
+          "Mezinárodní kuchyně": "V městských oblastech, jako je Biškek, najdete pestrou škálu mezinárodních kuchyní, včetně ruské, čínské, korejské a evropské. Prozkoumejte trendy restaurace, bistra a food courty a ochutnejte světové chutě spolu s kyrgyzskou pohostinností.",
+          "Pouliční jídlo": "Vydejte se do ulic Kyrgyzstánu a objevte řadu prodejců pouličního jídla, které nabízejí rychlé a chutné občerstvení. Vyzkoušejte oblíbená pouliční jídla, jako jsou somsas (smažené nebo pečené obrátky plněné masem nebo zeleninou), smažené nudle laghman a grilovaný kukuřičný klas.",
+          "Výlety za jídlem a kurzy vaření": "Vydejte se na výlety za jídlem nebo se zapojte do kurzů vaření a ponořte se hlouběji do kyrgyzské kuchyně a kulinářských tradic. Naučte se připravovat tradiční jídla, navštivte místní farmy a výrobce a ponořte se do pulzující kulinářské scény Kyrgyzstánu."
+        },
+        "details": "Další informace o kyrgyzské kuchyni a možnostech stravování najdete v přiloženém průvodci."
+      },
+      "Safety": {
+        "title": "Bezpečnost v Kyrgyzstánu | Cestovní průvodce",
+        "Description": "Cestování do Kyrgyzstánu je obecně bezpečné, ale je nezbytné si uvědomit potenciální rizika a přijmout nezbytná opatření. Zde je to, co potřebujete vědět:",
+        "Options": {
+          "Politická stabilita": "Kyrgyzstán v minulosti zažil politickou nestabilitu, včetně protestů a občasných nepokojů. Zatímco většina turistických oblastí zůstává nedotčena, zůstaňte informováni o místním vývoji a vyhněte se velkým shromážděním nebo demonstracím.",
+          "Zločin": "Může docházet k drobné kriminalitě, jako jsou kapesní krádeže a krádeže, zejména v přeplněných oblastech a turisticky atraktivních místech. Udržujte své věci v bezpečí a buďte ostražití.",
+          "Terorismus": "Hrozba terorismu v Kyrgyzstánu je nízká, ale cestovatelé by měli zůstat ostražití, zejména v pohraničních oblastech. Dodržujte všechna cestovní upozornění vydaná vaší vládou a zůstaňte informováni.",
+          "Přírodní nebezpečí": "Kyrgyzstán je náchylný k přírodním nebezpečím, jako jsou zemětřesení, laviny a sesuvy půdy, zejména v horských oblastech. Buďte připraveni a dodržujte bezpečnostní pokyny, zejména při trekkingu nebo venkovních aktivitách.",
+          "Bezpečnost silničního provozu": "Podmínky na silnicích v Kyrgyzstánu se mohou lišit a řízení může být náročné, zejména ve venkovských oblastech. Buďte opatrní, dodržujte místní dopravní předpisy a zvažte najmutí seriózního řidiče.",
+          "Zdravotní rizika": "Přestože Kyrgyzstán nepředstavuje významná zdravotní rizika, cestovatelé by měli mít aktuální informace o běžném očkování a měli by přijmout opatření proti nemocem přenášeným potravinami a vodou.",
+          "Výšková nemoc": "Cestovatelé navštěvující vysokohorské oblasti by si měli být vědomi rizika výškové nemoci. Udělejte si čas na aklimatizaci a vyhněte se namáhavé fyzické aktivitě, dokud se vaše tělo nepřizpůsobí.",
+          "Cestovní pojištění": "Je nezbytné mít cestovní pojištění, které pokryje léčebné výlohy, nouzovou evakuaci a zrušení/přerušení cesty. Ujistěte se, že vaše pojistka zahrnuje krytí činností, které plánujete provozovat."
+        },
+        "details": "Podrobnější bezpečnostní informace a cestovní rady získáte v oficiálních vládních zdrojích a cestovních průvodcích."
+      },
+      "Prices": {
+        "title": "Ceny v Kyrgyzstán | Cestovní průvodce",
+        "Description": "Pochopení životních nákladů a výdajů v Kyrgyzstánu vám může pomoci efektivně naplánovat rozpočet. Zde je přehled cen běžných položek a služeb:",
+        "Options": {
+          "Ubytování": "Cena ubytování v Kyrgyzstánu se liší v závislosti na typu ubytování a lokalitě. Levnější cestovatelé mohou najít cenově dostupné možnosti, jako jsou penziony a ubytovny, zatímco luxusní hotely a letoviska uspokojí ty, kteří hledají luxusní vybavení. Ceny se pohybují od 10 USD za noc u levného ubytování až po více než 100 USD za noc u luxusních zařízení.",
+          "Jídlo a stravování": "Stravování v Kyrgyzstánu je obecně cenově dostupné, zejména v místních restauracích a stáncích s pouličním jídlem. Tradiční jídla jako beshbarmak a plov jsou levná a sytá, obvykle stojí mezi 3 až 7 dolary za jídlo v místních restauracích. Mezinárodní kuchyně a možnosti dobrého jídla mohou být dražší, s jídlem v průměru 10 až 20 USD nebo více na osobu.",
+          "Přeprava": "Náklady na dopravu v Kyrgyzstánu se liší v závislosti na způsobu cestování a vzdálenosti. Vnitrostátní lety mezi velkými městy, jako je Biškek a Osh, se mohou pohybovat od 50 do 150 USD nebo více, zatímco sdílené taxíky a marshrutky (mikrobusy) nabízejí cenově výhodné možnosti na kratší vzdálenosti, obvykle stojí 1 až 10 USD v závislosti na trase. Pronájem auta může stát 30 až 100 USD nebo více za den, v závislosti na typu vozidla a půjčovně.",
+          "Aktivity a atrakce": "Náklady na aktivity a atrakce v Kyrgyzstánu se značně liší v závislosti na zkušenostech. Vstupné do muzeí, historických památek a národních parků je obecně dostupné a pohybuje se od 1 do 10 USD na osobu. Prohlídky s průvodcem, venkovní exkurze a dobrodružné aktivity, jako je jízda na koni a trekking, mohou vyžadovat dodatečné náklady, přičemž ceny se liší podle délky a složitosti.",
+          "Nakupování": "Nakupování v Kyrgyzstánu nabízí řadu možností, od tradičních ručních výrobků a suvenýrů až po moderní zboží a elektroniku. Ceny se liší v závislosti na předmětu a lokalitě, ale na tržnicích a bazarech je smlouvání běžné. Buďte připraveni vyjednávat za nejlepší cenu, zejména při nákupu textilu, šperků a ručně vyráběných řemesel.",
+          "Měna a směnné kurzy": "Oficiální měnou Kyrgyzstánu je kyrgyzský som (KGS). Směnné kurzy kolísají, proto je vhodné před výměnou peněz zkontrolovat aktuální kurzy. Hlavní kreditní karty jsou akceptovány ve větších městech a turistických oblastech, ale pro transakce v menších městech a venkovských oblastech se doporučuje nosit hotovost. (1 $ = 85–90 samů)"
+        },
+        "details": "Nejpřesnější a nejaktuálnější informace o cenách v Kyrgyzstánu získáte v místních zdrojích a aktuálních cestovních průvodcích."
+      },
+      "Travel_Seasons": {
+        "title": "Cestovní sezóny v Kyrgyzstánu | Cestovní průvodce",
+        "Description": "Pochopení období cestování v Kyrgyzstánu vám může pomoci naplánovat cestu a co nejlépe využít vaši návštěvu. Zde je přehled různých ročních období a toho, co můžete očekávat:",
+        "Options": {
+          "Jaro (březen až květen)": "Jaro je krásným obdobím k návštěvě Kyrgyzstánu, krajina ožívá, když kvetou květiny a řeky se vzdouvají rozbředlým sněhem. Počasí je mírné, takže je ideální pro outdoorové aktivity, jako je turistika, trekking a jízda na koni. Buďte však připraveni na občasné dešťové přeháňky, zejména v dubnu a květnu.",
+          "Léto (červen až srpen)": "Léto je hlavní turistickou sezónou v Kyrgyzstánu s dlouhými dny, teplými teplotami a jasnou oblohou. Je to ideální čas pro venkovní dobrodružství, jako je kempování, horolezectví a objevování alpských jezer. Během této doby se konají oblíbené festivaly a akce, včetně World Nomad Games v září.",
+          "Podzim (září až listopad)": "Podzim je v Kyrgyzstánu ohromující sezóna s krajinou namalovanou v zářivých odstínech červené, oranžové a zlaté, jak listy mění barvu. Počasí zůstává příjemné, takže je to skvělý čas na trekking, pozorování divoké zvěře a kulturní zážitky. Září je ideálním měsícem pro návštěvu World Nomad Games.",
+          "Zima (prosinec až únor)": "Zima promění Kyrgyzstán v zimní říši divů, se sněhem pokrytými horami a zamrzlými jezery vytvářejí dechberoucí scenérii. Zatímco teploty mohou klesnout pod bod mrazu, milovníci zimních sportů se hrnou do lyžařských středisek jako Karakol a Jyrgalan za lyžováním, snowboardingem a bruslením. Únor je ve znamení oslav tradiční nomádské hry Kok Boru (Buzkashi)."
+        },
+        "details": "Další informace o konkrétních aktivitách, událostech a povětrnostních podmínkách v každém ročním období získáte v cestovních průvodcích a místních zdrojích cestovního ruchu."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Poprvé v Kyrgyzstánu?",
+        "Description": "Pokud navštěvujete Kyrgyzstán poprvé, zde je komplexní průvodce, který vám pomůže co nejlépe využít vaši cestu:",
+        "Options": {
+          "Příjezd a cestování": "Většina mezinárodních cestujících přilétá na mezinárodní letiště Manas v Biškeku. Pro dopravu do města jsou snadno dostupné taxíky a autobusy. V rámci Kyrgyzstánu můžete k cestování využít vnitrostátní lety, autobusy, marshrutky (minibusy) a sdílené taxíky.",
+          "SIM karty a internet": "Zůstat ve spojení v Kyrgyzstánu je snadné s místní SIM kartou. SIM karty si můžete zakoupit na letišti nebo u poskytovatelů mobilních sítí ve městě. Mezi hlavní poskytovatele patří Beeline, O! a Megacom. Před zakoupením SIM karty se ujistěte, že je telefon odemčený. Pokrytí internetem je obecně dobré ve městech a obcích, ale ve venkovských oblastech může být flekaté.",
+          "Ceny internetu": "Internetové ceny v Kyrgyzstánu jsou obecně přijatelné. Základní datový balíček o velikosti 1 GB může stát přibližně 100 KGS (přibližně 1,20 USD), zatímco větší balíčky, například 10 GB, mohou stát přibližně 500 KGS (přibližně 6 USD). Neomezené datové tarify na měsíc se mohou pohybovat od 800 do 1500 KGS (přibližně 9,50 USD až 18 USD) v závislosti na poskytovateli a rychlosti připojení.",
+          "Měna a platby": "Místní měnou je Kyrgyzstani Som (KGS). Bankomaty jsou k dispozici ve velkých městech, ale ve venkovských oblastech je vhodné nosit hotovost. Kreditní a debetní karty jsou přijímány na mnoha místech ve městech, ale méně v odlehlých oblastech. Směnárenské služby jsou k dispozici na letištích, v bankách a směnárnách.",
+          "Jazyk": "Oficiálními jazyky jsou kyrgyzština a ruština. Ve velkých městech můžete najít nějaké anglicky mluvící, zejména v turistických oblastech, ale ve venkovských oblastech je užitečné znát některé základní kyrgyzské nebo ruské fráze. Velmi užitečná může být překladatelská aplikace nebo slovníček frází.",
+          "Zdraví a bezpečnost": "Kyrgyzstán je pro cestovatele obecně bezpečný, ale je moudré přijmout standardní opatření. Pijte balenou nebo převařenou vodu, abyste se vyhnuli nemocem přenášeným vodou. Ujistěte se, že máte cestovní pojištění, které kryje zdraví a úrazy. Pohotovostní lékařské služby jsou dostupné ve městech, ale ve venkovských oblastech mohou být omezené.",
+          "Klima a oblečení": "Kyrgyzstán má kontinentální klima s chladnými zimami a horkými léty. Na horách mohou být teploty výrazně nižší, takže se podle toho zabalte. Doporučuje se vrstvené oblečení, pevná vycházková obuv a ochrana před sluncem. V zimě si vezměte teplé oblečení, včetně kvalitní bundy, rukavic a čepice.",
+          "Elektřina a zástrčky": "Standardní napětí je 220V a frekvence je 50Hz. Zástrčky a zásuvky jsou typu C a F. Je vhodné mít s sebou univerzální cestovní adaptér, který zajistí nabíjení vašich elektronických zařízení."
+        },
+        "details": "Podrobnější informace a tipy naleznete v cestovních průvodcích a místních zdrojích. Užijte si svůj první výlet do Kyrgyzstánu a udělejte si nezapomenutelné vzpomínky!"
+      },
+      "TravelPreparation": {
+        "title": "Připravte se na cestu do Kyrgyzstánu",
+        "Description": "Zajistěte si hladký a příjemný výlet do Kyrgyzstánu tím, že se postaráte o tyto nezbytné cestovní přípravy.",
+        "Options": {
+          "Vízum a pas": "Zkontrolujte si vízové ​​požadavky pro vaši státní příslušnost a ujistěte se, že váš pas je platný alespoň šest měsíců po zamýšleném pobytu.",
+          "Zdraví a očkování": "Poraďte se se svým poskytovatelem zdravotní péče ohledně všech požadovaných očkování nebo zdravotních opatření pro cestu do Kyrgyzstánu.",
+          "Cestovní pojištění": "Zvažte zakoupení cestovního pojištění, které pokryje neočekávané mimořádné události, jako jsou léčebné výlohy nebo zrušení cesty.",
+          "Měna a peníze": "Seznamte se s místní měnou (Kyrgyzstani Som) a před cestou si vyměňte nějaké peníze. Bankomaty jsou k dispozici ve velkých městech.",
+          "Jazyk": "Zatímco ruština a kyrgyzština jsou oficiálními jazyky, angličtina není široce mluvená. Zvažte, jak se naučit některé základní fráze v ruštině nebo kyrgyzštině.",
+          "Počasí a oblečení": "Během návštěvy si přibalte vhodné oblečení podle povětrnostních podmínek. Kyrgyzstán zažívá horká léta a studené zimy, proto si vezměte s sebou vrstvy.",
+          "Bezpečnost a zabezpečení": "Zůstaňte informováni o aktuální situaci v Kyrgyzstánu a buďte opatrní, zejména v odlehlých oblastech. Udržujte své věci v bezpečí a buďte si vědomi svého okolí.",
+          "Kulturní etiketa": "Respektujte místní zvyky a tradice, například si vyzujte boty, než vstoupíte do něčího domu, a požádejte o povolení před fotografováním lidí."
+        },
+        "details": "Další cestovní tipy a rady specifické pro vaši cestu do Kyrgyzstánu naleznete v našem komplexním cestovním průvodci."
+      }
+    },
+    "sights": {
+      "name": "Zajímavá místa",
+      "title": "Kam se vydat v Kyrgyzstánu",
+      "subtitle": "Kam jet v Kyrgyzstánu?  Kromě toho zůstaňte informováni o počasí ve městech a regionálních centrech, abyste si cestu užili co nejlépe a byli připraveni na neustále se měnící počasí této krásné země.",
+      "description": "Najděte místa k návštěvě v celém Kyrgyzstánu, od horských jezer a národních parků po města a historické památky. Vyberte oblast, kterou chcete začít objevovat.",
+      "keywords": "Kyrgyzstánská místa, Kyrgyzstán cestování, prozkoumejte Kyrgyzstán, Kyrgyzstán destinace, Kyrgyzstán cestovní ruch, místa v Kyrgyzstánu, která musíte navštívit, nejlepší atrakce Kyrgyzstán, Kyrgyzstánská krajina, kulturní místa Kyrgyzstán, přírodní divy Kyrgyzstán, nejlepší místa k návštěvě v Kyrgyzstánu",
+      "sights": "Kam jít!",
+      "must-see": {
+        "subtitle": "Destinace Kyrgyzstánu, které musíte vidět podle regionů",
+        "description1": "Kyrgyzstán je známý svou krásnou přírodní krajinou, od majestátních hor po klidná jezera. Zde jsou některá z nejkrásnějších míst v každém regionu:",
+        "chuyregion": "Oblast Chuy",
+        "alaarchatitle": "Národní park Ala Archa:",
+        "alaarchadescription": "Nabízí úchvatné výhledy a turistické stezky.",
+        "buranatitle": "Burana Tower:",
+        "buranadescription": "Historický minaret s malebným výhledem do údolí.",
+        "issykulregion": "Oblast Issyk-Kul",
+        "lakeissykkultitle": "Jezero Issyk-Kul:",
+        "lakeissykkuldescription": "Velké slané jezero s plážemi a letovisky.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Známý pro své červené skalní útvary.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Brána do krásných horských lokalit, jako je Altyn Arashan.",
+        "narynregion": "Oblast Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Historický kamenný karavanserai v malebném údolí.",
+        "sonkultitle": "Jezero Son-Kul:",
+        "sonkuldescription": "Vysokohorské jezero s úžasnými západy slunce.",
+        "jalalabadregion": "Oblast Jalal-Abad",
+        "sarychelextitle": "Biosférická rezervace Sary-Chelek:",
+        "sarychelekdescription": "Představuje nedotčená jezera a lesy.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Domov největšího ořechového lesa a krásných vodopádů.",
+        "oshregion": "Oblast Oš",
+        "sulaymanmountaintitle": "Sulajmánská hora:",
+        "sulaymanmountaindescription": "Posvátná hora s panoramatickým výhledem.",
+        "alayvalleytitle": "Alay Valley:",
+        "alayvalleydescription": "Nabízí nádherný výhled na pohoří Pamír.",
+        "batkenregion": "Oblast Batken",
+        "batkenvalleytitle": "Batken Valley:",
+        "batkenvalleydescription": "Známý svými meruňkami a jedinečnými skalními útvary.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Nabízí krásná údolí řek.",
+        "talasregion": "Oblast Talas",
+        "beshtashtitle": "Národní park Besh-Tash:",
+        "beshtashdescription": "Má malebné řeky a alpské louky.",
+        "manasordotitle": "Komplex Manas Ordo:",
+        "manasordodescription": "Kulturní místo věnované hrdinovi Manasovi."
+      },
+      "highlights": [
+        "Jak se dostat do",
+        "Doprava",
+        "Kde se ubytovat",
+        "Co jíst",
+        "Co dělat",
+        "Sezóna"
+      ]
+    },
+    "tours": {
+      "name": "Zájezdy",
+      "title": "Zájezdy do Kyrgyzstánu",
+      "subtitle": "Soukromé a malé skupinové zájezdy v Kyrgyzstánu",
+      "description": "Objevte pěší, jezdecké, kulturní i automobilové trasy po Kyrgyzstánu. Přidejte se k malé skupině nebo si vyberte soukromou cestu podle svých zájmů.",
+      "description1": "Výlet může zahrnovat horské stezky, noc v tradičním plstěném stanu nebo pár dní vedle Issyk-Kul. Vyberte si trasu, která vyhovuje vašim zájmům a času, který máte.\n\nNáš tým může pomoci s průvodci, dopravou a ubytováním. Kontaktujte nás a prodiskutujte svá data, velikost skupiny a preferované tempo.",
+      "keywords": "Zájezdy do Kyrgyzstánu, Nejlepší zájezdy do Kyrgyzstánu, Výlety do Kyrgyzstánu, Nejlepší společnosti na zájezdy do Kyrgyzstánu, Cestovní agentura v Kyrgyzstánu, dobrodružné zájezdy Kyrgyzstán, zájezdy s průvodcem Kyrgyzstán, kulturní zájezdy Kyrgyzstán, trekkingové zájezdy Kyrgyzstán, zájezdy na koni Kyrgyzstán zájezdy Kyrgyzstán, balíček Kyrgyzstán, nejlepší zájezdy Kyrgyzstán v Kyrgyzstánu, prozkoumejte Kyrgyzstán prostřednictvím zájezdů",
+      "tourPage": {
+        "level": "Úroveň",
+        "duration": "Trvání",
+        "price": "Cena",
+        "day": "Den",
+        "days": "Dny",
+        "details": "Podrobnosti",
+        "things": "Aktivity",
+        "places": "Místa na trase",
+        "addInfo": "Další informace",
+        "includings": "Cena zahrnuje",
+        "excludings": "Cena nezahrnuje",
+        "from": "Od",
+        "note": "Poznámka",
+        "person": "Osoba",
+        "persons": "Osoby",
+        "andMore": "a další"
+      },
+      "TourPreparation": {
+        "title": "Nezbytnosti pro cestování v Kyrgyzstánu",
+        "Description": "Úplný seznam základních věcí, které si s sebou na cestu do Kyrgyzstánu vezmete, abyste zajistili pohodlí, bezpečnost a připravenost na různé povětrnostní podmínky a outdoorové aktivity.",
+        "Options": {
+          "Obuv": "Vezměte si s sebou pohodlnou vycházkovou obuv na výlety do města, pevnou turistickou obuv na středně náročné túry, odolné turistické boty na trekking a rychleschnoucí sandály jako extra pár.",
+          "Čepice": "Nezapomeňte si přibalit klobouk se širokou krempou nebo sluneční čepici s klopou na krk, která vás ochrání před intenzivním sluncem ve vysokých nadmořských výškách.",
+          "UV krém": "Nezapomeňte si přibalit širokospektrální opalovací krém s vysokým SPF, který ochrání vaši pokožku před intenzivním UV zářením, zejména ve vyšších nadmořských výškách v Kyrgyzstánu.",
+          "Oblečení": "Zabalte si vhodné vrstvy oblečení pro různé teploty a povětrnostní podmínky, protože teploty se mohou výrazně lišit se změnami nadmořské výšky. Buďte připraveni na sníh nebo déšť, zejména v horských oblastech.",
+          "Lékařská pomoc": "Nezapomeňte nosit osobní lékařské pomůcky, jako jsou nezbytné léky, náplasti, léky proti bolesti a jakékoli specifické položky pro již existující zdravotní potíže jako preventivní opatření."
+        },
+        "overview": "Zeptejte se nás, co si vzít s sebou na trasu a roční období."
+      }
+    },
+    "articles": {
+      "name": "Články",
+      "title": "Kultura a příroda Kyrgyzstánu",
+      "description": "Poznejte lidi, tradice, kuchyni a krajinu Kyrgyzstánu.",
+      "keywords": [
+        "Kyrgyzská kultura",
+        "kyrgyzské tradice",
+        "Kyrgyzská příroda",
+        "Lov burkutů",
+        "Kok-boru",
+        "Alabajští psi",
+        "tajgan",
+        "kyrgyzská historie",
+        "středoasijská kultura",
+        "Kočovné dědictví",
+        "Kulturní průzkum",
+        "Tradiční sporty",
+        "Chrti z Kyrgyzstánu",
+        "Kulturní zážitky",
+        "Dobrodružství v Kyrgyzstánu",
+        "Dědická plemena",
+        "Kulturní tradice",
+        "Jedinečné zážitky",
+        "Kyrgyzský životní styl"
+      ]
+    },
+    "about": {
+      "title": "O nás",
+      "subtitle": "kdo jsme?",
+      "description": "Pomůžeme vám naplánovat cestu po Kyrgyzstánu. Řekněte nám, kdy chcete přijet a co vás zajímá, a společně vybereme trasu, průvodce i ubytování.",
+      "keywords": "O nás, Náš příběh, Kyrgyzstánští nadšenci, Cestovatelská vášeň, Výjimečné zážitky, Tým, Hodnoty, Poslání",
+      "buttons": {
+        "our_team": "Náš tým",
+        "our_clients": "Naši klienti",
+        "contact_us": "Kontaktujte nás"
+      }
+    },
+    "info": {
+      "seen": "Návštěvy: ",
+      "created": "Vytvořeno: ",
+      "modified": "Naposledy upraveno: "
+    },
+    "download": {
+      "text": "Mějte mapy, místa a cestovní informace po ruce s našimi mobilními aplikacemi."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Užitečné odkazy",
+          "links": [
+            {
+              "text": "Úvod",
+              "url": "/"
+            },
+            {
+              "text": "Zajímavá místa",
+              "url": "/places"
+            },
+            {
+              "text": "Zájezdy",
+              "url": "/tours"
+            },
+            {
+              "text": "Letištní transfery",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Ochrana osobních údajů a právní předpisy",
+          "links": [
+            {
+              "text": "O nás",
+              "url": "/about"
+            },
+            {
+              "text": "Kontaktujte nás",
+              "url": "/contact"
+            },
+            {
+              "text": "Zásady ochrany osobních údajů",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Kontaktní informace",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biškek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sociální účty",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "vývojář",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

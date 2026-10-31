@@ -1,6 +1,7 @@
 import getBase64 from '@/lib/getLocalBase64';
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from '@/lib/dictionary'
+import { formatTourDuration } from '@/lib/formatTourDuration';
 import TourCard from './TourCard';
 
 type Props = {
@@ -12,9 +13,8 @@ type Props = {
 
 export default async function TourListItem({ tour, lang, featured, order }: Props) {
   const { page } = await getDictionary(lang)
-  const daysSpelling = (tour.daysCount === 3 && lang === "ru") ? "Дня": tour.daysCount == 1 ? `${page.tours.tourPage.day}`: `${page.tours.tourPage.days}`
   return (
     <TourCard blurDataURL={getBase64(tour.images[0])} tour={tour} lang={lang} featured={featured} order={order}
-      duration={`${tour.daysCount} ${daysSpelling}`} fromLabel={page.tours.tourPage.from}/>
+      duration={formatTourDuration(tour.daysCount, lang)} fromLabel={page.tours.tourPage.from}/>
   )
 }

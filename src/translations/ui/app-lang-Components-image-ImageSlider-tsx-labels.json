@@ -1,0 +1,362 @@
+{
+  "uz": [
+    "Rasmlar galereyasi",
+    "Oldingi slayd",
+    "Keyingi slayd",
+    "Slayd-shouni to'xtatib turish",
+    "Slayd-shouni davom ettirish",
+    "{n} / {total}",
+    "{n} slaydga o'tish"
+  ],
+  "kz": [
+    "Суреттер галереясы",
+    "Алдыңғы слайд",
+    "Келесі слайд",
+    "Слайдшоуды кідірту",
+    "Слайдшоуды жалғастыру",
+    "{n}/{total}",
+    "{n} слайдына өту"
+  ],
+  "kg": [
+    "Сүрөт галереясы",
+    "Мурунку слайд",
+    "Кийинки слайд",
+    "Слайдшоуну тындыруу",
+    "Слайдшоуну улантуу",
+    "{n} ичинен {total}",
+    "{n} слайдына өтүү"
+  ],
+  "tr": [
+    "Resim galerisi",
+    "Önceki slayt",
+    "Sonraki slayt",
+    "Slayt gösterisini duraklat",
+    "Slayt gösterisini sürdür",
+    "{n} / {total}",
+    "Slayta git {n}"
+  ],
+  "hi": [
+    "छवि गैलरी",
+    "पिछली स्लाइड",
+    "अगली स्लाइड",
+    "स्लाइड शो रोकें",
+    "स्लाइड शो फिर से शुरू करें",
+    "{total} में से {n}",
+    "स्लाइड {n} पर जाएँ"
+  ],
+  "ur": [
+    "تصویری گیلری",
+    "پچھلی سلائیڈ",
+    "اگلی سلائیڈ",
+    "سلائیڈ شو موقوف کریں۔",
+    "سلائیڈ شو دوبارہ شروع کریں۔",
+    "{n} از {total}",
+    "سلائیڈ پر جائیں {n}"
+  ],
+  "tg": [
+    "Галереяи тасвирҳо",
+    "Слайди қаблӣ",
+    "Слайди навбатӣ",
+    "Намоиши слайдро таваққуф кунед",
+    "Слайд-шоуро давом диҳед",
+    "{n} аз {total}",
+    "Ба слайд {n} гузаред"
+  ],
+  "ms": [
+    "Galeri imej",
+    "Slaid sebelumnya",
+    "Slaid seterusnya",
+    "Jeda tayangan slaid",
+    "Sambung semula tayangan slaid",
+    "{n} daripada {total}",
+    "Pergi ke slaid {n}"
+  ],
+  "fa": [
+    "گالری تصاویر",
+    "اسلاید قبلی",
+    "اسلاید بعدی",
+    "توقف نمایش اسلاید",
+    "از سرگیری نمایش اسلاید",
+    "{n} از {total}",
+    "برو به اسلاید {n}"
+  ],
+  "az": [
+    "Şəkil qalereyası",
+    "Əvvəlki slayd",
+    "Növbəti slayd",
+    "Slayd şousunu dayandırın",
+    "Slayd şousunu davam etdirin",
+    "{n} / {total}",
+    "Slayda keçin {n}"
+  ],
+  "uk": [
+    "Галерея зображень",
+    "Попередній слайд",
+    "Наступний слайд",
+    "Призупинити слайд-шоу",
+    "Відновити показ слайдів",
+    "{n} з {total}",
+    "Перейти до слайда {n}"
+  ],
+  "pl": [
+    "Galeria zdjęć",
+    "Poprzedni slajd",
+    "Następny slajd",
+    "Wstrzymaj pokaz slajdów",
+    "Wznów pokaz slajdów",
+    "{n} z {total}",
+    "Przejdź do slajdu {n}"
+  ],
+  "nl": [
+    "Afbeeldingengalerij",
+    "Vorige dia",
+    "Volgende dia",
+    "Diavoorstelling pauzeren",
+    "Diavoorstelling hervatten",
+    "{n} van {total}",
+    "Ga naar dia {n}"
+  ],
+  "he": [
+    "גלריית תמונות",
+    "שקופית קודמת",
+    "השקף הבא",
+    "השהה את המצגת",
+    "המשך מצגת",
+    "{n} מתוך {total}",
+    "עבור לשקופית {n}"
+  ],
+  "cs": [
+    "Galerie obrázků",
+    "Předchozí snímek",
+    "Další snímek",
+    "Pozastavit prezentaci",
+    "Obnovit prezentaci",
+    "{n} z {total}",
+    "Přejít na snímek {n}"
+  ],
+  "pt": [
+    "Galeria de imagens",
+    "Diapositivo anterior",
+    "Próximo slide",
+    "Pausar apresentação de slides",
+    "Retomar apresentação de slides",
+    "{n} de {total}",
+    "Vá para o slide {n}"
+  ],
+  "id": [
+    "Galeri gambar",
+    "Slide sebelumnya",
+    "Slide berikutnya",
+    "Jeda tayangan slide",
+    "Lanjutkan tayangan slide",
+    "{n} dari {total}",
+    "Lanjut ke slide {n}"
+  ],
+  "th": [
+    "แกลเลอรี่ภาพ",
+    "สไลด์ก่อนหน้า",
+    "สไลด์ถัดไป",
+    "หยุดสไลด์โชว์ชั่วคราว",
+    "เล่นสไลด์โชว์ต่อ",
+    "{n} จาก {total}",
+    "ไปที่สไลด์ {n}"
+  ],
+  "bn": [
+    "ইমেজ গ্যালারি",
+    "পূর্ববর্তী স্লাইড",
+    "পরবর্তী স্লাইড",
+    "স্লাইডশো বিরতি",
+    "স্লাইডশো পুনরায় শুরু করুন",
+    "{total}টির মধ্যে {n}",
+    "স্লাইডে যান {n}"
+  ],
+  "ne": [
+    "छवि ग्यालेरी",
+    "अघिल्लो स्लाइड",
+    "अर्को स्लाइड",
+    "स्लाइड शो रोक्नुहोस्",
+    "स्लाइड शो पुन: सुरु गर्नुहोस्",
+    "{n} को {total}",
+    "स्लाइडमा जानुहोस् {n}"
+  ],
+  "vi": [
+    "Thư viện hình ảnh",
+    "Trang trình bày trước",
+    "Trang trình bày tiếp theo",
+    "Tạm dừng trình chiếu",
+    "Tiếp tục trình chiếu",
+    "{n} trong số {total}",
+    "Chuyển đến trang trình bày {n}"
+  ],
+  "ka": [
+    "სურათების გალერეა",
+    "წინა სლაიდი",
+    "შემდეგი სლაიდი",
+    "სლაიდშოუს პაუზა",
+    "სლაიდშოუს განახლება",
+    "{n} {total}-დან",
+    "გადადით სლაიდზე {n}"
+  ],
+  "hy": [
+    "Պատկերասրահ",
+    "Նախորդ սլայդը",
+    "Հաջորդ սլայդը",
+    "Դադարեցնել սլայդշոուն",
+    "Վերսկսել սլայդերի ցուցադրումը",
+    "{n} / {total}",
+    "Գնալ դեպի սլայդ {n}"
+  ],
+  "mn": [
+    "Зургийн цомог",
+    "Өмнөх слайд",
+    "Дараагийн слайд",
+    "Слайд шоуг түр зогсоох",
+    "Слайд шоуг үргэлжлүүлэх",
+    "{total}-ийн {n}",
+    "{n} слайд руу очих"
+  ],
+  "be": [
+    "Галерэя малюнкаў",
+    "Папярэдні слайд",
+    "Наступны слайд",
+    "Прыпыніць слайд-шоў",
+    "Аднавіць слайд-шоў",
+    "{n} з {total}",
+    "Перайсці да слайда {n}"
+  ],
+  "ro": [
+    "Galerie de imagini",
+    "Diapozitivul anterior",
+    "Următorul slide",
+    "Întrerupeți prezentarea de diapozitive",
+    "Reluați expunerea de diapozitive",
+    "{n} din {total}",
+    "Accesați diapozitivul {n}"
+  ],
+  "sv": [
+    "Bildgalleri",
+    "Föregående bild",
+    "Nästa bild",
+    "Pausa bildspelet",
+    "Återuppta bildspelet",
+    "{n} av {total}",
+    "Gå till bild {n}"
+  ],
+  "nb": [
+    "Bildegalleri",
+    "Forrige lysbilde",
+    "Neste lysbilde",
+    "Sett lysbildefremvisningen på pause",
+    "Fortsett lysbildefremvisningen",
+    "{n} av {total}",
+    "Gå til lysbilde {n}"
+  ],
+  "da": [
+    "Billedgalleri",
+    "Forrige dias",
+    "Næste slide",
+    "Sæt diasshow på pause",
+    "Genoptag diasshow",
+    "{n} af {total}",
+    "Gå til dias {n}"
+  ],
+  "fi": [
+    "Kuvagalleria",
+    "Edellinen dia",
+    "Seuraava dia",
+    "Keskeytä diaesitys",
+    "Jatka diaesitystä",
+    "{n} / {total}",
+    "Siirry diaan {n}"
+  ],
+  "el": [
+    "Συλλογή εικόνων",
+    "Προηγούμενη διαφάνεια",
+    "Επόμενη διαφάνεια",
+    "Παύση παρουσίασης",
+    "Συνέχιση της παρουσίασης",
+    "{n} από {total}",
+    "Μετάβαση στη διαφάνεια {n}"
+  ],
+  "hr": [
+    "Galerija slika",
+    "Prethodni slajd",
+    "Sljedeći slajd",
+    "Pauziraj dijaprojekciju",
+    "Nastavi prikaz slajdova",
+    "{n} od {total}",
+    "Idi na slajd {n}"
+  ],
+  "sr": [
+    "Галерија слика",
+    "Претходни слајд",
+    "Следећи слајд",
+    "Паузирајте пројекцију слајдова",
+    "Настави пројекцију слајдова",
+    "{n} од {total}",
+    "Иди на слајд {n}"
+  ],
+  "sk": [
+    "Galéria obrázkov",
+    "Predchádzajúca snímka",
+    "Ďalšia snímka",
+    "Pozastaviť prezentáciu",
+    "Obnoviť prezentáciu",
+    "{n} z {total}",
+    "Prejsť na snímku {n}"
+  ],
+  "sl": [
+    "Galerija slik",
+    "Prejšnji diapozitiv",
+    "Naslednji diapozitiv",
+    "Zaustavi diaprojekcijo",
+    "Nadaljevanje diaprojekcije",
+    "{n} od {total}",
+    "Pojdi na diapozitiv {n}"
+  ],
+  "bg": [
+    "Галерия с изображения",
+    "Предишен слайд",
+    "Следващ слайд",
+    "Поставяне на слайдшоуто на пауза",
+    "Възобновете слайдшоуто",
+    "{n} от {total}",
+    "Отидете на слайд {n}"
+  ],
+  "bs": [
+    "Galerija slika",
+    "Prethodni slajd",
+    "Sljedeći slajd",
+    "Pauzirajte projekciju slajdova",
+    "Nastavi slideshow",
+    "{n} od {total}",
+    "Idi na slajd {n}"
+  ],
+  "mk": [
+    "Галерија со слики",
+    "Претходен слајд",
+    "Следен слајд",
+    "Паузирајте го слајд шоуто",
+    "Продолжете со слајдшоу",
+    "{n} од {total}",
+    "Одете на слајдот {n}"
+  ],
+  "sq": [
+    "Galeria e imazheve",
+    "Sllajdi i mëparshëm",
+    "Rrëshqitja tjetër",
+    "Ndalo shfaqjen e rrëshqitjes",
+    "Rifilloni shfaqjen e rrëshqitjes",
+    "{n} nga {total}",
+    "Shko te rrëshqitja {n}"
+  ],
+  "lt": [
+    "Vaizdų galerija",
+    "Ankstesnė skaidrė",
+    "Kita skaidrė",
+    "Pristabdyti skaidrių demonstraciją",
+    "Tęsti skaidrių demonstraciją",
+    "{n} iš {total}",
+    "Eiti į skaidrę {n}"
+  ]
+}

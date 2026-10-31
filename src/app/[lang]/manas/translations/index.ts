@@ -1,15 +1,19 @@
 import type { Locale } from "@/lib/i18n.config";
 import english from "./en.json";
 import arabicOverrides from "./ae";
+import { additionalManas } from "@/translations/manas-loaders";
+import { languageTags } from "@/lib/localeMetadata";
 
 export type ManasMessages = Record<keyof typeof english, string>;
 
 export const manasLanguages: Record<Locale, string> = {
+  ...languageTags,
   en: "en", it: "it", fr: "fr", de: "de", es: "es",
   jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN", ru: "ru",
 };
 
 const translations: Partial<Record<Locale, () => Promise<ManasMessages>>> = {
+  ...additionalManas,
   it: () => import("./it.json").then(module => module.default),
   fr: () => import("./fr.json").then(module => module.default),
   de: () => import("./de.json").then(module => module.default),

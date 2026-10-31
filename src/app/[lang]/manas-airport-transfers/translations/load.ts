@@ -2,8 +2,10 @@ import "server-only";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/lib/i18n.config";
 import type { TransferMessages } from "./index";
+import { additionalTransfers } from "@/translations/transfers-loaders";
 
 const dictionaries: Record<Locale, () => Promise<TransferMessages>> = {
+  ...additionalTransfers,
   en: () => import("./en.json").then(m => m.default),
   it: () => import("./it.json").then(m => m.default),
   fr: () => import("./fr.json").then(m => m.default),

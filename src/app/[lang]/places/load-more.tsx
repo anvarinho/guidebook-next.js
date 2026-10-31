@@ -1,4 +1,6 @@
 'use client'
+import additionalLabels from '@/translations/ui/app-lang-places-load-more-tsx-labels.json';
+
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -7,6 +9,7 @@ import styles from './page.module.css'
 import PlaceCard from './components/PlaceCard'
 
 const labels: Record<Locale, { loading: string; more: string; retry: string; end: string }> = {
+    ...additionalLabels as Record<Locale, { loading: string; more: string; retry: string; end: string }>,
   en: { loading: 'Loading places…', more: 'Explore more places', retry: 'Couldn’t load places. Try again', end: 'You’ve explored all our places.' },
   fr: { loading: 'Chargement des lieux…', more: 'Découvrir plus de lieux', retry: 'Chargement impossible. Réessayer', end: 'Vous avez découvert tous nos lieux.' },
   de: { loading: 'Orte werden geladen…', more: 'Weitere Orte entdecken', retry: 'Laden fehlgeschlagen. Erneut versuchen', end: 'Sie haben alle unsere Orte entdeckt.' },

@@ -5,16 +5,31 @@
     "loading": "Caricamento...",
     "contactButton": "Domande?",
     "navigation": [
-      { "text": "Casa", "url": "/" },
-      { "text": "Siti", "url": "/places" },
-      { "text": "Tour", "url": "/tours" },
-      { "text": "Storie", "url": "/articles" },
-      { "text": "Informazioni", "url": "/about" }
+      {
+        "text": "Casa",
+        "url": "/"
+      },
+      {
+        "text": "Siti",
+        "url": "/places"
+      },
+      {
+        "text": "Tour",
+        "url": "/tours"
+      },
+      {
+        "text": "Articoli",
+        "url": "/articles"
+      },
+      {
+        "text": "Informazioni",
+        "url": "/about"
+      }
     ],
     "home": {
       "title": "Benvenuti in Kyrgyzstan!",
-      "description": "Esperienza della bellezza e della cultura di Kyrgyzstan attraverso la nostra guida turistica completa. Scopri le attrazioni locali, pianifica la tua avventura e approfitta al massimo del tuo viaggio.",
-      "subtitle": "Guida di viaggio in Kirghizistan - 2024",
+      "description": "Cammina tra le montagne, nuota nell’Issyk-Kul o trascorri una notte in yurta con una famiglia del posto. Il percorso lo scegli tu.",
+      "subtitle": "Guida di viaggio in Kirghizistan",
       "subtitle1": "Perché visitare il Kirghizistan?",
       "subtitle2": "Esplorando la natura grandiosa",
       "subtitle3": "Esplorazione senza fine",
@@ -31,7 +46,6 @@
       "button2": "Cosa fare!",
       "button3": "leggi di più",
       "button4": "I nostri Tour",
-
       "Transportation": {
         "title": "Trasporti in Kirghizistan",
         "Description": "Muoversi in Kirghizistan può essere un'avventura di per sé. Ecco cosa devi sapere:",
@@ -145,9 +159,9 @@
     },
     "sights": {
       "name": "Luoghi di Interesse",
-      "title": "Luoghi più popolari del Kyrgyzstan",
+      "title": "Luoghi da visitare in Kirghizistan",
       "subtitle": "Dove andare in Kirghizistan?",
-      "description": "Immergiti nei paesaggi mozzafiato e nelle destinazioni incantevoli del Kyrgyzstan. Esplora terreni diversi, siti culturali, e meraviglie naturali che definiscono il fascino di questo paese unico.",
+      "description": "Trova luoghi da visitare in Kirghizistan, dai laghi di montagna e parchi nazionali alle città e ai siti storici. Scegli una regione per iniziare ad esplorare.",
       "keywords": "Luoghi Kyrgyzstan, Viaggio in Kyrgyzstan, Esplora il Kyrgyzstan, Destinazioni Kyrgyzstan, Turismo Kyrgyzstan, Luoghi da visitare in Kyrgyzstan, Attrazioni principali Kyrgyzstan, Paesaggi Kyrgyzstan, Siti culturali Kyrgyzstan, Meraviglie naturali Kyrgyzstan, I migliori posti da visitare in Kyrgyzstan",
       "sights": "Luoghi da visitare",
       "must-see": {
@@ -201,10 +215,10 @@
     },
     "tours": {
       "name": "Tour",
-      "title": "Tour più popolari del Kyrgyzstan",
+      "title": "Tour in Kirghizistan",
       "subtitle": "Tour Privati e per Piccoli Gruppi in Kirghizistan",
-      "description": "Intraprendi tour indimenticabili che mostrano lo splendore del Kyrgyzstan. Scegli tra avventure, culturali, e trekking e lasciaci guidare attraverso paesaggi diversi e affascinanti.",
-      "description1": "Nonostante le sue dimensioni ridotte, il Kirghizistan è pieno di luoghi sorprendenti. Prenota il miglior tour in Kirghizistan per scoprire le montagne, i laghi e le valli che rendono questo paese una destinazione di prima classe. Che tu sia un avventuriero in cerca di emozioni forti o interessato a esplorare la ricca cultura e storia di questo piccolo paese, un tour in Kirghizistan è ideale per coloro che cercano qualcosa di unico. \r\n\r\nMolte persone vengono in Kirghizistan per visitare le montagne, il che ha senso, considerando che il 94% del Kirghizistan è coperto da montagne. La massiccia catena del Tian Shan copre gran parte del Kirghizistan, con le sue vette più alte che superano i 7000 metri. Nascosti tra le imponenti vette ci sono ampie vallate verdi e laghi cristallini, con fiumi impetuosi che attraversano foreste di ginepri fresche. Le ampie vallate verdi vengono spesso utilizzate come pascoli estivi per greggi di animali e durante i mesi più caldi sono punteggiate di yurte e cavalli. Alcuni laghi sono troppo freddi per nuotare (come il lago Son-Kul), ma l'Issyk-Kul sicuramente no. Le coste sabbiose e le località alpine intorno all'Issyk-Kul sono tappe imprescindibili in qualsiasi miglior tour in Kirghizistan, perfette per un momento di relax. A molte persone piace l'avventura e il Kirghizistan offre molte passeggiate a cavallo, rafting, località sciistiche e escursioni, perfette per qualsiasi amante dell'adrenalina. \r\n\r\nAnche se la natura può dominare a volte, i migliori tour in Kirghizistan non trascurano la cultura e la storia di questo paese. Trascorri una notte in una yurta, una casa tradizionale fatta di legno e feltro progettata per essere resistente e trasportabile. Scopri tutti i tessuti per cui il Kirghizistan è famoso e ascolta il famoso komuz (uno strumento a tre corde) o l'Epopea di Manas, la poesia epica che è un fondamento spirituale nel Kirghizistan moderno. E assicurati di assaggiare il beshbarmak (carne macinata bollita con noodles) e il kumis (latte di giumenta fermentato) per assaporare veramente la vita nomade. \r\n\r\nSulla base di anni di esperienza, i nostri migliori tour in Kirghizistan combinano tutti gli elementi della cultura e del paesaggio kirghiso per presentarti l'intero paese. Viaggia con le migliori guide, alloggia nei migliori hotel e mangia nei migliori ristoranti. Prenota un tour di gruppo per risparmiare denaro e pianificazione, o programma un tour privato per adattarsi ai tuoi interessi e al tuo programma.",
+      "description": "Scopri itinerari a piedi, a cavallo o in auto e viaggi dedicati alla cultura del Kirghizistan. Parti con un piccolo gruppo oppure scegli un tour privato.",
+      "description1": "Un viaggio può includere sentieri di montagna, una notte in una tradizionale tenda di feltro o qualche giorno accanto a Issyk-Kul. Scegli un percorso adatto ai tuoi interessi e al tempo che hai.\n\nIl nostro team può aiutare con guide, trasporti e alloggio. Contattaci per discutere le date, le dimensioni del gruppo e il ritmo preferito.",
       "keywords": "Tour Kyrgyzstan, Tour avventura Kyrgyzstan, Tour guidati Kyrgyzstan, Tour culturali Kyrgyzstan, Tour trekking Kyrgyzstan, Tour a cavallo Kyrgyzstan, Esperienze nomadi Kyrgyzstan, Pacchetti viaggio Kyrgyzstan, I migliori tour in Kyrgyzstan, Esplora il Kyrgyzstan attraverso i tour",
       "tourPage": {
         "level": "Livello",
@@ -213,12 +227,12 @@
         "day": "Giorno",
         "days": "Giorni",
         "details": "Dettagli",
-        "things": "Cose da fare",
-        "places": "Luoghi che visitiamo",
+        "things": "Attività",
+        "places": "Luoghi visitati",
         "addInfo": "Informazioni aggiuntive",
-        "includings": "Cosa include il prezzo",
-        "excludings": "Cosa non include il prezzo",
-        "from": "Dal",
+        "includings": "Incluso nel prezzo",
+        "excludings": "Non incluso nel prezzo",
+        "from": "A partire da",
         "note": "Nota",
         "person": "Persona",
         "persons": "Persone",
@@ -234,13 +248,13 @@
           "Abbigliamento": "Prepara strati di abbigliamento appropriati per temperature e condizioni meteorologiche variabili, considerando che le temperature possono variare notevolmente con i cambi di altitudine. Sii pronto per neve o pioggia, specialmente in aree montuose.",
           "Pronto Soccorso": "Ricorda di portare con te dispositivi medici personali come farmaci necessari, cerotti, antidolorifici e eventuali articoli specifici per condizioni mediche preesistenti come precauzione."
         },
-        "overview": "Il tuo comfort è il nostro lavoro, guidandoci a cercare costantemente modi per rendere il tuo viaggio ancora più memorabile e piacevole."
+        "overview": "Chiedici cosa portare per il tuo percorso e la stagione."
       }
     },
     "articles": {
-      "name": "Storie",
-      "title": "Il Kirghizistan: cultura, tradizioni e natura",
-      "description": "Esplora la ricca cultura, le tradizioni vivaci e la natura mozzafiato del Kirghizistan attraverso questi racconti illuminanti. Immergiti nel cuore della cultura kirghiza, da antiche tradizioni come la caccia con l'aquila e il kok boru ai maestosi cani Alabai e alle avventure del Taiga.",
+      "name": "Articoli",
+      "title": "Cultura e natura del Kirghizistan",
+      "description": "Scopri le persone, le tradizioni, la cucina e i paesaggi del Kirghizistan.",
       "keywords": [
         "Cultura kirghiza",
         "Tradizioni kirghize",
@@ -266,7 +280,7 @@
     "about": {
       "title": "Chi Siamo",
       "subtitle": "Chi siamo?",
-      "description": "Siamo un team di appassionati dedicati a offrirti esperienze eccezionali. La nostra passione alimenta tutto ciò che facciamo, poiché mettiamo il cuore nel creare momenti indimenticabili per te. Unisciti a noi in avventure di meraviglia e scopri questo bellissimo paese.",
+      "description": "Ti aiutiamo a organizzare il tuo viaggio in Kirghizistan. Parlaci delle date e dei tuoi interessi: penseremo insieme a itinerario, guide e alloggi.",
       "keywords": "Chi siamo, La nostra storia, Appassionati di Kyrgyzstan, Passione per i viaggi, Esperienze eccezionali, Team, Valori, Missione",
       "buttons": {
         "our_team": "Il nostro team",
@@ -280,7 +294,7 @@
       "modified": "Ultima modifica: "
     },
     "download": {
-      "text": "Scarica le nostre app oggi e goditi un accesso comodo al nostro servizio sul tuo dispositivo mobile! Clicca semplicemente sul pulsante!"
+      "text": "Tieni mappe, luoghi e informazioni di viaggio a portata di mano con le nostre app mobili."
     },
     "footer": {
       "sections": [
@@ -299,7 +313,10 @@
               "text": "Tour",
               "url": "/tours"
             },
-            {"text": "Transfer aeroportuali", "url": "/manas-airport-transfers"}
+            {
+              "text": "Transfer aeroportuali",
+              "url": "/manas-airport-transfers"
+            }
           ]
         },
         {
@@ -351,4 +368,3 @@
     }
   }
 }
-

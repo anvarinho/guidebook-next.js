@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "tr-TR",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Yükleniyor...",
+    "contactButton": "Sorularınız var mı?",
+    "navigation": [
+      {
+        "text": "Ana sayfa",
+        "url": "/"
+      },
+      {
+        "text": "Gezilecek yerler",
+        "url": "/places"
+      },
+      {
+        "text": "Turlar",
+        "url": "/tours"
+      },
+      {
+        "text": "Makaleler",
+        "url": "/articles"
+      },
+      {
+        "text": "Hakkımızda",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Kırgızistan Gezi Rehberi",
+      "description": "Dağ patikalarında yürüyün, Issık Göl’de yüzün ya da yerel bir ailenin yurdunda konaklayın. Size uygun rotayı seçin.",
+      "subtitle": "Kırgızistan Gezi Rehberi",
+      "subtitle1": "Kırgızistan'ı Neden Ziyaret Etmelisiniz?",
+      "subtitle2": "Harika Açık Havayı Keşfetmek",
+      "subtitle3": "Sonsuz Keşif",
+      "subtitle4": "Seyahatinizi Planlayın",
+      "subtitle5": "Kırgızistan'da mutlaka ziyaret edilmesi gereken yerler",
+      "paragraph": "Eskiden Sovyetler Birliği'nin bir parçası olan bu güzel, denize kıyısı olmayan ülke, hızla Orta Asya'nın en popüler seyahat destinasyonlarından biri haline geliyor. Kırgızistan'ın turizm endüstrisi hızla büyüyor ve gezginlere dünyanın en muhteşem ülkelerinden birini keşfetme şansı sunuyor.",
+      "paragraph1": "Kırgızistan, son yıllarda maceracıların yürüyüş, kamp ve at gezileri için muhteşem manzaralara akın etmesiyle turizmde dramatik bir artış gördü. Vize politikalarını gevşeten (çoğu Batılı ve gelişmiş ülkeye vizesiz giriş imkanı sunan) ilk Orta Asya ülkesi olarak güçlü bir turizm ağı gelişmiştir.",
+      "paragraph2": "Ülke çapındaki Toplum Temelli Turizm (CBT) girişimlerinden misafirhanelere ve bağımsız rehberlere kadar Kırgızistan'ın nefes kesen manzarasını deneyimlemenin sayısız yolu vardır. Yürüyüşçüler Karakol, Koçkor, Arslanbob ve hatta başkent Bişkek'ten büyüleyici yürüyüşlere çıkabilir. Burada yürüyüş yapmanın genellikle makul düzeyde bir kondisyon gerektirdiğini unutmayın; çünkü birçok parkur, keyifli bir yürüyüşten daha fazlasını sunar. Çoğu yürüyüş 1 ila 5 gün arasında değişir, ancak daha uzun maceralar da mevcuttur.\r\n\r\nBacaklarını kurtarmak isteyenler için ata binmek popüler bir alternatif. Song Kol'a doğru ülkenin en muhteşem at yürüyüşüne çıkın ya da birkaç gününüzü güzel Issyk-Kul Gölü'nde dinlenerek ve yüzerek geçirin.",
+      "paragraph3": "Sayısız alışılmışın dışında destinasyon, yürüyüş ve parkurla keşfetme fırsatları sınırsızdır. İster macera ister dinlenme arayışında olun, Kırgızistan'da herkes için bir şeyler vardır.",
+      "paragraph4": "İlgi çekici yerler, oraya nasıl gidileceği ve diğer seyahat ipuçları hakkında daha spesifik bilgi için kapsamlı Kırgızistan seyahat rehberimizi mutlaka okuyun. Seyahatinizden en iyi şekilde yararlanmak için önerilen navigasyon, çeviri ve yerel bilgiler uygulamalarıyla seyahat deneyiminizi geliştirin.\r\n\r\nYolculuğunuzun tadını çıkarın ve Kırgızistan'ın eşsiz güzelliğini ve kültürünü deneyimleyin",
+      "keywords": "Kırgızistan turist rehberi, turist rehberi, Seyahat kolaylığı, Yerel turistik yerler, Turist hizmetleri, Kırgız seyahat ipuçları, Kültürel deneyimler, Tur planlama, Gezi, Macera seyahati, Uygun turlar, Bişkek şehir rehberi, Kırgızistan turistik yerleri, Turist noktası, Yakınımdaki gezilecek yerler, Yakınımdaki gezilecek yerler, Turistik yerler, Turistik destinasyon, Dünyanın en güzel yerleri, Dünyanın en güzel yerleri, Dünyanın en güzel yerleri, Rehberli seyahat, Rehber seyahat, Güzel yerler, Kırgızistan'da Bişkek, Bişkek Şehri, Turist ve rehber, Halkla ilişkiler turistik mekanları, Yakındaki turistik yerler ve nasıl yürütüleceği",
+      "button": "Haydi Öğrenelim!",
+      "button1": "Nereye Gidilir?",
+      "button2": "Ne yapalım!",
+      "button3": "devamını oku",
+      "button4": "Turlarımız",
+      "Transportation": {
+        "title": "Kırgızistan'da Ulaşım | Seyahat Rehberi",
+        "Description": "Kırgızistan'da dolaşmak başlı başına bir macera olabilir. İşte bilmeniz gerekenler:",
+        "Options": {
+          "Yurt İçi Uçuşlar": "Daha uzun mesafeler için, özellikle zamanın kısıtlı olduğu durumlarda, Bişkek, Oş ve Tamçi (Issık-Kul Bölgesi'ndeki Çolpon-Ata yakınında) gibi büyük şehirler arasında iç hat uçuşları mevcuttur. Programlar ve rezervasyonlar için havayollarını kontrol edin.",
+          "Marshrutkalar (Minibüsler)": "Bunlar kısa ve orta mesafeler için en yaygın ve uygun maliyetli ulaşım şeklidir. Şehirler ve kasabalar arasında sabit rotaları takip ediyorlar ve yerel halk arasında oldukça popülerler.",
+          "Paylaşımlı Taksiler": "Paylaşımlı taksiler marshrutkalara göre daha hızlı ama biraz daha pahalı bir alternatif sunuyor. Genellikle dolduğunda ayrılırlar ve fiyatlar üzerinde pazarlık yapılabilir.",
+          "Araç Kiralama": "Daha fazla esneklik için araba kiralamak iyi bir seçenektir. Kırsal bölgelerdeki yollar zorlu olabilir, bu nedenle 4x4 önerilir. Uluslararası sürüş izninizin olduğundan emin olun.",
+          "Trenler": "Özellikle Bişkek'i Issyk-Kul Gölü yakınındaki Balykchy'ye bağlayan sınırlı tren hizmetleri mevcuttur. Manzaralı bir rota ama karayolu yolculuğundan daha yavaş.",
+          "Otobüsler": "Büyük şehirlerde düzenli otobüs seferleri düzenleniyor ve konforlu bir yolculuk imkanı sunuluyor. Ancak uzak bölgeleri kapsamayabilirler.",
+          "Otostop": "Kırgızistan'ın resmi ulaşım seçeneklerinin sınırlı olabileceği kırsal bölgelerinde yaygın bir uygulamadır. Nispeten güvenlidir ve kültürel olarak kabul edilir, ancak yabancıların araçlarını kabul ederken dikkatli olun ve sağduyunuzu kullanın."
+        },
+        "details": "Ulaşım seçenekleri hakkında ayrıntılı bilgi için sağlanan kılavuzu ziyaret edin."
+      },
+      "Accommodations": {
+        "title": "Kırgızistan şehri konaklamaları | Seyahat Rehberi",
+        "Description": "Kırgızistan, rahat konuk evlerinden lüks tatil yerlerine kadar her gezginin tercihine ve bütçesine uygun çeşitli konaklama seçenekleri sunmaktadır. Göz önünde bulundurulması gereken bazı seçenekler şunlardır:",
+        "Options": {
+          "Oteller": "Kırgızistan'ın Bişkek ve Oş gibi büyük şehirleri, farklı bütçelere ve tercihlere hitap eden çok çeşitli otellere sahiptir. Uluslararası zincirlerden butik otellere kadar, Wi-Fi, klima ve tesis içi yemek seçenekleri gibi olanaklara sahip konforlu konaklama birimleri bulacaksınız.",
+          "Konukevleri": "Daha özgün bir deneyim için yerel aileler tarafından işletilen bir konukevinde kalmayı düşünün. Bu rahat tesisler sıcak bir karşılama ve Kırgız misafirperverliğini deneyimleme şansı sunuyor. Çoğu zaman ev yapımı yemeklerin tadını çıkarma ve yerel gelenek ve görenekler hakkında bilgi edinme fırsatına sahip olacaksınız.",
+          "Yurtlar": "Kırsal alanlarda ve dağlık bölgelerde geleneksel yurtlar benzersiz bir konaklama deneyimi sunar. Bu taşınabilir, çadır benzeri yapılar, genellikle çevredeki manzaraların muhteşem manzarasına sahip, basit ama konforlu bir konaklama imkanı sunar. Yurt konaklamaları yemek ve kültürel aktiviteleri kapsayabilir.",
+          "Aile yanında konaklama": "Aile yanında kalmayı tercih ederek Kırgız bir aileyle yaşamı deneyimleyin. Yerel halkla yaşama, yemek paylaşma ve günlük aktivitelere katılma fırsatına sahip olacaksınız. Aile yanında konaklamalar özgün bir kültürel alışveriş ve Kırgızistan'ın geleneksel yaşam tarzına dair bir içgörü sunar.",
+          "Eko-Localar": "Çevre bilincine sahip gezginler için eko-localar doğal ortamlarda sürdürülebilir konaklama seçenekleri sunar. Bu pansiyonlar çevrenin korunmasına öncelik veriyor ve genellikle yürüyüş, kuş gözlemciliği ve topluluk katılımı gibi aktiviteler sunuyor.",
+          "Kamp": "macera ve yalnızlık arayan gezginler için popüler bir seçenektir. İster belirlenmiş bir kamp alanında ister uzak yerlerde vahşi kampta çadır kurun, İz Bırakma ilkelerine uyduğunuzdan ve gerekli izinleri aldığınızdan emin olun."
+        },
+        "details": "Özel öneriler ve rezervasyon seçenekleri için seyahat web sitelerine, çevrimiçi rezervasyon platformlarına ve yerel turizm ofislerine danışın."
+      },
+      "Food": {
+        "title": "Kırgızistan'da Yiyecek | Seyahat Rehberi",
+        "Description": "Kırgız mutfağını keşfetmek seyahat deneyiminin ayrılmaz bir parçasıdır. İşte bilmeniz gerekenler:",
+        "Options": {
+          "Geleneksel Mutfak": "Kırgız mutfağı lezzet ve miras açısından zengindir; beshbarmak (et ve erişte), mantı (köfte) ve laghman (erişte çorbası) gibi geleneksel yemekler temel ürünlerdir. Popüler bir içecek olan kımız olarak bilinen fermente kısrak sütünü denemeyi unutmayın.",
+          "Göçebe Etkisi": "Göçebe mirasını yansıtan Kırgız mutfağında genellikle et (özellikle kuzu ve at eti), süt ürünleri (kymyz ve airan gibi) ve tahıllar (pirinç ve buğday dahil) gibi malzemelerden yapılan doyurucu yemekler bulunur. Geleneksel göçebe çadırları olan yurtlar, kırsal alanlarda otantik yemek deneyimleri sunabilir.",
+          "Yerel Pazarlar": "Şaşlık (ızgara şiş et), samsa (tuzlu hamur işleri) ve plov (pilav) dahil olmak üzere çeşitli Kırgız yemeklerini ve atıştırmalıklarını tatmak için Bişkek'teki Oş Pazarı gibi yerel pazarları ziyaret edin. Bu pazarlar aynı zamanda taze meyve, kuruyemiş ve baharat satın alma fırsatı da sunuyor.",
+          "Çayhaneler ve Kafeler": "Kırgızistan'da çayhaneler (chaykhana) ve kafeler her yerde bulunur; hamur işleri, ekmek ve hafif yemeklerin yanı sıra çay (chai) ve kahve (kofe) servis edilir. Baursak (kızarmış hamur) ve kurut (kurutulmuş yoğurt topları) gibi geleneksel Kırgız lezzetlerinin tadını çıkarırken rahat atmosferin ve misafirperverliğin keyfini çıkarın.",
+          "Uluslararası Mutfak": "Bişkek gibi kentsel bölgelerde Rus, Çin, Kore ve Avrupa mutfaklarının da aralarında bulunduğu çok çeşitli uluslararası mutfaklar bulacaksınız. Kırgız misafirperverliğinin yanı sıra küresel lezzetlerin tadına bakmak için popüler restoranları, bistroları ve yemek alanlarını keşfedin.",
+          "Sokak Yemekleri": "Hızlı ve lezzetli atıştırmalıklar sunan çeşitli sokak yemeği satıcılarını keşfetmek için Kırgızistan sokaklarına çıkın. Somsa (et veya sebzeyle doldurulmuş, kızartılmış veya fırında pişirilmiş ekmekler), kızarmış laghman eriştesi ve koçanda ızgara mısır gibi popüler sokak yiyeceklerini deneyin.",
+          "Yemek Turları ve Aşçılık Kursları": "Kırgız mutfağını ve mutfak geleneklerini daha derinlemesine incelemek için yemek turlarına çıkın veya yemek pişirme derslerine katılın. Geleneksel yemekleri nasıl hazırlayacağınızı öğrenin, yerel çiftlikleri ve üreticileri ziyaret edin ve kendinizi Kırgızistan'ın canlı mutfak ortamına bırakın."
+        },
+        "details": "Kırgız mutfağı ve yemek seçenekleri hakkında daha fazla bilgi için sağlanan kılavuza bakın."
+      },
+      "Safety": {
+        "title": "Kırgızistan'da Güvenlik | Seyahat Rehberi",
+        "Description": "Kırgızistan'a seyahat etmek genel olarak güvenlidir ancak olası risklerin farkında olmak ve gerekli önlemleri almak önemlidir. İşte bilmeniz gerekenler:",
+        "Options": {
+          "Siyasi İstikrar": "Kırgızistan geçmişte protestolar ve ara sıra yaşanan huzursuzluklar da dahil olmak üzere siyasi istikrarsızlıklar yaşadı. Çoğu turistik bölge etkilenmese de yerel gelişmeler hakkında bilgi sahibi olun ve büyük toplantı veya gösterilerden kaçının.",
+          "Suç": "Özellikle kalabalık bölgelerde ve turistik bölgelerde yankesicilik ve hırsızlık gibi küçük suçlar meydana gelebilir. Eşyalarınızı güvende tutun ve dikkatli olun.",
+          "Terörizm": "Kırgızistan'da terör tehdidi düşük ancak gezginlerin özellikle sınır bölgelerinde dikkatli olmaları gerekiyor. Hükümetiniz tarafından yayınlanan seyahat tavsiyelerini takip edin ve gelişmelerden haberdar olun.",
+          "Doğal Tehlikeler": "Kırgızistan'ın özellikle dağlık bölgeleri deprem, çığ ve heyelan gibi doğal afetlerle karşı karşıyadır. Özellikle yürüyüş yaparken veya açık hava etkinliklerine katılırken hazırlıklı olun ve güvenlik kurallarına uyun.",
+          "Yol Güvenliği": "Kırgızistan'daki yol koşulları farklılık gösterebilir ve özellikle kırsal bölgelerde araç kullanmak zorlayıcı olabilir. Dikkatli olun, yerel trafik yasalarına uyun ve saygın bir sürücüyü işe almayı düşünün.",
+          "Sağlık Riskleri": "Kırgızistan önemli sağlık riskleri oluşturmasa da seyahat edenlerin rutin aşılar konusunda güncel bilgi sahibi olmaları ve yiyecek ve su kaynaklı hastalıklara karşı önlem almaları gerekiyor.",
+          "İrtifa Hastalığı": "Yüksek rakımlı bölgeleri ziyaret eden gezginler, irtifa hastalığı riskinin farkında olmalıdır. Vücudunuz alışıncaya kadar alışmak ve yorucu fiziksel aktivitelerden kaçınmak için zaman ayırın.",
+          "Seyahat Sigortası": "Sağlık masraflarını, acil tahliyeyi ve seyahat iptalini/kesintisini kapsayan seyahat sigortasına sahip olmak önemlidir. Sigorta poliçenizin yapmayı planladığınız faaliyetleri kapsadığından emin olun."
+        },
+        "details": "Daha ayrıntılı güvenlik bilgileri ve seyahat tavsiyeleri için resmi hükümet kaynaklarına ve seyahat rehberlerine başvurun."
+      },
+      "Prices": {
+        "title": "Kırgızistan Fiyatları | Seyahat Rehberi",
+        "Description": "Kırgızistan'da yaşam maliyetini ve harcamaları anlamak bütçenizi etkili bir şekilde planlamanıza yardımcı olabilir. Yaygın ürün ve hizmetlerin fiyatlarına genel bir bakış:",
+        "Options": {
+          "Konaklama": "Kırgızistan'da konaklama fiyatları konaklama türüne ve lokasyona göre değişmektedir. Bütçesi kısıtlı gezginler, misafirhaneler ve pansiyonlar gibi uygun fiyatlı seçenekler bulabilirken, lüks oteller ve tatil köyleri lüks olanaklar arayanlara hitap ediyor. Fiyatlar, ekonomik konaklamalar için gecelik 10$'dan lüks tesisler için gecelik 100$'a kadar değişmektedir.",
+          "Yiyecek ve Yemek": "Kırgızistan'da dışarıda yemek yemek, özellikle yerel lokantalarda ve sokak yemeği tezgahlarında genellikle uygun fiyatlıdır. Beshbarmak ve plov gibi geleneksel yemekler ucuz ve doyurucudur; yerel restoranlarda yemek başına genellikle 3 ila 7 dolar arasında bir ücret alınır. Uluslararası mutfak ve kaliteli yemek seçenekleri daha pahalı olabilir; öğünler kişi başı ortalama 10 ila 20 ABD Doları veya daha fazla olabilir.",
+          "Toplu taşıma": "Kırgızistan'da ulaşım maliyetleri seyahat şekline ve mesafeye göre değişmektedir. Bişkek ve Oş gibi büyük şehirler arasındaki yurt içi uçuşlar 50 ila 150 ABD Doları veya daha fazla arasında değişebilirken, paylaşımlı taksiler ve marşrutkalar (minibüsler) daha kısa mesafeler için bütçe dostu seçenekler sunar ve rotaya bağlı olarak genellikle 1 ila 10 ABD Doları tutarında bir ücrete tabidir. Araç kiralamanın maliyeti, araç türüne ve kiralama şirketine bağlı olarak günlük 30 ila 100 ABD Doları veya daha fazla olabilir.",
+          "Aktiviteler ve Turistik Yerler": "Kırgızistan'daki etkinliklerin ve turistik mekanların maliyeti, deneyime bağlı olarak büyük ölçüde değişmektedir. Müzelere, tarihi yerlere ve milli parklara giriş ücretleri genellikle kişi başı 1 ila 10 ABD Doları arasında değişen uygun fiyatlıdır. Rehberli turlar, açık hava gezileri ve binicilik ve doğa yürüyüşü gibi macera aktiviteleri ek maliyetlere neden olabilir; fiyatlar süreye ve karmaşıklığa göre değişir.",
+          "Alışveriş": "Kırgızistan'da alışveriş, geleneksel el sanatları ve hediyelik eşyalardan modern eşyalara ve elektronik eşyalara kadar çeşitli seçenekler sunmaktadır. Fiyatlar eşyaya ve lokasyona göre değişmekle birlikte pazar ve çarşılarda pazarlık yaygındır. Özellikle tekstil, mücevher ve el yapımı el sanatları satın alırken en iyi fiyat için pazarlık yapmaya hazır olun.",
+          "Döviz ve Döviz Kurları": "Kırgızistan'ın resmi para birimi Kırgız somudur (KGS). Döviz kurları dalgalanır, bu nedenle para alışverişi yapmadan önce mevcut kurları kontrol etmeniz önerilir. Büyük şehirlerde ve turistik bölgelerde başlıca kredi kartları kabul edilmektedir, ancak daha küçük kasabalarda ve kırsal bölgelerdeki işlemlerde nakit taşımanız tavsiye edilir. (1$ = 85-90som)"
+        },
+        "details": "Kırgızistan fiyatlarına ilişkin en doğru ve güncel bilgiler için yerel kaynaklara ve güncel seyahat rehberlerine başvurabilirsiniz."
+      },
+      "Travel_Seasons": {
+        "title": "Kırgızistan'da Seyahat Sezonları | Seyahat Rehberi",
+        "Description": "Kırgızistan'daki seyahat mevsimlerini anlamak, seyahatinizi planlamanıza ve ziyaretinizden en iyi şekilde yararlanmanıza yardımcı olabilir. İşte farklı mevsimlere ve neler beklenebileceğine dair bir genel bakış:",
+        "Options": {
+          "Bahar (Mart-Mayıs)": "Bahar, Kırgızistan'ı ziyaret etmek için güzel bir zamandır; çiçekler açarken ve nehirler eriyen karlarla şişerken manzara canlanır. Havanın ılıman olması yürüyüş, trekking ve binicilik gibi açık hava etkinlikleri için idealdir. Ancak özellikle nisan ve mayıs aylarında ara sıra sağanak yağışlara hazırlıklı olun.",
+          "Yaz (Haziran-Ağustos)": "Yaz, uzun günler, sıcak sıcaklıklar ve açık gökyüzüyle Kırgızistan'da en yoğun turizm sezonudur. Kamp yapmak, dağa tırmanmak ve dağ göllerini keşfetmek gibi açık hava maceraları için mükemmel bir zaman. Eylül ayındaki Dünya Göçebe Oyunları da dahil olmak üzere popüler festivaller ve etkinlikler bu dönemde gerçekleştiriliyor.",
+          "Sonbahar (Eylül-Kasım)": "Sonbahar, Kırgızistan'da muhteşem bir mevsimdir; yapraklar renk değiştirirken manzaralar kırmızı, turuncu ve altın renginin canlı tonlarına boyanır. Hava güzel olmaya devam ediyor, bu da doğa yürüyüşü, yaban hayatı gözlemleme ve kültürel deneyimler için mükemmel bir zaman olmasını sağlıyor. Eylül, Dünya Göçebe Oyunları'nı ziyaret etmek için ideal bir aydır.",
+          "Kış (Aralık-Şubat)": "Kış, Kırgızistan'ı, karla kaplı dağları ve nefes kesen manzaralar oluşturan donmuş gölleriyle bir kış harikalar diyarına dönüştürüyor. Sıcaklıklar donma noktasının altına düşebilirken kış sporları tutkunları kayak, snowboard ve buz pateni için Karakol ve Jyrgalan gibi kayak merkezlerine akın ediyor. Şubat ayı, geleneksel göçebe oyunu Kok Boru'nun (Buzkashi) kutlanmasına işaret ediyor."
+        },
+        "details": "Her mevsimdeki belirli aktiviteler, etkinlikler ve hava koşulları hakkında daha fazla bilgi için seyahat rehberlerine ve yerel turizm kaynaklarına danışın."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Kırgızistan'a İlk Defa mı?",
+        "Description": "Kırgızistan'ı ilk kez ziyaret ediyorsanız işte size seyahatinizden en iyi şekilde yararlanmanıza yardımcı olacak kapsamlı bir rehber:",
+        "Options": {
+          "Varış ve Ulaşım": "Uluslararası seyahat edenlerin çoğu Bişkek'teki Manas Uluslararası Havalimanı'na varıyor. Şehir içi ulaşım için taksi ve otobüsler kolaylıkla mevcuttur. Kırgızistan'da ulaşım için iç hat uçuşlarını, otobüsleri, marşrutkaları (minibüsleri) ve taksileri kullanabilirsiniz.",
+          "SIM Kartlar ve İnternet": "Kırgızistan'da bağlantıda kalmak yerel bir SIM kartla kolaydır. SIM kartlarını havalimanından veya şehirdeki mobil şebeke sağlayıcılarından satın alabilirsiniz. Başlıca sağlayıcılar arasında Beeline, O! ve Megacom bulunmaktadır. SIM kart satın almadan önce telefonunuzun kilidinin açık olduğundan emin olun. İnternet kapsama alanı şehirlerde ve kasabalarda genellikle iyidir, ancak kırsal alanlarda düzensiz olabilir.",
+          "İnternet Fiyatları": "Kırgızistan'da internet fiyatları genel olarak uygundur. 1 GB'lık bir temel veri paketinin maliyeti yaklaşık 100 KGS (yaklaşık 1,20 ABD Doları) olabilirken, 10 GB gibi daha büyük paketlerin maliyeti yaklaşık 500 KGS (yaklaşık 6 ABD Doları) olabilir. Bir ay için sınırsız veri planları, sağlayıcıya ve bağlantı hızına bağlı olarak 800 ila 1500 KGS (yaklaşık 9,50 ila 18 ABD Doları) arasında değişebilir.",
+          "Para Birimi ve Ödemeler": "Yerel para birimi Kırgız Somu'dur (KGS). ATM'ler büyük şehirlerde mevcuttur, ancak kırsal alanlarda nakit taşımanız tavsiye edilir. Kredi ve banka kartları şehirlerin birçok yerinde kabul ediliyor, ancak uzak bölgelerde bu durum daha az. Döviz bozdurma hizmetleri havalimanlarında, bankalarda ve döviz bürolarında mevcuttur.",
+          "Dil": "Kırgızca ve Rusça resmi dillerdir. Büyük şehirlerde, özellikle turistik bölgelerde İngilizce konuşan kişilerle karşılaşabilirsiniz, ancak kırsal bölgelerde bazı temel Kırgızca veya Rusça ifadeleri bilmek faydalıdır. Bir çeviri uygulaması veya konuşma kılavuzu çok yararlı olabilir.",
+          "Sağlık ve Güvenlik": "Kırgızistan seyahat edenler için genellikle güvenlidir ancak standart önlemleri almak akıllıca olacaktır. Su kaynaklı hastalıklardan kaçınmak için şişelenmiş veya kaynamış su için. Sağlık ve kazaları kapsayan seyahat sigortanızın olduğundan emin olun. Acil sağlık hizmetleri şehirlerde mevcuttur ancak kırsal alanlarda sınırlı olabilir.",
+          "İklim ve Giyim": "Kırgızistan'da kışların soğuk, yazların ise sıcak olduğu karasal iklim hakimdir. Dağlarda sıcaklıklar önemli ölçüde daha soğuk olabilir, bu nedenle bavulunuzu buna göre hazırlayın. Katmanlı giysiler, sağlam yürüyüş ayakkabıları ve güneşten korunma önerilir. Kışın kaliteli bir ceket, eldiven ve şapka da dahil olmak üzere sıcak tutan giysiler getirin.",
+          "Elektrik ve Fişler": "Standart voltaj 220V ve frekans 50Hz'dir. Elektrik fişleri ve prizleri C ve F tipindedir. Elektronik cihazlarınızı şarj edebilmeniz için yanınızda evrensel bir seyahat adaptörü getirmeniz tavsiye edilir."
+        },
+        "details": "Daha ayrıntılı bilgi ve ipuçları için seyahat rehberlerine ve yerel kaynaklara bakın. Kırgızistan'a ilk seyahatinizin tadını çıkarın ve unutulmaz anılar yaratın!"
+      },
+      "TravelPreparation": {
+        "title": "Kırgızistan Seyahatinize Hazırlanın",
+        "Description": "Bu temel seyahat hazırlıklarına dikkat ederek Kırgızistan'a sorunsuz ve keyifli bir yolculuk sağlayın.",
+        "Options": {
+          "Vize ve Pasaport": "Uyruğunuz için vize gerekliliklerini kontrol edin ve pasaportunuzun, planladığınız kalıştan sonra en az altı ay geçerli olduğundan emin olun.",
+          "Sağlık ve Aşılar": "Kırgızistan'a seyahat ederken gerekli aşılar veya sağlık önlemleri için sağlık uzmanınıza danışın.",
+          "Seyahat Sigortası": "Tıbbi harcamalar veya seyahat iptalleri gibi beklenmedik acil durumları karşılamak için seyahat sigortası satın almayı düşünün.",
+          "Para Birimi ve Para Önemlidir": "Seyahatinizden önce yerel para birimini (Kırgızistan Somu) öğrenin ve biraz para bozdurun. ATM'ler büyük şehirlerde mevcuttur.",
+          "Dil": "Rusça ve Kırgızca resmi dil olmasına rağmen İngilizce yaygın olarak konuşulmamaktadır. Rusça veya Kırgızcadaki bazı temel ifadeleri öğrenmeyi düşünün.",
+          "Hava Durumu ve Giyim": "Ziyaretiniz sırasında hava şartlarına uygun kıyafetlerinizi yanınıza alın. Kırgızistan'da yazlar sıcak ve kışlar soğuk geçiyor, bu nedenle katmanları getirin.",
+          "Emniyet ve Güvenlik": "Kırgızistan'daki mevcut durum hakkında bilgi sahibi olun ve özellikle uzak bölgelerde dikkatli olun. Eşyalarınızı güvende tutun ve çevrenizden haberdar olun.",
+          "Kültürel Görgü Kuralları": "Birinin evine girmeden önce ayakkabılarınızı çıkarmak ve insanların fotoğraflarını çekmeden önce izin istemek gibi yerel gelenek ve göreneklere saygı gösterin."
+        },
+        "details": "Kırgızistan gezinize özel ek seyahat ipuçları ve tavsiyeler için kapsamlı seyahat rehberimize bakın."
+      }
+    },
+    "sights": {
+      "name": "Gezilecek yerler",
+      "title": "Kırgızistan’da gezilecek yerler",
+      "subtitle": "Kırgızistan'da nereye gidilir?  Ayrıca yolculuğunuzu konforlu bir şekilde geçirmek için şehirlerdeki ve bölgesel merkezlerdeki hava koşullarından haberdar olun ve bu güzel ülkenin sürekli değişen hava koşullarına hazırlıklı olun.",
+      "description": "Dağ göllerinden milli parklara, kasabalardan tarihi yerlere kadar Kırgızistan'da ziyaret edilecek yerleri bulun. Keşfetmeye başlamak için bir bölge seçin.",
+      "keywords": "Kırgızistan yerleri, Kırgızistan seyahati, Kırgızistan'ı keşfetmek, Kırgızistan destinasyonları, Kırgızistan turizmi, Kırgızistan'da mutlaka ziyaret edilmesi gereken yerler, Kırgızistan'ın en gözde turistik yerleri, Kırgızistan manzaraları, Kırgızistan kültürel alanları, Kırgızistan'ın doğal harikaları, Kırgızistan'da ziyaret edilecek en iyi yerler",
+      "sights": "Nereye Gidilir?",
+      "must-see": {
+        "subtitle": "Kırgızistan'ın Bölgelere Göre Görülmesi Gereken Destinasyonları",
+        "description1": "Kırgızistan, görkemli dağlardan sakin göllere kadar güzel doğal manzaralarıyla tanınır. İşte her bölgedeki en güzel yerlerden bazıları:",
+        "chuyregion": "Chuy Bölgesi",
+        "alaarchatitle": "Ala Archa Milli Parkı:",
+        "alaarchadescription": "Nefes kesen manzaralar ve yürüyüş parkurları sunmaktadır.",
+        "buranatitle": "Burana Kulesi:",
+        "buranadescription": "Güzel vadi manzarasına sahip tarihi bir minare.",
+        "issykulregion": "Issık-Göl Bölgesi",
+        "lakeissykkultitle": "Issık-Kul Gölü:",
+        "lakeissykkuldescription": "Plajları ve tatil köyleriyle büyük bir tuzlu göl.",
+        "jetioguxtitle": "Jeti-Oğuz:",
+        "jetioguzdescription": "Kırmızı kaya oluşumlarıyla ünlü.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Altyn Arashan gibi güzel dağlık alanlara açılan kapı.",
+        "narynregion": "Naryn Bölgesi",
+        "tashrabattitle": "Taş Rabat:",
+        "tashrabatdescription": "Pitoresk bir vadide tarihi bir taş kervansaray.",
+        "sonkultitle": "Son-Kul Gölü:",
+        "sonkuldescription": "Muhteşem gün batımına sahip yüksek rakımlı bir göl.",
+        "jalalabadregion": "Celal-Abad Bölgesi",
+        "sarychelextitle": "Sary-Chelek Biyosfer Rezervi:",
+        "sarychelekdescription": "El değmemiş göller ve ormanlar bulunmaktadır.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "En büyük ceviz ormanına ve güzel şelalelere ev sahipliği yapmaktadır.",
+        "oshregion": "Oş Bölgesi",
+        "sulaymanmountaintitle": "Süleyman Dağı:",
+        "sulaymanmountaindescription": "Panoramik manzaralı kutsal bir dağ.",
+        "alayvalleytitle": "Alay Vadisi:",
+        "alayvalleydescription": "Pamir Dağları'nın muhteşem manzarasını sunmaktadır.",
+        "batkenregion": "Batken Bölgesi",
+        "batkenvalleytitle": "Batken Vadisi:",
+        "batkenvalleydescription": "Kayısı ağaçları ve eşsiz kaya oluşumlarıyla tanınır.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Güzel nehir vadilerine sahiptir.",
+        "talasregion": "Talas Bölgesi",
+        "beshtashtitle": "Beş-Taş Milli Parkı:",
+        "beshtashdescription": "Doğal nehirlere ve dağ çayırlarına sahiptir.",
+        "manasordotitle": "Manas Ordu Kompleksi:",
+        "manasordodescription": "Kahraman Manas'a adanmış bir kültür alanı."
+      },
+      "highlights": [
+        "Nasıl Gidilir?",
+        "Taşıma",
+        "Nerede Kalınır?",
+        "Ne Yenir?",
+        "Ne yapalım",
+        "Mevsim"
+      ]
+    },
+    "tours": {
+      "name": "Turlar",
+      "title": "Kırgızistan turları",
+      "subtitle": "Kırgızistan Özel ve Küçük Grup Turları",
+      "description": "Kırgızistan’da yürüyüş, atlı gezi, kültür ve araçlı tur rotalarını keşfedin. Küçük bir gruba katılabilir ya da özel tur seçebilirsiniz.",
+      "description1": "Gezi, dağ yollarını, geleneksel keçe çadırda bir geceyi veya Issık-Kul'un yanında birkaç günü içerebilir. İlgi alanlarınıza ve sahip olduğunuz zamana uygun bir rota seçin.\n\nEkibimiz rehberlik, ulaşım ve konaklama konularında yardımcı olabilir. Tarihlerinizi, grup büyüklüğünüzü ve tercih ettiğiniz hızı görüşmek için iletişime geçin.",
+      "keywords": "Kırgızistan turları, En İyi Kırgızistan Turları, Kırgızistan Gezileri, En İyi Kırgızistan Tur Şirketleri, Kırgızistan Seyahat Acentası, Kırgızistan macera turları, rehberli turlar Kırgızistan, Kırgızistan kültürel turlar, trekking turları Kırgızistan, at binme turları Kırgızistan, göçebe deneyimler Kırgızistan, Kırgızistan seyahat paketleri, en iyi turlar Kırgızistan, Kırgızistan'ı turlarla keşfedin",
+      "tourPage": {
+        "level": "Seviye",
+        "duration": "Süre",
+        "price": "Fiyat",
+        "day": "Gün",
+        "days": "Günler",
+        "details": "Detaylar",
+        "things": "Etkinlikler",
+        "places": "Gezilecek yerler",
+        "addInfo": "Ek Bilgiler",
+        "includings": "Fiyata dahil olanlar",
+        "excludings": "Fiyata dahil olmayanlar",
+        "from": "Başlangıç fiyatı",
+        "note": "Not",
+        "person": "Kişi",
+        "persons": "Kişiler",
+        "andMore": "ve daha fazlası"
+      },
+      "TourPreparation": {
+        "title": "Kırgızistan'da Seyahatin Temelleri",
+        "Description": "Konfor, güvenlik ve değişen hava koşullarına ve açık hava etkinliklerine hazırlıklı olmanızı sağlamak için Kırgızistan'a seyahatinizde yanınıza almanız gereken temel eşyaların kapsamlı bir listesi.",
+        "Options": {
+          "Ayakkabı": "Ekstra bir çift olarak şehir turları için rahat yürüyüş ayakkabıları, orta dereceli yürüyüşler için sağlam yürüyüş ayakkabıları, trekking için dayanıklı yürüyüş botları ve çabuk kuruyan sandaletler getirin.",
+          "Şapka": "Yüksek rakımlarda yoğun güneşten korunmak için yanınıza geniş kenarlı bir şapka veya boyun kapaklı bir güneş şapkası almayı unutmayın.",
+          "UV Krem": "Özellikle Kırgızistan'ın yüksek rakımlarında cildinizi yoğun UV ışınlarından korumak için yanınıza yüksek SPF'li geniş spektrumlu güneş kremi almayı unutmayın.",
+          "Giyim": "Sıcaklıkların rakım değişiklikleriyle önemli ölçüde değişebileceğini göz önünde bulundurarak, değişen sıcaklıklara ve hava koşullarına uygun giysi katmanlarını paketleyin. Özellikle dağlık bölgelerde kar veya yağmura hazırlıklı olun.",
+          "Tıbbi Yardım": "Önlem olarak gerekli ilaçlar, yara bantları, ağrı kesiciler ve önceden var olan tıbbi durumlara yönelik özel malzemeler gibi kişisel tıbbi yardım malzemelerini yanınızda taşımayı unutmayın."
+        },
+        "overview": "Rotanız ve mevsiminiz için ne getireceğinizi bize sorun."
+      }
+    },
+    "articles": {
+      "name": "Makaleler",
+      "title": "Kırgızistan’ın kültürü ve doğası",
+      "description": "Kırgızistan’ın insanlarını, geleneklerini, mutfağını ve doğal güzelliklerini tanıyın.",
+      "keywords": [
+        "Kırgız kültürü",
+        "Kırgız gelenekleri",
+        "Kırgız doğası",
+        "Burkut avı",
+        "Kök-boru",
+        "Alabai köpekleri",
+        "Taygan",
+        "Kırgız tarihi",
+        "Orta Asya kültürü",
+        "Göçebe mirası",
+        "Kültürel keşif",
+        "Geleneksel sporlar",
+        "Kırgızistan'ın turistik yerleri",
+        "Kültürel deneyimler",
+        "Kırgızistan'da Macera",
+        "Miras ırkları",
+        "Kültürel gelenekler",
+        "Benzersiz deneyimler",
+        "Kırgız yaşam tarzı"
+      ]
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "subtitle": "Biz Kimiz?",
+      "description": "Kırgızistan seyahatinizi planlamanıza yardımcı oluyoruz. Tarihlerinizi ve ilgi alanlarınızı paylaşın; rotayı, rehberleri ve konaklamayı birlikte belirleyelim.",
+      "keywords": "Hakkımızda, Hikayemiz, Kırgızistan tutkunları, Seyahat tutkusu, Olağanüstü deneyimler, Ekip, Değerler, Misyon",
+      "buttons": {
+        "our_team": "Ekibimiz",
+        "our_clients": "Müşterilerimiz",
+        "contact_us": "Bize Ulaşın"
+      }
+    },
+    "info": {
+      "seen": "Ziyaretler: ",
+      "created": "Oluşturuldu: ",
+      "modified": "Son değiştirilme tarihi: "
+    },
+    "download": {
+      "text": "Mobil uygulamalarımızla haritaları, yerleri ve seyahat bilgilerini elinizin altında tutun."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Faydalı Bağlantılar",
+          "links": [
+            {
+              "text": "Ana sayfa",
+              "url": "/"
+            },
+            {
+              "text": "Gezilecek yerler",
+              "url": "/places"
+            },
+            {
+              "text": "Turlar",
+              "url": "/tours"
+            },
+            {
+              "text": "Havaalanı transferleri",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Gizlilik ve Yasal",
+          "links": [
+            {
+              "text": "Hakkımızda",
+              "url": "/about"
+            },
+            {
+              "text": "Bize Ulaşın",
+              "url": "/contact"
+            },
+            {
+              "text": "Gizlilik Politikası",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "İletişim Bilgileri",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bişkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sosyal Hesaplar",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "geliştirici",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

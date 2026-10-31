@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import styles from './articles.module.css';
@@ -23,7 +24,7 @@ export default async function Articles(props: { params: Promise<{ lang: Locale }
   const featured = articles.length >= 3;
 
   return (
-    <div className={shared.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <div className={shared.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta articles={articles} lang={lang} page={page}/>
       <header className={`${shared.pageIntro} ${styles.intro}`}>
         <PlacesReveal className={shared.introTitle}>

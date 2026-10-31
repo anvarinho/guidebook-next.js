@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import { Locale } from "@/lib/i18n.config";
 import getTour from "@/lib/getTour";
@@ -8,6 +9,7 @@ import { Suspense } from "react";
 import LoadingSpinner from "../../Components/LoadingSpinner";
 import DayView from "./DayView";
 import { getDictionary } from "@/lib/dictionary";
+import { formatTourDuration } from '@/lib/formatTourDuration';
 import Link from "next/link";
 import Meta from "./meta";
 import { notFound } from "next/navigation";
@@ -40,13 +42,13 @@ export default async function Tour(props: Params) {
   const transferMessages = tourUrl === "manas-airport-transfers" ? await getTransferMessages(lang) : null;
 
   return (
-    <div className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <div className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} tour={data} page={page} />
       <article>
         <header className={styles.header}>
           <PlacesReveal className={styles.heading}>
             <Link href={`/${lang}/tours`} className={styles.breadcrumb}>
-              <span aria-hidden="true"><ArrowIcon direction={lang === 'ae' ? 'right' : 'left'}/></span>{page.tours.name}
+              <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.tours.name}
             </Link>
             <h1>{data.title}</h1>
           </PlacesReveal>
@@ -54,7 +56,7 @@ export default async function Tour(props: Params) {
             <p className={styles.priceLabel}>{t.from}</p>
             <p className={styles.heroPrice}><bdi>${data.price[data.price.length - 1]}</bdi></p>
             <dl className={styles.facts}>
-              <div><dt>{t.duration}</dt><dd>{data.days.length} {data.days.length === 1 ? t.day : t.days}</dd></div>
+              <div><dt>{t.duration}</dt><dd>{formatTourDuration(data.days.length, lang)}</dd></div>
               <div><dt>{t.level}</dt><dd>{data.level}</dd></div>
             </dl>
             <a href="#itinerary" className={styles.detailsLink}>
@@ -140,7 +142,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   if (!tour) notFound();
   const { page } = await getDictionary(lang);
   const tourPage = page.tours.tourPage;
-  const duration = `${tour.days.length} ${tour.days.length === 1 ? tourPage.day : tourPage.days}`;
+  const duration = formatTourDuration(tour.days.length, lang);
   const availablePrices = tour.price.filter(price => Number.isFinite(price) && price > 0);
   const startingPrice = availablePrices.length ? Math.min(...availablePrices) : null;
   const description = metaDescription(

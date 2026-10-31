@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
 import { Metadata } from 'next'
@@ -37,13 +38,13 @@ export default async function Home(props: Params) {
   const article = await data
   if (!article) notFound()
   return (
-    <div className={styles.main} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <div className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} article={article} page={page}/>
       <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
         <header className={styles.articleHeader}>
           <PlacesReveal className={styles.headerCopy}>
             <a href={`/${lang}/articles`} className={styles.breadcrumb}>
-              <span aria-hidden="true"><ArrowIcon direction={lang === 'ae' ? 'right' : 'left'}/></span>{page.articles.name}
+              <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.articles.name}
             </a>
             <p className={shared.eyebrow}>{page.articles.name}</p>
             <h1>{article.title}</h1>

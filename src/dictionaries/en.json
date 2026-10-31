@@ -5,16 +5,31 @@
     "loading": "Loading...",
     "contactButton": "Any questions?",
     "navigation": [
-      { "text": "Home", "url": "/" },
-      { "text": "Sights", "url": "/places" },
-      { "text": "Tours", "url": "/tours" },
-      { "text": "Stories", "url": "/articles" },
-      { "text": "About", "url": "/about" }
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Sights",
+        "url": "/places"
+      },
+      {
+        "text": "Tours",
+        "url": "/tours"
+      },
+      {
+        "text": "Articles",
+        "url": "/articles"
+      },
+      {
+        "text": "About",
+        "url": "/about"
+      }
     ],
     "home": {
-      "title": "Kyrgyzstan Travel Guide (2024)",
-      "description": "Experience the beauty and culture of Kyrgyzstan through our comprehensive tourist guide. Discover local attractions, guided tours, plan your adventure, and make the most of your trip.",
-      "subtitle": "Kyrgyzstan Travel Guide (2024)",
+      "title": "Kyrgyzstan Travel Guide",
+      "description": "Hike mountain trails, swim in Issyk-Kul or stay with a family in a yurt. Choose a route that suits you.",
+      "subtitle": "Kyrgyzstan Travel Guide",
       "subtitle1": "Why Visit Kyrgyzstan?",
       "subtitle2": "Exploring the Great Outdoors",
       "subtitle3": "Endless Exploration",
@@ -144,9 +159,9 @@
     },
     "sights": {
       "name": "Sights",
-      "title": "Most Beautiful Places in Kyrgyzstan!",
+      "title": "Places to visit in Kyrgyzstan",
       "subtitle": "Where to go in Kyrgyzstan?  Additionally, stay informed about weather conditions in cities and regional centers to make the most of your journey comfortable and be prepared for constantly changing weather of this beautiful country.",
-      "description": "Where to go in Kyrgyzstan? Here’s the full list of the most interesting, beautiful, and exciting places to visit in Kyrgyzstan, including famous landmarks in Kyrgyzstan and highlights, detailed info on how to get to all these places independently, their precise location details, stunning videos and images that capture the essence of each unique sight. Whether you're seeking adventure, relaxation, or cultural experience, our guide gives you all must-see sights of Kyrgyzstan.",
+      "description": "Find places to visit across Kyrgyzstan, from mountain lakes and national parks to towns and historic sites. Choose a region to start exploring.",
       "keywords": "Kyrgyzstan places, Kyrgyzstan travel, explore Kyrgyzstan, Kyrgyzstan destinations, Kyrgyzstan tourism, must-visit places in Kyrgyzstan, top attractions Kyrgyzstan, Kyrgyzstan landscapes, cultural sites Kyrgyzstan, natural wonders Kyrgyzstan, best places to visit in Kyrgyzstan",
       "sights": "Where To Go!",
       "must-see": {
@@ -201,10 +216,10 @@
     },
     "tours": {
       "name": "Tours",
-      "title": "Kyrgyzstan Private Tours & Tour Packages!",
+      "title": "Tours in Kyrgyzstan",
       "subtitle": "Private and Small Group Tours in Kyrgyzstan",
-      "description": "Craft your dream itinerary through Kyrgyzstan with a personalized touch. Our private tours offer the best flexibility, privacy, and a tailored itinerary, perfectly matching your preferences. Choose from adventure, Silk Road, cultural, horseback riding, and trekking tours for active trip, jeep tours for those who prefer comfort. If you could not find tour of your dream just let us know and let us guide you through an unforgettable experience in Kyrgyzstan.",
-      "description1": "Despite its small size, Kyrgyzstan is full of amazing places. Book a best Kyrgyzstan tour to discover the mountains, lakes, and valleys that make this country a top destination. Whether you’re an adventurer looking for a thrill or interested in exploring the rich culture and history of this small country, a Kyrgyzstan tour is best for those looking for something unequaled anywhere else.\r\n\r\nMany people come to Kyrgyzstan to visit the mountains, which makes sense, considering that 94% of Kyrgyzstan is covered in mountains. The massive Tian Shan range covers a lot of Kyrgyzstan, with its tallest peaks reaching over 7,000 m (22,965 ft). Nestled among the towering peaks are broad green valleys and crystal-clear lakes, with tumbling rivers that flow through fresh juniper forests. The broad green valleys are often used as summer pastures for herds of animals, and in the warmer months, are dotted with yurts and horses. Some of the lakes are too cold for swimming (like Son-Kul), but Issyk-Kul definitely isn’t. The sandy shores and alpine resorts around Issyk-Kul are must-visits on any best Kyrgyzstan tour, perfect for a moment of relaxation. Some people love adventure, and Kyrgyzstan offers plenty of horseback rides, rafting trips, ski resorts, and hikes, perfect for any adrenaline lover.\r\n\r\nThough the nature can tend to dominate, the best Kyrgyzstan tours don’t ignore the culture and history of this country. Spend a night in a yurt, a traditional home made of wood and felt and designed to be both sturdy and transportable. Learn about all of the textiles Kyrgyzstan is famous for, and listen to the famous komuz (a three-stringed instrument) or The Epic of Manas, the epic poem that is a spiritual foundation in modern Kyrgyzstan. And make sure to try beshbarmak (ground meat boiled with noodles) and kumis (fermented mare’s milk) to get a real taste of nomadic life.\r\n\r\nBased on years of experience, our best Kyrgyzstan tours combine all of the elements of Kyrgyzstan’s culture and landscape to introduce you to the entirety of this country. Travel with the best guides, stay at the best hotels, and eat at the best restaurants. Book a small group tour to Kyrgyzstan to save on money and planning, or schedule a private tour to fit your interests and schedule.",
+      "description": "Browse trekking, horse-riding, cultural and road trips in Kyrgyzstan. Choose a private tour or join a small group, with time for the places that interest you.",
+      "description1": "A trip can include mountain trails, a night in a traditional felt tent or a few days beside Issyk-Kul. Choose a route that suits your interests and the time you have.\n\nOur team can help with guides, transport and accommodation. Get in touch to discuss your dates, group size and preferred pace.",
       "keywords": "Kyrgyzstan tours, Best Kyrgyzstan Tours, Trips in Kyrgyzstan, Best Kyrgyzstan Tours Companies, Travel Agency in Kyrgyzstan, adventure tours Kyrgyzstan, guided tours Kyrgyzstan, cultural tours Kyrgyzstan, trekking tours Kyrgyzstan, horse riding tours Kyrgyzstan, nomadic experiences Kyrgyzstan, Kyrgyzstan travel packages, best tours in Kyrgyzstan, explore Kyrgyzstan through tours",
       "tourPage": {
         "level": "Level",
@@ -213,11 +228,11 @@
         "day": "Day",
         "days": "Days",
         "details": "Details",
-        "things": "Things we do",
-        "places": "Places we go",
+        "things": "Activities",
+        "places": "Places visited",
         "addInfo": "Additional information",
-        "includings": "Price includes",
-        "excludings": "Price excludes",
+        "includings": "Included in the price",
+        "excludings": "Not included in the price",
         "from": "From",
         "note": "Note",
         "person": "Person",
@@ -234,13 +249,13 @@
           "Clothing": "Pack appropriate clothing layers for varying temperatures and weather conditions, considering that temperatures can vary significantly with altitude changes. Be prepared for snow or rain, especially in mountainous areas.",
           "Medical Aid": "Remember to carry personal medical aids such as necessary medications, band-aids, pain relievers, and any specific items for pre-existing medical conditions as precautions."
         },
-        "overview": "Your comfort is our job, guiding us to constantly seek out ways to make your journey even more memorable and enjoyable."
+        "overview": "Ask us what to bring for your route and the season."
       }
     },
     "articles": {
       "name": "Articles",
-      "title": "Culture, Traditions, and Nature of Kyrgyzstan and Kyrgyz people",
-      "description": "Explore the rich culture, vibrant traditions, and breathtaking nature of Kyrgyzstan through these insightful stories. From ancient traditions like burkut hunting and kok-boru to the majestic Alabai dogs and the adventurous Taigan, delve into the heart of Kyrgyz culture.",
+      "title": "Culture and nature in Kyrgyzstan",
+      "description": "Read about Kyrgyzstan’s people, traditions, food and landscapes.",
       "keywords": [
         "Kyrgyz culture",
         "Kyrgyz traditions",
@@ -266,7 +281,7 @@
     "about": {
       "title": "About Us",
       "subtitle": "Who We Are?",
-      "description": "We are a team of enthusiastic individuals dedicated to providing you with exceptional experiences. Our passion fuels everything we do, as we pour our hearts into creating unforgettable moments for you. Join us on adventures of wonder and discover this beautiful country.",
+      "description": "We help visitors plan trips around Kyrgyzstan. Tell us your dates and interests, and we’ll help with routes, guides and places to stay.",
       "keywords": "About us, Our story, Kyrgyzstan enthusiasts, Travel passion, Exceptional experiences, Team, Values, Mission",
       "buttons": {
         "our_team": "Our Team",
@@ -280,7 +295,7 @@
       "modified": "Last modified: "
     },
     "download": {
-      "text": "Download our apps today and enjoy convenient access to our service on your mobile device! Simply click on the button!"
+      "text": "Keep maps, places and travel information handy with our mobile apps."
     },
     "footer": {
       "sections": [
@@ -299,7 +314,10 @@
               "text": "Tours",
               "url": "/tours"
             },
-            {"text": "Airport transfers", "url": "/manas-airport-transfers"}
+            {
+              "text": "Airport transfers",
+              "url": "/manas-airport-transfers"
+            }
           ]
         },
         {
@@ -351,4 +369,3 @@
     }
   }
 }
-

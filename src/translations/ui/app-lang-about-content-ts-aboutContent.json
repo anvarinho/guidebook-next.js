@@ -1,0 +1,1722 @@
+{
+  "uz": {
+    "intro": "Kashf qilish uchun mamlakat. Ulanish uchun odamlar. O'zingizni yaratish uchun sayohat.",
+    "landscape": "Issiqko'l qirg'og'ida",
+    "yurt": "Ko'chmanchi hayotga biroz yaqinroq",
+    "story": "Yaxshi sayohatlar insoniy aloqadan boshlanadi.",
+    "explore": "Sizning yo'lingiz Qirg'izistonga",
+    "cards": [
+      [
+        "O'z joyingizni toping",
+        "Ko'llar, tog' vodiylari va vaqt ajratishga arziydigan joylarni o'rganing."
+      ],
+      [
+        "Sarguzasht uchun joy ajrating",
+        "Marshrutlarni ko'rib chiqing va qiziqishlaringizga mos keladigan sayohatni toping."
+      ],
+      [
+        "Bir oz chuqurroq boring",
+        "Yo'lga chiqishdan oldin hikoyalar va amaliy qo'llanmalarni o'qing."
+      ]
+    ],
+    "journey": "Fikrdan keyingi sarguzashtgacha.",
+    "steps": [
+      [
+        "Ilhom oling",
+        "Siz bilan qoladigan joy, landshaft yoki tajribadan boshlang."
+      ],
+      [
+        "Bizga rejalaringizni ayting",
+        "Sanalaringizni, guruh hajmini va nima qilishni xohlayotganingizni baham ko'ring."
+      ],
+      [
+        "Tafsilotlarni birgalikda shakllantiring",
+        "Jamoamiz bilan marshrut, sur'at va amaliy tadbirlarni muhokama qiling."
+      ]
+    ],
+    "invitation": "Sizning keyingi hikoyangiz shu erda boshlanadi.",
+    "invitationBody": "O'zingiz yoqtirgan joyga birinchi tashrif yoki qaytish - nimani o'ylayotganingizni ayting.",
+    "reviews": "Bizning mijozlarimiz nima deyishadi",
+    "previous": "Oldingi sharhlar",
+    "next": "Keyingi sharhlar",
+    "loading": "Sayohatchilar sharhlari yuklanmoqda…",
+    "empty": "Biz bilan sayohat qilish haqida savolingiz bormi? Jamoamiz bilan bog'laning."
+  },
+  "kz": {
+    "intro": "Ашылатын ел. Байланысатын адамдар. Өзіңіз жасау үшін саяхат.",
+    "landscape": "Ыстықкөл жағасында",
+    "yurt": "Көшпелі өмірге сәл жақынырақ",
+    "story": "Жақсы сапарлар адами қарым-қатынастан басталады.",
+    "explore": "Қырғызстанға жол",
+    "cards": [
+      [
+        "Өзіңізді бір жерден табыңыз",
+        "Көлдерді, тау аңғарларын және уақыт бөлуге тұрарлық жерлерді зерттеңіз."
+      ],
+      [
+        "Шытырман оқиғаға орын беріңіз",
+        "Маршруттарды шолып, қызығушылықтарыңызға сәйкес келетін саяхатты табыңыз."
+      ],
+      [
+        "Біраз тереңірек",
+        "Жолға шықпас бұрын әңгімелер мен практикалық нұсқаулықтарды оқыңыз."
+      ]
+    ],
+    "journey": "Идеядан келесі шытырман оқиғаға дейін.",
+    "steps": [
+      [
+        "Шабыт алыңыз",
+        "Сізбен бірге болатын жерден, пейзаждан немесе тәжірибеден бастаңыз."
+      ],
+      [
+        "Жоспарларыңызды айтыңыз",
+        "Күндеріңізді, топтың көлемін және сіз жасағыңыз келетін нәрселерді бөлісіңіз."
+      ],
+      [
+        "Бөлшектерді бірге пішіндеңіз",
+        "Біздің командамен маршрутты, қарқынды және практикалық шараларды талқылаңыз."
+      ]
+    ],
+    "invitation": "Сіздің келесі әңгімеңіз осы жерден басталады.",
+    "invitationBody": "Өзіңізге ұнайтын жерге бірінші бару немесе қайта оралу — ойыңызда не бар екенін айтыңыз.",
+    "reviews": "Біздің клиенттер не дейді",
+    "previous": "Алдыңғы шолулар",
+    "next": "Келесі шолулар",
+    "loading": "Саяхатшылардың пікірлері жүктелуде…",
+    "empty": "Бізбен саяхаттау туралы сұрағыңыз бар ма? Біздің командамен байланысыңыз."
+  },
+  "kg": {
+    "intro": "Ачыла турган өлкө. Байланыш үчүн адамдар. Өзүңүздүн ишиңизди жасоого саякат.",
+    "landscape": "Ысык-Көлдүн жээгинде",
+    "yurt": "Көчмөн жашоого бир аз жакыныраак",
+    "story": "Жакшы саякаттар адамдык байланыштан башталат.",
+    "explore": "Кыргызстанга жолуңуз",
+    "cards": [
+      [
+        "Өзүңүздү бир жерден табыңыз",
+        "Көлдөрдү, тоо өрөөндөрүн жана убакыт бөлүүгө татыктуу жерлерди изилдеңиз."
+      ],
+      [
+        "укмуштуу окуяларга орун бошот",
+        "Маршруттарды карап чыгыңыз жана кызыкчылыктарыңызга ылайыктуу саякат табыңыз."
+      ],
+      [
+        "Бир аз тереңирээк",
+        "Жолго чыгардан мурун окуяларды жана практикалык колдонмолорду окуп чыгыңыз."
+      ]
+    ],
+    "journey": "Идеядан кийинки укмуштуу окуяга чейин.",
+    "steps": [
+      [
+        "Илхам алыңыз",
+        "Сиз менен бирге болгон жер, пейзаж же тажрыйба менен баштаңыз."
+      ],
+      [
+        "Бизге пландарыңызды айтыңыз",
+        "Даталарыңызды, топтун көлөмүн жана эмне кылгыңыз келгенин бөлүшүңүз."
+      ],
+      [
+        "Деталдарды чогуу формага келтириңиз",
+        "Биздин команда менен маршрутту, темпти жана практикалык иш-чараларды талкуулаңыз."
+      ]
+    ],
+    "invitation": "Сиздин кийинки окуяңыз ушул жерден башталат.",
+    "invitationBody": "Сиз сүйгөн жерге биринчи жолу баруу же кайтып келүү - оюңузда эмне бар экенин айтыңыз.",
+    "reviews": "Биздин кардарлар эмне дейт",
+    "previous": "Мурунку сын-пикирлер",
+    "next": "Кийинки сын-пикирлер",
+    "loading": "Саякатчылардын сын-пикирлери жүктөлүүдө…",
+    "empty": "Биз менен саякаттоо боюнча сурооңуз барбы? Биздин команда менен байланышыңыз."
+  },
+  "tr": {
+    "intro": "Keşfedilecek bir ülke. Bağlantı kurulacak insanlar. Kendinize ait bir yolculuk.",
+    "landscape": "Issık-Kul kıyılarında",
+    "yurt": "Göçebe hayata biraz daha yakın",
+    "story": "İyi yolculuklar insani bir bağla başlar.",
+    "explore": "Kırgızistan'a giden yolunuz",
+    "cards": [
+      [
+        "Bir yerinizi bulun",
+        "Gölleri, dağ vadilerini ve zaman ayırmaya değer yerleri keşfedin."
+      ],
+      [
+        "Maceraya yer açın",
+        "Seyahat programlarına göz atın ve ilgi alanlarınıza uygun bir yolculuk bulun."
+      ],
+      [
+        "Biraz daha derine in",
+        "Yola çıkmadan önce hikayeleri ve pratik kılavuzları okuyun."
+      ]
+    ],
+    "journey": "Bir fikirden bir sonraki maceranıza.",
+    "steps": [
+      [
+        "İlham alın",
+        "Sizinle kalacak bir yer, bir manzara veya bir deneyimle başlayın."
+      ],
+      [
+        "Bize planlarınızı anlatın",
+        "Tarihlerinizi, grup büyüklüğünüzü ve yapmak istediğiniz şeyleri paylaşın."
+      ],
+      [
+        "Detayları birlikte şekillendirin",
+        "Ekibimizle rotayı, tempoyu ve pratik düzenlemeleri tartışın."
+      ]
+    ],
+    "invitation": "Bir sonraki hikayeniz burada başlıyor.",
+    "invitationBody": "Sevdiğiniz bir yere ilk ziyaretiniz veya dönüşünüz; aklınızdan geçenleri bize anlatın.",
+    "reviews": "Müşterilerimiz ne diyor",
+    "previous": "Önceki incelemeler",
+    "next": "Sonraki incelemeler",
+    "loading": "Gezgin yorumları yükleniyor…",
+    "empty": "Bizimle seyahat etmeyle ilgili bir sorunuz mu var? Ekibimizle iletişime geçin."
+  },
+  "hi": {
+    "intro": "खोजने के लिए एक देश. लोगों से जुड़ना है. अपना खुद का बनाने की यात्रा।",
+    "landscape": "इस्सिक-कुल के तट पर",
+    "yurt": "खानाबदोश जीवन के थोड़ा करीब",
+    "story": "अच्छी यात्राएँ मानवीय संबंध से शुरू होती हैं।",
+    "explore": "किर्गिस्तान में आपका रास्ता",
+    "cards": [
+      [
+        "अपना कहीं ढूंढो",
+        "झीलों, पर्वत घाटियों और अपना समय निकालने लायक स्थानों का अन्वेषण करें।"
+      ],
+      [
+        "रोमांच के लिए जगह बनाएं",
+        "यात्रा कार्यक्रम ब्राउज़ करें और एक ऐसी यात्रा खोजें जो आपकी रुचियों के अनुकूल हो।"
+      ],
+      [
+        "थोड़ा और गहराई में जाओ",
+        "यात्रा शुरू करने से पहले कहानियाँ और व्यावहारिक मार्गदर्शिकाएँ पढ़ें।"
+      ]
+    ],
+    "journey": "एक विचार से आपके अगले साहसिक कार्य तक।",
+    "steps": [
+      [
+        "प्रेरित हो",
+        "किसी स्थान, परिदृश्य या किसी अनुभव से शुरुआत करें जो आपके साथ रहता है।"
+      ],
+      [
+        "हमें अपनी योजनाएं बताएं",
+        "अपनी तिथियाँ, समूह का आकार और वे चीज़ें साझा करें जिन्हें आप करना पसंद करेंगे।"
+      ],
+      [
+        "विवरण को एक साथ आकार दें",
+        "हमारी टीम के साथ मार्ग, गति और व्यावहारिक व्यवस्था पर चर्चा करें।"
+      ]
+    ],
+    "invitation": "आपकी अगली कहानी यहीं से शुरू होती है.",
+    "invitationBody": "पहली यात्रा या अपनी पसंदीदा जगह पर वापसी - हमें बताएं कि आपके मन में क्या है।",
+    "reviews": "हमारे ग्राहक क्या कहते हैं",
+    "previous": "पिछली समीक्षाएँ",
+    "next": "अगली समीक्षाएँ",
+    "loading": "यात्री समीक्षाएँ लोड हो रही हैं...",
+    "empty": "क्या आपके पास हमारे साथ यात्रा करने के बारे में कोई प्रश्न है? हमारी टीम से संपर्क करें."
+  },
+  "ur": {
+    "intro": "دریافت کرنے والا ملک۔ جو لوگ جوڑتے ہیں۔ اپنا بنانے کا سفر۔",
+    "landscape": "Issyk-Kul کے ساحل پر",
+    "yurt": "خانہ بدوش زندگی سے تھوڑا قریب",
+    "story": "اچھے سفر کا آغاز انسانی تعلق سے ہوتا ہے۔",
+    "explore": "کرغزستان میں آپ کا راستہ",
+    "cards": [
+      [
+        "اپنی جگہ تلاش کریں۔",
+        "جھیلوں، پہاڑی وادیوں اور جگہوں کو تلاش کریں جس کے لیے اپنا وقت نکالیں۔"
+      ],
+      [
+        "ایڈونچر کے لیے جگہ بنائیں",
+        "سفر کے پروگراموں کو براؤز کریں اور ایسا سفر تلاش کریں جو آپ کی دلچسپیوں کے مطابق ہو۔"
+      ],
+      [
+        "تھوڑا گہرائی میں جائیں۔",
+        "روانہ ہونے سے پہلے کہانیاں اور عملی گائیڈز پڑھیں۔"
+      ]
+    ],
+    "journey": "ایک خیال سے آپ کے اگلے ایڈونچر تک۔",
+    "steps": [
+      [
+        "حوصلہ افزائی کریں۔",
+        "کسی جگہ، زمین کی تزئین یا کسی ایسے تجربے سے شروع کریں جو آپ کے ساتھ رہے۔"
+      ],
+      [
+        "ہمیں اپنے منصوبے بتائیں",
+        "اپنی تاریخیں، گروپ کا سائز اور وہ چیزیں شیئر کریں جو آپ کرنا پسند کریں گے۔"
+      ],
+      [
+        "تفصیلات کو ایک ساتھ شکل دیں۔",
+        "ہماری ٹیم کے ساتھ روٹ، رفتار اور عملی انتظامات پر تبادلہ خیال کریں۔"
+      ]
+    ],
+    "invitation": "آپ کی اگلی کہانی یہاں سے شروع ہوتی ہے۔",
+    "invitationBody": "اپنی پسند کی جگہ پر پہلا دورہ یا واپسی — ہمیں بتائیں کہ آپ کے ذہن میں کیا ہے۔",
+    "reviews": "ہمارے کلائنٹس کیا کہتے ہیں۔",
+    "previous": "پچھلے جائزے",
+    "next": "اگلے جائزے",
+    "loading": "مسافروں کے جائزے لوڈ ہو رہے ہیں…",
+    "empty": "ہمارے ساتھ سفر کرنے کے بارے میں کوئی سوال ہے؟ ہماری ٹیم کے ساتھ رابطے میں رہیں۔"
+  },
+  "tg": {
+    "intro": "Кишваре барои кашф. Одамоне, ки бо онҳо пайваст мешаванд. Сафар барои сохтани худ.",
+    "landscape": "Дар сохилхои Иссик-кул",
+    "yurt": "Каме наздиктар ба зиндагии бодиянишин",
+    "story": "Сафарҳои хуб аз робитаи инсонӣ оғоз мешаванд.",
+    "explore": "Роҳи шумо ба Қирғизистон",
+    "cards": [
+      [
+        "Ҷои худро пайдо кунед",
+        "Кӯлҳо, водиҳои кӯҳӣ ва ҷойҳоеро, ки вақти худро сарф кардан лозим аст, омӯзед."
+      ],
+      [
+        "Барои саёҳат ҷой ҷудо кунед",
+        "Маршрутҳоро аз назар гузаронед ва саёҳате пайдо кунед, ки ба манфиатҳои шумо мувофиқ бошад."
+      ],
+      [
+        "Каме амиқтар равед",
+        "Пеш аз ба сафар баромадан ҳикояҳо ва дастурҳои амалиро хонед."
+      ]
+    ],
+    "journey": "Аз идея то саёҳати навбатии шумо.",
+    "steps": [
+      [
+        "Илҳом гиред",
+        "Аз ҷой, манзара ё таҷрибае оғоз кунед, ки бо шумо мемонад."
+      ],
+      [
+        "Нақшаҳои худро ба мо бигӯед",
+        "Санаҳои худ, андозаи гурӯҳ ва корҳоеро, ки мехоҳед анҷом диҳед, мубодила кунед."
+      ],
+      [
+        "Тафсилотро якҷоя кунед",
+        "Бо дастаи мо масир, суръат ва тадбирҳои амалиро муҳокима кунед."
+      ]
+    ],
+    "invitation": "Ҳикояи навбатии шумо аз ин ҷо оғоз мешавад.",
+    "invitationBody": "Боздиди аввал ё бозгашт ба ҷое, ки шумо дӯст медоред - ба мо бигӯед, ки чӣ дар назар доред.",
+    "reviews": "Он чизе ки мизоҷони мо мегӯянд",
+    "previous": "Баррасиҳои қаблӣ",
+    "next": "Баррасиҳои навбатӣ",
+    "loading": "Баррасиҳои сайёҳон бор карда мешавад…",
+    "empty": "Саволе дар бораи сафар бо мо доред? Бо дастаи мо тамос гиред."
+  },
+  "ms": {
+    "intro": "Sebuah negara untuk ditemui. Orang untuk berhubung. Perjalanan untuk membuat sendiri.",
+    "landscape": "Di pantai Issyk-Kul",
+    "yurt": "Sedikit lebih dekat dengan kehidupan nomad",
+    "story": "Perjalanan yang baik bermula dengan hubungan manusia.",
+    "explore": "Jalan anda ke Kyrgyzstan",
+    "cards": [
+      [
+        "Cari tempat anda",
+        "Terokai tasik, lembah gunung dan tempat yang patut anda luangkan masa."
+      ],
+      [
+        "Beri ruang untuk pengembaraan",
+        "Semak imbas jadual perjalanan dan cari perjalanan yang sesuai dengan minat anda."
+      ],
+      [
+        "Pergi lebih dalam sedikit",
+        "Baca cerita dan panduan praktikal sebelum anda bertolak."
+      ]
+    ],
+    "journey": "Dari idea kepada pengembaraan anda yang seterusnya.",
+    "steps": [
+      [
+        "Dapatkan inspirasi",
+        "Mulakan dengan tempat, landskap atau pengalaman yang kekal bersama anda."
+      ],
+      [
+        "Beritahu kami rancangan anda",
+        "Kongsi tarikh anda, saiz kumpulan dan perkara yang anda ingin lakukan."
+      ],
+      [
+        "Bentuk butiran bersama-sama",
+        "Bincangkan laluan, rentak dan pengaturan praktikal dengan pasukan kami."
+      ]
+    ],
+    "invitation": "Cerita anda seterusnya bermula di sini.",
+    "invitationBody": "Lawatan pertama atau kembali ke tempat yang anda sukai — beritahu kami perkara yang anda fikirkan.",
+    "reviews": "Apa yang pelanggan kami katakan",
+    "previous": "Ulasan sebelumnya",
+    "next": "Ulasan seterusnya",
+    "loading": "Memuatkan ulasan pengembara…",
+    "empty": "Ada soalan tentang perjalanan bersama kami? Hubungi pasukan kami."
+  },
+  "fa": {
+    "intro": "کشوری برای کشف افرادی برای ارتباط با سفری برای ساختن خودتان",
+    "landscape": "در سواحل ایسیک کول",
+    "yurt": "کمی به زندگی عشایری نزدیکتر شده است",
+    "story": "سفرهای خوب با ارتباط انسانی آغاز می شود.",
+    "explore": "راه شما به قرقیزستان",
+    "cards": [
+      [
+        "جایی خود را پیدا کنید",
+        "دریاچه‌ها، دره‌های کوهستانی و مکان‌هایی که ارزش وقت گذاشتن را دارند را کاوش کنید."
+      ],
+      [
+        "فضا را برای ماجراجویی باز کنید",
+        "برنامه های سفر را مرور کنید و سفری متناسب با علایق خود پیدا کنید."
+      ],
+      [
+        "کمی عمیق تر برو",
+        "قبل از حرکت، داستان ها و راهنماهای عملی را بخوانید."
+      ]
+    ],
+    "journey": "از یک ایده تا ماجراجویی بعدی شما.",
+    "steps": [
+      [
+        "الهام بگیرید",
+        "با یک مکان، منظره یا تجربه ای که با شما می ماند شروع کنید."
+      ],
+      [
+        "برنامه های خود را به ما بگویید",
+        "تاریخ ها، اندازه گروه و کارهایی که دوست دارید انجام دهید را به اشتراک بگذارید."
+      ],
+      [
+        "جزئیات را با هم شکل دهید",
+        "در مورد مسیر، سرعت و ترتیبات عملی با تیم ما بحث کنید."
+      ]
+    ],
+    "invitation": "داستان بعدی شما از اینجا شروع می شود.",
+    "invitationBody": "اولین بازدید یا بازگشت به جایی که دوست دارید - به ما بگویید چه چیزی در ذهن دارید.",
+    "reviews": "آنچه مشتریان ما می گویند",
+    "previous": "بررسی های قبلی",
+    "next": "بررسی های بعدی",
+    "loading": "در حال بارگیری نظرات مسافران…",
+    "empty": "در مورد سفر با ما سوالی دارید؟ با تیم ما در تماس باشید."
+  },
+  "az": {
+    "intro": "Kəşf ediləcək ölkə. Əlaqə üçün insanlar. Özünüzü etmək üçün səyahət.",
+    "landscape": "İssık-Kul sahillərində",
+    "yurt": "Köçəri həyata bir az daha yaxın",
+    "story": "Yaxşı səyahətlər insan əlaqəsi ilə başlayır.",
+    "explore": "Qırğızıstana yolunuz",
+    "cards": [
+      [
+        "Özünüzü bir yerdə tapın",
+        "Gölləri, dağ dərələrini və vaxt ayırmağa dəyər yerləri araşdırın."
+      ],
+      [
+        "Macəra üçün yer açın",
+        "Marşrutları nəzərdən keçirin və maraqlarınıza uyğun səyahət tapın."
+      ],
+      [
+        "Bir az daha dərinə get",
+        "Yola çıxmazdan əvvəl hekayələri və praktiki təlimatları oxuyun."
+      ]
+    ],
+    "journey": "İdeyadan növbəti macəranıza qədər.",
+    "steps": [
+      [
+        "İlham alın",
+        "Bir yer, mənzərə və ya sizinlə qalan bir təcrübə ilə başlayın."
+      ],
+      [
+        "Planlarınızı bizə bildirin",
+        "Tarixlərinizi, qrup ölçüsünü və etmək istədiyiniz işləri paylaşın."
+      ],
+      [
+        "Detalları birlikdə formalaşdırın",
+        "Komandamızla marşrutu, tempi və praktiki tənzimləmələri müzakirə edin."
+      ]
+    ],
+    "invitation": "Növbəti hekayəniz burada başlayır.",
+    "invitationBody": "Sevdiyiniz yerə ilk səfər və ya qayıdış - fikrinizi bizə bildirin.",
+    "reviews": "Müştərilərimiz nə deyir",
+    "previous": "Əvvəlki rəylər",
+    "next": "Növbəti rəylər",
+    "loading": "Səyahətçi rəyləri yüklənir...",
+    "empty": "Bizimlə səyahət haqqında sualınız var? Komandamızla əlaqə saxlayın."
+  },
+  "uk": {
+    "intro": "Країна, яку варто відкрити. Люди, з якими можна спілкуватися. Подорож для себе.",
+    "landscape": "На берегах Іссик-Куля",
+    "yurt": "Трохи ближче до кочового життя",
+    "story": "Хороші подорожі починаються з людського спілкування.",
+    "explore": "Ваш шлях до Киргизстану",
+    "cards": [
+      [
+        "Знайдіть своє місце",
+        "Досліджуйте озера, гірські долини та місця, на які варто приділити час."
+      ],
+      [
+        "Звільніть місце для пригод",
+        "Перегляньте маршрути та знайдіть подорож, яка відповідає вашим інтересам."
+      ],
+      [
+        "Пройдіть трохи глибше",
+        "Прочитайте історії та практичні посібники перед тим, як вирушати."
+      ]
+    ],
+    "journey": "Від ідеї до вашої наступної пригоди.",
+    "steps": [
+      [
+        "Надихайтеся",
+        "Почніть із місця, пейзажу чи досвіду, який залишиться з вами."
+      ],
+      [
+        "Розкажіть про свої плани",
+        "Поділіться своїми датами, розміром групи та тим, чим би ви хотіли займатися."
+      ],
+      [
+        "Сформуйте деталі разом",
+        "Обговоріть з нашою командою маршрут, темп і практичні заходи."
+      ]
+    ],
+    "invitation": "Ваша наступна історія починається тут.",
+    "invitationBody": "Перший візит або повернення туди, де ви любите — розкажіть нам, що ви плануєте.",
+    "reviews": "Що говорять наші клієнти",
+    "previous": "Попередні огляди",
+    "next": "Наступні огляди",
+    "loading": "Завантаження відгуків мандрівників…",
+    "empty": "Маєте запитання щодо подорожі з нами? Зв'яжіться з нашою командою."
+  },
+  "pl": {
+    "intro": "Kraj do odkrycia. Ludzie, z którymi można się połączyć. Podróż, w której możesz stworzyć własną.",
+    "landscape": "Na wybrzeżu Issyk-Kul",
+    "yurt": "Trochę bliżej koczowniczego życia",
+    "story": "Dobre podróże zaczynają się od kontaktu międzyludzkiego.",
+    "explore": "Twoja droga do Kirgistanu",
+    "cards": [
+      [
+        "Znajdź swoje miejsce",
+        "Odkrywaj jeziora, górskie doliny i miejsca, na które warto poświęcić czas."
+      ],
+      [
+        "Zrób miejsce na przygodę",
+        "Przeglądaj trasy i znajdź podróż odpowiadającą Twoim zainteresowaniom."
+      ],
+      [
+        "Zejdź trochę głębiej",
+        "Zanim wyruszysz, przeczytaj historie i praktyczne przewodniki."
+      ]
+    ],
+    "journey": "Od pomysłu do kolejnej przygody.",
+    "steps": [
+      [
+        "Zainspiruj się",
+        "Zacznij od miejsca, krajobrazu lub doświadczenia, które z Tobą pozostanie."
+      ],
+      [
+        "Opowiedz nam o swoich planach",
+        "Podziel się datami, wielkością grupy i rzeczami, które chciałbyś robić."
+      ],
+      [
+        "Wspólnie uformuj szczegóły",
+        "Omów trasę, tempo i ustalenia praktyczne z naszym zespołem."
+      ]
+    ],
+    "invitation": "Twoja następna historia zaczyna się tutaj.",
+    "invitationBody": "Pierwsza wizyta lub powrót do ulubionego miejsca – powiedz nam, co masz na myśli.",
+    "reviews": "Co mówią nasi klienci",
+    "previous": "Poprzednie recenzje",
+    "next": "Kolejne recenzje",
+    "loading": "Ładowanie recenzji podróżnych…",
+    "empty": "Masz pytanie dotyczące podróżowania z nami? Skontaktuj się z naszym zespołem."
+  },
+  "nl": {
+    "intro": "Een land om te ontdekken. Mensen om mee te verbinden. Een reis om zelf te maken.",
+    "landscape": "Aan de oevers van Issyk-Kul",
+    "yurt": "Een beetje dichter bij het nomadenleven",
+    "story": "Goede reizen beginnen met een menselijke connectie.",
+    "explore": "Op weg naar Kirgizië",
+    "cards": [
+      [
+        "Vind jouw ergens",
+        "Verken meren, bergvalleien en plaatsen die de moeite waard zijn om de tijd voor te nemen."
+      ],
+      [
+        "Maak ruimte voor avontuur",
+        "Blader door reisroutes en vind een reis die bij uw interesses past."
+      ],
+      [
+        "Ga een beetje dieper",
+        "Lees verhalen en praktische gidsen voordat u op pad gaat."
+      ]
+    ],
+    "journey": "Van een idee naar je volgende avontuur.",
+    "steps": [
+      [
+        "Laat je inspireren",
+        "Begin met een plek, een landschap of een ervaring die je bijblijft."
+      ],
+      [
+        "Vertel ons uw plannen",
+        "Deel uw data, groepsgrootte en de dingen die u graag zou willen doen."
+      ],
+      [
+        "Vorm samen de details",
+        "Bespreek de route, het tempo en de praktische afspraken met ons team."
+      ]
+    ],
+    "invitation": "Je volgende verhaal begint hier.",
+    "invitationBody": "Een eerste bezoek of een terugkeer naar een plek waar u van houdt: vertel ons wat u in gedachten heeft.",
+    "reviews": "Wat onze klanten zeggen",
+    "previous": "Eerdere beoordelingen",
+    "next": "Volgende beoordelingen",
+    "loading": "Reizigersbeoordelingen laden…",
+    "empty": "Heeft u een vraag over reizen met ons? Neem contact op met ons team."
+  },
+  "he": {
+    "intro": "מדינה שצריך לגלות. אנשים להתחבר אליהם. מסע ליצור משלך.",
+    "landscape": "על חופי איסיק-קול",
+    "yurt": "קצת יותר קרוב לחיי נוודים",
+    "story": "מסעות טובים מתחילים בחיבור אנושי.",
+    "explore": "הדרך שלך לקירגיזסטן",
+    "cards": [
+      [
+        "מצא את שלך איפשהו",
+        "חקור אגמים, עמקים הרים ומקומות ששווה להקדיש להם את הזמן."
+      ],
+      [
+        "פנה מקום להרפתקה",
+        "עיין במסלולים ומצא מסע שמתאים לתחומי העניין שלך."
+      ],
+      [
+        "לך קצת יותר לעומק",
+        "קרא סיפורים ומדריכים מעשיים לפני שאתה יוצא לדרך."
+      ]
+    ],
+    "journey": "מרעיון להרפתקה הבאה שלך.",
+    "steps": [
+      [
+        "קבל השראה",
+        "התחילו ממקום, נוף או חוויה שנשארים אתכם."
+      ],
+      [
+        "ספר לנו את התוכניות שלך",
+        "שתף את התאריכים שלך, גודל הקבוצה והדברים שתרצה לעשות."
+      ],
+      [
+        "עצבו יחד את הפרטים",
+        "שוחח עם הצוות שלנו על המסלול, הקצב והסידורים המעשיים."
+      ]
+    ],
+    "invitation": "הסיפור הבא שלך מתחיל כאן.",
+    "invitationBody": "ביקור ראשון או חזרה למקום שאתה אוהב - ספר לנו מה יש לך בראש.",
+    "reviews": "מה הלקוחות שלנו אומרים",
+    "previous": "ביקורות קודמות",
+    "next": "ביקורות הבאות",
+    "loading": "טוען ביקורות מטיילים...",
+    "empty": "יש לכם שאלה לגבי טיול איתנו? צור קשר עם הצוות שלנו."
+  },
+  "cs": {
+    "intro": "Země k objevování. Lidé, se kterými se lze spojit. Cesta k vytvoření vlastního.",
+    "landscape": "Na břehu Issyk-Kul",
+    "yurt": "O něco blíže kočovnému životu",
+    "story": "Dobré cesty začínají lidským spojením.",
+    "explore": "Vaše cesta do Kyrgyzstánu",
+    "cards": [
+      [
+        "Najděte si někde to své",
+        "Prozkoumejte jezera, horská údolí a místa, která stojí za to udělat si čas."
+      ],
+      [
+        "Udělejte prostor pro dobrodružství",
+        "Procházejte itineráře a najděte cestu, která vyhovuje vašim zájmům."
+      ],
+      [
+        "Jděte trochu hlouběji",
+        "Než vyrazíte, přečtěte si příběhy a praktické průvodce."
+      ]
+    ],
+    "journey": "Od nápadu k dalšímu dobrodružství.",
+    "steps": [
+      [
+        "Nechte se inspirovat",
+        "Začněte s místem, krajinou nebo zážitkem, který ve vás zůstane."
+      ],
+      [
+        "Řekněte nám své plány",
+        "Podělte se o svá data, velikost skupiny a věci, které byste rádi dělali."
+      ],
+      [
+        "Vytvarujte detaily dohromady",
+        "Prodiskutujte s naším týmem trasu, tempo a praktická opatření."
+      ]
+    ],
+    "invitation": "Váš další příběh začíná zde.",
+    "invitationBody": "První návštěva nebo návrat někam, kde se vám líbí – řekněte nám, co máte na mysli.",
+    "reviews": "Co říkají naši klienti",
+    "previous": "Předchozí recenze",
+    "next": "Další recenze",
+    "loading": "Načítání recenzí cestovatelů…",
+    "empty": "Máte dotaz ohledně cestování s námi? Spojte se s naším týmem."
+  },
+  "pt": {
+    "intro": "Um país para descobrir. Pessoas com quem se conectar. Uma jornada para fazer a sua.",
+    "landscape": "Nas margens de Issyk-Kul",
+    "yurt": "Um pouco mais perto da vida nômade",
+    "story": "Boas jornadas começam com uma conexão humana.",
+    "explore": "Seu caminho para o Quirguistão",
+    "cards": [
+      [
+        "Encontre o seu lugar",
+        "Explore lagos, vales montanhosos e lugares pelos quais vale a pena dedicar seu tempo."
+      ],
+      [
+        "Abra espaço para a aventura",
+        "Navegue pelos itinerários e encontre uma viagem que atenda aos seus interesses."
+      ],
+      [
+        "Vá um pouco mais fundo",
+        "Leia histórias e guias práticos antes de partir."
+      ]
+    ],
+    "journey": "Da ideia à sua próxima aventura.",
+    "steps": [
+      [
+        "Inspire-se",
+        "Comece com um lugar, uma paisagem ou uma experiência que fique com você."
+      ],
+      [
+        "Conte-nos seus planos",
+        "Compartilhe suas datas, tamanho do grupo e as coisas que você gostaria de fazer."
+      ],
+      [
+        "Molde os detalhes juntos",
+        "Discuta a rota, o ritmo e as providências práticas com nossa equipe."
+      ]
+    ],
+    "invitation": "Sua próxima história começa aqui.",
+    "invitationBody": "Uma primeira visita ou um regresso a um lugar que adora – diga-nos o que tem em mente.",
+    "reviews": "O que nossos clientes dizem",
+    "previous": "Avaliações anteriores",
+    "next": "Próximas avaliações",
+    "loading": "Carregando avaliações de viajantes…",
+    "empty": "Tem alguma dúvida sobre viajar conosco? Entre em contato com nossa equipe."
+  },
+  "id": {
+    "intro": "Sebuah negara untuk dijelajahi. Orang-orang yang bisa dihubungi. Sebuah perjalanan untuk membuat perjalanan Anda sendiri.",
+    "landscape": "Di tepi Issyk-Kul",
+    "yurt": "Sedikit lebih dekat dengan kehidupan nomaden",
+    "story": "Perjalanan yang baik dimulai dengan hubungan antarmanusia.",
+    "explore": "Jalan Anda ke Kyrgyzstan",
+    "cards": [
+      [
+        "Temukan tempatmu",
+        "Jelajahi danau, lembah pegunungan, dan tempat-tempat yang layak untuk Anda luangkan waktu."
+      ],
+      [
+        "Berikan ruang untuk petualangan",
+        "Jelajahi rencana perjalanan dan temukan perjalanan yang sesuai dengan minat Anda."
+      ],
+      [
+        "Masuk lebih dalam",
+        "Bacalah cerita dan panduan praktis sebelum Anda berangkat."
+      ]
+    ],
+    "journey": "Dari ide hingga petualangan Anda berikutnya.",
+    "steps": [
+      [
+        "Dapatkan inspirasi",
+        "Mulailah dengan suatu tempat, lanskap, atau pengalaman yang selalu Anda ingat."
+      ],
+      [
+        "Beritahu kami rencana Anda",
+        "Bagikan tanggal Anda, ukuran grup, dan hal-hal yang ingin Anda lakukan."
+      ],
+      [
+        "Bentuk detailnya menjadi satu",
+        "Diskusikan rute, kecepatan dan pengaturan praktis dengan tim kami."
+      ]
+    ],
+    "invitation": "Kisah Anda selanjutnya dimulai di sini.",
+    "invitationBody": "Kunjungan pertama atau kembali ke tempat yang Anda sukai — beri tahu kami apa yang Anda pikirkan.",
+    "reviews": "Apa yang klien kami katakan",
+    "previous": "Ulasan sebelumnya",
+    "next": "Ulasan selanjutnya",
+    "loading": "Memuat ulasan wisatawan…",
+    "empty": "Punya pertanyaan tentang bepergian bersama kami? Hubungi tim kami."
+  },
+  "th": {
+    "intro": "ประเทศที่จะค้นพบ ผู้คนที่จะเชื่อมต่อด้วย การเดินทางเพื่อสร้างของคุณเอง",
+    "landscape": "บนชายฝั่งของ Issyk-Kul",
+    "yurt": "ใกล้ชิดกับชีวิตเร่ร่อนมากขึ้นอีกนิด",
+    "story": "การเดินทางที่ดีเริ่มต้นจากการมีมนุษยสัมพันธ์",
+    "explore": "เข้าสู่คีร์กีซสถาน",
+    "cards": [
+      [
+        "ค้นหาที่ไหนสักแห่งของคุณ",
+        "สำรวจทะเลสาบ หุบเขาบนภูเขา และสถานที่ที่ควรค่าแก่การสละเวลาไป"
+      ],
+      [
+        "สร้างพื้นที่สำหรับการผจญภัย",
+        "เรียกดูแผนการเดินทางและค้นหาการเดินทางที่เหมาะกับความสนใจของคุณ"
+      ],
+      [
+        "ลึกลงไปอีกหน่อย",
+        "อ่านเรื่องราวและคำแนะนำที่เป็นประโยชน์ก่อนออกเดินทาง"
+      ]
+    ],
+    "journey": "จากแนวคิดสู่การผจญภัยครั้งต่อไปของคุณ",
+    "steps": [
+      [
+        "รับแรงบันดาลใจ",
+        "เริ่มต้นด้วยสถานที่ ภูมิทัศน์ หรือประสบการณ์ที่จะอยู่กับคุณ"
+      ],
+      [
+        "บอกแผนการของคุณให้เราทราบ",
+        "แบ่งปันวันที่ ขนาดกลุ่ม และสิ่งที่คุณอยากทำ"
+      ],
+      [
+        "ประกอบรายละเอียดเข้าด้วยกัน",
+        "หารือเกี่ยวกับเส้นทาง อัตราความเร็ว และการเตรียมการในทางปฏิบัติกับทีมงานของเรา"
+      ]
+    ],
+    "invitation": "เรื่องราวต่อไปของคุณเริ่มต้นที่นี่",
+    "invitationBody": "การมาเยือนครั้งแรกหรือการกลับไปยังสถานที่ที่คุณชื่นชอบ — บอกเราว่าคุณคิดอะไรในใจ",
+    "reviews": "สิ่งที่ลูกค้าของเราพูด",
+    "previous": "รีวิวก่อนหน้านี้",
+    "next": "รีวิวต่อไป",
+    "loading": "กำลังโหลดรีวิวของนักท่องเที่ยว...",
+    "empty": "มีคำถามเกี่ยวกับการเดินทางกับเราหรือไม่? ติดต่อกับทีมงานของเรา"
+  },
+  "bn": {
+    "intro": "একটি দেশ আবিষ্কার করার জন্য. সাথে সংযোগ করার জন্য মানুষ. আপনার নিজের করতে একটি যাত্রা.",
+    "landscape": "ইসিক-কুলের তীরে",
+    "yurt": "যাযাবর জীবনের একটু কাছাকাছি",
+    "story": "মানবিক সংযোগ দিয়ে শুভ যাত্রা শুরু হয়।",
+    "explore": "কিরগিজস্তানে আপনার পথ",
+    "cards": [
+      [
+        "আপনার কোথাও খুঁজে নিন",
+        "হ্রদ, পর্বত উপত্যকা এবং আপনার সময় নেওয়ার মতো জায়গাগুলি অন্বেষণ করুন।"
+      ],
+      [
+        "অ্যাডভেঞ্চারের জন্য জায়গা তৈরি করুন",
+        "ভ্রমণপথ ব্রাউজ করুন এবং আপনার আগ্রহের সাথে মানানসই একটি যাত্রা খুঁজুন।"
+      ],
+      [
+        "একটু গভীরে যান",
+        "যাত্রা শুরু করার আগে গল্প এবং ব্যবহারিক গাইড পড়ুন।"
+      ]
+    ],
+    "journey": "একটি ধারণা থেকে আপনার পরবর্তী সাহসিক কাজ.",
+    "steps": [
+      [
+        "অনুপ্রাণিত হন",
+        "একটি জায়গা, একটি ল্যান্ডস্কেপ বা একটি অভিজ্ঞতা দিয়ে শুরু করুন যা আপনার সাথে থাকে।"
+      ],
+      [
+        "আমাদের আপনার পরিকল্পনা বলুন",
+        "আপনার তারিখ, গোষ্ঠীর আকার এবং আপনি যে জিনিসগুলি করতে চান তা ভাগ করুন।"
+      ],
+      [
+        "একসাথে বিবরণ আকার",
+        "আমাদের দলের সাথে রুট, গতি এবং ব্যবহারিক ব্যবস্থা নিয়ে আলোচনা করুন।"
+      ]
+    ],
+    "invitation": "আপনার পরবর্তী গল্প এখানে শুরু.",
+    "invitationBody": "আপনার পছন্দের জায়গায় প্রথম দেখা বা ফিরে আসা — আপনার মনে কী আছে তা আমাদের বলুন।",
+    "reviews": "আমাদের ক্লায়েন্টরা কি বলে",
+    "previous": "পূর্ববর্তী পর্যালোচনা",
+    "next": "পরবর্তী পর্যালোচনা",
+    "loading": "ভ্রমণকারীদের পর্যালোচনা লোড হচ্ছে...",
+    "empty": "আমাদের সাথে ভ্রমণ সম্পর্কে একটি প্রশ্ন আছে? আমাদের দলের সাথে যোগাযোগ করুন."
+  },
+  "ne": {
+    "intro": "पत्ता लगाउने देश। मानिसहरु संग जडान गर्न। आफ्नो बनाउन को लागी एक यात्रा।",
+    "landscape": "Issyk-Kul को किनारमा",
+    "yurt": "घुमन्ते जीवनको अलि नजिक",
+    "story": "राम्रो यात्रा मानव जडानबाट सुरु हुन्छ।",
+    "explore": "किर्गिस्तानमा तपाईंको बाटो",
+    "cards": [
+      [
+        "आफ्नो कतै खोज्नुहोस्",
+        "तालहरू, पहाडी उपत्यकाहरू र तपाईंको समय लिन लायक ठाउँहरू अन्वेषण गर्नुहोस्।"
+      ],
+      [
+        "साहसिक कार्यको लागि ठाउँ बनाउनुहोस्",
+        "यात्रा कार्यक्रम ब्राउज गर्नुहोस् र तपाईंको रुचिहरू मिल्ने यात्रा फेला पार्नुहोस्।"
+      ],
+      [
+        "अलि गहिरो जानुहोस्",
+        "तपाईंले यात्रा गर्नु अघि कथाहरू र व्यावहारिक गाइडहरू पढ्नुहोस्।"
+      ]
+    ],
+    "journey": "एक विचार देखि आफ्नो अर्को साहसिक।",
+    "steps": [
+      [
+        "प्रेरणा पाउनुहोस्",
+        "एक ठाउँ, एक परिदृश्य वा एक अनुभव संग सुरु गर्नुहोस्।"
+      ],
+      [
+        "हामीलाई आफ्नो योजना बताउनुहोस्",
+        "आफ्नो मितिहरू, समूह आकार र तपाईं गर्न मनपर्ने चीजहरू साझेदारी गर्नुहोस्।"
+      ],
+      [
+        "विवरणहरू सँगै आकार गर्नुहोस्",
+        "हाम्रो टोलीसँग रुट, गति र व्यावहारिक व्यवस्थाबारे छलफल गर्नुहोस्।"
+      ]
+    ],
+    "invitation": "तपाईंको अर्को कथा यहाँ सुरु हुन्छ।",
+    "invitationBody": "पहिलो भ्रमण वा तपाईंलाई मनपर्ने ठाउँमा फर्कने — तपाईंको मनमा के छ हामीलाई भन्नुहोस्।",
+    "reviews": "हाम्रा ग्राहकहरू के भन्छन्",
+    "previous": "अघिल्लो समीक्षाहरू",
+    "next": "अर्को समीक्षाहरू",
+    "loading": "यात्री समीक्षाहरू लोड गर्दै...",
+    "empty": "हामी संग यात्रा को बारे मा एक प्रश्न छ? हाम्रो टोलीसँग सम्पर्कमा रहनुहोस्।"
+  },
+  "vi": {
+    "intro": "Một đất nước để khám phá. Mọi người để kết nối với. Một cuộc hành trình để làm cho riêng bạn.",
+    "landscape": "Trên bờ Issyk-Kul",
+    "yurt": "Gần hơn một chút với cuộc sống du mục",
+    "story": "Những hành trình tốt đẹp bắt đầu từ sự kết nối giữa con người với nhau.",
+    "explore": "Đường đến Kyrgyzstan",
+    "cards": [
+      [
+        "Tìm nơi nào đó của bạn",
+        "Khám phá hồ nước, thung lũng núi và những địa điểm đáng để bạn dành thời gian."
+      ],
+      [
+        "Nhường chỗ cho cuộc phiêu lưu",
+        "Duyệt qua hành trình và tìm một hành trình phù hợp với sở thích của bạn."
+      ],
+      [
+        "Đi sâu hơn một chút",
+        "Đọc những câu chuyện và hướng dẫn thực tế trước khi bạn bắt đầu."
+      ]
+    ],
+    "journey": "Từ một ý tưởng đến cuộc phiêu lưu tiếp theo của bạn.",
+    "steps": [
+      [
+        "Lấy cảm hứng",
+        "Bắt đầu với một địa điểm, một phong cảnh hoặc một trải nghiệm đọng lại trong bạn."
+      ],
+      [
+        "Hãy cho chúng tôi biết kế hoạch của bạn",
+        "Chia sẻ ngày tháng, quy mô nhóm và những điều bạn muốn làm."
+      ],
+      [
+        "Tạo hình các chi tiết với nhau",
+        "Thảo luận về lộ trình, tốc độ và sắp xếp thực tế với nhóm của chúng tôi."
+      ]
+    ],
+    "invitation": "Câu chuyện tiếp theo của bạn bắt đầu từ đây.",
+    "invitationBody": "Chuyến thăm đầu tiên hoặc quay lại nơi bạn yêu thích — hãy cho chúng tôi biết suy nghĩ của bạn.",
+    "reviews": "Khách hàng của chúng tôi nói gì",
+    "previous": "Đánh giá trước đó",
+    "next": "Đánh giá tiếp theo",
+    "loading": "Đang tải đánh giá của khách du lịch…",
+    "empty": "Bạn có câu hỏi về việc đi du lịch với chúng tôi? Hãy liên lạc với đội ngũ của chúng tôi."
+  },
+  "ka": {
+    "intro": "აღმოსაჩენი ქვეყანა. ხალხი დასაკავშირებლად. მოგზაურობა საკუთარი თავის შესაქმნელად.",
+    "landscape": "ისიკ-კულის ნაპირებზე",
+    "yurt": "ცოტა უფრო ახლოს მომთაბარე ცხოვრებასთან",
+    "story": "კარგი მოგზაურობა იწყება ადამიანური კავშირით.",
+    "explore": "თქვენი გზა ყირგიზეთში",
+    "cards": [
+      [
+        "იპოვე შენი სადმე",
+        "გამოიკვლიეთ ტბები, მთის ხეობები და ადგილები, რისთვისაც ღირს თქვენი დრო."
+      ],
+      [
+        "გაათავისუფლეთ ადგილი თავგადასავლებისთვის",
+        "დაათვალიერეთ მარშრუტები და იპოვეთ მოგზაურობა, რომელიც შეესაბამება თქვენს ინტერესებს."
+      ],
+      [
+        "ცოტა ღრმად შედი",
+        "წაიკითხეთ ისტორიები და პრაქტიკული სახელმძღვანელოები სანამ წახვალთ."
+      ]
+    ],
+    "journey": "იდეიდან თქვენს მომავალ თავგადასავალამდე.",
+    "steps": [
+      [
+        "მიიღეთ შთაგონება",
+        "დაიწყეთ ადგილით, პეიზაჟით ან გამოცდილებით, რომელიც დარჩება თქვენთან ერთად."
+      ],
+      [
+        "გვითხარით თქვენი გეგმები",
+        "გააზიარეთ თქვენი თარიღები, ჯგუფის ზომა და ის, რისი გაკეთებაც გსურთ."
+      ],
+      [
+        "ჩამოაყალიბეთ დეტალები ერთად",
+        "განიხილეთ მარშრუტი, ტემპი და პრაქტიკული ღონისძიებები ჩვენს გუნდთან ერთად."
+      ]
+    ],
+    "invitation": "შენი შემდეგი ამბავი აქ იწყება.",
+    "invitationBody": "პირველი ვიზიტი ან დაბრუნება იქ, სადაც გიყვარს - გვითხარი რა გაქვს მხედველობაში.",
+    "reviews": "რასაც ჩვენი კლიენტები ამბობენ",
+    "previous": "წინა მიმოხილვები",
+    "next": "შემდეგი მიმოხილვები",
+    "loading": "იტვირთება მოგზაურთა მიმოხილვები…",
+    "empty": "გაქვთ შეკითხვა ჩვენთან ერთად მოგზაურობის შესახებ? დაუკავშირდით ჩვენს გუნდს."
+  },
+  "hy": {
+    "intro": "Երկիր բացահայտելու համար. Մարդիկ, որոնց հետ կարելի է կապ հաստատել: Ճանապարհորդություն՝ սեփականը դարձնելու համար:",
+    "landscape": "Իսիկ-Կուլի ափին",
+    "yurt": "Մի քիչ մոտ քոչվոր կյանքին",
+    "story": "Լավ ճանապարհորդությունները սկսվում են մարդկային կապից:",
+    "explore": "Ձեր ճանապարհը դեպի Ղրղզստան",
+    "cards": [
+      [
+        "Գտեք ձեր ինչ-որ տեղ",
+        "Բացահայտեք լճեր, լեռնային հովիտներ և վայրեր, որոնց համար արժե ժամանակ հատկացնել:"
+      ],
+      [
+        "Տեղ բացեք արկածների համար",
+        "Զննեք երթուղիները և գտեք ձեր հետաքրքրություններին համապատասխան ճանապարհորդություն:"
+      ],
+      [
+        "Մի քիչ խորացեք",
+        "Նախքան մեկնելը կարդացեք պատմություններ և գործնական ուղեցույցներ:"
+      ]
+    ],
+    "journey": "Գաղափարից մինչև ձեր հաջորդ արկած:",
+    "steps": [
+      [
+        "Ոգեշնչվեք",
+        "Սկսեք մի վայրից, լանդշաֆտից կամ փորձառությունից, որը մնում է ձեզ հետ:"
+      ],
+      [
+        "Ասա մեզ քո ծրագրերը",
+        "Կիսեք ձեր ամսաթվերը, խմբի չափը և այն, ինչ կցանկանայիք անել:"
+      ],
+      [
+        "Ձևավորեք մանրամասները միասին",
+        "Քննարկեք երթուղին, տեմպը և գործնական պայմանավորվածությունները մեր թիմի հետ:"
+      ]
+    ],
+    "invitation": "Ձեր հաջորդ պատմությունը սկսվում է այստեղ:",
+    "invitationBody": "Առաջին այցելություն կամ վերադարձ այն վայր, որտեղ դուք սիրում եք, ասեք մեզ, թե ինչ ունեք մտքում:",
+    "reviews": "Ինչ են ասում մեր հաճախորդները",
+    "previous": "Նախորդ ակնարկներ",
+    "next": "Հաջորդ ակնարկներ",
+    "loading": "Ճանապարհորդների կարծիքները բեռնվում են…",
+    "empty": "Հարց ունե՞ք մեզ հետ ճանապարհորդելու վերաբերյալ: Կապ հաստատեք մեր թիմի հետ։"
+  },
+  "mn": {
+    "intro": "Нээх улс. Холбоо барих хүмүүс. Өөрийгөө хийх аялал.",
+    "landscape": "Иссык-Кульгийн эрэг дээр",
+    "yurt": "Нүүдэлчин ахуйдаа арай ойр",
+    "story": "Сайн аялал хүний ​​харилцаанаас эхэлдэг.",
+    "explore": "Киргиз рүү явах зам",
+    "cards": [
+      [
+        "Хаа нэгтээ хай",
+        "Нуур, уулын хөндий, цаг заваа зориулах хэрэгтэй газруудыг судлаарай."
+      ],
+      [
+        "Адал явдалд орон зай гарга",
+        "Маршрутыг үзэж, өөрийн сонирхолд нийцсэн аялалыг олоорой."
+      ],
+      [
+        "Бага зэрэг гүнзгийрээрэй",
+        "Аялахаасаа өмнө түүхүүд болон практик гарын авлагуудыг уншаарай."
+      ]
+    ],
+    "journey": "Санаанаас эхлээд дараагийн адал явдал хүртэл.",
+    "steps": [
+      [
+        "Урам зориг аваарай",
+        "Тантай хамт үлдэх газар, ландшафт эсвэл туршлагаас эхэл."
+      ],
+      [
+        "Төлөвлөгөөгөө бидэнд хэлээрэй",
+        "Болзоо, бүлгийн хэмжээ болон хийх дуртай зүйлсээ хуваалцаарай."
+      ],
+      [
+        "Дэлгэрэнгүйг хамтдаа дүрслээрэй",
+        "Маршрут, хурд, практик зохицуулалтын талаар манай багтай ярилц."
+      ]
+    ],
+    "invitation": "Таны дараагийн түүх эндээс эхэлнэ.",
+    "invitationBody": "Анхны айлчлал эсвэл дуртай газар руугаа буцах - юу бодож байгаагаа бидэнд хэлээрэй.",
+    "reviews": "Манай үйлчлүүлэгчид юу гэж хэлдэг",
+    "previous": "Өмнөх тоймууд",
+    "next": "Дараагийн тоймууд",
+    "loading": "Аялагчийн сэтгэгдлийг ачаалж байна...",
+    "empty": "Бидэнтэй хамт аялах талаар асуух зүйл байна уу? Манай багтай холбогдоорой."
+  },
+  "be": {
+    "intro": "Краіна для адкрыцця. Людзі, з якімі можна звязацца. Самастойнае падарожжа.",
+    "landscape": "На берагах Ісык-Куля",
+    "yurt": "Крыху бліжэй да качавога жыцця",
+    "story": "Добрыя падарожжы пачынаюцца з чалавечай сувязі.",
+    "explore": "Ваш шлях у Кыргызстан",
+    "cards": [
+      [
+        "Знайдзіце сваё месца",
+        "Даследуйце азёры, горныя даліны і месцы, на якія варта не спяшацца."
+      ],
+      [
+        "Зрабіце месца для прыгод",
+        "Праглядзіце маршруты і знайдзіце падарожжа, якое адпавядае вашым інтарэсам."
+      ],
+      [
+        "Ідзіце крыху глыбей",
+        "Прачытайце гісторыі і практычныя дапаможнікі, перш чым адправіцца ў дарогу."
+      ]
+    ],
+    "journey": "Ад ідэі да вашай наступнай прыгоды.",
+    "steps": [
+      [
+        "Натхніцеся",
+        "Пачніце з месца, ландшафту або вопыту, які застанецца з вамі."
+      ],
+      [
+        "Раскажыце пра свае планы",
+        "Падзяліцеся сваімі датамі, памерам групы і тым, чым вы хацелі б заняцца."
+      ],
+      [
+        "Сфармуйце дэталі разам",
+        "Абмяркуйце маршрут, тэмп і практычныя дамоўленасці з нашай камандай."
+      ]
+    ],
+    "invitation": "Ваша наступная гісторыя пачынаецца тут.",
+    "invitationBody": "Першы візіт або вяртанне туды, дзе вы любіце - раскажыце, што вы маеце на ўвазе.",
+    "reviews": "Што кажуць нашы кліенты",
+    "previous": "Папярэднія агляды",
+    "next": "Наступныя агляды",
+    "loading": "Загрузка водгукаў падарожнікаў…",
+    "empty": "Ёсць пытанне аб падарожжы з намі? Звяжыцеся з нашай камандай."
+  },
+  "ro": {
+    "intro": "O țară de descoperit. Oameni cu care să te conectezi. O călătorie pe care să o faci singur.",
+    "landscape": "Pe malul Issyk-Kul",
+    "yurt": "Un pic mai aproape de viața nomade",
+    "story": "Călătoriile bune încep cu o conexiune umană.",
+    "explore": "Drumul tău în Kârgâzstan",
+    "cards": [
+      [
+        "Găsește-ți undeva",
+        "Explorați lacuri, văi de munte și locuri pentru care merită să vă petreceți timpul."
+      ],
+      [
+        "Fă loc aventurii",
+        "Răsfoiți itinerarii și găsiți o călătorie care se potrivește intereselor dvs."
+      ],
+      [
+        "Mergi puțin mai adânc",
+        "Citiți povești și ghiduri practice înainte de a porni."
+      ]
+    ],
+    "journey": "De la o idee la următoarea ta aventură.",
+    "steps": [
+      [
+        "Inspiră-te",
+        "Începe cu un loc, un peisaj sau o experiență care rămâne cu tine."
+      ],
+      [
+        "Spune-ne planurile tale",
+        "Împărtășește-ți datele, dimensiunea grupului și lucrurile pe care ți-ar plăcea să le faci."
+      ],
+      [
+        "Modelați detaliile împreună",
+        "Discutați traseul, ritmul și aranjamentele practice cu echipa noastră."
+      ]
+    ],
+    "invitation": "Următoarea ta poveste începe aici.",
+    "invitationBody": "O primă vizită sau o întoarcere într-un loc pe care îl iubești — spune-ne ce ai în minte.",
+    "reviews": "Ce spun clienții noștri",
+    "previous": "Recenzii anterioare",
+    "next": "Următoarele recenzii",
+    "loading": "Se încarcă recenziile călătorilor…",
+    "empty": "Ai o întrebare despre călătoria cu noi? Luați legătura cu echipa noastră."
+  },
+  "sv": {
+    "intro": "Ett land att upptäcka. Människor att få kontakt med. En resa att göra din egen.",
+    "landscape": "På Issyk-Kuls stränder",
+    "yurt": "Lite närmare nomadlivet",
+    "story": "Bra resor börjar med en mänsklig kontakt.",
+    "explore": "Din väg in i Kirgizistan",
+    "cards": [
+      [
+        "Hitta din någonstans",
+        "Utforska sjöar, bergsdalar och platser värda att ta dig tid till."
+      ],
+      [
+        "Gör plats för äventyr",
+        "Bläddra i resplaner och hitta en resa som passar dina intressen."
+      ],
+      [
+        "Gå lite djupare",
+        "Läs berättelser och praktiska guider innan du ger dig av."
+      ]
+    ],
+    "journey": "Från en idé till ditt nästa äventyr.",
+    "steps": [
+      [
+        "Låt dig inspireras",
+        "Börja med en plats, ett landskap eller en upplevelse som stannar hos dig."
+      ],
+      [
+        "Berätta för oss dina planer",
+        "Dela dina datum, gruppstorlek och saker du skulle älska att göra."
+      ],
+      [
+        "Forma detaljerna tillsammans",
+        "Diskutera rutten, tempot och praktiska arrangemang med vårt team."
+      ]
+    ],
+    "invitation": "Din nästa historia börjar här.",
+    "invitationBody": "Ett första besök eller att återvända till någonstans du älskar – berätta för oss vad du har i åtanke.",
+    "reviews": "Vad våra kunder säger",
+    "previous": "Tidigare recensioner",
+    "next": "Nästa recensioner",
+    "loading": "Laddar resenärers recensioner...",
+    "empty": "Har du frågor om att resa med oss? Ta kontakt med vårt team."
+  },
+  "nb": {
+    "intro": "Et land å oppdage. Folk å få kontakt med. En reise for å lage din egen.",
+    "landscape": "På bredden av Issyk-Kul",
+    "yurt": "Litt nærmere nomadelivet",
+    "story": "Gode ​​reiser begynner med en menneskelig forbindelse.",
+    "explore": "Din vei inn i Kirgisistan",
+    "cards": [
+      [
+        "Finn din et sted",
+        "Utforsk innsjøer, fjelldaler og steder det er verdt å ta seg tid til."
+      ],
+      [
+        "Gjør plass til eventyr",
+        "Bla gjennom reiseruter og finn en reise som passer dine interesser."
+      ],
+      [
+        "Gå litt dypere",
+        "Les historier og praktiske veiledninger før du setter i gang."
+      ]
+    ],
+    "journey": "Fra en idé til ditt neste eventyr.",
+    "steps": [
+      [
+        "Bli inspirert",
+        "Start med et sted, et landskap eller en opplevelse som blir med deg."
+      ],
+      [
+        "Fortell oss dine planer",
+        "Del datoene dine, gruppestørrelsen og tingene du kunne tenke deg å gjøre."
+      ],
+      [
+        "Form detaljene sammen",
+        "Diskuter rute, tempo og praktiske arrangementer med teamet vårt."
+      ]
+    ],
+    "invitation": "Din neste historie starter her.",
+    "invitationBody": "Et første besøk eller en retur til et sted du elsker - fortell oss hva du har i tankene.",
+    "reviews": "Hva våre kunder sier",
+    "previous": "Tidligere anmeldelser",
+    "next": "Neste anmeldelser",
+    "loading": "Laster inn reiseanmeldelser …",
+    "empty": "Har du spørsmål om å reise med oss? Ta kontakt med teamet vårt."
+  },
+  "da": {
+    "intro": "Et land at opdage. Mennesker at forbinde med. En rejse til at lave din egen.",
+    "landscape": "Ved bredden af ​​Issyk-Kul",
+    "yurt": "Lidt tættere på nomadelivet",
+    "story": "Gode ​​rejser begynder med en menneskelig forbindelse.",
+    "explore": "Din vej ind i Kirgisistan",
+    "cards": [
+      [
+        "Find dit et sted",
+        "Udforsk søer, bjergdale og steder, der er værd at bruge tid på."
+      ],
+      [
+        "Giv plads til eventyr",
+        "Gennemse rejseplaner og find en rejse, der passer til dine interesser."
+      ],
+      [
+        "Gå lidt dybere",
+        "Læs historier og praktiske vejledninger, før du tager afsted."
+      ]
+    ],
+    "journey": "Fra en idé til dit næste eventyr.",
+    "steps": [
+      [
+        "Bliv inspireret",
+        "Start med et sted, et landskab eller en oplevelse, der bliver hos dig."
+      ],
+      [
+        "Fortæl os dine planer",
+        "Del dine datoer, gruppestørrelse og de ting, du ville elske at lave."
+      ],
+      [
+        "Form detaljerne sammen",
+        "Diskuter ruten, tempoet og praktiske arrangementer med vores team."
+      ]
+    ],
+    "invitation": "Din næste historie starter her.",
+    "invitationBody": "Et første besøg eller en tilbagevenden til et sted, du elsker - fortæl os, hvad du har i tankerne.",
+    "reviews": "Hvad vores kunder siger",
+    "previous": "Tidligere anmeldelser",
+    "next": "Næste anmeldelser",
+    "loading": "Indlæser rejsendes anmeldelser...",
+    "empty": "Har du et spørgsmål om at rejse med os? Kom i kontakt med vores team."
+  },
+  "fi": {
+    "intro": "Maa, joka on löydettävä. Ihmisiä, joihin pitää yhteyttä. Matka tehdä omasi.",
+    "landscape": "Issyk-Kulin rannalla",
+    "yurt": "Hieman lähempänä nomadielämää",
+    "story": "Hyvät matkat alkavat ihmissuhteesta.",
+    "explore": "Tiesi Kirgisiaan",
+    "cards": [
+      [
+        "Etsi jonnekin",
+        "Tutustu järviin, vuoristolaaksoihin ja paikkoihin, joihin kannattaa varata aikaa."
+      ],
+      [
+        "Tee tilaa seikkailulle",
+        "Selaa reittejä ja löydä kiinnostuksesi mukainen matka."
+      ],
+      [
+        "Mene vähän syvemmälle",
+        "Lue tarinoita ja käytännön oppaita ennen kuin lähdet liikkeelle."
+      ]
+    ],
+    "journey": "Ideasta seuraavaan seikkailuun.",
+    "steps": [
+      [
+        "Inspiroidu",
+        "Aloita paikasta, maisemasta tai kokemuksesta, joka pysyy mukanasi."
+      ],
+      [
+        "Kerro meille suunnitelmasi",
+        "Jaa päivämäärät, ryhmäkoko ja asiat, joita haluaisit tehdä."
+      ],
+      [
+        "Muotoile yksityiskohdat yhdessä",
+        "Keskustele reitistä, tahdista ja käytännön järjestelyistä tiimimme kanssa."
+      ]
+    ],
+    "invitation": "Seuraava tarinasi alkaa tästä.",
+    "invitationBody": "Ensimmäinen vierailu tai paluu paikkaan, josta pidät – kerro meille, mitä sinulla on mielessäsi.",
+    "reviews": "Mitä asiakkaamme sanovat",
+    "previous": "Aiemmat arvostelut",
+    "next": "Seuraavat arvostelut",
+    "loading": "Ladataan matkustajien arvosteluja…",
+    "empty": "Onko sinulla kysyttävää kanssamme matkustamisesta? Ota yhteyttä tiimiimme."
+  },
+  "el": {
+    "intro": "Μια χώρα για να ανακαλύψετε. Άνθρωποι για να συνδεθείτε. Ένα ταξίδι για να κάνετε το δικό σας.",
+    "landscape": "Στις ακτές του Issyk-Kul",
+    "yurt": "Λίγο πιο κοντά στη νομαδική ζωή",
+    "story": "Τα καλά ταξίδια ξεκινούν με μια ανθρώπινη σύνδεση.",
+    "explore": "Ο δρόμος σας για το Κιργιστάν",
+    "cards": [
+      [
+        "Βρείτε κάπου το δικό σας",
+        "Εξερευνήστε λίμνες, κοιλάδες βουνών και μέρη για τα οποία αξίζει να αφιερώσετε χρόνο."
+      ],
+      [
+        "Κάντε χώρο για περιπέτεια",
+        "Περιηγηθείτε στα δρομολόγια και βρείτε ένα ταξίδι που ταιριάζει στα ενδιαφέροντά σας."
+      ],
+      [
+        "Πήγαινε λίγο πιο βαθιά",
+        "Διαβάστε ιστορίες και πρακτικούς οδηγούς πριν ξεκινήσετε."
+      ]
+    ],
+    "journey": "Από μια ιδέα στην επόμενη περιπέτειά σας.",
+    "steps": [
+      [
+        "Εμπνευστείτε",
+        "Ξεκινήστε με ένα μέρος, ένα τοπίο ή μια εμπειρία που μένει μαζί σας."
+      ],
+      [
+        "Πείτε μας τα σχέδιά σας",
+        "Μοιραστείτε τις ημερομηνίες σας, το μέγεθος της ομάδας και τα πράγματα που θα θέλατε να κάνετε."
+      ],
+      [
+        "Διαμορφώστε τις λεπτομέρειες μαζί",
+        "Συζητήστε τη διαδρομή, τον ρυθμό και τις πρακτικές ρυθμίσεις με την ομάδα μας."
+      ]
+    ],
+    "invitation": "Η επόμενη ιστορία σας ξεκινά εδώ.",
+    "invitationBody": "Μια πρώτη επίσκεψη ή μια επιστροφή σε ένα μέρος που αγαπάτε — πείτε μας τι έχετε στο μυαλό σας.",
+    "reviews": "Τι λένε οι πελάτες μας",
+    "previous": "Προηγούμενες κριτικές",
+    "next": "Επόμενες κριτικές",
+    "loading": "Φόρτωση κριτικών ταξιδιωτών…",
+    "empty": "Έχετε κάποια ερώτηση σχετικά με τα ταξίδια μαζί μας; Ελάτε σε επαφή με την ομάδα μας."
+  },
+  "hr": {
+    "intro": "Zemlja koju treba otkriti. Ljudi s kojima se možete povezati. Putovanje koje ćete sami napraviti.",
+    "landscape": "Na obalama Issyk-Kula",
+    "yurt": "Malo bliže nomadskom životu",
+    "story": "Dobra putovanja počinju ljudskom vezom.",
+    "explore": "Vaš put u Kirgistan",
+    "cards": [
+      [
+        "Pronađite svoje negdje",
+        "Istražite jezera, planinske doline i mjesta za koja vrijedi odvojiti vrijeme."
+      ],
+      [
+        "Napravite mjesta za avanturu",
+        "Pregledajte planove puta i pronađite putovanje koje odgovara vašim interesima."
+      ],
+      [
+        "Idi malo dublje",
+        "Pročitajte priče i praktične vodiče prije nego krenete."
+      ]
+    ],
+    "journey": "Od ideje do vaše sljedeće avanture.",
+    "steps": [
+      [
+        "Inspirirajte se",
+        "Započnite s mjestom, krajolikom ili iskustvom koje ostaje za vas."
+      ],
+      [
+        "Recite nam svoje planove",
+        "Podijelite svoje datume, veličinu grupe i stvari koje biste voljeli raditi."
+      ],
+      [
+        "Zajedno oblikujte detalje",
+        "Razgovarajte o ruti, tempu i praktičnim aranžmanima s našim timom."
+      ]
+    ],
+    "invitation": "Vaša sljedeća priča počinje ovdje.",
+    "invitationBody": "Prvi posjet ili povratak na mjesto koje volite — recite nam što imate na umu.",
+    "reviews": "Što kažu naši klijenti",
+    "previous": "Prethodne recenzije",
+    "next": "Sljedeće recenzije",
+    "loading": "Učitavanje recenzija putnika…",
+    "empty": "Imate pitanje o putovanju s nama? Stupite u kontakt s našim timom."
+  },
+  "sr": {
+    "intro": "Земља коју треба открити. Људи са којима се треба повезати. Путовање да направите своје.",
+    "landscape": "На обали Исик-Кула",
+    "yurt": "Мало ближе номадском животу",
+    "story": "Добра путовања почињу људском везом.",
+    "explore": "Ваш пут у Киргистан",
+    "cards": [
+      [
+        "Пронађите своје негде",
+        "Истражите језера, планинске долине и места за која вреди издвојити време."
+      ],
+      [
+        "Направите места за авантуру",
+        "Прегледајте планове пута и пронађите путовање које одговара вашим интересовањима."
+      ],
+      [
+        "Иди мало дубље",
+        "Прочитајте приче и практичне водиче пре него што кренете."
+      ]
+    ],
+    "journey": "Од идеје до ваше следеће авантуре.",
+    "steps": [
+      [
+        "Будите инспирисани",
+        "Почните са местом, пејзажом или искуством које остаје са вама."
+      ],
+      [
+        "Реци нам своје планове",
+        "Поделите своје датуме, величину групе и ствари које бисте волели да радите."
+      ],
+      [
+        "Обликујте детаље заједно",
+        "Разговарајте о рути, темпу и практичним аранжманима са нашим тимом."
+      ]
+    ],
+    "invitation": "Ваша следећа прича почиње овде.",
+    "invitationBody": "Прва посета или повратак неком месту које волите — реците нам шта имате на уму.",
+    "reviews": "Шта кажу наши клијенти",
+    "previous": "Претходне рецензије",
+    "next": "Следећи прегледи",
+    "loading": "Учитавање рецензија путника…",
+    "empty": "Имате питање о путовању са нама? Ступите у контакт са нашим тимом."
+  },
+  "sk": {
+    "intro": "Krajina na objavovanie. Ľudia, s ktorými sa môžete spojiť. Cesta k vytvoreniu vlastného.",
+    "landscape": "Na brehu Issyk-Kul",
+    "yurt": "Trochu bližšie k nomádskemu životu",
+    "story": "Dobré cesty začínajú ľudským spojením.",
+    "explore": "Vaša cesta do Kirgizska",
+    "cards": [
+      [
+        "Nájdite si niekde to svoje",
+        "Preskúmajte jazerá, horské údolia a miesta, ktorým sa oplatí venovať čas."
+      ],
+      [
+        "Urobte priestor pre dobrodružstvo",
+        "Prezrite si itineráre a nájdite cestu, ktorá vyhovuje vašim záujmom."
+      ],
+      [
+        "Choďte trochu hlbšie",
+        "Prečítajte si príbehy a praktických sprievodcov skôr, než vyrazíte."
+      ]
+    ],
+    "journey": "Od nápadu k ďalšiemu dobrodružstvu.",
+    "steps": [
+      [
+        "Nechajte sa inšpirovať",
+        "Začnite s miestom, krajinou alebo zážitkom, ktorý vo vás zostane."
+      ],
+      [
+        "Povedz nám svoje plány",
+        "Zdieľajte svoje dátumy, veľkosť skupiny a veci, ktoré by ste radi robili."
+      ],
+      [
+        "Spoločne tvarujte detaily",
+        "Prediskutujte trasu, tempo a praktické opatrenia s naším tímom."
+      ]
+    ],
+    "invitation": "Váš ďalší príbeh začína tu.",
+    "invitationBody": "Prvá návšteva alebo návrat niekam, ktoré máte radi – povedzte nám, čo máte na mysli.",
+    "reviews": "Čo hovoria naši klienti",
+    "previous": "Predchádzajúce recenzie",
+    "next": "Ďalšie recenzie",
+    "loading": "Načítavajú sa recenzie cestovateľov…",
+    "empty": "Máte otázku ohľadom cestovania s nami? Spojte sa s naším tímom."
+  },
+  "sl": {
+    "intro": "Država, ki jo je treba odkriti. Ljudje, s katerimi se lahko povežete. Potovanje, ki ga naredite sami.",
+    "landscape": "Na obali Issyk-Kul",
+    "yurt": "Malo bližje nomadskemu življenju",
+    "story": "Dobra potovanja se začnejo s človeško povezanostjo.",
+    "explore": "Vaša pot v Kirgizistan",
+    "cards": [
+      [
+        "Poiščite svoje nekje",
+        "Raziščite jezera, gorske doline in kraje, za katere si je vredno vzeti čas."
+      ],
+      [
+        "Naredite prostor za avanturo",
+        "Prebrskajte po načrtih poti in poiščite potovanje, ki ustreza vašim interesom."
+      ],
+      [
+        "Pojdite malo globlje",
+        "Preberite zgodbe in praktične vodnike, preden se odpravite na pot."
+      ]
+    ],
+    "journey": "Od ideje do vaše naslednje avanture.",
+    "steps": [
+      [
+        "Poiščite navdih",
+        "Začnite s krajem, pokrajino ali izkušnjo, ki vam ostane v spominu."
+      ],
+      [
+        "Povejte nam svoje načrte",
+        "Delite svoje datume, velikost skupine in stvari, ki bi jih radi počeli."
+      ],
+      [
+        "Skupaj oblikujte podrobnosti",
+        "Z našo ekipo se pogovorite o poti, tempu in praktičnih dogovorih."
+      ]
+    ],
+    "invitation": "Vaša naslednja zgodba se začne tukaj.",
+    "invitationBody": "Prvi obisk ali vrnitev na kraj, ki ga imate radi - povejte nam, kaj imate v mislih.",
+    "reviews": "Kaj pravijo naše stranke",
+    "previous": "Prejšnje ocene",
+    "next": "Naslednji pregledi",
+    "loading": "Nalaganje ocen popotnikov …",
+    "empty": "Imate vprašanje o potovanju z nami? Stopite v stik z našo ekipo."
+  },
+  "bg": {
+    "intro": "Страна за откриване. Хора, с които да се свържете. Пътуване, което да направите сами.",
+    "landscape": "На брега на Исик-Кул",
+    "yurt": "Малко по-близо до номадския живот",
+    "story": "Добрите пътувания започват с човешка връзка.",
+    "explore": "Вашият път в Киргизстан",
+    "cards": [
+      [
+        "Намерете своето някъде",
+        "Разгледайте езера, планински долини и места, за които си струва да отделите време."
+      ],
+      [
+        "Направете място за приключения",
+        "Разгледайте маршрутите и намерете пътуване, което отговаря на вашите интереси."
+      ],
+      [
+        "Отидете малко по-дълбоко",
+        "Прочетете истории и практически ръководства, преди да тръгнете."
+      ]
+    ],
+    "journey": "От идея до следващото ви приключение.",
+    "steps": [
+      [
+        "Вдъхновете се",
+        "Започнете с място, пейзаж или преживяване, което остава с вас."
+      ],
+      [
+        "Разкажете ни вашите планове",
+        "Споделете датите си, размера на групата и нещата, които бихте искали да правите."
+      ],
+      [
+        "Оформете детайлите заедно",
+        "Обсъдете маршрута, темпото и практическите договорености с нашия екип."
+      ]
+    ],
+    "invitation": "Следващата ви история започва тук.",
+    "invitationBody": "Първо посещение или завръщане на място, което обичате – кажете ни какво имате предвид.",
+    "reviews": "Какво казват нашите клиенти",
+    "previous": "Предишни прегледи",
+    "next": "Следващи прегледи",
+    "loading": "Отзивите на пътници се зареждат...",
+    "empty": "Имате въпрос относно пътуването с нас? Свържете се с нашия екип."
+  },
+  "bs": {
+    "intro": "Zemlja koju treba otkriti. Ljudi sa kojima se treba povezati. Putovanje koje ćete napraviti sami.",
+    "landscape": "Na obalama Issyk-Kula",
+    "yurt": "Malo bliže nomadskom životu",
+    "story": "Dobra putovanja počinju ljudskom vezom.",
+    "explore": "Vaš put u Kirgistan",
+    "cards": [
+      [
+        "Pronađite svoje negdje",
+        "Istražite jezera, planinske doline i mjesta za koja vrijedi izdvojiti vrijeme."
+      ],
+      [
+        "Napravite mesta za avanturu",
+        "Pregledajte itinerare i pronađite putovanje koje odgovara vašim interesima."
+      ],
+      [
+        "Idi malo dublje",
+        "Pročitajte priče i praktične vodiče prije nego što krenete."
+      ]
+    ],
+    "journey": "Od ideje do vaše sljedeće avanture.",
+    "steps": [
+      [
+        "Inspirirajte se",
+        "Počnite s mjestom, krajolikom ili iskustvom koje ostaje s vama."
+      ],
+      [
+        "Reci nam svoje planove",
+        "Podijelite svoje datume, veličinu grupe i stvari koje biste voljeli raditi."
+      ],
+      [
+        "Oblikujte detalje zajedno",
+        "Razgovarajte o ruti, tempu i praktičnim dogovorima sa našim timom."
+      ]
+    ],
+    "invitation": "Vaša sljedeća priča počinje ovdje.",
+    "invitationBody": "Prva posjeta ili povratak negdje koje volite — recite nam šta imate na umu.",
+    "reviews": "Šta kažu naši klijenti",
+    "previous": "Prethodne recenzije",
+    "next": "Sljedeće recenzije",
+    "loading": "Učitavanje recenzija putnika…",
+    "empty": "Imate pitanje o putovanju s nama? Kontaktirajte naš tim."
+  },
+  "mk": {
+    "intro": "Земја за откривање. Луѓе со кои треба да се поврзете. Патување за да го направите своето.",
+    "landscape": "На брегот на Исик-Кул",
+    "yurt": "Малку поблиску до номадскиот живот",
+    "story": "Добрите патувања започнуваат со човечка врска.",
+    "explore": "Вашиот пат во Киргистан",
+    "cards": [
+      [
+        "Најди го своето некаде",
+        "Истражувајте езера, планински долини и места за кои вреди да одвоите време."
+      ],
+      [
+        "Направете простор за авантура",
+        "Прелистајте ги маршрутите и пронајдете патување што одговара на вашите интереси."
+      ],
+      [
+        "Одете малку подлабоко",
+        "Прочитајте приказни и практични водичи пред да тргнете."
+      ]
+    ],
+    "journey": "Од идеја до вашата следна авантура.",
+    "steps": [
+      [
+        "Инспирирајте се",
+        "Започнете со место, пејзаж или искуство што останува со вас."
+      ],
+      [
+        "Кажете ни ги вашите планови",
+        "Споделете ги вашите датуми, големината на групата и работите што би сакале да ги правите."
+      ],
+      [
+        "Обликувајте ги деталите заедно",
+        "Разговарајте за рутата, темпото и практичните аранжмани со нашиот тим."
+      ]
+    ],
+    "invitation": "Вашата следна приказна започнува овде.",
+    "invitationBody": "Прва посета или враќање некаде што го сакате - кажете ни што имате на ум.",
+    "reviews": "Што велат нашите клиенти",
+    "previous": "Претходни прегледи",
+    "next": "Следни прегледи",
+    "loading": "Се вчитуваат рецензии од патници…",
+    "empty": "Дали имате прашање за патување со нас? Станете во контакт со нашиот тим."
+  },
+  "sq": {
+    "intro": "Një vend për t'u zbuluar. Njerëz për t'u lidhur. Një udhëtim për ta bërë tuajin.",
+    "landscape": "Në brigjet e Issyk-Kul",
+    "yurt": "Pak më afër jetës nomade",
+    "story": "Udhëtimet e mira fillojnë me një lidhje njerëzore.",
+    "explore": "Rruga juaj për në Kirgistan",
+    "cards": [
+      [
+        "Gjeni diku tuajën",
+        "Eksploroni liqene, lugina malore dhe vende për të cilat ia vlen të kushtoni kohën tuaj."
+      ],
+      [
+        "Lini vend për aventura",
+        "Shfletoni itineraret dhe gjeni një udhëtim që i përshtatet interesave tuaja."
+      ],
+      [
+        "Shkoni pak më thellë",
+        "Lexoni tregime dhe udhëzues praktik para se të niseni."
+      ]
+    ],
+    "journey": "Nga një ide në aventurën tuaj të radhës.",
+    "steps": [
+      [
+        "Frymëzohuni",
+        "Filloni me një vend, një peizazh ose një përvojë që qëndron me ju."
+      ],
+      [
+        "Na tregoni planet tuaja",
+        "Ndani datat tuaja, madhësinë e grupit dhe gjërat që dëshironi të bëni."
+      ],
+      [
+        "Formoni detajet së bashku",
+        "Diskutoni rrugën, ritmin dhe aranzhimet praktike me ekipin tonë."
+      ]
+    ],
+    "invitation": "Historia juaj e radhës fillon këtu.",
+    "invitationBody": "Një vizitë e parë ose një kthim në diku që ju pëlqen - na tregoni se çfarë keni në mendje.",
+    "reviews": "Çfarë thonë klientët tanë",
+    "previous": "Shqyrtimet e mëparshme",
+    "next": "Vlerësimet e radhës",
+    "loading": "Po ngarkohen komentet e udhëtarëve…",
+    "empty": "Keni një pyetje në lidhje me udhëtimin me ne? Kontaktoni me ekipin tonë."
+  },
+  "lt": {
+    "intro": "Šalis, kurią reikia atrasti. Žmonės, su kuriais galima susisiekti. Kelionė susikurti savo.",
+    "landscape": "Issyk-Kul pakrantėje",
+    "yurt": "Šiek tiek arčiau klajoklių gyvenimo",
+    "story": "Geros kelionės prasideda nuo žmogiško ryšio.",
+    "explore": "Jūsų kelias į Kirgiziją",
+    "cards": [
+      [
+        "Surask savo kur nors",
+        "Naršykite ežerus, kalnų slėnius ir vietas, kurioms verta skirti laiko."
+      ],
+      [
+        "Padarykite vietos nuotykiams",
+        "Naršykite maršrutus ir raskite jūsų pomėgius atitinkančią kelionę."
+      ],
+      [
+        "Eikite šiek tiek giliau",
+        "Prieš išvykdami perskaitykite istorijas ir praktinius vadovus."
+      ]
+    ],
+    "journey": "Nuo idėjos iki kito nuotykio.",
+    "steps": [
+      [
+        "Pasisemkite įkvėpimo",
+        "Pradėkite nuo vietos, kraštovaizdžio ar patirties, kuri lieka su jumis."
+      ],
+      [
+        "Papasakokite apie savo planus",
+        "Pasidalykite savo datomis, grupės dydžiu ir dalykais, kuriuos norėtumėte nuveikti."
+      ],
+      [
+        "Suformuokite detales kartu",
+        "Su mūsų komanda aptarkite maršrutą, tempą ir praktinius susitarimus."
+      ]
+    ],
+    "invitation": "Kita jūsų istorija prasideda čia.",
+    "invitationBody": "Pirmas apsilankymas ar grįžimas į mėgstamą vietą – pasakykite mums, ką galvojate.",
+    "reviews": "Ką sako mūsų klientai",
+    "previous": "Ankstesnės apžvalgos",
+    "next": "Kiti atsiliepimai",
+    "loading": "Įkeliami keliautojų atsiliepimai…",
+    "empty": "Turite klausimų apie kelionę su mumis? Susisiekite su mūsų komanda."
+  }
+}

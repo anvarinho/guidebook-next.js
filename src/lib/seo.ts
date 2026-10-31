@@ -1,8 +1,10 @@
 import type { Locale } from "@/lib/i18n.config";
+import { localeMetadata } from "./localeMetadata";
 
 export const siteUrl = (process.env.SITE_URL || "https://central-asia.live").replace(/\/+$/, "");
 
 export const hreflangByLocale: Record<Locale, string> = {
+  ...Object.fromEntries(Object.entries(localeMetadata).map(([code, info]) => [code, info.languageTag])) as Record<Locale, string>,
   en: "en-US",
   fr: "fr-FR",
   de: "de-DE",

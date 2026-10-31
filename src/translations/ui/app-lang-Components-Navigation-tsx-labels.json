@@ -1,0 +1,202 @@
+{
+  "uz": {
+    "open": "Menyuni oching",
+    "close": "Menyuni yopish",
+    "navigation": "Asosiy navigatsiya"
+  },
+  "kz": {
+    "open": "Мәзірді ашу",
+    "close": "Мәзірді жабу",
+    "navigation": "Негізгі навигация"
+  },
+  "kg": {
+    "open": "Менюну ачуу",
+    "close": "Менюну жабуу",
+    "navigation": "Негизги навигация"
+  },
+  "tr": {
+    "open": "Menüyü aç",
+    "close": "Menüyü kapat",
+    "navigation": "Ana gezinme"
+  },
+  "hi": {
+    "open": "मेनू खोलें",
+    "close": "मेनू बंद करें",
+    "navigation": "मुख्य नेविगेशन"
+  },
+  "ur": {
+    "open": "مینو کھولیں۔",
+    "close": "مینو بند کریں۔",
+    "navigation": "مین نیویگیشن"
+  },
+  "tg": {
+    "open": "Менюро кушоед",
+    "close": "Менюро пӯшед",
+    "navigation": "Навигатсияи асосӣ"
+  },
+  "ms": {
+    "open": "Buka menu",
+    "close": "Tutup menu",
+    "navigation": "Navigasi utama"
+  },
+  "fa": {
+    "open": "منو را باز کنید",
+    "close": "بستن منو",
+    "navigation": "ناوبری اصلی"
+  },
+  "az": {
+    "open": "Menyu açın",
+    "close": "Menyunu bağlayın",
+    "navigation": "Əsas naviqasiya"
+  },
+  "uk": {
+    "open": "Відкрити меню",
+    "close": "Закрити меню",
+    "navigation": "Основна навігація"
+  },
+  "pl": {
+    "open": "Otwórz menu",
+    "close": "Zamknij menu",
+    "navigation": "Główna nawigacja"
+  },
+  "nl": {
+    "open": "Menu openen",
+    "close": "Menu sluiten",
+    "navigation": "Hoofdnavigatie"
+  },
+  "he": {
+    "open": "פתח את התפריט",
+    "close": "סגור תפריט",
+    "navigation": "ניווט ראשי"
+  },
+  "cs": {
+    "open": "Otevřít nabídku",
+    "close": "Zavřít nabídku",
+    "navigation": "Hlavní navigace"
+  },
+  "pt": {
+    "open": "Abrir menu",
+    "close": "Fechar menu",
+    "navigation": "Navegação principal"
+  },
+  "id": {
+    "open": "Buka menunya",
+    "close": "Tutup menunya",
+    "navigation": "Navigasi utama"
+  },
+  "th": {
+    "open": "เปิดเมนู",
+    "close": "ปิดเมนู",
+    "navigation": "การนำทางหลัก"
+  },
+  "bn": {
+    "open": "মেনু খুলুন",
+    "close": "মেনু বন্ধ করুন",
+    "navigation": "প্রধান নেভিগেশন"
+  },
+  "ne": {
+    "open": "मेनु खोल्नुहोस्",
+    "close": "मेनु बन्द गर्नुहोस्",
+    "navigation": "मुख्य नेभिगेसन"
+  },
+  "vi": {
+    "open": "Mở trình đơn",
+    "close": "Đóng trình đơn",
+    "navigation": "Điều hướng chính"
+  },
+  "ka": {
+    "open": "მენიუს გახსნა",
+    "close": "მენიუს დახურვა",
+    "navigation": "მთავარი ნავიგაცია"
+  },
+  "hy": {
+    "open": "Բացեք ընտրացանկը",
+    "close": "Փակել ընտրացանկը",
+    "navigation": "Հիմնական նավարկություն"
+  },
+  "mn": {
+    "open": "Цэсийг нээх",
+    "close": "Цэсийг хаах",
+    "navigation": "Үндсэн навигаци"
+  },
+  "be": {
+    "open": "Адкрыць меню",
+    "close": "Зачыніць меню",
+    "navigation": "Галоўная навігацыя"
+  },
+  "ro": {
+    "open": "Deschide meniul",
+    "close": "Închide meniul",
+    "navigation": "Navigație principală"
+  },
+  "sv": {
+    "open": "Öppna menyn",
+    "close": "Stäng menyn",
+    "navigation": "Huvudnavigering"
+  },
+  "nb": {
+    "open": "Åpne menyen",
+    "close": "Lukk menyen",
+    "navigation": "Hovednavigasjon"
+  },
+  "da": {
+    "open": "Åbn menuen",
+    "close": "Luk menuen",
+    "navigation": "Hovednavigation"
+  },
+  "fi": {
+    "open": "Avaa valikko",
+    "close": "Sulje valikko",
+    "navigation": "Päänavigointi"
+  },
+  "el": {
+    "open": "Άνοιγμα μενού",
+    "close": "Κλείσιμο μενού",
+    "navigation": "Κύρια πλοήγηση"
+  },
+  "hr": {
+    "open": "Otvori izbornik",
+    "close": "Zatvori izbornik",
+    "navigation": "Glavna navigacija"
+  },
+  "sr": {
+    "open": "Отворите мени",
+    "close": "Затвори мени",
+    "navigation": "Главна навигација"
+  },
+  "sk": {
+    "open": "Otvoriť menu",
+    "close": "Zatvoriť ponuku",
+    "navigation": "Hlavná navigácia"
+  },
+  "sl": {
+    "open": "Odpri meni",
+    "close": "Zapri meni",
+    "navigation": "Glavna navigacija"
+  },
+  "bg": {
+    "open": "Отворете менюто",
+    "close": "Затваряне на менюто",
+    "navigation": "Основна навигация"
+  },
+  "bs": {
+    "open": "Otvorite meni",
+    "close": "Zatvori meni",
+    "navigation": "Glavna navigacija"
+  },
+  "mk": {
+    "open": "Отворете го менито",
+    "close": "Затворете го менито",
+    "navigation": "Главна навигација"
+  },
+  "sq": {
+    "open": "Hap menunë",
+    "close": "Mbyll menunë",
+    "navigation": "Lundrimi kryesor"
+  },
+  "lt": {
+    "open": "Atidaryti meniu",
+    "close": "Uždaryti meniu",
+    "navigation": "Pagrindinė navigacija"
+  }
+}

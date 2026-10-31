@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 
 
@@ -21,7 +22,7 @@ export default function Intro({ messages: t, language, locale, links, heroBlurDa
   useIntroAnimations(introRef, t);
 
   return (
-    <div ref={introRef} className="kyrgyz-intro home-refresh" lang={language} dir={language === "ar" ? "rtl" : "ltr"}
+    <div ref={introRef} className="kyrgyz-intro home-refresh" lang={language} dir={isRtlLocale(language) ? "rtl" : "ltr"}
       style={heroBlurDataURL ? { "--hero-blur": `url("${heroBlurDataURL}")` } as CSSProperties : undefined}>
 
       <a className="skip-link" href="#journey">{t.skipLink}</a>
