@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "hr-HR",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Učitavanje...",
+    "contactButton": "Ima li pitanja?",
+    "navigation": [
+      {
+        "text": "Naslovnica",
+        "url": "/"
+      },
+      {
+        "text": "Znamenitosti",
+        "url": "/places"
+      },
+      {
+        "text": "Putovanja",
+        "url": "/tours"
+      },
+      {
+        "text": "Članci",
+        "url": "/articles"
+      },
+      {
+        "text": "O nama",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Turistički vodič za Kirgistan (2024.)",
+      "description": "Prošećite planinskim stazama, zaplivajte u Issyk-Kulu ili prenoćite u jurti kod lokalne obitelji. Odaberite rutu koja vam odgovara.",
+      "subtitle": "Turistički vodič za Kirgistan (2024.)",
+      "subtitle1": "Zašto posjetiti Kirgistan?",
+      "subtitle2": "Istraživanje prirode",
+      "subtitle3": "Beskrajno istraživanje",
+      "subtitle4": "Planirajte svoje putovanje",
+      "subtitle5": "Mjesta koja morate posjetiti u Kirgistanu",
+      "paragraph": "Ova prekrasna zemlja bez izlaza na more, nekadašnji dio Sovjetskog Saveza, brzo postaje jedno od najpopularnijih odredišta za putovanja u srednjoj Aziji. Turistička industrija Kirgistana brzo raste, nudeći putnicima priliku da istraže jednu od najspektakularnijih zemalja na svijetu.",
+      "paragraph1": "Kirgistan je posljednjih godina doživio dramatičan porast turizma jer avanturisti hrle na pješačenje, kampiranje i jahanje kroz njegove zapanjujuće krajolike. Kao prva srednjoazijska nacija koja je ublažila svoju politiku viza – nudeći ulazak bez viza za većinu zapadnih i razvijenih zemalja – razvila se snažna turistička mreža.",
+      "paragraph2": "Od inicijativa turizma temeljenog na zajednici (CBT) diljem zemlje do pansiona i neovisnih vodiča, postoje brojni načini da doživite prekrasan krajolik Kirgistana. Planinari se mogu upustiti u staze koje izazivaju strahopoštovanje od Karakola, Kochkora, Arslanboba, pa čak i do glavnog grada Biškeka. Imajte na umu da planinarenje ovdje često zahtijeva razumnu razinu kondicije, jer mnoge staze nude više od samo lagane šetnje. Većina putovanja traje od 1 do 5 dana, iako su dostupne i dulje avanture.\r\n\r\nZa one koji žele spasiti svoje noge, jahanje je popularna alternativa. Krenite na najspektakularnije konjičko putovanje u zemlji do Song Kola ili provedite nekoliko dana opuštajući se i plivajući na prekrasnom jezeru Issyk-Kul.",
+      "paragraph3": "S bezbrojnim neutabanim odredištima, putovanjima i stazama, mogućnosti za istraživanje su neograničene. Bilo da tražite avanturu ili opuštanje, Kirgistan ima za svakoga ponešto.",
+      "paragraph4": "Za detaljnije informacije o atrakcijama, kako doći do njih i okolo te druge savjete za putovanja, svakako pročitajte naš sveobuhvatni vodič za Kirgistan. Poboljšajte svoje iskustvo putovanja s preporučenim aplikacijama za navigaciju, prijevod i lokalne uvide kako biste maksimalno iskoristili svoje putovanje.\r\n\r\nUživajte u svom putovanju i doživite jedinstvenu ljepotu i kulturu Kirgistana",
+      "keywords": "Kirgistanski turistički vodič, turistički vodič, Pogodnost putovanja, Lokalne atrakcije, Turističke usluge, Kirgistanski savjeti za putovanja, Kulturna iskustva, Planiranje putovanja, Razgledavanje, Pustolovna putovanja, Zgodni obilasci, Biškek gradski vodič, Kirgistanske turističke atrakcije, Turističko mjesto, Mjesta u mojoj blizini za razgledavanje, Mjesta za posjetiti u mojoj blizini, Turistička mjesta, Turistička destinacija, Prekrasne destinacije u svijetu, Svjetske najljepše lokacije, Najljepše lokacije na svijetu, Putovanje s vodičem, Vodič za putovanja, Prekrasna mjesta, Biškek u Kirgistanu, Grad Biškek, Turist i vodič, PR turističkih atrakcija, Obližnje atrakcije i kako to izvesti",
+      "button": "Hajdemo saznati!",
+      "button1": "Kamo ići!",
+      "button2": "Što učiniti!",
+      "button3": "pročitajte više",
+      "button4": "Naše ture",
+      "Transportation": {
+        "title": "Prijevoz u Kirgistanu | Putni vodič",
+        "Description": "Kretanje po Kirgistanu samo po sebi može biti avantura. Evo što trebate znati:",
+        "Options": {
+          "Domaći letovi": "Za veće udaljenosti, posebno ako je vrijeme ograničenje, dostupni su domaći letovi između velikih gradova kao što su Bishkek, Osh i Tamchy (blizu Cholpon-Ata u regiji Issyk-Kul). Provjerite rasporede i rezervacije zrakoplovnih kompanija.",
+          "Maršrutke (minibusevi)": "Ovo su najčešći i isplativi načini prijevoza za kratke do srednje udaljenosti. Slijede fiksne rute između gradova i mjesta i vrlo su popularni među lokalnim stanovništvom.",
+          "Zajednički taksiji": "Zajednički taksiji nude bržu, ali nešto skuplju alternativu maršrutkama. Obično odlaze kada su puni, a o cijenama se može pregovarati.",
+          "Iznajmljivanje automobila": "Za veću fleksibilnost, najam automobila dobra je opcija. Ceste u ruralnim područjima mogu biti grube, pa se preporučuje 4x4. Provjerite imate li međunarodnu vozačku dozvolu.",
+          "Vlakovi": "Dostupne su ograničene željezničke usluge, prvenstveno povezujući Biškek s Balykchyjem u blizini jezera Issyk-Kul. To je slikovita ruta, ali sporija od vožnje cestom.",
+          "Autobusi": "Redovni autobusi voze u većim gradovima, nudeći udoban način putovanja. Međutim, možda neće pokrivati ​​udaljena područja.",
+          "Stopiranje": "je uobičajena praksa u ruralnim područjima Kirgistana, gdje formalne mogućnosti prijevoza mogu biti ograničene. Relativno je sigurno i kulturno prihvaćeno, ali budite oprezni i prosuđujte kada prihvaćate vožnje od stranaca."
+        },
+        "details": "Za detaljne informacije o mogućnostima prijevoza posjetite priloženi vodič."
+      },
+      "Accommodations": {
+        "title": "Smještaj u Kirgistanu | Putni vodič",
+        "Description": "Od ugodnih pansiona do luksuznih odmarališta, Kirgistan nudi razne mogućnosti smještaja koje će zadovoljiti želje i budžet svakog putnika. Evo nekoliko izbora koje treba razmotriti:",
+        "Options": {
+          "hoteli": "Veliki gradovi Kirgistana poput Bishkeka i Osha mogu se pohvaliti nizom hotela za različite proračune i sklonosti. Od međunarodnih lanaca do butik hotela, pronaći ćete udoban smještaj sa sadržajima kao što su Wi-Fi, klima-uređaj i mogućnosti objedovanja u kući.",
+          "Pansioni": "Za autentičnije iskustvo razmislite o boravku u pansionu koji vode lokalne obitelji. Ovi ugodni objekti nude toplu dobrodošlicu i priliku da iskusite kirgistansko gostoprimstvo. Često ćete imati priliku uživati ​​u domaćim jelima i učiti o lokalnim običajima i tradiciji.",
+          "Jurte": "U ruralnim područjima i planinskim regijama tradicionalne jurte pružaju jedinstveno iskustvo smještaja. Ove prijenosne strukture nalik šatorima nude jednostavan, ali udoban smještaj, često s prekrasnim pogledom na okolne krajolike. Boravak u jurti može uključivati ​​obroke i kulturne aktivnosti.",
+          "Smještaj u obitelji": "Iskusite život s kirgiškom obitelji odabirom smještaja u obitelji. Imat ćete priliku živjeti s lokalnim stanovništvom, dijeliti obroke i sudjelovati u svakodnevnim aktivnostima. Kuće nude autentičnu kulturnu razmjenu i uvid u tradicionalni način života Kirgistana.",
+          "Eko-prenoćišta": "Za ekološki osviještene putnike, eko-kolibe nude održive mogućnosti smještaja u prirodnim okruženjima. Ovi domovi daju prioritet očuvanju okoliša i često nude aktivnosti kao što su planinarenje, promatranje ptica i angažman zajednice.",
+          "Kampiranje": "je popularna opcija za putnike željne avanture i samoće. Bilo da podižete šator u određenom području za kampiranje ili u divljem kampu na udaljenim lokacijama, svakako slijedite načela Leave No Trace i pribavite sve potrebne dozvole."
+        },
+        "details": "Za posebne preporuke i opcije rezerviranja, konzultirajte web stranice za putovanja, online platforme za rezervacije i lokalne turističke urede."
+      },
+      "Food": {
+        "title": "Hrana u Kirgistanu | Putni vodič",
+        "Description": "Istraživanje kirgiške kuhinje sastavni je dio iskustva putovanja. Evo što trebate znati:",
+        "Options": {
+          "Tradicionalna kuhinja": "Kirgiška kuhinja bogata je okusima i naslijeđem, a tradicionalna jela kao što su beshbarmak (meso i rezanci), manty (knedle) i laghman (juha s rezancima) koja su glavna jela. Ne propustite kušati popularni napitak fermentirano kobilje mlijeko poznato kao kumis.",
+          "Nomadski utjecaj": "Odražavajući svoje nomadsko nasljeđe, kirgiška kuhinja često sadrži izdašna jela napravljena od sastojaka kao što su meso (osobito janjetina i konjetina), mliječni proizvodi (kao što su kymyz i airan) i žitarice (uključujući rižu i pšenicu). Jurte, tradicionalni nomadski šatori, mogu ponuditi autentična gastronomska iskustva u ruralnim područjima.",
+          "Lokalna tržišta": "Posjetite lokalne tržnice kao što je Osh Bazaar u Biškeku da kušate razna kirgiška jela i grickalice, uključujući šašlik (meso na žaru na ražnju), samsu (slana peciva) i plov (pilav). Ove tržnice također nude priliku za kupnju svježeg voća, orašastih plodova i začina.",
+          "Čajane i kafići": "Čajane (chaykhana) i kafići su sveprisutni u Kirgistanu, a poslužuju čaj (chai) i kavu (kofe) uz peciva, kruh i lagana jela. Uživajte u opuštenoj atmosferi i gostoprimstvu dok uživate u tradicionalnim kirgiškim poslasticama kao što su baursak (prženo tijesto) i kurut (osušene kuglice od jogurta).",
+          "Internacionalna kuhinja": "U urbanim područjima kao što je Bishkek pronaći ćete raznoliku ponudu međunarodnih kuhinja, uključujući rusku, kinesku, korejsku i europsku. Istražite moderne restorane, bistroe i restorane kako biste kušali globalne okuse uz kirgistansko gostoprimstvo.",
+          "Ulična hrana": "Zaputite se ulicama Kirgistana i otkrijte niz uličnih prodavača hrane koji nude brze i ukusne zalogaje. Probajte popularnu uličnu hranu kao što su somsas (prženi ili pečeni komadići punjeni mesom ili povrćem), prženi lagman rezanci i klip kukuruza na žaru.",
+          "Obilasci hrane i tečajevi kuhanja": "Krenite na obilaske hrane ili se pridružite tečajevima kuhanja kako biste dublje upoznali kirgistansku kuhinju i kulinarske tradicije. Naučite kako pripremiti tradicionalna jela, posjetite lokalne farme i proizvođače te uronite u živahnu kulinarsku scenu Kirgistana."
+        },
+        "details": "Za više informacija o kirgiškoj kuhinji i mogućnostima objedovanja, pogledajte priloženi vodič."
+      },
+      "Safety": {
+        "title": "Sigurnost u Kirgistanu | Putni vodič",
+        "Description": "Putovanje u Kirgistan općenito je sigurno, ali važno je biti svjestan mogućih rizika i poduzeti potrebne mjere opreza. Evo što trebate znati:",
+        "Options": {
+          "Politička stabilnost": "Kirgistan je u prošlosti iskusio političku nestabilnost, uključujući prosvjede i povremene nemire. Dok većina turističkih područja ostaje nepromijenjena, budite informirani o lokalnim događanjima i izbjegavajte velika okupljanja ili prosvjede.",
+          "Zločin": "Mogu se dogoditi sitni zločini poput džeparenja i krađe, osobito u prepunim područjima i turističkim središtima. Čuvajte svoje stvari i budite oprezni.",
+          "Terorizam": "Prijetnja od terorizma u Kirgistanu je niska, ali putnici bi trebali ostati na oprezu, osobito u pograničnim područjima. Pridržavajte se svih savjeta za putovanja koje izdaje vaša vlada i ostanite informirani.",
+          "Prirodne opasnosti": "Kirgistan je sklon prirodnim opasnostima kao što su potresi, lavine i klizišta, posebno u planinskim regijama. Budite spremni i slijedite sigurnosne smjernice, osobito kada planinarite ili se bavite aktivnostima na otvorenom.",
+          "Sigurnost na cestama": "Uvjeti na cestama u Kirgistanu mogu varirati, a vožnja može biti izazovna, posebno u ruralnim područjima. Budite oprezni, pridržavajte se lokalnih prometnih zakona i razmislite o angažiranju uglednog vozača.",
+          "Zdravstveni rizici": "Iako Kirgistan ne predstavlja značajne zdravstvene rizike, putnici bi trebali biti u toku s rutinskim cijepljenjem i poduzeti mjere opreza protiv bolesti koje se prenose hranom i vodom.",
+          "Visinska bolest": "Putnici koji posjećuju područja s velikim nadmorskim visinama trebaju biti svjesni rizika od visinske bolesti. Odvojite vrijeme za aklimatizaciju i izbjegavajte napornu fizičku aktivnost dok se vaše tijelo ne prilagodi.",
+          "Putno osiguranje": "Neophodno je imati putno osiguranje koje pokriva medicinske troškove, hitnu evakuaciju i otkazivanje/prekid putovanja. Provjerite uključuje li vaša polica osiguranja pokriće za aktivnosti kojima se namjeravate baviti."
+        },
+        "details": "Za detaljnije sigurnosne informacije i savjete za putovanja, konzultirajte službene vladine izvore i turističke vodiče."
+      },
+      "Prices": {
+        "title": "Cijene u Kirgistanu | Putni vodič",
+        "Description": "Razumijevanje troškova života i troškova u Kirgistanu može vam pomoći da učinkovito planirate svoj proračun. Ovdje je pregled cijena uobičajenih artikala i usluga:",
+        "Options": {
+          "Smještaj": "Cijena smještaja u Kirgistanu varira ovisno o vrsti smještaja i lokaciji. Putnici s ograničenim proračunom mogu pronaći pristupačne opcije kao što su pansioni i hosteli, dok su luksuzni hoteli i odmarališta namijenjeni onima koji traže vrhunske sadržaje. Cijene se kreću od samo 10 USD po noćenju za povoljne smještaje do preko 100 USD po noćenju za luksuzne objekte.",
+          "Hrana i objedovanje": "Objed u Kirgistanu općenito je pristupačan, osobito u lokalnim restoranima i štandovima s uličnom hranom. Tradicionalna jela poput bešbarmaka i plova su jeftina i zasitna, obično koštaju između 3 i 7 dolara po obroku u lokalnim restoranima. Internacionalna kuhinja i fini restorani mogu biti skuplji, s obrocima u prosjeku od 10 do 20 USD ili više po osobi.",
+          "Prijevoz": "Troškovi prijevoza u Kirgistanu variraju ovisno o načinu putovanja i udaljenosti. Domaći letovi između velikih gradova kao što su Bishkek i Osh mogu se kretati od 50 do 150 USD ili više, dok zajednički taksiji i marshrutke (minibusevi) nude povoljne opcije za kraće udaljenosti, obično koštaju 1 do 10 USD, ovisno o ruti. Najam automobila može koštati 30 do 100 USD ili više po danu, ovisno o vrsti vozila i tvrtki za iznajmljivanje.",
+          "Aktivnosti i atrakcije": "Troškovi aktivnosti i atrakcija u Kirgistanu uvelike variraju ovisno o iskustvu. Ulaznice u muzeje, povijesna mjesta i nacionalne parkove općenito su pristupačne i kreću se od 1 do 10 USD po osobi. Obilasci s vodičem, izleti na otvorenom i pustolovne aktivnosti poput jahanja i planinarenja mogu uzrokovati dodatne troškove, a cijene variraju ovisno o trajanju i složenosti.",
+          "Kupovina": "Kupnja u Kirgistanu nudi niz mogućnosti, od tradicionalnih rukotvorina i suvenira do moderne robe i elektronike. Cijene variraju ovisno o artiklu i lokaciji, ali cjenkanje je uobičajeno na tržnicama i bazarima. Budite spremni pregovarati za najbolju cijenu, posebno kada kupujete tekstil, nakit i rukotvorine.",
+          "Valuta i tečajevi": "Službena valuta Kirgistana je kirgistanski som (KGS). Tečajevi fluktuiraju, stoga je preporučljivo provjeriti trenutne tečajeve prije zamjene novca. Glavne kreditne kartice prihvaćaju se u većim gradovima i turističkim područjima, no preporuča se nositi gotovinu za transakcije u manjim gradovima i ruralnim područjima. (1 $ = 85-90 soma)"
+        },
+        "details": "Za najtočnije i najsvježije informacije o cijenama u Kirgistanu, konzultirajte lokalne izvore i najnovije turističke vodiče."
+      },
+      "Travel_Seasons": {
+        "title": "Sezone putovanja u Kirgistan | Putni vodič",
+        "Description": "Razumijevanje sezona putovanja u Kirgistanu može vam pomoći da isplanirate svoje putovanje i maksimalno iskoristite svoj posjet. Evo pregleda različitih godišnjih doba i onoga što možete očekivati:",
+        "Options": {
+          "Proljeće (od ožujka do svibnja)": "Proljeće je prekrasno vrijeme za posjet Kirgistanu, s krajolikom koji oživljava dok cvijeće cvjeta, a rijeke nabujaju otopljenim snijegom. Vrijeme je blago, što ga čini idealnim za aktivnosti na otvorenom poput planinarenja, trekkinga i jahanja. Ipak, budite spremni na povremene pljuskove, osobito u travnju i svibnju.",
+          "Ljeto (od lipnja do kolovoza)": "Ljeto je vrhunac turističke sezone u Kirgistanu, s dugim danima, visokim temperaturama i vedrim nebom. Savršeno je vrijeme za avanture na otvorenom kao što su kampiranje, planinarenje i istraživanje alpskih jezera. U to vrijeme održavaju se popularni festivali i događaji, uključujući Svjetske nomadske igre u rujnu.",
+          "Jesen (od rujna do studenog)": "Jesen je zadivljujuće godišnje doba u Kirgistanu, s krajolicima obojenim živim nijansama crvene, narančaste i zlatne dok lišće mijenja boju. Vrijeme ostaje ugodno, što ga čini izvrsnim vremenom za planinarenje, promatranje divljih životinja i kulturna iskustva. Rujan je idealan mjesec za posjet Svjetskim nomadskim igrama.",
+          "Zima (od prosinca do veljače)": "Zima pretvara Kirgistan u zimsku zemlju čuda, sa snijegom prekrivenim planinama i zaleđenim jezerima koji stvaraju krajolik koji oduzima dah. Dok temperature mogu pasti ispod nule, ljubitelji zimskih sportova hrle u skijališta kao što su Karakol i Jyrgalan radi skijanja, bordanja i klizanja. U veljači se slavi tradicionalna nomadska igra Kok Boru (Buzkashi)."
+        },
+        "details": "Za više informacija o određenim aktivnostima, događajima i vremenskim uvjetima tijekom svake sezone, konzultirajte turističke vodiče i lokalne turističke izvore."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Prvi put u Kirgistanu?",
+        "Description": "Ako prvi put posjećujete Kirgistan, evo opsežnog vodiča koji će vam pomoći da maksimalno iskoristite svoje putovanje:",
+        "Options": {
+          "Dolazak i kretanje": "Većina međunarodnih putnika stiže u međunarodnu zračnu luku Manas u Biškeku. Taksiji i autobusi dostupni su za prijevoz u grad. Unutar Kirgistana za kretanje možete koristiti domaće letove, autobuse, marshrutke (minibuseve) i zajedničke taksije.",
+          "SIM kartice i Internet": "Ostanite povezani u Kirgistanu lako je uz lokalnu SIM karticu. SIM kartice možete kupiti u zračnoj luci ili od pružatelja mobilnih usluga u gradu. Glavni pružatelji usluga uključuju Beeline, O! i Megacom. Provjerite je li vaš telefon otključan prije kupnje SIM kartice. Pokrivenost internetom općenito je dobra u gradovima, ali može biti slaba u ruralnim područjima.",
+          "Internetske cijene": "Cijene interneta u Kirgistanu općenito su pristupačne. Osnovni podatkovni paket od 1 GB može koštati oko 100 KGS (približno 1,20 USD), dok bi veći paketi, poput 10 GB, mogli koštati oko 500 KGS (približno 6 USD). Neograničeni podatkovni planovi za mjesec dana mogu se kretati od 800 do 1500 KGS (otprilike 9,50 USD do 18 USD) ovisno o davatelju usluga i brzini veze.",
+          "Valuta i plaćanja": "Lokalna valuta je kirgistanski som (KGS). Bankomati su dostupni u većim gradovima, ali preporučljivo je nositi gotovinu u ruralnim područjima. Kreditne i debitne kartice prihvaćaju se na mnogim mjestima u gradovima, ali manje u udaljenim područjima. Usluge mjenjačnice dostupne su u zračnim lukama, bankama i mjenjačnicama.",
+          "Jezik": "Kirgiški i ruski su službeni jezici. U većim gradovima možete pronaći govornike engleskog, osobito u turističkim područjima, ali u ruralnim regijama korisno je znati neke osnovne kirgiške ili ruske izraze. Aplikacija za prevođenje ili zbornik izraza može biti od velike pomoći.",
+          "Zdravlje i sigurnost": "Kirgistan je općenito siguran za putnike, ali mudro je poduzeti standardne mjere opreza. Pijte flaširanu ili prokuhanu vodu kako biste izbjegli bolesti koje se prenose vodom. Provjerite imate li putno osiguranje koje pokriva zdravlje i nezgode. Hitne medicinske usluge dostupne su u gradovima, ali mogu biti ograničene u ruralnim područjima.",
+          "Klima i odjeća": "Kirgistan ima kontinentalnu klimu s hladnim zimama i vrućim ljetima. U planinama temperature mogu biti znatno niže, pa se spakirajte u skladu s tim. Preporuča se slojevita odjeća, čvrsta obuća za hodanje i zaštita od sunca. Zimi ponesite toplu odjeću, uključujući kvalitetnu jaknu, rukavice i kape.",
+          "Struja i utičnice": "Standardni napon je 220V, a frekvencija 50Hz. Utikači i utičnice su tipa C i F. Preporučljivo je ponijeti univerzalni putni adapter kako biste mogli puniti svoje elektroničke uređaje."
+        },
+        "details": "Za detaljnije informacije i savjete pogledajte turističke vodiče i lokalne izvore. Uživajte u svom prvom putovanju u Kirgistan i stvorite nezaboravne uspomene!"
+      },
+      "TravelPreparation": {
+        "title": "Pripremite se za svoje putovanje u Kirgistan",
+        "Description": "Osigurajte nesmetano i ugodno putovanje u Kirgistan tako što ćete se pobrinuti za ove bitne pripreme za putovanje.",
+        "Options": {
+          "Viza i putovnica": "Provjerite zahtjeve za vizu za svoje državljanstvo i osigurajte da vaša putovnica vrijedi najmanje šest mjeseci nakon planiranog boravka.",
+          "Zdravlje i cijepljenja": "Posavjetujte se sa svojim liječnikom za sva potrebna cijepljenja ili zdravstvene mjere opreza za putovanje u Kirgistan.",
+          "Putno osiguranje": "Razmislite o kupnji putnog osiguranja za pokrivanje neočekivanih hitnih slučajeva, poput medicinskih troškova ili otkazivanja putovanja.",
+          "Valuta i novac": "Upoznajte se s lokalnom valutom (kirgiški som) i zamijenite nešto novca prije putovanja. Bankomati su dostupni u većim gradovima.",
+          "Jezik": "Dok su ruski i kirgiški službeni jezici, engleski nije široko rasprostranjen. Razmislite o učenju nekih osnovnih fraza na ruskom ili kirgiškom.",
+          "Vrijeme i odjeća": "Spakirajte odgovarajuću odjeću za vremenske uvjete tijekom vašeg posjeta. U Kirgistanu vladaju vruća ljeta i hladne zime, pa ponesite slojeve.",
+          "Sigurnost i sigurnost": "Budite informirani o trenutnoj situaciji u Kirgistanu i budite oprezni, osobito u udaljenim područjima. Čuvajte svoje stvari na sigurnom i budite svjesni svoje okoline.",
+          "Kulturni bonton": "Poštujte lokalne običaje i tradiciju, poput skidanja cipela prije ulaska u nečiji dom i traženja dopuštenja prije fotografiranja ljudi."
+        },
+        "details": "Dodatne putne savjete i savjete specifične za vaše putovanje u Kirgistan potražite u našem sveobuhvatnom turističkom vodiču."
+      }
+    },
+    "sights": {
+      "name": "Znamenitosti",
+      "title": "Mjesta za posjetiti u Kirgistanu",
+      "subtitle": "Gdje ići u Kirgistanu?  Osim toga, informirajte se o vremenskim prilikama u gradovima i regionalnim središtima kako biste maksimalno iskoristili svoje putovanje i bili spremni na promjenjivo vrijeme ove prekrasne zemlje.",
+      "description": "Pronađite mjesta za posjetiti diljem Kirgistana, od planinskih jezera i nacionalnih parkova do gradova i povijesnih mjesta. Odaberite regiju za početak istraživanja.",
+      "keywords": "Mjesta u Kirgistanu, putovanje u Kirgistan, istražite Kirgistan, odredišta u Kirgistanu, turizam u Kirgistanu, mjesta koja morate posjetiti u Kirgistanu, glavne atrakcije Kirgistan, pejzaži Kirgistana, kulturna mjesta Kirgistan, prirodna čuda Kirgistan, najbolja mjesta za posjetiti u Kirgistanu",
+      "sights": "Kamo ići!",
+      "must-see": {
+        "subtitle": "Destinacije Kirgistana koje morate posjetiti po regijama",
+        "description1": "Kirgistan je poznat po svojim prekrasnim prirodnim krajolicima, od veličanstvenih planina do mirnih jezera. Evo nekih od najljepših mjesta u svakoj regiji:",
+        "chuyregion": "regija Chuy",
+        "alaarchatitle": "Nacionalni park Ala Archa:",
+        "alaarchadescription": "Nudi prekrasan pogled i pješačke staze.",
+        "buranatitle": "Toranj Burana:",
+        "buranadescription": "Povijesni minaret sa slikovitim pogledom na dolinu.",
+        "issykulregion": "Regija Issyk-Kul",
+        "lakeissykkultitle": "Jezero Issyk-Kul:",
+        "lakeissykkuldescription": "Veliko slano jezero s plažama i odmaralištima.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Poznat po formacijama crvenih stijena.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Vrata do prekrasnih planinskih mjesta kao što je Altyn Arashan.",
+        "narynregion": "Narynska oblast",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Povijesni kameni karavan-saraj u slikovitoj dolini.",
+        "sonkultitle": "Jezero Son-Kul:",
+        "sonkuldescription": "Jezero na velikoj nadmorskoj visini s prekrasnim zalascima sunca.",
+        "jalalabadregion": "Jalal-Abadska oblast",
+        "sarychelextitle": "Rezervat biosfere Sary-Chelek:",
+        "sarychelekdescription": "Sadrži netaknuta jezera i šume.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Dom najveće šume oraha i prekrasnih slapova.",
+        "oshregion": "Oš regija",
+        "sulaymanmountaintitle": "Sulejmanova planina:",
+        "sulaymanmountaindescription": "Sveta planina s panoramskim pogledom.",
+        "alayvalleytitle": "dolina Alaj:",
+        "alayvalleydescription": "Nudi spektakularan pogled na planine Pamir.",
+        "batkenregion": "Batkenska oblast",
+        "batkenvalleytitle": "Batkenska dolina:",
+        "batkenvalleydescription": "Poznato po svojim stablima marelica i jedinstvenim formacijama stijena.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Ima prekrasne riječne doline.",
+        "talasregion": "Regija Talas",
+        "beshtashtitle": "Nacionalni park Besh-Tash:",
+        "beshtashdescription": "Ima slikovite rijeke i alpske livade.",
+        "manasordotitle": "Kompleks Manas Ordo:",
+        "manasordodescription": "Kulturno mjesto posvećeno heroju Manasu."
+      },
+      "highlights": [
+        "Kako doći do",
+        "Prijevoz",
+        "Gdje odsjesti",
+        "Što jesti",
+        "Što učiniti",
+        "Sezona"
+      ]
+    },
+    "tours": {
+      "name": "Putovanja",
+      "title": "Putovanja po Kirgistanu",
+      "subtitle": "Privatna i mala grupna putovanja u Kirgistanu",
+      "description": "Otkrijte pješačke, konjičke, kulturne i automobilske rute kroz Kirgistan. Pridružite se maloj grupi ili odaberite privatno putovanje prema svojim interesima.",
+      "description1": "Putovanje može uključivati ​​planinske staze, noćenje u tradicionalnom šatoru od filca ili nekoliko dana pokraj Issyk-Kula. Odaberite rutu koja odgovara vašim interesima i vremenu koje imate.\n\nNaš tim može pomoći oko vodiča, prijevoza i smještaja. Javite se kako bismo dogovorili datume, veličinu grupe i željeni tempo.",
+      "keywords": "Ture po Kirgistanu, najbolje ture po Kirgistanu, izleti po Kirgistanu, najbolje turističke kompanije po Kirgistanu, putnička agencija po Kirgistanu, avanturističke ture po Kirgistanu, vođene ture po Kirgistanu, kulturne ture po Kirgistanu, pješačke ture po Kirgistanu, ture jahanja po Kirgistanu, nomadska iskustva po Kirgistanu, putovanja po Kirgistanu paketi, najbolje ture u Kirgistanu, istražite Kirgistan kroz ture",
+      "tourPage": {
+        "level": "Razina",
+        "duration": "Trajanje",
+        "price": "Cijena",
+        "day": "Dan",
+        "days": "dana",
+        "details": "pojedinosti",
+        "things": "Aktivnosti",
+        "places": "Mjesta na ruti",
+        "addInfo": "Dodatne informacije",
+        "includings": "Uključeno u cijenu",
+        "excludings": "Nije uključeno u cijenu",
+        "from": "Od",
+        "note": "Bilješka",
+        "person": "Osoba",
+        "persons": "Osobe",
+        "andMore": "i više"
+      },
+      "TourPreparation": {
+        "title": "Osnove za putovanje u Kirgistan",
+        "Description": "Sveobuhvatan popis osnovnih stvari koje trebate ponijeti na svoje putovanje u Kirgistan kako biste osigurali udobnost, sigurnost i spremnost za različite vremenske uvjete i aktivnosti na otvorenom.",
+        "Options": {
+          "Cipele": "Ponesite udobne cipele za hodanje za obilaske grada, čvrste cipele za planinarenje za umjerena planinarenja, izdržljive cipele za planinarenje za planinarenje i sandale koje se brzo suše kao dodatni par.",
+          "Šešir": "Ne zaboravite spakirati šešir širokog oboda ili kapu za sunčanje s preklopom oko vrata kako biste se zaštitili od jakog sunca na velikim visinama.",
+          "UV krema": "Ne zaboravite spakirati kremu za sunčanje širokog spektra s visokim zaštitnim faktorom kako biste svoju kožu zaštitili od intenzivnih UV zraka, posebno na višim nadmorskim visinama u Kirgistanu.",
+          "Odjeća": "Spakirajte odgovarajuće slojeve odjeće za različite temperature i vremenske uvjete, s obzirom da temperature mogu značajno varirati s promjenama nadmorske visine. Budite spremni na snijeg ili kišu, posebno u planinskim područjima.",
+          "Medicinska pomoć": "Ne zaboravite ponijeti osobna medicinska pomagala kao što su potrebni lijekovi, flasteri, sredstva za ublažavanje bolova i sve specifične stvari za već postojeća medicinska stanja kao mjere opreza."
+        },
+        "overview": "Pitajte nas što ponijeti za svoju rutu i sezonu."
+      }
+    },
+    "articles": {
+      "name": "Članci",
+      "title": "Kultura i priroda Kirgistana",
+      "description": "Upoznajte ljude, tradiciju, kuhinju i krajolike Kirgistana.",
+      "keywords": [
+        "Kirgiška kultura",
+        "Kirgiške tradicije",
+        "Kirgiška priroda",
+        "Lov na burkut",
+        "Kok-boru",
+        "Alabai psi",
+        "Tajgan",
+        "Kirgistanska povijest",
+        "srednjoazijska kultura",
+        "Nomadsko naslijeđe",
+        "Istraživanje kulture",
+        "Tradicionalni sportovi",
+        "Kirgistanski hrtovi",
+        "Kulturna iskustva",
+        "Avantura u Kirgistanu",
+        "Nasljedne pasmine",
+        "Kulturne tradicije",
+        "Jedinstvena iskustva",
+        "Kirgiški način života"
+      ]
+    },
+    "about": {
+      "title": "O nama",
+      "subtitle": "Tko smo mi?",
+      "description": "Pomažemo vam isplanirati putovanje u Kirgistan. Recite nam kada želite doći i što vas zanima pa ćemo zajedno odabrati rutu, vodiče i smještaj.",
+      "keywords": "O nama, Naša priča, Kirgistanski entuzijasti, Strast putovanja, Iznimna iskustva, Tim, Vrijednosti, Misija",
+      "buttons": {
+        "our_team": "Naš tim",
+        "our_clients": "Naši klijenti",
+        "contact_us": "Kontaktirajte nas"
+      }
+    },
+    "info": {
+      "seen": "Posjeti: ",
+      "created": "Izrađeno: ",
+      "modified": "Zadnja izmjena: "
+    },
+    "download": {
+      "text": "Držite karte, mjesta i informacije o putovanjima pri ruci s našim mobilnim aplikacijama."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Korisni linkovi",
+          "links": [
+            {
+              "text": "Naslovnica",
+              "url": "/"
+            },
+            {
+              "text": "Znamenitosti",
+              "url": "/places"
+            },
+            {
+              "text": "Putovanja",
+              "url": "/tours"
+            },
+            {
+              "text": "Transferi do zračne luke",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privatnost i pravni",
+          "links": [
+            {
+              "text": "O nama",
+              "url": "/about"
+            },
+            {
+              "text": "Kontaktirajte nas",
+              "url": "/contact"
+            },
+            {
+              "text": "Politika privatnosti",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Podaci za kontakt",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biškek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Računi na društvenim mrežama",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "programer",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

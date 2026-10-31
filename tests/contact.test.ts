@@ -5,6 +5,14 @@ import { spawnSync } from 'node:child_process'
 const valid = { name: 'Test Visitor', email: 'visitor@example.invalid', phone: '', subject: '', message: 'Synthetic test message', lang: 'en', website: '' }
 const request = (body: unknown = valid, headers: Record<string, string> = {}) => new Request('https://guide.test/api/contact', { method: 'POST', headers: { origin: 'https://guide.test', 'content-type': 'application/json', ...headers }, body: JSON.stringify(body) })
 
+test('contact accepts new website locales and keeps the submitted language', async () => {
+  const { createContactHandler } = await import('../src/lib/contact/handler')
+  const saved: { lang: string }[] = []
+  const handler = createContactHandler({ origin: 'https://guide.test', consume: async () => true, save: async value => { saved.push(value); return true } })
+  for (const lang of ['uk', 'kg', 'he', 'uz']) assert.equal((await handler(request({ ...valid, lang }))).status, 201)
+  assert.deepEqual(saved.map(value => value.lang), ['uk', 'kg', 'he', 'uz'])
+})
+
 test('contact succeeds only after acknowledged durable storage', async () => {
   const { createContactHandler } = await import('../src/lib/contact/handler')
   const saved: unknown[] = []
@@ -77,9 +85,9 @@ test('address-limited attempts cannot exhaust the global quota for other visitor
   assert.equal(await consumeContactLimit(collection, '203.0.113.3', 'test-only', 123456789), true)
 })
 
-test('all ten languages have honest localized submission states', async () => {
+test('all fifty languages have honest localized submission states', async () => {
   const { contactCopy } = await import('../src/app/[lang]/contact/content')
-  assert.equal(Object.keys(contactCopy).length, 10)
+  assert.equal(Object.keys(contactCopy).length, 50)
   for (const copy of Object.values(contactCopy)) {
     for (const key of ['pending', 'success', 'error', 'invalid', 'rateLimit', 'send'] as const) assert.ok(copy[key]?.length > 5, key)
     assert.equal(/draft|email app/i.test(copy.send + copy.hint), false)

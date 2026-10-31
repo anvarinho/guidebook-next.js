@@ -1,0 +1,252 @@
+{
+  "en": {
+    "languageMenu": "Choose language",
+    "previousPlace": "Previous place",
+    "nextPlace": "Next place"
+  },
+  "it": {
+    "languageMenu": "Scegli la lingua",
+    "previousPlace": "Luogo precedente",
+    "nextPlace": "Luogo successivo"
+  },
+  "fr": {
+    "languageMenu": "Choisir la langue",
+    "previousPlace": "Lieu précédent",
+    "nextPlace": "Lieu suivant"
+  },
+  "de": {
+    "languageMenu": "Sprache wählen",
+    "previousPlace": "Vorheriger Ort",
+    "nextPlace": "Nächster Ort"
+  },
+  "es": {
+    "languageMenu": "Elegir idioma",
+    "previousPlace": "Lugar anterior",
+    "nextPlace": "Lugar siguiente"
+  },
+  "jp": {
+    "languageMenu": "言語を選択",
+    "previousPlace": "前の場所",
+    "nextPlace": "次の場所"
+  },
+  "kr": {
+    "languageMenu": "언어 선택",
+    "previousPlace": "이전 장소",
+    "nextPlace": "다음 장소"
+  },
+  "ae": {
+    "languageMenu": "اختيار اللغة",
+    "previousPlace": "المكان السابق",
+    "nextPlace": "المكان التالي"
+  },
+  "cn": {
+    "languageMenu": "选择语言",
+    "previousPlace": "上一个地点",
+    "nextPlace": "下一个地点"
+  },
+  "ru": {
+    "languageMenu": "Выбрать язык",
+    "previousPlace": "Предыдущее место",
+    "nextPlace": "Следующее место"
+  },
+  "uz": {
+    "languageMenu": "Tilni tanlash",
+    "previousPlace": "Oldingi joy",
+    "nextPlace": "Keyingi joy"
+  },
+  "kz": {
+    "languageMenu": "Тілді таңдау",
+    "previousPlace": "Алдыңғы жер",
+    "nextPlace": "Келесі жер"
+  },
+  "kg": {
+    "languageMenu": "Тилди тандоо",
+    "previousPlace": "Мурунку жер",
+    "nextPlace": "Кийинки жер"
+  },
+  "tr": {
+    "languageMenu": "Dil seçin",
+    "previousPlace": "Önceki yer",
+    "nextPlace": "Sonraki yer"
+  },
+  "hi": {
+    "languageMenu": "भाषा चुनें",
+    "previousPlace": "पिछली जगह",
+    "nextPlace": "अगली जगह"
+  },
+  "ur": {
+    "languageMenu": "زبان منتخب کریں",
+    "previousPlace": "پچھلی جگہ",
+    "nextPlace": "اگلی جگہ"
+  },
+  "tg": {
+    "languageMenu": "Интихоби забон",
+    "previousPlace": "Ҷои қаблӣ",
+    "nextPlace": "Ҷои баъдӣ"
+  },
+  "ms": {
+    "languageMenu": "Pilih bahasa",
+    "previousPlace": "Tempat sebelumnya",
+    "nextPlace": "Tempat seterusnya"
+  },
+  "fa": {
+    "languageMenu": "انتخاب زبان",
+    "previousPlace": "مکان قبلی",
+    "nextPlace": "مکان بعدی"
+  },
+  "az": {
+    "languageMenu": "Dil seçin",
+    "previousPlace": "Əvvəlki yer",
+    "nextPlace": "Növbəti yer"
+  },
+  "uk": {
+    "languageMenu": "Вибрати мову",
+    "previousPlace": "Попереднє місце",
+    "nextPlace": "Наступне місце"
+  },
+  "pl": {
+    "languageMenu": "Wybierz język",
+    "previousPlace": "Poprzednie miejsce",
+    "nextPlace": "Następne miejsce"
+  },
+  "nl": {
+    "languageMenu": "Kies een taal",
+    "previousPlace": "Vorige plaats",
+    "nextPlace": "Volgende plaats"
+  },
+  "he": {
+    "languageMenu": "בחירת שפה",
+    "previousPlace": "המקום הקודם",
+    "nextPlace": "המקום הבא"
+  },
+  "cs": {
+    "languageMenu": "Vybrat jazyk",
+    "previousPlace": "Předchozí místo",
+    "nextPlace": "Další místo"
+  },
+  "pt": {
+    "languageMenu": "Escolher idioma",
+    "previousPlace": "Local anterior",
+    "nextPlace": "Local seguinte"
+  },
+  "id": {
+    "languageMenu": "Pilih bahasa",
+    "previousPlace": "Tempat sebelumnya",
+    "nextPlace": "Tempat berikutnya"
+  },
+  "th": {
+    "languageMenu": "เลือกภาษา",
+    "previousPlace": "สถานที่ก่อนหน้า",
+    "nextPlace": "สถานที่ถัดไป"
+  },
+  "bn": {
+    "languageMenu": "ভাষা বেছে নিন",
+    "previousPlace": "আগের জায়গা",
+    "nextPlace": "পরের জায়গা"
+  },
+  "ne": {
+    "languageMenu": "भाषा छान्नुहोस्",
+    "previousPlace": "अघिल्लो ठाउँ",
+    "nextPlace": "अर्को ठाउँ"
+  },
+  "vi": {
+    "languageMenu": "Chọn ngôn ngữ",
+    "previousPlace": "Địa điểm trước",
+    "nextPlace": "Địa điểm tiếp theo"
+  },
+  "ka": {
+    "languageMenu": "ენის არჩევა",
+    "previousPlace": "წინა ადგილი",
+    "nextPlace": "შემდეგი ადგილი"
+  },
+  "hy": {
+    "languageMenu": "Ընտրել լեզուն",
+    "previousPlace": "Նախորդ վայրը",
+    "nextPlace": "Հաջորդ վայրը"
+  },
+  "mn": {
+    "languageMenu": "Хэл сонгох",
+    "previousPlace": "Өмнөх газар",
+    "nextPlace": "Дараагийн газар"
+  },
+  "be": {
+    "languageMenu": "Выбраць мову",
+    "previousPlace": "Папярэдняе месца",
+    "nextPlace": "Наступнае месца"
+  },
+  "ro": {
+    "languageMenu": "Alege limba",
+    "previousPlace": "Locul anterior",
+    "nextPlace": "Locul următor"
+  },
+  "sv": {
+    "languageMenu": "Välj språk",
+    "previousPlace": "Föregående plats",
+    "nextPlace": "Nästa plats"
+  },
+  "nb": {
+    "languageMenu": "Velg språk",
+    "previousPlace": "Forrige sted",
+    "nextPlace": "Neste sted"
+  },
+  "da": {
+    "languageMenu": "Vælg sprog",
+    "previousPlace": "Forrige sted",
+    "nextPlace": "Næste sted"
+  },
+  "fi": {
+    "languageMenu": "Valitse kieli",
+    "previousPlace": "Edellinen paikka",
+    "nextPlace": "Seuraava paikka"
+  },
+  "el": {
+    "languageMenu": "Επιλογή γλώσσας",
+    "previousPlace": "Προηγούμενο μέρος",
+    "nextPlace": "Επόμενο μέρος"
+  },
+  "hr": {
+    "languageMenu": "Odaberite jezik",
+    "previousPlace": "Prethodno mjesto",
+    "nextPlace": "Sljedeće mjesto"
+  },
+  "sr": {
+    "languageMenu": "Изаберите језик",
+    "previousPlace": "Претходно место",
+    "nextPlace": "Следеће место"
+  },
+  "sk": {
+    "languageMenu": "Vybrať jazyk",
+    "previousPlace": "Predchádzajúce miesto",
+    "nextPlace": "Ďalšie miesto"
+  },
+  "sl": {
+    "languageMenu": "Izberite jezik",
+    "previousPlace": "Prejšnji kraj",
+    "nextPlace": "Naslednji kraj"
+  },
+  "bg": {
+    "languageMenu": "Изберете език",
+    "previousPlace": "Предишно място",
+    "nextPlace": "Следващо място"
+  },
+  "bs": {
+    "languageMenu": "Odaberite jezik",
+    "previousPlace": "Prethodno mjesto",
+    "nextPlace": "Sljedeće mjesto"
+  },
+  "mk": {
+    "languageMenu": "Изберете јазик",
+    "previousPlace": "Претходно место",
+    "nextPlace": "Следно место"
+  },
+  "sq": {
+    "languageMenu": "Zgjidhni gjuhën",
+    "previousPlace": "Vendi i mëparshëm",
+    "nextPlace": "Vendi tjetër"
+  },
+  "lt": {
+    "languageMenu": "Pasirinkite kalbą",
+    "previousPlace": "Ankstesnė vieta",
+    "nextPlace": "Kita vieta"
+  }
+}

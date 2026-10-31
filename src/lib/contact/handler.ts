@@ -1,10 +1,12 @@
+import { i18n } from '../i18n.config'
+
 export type ContactMessage = { name: string; email: string; phone: string; subject: string; message: string; lang: string }
 export type ContactDependencies = {
   origin: string
   consume: (request: Request) => Promise<boolean>
   save: (message: ContactMessage) => Promise<boolean>
 }
-const locales = ['en', 'fr', 'de', 'es', 'it', 'ru', 'ae', 'cn', 'jp', 'kr']
+const locales: readonly string[] = i18n.locales
 const MAX_BYTES = 18000
 function reply(status: number, error?: string) {
   return Response.json(error ? { error } : { ok: true }, { status, headers: { 'Cache-Control': 'no-store', ...(status === 429 ? { 'Retry-After': '900' } : {}) } })

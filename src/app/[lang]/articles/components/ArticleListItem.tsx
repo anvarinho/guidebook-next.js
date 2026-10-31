@@ -1,3 +1,5 @@
+
+import additionalViewsLabels from '@/translations/ui/app-lang-articles-components-ArticleListItem-tsx-viewsLabels.json';
 import getBase64 from '@/lib/getLocalBase64';
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
@@ -21,6 +23,7 @@ export default async function ArticleListItem({ article, lang, featured, order }
     day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
   }).format(date) : undefined;
   const viewsLabels: Record<Locale, string> = {
+    ...additionalViewsLabels as Record<Locale, string>,
     en: 'Views', ru: 'Просмотры', ae: 'المشاهدات', fr: 'Vues', de: 'Aufrufe',
     it: 'Visualizzazioni', es: 'Visualizaciones', jp: '閲覧数', kr: '조회수', cn: '浏览量',
   };

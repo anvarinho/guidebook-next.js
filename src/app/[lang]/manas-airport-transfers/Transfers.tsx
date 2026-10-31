@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 
 
@@ -366,7 +367,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
   const t = useTransferText();
   const router = useRouter();
   const { destination, vehicle, sort, ids, startingFare, published, message, shortlist, comparing, setComparing, toggleProvider, status, comparisonOpen, openComparison, closeComparison, formRef, submitTrip, updateTrip, changeRoute, today, handoff, copyTrip, shareRoute, copyFallback, copyRef, compareButtonRef, comparisonRef, menuOpen, setMenuOpen, menuButtonRef, navRef, headerRef, handleNavBlur, navigateRoute, year } = useTransferDirectory(t);
-  return (<div className={styles["transfers-page"]} lang={transferLanguages[lang].tag} dir={lang === "ae" ? "rtl" : "ltr"}>
+  return (<div className={styles["transfers-page"]} lang={transferLanguages[lang].tag} dir={isRtlLocale(lang) ? "rtl" : "ltr"}>
 
     <a className="skip-link" href="#route-search">{t("Skip to transfer booking")}</a>
     <svg className="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -749,7 +750,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
       </div>
       <div className="footer-bottom">
         <p>
-          © <span id="year">{year}</span>{" "}{t("Central Asia · GuideBook of Kyrgyzstan")}{" "}</p>
+          © <span id="year">{year}</span>{" "}<bdi translate="no" lang="en">Central Asia · GuideBook of Kyrgyzstan</bdi>{" "}</p>
         <div>
           <a href="mailto:anvarinho@gmail.com?subject=Transfer%20directory%20correction">{t("Suggest a correction")}</a><a href="#">{t("Back to top")}{" "}<svg className="icon up-arrow" aria-hidden="true">
               <use href="#arrow" /></svg></a>

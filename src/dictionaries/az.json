@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "az-AZ",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Yüklənir...",
+    "contactButton": "Hər hansı bir sualınız var?",
+    "navigation": [
+      {
+        "text": "Ana səhifə",
+        "url": "/"
+      },
+      {
+        "text": "Görməli yerlər",
+        "url": "/places"
+      },
+      {
+        "text": "Turlar",
+        "url": "/tours"
+      },
+      {
+        "text": "Məqalələr",
+        "url": "/articles"
+      },
+      {
+        "text": "Haqqımızda",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Qırğızıstan Səyahət Bələdçisi",
+      "description": "Dağ cığırlarında gəzin, İssık-Kulda üzün və ya yerli bir ailənin yurdunda gecələyin. Özünüzə uyğun marşrut seçin.",
+      "subtitle": "Qırğızıstan Səyahət Bələdçisi",
+      "subtitle1": "Niyə Qırğızıstanı ziyarət etməlisiniz?",
+      "subtitle2": "Böyük açıq havada kəşfiyyat",
+      "subtitle3": "Sonsuz Kəşfiyyat",
+      "subtitle4": "Səyahətinizi Planlayın",
+      "subtitle5": "Qırğızıstan mütləq ziyarət edilməli yerlər",
+      "paragraph": "Əvvəllər Sovet İttifaqının bir hissəsi olan bu gözəl, dənizə çıxışı olmayan ölkə tez bir zamanda Mərkəzi Asiyanın ən məşhur səyahət yerlərindən birinə çevrilir. Qırğızıstanın turizm sənayesi sürətlə inkişaf edir və səyahət edənlərə dünyanın ən möhtəşəm ölkələrindən birini kəşf etmək şansı verir.",
+      "paragraph1": "Qırğızıstan son illərdə turizmdə dramatik artım müşahidə etdi, çünki macəraçılar onun heyrətamiz mənzərələri ilə gəzintiyə, düşərgələrə və atlı gəzintilərə axışır. Qərb və inkişaf etmiş ölkələrin əksəriyyətinə vizasız giriş təklif etməklə viza siyasətini yüngülləşdirən ilk Mərkəzi Asiya ölkəsi kimi güclü turizm şəbəkəsi inkişaf etmişdir.",
+      "paragraph2": "Ölkə daxilində İcma Əsaslı Turizm (CBT) təşəbbüslərindən tutmuş qonaq evlərinə və müstəqil bələdçilərə qədər, Qırğızıstanın nəfəs kəsən mənzərəsini yaşamaq üçün çoxsaylı yollar var. Piyadalar Karakoldan, Qoçkordan, Arslanbobdan və hətta paytaxt Bişkekdən heyranedici gəzintilərə çıxa bilərlər. Qeyd edək ki, burada gəzinti tez-tez ağlabatan səviyyəli fiziki hazırlığı tələb edir, çünki bir çox cığır sadəcə rahat gəzintidən daha çox şey təklif edir. Əksər treklər 1 ilə 5 gün arasında dəyişir, baxmayaraq ki, daha uzun sərgüzəştlər mövcuddur.\r\n\r\nAyaqlarını xilas etmək istəyənlər üçün at sürmək məşhur bir alternativdir. Sonq Kolda ölkənin ən möhtəşəm at trekinə çıxın və ya gözəl İssık-Kul gölündə bir neçə gün istirahət və üzgüçülüklə keçirin.",
+      "paragraph3": "Saysız-hesabsız yollar, gəzintilər və cığırlar ilə araşdırma imkanları sonsuzdur. İstər macəra, istərsə də istirahət axtarmağınızdan asılı olmayaraq, Qırğızıstanda hər kəs üçün bir şey var.",
+      "paragraph4": "Attraksionlar, oraya və ətrafa necə getmək və digər səyahət tövsiyələri haqqında daha dəqiq məlumat üçün hərtərəfli Qırğızıstan səyahət bələdçisimizi oxumağınızdan əmin olun. Səyahətinizdən maksimum yararlanmaq üçün naviqasiya, tərcümə və yerli məlumat üçün tövsiyə olunan tətbiqlərlə səyahət təcrübənizi təkmilləşdirin.\r\n\r\nSəyahətinizdən həzz alın və Qırğızıstanın bənzərsiz gözəlliyi və mədəniyyəti ilə tanış olun",
+      "keywords": "Qırğızıstan turist bələdçisi, turist bələdçisi, Səyahət rahatlığı, Yerli attraksionlar, Turist xidmətləri, Qırğızıstan səyahət tövsiyələri, Mədəni təcrübələr, Turun planlaşdırılması, Görməli yerlər, Macəra səyahəti, Rahat turlar, Bişkek şəhər bələdçisi, Qırğızıstanın turistik yerləri, Turistik yer, Görməli olduğum yerlər, Yaxınlıqda gəzməli yerlər, Mənə yaxın yerlər, Turistik yerlər, Dünyanın ən gözəl yerləri, Dünyanın ən gözəl yerləri dünyanın gözəl yerləri, Bələdçi ilə səyahət, Səyahət üçün bələdçi, Gözəl yerlər, Qırğızıstanda Bişkek, Şəhər Bişkek, Turist və bələdçi, PR turistik yerlər, Yaxınlıqdakı attraksionlar və onu necə yerinə yetirmək olar",
+      "button": "Gəlin öyrənək!",
+      "button1": "Hara getməli!",
+      "button2": "Nə etməli!",
+      "button3": "daha çox oxuyun",
+      "button4": "Turlarımız",
+      "Transportation": {
+        "title": "Qırğızıstanda Nəqliyyat | Səyahət Bələdçisi",
+        "Description": "Qırğızıstanda gəzmək özü bir macəra ola bilər. Bilməli olduğunuz şey budur:",
+        "Options": {
+          "Daxili Uçuşlar": "Daha uzun məsafələr üçün, xüsusən də vaxt məhduddursa, Bişkek, Oş və Tamçi (İssık-Kul vilayətində Çolpon-Ata yaxınlığında) kimi böyük şəhərlər arasında daxili reyslər mövcuddur. Cədvəllər və sifarişlər üçün aviaşirkətləri yoxlayın.",
+          "Marshrutkas (Mikroavtobuslar)": "Bunlar qısa və orta məsafələr üçün ən çox yayılmış və sərfəli nəqliyyat növüdür. Onlar şəhərlər və qəsəbələr arasında sabit marşrutları izləyirlər və yerli sakinlər arasında çox populyardırlar.",
+          "Ortaq taksilər": "Ortaq taksilər marshrutkalara daha sürətli, lakin bir qədər daha bahalı alternativ təklif edir. Onlar adətən dolu olduqda ayrılırlar və qiymətləri müzakirə etmək olar.",
+          "Avtomobil İcarəsi": "Daha çox rahatlıq üçün avtomobil icarəyə götürmək yaxşı seçimdir. Kənd yerlərində yollar kobud ola bilər, ona görə də 4x4 tövsiyə olunur. Beynəlxalq sürücülük icazəniz olduğundan əmin olun.",
+          "Qatarlar": "İlk növbədə Bişkeki İssık-Kul gölünün yaxınlığındakı Balıqçı ilə birləşdirən məhdud qatar xidmətləri mövcuddur. Bu, mənzərəli bir marşrutdur, lakin yol səyahətindən daha yavaşdır.",
+          "Avtobuslar": "Müntəzəm avtobuslar böyük şəhərlərdə işləyir və səyahət üçün rahat bir yol təklif edir. Bununla belə, onlar ucqar əraziləri əhatə etməyə bilər.",
+          "Avtostop": "rəsmi nəqliyyat imkanlarının məhdud ola biləcəyi Qırğızıstanın kənd yerlərində yayılmış təcrübədir. Nisbətən təhlükəsizdir və mədəniyyət baxımından qəbul edilir, lakin yad adamların attraksionlarını qəbul edərkən ehtiyatlı olun və öz mülahizənizdən istifadə edin."
+        },
+        "details": "Nəqliyyat variantları haqqında ətraflı məlumat üçün təqdim olunmuş bələdçiyə müraciət edin."
+      },
+      "Accommodations": {
+        "title": "Qırğızıstanda yaşayış | Səyahət Bələdçisi",
+        "Description": "Rahat qonaq evlərindən tutmuş lüks kurortlara qədər Qırğızıstan hər bir səyahətçinin seçiminə və büdcəsinə uyğun müxtəlif yerləşdirmə variantları təklif edir. Burada nəzərə alınmalı bəzi seçimlər var:",
+        "Options": {
+          "Otellər": "Qırğızıstanın Bişkek və Oş kimi böyük şəhərləri müxtəlif büdcələrə və seçimlərə cavab verən bir sıra otellərlə öyünür. Beynəlxalq şəbəkələrdən tutmuş butik otellərə qədər siz Wi-Fi, kondisioner və daxili yemək seçimləri kimi şəraiti olan rahat yaşayış yerləri tapacaqsınız.",
+          "Qonaq evləri": "Daha orijinal təcrübə üçün yerli ailələr tərəfindən idarə olunan qonaq evində qalmağı düşünün. Bu rahat müəssisələr səmimi qarşılanma və qırğız qonaqpərvərliyini yaşamaq şansı təqdim edir. Siz tez-tez evdə hazırlanmış yeməklərdən həzz almaq və yerli adət və ənənələri öyrənmək imkanınız olacaq.",
+          "Yurtlar": "Kənd yerlərində və dağlıq bölgələrdə ənənəvi yurdlar unikal yaşayış təcrübəsi təqdim edir. Bu portativ, çadıra bənzər strukturlar, çox vaxt ətrafdakı mənzərələrin heyrətamiz mənzərələri ilə əsas, lakin rahat yaşayış təklif edir. Yurdda qalmaq yemək və mədəni fəaliyyətləri əhatə edə bilər.",
+          "Qonaq evi": "Qırğızıstanlı bir ailə ilə birlikdə yaşamaq seçimini edin. Yerlilərlə yaşamaq, yeməkləri bölüşmək və gündəlik fəaliyyətlərdə iştirak etmək imkanınız olacaq. Ailə yanında qonaqlamalar orijinal mədəni mübadilə və Qırğızıstanın ənənəvi həyat tərzinə dair fikir təklif edir.",
+          "Eko Lojalar": "Eko-şüurlu səyahətçilər üçün eko-lojalar təbii şəraitdə davamlı yaşayış variantları təqdim edir. Bu lojalar ətraf mühitin qorunmasına üstünlük verir və tez-tez gəzinti, quş müşahidəsi və icma ilə əlaqə kimi fəaliyyətlər təklif edir.",
+          "Düşərgə": "macəra və tənhalıq axtaran səyahətçilər üçün məşhur seçimdir. İstər təyin olunmuş düşərgədə, istərsə də ucqar yerlərdə vəhşi düşərgədə çadır qurmağınızdan asılı olmayaraq, “İz buraxma” prinsiplərinə əməl etməyinizə və lazımi icazələri əldə etməyinizə əmin olun."
+        },
+        "details": "Xüsusi tövsiyələr və rezervasiya variantları üçün səyahət saytlarına, onlayn bron platformalarına və yerli turizm ofislərinə müraciət edin."
+      },
+      "Food": {
+        "title": "Qırğızıstanda ərzaq | Səyahət Bələdçisi",
+        "Description": "Qırğızıstan mətbəxini araşdırmaq səyahət təcrübəsinin ayrılmaz hissəsidir. Bilməli olduğunuz şey budur:",
+        "Options": {
+          "Ənənəvi Mətbəx": "Qırğız mətbəxi ləzzət və irs baxımından zəngindir, beşbarmaq (ət və əriştə), mantı (köftə) və lağman (əriştə şorbası) kimi ənənəvi yeməklər əsas yeməklərdir. Məşhur içki olan kımız kimi tanınan qıcqırdılmış madyan südünü sınamağı qaçırmayın.",
+          "Köçəri Təsiri": "Köçəri irsini əks etdirən Qırğızıstan mətbəxində tez-tez ət (xüsusilə quzu və at əti), süd məhsulları (qımız və ayran kimi) və taxıl (düyü və buğda daxil olmaqla) kimi inqrediyentlərdən hazırlanan doyurucu yeməklər təqdim olunur. Yurtlar, ənənəvi köçəri çadırlar, kənd yerlərində orijinal yemək təcrübələri təklif edə bilər.",
+          "Yerli bazarlar": "Bişkekdəki Oş bazarı kimi yerli bazarları ziyarət edərək müxtəlif qırğız yeməkləri və qəlyanaltılarını, o cümlədən şaşlik (qızardılmış şiş ət), samsa (dadlı xəmir) və plov (plov) dadın. Bu bazarlarda təzə meyvə, qoz-fındıq və ədviyyat almaq imkanı da var.",
+          "Çayxanalar və Kafelər": "Çayxanalar (çayxana) və kafelər Qırğızıstanda hər yerdə mövcuddur, xörək, çörək və yüngül yeməklərlə yanaşı çay (çay) və qəhvə (kofe) verilir. Baursak (qızardılmış xəmir) və qurut (quru qatıq topları) kimi ənənəvi qırğız yeməklərindən dadarkən rahat atmosfer və qonaqpərvərlikdən həzz alın.",
+          "Beynəlxalq mətbəx": "Bişkek kimi şəhər yerlərində rus, Çin, Koreya və Avropa da daxil olmaqla, müxtəlif beynəlxalq mətbəxlər tapa bilərsiniz. Qırğızıstan qonaqpərvərliyi ilə yanaşı qlobal ləzzətlərdən dadmaq üçün dəbli restoranlar, bistrolar və yemək meydançalarını araşdırın.",
+          "Küçə Yeməkləri": "Tez və ləzzətli qəlyanaltılar təklif edən bir sıra küçə ərzaq satıcılarını tapmaq üçün Qırğızıstan küçələrinə çıxın. Somsa (ət və ya tərəvəzlə doldurulmuş qızardılmış və ya bişmiş yeməklər), qızardılmış lağman əriştəsi və qabıqda qızardılmış qarğıdalı kimi məşhur küçə yeməklərini sınayın.",
+          "Yemək Turları və Kulinariya Dərsləri": "Qırğızıstan mətbəxi və kulinariya ənənələrini daha dərindən öyrənmək üçün yemək turlarına çıxın və ya aşpazlıq dərslərinə qoşulun. Ənənəvi yeməklər hazırlamağı, yerli təsərrüfatları və istehsalçıları ziyarət etməyi öyrənin və Qırğızıstanın canlı kulinariya səhnəsinə qərq olun."
+        },
+        "details": "Qırğızıstan mətbəxi və yemək seçimləri haqqında ətraflı məlumat üçün təqdim olunmuş bələdçiyə müraciət edin."
+      },
+      "Safety": {
+        "title": "Qırğızıstanda təhlükəsizlik | Səyahət Bələdçisi",
+        "Description": "Qırğızıstana səyahət ümumiyyətlə təhlükəsizdir, lakin potensial risklərdən xəbərdar olmaq və lazımi tədbirləri görmək vacibdir. Bilməli olduğunuz şey budur:",
+        "Options": {
+          "Siyasi Sabitlik": "Qırğızıstan keçmişdə siyasi qeyri-sabitlik, o cümlədən etirazlar və ara-sıra iğtişaşlar yaşayıb. Əksər turistik ərazilər təsirlənməsə də, yerli hadisələrdən xəbərdar olun və böyük toplantı və nümayişlərdən qaçın.",
+          "Cinayət": "Cib oğurluğu və oğurluq kimi xırda cinayətlər, xüsusən insanların sıx olduğu yerlərdə və turistlərin qaynar nöqtələrində baş verə bilər. Əşyalarınızı təhlükəsiz saxlayın və sayıq olun.",
+          "Terrorizm": "Qırğızıstanda terror təhlükəsi azdır, lakin səyahət edənlər xüsusilə sərhədyanı ərazilərdə ayıq qalmalıdırlar. Hökumətiniz tərəfindən verilən hər hansı səyahət tövsiyələrinə əməl edin və məlumatlı qalın.",
+          "Təbii təhlükələr": "Qırğızıstan xüsusilə dağlıq ərazilərdə zəlzələ, uçqun və sürüşmə kimi təbii təhlükələrə meyllidir. Xüsusilə trekking və ya açıq hava fəaliyyəti ilə məşğul olarkən hazırlıqlı olun və təhlükəsizlik qaydalarına əməl edin.",
+          "Yol Təhlükəsizliyi": "Qırğızıstanda yol şəraiti fərqli ola bilər və xüsusən də kənd yerlərində avtomobil idarə etmək çətin ola bilər. Ehtiyatlı olun, yerli yol qanunlarına əməl edin və nüfuzlu sürücü işə götürməyi düşünün.",
+          "Sağlamlıq Riskləri": "Qırğızıstan ciddi sağlamlıq riskləri yaratmasa da, səyahətçilər gündəlik peyvəndlərdən xəbərdar olmalı və qida və su ilə yoluxan xəstəliklərə qarşı tədbir görməlidirlər.",
+          "Hündürlük Xəstəliyi": "Yüksək dağlıq ərazilərə səfər edən səyahətçilər hündürlük xəstəliyi riskindən xəbərdar olmalıdırlar. Klimatizasiyaya vaxt ayırın və vücudunuz uyğunlaşana qədər ağır fiziki fəaliyyətdən qaçın.",
+          "Səyahət sığortası": "Tibbi xərcləri, təcili evakuasiyanı və səfərin ləğvi/fasiləsini əhatə edən səyahət sığortasının olması vacibdir. Sığorta siyasətinizin məşğul olmağı planlaşdırdığınız fəaliyyətləri əhatə etdiyinə əmin olun."
+        },
+        "details": "Daha ətraflı təhlükəsizlik məlumatları və səyahət tövsiyələri üçün rəsmi hökumət mənbələrinə və səyahət bələdçilərinə müraciət edin."
+      },
+      "Prices": {
+        "title": "Qırğızıstanda qiymətlər | Səyahət Bələdçisi",
+        "Description": "Qırğızıstanda yaşayış və xərcləri anlamaq büdcənizi səmərəli planlaşdırmağa kömək edə bilər. Ümumi məhsul və xidmətlərin qiymətlərinin icmalı:",
+        "Options": {
+          "Yerləşdirmə": "Qırğızıstanda yaşayışın qiyməti yaşayış növündən və yerləşdiyi yerdən asılı olaraq dəyişir. Büdcə ilə səyahət edənlər qonaq evləri və hostellər kimi əlverişli variantları tapa bilər, lüks otellər və kurortlar isə yüksək səviyyəli şərait axtaranlara xidmət göstərir. Qiymətlər büdcəli yerlər üçün gecəlik 10 dollardan lüks müəssisələr üçün gecəlik 100 dollardan yuxarıya qədər dəyişir.",
+          "Qida və Yemək": "Qırğızıstanda, xüsusən də yerli yeməkxanalarda və küçə yeməkləri dükanlarında yemək ümumiyyətlə münasibdir. Beşbarmaq və plov kimi ənənəvi yeməklər ucuzdur və doyurucudur, yerli restoranlarda bir yemək üçün adətən 3-7 dollar arasında dəyişir. Beynəlxalq mətbəx və gözəl yemək variantları daha bahalı ola bilər, yeməklər adambaşına orta hesabla 10-20 dollar və ya daha çox olur.",
+          "Nəqliyyat": "Qırğızıstanda nəqliyyat xərcləri səyahət növündən və məsafədən asılı olaraq dəyişir. Bişkek və Oş kimi böyük şəhərlər arasında daxili uçuşlar 50-150 ABŞ dolları və ya daha çox ola bilər, ortaq taksilər və marşrutkalar (mikroavtobuslar) daha qısa məsafələr üçün büdcəyə uyğun seçimlər təklif edir, adətən marşrutdan asılı olaraq 1-10 dollara başa gəlir. Avtomobil kirayəsi, nəqliyyat vasitəsinin növündən və icarə şirkətindən asılı olaraq gündə 30-100 dollar və ya daha çox başa gələ bilər.",
+          "Fəaliyyətlər və Attraksionlar": "Qırğızıstanda fəaliyyətlərin və attraksionların qiyməti təcrübədən asılı olaraq geniş şəkildə dəyişir. Muzeylərə, tarixi yerlərə və milli parklara giriş haqları ümumiyyətlə münasibdir, adambaşına 1 dollardan 10 dollara qədərdir. Bələdçili turlar, açıq ekskursiyalar və at sürmə və trekkinq kimi macəra fəaliyyətləri əlavə xərclərə səbəb ola bilər, qiymətlər müddətə və mürəkkəbliyə görə dəyişir.",
+          "Alış-veriş": "Qırğızıstanda alış-veriş ənənəvi əl işləri və suvenirlərdən tutmuş müasir mallar və elektronikaya qədər bir sıra seçimlər təklif edir. Qiymətlər əşya və yerdən asılı olaraq dəyişir, lakin bazarlarda və bazarlarda alış-veriş adi haldır. Xüsusilə toxuculuq, zərgərlik və əl işləri alarkən ən yaxşı qiymət üçün danışıqlara hazır olun.",
+          "Valyuta və Valyuta Məzənnələri": "Qırğızıstanın rəsmi pul vahidi Qırğızıstan somudur (KGS). Valyuta məzənnələri dəyişir, ona görə də pul mübadiləsi etməzdən əvvəl cari məzənnələri yoxlamaq məsləhətdir. Böyük kredit kartları daha böyük şəhərlərdə və turizm bölgələrində qəbul edilir, lakin kiçik şəhərlərdə və kənd yerlərində əməliyyatlar üçün nağd pul aparmaq tövsiyə olunur. (1$ = 85-90som)"
+        },
+        "details": "Qırğızıstandakı qiymətlər haqqında ən dəqiq və aktual məlumat üçün yerli mənbələrə və son səyahət bələdçilərinə müraciət edin."
+      },
+      "Travel_Seasons": {
+        "title": "Qırğızıstanda Səyahət Mövsümləri | Səyahət Bələdçisi",
+        "Description": "Qırğızıstanda səyahət mövsümlərini başa düşmək səyahətinizi planlaşdırmağa və səfərinizdən maksimum yararlanmağa kömək edə bilər. Fərqli fəsillərə və gözləntilərə nəzər salaq:",
+        "Options": {
+          "Bahar (mart-may)": "Bahar Qırğızıstanı ziyarət etmək üçün gözəl vaxtdır, çiçəklər çiçək açarkən və ərimiş qarla çaylar qabaranda mənzərə canlanır. Hava mülayimdir, bu onu yürüyüş, trekking və at sürmə kimi açıq fəaliyyətlər üçün ideal edir. Bununla belə, xüsusilə aprel və may aylarında arabir yağış leysanlarına hazır olun.",
+          "Yaz (iyun-avqust)": "Yay Qırğızıstanda uzun günlər, isti temperatur və aydın səma ilə pik turizm mövsümüdür. Düşərgə, dağa dırmaşma və alp göllərini kəşf etmək kimi açıq hava macəraları üçün mükəmməl vaxtdır. Bu müddət ərzində məşhur festivallar və tədbirlər, o cümlədən sentyabrda keçiriləcək Dünya Köçəri Oyunları keçirilir.",
+          "Payız (sentyabr-noyabr)": "Payız Qırğızıstanda yarpaqların rəngini dəyişdikcə qırmızı, narıncı və qızılın canlı çalarlarına boyanmış mənzərələrlə heyrətamiz bir fəsildir. Hava hələ də xoşdur, bu, trekking, vəhşi təbiətlə tanışlıq və mədəni təcrübələr üçün əla vaxtdır. Sentyabr ayı Dünya Köçəri Oyunlarını ziyarət etmək üçün ideal aydır.",
+          "Qış (dekabr-fevral)": "Qış Qırğızıstanı qarla örtülmüş dağları və donmuş gölləri ilə heyranedici mənzərə yaradan qış möcüzələr diyarına çevirir. Havanın temperaturu şaxtadan aşağı düşə bilsə də, qış idmanı həvəskarları xizək sürmək, snoubord və buz konkisi sürmək üçün Karakol və Cırqalan kimi xizək kurortlarına axın edirlər. Fevral ənənəvi köçəri oyunu olan Kok Boru (Buzkaşi) bayramını qeyd edir."
+        },
+        "details": "Hər mövsümdə xüsusi fəaliyyətlər, hadisələr və hava şəraiti haqqında ətraflı məlumat üçün səyahət bələdçilərinə və yerli turizm resurslarına müraciət edin."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Qırğızıstanda ilk dəfə?",
+        "Description": "Əgər siz Qırğızıstana ilk dəfə səfər edirsinizsə, səyahətinizdən maksimum yararlanmağınıza kömək edəcək geniş bələdçi buradadır:",
+        "Options": {
+          "Gəliş və Gəzinti": "Beynəlxalq səyahət edənlərin əksəriyyəti Bişkekdəki Manas Beynəlxalq Hava Limanına gəlir. Şəhərə gediş-gəliş üçün taksi və avtobuslar rahatdır. Qırğızıstan daxilində siz daxili reyslərdən, avtobuslardan, marşrutkalardan (mikroavtobuslardan) və ümumi taksilərdən istifadə edə bilərsiniz.",
+          "SİM kartlar və internet": "Qırğızıstanda əlaqə saxlamaq yerli SİM kartla asandır. Siz SİM kartları hava limanında və ya şəhərdəki mobil şəbəkə provayderlərindən ala bilərsiniz. Əsas provayderlərə Beeline, O! və Megacom daxildir. SİM kart almadan əvvəl telefonunuzun kilidinin açıq olduğundan əmin olun. İnternet əhatəsi ümumiyyətlə şəhər və qəsəbələrdə yaxşıdır, lakin kənd yerlərində ləkəli ola bilər.",
+          "İnternet qiymətləri": "Qırğızıstanda internet qiymətləri ümumiyyətlə münasibdir. 1 GB-lıq əsas məlumat paketinin qiyməti təxminən 100 KGS (təxminən 1,20 ABŞ dolları), 10 GB kimi daha böyük paketlərin isə təxminən 500 KGS (təxminən 6 ABŞ dolları) ola bilər. Bir ay üçün limitsiz məlumat planları provayderdən və əlaqə sürətindən asılı olaraq 800 ilə 1500 KGS (təxminən 9,50 ABŞ dolları ilə 18 ABŞ dolları) arasında dəyişə bilər.",
+          "Valyuta və Ödənişlər": "Yerli valyuta Qırğızıstan Somudur (KGS). Bankomatlar böyük şəhərlərdə mövcuddur, lakin kənd yerlərində nağd pul aparmaq məsləhətdir. Kredit və debet kartları şəhərlərdə bir çox yerlərdə qəbul edilir, lakin ucqar ərazilərdə daha azdır. Valyuta mübadiləsi xidmətləri hava limanlarında, banklarda və mübadilə məntəqələrində mövcuddur.",
+          "Dil": "Qırğız və rus dilləri rəsmi dildir. Böyük şəhərlərdə, xüsusən də turizm bölgələrində bəzi ingiliscə danışanlar tapa bilərsiniz, lakin kənd yerlərində bəzi əsas qırğız və ya rus ifadələrini bilmək faydalıdır. Tərcümə proqramı və ya danışıq kitabçası çox faydalı ola bilər.",
+          "Sağlamlıq və Təhlükəsizlik": "Qırğızıstan ümumiyyətlə səyahət edənlər üçün təhlükəsizdir, lakin standart ehtiyat tədbirləri görmək müdrikdir. Su ilə yoluxan xəstəliklərdən qaçınmaq üçün şüşə və ya qaynadılmış su içmək. Sağlamlıq və qəzaları əhatə edən səyahət sığortanız olduğundan əmin olun. Təcili tibbi xidmətlər şəhərlərdə mövcuddur, lakin kənd yerlərində məhdud ola bilər.",
+          "İqlim və Geyim": "Qırğızıstanın qışı soyuq və yayı isti olan kontinental iqlimi var. Dağlarda temperatur əhəmiyyətli dərəcədə sərin ola bilər, buna görə də müvafiq olaraq qablaşdırın. Qatlı paltarlar, möhkəm gəzinti ayaqqabıları və günəşdən qorunma tövsiyə olunur. Qışda isti paltar, o cümlədən keyfiyyətli gödəkçə, əlcək və papaq gətirin.",
+          "Elektrik və Prizlər": "Standart gərginlik 220V, tezlik 50Hz-dir. Elektrik rozetkaları və rozetkalar C və F tiplidir. Elektron cihazlarınızı doldurmaq üçün universal səyahət adapteri gətirməyiniz məsləhətdir."
+        },
+        "details": "Daha ətraflı məlumat və məsləhətlər üçün səyahət bələdçilərinə və yerli resurslara müraciət edin. Qırğızıstana ilk səfərinizdən həzz alın və unudulmaz xatirələr edin!"
+      },
+      "TravelPreparation": {
+        "title": "Qırğızıstana Səyahətinizə Hazırlayın",
+        "Description": "Bu əsas səyahət hazırlıqlarına diqqət yetirməklə Qırğızıstana rahat və xoş bir səfər təmin edin.",
+        "Options": {
+          "Viza və Pasport": "Vətəndaşlığınız üçün viza tələblərini yoxlayın və pasportunuzun nəzərdə tutulduğunuz müddətdən ən azı altı ay sonra etibarlı olduğundan əmin olun.",
+          "Sağlamlıq və Peyvəndlər": "Qırğızıstana səyahət üçün tələb olunan peyvəndlər və ya sağlamlıq tədbirləri üçün tibb işçinizlə məsləhətləşin.",
+          "Səyahət sığortası": "Tibbi xərclər və ya səfərin ləğvi kimi gözlənilməz fövqəladə halları ödəmək üçün səyahət sığortası almağı düşünün.",
+          "Valyuta və Pul Məsələləri": "Yerli valyuta (Qırğızıstan somu) ilə tanış olun və səfərdən əvvəl bir qədər pul dəyişdirin. Böyük şəhərlərdə bankomatlar mövcuddur.",
+          "Dil": "Rus və qırğız dilləri rəsmi dil olsa da, ingilis dili geniş yayılmır. Rus və ya qırğız dillərində bəzi əsas ifadələri öyrənməyi düşünün.",
+          "Hava və Geyim": "Səfəriniz zamanı hava şəraitinə uyğun paltarları qablaşdırın. Qırğızıstan isti yayı və soyuq qışı yaşayır, buna görə də qatları gətirin.",
+          "Təhlükəsizlik və Təhlükəsizlik": "Qırğızıstandakı mövcud vəziyyətlə bağlı məlumatlı olun və xüsusilə ucqar ərazilərdə diqqətli olun. Əşyalarınızı təhlükəsiz saxlayın və ətrafınızdan xəbərdar olun.",
+          "Mədəni etiket": "Yerli adət və ənənələrə hörmət edin, məsələn, kiminsə evinə girməzdən əvvəl ayaqqabılarınızı çıxarın və insanların fotoşəkillərini çəkməzdən əvvəl icazə istəməyin."
+        },
+        "details": "Qırğızıstana səyahətinizə aid əlavə səyahət məsləhətləri və məsləhətlər üçün hərtərəfli səyahət bələdçimizə baxın."
+      }
+    },
+    "sights": {
+      "name": "Görməli yerlər",
+      "title": "Qırğızıstanda gəzməli yerlər",
+      "subtitle": "Qırğızıstanda hara getmək olar?  Bundan əlavə, səyahətinizdən maksimum dərəcədə istifadə etmək və bu gözəl ölkənin daim dəyişən havasına hazır olmaq üçün şəhərlərdə və rayon mərkəzlərində hava şəraiti haqqında məlumatlı olun.",
+      "description": "Qırğızıstanda dağ göllərindən və milli parklardan tutmuş şəhərlərə və tarixi yerlərə qədər ziyarət etmək üçün yerlər tapın. Kəşf etməyə başlamaq üçün bir bölgə seçin.",
+      "keywords": "Qırğızıstan yerləri, Qırğızıstan səyahəti, Qırğızıstan, Qırğızıstan destinasiyalarını araşdırın, Qırğızıstan turizmi, Qırğızıstanda mütləq ziyarət edilməli yerlər, ən maraqlı yerlər Qırğızıstan, Qırğızıstan mənzərələri, mədəni yerlər Qırğızıstan, təbiət möcüzələri Qırğızıstan, Qırğızıstanda ziyarət üçün ən yaxşı yerlər",
+      "sights": "Hara getməli!",
+      "must-see": {
+        "subtitle": "Bölgələrə görə Qırğızıstanın Görməli Olduğu Yerlər",
+        "description1": "Qırğızıstan əzəmətli dağlardan tutmuş sakit göllərə qədər gözəl təbiət mənzərələri ilə tanınır. Hər bölgənin ən gözəl yerlərindən bəziləri bunlardır:",
+        "chuyregion": "Chuy bölgəsi",
+        "alaarchatitle": "Ala Arça Milli Parkı:",
+        "alaarchadescription": "Nəfəs kəsən mənzərələr və yürüyüş yolları təklif edir.",
+        "buranatitle": "Burana qalası:",
+        "buranadescription": "Mənzərəli vadi mənzərələri olan tarixi minarə.",
+        "issykulregion": "İssık-Kul bölgəsi",
+        "lakeissykkultitle": "İssık-Kul gölü:",
+        "lakeissykkuldescription": "Çimərlikləri və kurortları olan böyük duzlu göl.",
+        "jetioguxtitle": "Jeti-Oğuz:",
+        "jetioguzdescription": "Qırmızı qaya birləşmələri ilə məşhurdur.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Altın Araşan kimi gözəl dağ yerlərinin qapısı.",
+        "narynregion": "Narın rayonu",
+        "tashrabattitle": "Taş Rabat:",
+        "tashrabatdescription": "Mənzərəli vadidə tarixi daş karvansara.",
+        "sonkultitle": "Son-Kul gölü:",
+        "sonkuldescription": "Çarpıcı gün batımı ilə yüksək hündürlükdə bir göl.",
+        "jalalabadregion": "Cəlal-Abad rayonu",
+        "sarychelextitle": "Sarı-Çələk Biosfer Qoruğu:",
+        "sarychelekdescription": "Təmiz göllər və meşələrə malikdir.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Ən böyük qoz meşəsi və gözəl şəlalələr üçün ev.",
+        "oshregion": "Oş bölgəsi",
+        "sulaymanmountaintitle": "Süleyman dağı:",
+        "sulaymanmountaindescription": "Panoramik mənzərəsi olan müqəddəs dağ.",
+        "alayvalleytitle": "Alay vadisi:",
+        "alayvalleydescription": "Pamir dağlarının möhtəşəm mənzərələrini təqdim edir.",
+        "batkenregion": "Batken rayonu",
+        "batkenvalleytitle": "Batken Vadisi:",
+        "batkenvalleydescription": "Ərik ağacları və unikal qaya birləşmələri ilə tanınır.",
+        "karakuljatitle": "Qara-Kulca:",
+        "karakuljadescription": "Gözəl çay vadilərinə malikdir.",
+        "talasregion": "Talas rayonu",
+        "beshtashtitle": "Beş-Taş Milli Parkı:",
+        "beshtashdescription": "Mənzərəli çayları və alp çəmənlikləri var.",
+        "manasordotitle": "Manas Ordo Kompleksi:",
+        "manasordodescription": "Qəhrəman Manasa həsr olunmuş mədəniyyət saytı."
+      },
+      "highlights": [
+        "Necə Getmək olar",
+        "Nəqliyyat",
+        "Harada qalmaq",
+        "Nə yemək",
+        "Nə etməli",
+        "Mövsüm"
+      ]
+    },
+    "tours": {
+      "name": "Turlar",
+      "title": "Qırğızıstan turları",
+      "subtitle": "Qırğızıstanda fərdi və kiçik qrup turları",
+      "description": "Qırğızıstanda piyada, atla, avtomobillə və mədəniyyətlə tanışlıq səfərlərini araşdırın. Kiçik qrupa qoşulun və ya özünüzə uyğun fərdi tur seçin.",
+      "description1": "Səfərə dağ yolları, ənənəvi keçə çadırında gecələmə və ya İssık-Kulun yanında bir neçə gün daxil ola bilər. Maraqlarınıza və vaxtınıza uyğun marşrut seçin.\n\nKomandamız bələdçilər, nəqliyyat və yaşayış yerlərində kömək edə bilər. Tarixlərinizi, qrup ölçüsünü və üstünlük verdiyi tempi müzakirə etmək üçün əlaqə saxlayın.",
+      "keywords": "Qırğızıstan turları, Ən yaxşı Qırğızıstan Turları, Qırğızıstana səyahətlər, Ən yaxşı Qırğızıstan Tur şirkətləri, Qırğızıstanda Səyahət Agentliyi, macəra turları Qırğızıstan, bələdçi turları Qırğızıstan, mədəni turlar Qırğızıstan, trekkinq turları Qırğızıstan, at sürmə turları Qırğızıstan, köçəri təcrübələri Qırğızıstan, Qırğızıstan səyahət paketləri, Qırğızıstanda ən yaxşı turlar, turlar vasitəsilə Qırğızıstanı kəşf edin",
+      "tourPage": {
+        "level": "Səviyyə",
+        "duration": "Müddət",
+        "price": "Qiymət",
+        "day": "gün",
+        "days": "Günlər",
+        "details": "Təfərrüatlar",
+        "things": "Fəaliyyətlər",
+        "places": "Gəziləcək yerlər",
+        "addInfo": "Əlavə məlumat",
+        "includings": "Qiymətə daxildir",
+        "excludings": "Qiymətə daxil deyil",
+        "from": "Başlanğıc qiymət",
+        "note": "Qeyd",
+        "person": "şəxs",
+        "persons": "Şəxslər",
+        "andMore": "və daha çox"
+      },
+      "TourPreparation": {
+        "title": "Qırğızıstanda səyahət üçün əsaslar",
+        "Description": "Rahatlıq, təhlükəsizlik və müxtəlif hava şəraiti və açıq hava fəaliyyətlərinə hazırlığı təmin etmək üçün Qırğızıstana səfərinizdə gətirəcəyiniz vacib əşyaların əhatəli siyahısı.",
+        "Options": {
+          "Ayaqqabılar": "Şəhər turları üçün rahat gəzinti ayaqqabıları, orta səviyyəli gəzintilər üçün möhkəm yürüyüş ayaqqabıları, trekkinqlər üçün davamlı yürüyüş çəkmələri və əlavə cüt olaraq tez quruyan sandaletlər gətirin.",
+          "Şapka": "Yüksək hündürlükdə güclü günəşdən qorunmaq üçün geniş kənarlı papaq və ya boyun qapaqlı günəş papağı götürməyi unutmayın.",
+          "UV kremi": "Dərinizi intensiv ultrabənövşəyi şüalardan qorumaq üçün yüksək SPF-li geniş spektrli günəş kremi qablaşdırmağı unutmayın, xüsusən də Qırğızıstanın yüksəkliklərində.",
+          "Geyim": "Temperaturların hündürlük dəyişikliyi ilə əhəmiyyətli dərəcədə dəyişə biləcəyini nəzərə alaraq, müxtəlif temperatur və hava şəraiti üçün uyğun geyim qatlarını yığın. Xüsusilə dağlıq ərazilərdə qar və ya yağışa hazır olun.",
+          "Tibbi yardım": "Ehtiyat tədbirləri olaraq, zəruri dərmanlar, sarğılar, ağrı kəsicilər və əvvəlcədən mövcud olan tibbi vəziyyətlər üçün hər hansı xüsusi əşyalar kimi şəxsi tibbi yardımları daşımağı unutmayın."
+        },
+        "overview": "Marşrutunuz və mövsümünüz üçün nə gətirəcəyinizi soruşun."
+      }
+    },
+    "articles": {
+      "name": "Məqalələr",
+      "title": "Qırğızıstanın mədəniyyəti və təbiəti",
+      "description": "Qırğızıstanın insanları, adət-ənənələri, mətbəxi və təbiəti ilə tanış olun.",
+      "keywords": [
+        "Qırğız mədəniyyəti",
+        "Qırğız adət-ənənələri",
+        "Qırğız təbiəti",
+        "Burkut ovçuluğu",
+        "Kok-boru",
+        "Alabai itləri",
+        "Tayqan",
+        "Qırğızıstan tarixi",
+        "Orta Asiya mədəniyyəti",
+        "Köçəri irsi",
+        "Mədəni kəşfiyyat",
+        "Ənənəvi idman növləri",
+        "Qırğızıstanın görməli yerləri",
+        "Mədəni təcrübələr",
+        "Qırğızıstanda macəra",
+        "Miras cinsləri",
+        "Mədəni ənənələr",
+        "Unikal təcrübələr",
+        "Qırğız həyat tərzi"
+      ]
+    },
+    "about": {
+      "title": "Haqqımızda",
+      "subtitle": "Biz kimik?",
+      "description": "Qırğızıstana səfərinizi planlaşdırmağa kömək edirik. Tarixləri və maraqlarınızı paylaşın, marşrutu, bələdçiləri və qalacağınız yerləri birlikdə seçək.",
+      "keywords": "Haqqımızda, Hekayəmiz, Qırğızıstan həvəskarları, Səyahət həvəsi, Müstəsna təcrübələr, Komanda, Dəyərlər, Missiya",
+      "buttons": {
+        "our_team": "Bizim Komanda",
+        "our_clients": "Müştərilərimiz",
+        "contact_us": "Bizimlə əlaqə saxlayın"
+      }
+    },
+    "info": {
+      "seen": "Ziyarətlər: ",
+      "created": "Yaradıldı: ",
+      "modified": "Son dəyişiklik: "
+    },
+    "download": {
+      "text": "Mobil proqramlarımızla xəritələri, yerləri və səyahət məlumatlarını əlinizdə saxlayın."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Faydalı Linklər",
+          "links": [
+            {
+              "text": "Ana səhifə",
+              "url": "/"
+            },
+            {
+              "text": "Görməli yerlər",
+              "url": "/places"
+            },
+            {
+              "text": "Turlar",
+              "url": "/tours"
+            },
+            {
+              "text": "Hava limanına transferlər",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Məxfilik və Hüquq",
+          "links": [
+            {
+              "text": "Haqqımızda",
+              "url": "/about"
+            },
+            {
+              "text": "Bizimlə əlaqə saxlayın",
+              "url": "/contact"
+            },
+            {
+              "text": "Məxfilik Siyasəti",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Əlaqə məlumatı",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bişkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sosial Hesablar",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "tərtibatçı",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

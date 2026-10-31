@@ -1,4 +1,6 @@
-import type { Locale } from '@/lib/i18n.config'
+
+import additionalAboutContent from '@/translations/ui/app-lang-about-content-ts-aboutContent.json';
+import type { AdditionalLocale, Locale } from '@/lib/i18n.config'
 
 type AboutContent = {
   intro: string; landscape: string; yurt: string; story: string; explore: string;
@@ -9,6 +11,7 @@ type AboutContent = {
 }
 
 export const aboutContent: Record<Locale, AboutContent> = {
+    ...additionalAboutContent as unknown as Record<AdditionalLocale, AboutContent>,
   en: {
     intro: 'A country to discover. People to connect with. A journey to make your own.',
     landscape: 'On the shores of Issyk-Kul', yurt: 'A little closer to nomadic life',

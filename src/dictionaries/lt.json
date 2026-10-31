@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "lt-LT",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Įkeliama...",
+    "contactButton": "Kyla klausimų?",
+    "navigation": [
+      {
+        "text": "Pradžia",
+        "url": "/"
+      },
+      {
+        "text": "Lankytinos vietos",
+        "url": "/places"
+      },
+      {
+        "text": "Kelionės",
+        "url": "/tours"
+      },
+      {
+        "text": "Straipsniai",
+        "url": "/articles"
+      },
+      {
+        "text": "Apie mus",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Kirgizijos kelionių vadovas (2024 m.)",
+      "description": "Leiskitės kalnų takais, išsimaudykite Isyk Kulyje ar pernakvokite jurtoje pas vietos šeimą. Pasirinkite sau tinkamą maršrutą.",
+      "subtitle": "Kirgizijos kelionių vadovas (2024 m.)",
+      "subtitle1": "Kodėl verta aplankyti Kirgiziją?",
+      "subtitle2": "Tyrinėkite didįjį lauką",
+      "subtitle3": "Begalinis tyrinėjimas",
+      "subtitle4": "Suplanuokite savo kelionę",
+      "subtitle5": "Kirgizijos lankytinos vietos",
+      "paragraph": "Ši graži šalis be jūros, anksčiau priklausiusi Sovietų Sąjungai, greitai tampa viena populiariausių kelionių krypčių Centrinėje Azijoje. Kirgizijos turizmo pramonė sparčiai auga, todėl keliautojams suteikiama galimybė ištirti vieną įspūdingiausių pasaulio šalių.",
+      "paragraph1": "Pastaraisiais metais Kirgizijoje smarkiai išaugo turizmas, nes nuotykių ieškotojai plūsta į žygius, stovyklauja ir žygiuoja arkliais po nuostabius kraštovaizdžius. Kaip pirmoji Vidurinės Azijos šalis, sušvelninusi savo vizų politiką, siūlanti bevizį įvažiavimą daugumai Vakarų ir išsivysčiusių šalių, sukūrė stiprų turizmo tinklą.",
+      "paragraph2": "Nuo bendruomeninio turizmo (CBT) iniciatyvų visoje šalyje iki svečių namų ir nepriklausomų gidų yra daugybė būdų, kaip patirti kvapą gniaužiančius Kirgizijos kraštovaizdžius. Žygeiviai gali leistis į baimę keliančius žygius iš Karakol, Kochkor, Arslanbob ir net sostinės Biškeko. Atkreipkite dėmesį, kad žygiams čia dažnai reikia tinkamo kūno rengybos lygio, nes daugelis takų siūlo ne tik ramų pasivaikščiojimą. Dauguma žygių trunka nuo 1 iki 5 dienų, tačiau yra ir ilgesnių nuotykių.\r\n\r\nNorintiems išsaugoti kojas, jodinėjimas yra populiari alternatyva. Leiskitės į įspūdingiausią šalies žygį žirgais į Song Kol arba praleiskite kelias dienas atsipalaiduodami ir maudydamiesi nuostabiame Issyk-Kul ežere.",
+      "paragraph3": "Kadangi yra daugybė netradicinių krypčių, žygių ir takų, galimybės tyrinėti yra neribotos. Nesvarbu, ar ieškote nuotykių, ar poilsio, Kirgizija turi kažką kiekvienam.",
+      "paragraph4": "Norėdami gauti konkretesnės informacijos apie lankytinas vietas, kaip ten nuvykti ir aplink, ir kitų kelionių patarimų, būtinai perskaitykite mūsų išsamų kelionių į Kirgiziją vadovą. Pagerinkite kelionės patirtį naudodami rekomenduojamas navigacijos, vertimo programas ir vietines įžvalgas, kad išnaudotumėte visas kelionės galimybes.\r\n\r\nMėgaukitės savo kelione ir patirkite unikalų Kirgizijos grožį ir kultūrą",
+      "keywords": "Kirgizijos turizmo gidas, turistų gidas, kelionių patogumas, vietos lankytinos vietos, turizmo paslaugos, patarimai dėl kelionių į Kirgiziją, kultūriniai potyriai, kelionių planavimas, ekskursijos, nuotykių kelionės, patogios ekskursijos, Biškeko miesto gidas, Kirgizijos turistų lankomos vietos, turistinė vieta, vietos, esančios šalia manęs, kad galėtumėte pamatyti lankytinas vietas, lankytinos vietos, gražiausios pasaulio vietos, turistų lankomos vietos, gražiausios pasaulio vietos, turistinės vietos Vietos, Gražiausios pasaulio vietos, Kelionės su gidu, Kelionių vadovas, Gražios vietos, Biškekas Kirgizijoje, Biškeko miestas, Turistai ir gidas, Viešųjų ryšių turistų lankomos vietos, Netoliese esančios lankytinos vietos ir kaip tai padaryti",
+      "button": "Sužinokime!",
+      "button1": "Kur eiti!",
+      "button2": "Ką daryti!",
+      "button3": "skaitykite daugiau",
+      "button4": "Mūsų ekskursijos",
+      "Transportation": {
+        "title": "Transportas Kirgizijoje | Kelionių vadovas",
+        "Description": "Kelionė po Kirgiziją gali būti nuotykis savaime. Štai ką reikia žinoti:",
+        "Options": {
+          "Vidaus skrydžiai": "Didesniems atstumams, ypač jei laikas yra ribotas, vidaus skrydžiai galimi tarp didžiųjų miestų, tokių kaip Biškekas, Ošas ir Tamši (netoli Cholpon-Ata Issyk-Kul regione). Patikrinkite skrydžių tvarkaraščius ir užsakymus.",
+          "Marshrutkas (mikroautobusai)": "Tai yra labiausiai paplitusi ir ekonomiškiausia transporto rūšis trumpiems ir vidutiniams atstumams. Jie važiuoja fiksuotais maršrutais tarp miestų ir miestelių ir yra labai populiarūs tarp vietinių.",
+          "Bendri taksi": "Bendri taksi siūlo greitesnę, bet šiek tiek brangesnę maršrutkų alternatyvą. Paprastai jie išvažiuoja, kai būna pilni, ir dėl kainų galima derėtis.",
+          "Automobilių nuoma": "Siekiant didesnio lankstumo, automobilio nuoma yra geras pasirinkimas. Keliai kaimo vietovėse gali būti nelygūs, todėl rekomenduojama 4x4. Įsitikinkite, kad turite tarptautinį vairuotojo leidimą.",
+          "Traukiniai": "Galimos ribotos traukinių paslaugos, pirmiausia jungiančios Biškeką su Balykchy prie Issyk-Kul ežero. Tai vaizdingas maršrutas, bet lėtesnis nei keliavimas.",
+          "Autobusai": "Reguliarūs autobusai kursuoja didžiuosiuose miestuose, todėl patogu keliauti. Tačiau jie negali apimti atokių vietovių.",
+          "Kelionė autostopu": "yra įprasta praktika Kirgizijos kaimo vietovėse, kur oficialios transporto galimybės gali būti ribotos. Tai gana saugu ir kultūriškai priimta, tačiau būkite atsargūs ir vadovaukitės savo nuožiūra priimdami nepažįstamų žmonių važiavimą."
+        },
+        "details": "Norėdami gauti daugiau informacijos apie transportavimo galimybes, apsilankykite pateiktame vadove."
+      },
+      "Accommodations": {
+        "title": "Apgyvendinimas Kirgizijoje | Kelionių vadovas",
+        "Description": "Nuo jaukių svečių namų iki prabangių kurortų – Kirgizija siūlo daugybę apgyvendinimo variantų, atitinkančių kiekvieno keliautojo pageidavimus ir biudžetą. Štai keletas pasirinkimų, kuriuos reikia apsvarstyti:",
+        "Options": {
+          "Viešbučiai": "Didieji Kirgizijos miestai, tokie kaip Biškekas ir Ošas, gali pasigirti įvairiais viešbučiais, atitinkančiais skirtingus biudžetus ir pageidavimus. Nuo tarptautinių tinklų iki prabangių viešbučių rasite patogių būstų su tokiais patogumais kaip belaidis internetas, oro kondicionierius ir maitinimo įstaigos.",
+          "Svečių namai": "Norėdami gauti autentiškesnės patirties, apsvarstykite galimybę apsistoti svečių namuose, kuriuos valdo vietinės šeimos. Šios jaukios įstaigos siūlo šiltą priėmimą ir galimybę patirti kirgizų svetingumą. Dažnai turėsite galimybę pasimėgauti naminiais patiekalais ir sužinoti apie vietinius papročius bei tradicijas.",
+          "Jurtos": "Kaimo vietovėse ir kalnuotuose regionuose tradicinės jurtos suteikia unikalią apgyvendinimo patirtį. Šios nešiojamos, palapinę primenančios konstrukcijos siūlo paprastą, bet patogų apgyvendinimą, dažnai su nuostabiais aplinkinių kraštovaizdžių vaizdais. Viešnagės jurtoje gali apimti maitinimą ir kultūrinę veiklą.",
+          "Nakvynės namuose": "Patirkite gyvenimą su kirgizų šeima pasirinkę nakvynę namuose. Turėsite galimybę gyventi su vietiniais, dalintis maistu ir dalyvauti kasdienėje veikloje. Nakvynės namuose siūlomi autentiški kultūriniai mainai ir įžvalga apie tradicinį Kirgizijos gyvenimo būdą.",
+          "Ekologiniai nameliai": "Ekologiškiems keliautojams ekologiniai nameliai siūlo tvarią apgyvendinimą natūralioje aplinkoje. Šie nameliai teikia pirmenybę aplinkos tausojimui ir dažnai siūlo tokias veiklas kaip žygiai pėsčiomis, paukščių stebėjimas ir bendruomenės dalyvavimas.",
+          "Stovyklavietė": "yra populiarus pasirinkimas keliautojams, ieškantiems nuotykių ir vienatvės. Nesvarbu, ar statote palapinę tam skirtoje stovyklavietėje, ar laukinėje stovykloje atokiose vietose, būtinai laikykitės „Leave No Trace“ principų ir gaukite reikiamus leidimus."
+        },
+        "details": "Norėdami gauti konkrečių rekomendacijų ir užsakymo galimybių, apsilankykite kelionių svetainėse, internetinėse rezervavimo platformose ir vietiniuose turizmo biuruose."
+      },
+      "Food": {
+        "title": "Maistas Kirgizijoje | Kelionių vadovas",
+        "Description": "Kirgizų virtuvės tyrinėjimas yra neatsiejama kelionių dalis. Štai ką reikia žinoti:",
+        "Options": {
+          "Tradicinė virtuvė": "Kirgizų virtuvė yra turtinga skonio ir paveldo, o tradiciniai patiekalai, tokie kaip beshbarmak (mėsa ir makaronai), manty (koldūnai) ir laghman (makaronų sriuba), yra pagrindiniai patiekalai. Nepraleiskite paragauti fermentuoto kumelės pieno, žinomo kaip kumis – populiarus gėrimas.",
+          "Klajoklių įtaka": "Kirgizijos virtuvėje, atspindinčioje klajoklių paveldą, dažnai pateikiami sotūs patiekalai, pagaminti iš tokių ingredientų kaip mėsa (ypač ėriena ir arkliena), pieno produktai (pvz., kymyz ir airanas) ir grūdai (įskaitant ryžius ir kviečius). Jurtos, tradicinės klajoklių palapinės, gali pasiūlyti autentiškų valgių kaimo vietovėse.",
+          "Vietiniai turgūs": "Apsilankykite vietiniuose turguose, pvz., Osh Bazaar Biškeke, kad paragautumėte įvairių kirgiziškų patiekalų ir užkandžių, įskaitant šašlykus (keptą mėsą ant iešmo), samsą (skoningus pyragus) ir plovą (plovą). Šiose prekyvietėse taip pat yra galimybė įsigyti šviežių vaisių, riešutų ir prieskonių.",
+          "Arbatinės ir kavinės": "Arbatinės (chaykhana) ir kavinės yra visur Kirgizijoje, kuriose kartu su pyragaičiais, duona ir lengvais patiekalais patiekiama arbata (chai) ir kava (kofe). Mėgaukitės atsipalaidavusia atmosfera ir svetingumu mėgaudamiesi tradiciniais kirgizų patiekalais, tokiais kaip baursak (kepta tešla) ir kurut (džiovinto jogurto rutuliukai).",
+          "Tarptautinė virtuvė": "Miesto vietovėse, tokiose kaip Biškekas, rasite įvairių tarptautinių virtuvių, įskaitant rusų, kinų, korėjiečių ir europietiškus. Naršykite madingus restoranus, bistro ir maisto aikšteles, kad paragautumėte pasaulinių skonių kartu su kirgizų svetingumu.",
+          "Gatvės maistas": "Išeikite į Kirgizijos gatves ir atraskite daugybę gatvės maisto pardavėjų, siūlančių greitus ir skanius užkandžius. Išbandykite populiarų gatvės maistą, pvz., somasą (keptą arba keptą mėsą ar daržoves), keptus lagmano makaronus ir ant grotelių keptus kukurūzų burbuoles.",
+          "Maisto turai ir maisto gaminimo pamokos": "Leiskitės į maisto turą arba prisijunkite prie maisto gaminimo pamokų, kad pasinertumėte į Kirgizijos virtuvę ir kulinarines tradicijas. Sužinokite, kaip gaminti tradicinius patiekalus, aplankykite vietinius ūkius ir gamintojus ir pasinerkite į gyvybingą Kirgizijos kulinarijos sceną."
+        },
+        "details": "Daugiau informacijos apie Kirgizijos virtuvę ir maitinimosi galimybes rasite pateiktame vadove."
+      },
+      "Safety": {
+        "title": "Sauga Kirgizijoje | Kelionių vadovas",
+        "Description": "Keliauti į Kirgiziją paprastai yra saugu, tačiau būtina žinoti apie galimą riziką ir imtis būtinų atsargumo priemonių. Štai ką reikia žinoti:",
+        "Options": {
+          "Politinis stabilumas": "Kirgizija praeityje patyrė politinį nestabilumą, įskaitant protestus ir kartais neramumus. Nors dauguma turistinių vietovių lieka nepakitusios, būkite informuoti apie vietos įvykius ir venkite didelių susibūrimų ar demonstracijų.",
+          "Nusikaltimas": "Galimi smulkūs nusikaltimai, tokie kaip kišenvagystės ir vagystės, ypač perpildytose vietose ir turistų lankomose vietose. Saugokite savo daiktus ir būkite budrūs.",
+          "Terorizmas": "Terorizmo grėsmė Kirgizijoje nedidelė, tačiau keliautojai turėtų išlikti budrūs, ypač pasienio zonose. Laikykitės visų jūsų vyriausybės pateiktų kelionių patarimų ir būkite informuoti.",
+          "Gamtos pavojai": "Kirgizija yra linkusi į gamtos pavojus, tokius kaip žemės drebėjimai, lavinos ir nuošliaužos, ypač kalnuotuose regionuose. Būkite pasiruošę ir laikykitės saugos nurodymų, ypač keliaudami ar užsiimdami lauko veikla.",
+          "Kelių saugumas": "Kelių sąlygos Kirgizijoje gali skirtis, o vairavimas gali būti sudėtingas, ypač kaimo vietovėse. Būkite atsargūs, laikykitės vietinių kelių eismo taisyklių ir apsvarstykite galimybę samdyti patikimą vairuotoją.",
+          "Pavojai sveikatai": "Nors Kirgizija nekelia didelio pavojaus sveikatai, keliautojai turėtų žinoti apie įprastus skiepus ir imtis atsargumo priemonių nuo maisto ir vandens plintančių ligų.",
+          "Aukščio liga": "Keliautojai, lankantys aukštumose, turėtų žinoti apie aukščio ligos riziką. Skirkite laiko aklimatizacijai ir venkite sunkios fizinės veiklos, kol jūsų kūnas prisitaikys.",
+          "Kelionių draudimas": "Būtina turėti kelionių draudimą, kuris padengia medicinines išlaidas, skubią evakuaciją ir kelionės atšaukimą / pertraukimą. Įsitikinkite, kad jūsų draudimo polisas apima veiklą, kurią planuojate užsiimti."
+        },
+        "details": "Norėdami gauti išsamesnės saugos informacijos ir kelionių patarimų, kreipkitės į oficialius vyriausybės šaltinius ir kelionių vadovus."
+      },
+      "Prices": {
+        "title": "Kainos Kirgizijoje | Kelionių vadovas",
+        "Description": "Pragyvenimo ir išlaidų Kirgizijoje supratimas gali padėti efektyviai planuoti biudžetą. Čia pateikiama įprastų prekių ir paslaugų kainų apžvalga:",
+        "Options": {
+          "Apgyvendinimas": "Apgyvendinimo Kirgizijoje kaina skiriasi priklausomai nuo nakvynės tipo ir vietos. Nebrangūs keliautojai gali rasti nebrangių variantų, pavyzdžiui, svečių namų ir nakvynės namų, o prabangūs viešbučiai ir kurortai tinka tiems, kurie ieško prabangių patogumų. Kainos svyruoja nuo 10 USD už naktį už nebrangius būstus iki daugiau nei 100 USD už naktį prabangiose įstaigose.",
+          "Maistas ir maitinimas": "Pietūs Kirgizijoje paprastai yra prieinami, ypač vietinėse užkandinėse ir gatvės maisto kioskuose. Tradiciniai patiekalai, tokie kaip beshbarmak ir plov, yra nebrangūs ir sotūs, vietiniuose restoranuose paprastai kainuoja nuo 3 iki 7 USD už valgį. Tarptautinės virtuvės patiekalai ir puikūs valgiai gali būti brangesni, o patiekalai vienam asmeniui kainuoja vidutiniškai 10–20 USD ar daugiau.",
+          "Transportas": "Transporto išlaidos Kirgizijoje skiriasi priklausomai nuo kelionės būdo ir atstumo. Vidaus skrydžiai tarp didžiųjų miestų, tokių kaip Biškekas ir Ošas, gali svyruoti nuo 50 USD iki 150 USD ar daugiau, o bendri taksi ir marshrutkas (mikroautobusai) siūlo nebrangius variantus trumpesniems atstumams, paprastai kainuoja 1–10 USD, priklausomai nuo maršruto. Automobilio nuoma gali kainuoti nuo 30 USD iki 100 USD ar daugiau per dieną, priklausomai nuo transporto priemonės tipo ir nuomos įmonės.",
+          "Veikla ir atrakcionai": "Užsiėmimų ir pramogų Kirgizijoje kaina labai skiriasi priklausomai nuo patirties. Įėjimo mokesčiai į muziejus, istorines vietas ir nacionalinius parkus paprastai yra prieinami, svyruoja nuo 1 USD iki 10 USD vienam asmeniui. Ekskursijos su gidu, ekskursijos lauke ir nuotykių veikla, pvz., jodinėjimas žirgais ir žygiai, gali kainuoti papildomai, o kainos skiriasi priklausomai nuo trukmės ir sudėtingumo.",
+          "Apsipirkimas": "Apsipirkimas Kirgizijoje siūlo daugybę pasirinkimų – nuo ​​tradicinių rankdarbių ir suvenyrų iki modernių prekių ir elektronikos. Kainos skiriasi priklausomai nuo prekės ir vietos, tačiau turguose ir turguose įprasta derėtis. Būkite pasirengę derėtis dėl geriausios kainos, ypač pirkdami tekstilę, papuošalus ir rankų darbo amatus.",
+          "Valiuta ir valiutų kursai": "Oficiali Kirgizijos valiuta yra Kirgizijos somas (KGS). Valiutų kursai svyruoja, todėl prieš keičiant pinigus patartina pasitikrinti esamus kursus. Pagrindinės kredito kortelės priimamos didesniuose miestuose ir turistinėse vietovėse, tačiau grynuosius rekomenduojama nešiotis atliekant operacijas mažesniuose miesteliuose ir kaimo vietovėse. (1 USD = 85–90 sm)"
+        },
+        "details": "Norėdami gauti tiksliausią ir naujausią informaciją apie kainas Kirgizijoje, kreipkitės į vietinius šaltinius ir naujausius kelionių vadovus."
+      },
+      "Travel_Seasons": {
+        "title": "Kelionių sezonai Kirgizijoje | Kelionių vadovas",
+        "Description": "Kelionių Kirgizijoje sezonų supratimas gali padėti suplanuoti kelionę ir išnaudoti visas savo apsilankymo galimybes. Pateikiame skirtingų sezonų apžvalgą ir tai, ko tikėtis:",
+        "Options": {
+          "Pavasaris (nuo kovo iki gegužės)": "Pavasaris – puikus metas aplankyti Kirgiziją, o kraštovaizdis atgyja, kai žydi gėlės, o upės trykšta ištirpusio sniego. Oras yra švelnus, todėl puikiai tinka lauko veiklai, pavyzdžiui, žygiams pėsčiomis, žygiams pėsčiomis ir jodinėjimu. Tačiau būkite pasiruošę retkarčiais lytims, ypač balandžio ir gegužės mėnesiais.",
+          "Vasara (nuo birželio iki rugpjūčio)": "Vasara yra didžiausias turizmo sezonas Kirgizijoje – ilgos dienos, šilta temperatūra ir giedras dangus. Tai puikus laikas nuotykiams lauke, pavyzdžiui, stovyklavimui, kopimui į kalnus ir Alpių ežerų tyrinėjimams. Tuo metu vyksta populiarūs festivaliai ir renginiai, įskaitant rugsėjį vykstančias Pasaulio klajoklių žaidynes.",
+          "Ruduo (nuo rugsėjo iki lapkričio)": "Ruduo yra stulbinantis sezonas Kirgizijoje, o kraštovaizdžiai nudažyti ryškiais raudonos, oranžinės ir auksinės spalvos atspalviais, kai lapai keičia spalvą. Oras išlieka malonus, todėl tai puikus laikas žygiams, laukinės gamtos stebėjimui ir kultūriniams potyriams. Rugsėjis yra idealus mėnuo apsilankyti Pasaulio klajoklių žaidynėse.",
+          "Žiema (nuo gruodžio iki vasario)": "Žiema paverčia Kirgiziją žiemos stebuklų šalimi, kurioje sniegu padengti kalnai ir užšalę ežerai sukuria kvapą gniaužiančius kraštovaizdžius. Nors temperatūra gali nukristi žemiau nulio, žiemos sporto entuziastai plūsta į tokius slidinėjimo kurortus kaip Karakol ir Jyrgalan slidinėti, čiuožti snieglente ir čiuožti. Vasario mėnesį švenčiamas tradicinis klajoklių žaidimas Kok Boru (Buzkashi)."
+        },
+        "details": "Norėdami gauti daugiau informacijos apie konkrečias veiklas, renginius ir oro sąlygas kiekvieno sezono metu, skaitykite kelionių vadovus ir vietinius turizmo išteklius."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Pirmą kartą Kirgizijoje?",
+        "Description": "Jei Kirgizijoje lankotės pirmą kartą, čia pateikiamas išsamus vadovas, padėsiantis kuo geriau išnaudoti kelionę:",
+        "Options": {
+          "Atvykimas ir judėjimas": "Dauguma tarptautinių keliautojų atvyksta į Manas tarptautinį oro uostą Biškeke. Taksi ir autobusai yra lengvai prieinami pervežimui į miestą. Kirgizijoje galite keliauti vietiniais skrydžiais, autobusais, marshrutkas (mikroautobusais) ir bendrais taksi.",
+          "SIM kortelės ir internetas": "Kirgizijoje lengva palaikyti ryšį naudojant vietinę SIM kortelę. SIM korteles galite įsigyti oro uoste arba iš mobiliojo ryšio tinklo tiekėjų mieste. Pagrindiniai tiekėjai yra „Beeline“, „O!“ ir „Megacom“. Prieš pirkdami SIM kortelę įsitikinkite, kad telefonas atrakintas. Interneto aprėptis paprastai yra gera miestuose ir miesteliuose, tačiau kaimo vietovėse ji gali būti dėmėta.",
+          "Interneto kainos": "Interneto kainos Kirgizijoje paprastai yra prieinamos. Pagrindinis 1 GB duomenų paketas gali kainuoti apie 100 KGS (apie 1,20 USD), o didesni paketai, pvz., 10 GB, gali kainuoti apie 500 KGS (apie 6 USD). Neriboti duomenų planai mėnesiui gali svyruoti nuo 800 iki 1500 KGS (maždaug nuo 9,50 USD iki 18 USD), priklausomai nuo teikėjo ir ryšio greičio.",
+          "Valiuta ir mokėjimai": "Vietinė valiuta yra Kirgizijos somas (KGS). Bankomatai yra didžiuosiuose miestuose, tačiau patartina grynuosius nešiotis kaimo vietovėse. Kredito ir debeto kortelės priimamos daug kur miestuose, o atokiose vietovėse – mažiau. Valiutos keitimo paslaugos teikiamos oro uostuose, bankuose ir valiutos keityklose.",
+          "Kalba": "Kirgizų ir rusų kalbos yra oficialios kalbos. Didžiuosiuose miestuose galite rasti angliškai kalbančių žmonių, ypač turistinėse vietovėse, tačiau kaimo regionuose pravartu žinoti keletą pagrindinių kirgizų ar rusų kalbos žodžių. Vertimo programa ar frazių knygelė gali būti labai naudinga.",
+          "Sveikata ir sauga": "Kirgizija paprastai yra saugi keliautojams, tačiau protinga imtis standartinių atsargumo priemonių. Gerkite vandenį buteliuose arba virintą, kad išvengtumėte vandens plintančių ligų. Įsitikinkite, kad turite kelionių draudimą, apimantį sveikatą ir nelaimingus atsitikimus. Greitosios medicinos pagalbos paslaugos teikiamos miestuose, tačiau kaimo vietovėse jos gali būti ribotos.",
+          "Klimatas ir apranga": "Kirgizijoje vyrauja žemyninis klimatas su šaltomis žiemomis ir karštomis vasaromis. Kalnuose temperatūra gali būti žymiai vėsesnė, todėl atitinkamai supakuokite. Rekomenduojami daugiasluoksniai drabužiai, tvirti vaikščiojimo batai ir apsauga nuo saulės. Žiemą atsineškite šiltų drabužių, įskaitant geros kokybės striukę, pirštines ir kepures.",
+          "Elektra ir kištukai": "Standartinė įtampa yra 220 V, o dažnis - 50 Hz. Maitinimo kištukai ir lizdai yra C ir F tipo. Patartina su savimi turėti universalų kelioninį adapterį, kad galėtumėte įkrauti elektroninius prietaisus."
+        },
+        "details": "Išsamesnės informacijos ir patarimų ieškokite kelionių vadovuose ir vietiniuose šaltiniuose. Mėgaukitės pirmąja kelione į Kirgiziją ir palikite nepamirštamus prisiminimus!"
+      },
+      "TravelPreparation": {
+        "title": "Pasiruoškite kelionei į Kirgiziją",
+        "Description": "Užtikrinkite sklandžią ir malonią kelionę į Kirgiziją, pasirūpindami šiais esminiais kelionės pasiruošimais.",
+        "Options": {
+          "Viza ir pasas": "Patikrinkite savo pilietybės vizos reikalavimus ir įsitikinkite, kad jūsų pasas galioja mažiausiai šešis mėnesius po numatytos viešnagės.",
+          "Sveikata ir skiepai": "Kreipkitės į savo sveikatos priežiūros paslaugų teikėją dėl bet kokių būtinų skiepų ar sveikatos atsargumo priemonių keliaujant į Kirgiziją.",
+          "Kelionių draudimas": "Apsvarstykite galimybę įsigyti kelionių draudimą, kad padengtumėte nenumatytus atvejus, pvz., medicinines išlaidas ar kelionės atšaukimą.",
+          "Valiuta ir pinigai": "Susipažinkite su vietine valiuta (Kyrgyzstani Som) ir prieš kelionę pasikeiskite pinigų. Bankomatai yra didžiuosiuose miestuose.",
+          "Kalba": "Nors rusų ir kirgizų kalbos yra oficialios kalbos, anglų kalba nėra plačiai paplitusi. Apsvarstykite galimybę išmokti keletą pagrindinių frazių rusų arba kirgizų kalbomis.",
+          "Oras ir apranga": "Apsilankydami apsirenkite oro sąlygoms tinkamus drabužius. Kirgizijoje būna karštos vasaros ir šaltos žiemos, todėl atsineškite sluoksnius.",
+          "Sauga ir saugumas": "Būkite informuoti apie dabartinę padėtį Kirgizijoje ir būkite atsargūs, ypač atokiose vietovėse. Saugokite savo daiktus ir stebėkite aplinką.",
+          "Kultūros etiketas": "Gerbkite vietinius papročius ir tradicijas, pvz., nusiauti batus prieš įeinant į kieno nors namus ir paprašyti leidimo prieš fotografuojant žmones."
+        },
+        "details": "Norėdami gauti papildomų kelionių patarimų ir patarimų, susijusių su jūsų kelione į Kirgiziją, skaitykite mūsų išsamų kelionių vadovą."
+      }
+    },
+    "sights": {
+      "name": "Lankytinos vietos",
+      "title": "Lankytinos vietos Kirgizijoje",
+      "subtitle": "Kur eiti Kirgizijoje?  Be to, sekite informaciją apie oro sąlygas miestuose ir regionų centruose, kad jūsų kelionė būtų kuo patogiau ir būkite pasiruošę nuolat besikeičiantiems šios gražios šalies orams.",
+      "description": "Raskite lankytinų vietų visoje Kirgizijoje – nuo ​​kalnų ežerų ir nacionalinių parkų iki miestų ir istorinių vietų. Norėdami pradėti tyrinėti, pasirinkite regioną.",
+      "keywords": "Kirgizijos vietos, kelionės į Kirgiziją, tyrinėkite Kirgiziją, Kirgizijos vietos, Kirgizijos turizmas, lankytinos vietos Kirgizijoje, populiariausios lankytinos vietos Kirgizija, Kirgizijos kraštovaizdžiai, kultūros objektai Kirgizija, gamtos stebuklai Kirgizija, geriausios lankytinos vietos Kirgizijoje",
+      "sights": "Kur eiti!",
+      "must-see": {
+        "subtitle": "Kirgizijos lankytinos vietos pagal regionus, kurias būtina pamatyti",
+        "description1": "Kirgizija garsėja nuostabiais gamtos kraštovaizdžiais – nuo ​​didingų kalnų iki ramių ežerų. Štai keletas gražiausių vietų kiekviename regione:",
+        "chuyregion": "Chuy regionas",
+        "alaarchatitle": "Ala Archa nacionalinis parkas:",
+        "alaarchadescription": "Iš čia atsiveria kvapą gniaužiantys vaizdai ir pėsčiųjų takai.",
+        "buranatitle": "Burana bokštas:",
+        "buranadescription": "Istorinis minaretas su vaizdingais slėnio vaizdais.",
+        "issykulregion": "Issyk-Kul regionas",
+        "lakeissykkultitle": "Issyk-Kul ežeras:",
+        "lakeissykkuldescription": "Didelis sūrus ežeras su paplūdimiais ir kurortais.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Garsus dėl savo raudonų uolų darinių.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Vartai į nuostabias kalnų vietas, tokias kaip Altyn Arashan.",
+        "narynregion": "Naryn regionas",
+        "tashrabattitle": "Tašas Rabatas:",
+        "tashrabatdescription": "Istorinis akmeninis karavanserajus vaizdingame slėnyje.",
+        "sonkultitle": "Son-Kul ežeras:",
+        "sonkuldescription": "Ežeras dideliame aukštyje su nuostabiais saulėlydžiais.",
+        "jalalabadregion": "Jalal-Abado regionas",
+        "sarychelextitle": "Sary-Chelek biosferos rezervatas:",
+        "sarychelekdescription": "Jame yra nesugadinti ežerai ir miškai.",
+        "arslanbobtitle": "Arslanbobas:",
+        "arslanbobdescription": "Čia auga didžiausias riešutmedžių miškas ir nuostabūs kriokliai.",
+        "oshregion": "Ošo regionas",
+        "sulaymanmountaintitle": "Sulaimano kalnas:",
+        "sulaymanmountaindescription": "Šventas kalnas su panoraminiais vaizdais.",
+        "alayvalleytitle": "Alay slėnis:",
+        "alayvalleydescription": "Iš numerio atsiveria nuostabūs Pamyro kalnų vaizdai.",
+        "batkenregion": "Batkeno regionas",
+        "batkenvalleytitle": "Batkeno slėnis:",
+        "batkenvalleydescription": "Žinomas dėl savo abrikosų medžių ir unikalių uolienų darinių.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Yra gražūs upės slėniai.",
+        "talasregion": "Talaso regionas",
+        "beshtashtitle": "Besh-Tash nacionalinis parkas:",
+        "beshtashdescription": "Yra vaizdingų upių ir alpinių pievų.",
+        "manasordotitle": "„Manas Ordo“ kompleksas:",
+        "manasordodescription": "Kultūros svetainė, skirta herojui Manui."
+      },
+      "highlights": [
+        "Kaip patekti",
+        "Transportas",
+        "Kur apsistoti",
+        "Ką valgyti",
+        "Ką daryti",
+        "Sezonas"
+      ]
+    },
+    "tours": {
+      "name": "Kelionės",
+      "title": "Kelionės po Kirgiziją",
+      "subtitle": "Privačios ir mažos grupės ekskursijos Kirgizijoje",
+      "description": "Atraskite žygius pėsčiomis, išvykas žirgais, kultūrinius ir automobilių maršrutus Kirgizijoje. Prisijunkite prie nedidelės grupės arba rinkitės kelionę pagal savo pomėgius.",
+      "description1": "Kelionė gali apimti kalnų takus, naktį tradicinėje veltinio palapinėje arba keletą dienų šalia Issyk-Kul. Pasirinkite maršrutą, atitinkantį jūsų pomėgius ir turimą laiką.\n\nMūsų komanda gali padėti su gidais, transportu ir apgyvendinimu. Susisiekite ir aptarsime savo datas, grupės dydį ir pageidaujamą tempą.",
+      "keywords": "Ekskursijos į Kirgiziją, Geriausios Kirgizijos turai, Kelionės Kirgizijoje, Geriausios Kirgizijos kelionių kompanijos, Kelionių agentūra Kirgizijoje, Ekskursijos su gidu Kirgizija, ekskursijos su gidu Kirgizija, kultūrinės ekskursijos Kirgizija, žygiai pėsčiomis Kirgizija, jodinėjimas žirgais į Kirgiziją, Kirgizija Kirgizijos kelionių paketai, geriausios kelionės į Kirgiziją, tyrinėkite Kirgiziją per ekskursijas",
+      "tourPage": {
+        "level": "Lygis",
+        "duration": "Trukmė",
+        "price": "Kaina",
+        "day": "Diena",
+        "days": "Dienos",
+        "details": "Detalės",
+        "things": "Veiklos",
+        "places": "Maršruto vietos",
+        "addInfo": "Papildoma informacija",
+        "includings": "Įskaičiuota į kainą",
+        "excludings": "Neįskaičiuota į kainą",
+        "from": "Nuo",
+        "note": "Pastaba",
+        "person": "Asmuo",
+        "persons": "Asmenys",
+        "andMore": "ir daugiau"
+      },
+      "TourPreparation": {
+        "title": "Essentials kelionėms Kirgizijoje",
+        "Description": "Išsamus sąrašas būtiniausių daiktų, kuriuos reikia pasiimti į kelionę į Kirgiziją, siekiant užtikrinti komfortą, saugumą ir pasirengimą įvairioms oro sąlygoms ir veiklai lauke.",
+        "Options": {
+          "Batai": "Pasiimkite patogius vaikščiojimo batus miesto ekskursijoms, tvirtus žygio batus vidutinio sunkumo žygiams, patvarius žygio batus žygiams ir greitai džiūstančius basutes kaip papildomą porą.",
+          "Skrybėlė": "Nepamirškite supakuoti plačiabrylės skrybėlės arba kepurės nuo saulės su kaklo atvartu, kad apsaugotumėte nuo intensyvios saulės dideliame aukštyje.",
+          "UV kremas": "Nepamirškite supakuoti didelio SPF plataus spektro apsaugos nuo saulės, kad apsaugotumėte odą nuo intensyvių UV spindulių, ypač esant aukštesnėms Kirgizijos vietoms.",
+          "Drabužiai": "Supakuokite tinkamus drabužių sluoksnius įvairioms temperatūroms ir oro sąlygoms, atsižvelgiant į tai, kad temperatūra gali labai skirtis keičiantis aukščiui. Būkite pasiruošę sniegui ar lietui, ypač kalnuotose vietovėse.",
+          "Medicininė pagalba": "Nepamirškite su savimi turėti asmeninių medicinos pagalbos priemonių, pvz., būtinų vaistų, juostų, skausmą malšinančių vaistų ir bet kokių konkrečių daiktų, skirtų esamoms sveikatos būklėms, kaip atsargumo priemones."
+        },
+        "overview": "Paklauskite mūsų, ką atsinešti savo maršrutui ir sezonui."
+      }
+    },
+    "articles": {
+      "name": "Straipsniai",
+      "title": "Kirgizijos kultūra ir gamta",
+      "description": "Pažinkite Kirgizijos žmones, tradicijas, virtuvę ir kraštovaizdį.",
+      "keywords": [
+        "Kirgizijos kultūra",
+        "Kirgizijos tradicijos",
+        "Kirgizijos gamta",
+        "Burkut medžioklė",
+        "Kok-boru",
+        "Alabai šunys",
+        "Taiganas",
+        "Kirgizijos istorija",
+        "Vidurinės Azijos kultūra",
+        "Klajoklių paveldas",
+        "Kultūros tyrinėjimas",
+        "Tradicinės sporto šakos",
+        "Kirgizijos kurtai",
+        "Kultūrinės patirtys",
+        "Nuotykiai Kirgizijoje",
+        "Paveldo veislės",
+        "Kultūros tradicijos",
+        "Unikalios patirtys",
+        "Kirgizų gyvenimo būdas"
+      ]
+    },
+    "about": {
+      "title": "Apie mus",
+      "subtitle": "Kas Mes esame?",
+      "description": "Padedame suplanuoti jūsų kelionę į Kirgiziją. Papasakokite, kada norite atvykti ir kas jus domina, kad kartu parinktume maršrutą, gidus ir nakvynės vietas.",
+      "keywords": "Apie mus, Mūsų istorija, Kirgizijos entuziastai, Kelionių aistra, Išskirtiniai potyriai, Komanda, Vertybės, Misija",
+      "buttons": {
+        "our_team": "Mūsų komanda",
+        "our_clients": "Mūsų Klientai",
+        "contact_us": "Susisiekite su mumis"
+      }
+    },
+    "info": {
+      "seen": "Apsilankymai: ",
+      "created": "Sukurta: ",
+      "modified": "Paskutinį kartą pakeista: "
+    },
+    "download": {
+      "text": "Turėkite žemėlapius, vietas ir kelionių informaciją po ranka naudodami mūsų programas mobiliesiems."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Naudingos nuorodos",
+          "links": [
+            {
+              "text": "Pradžia",
+              "url": "/"
+            },
+            {
+              "text": "Lankytinos vietos",
+              "url": "/places"
+            },
+            {
+              "text": "Kelionės",
+              "url": "/tours"
+            },
+            {
+              "text": "Pervežimai į oro uostą",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privatumas ir teisė",
+          "links": [
+            {
+              "text": "Apie mus",
+              "url": "/about"
+            },
+            {
+              "text": "Susisiekite su mumis",
+              "url": "/contact"
+            },
+            {
+              "text": "Privatumo politika",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Kontaktinė informacija",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biškekas, Razakovo g. 49"
+          }
+        },
+        {
+          "title": "Socialinės paskyros",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "kūrėjas",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

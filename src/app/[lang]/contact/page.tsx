@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import { localizedPageAlternates } from "@/lib/seo";
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -18,12 +19,12 @@ export default async function ContactPage(props: { params: Promise<{ lang: Local
   const email = process.env.NEXT_PUBLIC_EMAIL || contact?.email || 'anvarinho@gmail.com'
   const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || contact?.phone || '+996 500 490 806'
   return (
-    <main className={styles.landing} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <main className={styles.landing} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <h1>{page.about.buttons.contact_us}</h1>
       <p>{contactCopy[lang].intro}</p>
       <a href={`mailto:${email}`}><bdi>{email}</bdi></a>
       <a href={`tel:${phone.replace(/[^+\d]/g, '')}`}><bdi>{phone}</bdi></a>
-      <Link href={`/${lang}`}>{page.name}</Link>
+      <Link href={`/${lang}`} translate="no" lang="en" dir="ltr">{page.name}</Link>
     </main>
   );
 }

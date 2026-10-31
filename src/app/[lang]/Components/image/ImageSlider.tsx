@@ -1,4 +1,6 @@
 'use client'
+import additionalLabels from '@/translations/ui/app-lang-Components-image-ImageSlider-tsx-labels.json';
+
 import React, { useState, useEffect } from "react";
 import styles from './imageSlider.module.css'
 import Image from "next/image";
@@ -6,6 +8,7 @@ import { imagePlaceholder } from "@/lib/imagePlaceholder";
 import type { Locale } from '@/lib/i18n.config';
 
 const labels: Record<Locale, string[]> = {
+    ...additionalLabels as Record<Locale, string[]>,
     en: ['Image gallery', 'Previous slide', 'Next slide', 'Pause slideshow', 'Resume slideshow', '{n} of {total}', 'Go to slide {n}'],
     ru: ['Фотогалерея', 'Предыдущий слайд', 'Следующий слайд', 'Приостановить слайд-шоу', 'Возобновить слайд-шоу', '{n} из {total}', 'Перейти к слайду {n}'],
     fr: ['Galerie d’images', 'Diapositive précédente', 'Diapositive suivante', 'Mettre le diaporama en pause', 'Reprendre le diaporama', '{n} sur {total}', 'Aller à la diapositive {n}'],

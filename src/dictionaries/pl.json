@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "pl-PL",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Załadunek...",
+    "contactButton": "Jakieś pytania?",
+    "navigation": [
+      {
+        "text": "Strona główna",
+        "url": "/"
+      },
+      {
+        "text": "Atrakcje",
+        "url": "/places"
+      },
+      {
+        "text": "Wycieczki",
+        "url": "/tours"
+      },
+      {
+        "text": "Artykuły",
+        "url": "/articles"
+      },
+      {
+        "text": "O nas",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Przewodnik po Kirgistanie",
+      "description": "Wędruj górskimi szlakami, popływaj w jeziorze Issyk-kul lub zanocuj w jurcie u miejscowej rodziny. Wybierz trasę, która ci odpowiada.",
+      "subtitle": "Przewodnik po Kirgistanie",
+      "subtitle1": "Dlaczego warto odwiedzić Kirgistan?",
+      "subtitle2": "Odkrywanie wspaniałego pleneru",
+      "subtitle3": "Niekończąca się eksploracja",
+      "subtitle4": "Zaplanuj swoją podróż",
+      "subtitle5": "Miejsca w Kirgistanie, które trzeba odwiedzić",
+      "paragraph": "Ten piękny, śródlądowy kraj, dawniej część Związku Radzieckiego, szybko staje się jednym z najpopularniejszych celów podróży w Azji Środkowej. Branża turystyczna Kirgistanu szybko się rozwija, oferując podróżnym szansę poznania jednego z najbardziej spektakularnych krajów świata.",
+      "paragraph1": "W ostatnich latach Kirgistan odnotował dramatyczny wzrost turystyki, ponieważ poszukiwacze przygód gromadzą się na pieszych wędrówkach, biwakach i wędrówkach konnych po jego oszałamiających krajobrazach. Jako pierwszy kraj Azji Środkowej, który złagodził swoją politykę wizową – oferując bezwizowy wjazd dla większości krajów zachodnich i rozwiniętych – rozwinęła się silna sieć turystyczna.",
+      "paragraph2": "Od inicjatyw w zakresie turystyki społecznościowej (CBT) w całym kraju po pensjonaty i niezależnych przewodników – istnieje wiele sposobów, aby poznać zapierającą dech w piersiach scenerię Kirgistanu. Wędrowcy mogą wybrać się na inspirujące wędrówki z Karakolu, Kochkoru, Arslanboba, a nawet stolicy Biszkeku. Należy pamiętać, że wędrówki tutaj często wymagają odpowiedniego poziomu sprawności fizycznej, ponieważ wiele szlaków oferuje coś więcej niż tylko spokojny spacer. Większość wędrówek trwa od 1 do 5 dni, choć dostępne są dłuższe przygody.\r\n\r\nDla tych, którzy chcą oszczędzić nogi, popularną alternatywą jest jazda konna. Wybierz się na najbardziej spektakularną przejażdżkę konną w kraju do Song Kol lub spędź kilka dni relaksując się i pływając w pięknym jeziorze Issyk-Kul.",
+      "paragraph3": "Dzięki niezliczonej liczbie odległych miejsc, wędrówek i szlaków możliwości odkrywania są nieograniczone. Niezależnie od tego, czy szukasz przygody, czy relaksu, w Kirgistanie każdy znajdzie coś dla siebie.",
+      "paragraph4": "Aby uzyskać bardziej szczegółowe informacje na temat atrakcji, jak się tam dostać i po okolicy oraz inne wskazówki dotyczące podróży, przeczytaj nasz obszerny przewodnik turystyczny po Kirgistanie. Popraw swoje wrażenia z podróży dzięki polecanym aplikacjom do nawigacji, tłumaczeń i informacji lokalnych, aby w pełni wykorzystać podróż.\r\n\r\nCiesz się podróżą i poznaj wyjątkowe piękno i kulturę Kirgistanu",
+      "keywords": "Przewodnik turystyczny po Kirgistanie, przewodnik turystyczny, Wygoda podróży, Atrakcje lokalne, Usługi turystyczne, Porady dotyczące podróży do Kirgistanu, Doświadczenia kulturalne, Planowanie wycieczek, Zwiedzanie, Podróże przygodowe, Wygodne wycieczki, Przewodnik po Biszkeku, Atrakcje turystyczne Kirgistanu, Punkt turystyczny, Miejsca blisko mnie do zwiedzania, Miejsca do odwiedzenia w pobliżu mnie, Miejsca turystyczne, Cel turystyczny, Piękne miejsca na świecie, Najpiękniejsze miejsca na świecie, Najpiękniejsze miejsca na świecie, Podróż z przewodnikiem, Przewodnik turystyczny, Piękne miejsca, Biszkek w Kirgistanie, Miasto Biszkek, Turysta i przewodnik, PR atrakcje turystyczne, Atrakcje w okolicy i jak to wykonać",
+      "button": "Dowiedzmy się!",
+      "button1": "Gdzie iść!",
+      "button2": "Co robić!",
+      "button3": "czytaj więcej",
+      "button4": "Nasze wycieczki",
+      "Transportation": {
+        "title": "Transport w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Podróżowanie po Kirgistanie może być przygodą samą w sobie. Oto, co musisz wiedzieć:",
+        "Options": {
+          "Loty krajowe": "W przypadku dłuższych dystansów, zwłaszcza jeśli czas jest ograniczeniem, dostępne są loty krajowe między głównymi miastami, takimi jak Biszkek, Osz i Tamchy (w pobliżu Cholpon-Ata w regionie Issyk-Kul). Sprawdź linie lotnicze pod kątem rozkładów lotów i rezerwacji.",
+          "Marszrutki (minibusy)": "Są to najpopularniejszy i najtańszy rodzaj transportu na krótkich i średnich dystansach. Poruszają się stałymi trasami między miastami i miasteczkami i cieszą się dużą popularnością wśród mieszkańców.",
+          "Wspólne taksówki": "Wspólne taksówki to szybsza, ale nieco droższa alternatywa dla marszrutek. Zwykle wychodzą, gdy są pełne, a ceny można negocjować.",
+          "Wynajem samochodów": "Aby uzyskać większą elastyczność, dobrym rozwiązaniem jest wynajęcie samochodu. Drogi na obszarach wiejskich mogą być wyboiste, dlatego zalecany jest samochód z napędem 4x4. Upewnij się, że posiadasz międzynarodowe prawo jazdy.",
+          "Pociągi": "Dostępne są ograniczone usługi kolejowe, łączące głównie Biszkek z Bałykczami w pobliżu jeziora Issyk-Kul. To malownicza trasa, ale wolniejsza niż podróż samochodem.",
+          "Autobusy": "W większych miastach kursują regularne autobusy, oferując wygodny sposób podróżowania. Mogą jednak nie obejmować odległych obszarów.",
+          "Autostop": "jest powszechną praktyką na obszarach wiejskich Kirgistanu, gdzie formalne możliwości transportu mogą być ograniczone. Jest to stosunkowo bezpieczne i akceptowane kulturowo, ale przy akceptowaniu przejazdów od nieznajomych należy zachować ostrożność i kierować się własnym osądem."
+        },
+        "details": "Aby uzyskać szczegółowe informacje na temat możliwości transportu, odwiedź dostarczony przewodnik."
+      },
+      "Accommodations": {
+        "title": "Noclegi w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Od przytulnych pensjonatów po luksusowe kurorty – Kirgistan oferuje różnorodne opcje zakwaterowania, które zaspokoją preferencje i budżet każdego podróżnika. Oto kilka opcji do rozważenia:",
+        "Options": {
+          "Hotele": "Największe miasta Kirgistanu, takie jak Biszkek i Osz, mogą pochwalić się szeroką gamą hoteli dostosowanych do różnych budżetów i preferencji. Od międzynarodowych sieci po hotele butikowe – znajdziesz komfortowe zakwaterowanie z udogodnieniami, takimi jak Wi-Fi, klimatyzacja i własna restauracja.",
+          "Pensjonaty": "Jeśli chcesz uzyskać bardziej autentyczne wrażenia, rozważ pobyt w pensjonacie prowadzonym przez lokalne rodziny. Te przytulne obiekty oferują ciepłe powitanie i szansę poznania kirgiskiej gościnności. Często będziesz miał okazję delektować się domowymi posiłkami i poznawać lokalne zwyczaje i tradycje.",
+          "Jurty": "Na obszarach wiejskich i górskich tradycyjne jurty zapewniają wyjątkowe zakwaterowanie. Te przenośne konstrukcje przypominające namioty oferują proste, ale wygodne zakwaterowanie, często z pięknymi widokami na okoliczne krajobrazy. Pobyt w jurcie może obejmować posiłki i zajęcia kulturalne.",
+          "Kwatery prywatne": "Doświadcz życia z kirgiską rodziną, decydując się na zakwaterowanie u rodziny goszczącej. Będziesz miał okazję mieszkać z mieszkańcami, dzielić posiłki i uczestniczyć w codziennych zajęciach. Kwatery prywatne oferują autentyczną wymianę kulturalną i wgląd w tradycyjny sposób życia Kirgistanu.",
+          "Eko-Loże": "Podróżnikom dbającym o środowisko ekologiczne domy zapewniają zrównoważone możliwości zakwaterowania w otoczeniu przyrody. Domy te traktują priorytetowo ochronę środowiska i często oferują takie zajęcia, jak piesze wędrówki, obserwowanie ptaków i zaangażowanie społeczności.",
+          "Kemping": "to popularna opcja dla podróżników poszukujących przygód i samotności. Niezależnie od tego, czy rozbijasz namiot na wyznaczonym terenie kempingowym, czy w dzikim obozowisku w odległych lokalizacjach, pamiętaj o przestrzeganiu zasad Leave No Trace i uzyskaniu wszelkich niezbędnych zezwoleń."
+        },
+        "details": "Aby uzyskać szczegółowe rekomendacje i opcje rezerwacji, odwiedź witryny turystyczne, platformy rezerwacji online i lokalne biura turystyczne."
+      },
+      "Food": {
+        "title": "Jedzenie w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Poznawanie kuchni kirgiskiej jest integralną częścią podróży. Oto, co musisz wiedzieć:",
+        "Options": {
+          "Tradycyjna kuchnia": "Kuchnia kirgiska jest bogata w smak i dziedzictwo, a jej podstawą są tradycyjne dania, takie jak beszbarmak (mięso i makaron), manty (kluski) i laghman (zupa z makaronem). Nie przegap sfermentowanego mleka klaczy znanego jako kumis, popularnego napoju.",
+          "Wpływ nomadów": "Odzwierciedlając swoje koczownicze dziedzictwo, kuchnia kirgiska często oferuje obfite dania przygotowywane z takich składników, jak mięso (zwłaszcza jagnięcina i mięso końskie), produkty mleczne (takie jak kymyz i airan) oraz zboża (w tym ryż i pszenica). Jurty, tradycyjne namioty nomadów, mogą oferować autentyczne doznania kulinarne na obszarach wiejskich.",
+          "Lokalne rynki": "Odwiedź lokalne targi, takie jak Bazar Osz w Biszkeku, aby spróbować różnorodnych kirgiskich potraw i przekąsek, w tym szaszłyka (grillowanego mięsa na szaszłyku), samsy (pikantnych wypieków) i plov (pilaw). Rynki te oferują również możliwość zakupu świeżych owoców, orzechów i przypraw.",
+          "Herbaciarnie i kawiarnie": "W Kirgistanie wszechobecne są herbaciarnie (czajchana) i kawiarnie, serwujące herbatę (chai) i kawę (kofe) wraz z ciastami, pieczywem i lekkimi posiłkami. Ciesz się swobodną atmosferą i gościnnością, delektując się tradycyjnymi kirgiskimi przysmakami, takimi jak baursak (smażone ciasto) i kurut (kulki z suszonego jogurtu).",
+          "Kuchnia międzynarodowa": "W obszarach miejskich, takich jak Biszkek, znajdziesz różnorodne dania kuchni międzynarodowej, w tym rosyjską, chińską, koreańską i europejską. Przeglądaj modne restauracje, bistra i lokale gastronomiczne, aby posmakować smaków z całego świata i kirgiskiej gościnności.",
+          "Jedzenie uliczne": "Wyjdź na ulice Kirgistanu, aby odkryć wielu ulicznych sprzedawców żywności oferujących szybkie i aromatyczne przekąski. Spróbuj popularnych potraw ulicznych, takich jak somsa (smażone lub pieczone placki nadziewane mięsem lub warzywami), smażony makaron laghman i grillowana kolba kukurydzy.",
+          "Wycieczki kulinarne i zajęcia kulinarne": "Wybierz się na wycieczki kulinarne lub dołącz do zajęć gotowania, aby głębiej zagłębić się w kuchnię kirgiską i tradycje kulinarne. Dowiedz się, jak przygotować tradycyjne potrawy, odwiedź lokalne gospodarstwa i producentów i zanurz się w tętniącej życiem scenie kulinarnej Kirgistanu."
+        },
+        "details": "Więcej informacji na temat kuchni kirgiskiej i lokali gastronomicznych można znaleźć w dostarczonym przewodniku."
+      },
+      "Safety": {
+        "title": "Bezpieczeństwo w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Podróż do Kirgistanu jest na ogół bezpieczna, jednak należy mieć świadomość potencjalnych zagrożeń i podjąć niezbędne środki ostrożności. Oto, co musisz wiedzieć:",
+        "Options": {
+          "Stabilność polityczna": "Kirgistan doświadczył w przeszłości niestabilności politycznej, obejmującej protesty i sporadyczne niepokoje. Chociaż większość obszarów turystycznych pozostaje nienaruszona, bądź na bieżąco z wydarzeniami lokalnymi i unikaj dużych zgromadzeń lub demonstracji.",
+          "Przestępczość": "Mogą wystąpić drobne przestępstwa, takie jak kradzieże kieszonkowe i kradzieże, szczególnie w zatłoczonych obszarach i popularnych miejscach turystycznych. Chroń swoje rzeczy i bądź czujny.",
+          "Terroryzm": "Zagrożenie terroryzmem w Kirgistanie jest niskie, jednak podróżujący powinni zachować czujność, szczególnie na obszarach przygranicznych. Postępuj zgodnie ze wszelkimi zaleceniami dotyczącymi podróży wydanymi przez Twój rząd i bądź na bieżąco.",
+          "Zagrożenia naturalne": "Kirgistan jest narażony na zagrożenia naturalne, takie jak trzęsienia ziemi, lawiny i osunięcia ziemi, szczególnie w regionach górskich. Bądź przygotowany i przestrzegaj zasad bezpieczeństwa, szczególnie podczas trekkingu lub zajęć na świeżym powietrzu.",
+          "Bezpieczeństwo drogowe": "Warunki drogowe w Kirgistanie mogą się różnić, a jazda może być trudna, szczególnie na obszarach wiejskich. Zachowaj ostrożność, przestrzegaj lokalnych przepisów ruchu drogowego i rozważ zatrudnienie renomowanego kierowcy.",
+          "Zagrożenia dla zdrowia": "Chociaż Kirgistan nie stwarza znaczącego zagrożenia dla zdrowia, podróżujący powinni posiadać aktualne szczepienia i podejmować środki ostrożności przeciwko chorobom przenoszonym przez żywność i wodę.",
+          "Choroba wysokościowa": "Podróżujący odwiedzający obszary położone na dużych wysokościach powinni zdawać sobie sprawę z ryzyka wystąpienia choroby wysokościowej. Poświęć trochę czasu na aklimatyzację i unikaj forsownej aktywności fizycznej, dopóki Twoje ciało się nie dostosuje.",
+          "Ubezpieczenie podróżne": "Niezbędne jest posiadanie ubezpieczenia podróżnego pokrywającego koszty leczenia, ewakuację w nagłych wypadkach oraz odwołanie/przerwanie podróży. Upewnij się, że Twoja polisa ubezpieczeniowa obejmuje zakres działań, w które planujesz się zaangażować."
+        },
+        "details": "Bardziej szczegółowe informacje dotyczące bezpieczeństwa i porady dotyczące podróży można znaleźć w oficjalnych źródłach rządowych i przewodnikach turystycznych."
+      },
+      "Prices": {
+        "title": "Ceny w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Zrozumienie kosztów życia i wydatków w Kirgistanie może pomóc w skutecznym zaplanowaniu budżetu. Oto przegląd cen popularnych artykułów i usług:",
+        "Options": {
+          "Zakwaterowanie": "Koszt noclegu w Kirgistanie różni się w zależności od rodzaju noclegu i lokalizacji. Osoby podróżujące z ograniczonym budżetem mogą znaleźć niedrogie opcje, takie jak pensjonaty i hostele, a luksusowe hotele i kurorty zaspokoją potrzeby osób poszukujących ekskluzywnych udogodnień. Ceny wahają się od zaledwie 10 dolarów za noc w niedrogich kwaterach do ponad 100 dolarów za noc w luksusowych obiektach.",
+          "Jedzenie i wyżywienie": "Posiłki w Kirgistanie są ogólnie niedrogie, zwłaszcza w lokalnych restauracjach i na ulicznych straganach z jedzeniem. Tradycyjne dania, takie jak beszbarmak i plov, są niedrogie i sycące, zwykle kosztują od 3 do 7 dolarów za posiłek w lokalnych restauracjach. Kuchnia międzynarodowa i wykwintne lokale gastronomiczne mogą być droższe, a posiłki kosztują średnio od 10 do 20 dolarów lub więcej na osobę.",
+          "Transport": "Koszty transportu w Kirgistanie różnią się w zależności od środka podróży i odległości. Loty krajowe między dużymi miastami, takimi jak Biszkek i Osz, mogą kosztować od 50 do 150 dolarów lub więcej, natomiast wspólne taksówki i marszrutki (minibusy) oferują niedrogie opcje na krótszych dystansach, zwykle kosztujące od 1 do 10 dolarów w zależności od trasy. Wynajęcie samochodu może kosztować od 30 do 100 dolarów lub więcej dziennie, w zależności od typu pojazdu i wypożyczalni.",
+          "Zajęcia i atrakcje": "Koszt zajęć i atrakcji w Kirgistanie jest bardzo zróżnicowany w zależności od doświadczenia. Opłaty za wstęp do muzeów, miejsc historycznych i parków narodowych są na ogół przystępne i wahają się od 1 do 10 dolarów za osobę. Wycieczki z przewodnikiem, wycieczki na świeżym powietrzu i zajęcia przygodowe, takie jak jazda konna i trekking, mogą wiązać się z dodatkowymi kosztami, a ceny różnią się w zależności od czasu trwania i złożoności.",
+          "Zakupy": "Zakupy w Kirgistanie oferują szeroką gamę opcji, od tradycyjnego rękodzieła i pamiątek po nowoczesne towary i elektronikę. Ceny różnią się w zależności od przedmiotu i lokalizacji, ale na targowiskach i bazarach powszechne są targi. Bądź przygotowany na negocjacje w sprawie najlepszej ceny, zwłaszcza przy zakupie tekstyliów, biżuterii i rękodzieła.",
+          "Waluta i kursy wymiany": "Oficjalną walutą Kirgistanu jest som kirgiski (KGS). Kursy walut ulegają zmianom, dlatego przed wymianą pieniędzy zaleca się sprawdzenie aktualnych kursów. W większych miastach i na obszarach turystycznych akceptowane są główne karty kredytowe, jednak w mniejszych miastach i na obszarach wiejskich zaleca się mieć przy sobie gotówkę. (1 $ = 85-90 somów)"
+        },
+        "details": "Aby uzyskać najbardziej dokładne i aktualne informacje na temat cen w Kirgistanie, zapoznaj się z lokalnymi źródłami i najnowszymi przewodnikami turystycznymi."
+      },
+      "Travel_Seasons": {
+        "title": "Sezony podróży w Kirgistanie | Przewodnik turystyczny",
+        "Description": "Zrozumienie pór roku w Kirgistanie może pomóc w zaplanowaniu podróży i jak najlepszym wykorzystaniu jej. Oto przegląd różnych pór roku i tego, czego się spodziewać:",
+        "Options": {
+          "Wiosna (od marca do maja)": "Wiosna to piękny czas na wizytę w Kirgistanie, gdy krajobraz ożywa wraz z kwitnącymi kwiatami i rzekami wezbranymi przez topniejący śnieg. Pogoda jest łagodna, dzięki czemu idealnie nadaje się do uprawiania sportów na świeżym powietrzu, takich jak piesze wędrówki, trekking i jazda konna. Należy jednak przygotować się na sporadyczne opady deszczu, szczególnie w kwietniu i maju.",
+          "Lato (od czerwca do sierpnia)": "Lato to szczyt sezonu turystycznego w Kirgistanie, z długimi dniami, ciepłymi temperaturami i czystym niebem. To idealny czas na przygody na świeżym powietrzu, takie jak biwakowanie, wspinaczka górska i odkrywanie alpejskich jezior. W tym czasie odbywają się popularne festiwale i wydarzenia, w tym we wrześniu odbywające się Światowe Igrzyska Nomadów.",
+          "Jesień (od września do listopada)": "Jesień to oszałamiająca pora roku w Kirgistanie, z krajobrazami pomalowanymi na żywe odcienie czerwieni, pomarańczy i złota, gdy liście zmieniają kolor. Pogoda pozostaje przyjemna, co sprawia, że ​​jest to doskonały czas na trekking, obserwację dzikiej przyrody i przeżycia kulturalne. Wrzesień to idealny miesiąc na przyjazd na Światowe Igrzyska Nomadów.",
+          "Zima (od grudnia do lutego)": "Zima zmienia Kirgistan w zimową krainę czarów, z pokrytymi śniegiem górami i zamarzniętymi jeziorami, tworzącymi zapierające dech w piersiach krajobrazy. Podczas gdy temperatury mogą spaść poniżej zera, miłośnicy sportów zimowych gromadzą się w ośrodkach narciarskich, takich jak Karakol i Jyrgalan, aby jeździć na nartach, snowboardzie i łyżwach. W lutym obchodzone jest tradycyjne święto nomadów Kok Boru (Buzkashi)."
+        },
+        "details": "Więcej informacji na temat konkretnych zajęć, wydarzeń i warunków pogodowych w każdym sezonie można znaleźć w przewodnikach turystycznych i lokalnych zasobach turystycznych."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Pierwszy raz w Kirgistanie?",
+        "Description": "Jeśli odwiedzasz Kirgistan po raz pierwszy, oto obszerny przewodnik, który pomoże Ci w pełni wykorzystać tę podróż:",
+        "Options": {
+          "Przyjazd i poruszanie się": "Większość pasażerów międzynarodowych przybywa na międzynarodowe lotnisko Manas w Biszkeku. Taksówki i autobusy są łatwo dostępne do transportu do miasta. Po Kirgistanie można poruszać się lotami krajowymi, autobusami, marszrutkami (minibusami) i wspólnymi taksówkami.",
+          "Karty SIM i Internet": "Utrzymywanie kontaktu w Kirgistanie jest łatwe dzięki lokalnej karcie SIM. Karty SIM możesz kupić na lotnisku lub u operatorów sieci komórkowych w mieście. Główni dostawcy to Beeline, O! i Megacom. Przed zakupem karty SIM upewnij się, że telefon jest odblokowany. Zasięg Internetu jest ogólnie dobry w miastach i miasteczkach, ale na obszarach wiejskich może być słaby.",
+          "Ceny internetowe": "Ceny Internetu w Kirgistanie są ogólnie przystępne. Podstawowy pakiet danych o pojemności 1 GB może kosztować około 100 KGS (około 1,20 USD), podczas gdy większe pakiety, takie jak 10 GB, mogą kosztować około 500 KGS (około 6 USD). Nielimitowane plany transmisji danych na miesiąc mogą wynosić od 800 do 1500 KGS (około 9,50–18 USD) w zależności od dostawcy i szybkości połączenia.",
+          "Waluta i płatności": "Lokalną walutą jest som kirgiski (KGS). Bankomaty są dostępne w większych miastach, ale na obszarach wiejskich zaleca się noszenie gotówki. Karty kredytowe i debetowe są akceptowane w wielu miejscach w miastach, ale w mniejszym stopniu w odległych obszarach. Usługi wymiany walut są dostępne na lotniskach, w bankach i kantorach.",
+          "Język": "Językami urzędowymi są kirgiski i rosyjski. W większych miastach można znaleźć osoby mówiące po angielsku, szczególnie w obszarach turystycznych, ale na obszarach wiejskich warto znać podstawowe zwroty kirgiskie lub rosyjskie. Bardzo pomocna może być aplikacja do tłumaczenia lub rozmówki.",
+          "Zdrowie i bezpieczeństwo": "Kirgistan jest miejscem ogólnie bezpiecznym dla podróżnych, jednak warto zachować standardowe środki ostrożności. Pij wodę butelkowaną lub przegotowaną, aby uniknąć chorób przenoszonych przez wodę. Upewnij się, że masz ubezpieczenie podróżne obejmujące zdrowie i wypadki. Usługi ratownictwa medycznego są dostępne w miastach, ale na obszarach wiejskich ich dostępność może być ograniczona.",
+          "Klimat i odzież": "Kirgistan ma klimat kontynentalny z mroźnymi zimami i gorącymi latami. W górach temperatury mogą być znacznie niższe, dlatego należy się odpowiednio spakować. Zalecana jest odzież warstwowa, solidne buty do chodzenia i ochrona przeciwsłoneczna. Zimą zabierz ze sobą ciepłą odzież, w tym dobrej jakości kurtkę, rękawiczki i czapki.",
+          "Elektryczność i wtyczki": "Standardowe napięcie wynosi 220 V, a częstotliwość 50 Hz. Wtyczki i gniazdka zasilające są typu C i F. Zaleca się zabranie ze sobą uniwersalnego zasilacza podróżnego, aby móc ładować urządzenia elektroniczne."
+        },
+        "details": "Bardziej szczegółowe informacje i wskazówki można znaleźć w przewodnikach turystycznych i zasobach lokalnych. Ciesz się swoją pierwszą podróżą do Kirgistanu i zachowaj niezapomniane wspomnienia!"
+      },
+      "TravelPreparation": {
+        "title": "Przygotuj się do podróży do Kirgistanu",
+        "Description": "Zadbaj o bezproblemową i przyjemną podróż do Kirgistanu, dokonując niezbędnych przygotowań do podróży.",
+        "Options": {
+          "Wiza i paszport": "Sprawdź wymagania wizowe dotyczące Twojej narodowości i upewnij się, że Twój paszport jest ważny przez co najmniej sześć miesięcy poza planowanym pobytem.",
+          "Zdrowie i Szczepienia": "Skonsultuj się ze swoim lekarzem w sprawie wszelkich szczepień wymaganych i środków ostrożności zdrowotnych podczas podróży do Kirgistanu.",
+          "Ubezpieczenie podróżne": "Rozważ zakup ubezpieczenia podróżnego, które pokryje nieoczekiwane sytuacje awaryjne, takie jak koszty leczenia lub odwołanie podróży.",
+          "Waluta i pieniądze mają znaczenie": "Zapoznaj się z lokalną walutą (som kirgiski) i wymień trochę pieniędzy przed podróżą. Bankomaty są dostępne w większych miastach.",
+          "Język": "Choć językami urzędowymi są rosyjski i kirgiski, angielski nie jest powszechnie używany. Rozważ naukę kilku podstawowych zwrotów w języku rosyjskim lub kirgiskim.",
+          "Pogoda i odzież": "Podczas wizyty spakuj odpowiednią odzież dostosowaną do warunków pogodowych. W Kirgistanie są gorące lata i mroźne zimy, więc zabierz ze sobą warstwy.",
+          "Bezpieczeństwo i ochrona": "Bądź na bieżąco z aktualną sytuacją w Kirgistanie i zachowaj ostrożność, szczególnie w odległych obszarach. Chroń swoje rzeczy i zwracaj uwagę na otoczenie.",
+          "Etykieta kulturowa": "Szanuj lokalne zwyczaje i tradycje, takie jak zdejmowanie butów przed wejściem do czyjegoś domu i proszenie o pozwolenie przed robieniem zdjęć ludziom."
+        },
+        "details": "Dodatkowe wskazówki i porady dotyczące podróży do Kirgistanu znajdziesz w naszym obszernym przewodniku turystycznym."
+      }
+    },
+    "sights": {
+      "name": "Atrakcje",
+      "title": "Miejsca warte odwiedzenia w Kirgistanie",
+      "subtitle": "Gdzie jechać w Kirgistanie?  Dodatkowo bądź na bieżąco z warunkami pogodowymi w miastach i ośrodkach regionalnych, aby jak najlepiej wykorzystać swoją podróż i być przygotowanym na stale zmieniającą się pogodę w tym pięknym kraju.",
+      "description": "Znajdź miejsca do odwiedzenia w całym Kirgistanie, od górskich jezior i parków narodowych po miasta i miejsca historyczne. Wybierz region, aby rozpocząć eksplorację.",
+      "keywords": "Miejsca w Kirgistanie, podróże do Kirgistanu, zwiedzanie Kirgistanu, kierunki Kirgistanu, turystyka w Kirgistanie, miejsca, które trzeba odwiedzić w Kirgistanie, najważniejsze atrakcje Kirgistan, krajobrazy Kirgistanu, miejsca kulturalne Kirgistan, cuda natury Kirgistan, najlepsze miejsca do odwiedzenia w Kirgistanie",
+      "sights": "Gdzie iść!",
+      "must-see": {
+        "subtitle": "Miejsca, które trzeba zobaczyć w Kirgistanie według regionów",
+        "description1": "Kirgistan słynie z pięknych naturalnych krajobrazów, od majestatycznych gór po spokojne jeziora. Oto niektóre z najpiękniejszych miejsc w każdym regionie:",
+        "chuyregion": "Region Chuy",
+        "alaarchatitle": "Park Narodowy Ala Archa:",
+        "alaarchadescription": "Oferuje zapierające dech w piersiach widoki i szlaki turystyczne.",
+        "buranatitle": "Wieża Burana:",
+        "buranadescription": "Zabytkowy minaret z malowniczym widokiem na dolinę.",
+        "issykulregion": "Region Issyk-Kul",
+        "lakeissykkultitle": "Jezioro Issyk-Kul:",
+        "lakeissykkuldescription": "Duże słone jezioro z plażami i kurortami.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Słynie z czerwonych formacji skalnych.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Brama do pięknych górskich miejsc, takich jak Altyn Arashan.",
+        "narynregion": "Obwód Naryński",
+        "tashrabattitle": "Tasz Rabat:",
+        "tashrabatdescription": "Zabytkowy kamienny karawanseraj w malowniczej dolinie.",
+        "sonkultitle": "Jezioro Son-Kul:",
+        "sonkuldescription": "Jezioro położone na dużej wysokości, z pięknymi zachodami słońca.",
+        "jalalabadregion": "Region Dżalalabad",
+        "sarychelextitle": "Rezerwat Biosfery Sary-Chelek:",
+        "sarychelekdescription": "Charakteryzuje się dziewiczymi jeziorami i lasami.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Znajduje się tu największy las orzechowy i piękne wodospady.",
+        "oshregion": "Region Osz",
+        "sulaymanmountaintitle": "Góra Sulayman:",
+        "sulaymanmountaindescription": "Święta góra z panoramicznym widokiem.",
+        "alayvalleytitle": "Dolina Alay:",
+        "alayvalleydescription": "Oferuje spektakularne widoki na góry Pamiru.",
+        "batkenregion": "Region Batken",
+        "batkenvalleytitle": "Dolina Batken:",
+        "batkenvalleydescription": "Znane z drzew morelowych i unikalnych formacji skalnych.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Charakteryzuje się pięknymi dolinami rzecznymi.",
+        "talasregion": "Region Talas",
+        "beshtashtitle": "Park Narodowy Besz-Tasz:",
+        "beshtashdescription": "Ma malownicze rzeki i alpejskie łąki.",
+        "manasordotitle": "Kompleks Manas Ordo:",
+        "manasordodescription": "Strona kulturalna poświęcona bohaterowi Manasowi."
+      },
+      "highlights": [
+        "Jak dojechać",
+        "Transport",
+        "Gdzie się zatrzymać",
+        "Co jeść",
+        "Co robić",
+        "Sezon"
+      ]
+    },
+    "tours": {
+      "name": "Wycieczki",
+      "title": "Wycieczki po Kirgistanie",
+      "subtitle": "Wycieczki prywatne i w małych grupach po Kirgistanie",
+      "description": "Odkryj piesze, konne, kulturowe i samochodowe trasy po Kirgistanie. Dołącz do małej grupy lub wybierz wyjazd indywidualny dopasowany do twoich zainteresowań.",
+      "description1": "Wycieczka może obejmować górskie szlaki, nocleg w tradycyjnym filcowym namiocie lub kilka dni w pobliżu Issyk-Kul. Wybierz trasę odpowiadającą Twoim zainteresowaniom i czasowi, którym dysponujesz.\n\nNasz zespół może pomóc w zorganizowaniu przewodników, transportu i zakwaterowania. Skontaktuj się, aby omówić daty, wielkość grupy i preferowane tempo.",
+      "keywords": "Wycieczki po Kirgistanie, Najlepsze wycieczki po Kirgistanie, Wycieczki po Kirgistanie, Najlepsze firmy zajmujące się wycieczkami po Kirgistanie, Biuro podróży w Kirgistanie, wycieczki przygodowe Kirgistan, wycieczki z przewodnikiem Kirgistan, wycieczki kulturalne Kirgistan, wycieczki trekkingowe Kirgistan, wycieczki konne Kirgistan, nomadyczne doświadczenia Kirgistan, pakiety podróżnicze do Kirgistanu, najlepsze wycieczki w Kirgistan, zwiedzaj Kirgistan poprzez wycieczki",
+      "tourPage": {
+        "level": "Poziom",
+        "duration": "Czas trwania",
+        "price": "Cena",
+        "day": "Dzień",
+        "days": "Dni",
+        "details": "Bliższe dane",
+        "things": "Atrakcje i aktywności",
+        "places": "Miejsca na trasie",
+        "addInfo": "Dodatkowe informacje",
+        "includings": "Cena obejmuje",
+        "excludings": "Cena nie obejmuje",
+        "from": "Od",
+        "note": "Notatka",
+        "person": "Osoba",
+        "persons": "Osoby",
+        "andMore": "i więcej"
+      },
+      "TourPreparation": {
+        "title": "Niezbędne informacje dotyczące podróży po Kirgistanie",
+        "Description": "Obszerna lista niezbędnych przedmiotów, które należy zabrać ze sobą na podróż do Kirgistanu, aby zapewnić komfort, bezpieczeństwo i gotowość na zmieniające się warunki pogodowe i zajęcia na świeżym powietrzu.",
+        "Options": {
+          "Buty": "Zabierz ze sobą wygodne buty do chodzenia na wycieczki po mieście, solidne buty turystyczne na umiarkowane wędrówki, trwałe buty turystyczne na trekking i szybkoschnące sandały jako dodatkową parę.",
+          "Kapelusz": "Nie zapomnij o kapeluszu z szerokim rondem lub czapce przeciwsłonecznej z klapką na szyję, która ochroni Cię przed intensywnym słońcem na dużych wysokościach.",
+          "Krem UV": "Nie zapomnij zaopatrzyć się w filtr przeciwsłoneczny o wysokim SPF i szerokim spektrum działania, aby chronić skórę przed intensywnymi promieniami UV, szczególnie na większych wysokościach w Kirgistanie.",
+          "Odzież": "Spakuj odpowiednie warstwy odzieży, dostosowane do różnych temperatur i warunków pogodowych, biorąc pod uwagę, że temperatury mogą znacznie się różnić w zależności od zmian wysokości. Bądź przygotowany na śnieg lub deszcz, zwłaszcza na obszarach górskich.",
+          "Pomoc medyczna": "Pamiętaj, aby mieć przy sobie osobiste środki medyczne, takie jak niezbędne leki, plastry, środki przeciwbólowe i wszelkie szczególne przedmioty stosowane w przypadku istniejących wcześniej schorzeń, jako środek ostrożności."
+        },
+        "overview": "Zapytaj nas, co zabrać ze sobą na trasę i porę roku."
+      }
+    },
+    "articles": {
+      "name": "Artykuły",
+      "title": "Kultura i przyroda Kirgistanu",
+      "description": "Poznaj mieszkańców, tradycje, kuchnię i krajobrazy Kirgistanu.",
+      "keywords": [
+        "Kultura kirgiska",
+        "Kirgiskie tradycje",
+        "Kirgiska przyroda",
+        "Polowanie na Burkuta",
+        "Kok-boru",
+        "Psy Alabai",
+        "Tajgan",
+        "Historia Kirgistanu",
+        "Kultura środkowoazjatycka",
+        "Dziedzictwo nomadów",
+        "Eksploracja kulturowa",
+        "Tradycyjne sporty",
+        "Charty Kirgistanu",
+        "Doświadczenia kulturalne",
+        "Przygoda w Kirgistanie",
+        "Rasy dziedzictwa",
+        "Tradycje kulturowe",
+        "Wyjątkowe doświadczenia",
+        "Kirgiski styl życia"
+      ]
+    },
+    "about": {
+      "title": "O nas",
+      "subtitle": "Kim jesteśmy?",
+      "description": "Pomagamy zaplanować podróż po Kirgistanie. Powiedz nam, kiedy chcesz przyjechać i co cię interesuje, a wspólnie wybierzemy trasę, przewodników i noclegi.",
+      "keywords": "O nas, Nasza historia, Miłośnicy Kirgistanu, Pasja podróżnicza, Wyjątkowe przeżycia, Zespół, Wartości, Misja",
+      "buttons": {
+        "our_team": "Nasz zespół",
+        "our_clients": "Nasi Klienci",
+        "contact_us": "Skontaktuj się z nami"
+      }
+    },
+    "info": {
+      "seen": "Wizyty: ",
+      "created": "Stworzony: ",
+      "modified": "Ostatnia modyfikacja: "
+    },
+    "download": {
+      "text": "Trzymaj mapy, miejsca i informacje o podróżach pod ręką dzięki naszym aplikacjom mobilnym."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Przydatne linki",
+          "links": [
+            {
+              "text": "Strona główna",
+              "url": "/"
+            },
+            {
+              "text": "Atrakcje",
+              "url": "/places"
+            },
+            {
+              "text": "Wycieczki",
+              "url": "/tours"
+            },
+            {
+              "text": "Transfery lotniskowe",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Prywatność i kwestie prawne",
+          "links": [
+            {
+              "text": "O nas",
+              "url": "/about"
+            },
+            {
+              "text": "Skontaktuj się z nami",
+              "url": "/contact"
+            },
+            {
+              "text": "Polityka prywatności",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Informacje kontaktowe",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biszkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Konta społecznościowe",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "wywoływacz",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

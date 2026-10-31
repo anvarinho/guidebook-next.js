@@ -1,0 +1,362 @@
+{
+  "uz": {
+    "send": "Xabar yuborish",
+    "hint": "Sizning xabaringiz jamoamiz ko'rib chiqishi uchun xavfsiz tarzda saqlanadi.",
+    "pending": "Xabaringiz yuborilmoqda…",
+    "success": "Sizning xabaringiz saqlandi. Bizning jamoamiz buni ko'rib chiqadi.",
+    "error": "Biz kvitansiyani tasdiqlay olmadik. Sizning matningiz shu yerda saqlanadi; keyinroq qayta urinib ko'ring yoki biz bilan bevosita bog'laning.",
+    "invalid": "Ismingiz, e-pochtangiz va xabaringizni tekshiring, keyin qayta urinib ko'ring.",
+    "rateLimit": "Juda koʻp soʻrovlar. Qayta urinishdan oldin 15 daqiqa kuting."
+  },
+  "kz": {
+    "send": "Хабарлама жіберу",
+    "hint": "Сіздің хабарламаңыз біздің топ қарауы үшін қауіпсіз сақталады.",
+    "pending": "Хабарлама жіберілуде…",
+    "success": "Сіздің хабарламаңыз сақталды. Біздің топ оны тексереді.",
+    "error": "Түбіртекті растай алмадық. Сіздің мәтініңіз осында сақталады; әрекетті кейінірек қайталаңыз немесе бізге тікелей хабарласыңыз.",
+    "invalid": "Аты-жөніңізді, электрондық поштаңызды және хабарламаңызды тексеріп, әрекетті қайталаңыз.",
+    "rateLimit": "Тым көп сұраулар. Әрекетті қайталаудан бұрын 15 минут күтіңіз."
+  },
+  "kg": {
+    "send": "Билдирүү жөнөтүү",
+    "hint": "Сиздин билдирүүңүз биздин команда карап чыгуу үчүн коопсуз сакталат.",
+    "pending": "Кабарыңыз жөнөтүлүүдө…",
+    "success": "Сиздин билдирүүңүз сакталды. Биздин команда аны карап чыгат.",
+    "error": "Квитанцияны тастыктай алган жокпуз. Сиздин текст бул жерде сакталат; сураныч, кийинчерээк кайра аракет кылыңыз же биз менен түз байланышыңыз.",
+    "invalid": "Атыңызды, электрондук почтаңызды жана билдирүүңүздү текшерип, кайра аракет кылыңыз.",
+    "rateLimit": "Өтө көп өтүнүчтөр. Кайра аракет кылуудан мурун 15 мүнөт күтө туруңуз."
+  },
+  "tr": {
+    "send": "Mesaj gönder",
+    "hint": "Mesajınız ekibimizin incelemesi için güvenli bir şekilde kaydedilecektir.",
+    "pending": "Mesajınız gönderiliyor…",
+    "success": "Mesajınız kaydedildi. Ekibimiz bunu inceleyecek.",
+    "error": "Alındığını onaylayamadık. Metniniz burada tutulur; lütfen daha sonra tekrar deneyin veya doğrudan bizimle iletişime geçin.",
+    "invalid": "Adınızı, e-posta adresinizi ve mesajınızı kontrol edip tekrar deneyin.",
+    "rateLimit": "Çok fazla istek var. Tekrar denemeden önce lütfen 15 dakika bekleyin."
+  },
+  "hi": {
+    "send": "मेसेज भेजें",
+    "hint": "आपका संदेश हमारी टीम की समीक्षा के लिए सुरक्षित रूप से सहेजा जाएगा।",
+    "pending": "आपका संदेश भेजा जा रहा है...",
+    "success": "आपका संदेश सहेज लिया गया है. हमारी टीम इसकी समीक्षा करेगी.",
+    "error": "हम रसीद की पुष्टि नहीं कर सके. आपका पाठ यहाँ रखा गया है; कृपया बाद में पुनः प्रयास करें या सीधे हमसे संपर्क करें।",
+    "invalid": "अपना नाम, ईमेल और संदेश जांचें, फिर पुनः प्रयास करें।",
+    "rateLimit": "बहुत सारे अनुरोध. कृपया दोबारा प्रयास करने से पहले 15 मिनट प्रतीक्षा करें।"
+  },
+  "ur": {
+    "send": "پیغام بھیجیں۔",
+    "hint": "آپ کا پیغام ہماری ٹیم کے جائزے کے لیے محفوظ طریقے سے محفوظ کر لیا جائے گا۔",
+    "pending": "آپ کا پیغام بھیج رہا ہے…",
+    "success": "آپ کا پیغام محفوظ ہو گیا ہے۔ ہماری ٹیم اس کا جائزہ لے گی۔",
+    "error": "ہم رسید کی تصدیق نہیں کر سکے۔ آپ کا متن یہاں رکھا گیا ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں یا براہ راست ہم سے رابطہ کریں۔",
+    "invalid": "اپنا نام، ای میل اور پیغام چیک کریں، پھر دوبارہ کوشش کریں۔",
+    "rateLimit": "بہت زیادہ درخواستیں دوبارہ کوشش کرنے سے پہلے براہ کرم 15 منٹ انتظار کریں۔"
+  },
+  "tg": {
+    "send": "Паём фиристед",
+    "hint": "Паёми шумо барои баррасии дастаи мо бехатар захира карда мешавад.",
+    "pending": "Фиристодани паёми шумо…",
+    "success": "Паёми шумо захира карда шуд. Дастаи мо онро дида мебарояд.",
+    "error": "Мо гирифтани онро тасдиқ карда натавонистем. Матни шумо дар ин ҷо нигоҳ дошта мешавад; лутфан дертар бори дигар кӯшиш кунед ё мустақиман бо мо тамос гиред.",
+    "invalid": "Ном, почтаи электронӣ ва паёми худро санҷед ва аз нав кӯшиш кунед.",
+    "rateLimit": "Дархостҳо аз ҳад зиёд. Лутфан пеш аз кӯшиши дубора 15 дақиқа интизор шавед."
+  },
+  "ms": {
+    "send": "Hantar mesej",
+    "hint": "Mesej anda akan disimpan dengan selamat untuk disemak oleh pasukan kami.",
+    "pending": "Menghantar mesej anda…",
+    "success": "Mesej anda telah disimpan. Pasukan kami akan menyemaknya.",
+    "error": "Kami tidak dapat mengesahkan penerimaan. Teks anda disimpan di sini; sila cuba lagi kemudian atau hubungi kami terus.",
+    "invalid": "Semak nama, e-mel dan mesej anda, kemudian cuba lagi.",
+    "rateLimit": "Terlalu banyak permintaan. Sila tunggu 15 minit sebelum mencuba lagi."
+  },
+  "fa": {
+    "send": "ارسال پیام",
+    "hint": "پیام شما به صورت ایمن برای بررسی تیم ما ذخیره خواهد شد.",
+    "pending": "ارسال پیام شما…",
+    "success": "پیام شما ذخیره شده است. تیم ما آن را بررسی خواهد کرد.",
+    "error": "ما نتوانستیم دریافت را تایید کنیم. متن شما در اینجا نگهداری می شود. لطفاً بعداً دوباره امتحان کنید یا مستقیماً با ما تماس بگیرید.",
+    "invalid": "نام، ایمیل و پیام خود را بررسی کنید، سپس دوباره امتحان کنید.",
+    "rateLimit": "درخواست های خیلی زیاد لطفاً قبل از تلاش مجدد، 15 دقیقه صبر کنید."
+  },
+  "az": {
+    "send": "Mesaj göndər",
+    "hint": "Komandamızın nəzərdən keçirməsi üçün mesajınız təhlükəsiz şəkildə yadda saxlanılacaq.",
+    "pending": "Mesajınız göndərilir...",
+    "success": "Mesajınız yadda saxlandı. Komandamız bunu nəzərdən keçirəcək.",
+    "error": "Qəbzi təsdiq edə bilmədik. Mətn burada saxlanılır; sonra yenidən cəhd edin və ya birbaşa bizimlə əlaqə saxlayın.",
+    "invalid": "Adınızı, e-poçtunuzu və mesajınızı yoxlayın, sonra yenidən cəhd edin.",
+    "rateLimit": "Həddindən artıq sorğu. Yenidən cəhd etməzdən əvvəl 15 dəqiqə gözləyin."
+  },
+  "uk": {
+    "send": "Надіслати повідомлення",
+    "hint": "Ваше повідомлення буде надійно збережено для перевірки нашою командою.",
+    "pending": "Надсилання повідомлення…",
+    "success": "Ваше повідомлення збережено. Наша команда розгляне його.",
+    "error": "Ми не змогли підтвердити отримання. Ваш текст зберігається тут; спробуйте пізніше або зв'яжіться з нами напряму.",
+    "invalid": "Перевірте своє ім’я, електронну адресу та повідомлення, а потім повторіть спробу.",
+    "rateLimit": "Забагато запитів. Зачекайте 15 хвилин, перш ніж повторити спробу."
+  },
+  "pl": {
+    "send": "Wyślij wiadomość",
+    "hint": "Twoja wiadomość zostanie bezpiecznie zapisana i będzie mogła zostać przejrzana przez nasz zespół.",
+    "pending": "Wysyłam wiadomość…",
+    "success": "Twoja wiadomość została zapisana. Nasz zespół to sprawdzi.",
+    "error": "Nie mogliśmy potwierdzić odbioru. Twój tekst jest przechowywany tutaj; spróbuj ponownie później lub skontaktuj się z nami bezpośrednio.",
+    "invalid": "Sprawdź swoje imię i nazwisko, adres e-mail i wiadomość, a następnie spróbuj ponownie.",
+    "rateLimit": "Zbyt wiele żądań. Odczekaj 15 minut przed ponowną próbą."
+  },
+  "nl": {
+    "send": "Bericht verzenden",
+    "hint": "Uw bericht wordt veilig opgeslagen zodat ons team het kan beoordelen.",
+    "pending": "Uw bericht verzenden…",
+    "success": "Uw bericht is opgeslagen. Ons team zal het beoordelen.",
+    "error": "Wij konden de ontvangst niet bevestigen. Uw tekst wordt hier bewaard; Probeer het later opnieuw of neem direct contact met ons op.",
+    "invalid": "Controleer uw naam, e-mailadres en bericht en probeer het opnieuw.",
+    "rateLimit": "Te veel verzoeken. Wacht 15 minuten voordat u het opnieuw probeert."
+  },
+  "he": {
+    "send": "שלח הודעה",
+    "hint": "ההודעה שלך תישמר בצורה מאובטחת כדי שהצוות שלנו יוכל לבדוק אותה.",
+    "pending": "שולח את ההודעה שלך...",
+    "success": "ההודעה שלך נשמרה. הצוות שלנו יבדוק את זה.",
+    "error": "לא הצלחנו לאשר קבלה. הטקסט שלך שמור כאן; אנא נסה שוב מאוחר יותר או פנה אלינו ישירות.",
+    "invalid": "בדוק את השם, האימייל וההודעה שלך ולאחר מכן נסה שוב.",
+    "rateLimit": "יותר מדי בקשות. המתן 15 דקות לפני שתנסה שוב."
+  },
+  "cs": {
+    "send": "Odeslat zprávu",
+    "hint": "Vaše zpráva bude bezpečně uložena, aby ji mohl náš tým zkontrolovat.",
+    "pending": "Odesílání vaší zprávy…",
+    "success": "Vaše zpráva byla uložena. Náš tým to zkontroluje.",
+    "error": "Nepodařilo se nám potvrdit příjem. Váš text je uložen zde; zkuste to znovu později nebo nás kontaktujte přímo.",
+    "invalid": "Zkontrolujte své jméno, e-mail a zprávu a zkuste to znovu.",
+    "rateLimit": "Příliš mnoho požadavků. Před dalším pokusem počkejte 15 minut."
+  },
+  "pt": {
+    "send": "Enviar mensagem",
+    "hint": "Sua mensagem será salva com segurança para nossa equipe analisar.",
+    "pending": "Enviando sua mensagem…",
+    "success": "Sua mensagem foi salva. Nossa equipe irá analisá-lo.",
+    "error": "Não foi possível confirmar o recebimento. Seu texto é mantido aqui; tente novamente mais tarde ou entre em contato conosco diretamente.",
+    "invalid": "Verifique seu nome, e-mail e mensagem e tente novamente.",
+    "rateLimit": "Muitos pedidos. Aguarde 15 minutos antes de tentar novamente."
+  },
+  "id": {
+    "send": "Kirim pesan",
+    "hint": "Pesan Anda akan disimpan dengan aman untuk ditinjau oleh tim kami.",
+    "pending": "Mengirim pesan Anda…",
+    "success": "Pesan Anda telah disimpan. Tim kami akan meninjaunya.",
+    "error": "Kami tidak dapat mengkonfirmasi penerimaan. Teks Anda disimpan di sini; silakan coba lagi nanti atau hubungi kami langsung.",
+    "invalid": "Periksa nama, email, dan pesan Anda, lalu coba lagi.",
+    "rateLimit": "Terlalu banyak permintaan. Harap tunggu 15 menit sebelum mencoba lagi."
+  },
+  "th": {
+    "send": "ส่งข้อความ",
+    "hint": "ข้อความของคุณจะถูกบันทึกไว้อย่างปลอดภัยเพื่อให้ทีมงานของเราตรวจสอบ",
+    "pending": "กำลังส่งข้อความของคุณ...",
+    "success": "บันทึกข้อความของคุณแล้ว ทีมงานของเราจะตรวจสอบเรื่องนี้",
+    "error": "เราไม่สามารถยืนยันการรับได้ ข้อความของคุณถูกเก็บไว้ที่นี่ โปรดลองอีกครั้งในภายหลังหรือติดต่อเราโดยตรง",
+    "invalid": "ตรวจสอบชื่อ อีเมล และข้อความของคุณ แล้วลองอีกครั้ง",
+    "rateLimit": "คำขอมากเกินไป โปรดรอ 15 นาทีก่อนลองอีกครั้ง"
+  },
+  "bn": {
+    "send": "বার্তা পাঠান",
+    "hint": "আমাদের টিমের পর্যালোচনা করার জন্য আপনার বার্তা নিরাপদে সংরক্ষণ করা হবে।",
+    "pending": "আপনার বার্তা পাঠানো হচ্ছে...",
+    "success": "আপনার বার্তা সংরক্ষণ করা হয়েছে. আমাদের দল এটি পর্যালোচনা করবে।",
+    "error": "আমরা প্রাপ্তি নিশ্চিত করতে পারিনি। আপনার লেখা এখানে রাখা হয়েছে; অনুগ্রহ করে পরে আবার চেষ্টা করুন বা সরাসরি আমাদের সাথে যোগাযোগ করুন।",
+    "invalid": "আপনার নাম, ইমেল এবং বার্তা চেক করুন, তারপর আবার চেষ্টা করুন।",
+    "rateLimit": "অনেক অনুরোধ. আবার চেষ্টা করার আগে অনুগ্রহ করে 15 মিনিট অপেক্ষা করুন।"
+  },
+  "ne": {
+    "send": "सन्देश पठाउनुहोस्",
+    "hint": "तपाईंको सन्देश हाम्रो टोलीको समीक्षाको लागि सुरक्षित रूपमा सुरक्षित गरिनेछ।",
+    "pending": "तपाईंको सन्देश पठाउँदै...",
+    "success": "तपाईंको सन्देश सुरक्षित गरिएको छ। हाम्रो टोलीले यसलाई समीक्षा गर्नेछ।",
+    "error": "हामीले रसिद पुष्टि गर्न सकेनौं। तपाईंको पाठ यहाँ राखिएको छ; कृपया पछि पुन: प्रयास गर्नुहोस् वा हामीलाई सिधै सम्पर्क गर्नुहोस्।",
+    "invalid": "आफ्नो नाम, इमेल र सन्देश जाँच गर्नुहोस्, त्यसपछि फेरि प्रयास गर्नुहोस्।",
+    "rateLimit": "धेरै अनुरोधहरू। पुन: प्रयास गर्नु अघि कृपया १५ मिनेट पर्खनुहोस्।"
+  },
+  "vi": {
+    "send": "Gửi tin nhắn",
+    "hint": "Tin nhắn của bạn sẽ được lưu an toàn để nhóm của chúng tôi xem xét.",
+    "pending": "Đang gửi tin nhắn của bạn…",
+    "success": "Tin nhắn của bạn đã được lưu. Nhóm của chúng tôi sẽ xem xét nó.",
+    "error": "Chúng tôi không thể xác nhận đã nhận. Văn bản của bạn được lưu giữ ở đây; vui lòng thử lại sau hoặc liên hệ trực tiếp với chúng tôi.",
+    "invalid": "Hãy kiểm tra tên, email và tin nhắn của bạn rồi thử lại.",
+    "rateLimit": "Quá nhiều yêu cầu. Vui lòng đợi 15 phút trước khi thử lại."
+  },
+  "ka": {
+    "send": "შეტყობინების გაგზავნა",
+    "hint": "თქვენი შეტყობინება უსაფრთხოდ შეინახება ჩვენი გუნდის განსახილველად.",
+    "pending": "თქვენი შეტყობინების გაგზავნა…",
+    "success": "თქვენი შეტყობინება შენახულია. ჩვენი გუნდი განიხილავს მას.",
+    "error": "ჩვენ ვერ დავადასტურეთ მიღება. თქვენი ტექსტი ინახება აქ; გთხოვთ, სცადოთ მოგვიანებით ან პირდაპირ დაგვიკავშირდეთ.",
+    "invalid": "შეამოწმეთ თქვენი სახელი, ელფოსტა და შეტყობინება, შემდეგ სცადეთ ხელახლა.",
+    "rateLimit": "ძალიან ბევრი მოთხოვნა. გთხოვთ, დაელოდოთ 15 წუთი ხელახლა ცდამდე."
+  },
+  "hy": {
+    "send": "Ուղարկել հաղորդագրություն",
+    "hint": "Ձեր հաղորդագրությունը ապահով կերպով կպահվի մեր թիմի վերանայման համար:",
+    "pending": "Ուղարկում է ձեր հաղորդագրությունը…",
+    "success": "Ձեր հաղորդագրությունը պահպանվել է: Մեր թիմը կվերանայի այն:",
+    "error": "Մենք չկարողացանք հաստատել ստացումը: Ձեր տեքստը պահվում է այստեղ; խնդրում ենք փորձել ավելի ուշ կամ ուղղակիորեն կապվել մեզ հետ:",
+    "invalid": "Ստուգեք ձեր անունը, էլփոստը և հաղորդագրությունը, ապա նորից փորձեք:",
+    "rateLimit": "Չափազանց շատ խնդրանքներ: Խնդրում ենք սպասել 15 րոպե՝ նորից փորձելուց առաջ:"
+  },
+  "mn": {
+    "send": "Зурвас илгээх",
+    "hint": "Таны мессежийг манай багийнхан шалгахын тулд аюулгүйгээр хадгалах болно.",
+    "pending": "Таны мессежийг илгээж байна...",
+    "success": "Таны мессеж хадгалагдлаа. Манай баг үүнийг хянан үзэх болно.",
+    "error": "Бид хүлээн авсан гэдгээ баталгаажуулж чадсангүй. Таны текст энд хадгалагдана; Дараа дахин оролдоно уу эсвэл бидэнтэй шууд холбогдоно уу.",
+    "invalid": "Нэр, имэйл, мессежээ шалгаад дахин оролдоно уу.",
+    "rateLimit": "Хэт олон хүсэлт. Дахин оролдохын өмнө 15 минут хүлээнэ үү."
+  },
+  "be": {
+    "send": "Адправіць паведамленне",
+    "hint": "Ваша паведамленне будзе надзейна захавана для разгляду нашай камандай.",
+    "pending": "Адпраўка вашага паведамлення...",
+    "success": "Ваша паведамленне захавана. Наша каманда разгледзіць гэта.",
+    "error": "Мы не змаглі пацвердзіць атрыманне. Ваш тэкст захоўваецца тут; паспрабуйце яшчэ раз пазней або звяжыцеся з намі напрамую.",
+    "invalid": "Праверце сваё імя, электронную пошту і паведамленне, а потым паўтарыце спробу.",
+    "rateLimit": "Занадта шмат запытаў. Пачакайце 15 хвілін перад паўторнай спробай."
+  },
+  "ro": {
+    "send": "Trimite mesaj",
+    "hint": "Mesajul dvs. va fi salvat în siguranță pentru ca echipa noastră să îl examineze.",
+    "pending": "Se trimite mesajul dvs....",
+    "success": "Mesajul dvs. a fost salvat. Echipa noastră îl va revizui.",
+    "error": "Nu am putut confirma primirea. Textul dvs. este păstrat aici; Vă rugăm să încercați din nou mai târziu sau să ne contactați direct.",
+    "invalid": "Verificați-vă numele, adresa de e-mail și mesajul, apoi încercați din nou.",
+    "rateLimit": "Prea multe cereri. Vă rugăm să așteptați 15 minute înainte de a încerca din nou."
+  },
+  "sv": {
+    "send": "Skicka meddelande",
+    "hint": "Ditt meddelande kommer att sparas säkert för vårt team att granska.",
+    "pending": "Skickar ditt meddelande...",
+    "success": "Ditt meddelande har sparats. Vårt team kommer att granska det.",
+    "error": "Vi kunde inte bekräfta mottagandet. Din text sparas här; försök igen senare eller kontakta oss direkt.",
+    "invalid": "Kontrollera ditt namn, din e-post och ditt meddelande och försök sedan igen.",
+    "rateLimit": "För många förfrågningar. Vänta 15 minuter innan du försöker igen."
+  },
+  "nb": {
+    "send": "Send melding",
+    "hint": "Meldingen din lagres sikkert slik at teamet vårt kan se gjennom det.",
+    "pending": "Sender meldingen din …",
+    "success": "Meldingen din er lagret. Teamet vårt vil vurdere det.",
+    "error": "Vi kunne ikke bekrefte mottak. Teksten din holdes her; prøv igjen senere eller kontakt oss direkte.",
+    "invalid": "Sjekk navn, e-post og melding, og prøv på nytt.",
+    "rateLimit": "For mange forespørsler. Vent 15 minutter før du prøver igjen."
+  },
+  "da": {
+    "send": "Send besked",
+    "hint": "Din besked bliver sikkert gemt, så vores team kan gennemgå den.",
+    "pending": "Sender din besked...",
+    "success": "Din besked er blevet gemt. Vores team vil gennemgå det.",
+    "error": "Vi kunne ikke bekræfte modtagelsen. Din tekst er gemt her; prøv venligst igen senere eller kontakt os direkte.",
+    "invalid": "Tjek dit navn, din e-mail og din besked, og prøv derefter igen.",
+    "rateLimit": "For mange anmodninger. Vent venligst 15 minutter, før du prøver igen."
+  },
+  "fi": {
+    "send": "Lähetä viesti",
+    "hint": "Viestisi tallennetaan turvallisesti tiimimme tarkastettavaksi.",
+    "pending": "Viestiäsi lähetetään…",
+    "success": "Viestisi on tallennettu. Tiimimme tarkistaa sen.",
+    "error": "Emme voineet vahvistaa vastaanottamista. Tekstisi säilytetään täällä; yritä myöhemmin uudelleen tai ota meihin yhteyttä suoraan.",
+    "invalid": "Tarkista nimesi, sähköpostiosoitteesi ja viestisi ja yritä sitten uudelleen.",
+    "rateLimit": "Liikaa pyyntöjä. Odota 15 minuuttia ennen kuin yrität uudelleen."
+  },
+  "el": {
+    "send": "Αποστολή μηνύματος",
+    "hint": "Το μήνυμά σας θα αποθηκευτεί με ασφάλεια για να το ελέγξει η ομάδα μας.",
+    "pending": "Αποστολή του μηνύματός σας…",
+    "success": "Το μήνυμά σας έχει αποθηκευτεί. Η ομάδα μας θα το εξετάσει.",
+    "error": "Δεν μπορέσαμε να επιβεβαιώσουμε την παραλαβή. Το κείμενό σας διατηρείται εδώ. δοκιμάστε ξανά αργότερα ή επικοινωνήστε απευθείας μαζί μας.",
+    "invalid": "Ελέγξτε το όνομα, το email και το μήνυμά σας και μετά δοκιμάστε ξανά.",
+    "rateLimit": "Πάρα πολλά αιτήματα. Περιμένετε 15 λεπτά πριν δοκιμάσετε ξανά."
+  },
+  "hr": {
+    "send": "Pošalji poruku",
+    "hint": "Vaša će poruka biti sigurno spremljena kako bi je naš tim pregledao.",
+    "pending": "Slanje vaše poruke…",
+    "success": "Vaša poruka je spremljena. Naš tim će to pregledati.",
+    "error": "Nismo mogli potvrditi primitak. Vaš tekst se čuva ovdje; pokušajte ponovno kasnije ili nas izravno kontaktirajte.",
+    "invalid": "Provjerite svoje ime, e-poštu i poruku, a zatim pokušajte ponovo.",
+    "rateLimit": "Previše zahtjeva. Pričekajte 15 minuta prije ponovnog pokušaja."
+  },
+  "sr": {
+    "send": "Пошаљи поруку",
+    "hint": "Ваша порука ће бити безбедно сачувана да би наш тим прегледао.",
+    "pending": "Слање ваше поруке…",
+    "success": "Ваша порука је сачувана. Наш тим ће га прегледати.",
+    "error": "Нисмо могли да потврдимо пријем. Ваш текст се чува овде; покушајте поново касније или нас контактирајте директно.",
+    "invalid": "Проверите своје име, е-пошту и поруку, па покушајте поново.",
+    "rateLimit": "Превише захтева. Сачекајте 15 минута пре него што покушате поново."
+  },
+  "sk": {
+    "send": "Odoslať správu",
+    "hint": "Vaša správa bude bezpečne uložená, aby ju náš tím mohol skontrolovať.",
+    "pending": "Odosiela sa vaša správa…",
+    "success": "Vaša správa bola uložená. Náš tím to posúdi.",
+    "error": "Nepodarilo sa nám potvrdiť príjem. Váš text je uložený tu; skúste to znova neskôr alebo nás kontaktujte priamo.",
+    "invalid": "Skontrolujte svoje meno, e-mail a správu a skúste to znova.",
+    "rateLimit": "Príliš veľa žiadostí. Pred opätovným pokusom počkajte 15 minút."
+  },
+  "sl": {
+    "send": "Pošlji sporočilo",
+    "hint": "Vaše sporočilo bo varno shranjeno za pregled naše ekipe.",
+    "pending": "Pošiljanje vašega sporočila ...",
+    "success": "Vaše sporočilo je shranjeno. Naša ekipa ga bo pregledala.",
+    "error": "Prejema nismo mogli potrditi. Vaše besedilo je shranjeno tukaj; poskusite znova pozneje ali nas kontaktirajte neposredno.",
+    "invalid": "Preverite svoje ime, e-pošto in sporočilo ter poskusite znova.",
+    "rateLimit": "Preveč zahtev. Počakajte 15 minut, preden poskusite znova."
+  },
+  "bg": {
+    "send": "Изпратете съобщение",
+    "hint": "Вашето съобщение ще бъде запазено сигурно, за да може нашият екип да го прегледа.",
+    "pending": "Вашето съобщение се изпраща...",
+    "success": "Вашето съобщение е запазено. Нашият екип ще го прегледа.",
+    "error": "Не можахме да потвърдим получаването. Вашият текст се съхранява тук; моля, опитайте отново по-късно или се свържете директно с нас.",
+    "invalid": "Проверете вашето име, имейл и съобщение, след което опитайте отново.",
+    "rateLimit": "Твърде много заявки. Моля, изчакайте 15 минути, преди да опитате отново."
+  },
+  "bs": {
+    "send": "Pošalji poruku",
+    "hint": "Vaša poruka će biti sigurno sačuvana za naš tim za pregled.",
+    "pending": "Slanje vaše poruke…",
+    "success": "Vaša poruka je sačuvana. Naš tim će ga pregledati.",
+    "error": "Nismo mogli potvrditi prijem. Vaš tekst se čuva ovdje; pokušajte ponovo kasnije ili nas kontaktirajte direktno.",
+    "invalid": "Provjerite svoje ime, e-poštu i poruku, a zatim pokušajte ponovo.",
+    "rateLimit": "Previše zahtjeva. Molimo pričekajte 15 minuta prije nego što pokušate ponovo."
+  },
+  "mk": {
+    "send": "Испрати порака",
+    "hint": "Вашата порака ќе биде безбедно зачувана за нашиот тим да ја прегледа.",
+    "pending": "Се испраќа вашата порака…",
+    "success": "Вашата порака е зачувана. Нашиот тим ќе го разгледа.",
+    "error": "Не можевме да го потврдиме приемот. Вашиот текст се чува овде; Ве молиме обидете се повторно подоцна или контактирајте не директно.",
+    "invalid": "Проверете го вашето име, е-пошта и порака, а потоа обидете се повторно.",
+    "rateLimit": "Премногу барања. Ве молиме почекајте 15 минути пред да се обидете повторно."
+  },
+  "sq": {
+    "send": "Dërgo mesazh",
+    "hint": "Mesazhi juaj do të ruhet në mënyrë të sigurt që ekipi ynë ta shqyrtojë.",
+    "pending": "Po dërgon mesazhin tuaj…",
+    "success": "Mesazhi juaj është ruajtur. Ekipi ynë do ta shqyrtojë atë.",
+    "error": "Nuk mundëm të konfirmonim pranimin. Teksti juaj ruhet këtu; ju lutemi provoni përsëri më vonë ose na kontaktoni drejtpërdrejt.",
+    "invalid": "Kontrollo emrin, emailin dhe mesazhin tënd, më pas provo sërish.",
+    "rateLimit": "Shumë kërkesa. Ju lutemi prisni 15 minuta përpara se të provoni përsëri."
+  },
+  "lt": {
+    "send": "Siųsti žinutę",
+    "hint": "Jūsų žinutė bus saugiai išsaugota, kad mūsų komanda galėtų peržiūrėti.",
+    "pending": "Siunčiame jūsų žinutę…",
+    "success": "Jūsų žinutė buvo išsaugota. Mūsų komanda jį peržiūrės.",
+    "error": "Negalėjome patvirtinti gavimo. Jūsų tekstas saugomas čia; bandykite dar kartą vėliau arba susisiekite su mumis tiesiogiai.",
+    "invalid": "Patikrinkite savo vardą, el. pašto adresą ir pranešimą, tada bandykite dar kartą.",
+    "rateLimit": "Per daug prašymų. Prieš bandydami dar kartą, palaukite 15 minučių."
+  }
+}

@@ -1,3 +1,6 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
+
+import additionalAppHeadings from '@/translations/ui/app-lang-Components-Footer-tsx-appHeadings.json';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './footer.module.css'
 import Image from 'next/image'
@@ -13,6 +16,7 @@ type FooterSection = {
 }
 
 const appHeadings: Record<Locale, string> = {
+    ...additionalAppHeadings as Record<Locale, string>,
   en: 'Kyrgyzstan, in your pocket.',
   fr: 'Le Kirghizistan, dans votre poche.',
   de: 'Kirgisistan für die Hosentasche.',
@@ -31,7 +35,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className={styles.footer} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+    <footer className={styles.footer} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <div className={styles.inner}>
         <section className={styles.appPanel} aria-labelledby="footer-app-title">
           <div className={styles.appCopy}>
@@ -44,7 +48,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
         <div className={styles.grid}>
           <Link href={`/${lang}`} className={styles.brand}>
             <span className={styles.brandMark} aria-hidden="true"/>
-            <span>{page.name}</span>
+            <span translate="no" lang="en" dir="ltr">{page.name}</span>
           </Link>
           {sections.map((section, index) => {
             const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || section.info?.phone
@@ -80,7 +84,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
         </div>
 
         <div className={styles.bottom}>
-          <p><bdi>© {currentYear} GuideBook of Kyrgyzstan</bdi></p>
+          <p><bdi translate="no" lang="en">© {currentYear} GuideBook of Kyrgyzstan</bdi></p>
           <Link href={`/${lang}/contact`} className={styles.contactLink}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
         </div>
       </div>

@@ -1,15 +1,20 @@
 import type { Locale } from "@/lib/i18n.config";
 import type english from "./en.json";
+import { additionalIntro } from "@/translations/intro-loaders";
+import { languageTags } from "@/lib/localeMetadata";
+import { notFound } from "next/navigation";
 
 export type IntroMessages = Record<keyof typeof english, string>;
 
 export const introLanguages: Record<Locale, string> = {
+  ...languageTags,
   en: "en", it: "it", fr: "fr", de: "de", es: "es",
   jp: "ja", kr: "ko", ae: "ar", cn: "zh-CN", ru: "ru",
 };
 
 // Load only the requested translation on the server, then pass it to the intro.
 const dictionaries: Record<Locale, () => Promise<IntroMessages>> = {
+  ...additionalIntro,
   en: () => import("./en.json").then(module => module.default),
   it: () => import("./it.json").then(module => module.default),
   fr: () => import("./fr.json").then(module => module.default),
@@ -23,5 +28,6 @@ const dictionaries: Record<Locale, () => Promise<IntroMessages>> = {
 };
 
 export function getIntroMessages(lang: Locale): Promise<IntroMessages> {
+  if (!Object.prototype.hasOwnProperty.call(dictionaries, lang)) notFound();
   return dictionaries[lang]();
 }

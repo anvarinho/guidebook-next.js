@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "uz-UZ",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Yuklanmoqda...",
+    "contactButton": "Savollaringiz bormi?",
+    "navigation": [
+      {
+        "text": "Bosh sahifa",
+        "url": "/"
+      },
+      {
+        "text": "Diqqatga sazovor joylar",
+        "url": "/places"
+      },
+      {
+        "text": "Turlar",
+        "url": "/tours"
+      },
+      {
+        "text": "Maqolalar",
+        "url": "/articles"
+      },
+      {
+        "text": "Biz haqimizda",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Qirgʻiziston sayohat boʻyicha qoʻllanma",
+      "description": "Tog‘ so‘qmoqlarida sayr qiling, Issiqko‘lda cho‘miling yoki mahalliy oila bilan o‘tovda tunang. O‘zingizga mos yo‘nalishni tanlang.",
+      "subtitle": "Qirgʻiziston sayohat boʻyicha qoʻllanma",
+      "subtitle1": "Nega Qirg'izistonga tashrif buyurish kerak?",
+      "subtitle2": "Ajoyib ochiq havoda kashf qilish",
+      "subtitle3": "Cheksiz qidiruv",
+      "subtitle4": "Sayohatingizni rejalashtiring",
+      "subtitle5": "Qirg'iziston tashrif buyurishi kerak bo'lgan joylar",
+      "paragraph": "Ilgari Sovet Ittifoqining bir qismi bo'lgan bu go'zal, dengizga chiqish imkoni bo'lmagan mamlakat tezda Markaziy Osiyodagi eng mashhur sayyohlik yo'nalishlaridan biriga aylanib bormoqda. Qirg‘izistonning sayyohlik sanoati jadal sur’atlar bilan o‘sib bormoqda va sayohatchilarga dunyoning eng ajoyib davlatlaridan birini kashf qilish imkoniyatini taqdim etmoqda.",
+      "paragraph1": "Qirg'iziston so'nggi yillarda sayyohlikning keskin o'sishiga guvoh bo'ldi, chunki sarguzashtchilar o'zining ajoyib manzaralari bo'ylab sayr qilish, lager va ot sayohatlari uchun to'planishadi. G'arb va rivojlangan davlatlar uchun vizasiz kirishni taklif qilgan holda viza siyosatini yumshatgan birinchi Markaziy Osiyo davlati sifatida kuchli turizm tarmog'i rivojlandi.",
+      "paragraph2": "Butun mamlakat bo'ylab jamoatchilikka asoslangan turizm (CBT) tashabbuslaridan tortib, mehmonxonalar va mustaqil gidlargacha Qirg'izistonning hayratlanarli manzarasini his qilishning ko'plab usullari mavjud. Sayyohlar Qorako'l, Qo'chqor, Arslonbob va hatto poytaxt Bishkekdan hayratlanarli sayohatlarga chiqishlari mumkin. E'tibor bering, bu yerda piyoda sayr qilish ko'pincha o'rtacha darajadagi jismoniy tayyorgarlikni talab qiladi, chunki ko'plab yo'llar shunchaki sayr qilishdan ko'ra ko'proq narsani taklif qiladi. Aksariyat sayohatlar 1 kundan 5 kungacha davom etadi, ammo uzoqroq sarguzashtlar mavjud.\r\n\r\nOyoqlarini saqlab qolmoqchi bo'lganlar uchun ot minish mashhur alternativ hisoblanadi. Song Kolga mamlakatning eng ajoyib ot sayohatiga boring yoki go'zal Issiqko'lda bir necha kun dam oling va suzing.",
+      "paragraph3": "Son-sanoqsiz yo'nalishlar, sayohatlar va yo'llar bilan kashf qilish imkoniyatlari cheksizdir. Siz sarguzasht yoki dam olishni xohlaysizmi, Qirg'izistonda hamma uchun nimadir bor.",
+      "paragraph4": "Diqqatga sazovor joylar, u erga va atrofga qanday borish va boshqa sayohat bo'yicha maslahatlar haqida batafsil ma'lumot olish uchun Qirg'iziston bo'ylab keng qamrovli sayohat qo'llanmamizni o'qib chiqing. Sayohatingizdan unumli foydalanish uchun navigatsiya, tarjima va mahalliy statistika uchun tavsiya etilgan ilovalar bilan sayohat tajribangizni yaxshilang.\r\n\r\nSayohatingizdan rohatlaning va Qirg‘izistonning betakror go‘zalligi va madaniyatidan bahramand bo‘ling",
+      "keywords": "Qirg'iziston sayyohlik qo'llanmasi, sayyohlik gid, Sayohat uchun qulaylik, Mahalliy diqqatga sazovor joylar, Turistik xizmatlar, Qirg'iziston sayohatlari bo'yicha maslahatlar, Madaniy tajribalar, Turni rejalashtirish, Ekskursiyalar, Sarguzashtli sayohatlar, Qulay turlar, Bishkek shahar qo'llanmasi, Qirg'iziston sayyohlik joylari, Turistik joy, Menga yaqin diqqatga sazovor joylar, Menga yaqin tashrif buyuradigan joylar, Turistik joylar, Dunyoning eng go'zal joylari, Dunyoning eng go'zal joylari. Dunyodagi go'zal saytlar, Gid bilan sayohat, Sayohat uchun qo'llanma, Go'zal joylar, Qirg'izistonda Bishkek, Bishkek shahri, Turist va gid, PR turistik diqqatga sazovor joylar, Yaqin atrofdagi diqqatga sazovor joylar va uni qanday amalga oshirish kerak",
+      "button": "Keling, bilib olaylik!",
+      "button1": "Qayerga borish kerak!",
+      "button2": "Nima qilsa bo'ladi!",
+      "button3": "ko'proq o'qish",
+      "button4": "Bizning sayohatlarimiz",
+      "Transportation": {
+        "title": "Qirg'izistonda transport | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg'iziston bo'ylab sayohat qilishning o'zi sarguzasht bo'lishi mumkin. Buni bilishingiz kerak:",
+        "Options": {
+          "Ichki reyslar": "Uzoq masofalar uchun, ayniqsa vaqt cheklangan bo'lsa, Bishkek, O'sh va Tamchi kabi yirik shaharlar (Issiqko'l viloyatidagi Cho'lpon-Ota yaqinida) o'rtasida ichki reyslar mavjud. Jadvallar va bronlar uchun aviakompaniyalarni tekshiring.",
+          "Marshrutkalar (mikroavtobuslar)": "Bu qisqa va o'rta masofalar uchun eng keng tarqalgan va tejamkor transport turlari. Ular shaharlar va qishloqlar o'rtasidagi qat'iy yo'nalish bo'ylab harakatlanadi va mahalliy aholi orasida juda mashhur.",
+          "Umumiy taksilar": "Umumiy taksilar marshrutkalarga tezroq, lekin biroz qimmatroq muqobil taklif qiladi. Odatda ular to'lganida ketishadi va narxlarni kelishib olish mumkin.",
+          "Avtomobil ijarasi": "Ko'proq moslashuvchanlik uchun mashinani ijaraga olish yaxshi variant. Qishloq joylarida yo'llar qo'pol bo'lishi mumkin, shuning uchun 4x4 tavsiya etiladi. Xalqaro haydovchilik guvohnomangiz borligiga ishonch hosil qiling.",
+          "Poyezdlar": "Cheklangan poyezd xizmatlari mavjud, birinchi navbatda Bishkekni Issiqko‘l yaqinidagi Baliqchiga bog‘laydi. Bu manzarali marshrut, lekin yo'l harakatidan sekinroq.",
+          "Avtobuslar": "Muntazam avtobuslar yirik shaharlarda ishlaydi va sayohat qilishning qulay usulini taklif qiladi. Biroq, ular chekka hududlarni qamrab olmasligi mumkin.",
+          "Avtostopda yurish": "rasmiy transport imkoniyatlari cheklangan boʻlishi mumkin boʻlgan Qirgʻizistonning qishloq joylarida keng tarqalgan amaliyotdir. Bu nisbatan xavfsiz va madaniy jihatdan qabul qilingan, ammo begona odamlardan minishni qabul qilishda ehtiyot bo'ling va o'z fikringizdan foydalaning."
+        },
+        "details": "Transport imkoniyatlari haqida batafsil ma'lumot olish uchun taqdim etilgan qo'llanmaga tashrif buyuring."
+      },
+      "Accommodations": {
+        "title": "Qirg'izistondagi turar joy | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg‘izistonda shinam mehmon uylaridan tortib hashamatli kurortlargacha har bir sayyohning xohishi va byudjetiga mos keladigan turli turar joy variantlari taklif etiladi. Bu erda ko'rib chiqilishi kerak bo'lgan ba'zi tanlovlar:",
+        "Options": {
+          "Mehmonxonalar": "Qirg'izistonning Bishkek va O'sh kabi yirik shaharlari turli byudjet va imtiyozlarga mos keladigan mehmonxonalar qatoriga ega. Xalqaro zanjirlardan tortib butik mehmonxonalargacha Wi-Fi, konditsioner va uyda ovqatlanish imkoniyatlari kabi qulayliklarga ega qulay turar joylarni topasiz.",
+          "Mehmon uylari": "Yana haqiqiy tajriba uchun mahalliy oilalar tomonidan boshqariladigan mehmonxonada qolishni o'ylab ko'ring. Bu qulay muassasalar samimiy kutib olish va qirg'iz mehmondo'stligini his qilish imkoniyatini taqdim etadi. Siz tez-tez uy qurilishi taomlaridan bahramand bo'lish va mahalliy urf-odatlar va an'analar bilan tanishish imkoniga ega bo'lasiz.",
+          "Yurtlar": "Qishloq joylarda va tog'li hududlarda an'anaviy uylar o'ziga xos turar joy tajribasini taqdim etadi. Ushbu ko'chma, chodirga o'xshash tuzilmalar ko'pincha atrofdagi landshaftlarning ajoyib manzaralari bilan asosiy, ammo qulay turar joyni taklif qiladi. Yurtdagi turar joylar ovqatlanish va madaniy tadbirlarni o'z ichiga olishi mumkin.",
+          "Uy-joylar": "Uyda yashashni tanlash orqali qirg'iz oilasi bilan hayot kechiring. Siz mahalliy aholi bilan yashash, ovqatlanish va kundalik tadbirlarda qatnashish imkoniga ega bo'lasiz. Uy-joylar chinakam madaniy almashinuv va Qirg'izistonning an'anaviy turmush tarzi haqida tushuncha beradi.",
+          "Eko-lojalar": "Ekologik ongli sayohatchilar uchun eko-lojalar tabiiy sharoitlarda barqaror yashash imkoniyatlarini taqdim etadi. Bu lojalar atrof-muhitni muhofaza qilishni birinchi o'ringa qo'yadi va ko'pincha piyoda yurish, qushlarni kuzatish va jamoat bilan shug'ullanish kabi tadbirlarni taklif qiladi.",
+          "Kemping": "sarguzasht va yolg'izlik izlayotgan sayohatchilar uchun mashhur variant. Belgilangan lager hududida chodir tikasizmi yoki uzoq joylarda yovvoyi lager tikasizmi, Leave No Trace tamoyillariga amal qiling va kerakli ruxsatnomalarni oling."
+        },
+        "details": "Muayyan tavsiyalar va bron qilish imkoniyatlari uchun sayohat veb-saytlari, onlayn bron qilish platformalari va mahalliy sayyohlik idoralariga murojaat qiling."
+      },
+      "Food": {
+        "title": "Qirg'izistonda oziq-ovqat | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg'iz oshxonasini o'rganish sayohat tajribasining ajralmas qismidir. Buni bilishingiz kerak:",
+        "Options": {
+          "An'anaviy oshxona": "Qirg'iz oshxonasi ta'mi va merosiga boy bo'lib, beshbarmak (go'sht va noodle), manti (chuchvara) va lag'mon (noodle sho'rva) kabi an'anaviy taomlar asosiy hisoblanadi. Mashhur ichimlik bo'lgan qimiz deb ataladigan fermentlangan toychoq sutini tatib ko'rishni o'tkazib yubormang.",
+          "Ko'chmanchi ta'sir": "Qirg'iz oshxonasida o'zining ko'chmanchi merosini aks ettirgan holda, ko'pincha go'sht (ayniqsa, qo'zichoq va ot go'shti), sut mahsulotlari (qimiz va ayran) va don (shu jumladan guruch va bug'doy) kabi ingredientlardan tayyorlangan mazali taomlar mavjud. Yurtlar, an'anaviy ko'chmanchi chodirlar, qishloq joylarida haqiqiy ovqatlanish tajribasini taklif qilishi mumkin.",
+          "Mahalliy bozorlar": "Bishkekdagi O‘sh bozori kabi mahalliy bozorlarga tashrif buyurib, qirg‘iz taomlari va gazaklarini, jumladan, shashlik (grilda pishirilgan go‘sht), samsa (mazali pishiriqlar) va palovni (palov) tatib ko‘ring. Ushbu bozorlarda yangi mevalar, yong'oqlar va ziravorlar sotib olish imkoniyati ham mavjud.",
+          "Choyxonalar va kafelar": "Choyxonalar (chayxona) va kafelar Qirg'izistonda hamma joyda joylashgan bo'lib, ularda qandolat, non va engil taomlar bilan bir qatorda choy (chay) va kofe (kofe) ham mavjud. Boursak (qovurilgan xamir) va qurut (quritilgan yogurt sharlari) kabi qirg'izlarning an'anaviy taomlaridan tatib ko'rgan holda, tinch muhit va mehmondo'stlikdan rohatlaning.",
+          "Xalqaro oshxona": "Bishkek kabi shaharlarda siz rus, xitoy, koreys va yevropa taomlarini o‘z ichiga olgan turli xil xalqaro oshxonalarni topasiz. Qirg‘iz mehmondo‘stligi bilan bir qatorda global lazzatlardan tatib ko‘rish uchun zamonaviy restoranlar, bistrolar va oziq-ovqat kortlarini o‘rganing.",
+          "Ko'cha taomlari": "Tez va mazali atıştırmalıklar taklif qiladigan bir qator ko'cha oziq-ovqat sotuvchilari bilan tanishish uchun Qirg'iziston ko'chalariga chiqing. Somsa (go'sht yoki sabzavot bilan to'ldirilgan qovurilgan yoki pishirilgan aylanmalar), qovurilgan lag'mon noodlelari va grilda pishirilgan makkajo'xori kabi mashhur ko'cha taomlarini tatib ko'ring.",
+          "Ovqatlanish sayohatlari va pazandalik darslari": "Qirg‘iz oshxonasi va oshpazlik an’analarini chuqurroq o‘rganish uchun taom sayohatlariga chiqing yoki pazandalik kurslariga qo‘shiling. An'anaviy taomlarni qanday tayyorlashni o'rganing, mahalliy fermer xo'jaliklari va ishlab chiqaruvchilarga tashrif buyuring va Qirg'izistonning jonli oshpazlik sahnasiga sho'ng'ing."
+        },
+        "details": "Qirg'iz oshxonasi va ovqatlanish imkoniyatlari haqida ko'proq ma'lumot olish uchun taqdim etilgan qo'llanmaga qarang."
+      },
+      "Safety": {
+        "title": "Qirg'izistonda xavfsizlik | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg'izistonga sayohat qilish odatda xavfsiz, ammo potentsial xavflardan xabardor bo'lish va zarur choralarni ko'rish juda muhimdir. Buni bilishingiz kerak:",
+        "Options": {
+          "Siyosiy barqarorlik": "Qirg‘iziston o‘tmishda siyosiy beqarorlikni, jumladan, norozilik namoyishlari va vaqti-vaqti bilan tartibsizliklarni boshidan kechirgan. Aksariyat sayyohlik hududlari ta'sirlanmagan bo'lsa-da, mahalliy voqealar haqida xabardor bo'ling va katta yig'ilishlar yoki namoyishlardan qoching.",
+          "Jinoyat": "Cho'ntaklik va o'g'irlik kabi mayda jinoyatlar, ayniqsa, odamlar gavjum joylarda va sayyohlik joylarida sodir bo'lishi mumkin. O'z narsalaringizni xavfsiz saqlang va hushyor bo'ling.",
+          "Terrorizm": "Qirg'izistonda terrorizm xavfi past, lekin sayohatchilar, ayniqsa, chegara hududlarida hushyor bo'lishlari kerak. Hukumatingiz tomonidan berilgan sayohat boʻyicha tavsiyalarga amal qiling va xabardor boʻling.",
+          "Tabiiy xavflar": "Qirg‘iziston, ayniqsa, tog‘li hududlarda zilzilalar, qor ko‘chkilari va ko‘chkilar kabi tabiiy ofatlarga moyil. Tayyor bo'ling va xavfsizlik qoidalariga rioya qiling, ayniqsa trekking yoki ochiq havoda mashg'ulotlar bilan shug'ullanayotganda.",
+          "Yo'l harakati xavfsizligi": "Qirg'izistondagi yo'l sharoitlari har xil bo'lishi mumkin va ayniqsa qishloq joylarida haydash qiyin bo'lishi mumkin. Ehtiyot bo'ling, mahalliy yo'l qonunlariga rioya qiling va obro'li haydovchini yollashni o'ylab ko'ring.",
+          "Salomatlik uchun xavflar": "Qirg'iziston sog'liq uchun jiddiy xavf tug'dirmasa-da, sayohatchilar muntazam emlashdan xabardor bo'lishlari va oziq-ovqat va suv orqali yuqadigan kasalliklarga qarshi ehtiyot choralarini ko'rishlari kerak.",
+          "Balandlik kasalligi": "Baland tog'li hududlarga tashrif buyurgan sayohatchilar balandlik kasalligi xavfidan xabardor bo'lishlari kerak. Ko'nikish uchun vaqt ajrating va tanangiz moslashguncha og'ir jismoniy faoliyatdan qoching.",
+          "Sayohat sug'urtasi": "Tibbiy xarajatlarni, favqulodda evakuatsiyani va sayohatni bekor qilish/to'xtatishni qoplaydigan sayohat sug'urtasiga ega bo'lish juda muhimdir. Sug'urta polisingiz siz shug'ullanishni rejalashtirgan faoliyatni qoplashni o'z ichiga olganligiga ishonch hosil qiling."
+        },
+        "details": "Xavfsizlik haqida batafsil ma'lumot va sayohat bo'yicha maslahatlar uchun rasmiy hukumat manbalari va sayohat yo'riqnomalariga murojaat qiling."
+      },
+      "Prices": {
+        "title": "Qirg'iziston narxlari | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg'izistonda yashash narxi va xarajatlarini tushunish sizning byudjetingizni samarali rejalashtirishingizga yordam beradi. Bu yerda umumiy tovarlar va xizmatlar narxlarining umumiy ko‘rinishi:",
+        "Options": {
+          "Turar joy": "Qirg‘izistonda turar joy narxi turar joy turi va joylashuviga qarab o‘zgaradi. Byudjetli sayohatchilar mehmonxonalar va yotoqxonalar kabi arzon variantlarni topishlari mumkin, hashamatli mehmonxonalar va dam olish maskanlari esa yuqori darajadagi qulayliklarni qidirayotganlarga xizmat qiladi. Narxlar byudjetli turar joylar uchun kechasi uchun 10 dollardan, hashamatli muassasalar uchun kechaga 100 dollardan oshadi.",
+          "Ovqatlanish va ovqatlanish": "Qirg'izistonda ovqatlanish odatda arzon, ayniqsa mahalliy taomxonalar va ko'chadagi oziq-ovqat do'konlarida. Beshbarmoq va palov kabi an'anaviy taomlar arzon va to'yimli bo'lib, mahalliy restoranlarda bir taom uchun odatda 3 dan 7 dollargacha turadi. Xalqaro oshxona va mazali taomlar narxi qimmatroq bo'lishi mumkin, ovqatlar esa bir kishi uchun o'rtacha 10 dan 20 dollargacha yoki undan ko'p.",
+          "Transport": "Qirg'izistonda transport xarajatlari sayohat usuli va masofaga qarab farq qiladi. Bishkek va O‘sh kabi yirik shaharlar o‘rtasidagi ichki reyslar 50 dan 150 dollargacha yoki undan ko‘proq bo‘lishi mumkin, umumiy taksilar va marshrutkalar (mikroavtobuslar) esa qisqa masofalar uchun byudjetga qulay variantlarni taklif qiladi, odatda marshrutga qarab 1 dan 10 dollargacha turadi. Avtomobilni ijaraga olish transport turiga va ijara kompaniyasiga qarab kuniga 30 dan 100 dollargacha yoki undan ko'p turadi.",
+          "Faoliyat va diqqatga sazovor joylar": "Qirg'izistondagi tadbirlar va diqqatga sazovor joylarning narxi tajribaga qarab juda katta farq qiladi. Muzeylar, tarixiy joylar va milliy bog'larga kirish to'lovlari odatda qulay bo'lib, bir kishi uchun 1 dollardan 10 dollargacha. Yo'lboshchili ekskursiyalar, ochiq sayohatlar va ot minish va trekking kabi sarguzashtlar qo'shimcha xarajatlarga olib kelishi mumkin, narxlar davomiyligi va murakkabligiga qarab o'zgaradi.",
+          "Xarid qilish": "Qirg'izistonda xarid qilish an'anaviy hunarmandchilik va suvenirlardan tortib, zamonaviy tovarlar va elektronikagacha turli xil variantlarni taklif etadi. Narxlar buyum va joylashuvga qarab farq qiladi, lekin bozor va bozorlarda savdolashish odatiy holdir. Ayniqsa, to'qimachilik, zargarlik buyumlari va qo'lda ishlangan hunarmandchilikni sotib olayotganda, eng yaxshi narx uchun muzokara qilishga tayyor bo'ling.",
+          "Valyuta va valyuta kurslari": "Qirgʻizistonning rasmiy pul birligi Qirgʻiziston soʻmi (KGS). Valyuta kurslari o'zgarib turadi, shuning uchun pul almashtirishdan oldin joriy kurslarni tekshirish tavsiya etiladi. Asosiy kredit kartalari yirik shaharlar va sayyohlik hududlarida qabul qilinadi, ammo kichikroq shaharlar va qishloq joylarida tranzaktsiyalar uchun naqd pulni olib yurish tavsiya etiladi. (1$ = 85-90 som)"
+        },
+        "details": "Qirgʻizistondagi narxlar boʻyicha eng aniq va dolzarb maʼlumotlarni olish uchun mahalliy manbalar va soʻnggi sayohat qoʻllanmalariga murojaat qiling."
+      },
+      "Travel_Seasons": {
+        "title": "Qirg'izistonda sayohat fasllari | Sayohat bo'yicha qo'llanma",
+        "Description": "Qirg‘izistondagi sayohat fasllarini tushunish sayohatingizni rejalashtirish va tashrifingizdan unumli foydalanishga yordam beradi. Turli fasllarning umumiy ko'rinishi va nimani kutish kerakligi:",
+        "Options": {
+          "Bahor (martdan maygacha)": "Gullar gullab, daryolar erigan qor bilan to‘lqinlanib, manzara jonlanib, Qirg‘izistonni ziyorat qilishning go‘zal vaqti bahor. Ob-havo yumshoq bo'lib, u yurish, trekking va ot minish kabi ochiq havoda dam olish uchun ideal. Biroq, vaqti-vaqti bilan yomg'ir yog'ishiga tayyor bo'ling, ayniqsa aprel va may oylarida.",
+          "Yoz (iyundan avgustgacha)": "Yoz - Qirg'izistonda sayyohlik mavsumining cho'qqisi bo'lib, kunlar uzoq, harorat iliq va osmon musaffo. Bu lager, toqqa chiqish va alp ko'llarini o'rganish kabi ochiq havoda sarguzashtlar uchun ajoyib vaqt. Bu vaqtda mashhur festival va tadbirlar, jumladan, sentabr oyida bo‘lib o‘tadigan Butunjahon ko‘chmanchilar o‘yinlari bo‘lib o‘tadi.",
+          "Kuz (sentyabrdan noyabrgacha)": "Kuz - Qirg'izistonda ajoyib fasl bo'lib, barglarning rangi o'zgarganda qizil, to'q sariq va oltinning jonli ranglariga bo'yalgan manzaralar. Ob-havo hali ham yoqimli bo'lib, bu trekking, yovvoyi tabiatni kuzatish va madaniy tajribalar uchun ajoyib vaqt. Sentyabr - Jahon ko'chmanchilar o'yinlariga tashrif buyurish uchun ideal oy.",
+          "Qish (dekabrdan fevralgacha)": "Qish Qirg'izistonni qishki mo''jizalarga aylantiradi, qor bilan qoplangan tog'lar va muzlagan ko'llar hayratlanarli manzara yaratadi. Harorat sovuqdan pastga tushishi mumkin bo'lsa-da, qishki sport ishqibozlari chang'i, snoubord va konkida uchish uchun Qorako'l va Jyrg'lon kabi tog'-chang'i kurortlariga oqib kelishadi. Fevralda an'anaviy ko'chmanchilar o'yini - Ko'k Boru (Buzkashi) bayrami nishonlanadi."
+        },
+        "details": "Har bir mavsumda muayyan tadbirlar, voqealar va ob-havo sharoitlari haqida ko'proq ma'lumot olish uchun sayohat qo'llanmalari va mahalliy turizm resurslariga murojaat qiling."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Qirg'izistonda birinchi martami?",
+        "Description": "Agar siz Qirg‘izistonga birinchi marta tashrif buyurayotgan bo‘lsangiz, bu yerda sayohatingizdan unumli foydalanishga yordam beradigan keng qamrovli qo‘llanma:",
+        "Options": {
+          "Kelish va aylanib chiqish": "Xalqaro sayohatchilarning aksariyati Bishkekdagi Manas xalqaro aeroportiga kelishadi. Shaharga taksi va avtobuslar qatnovi oson. Qirg'iziston ichida siz aylanib o'tish uchun ichki reyslar, avtobuslar, marshrutkalar (mikroavtobuslar) va umumiy taksilardan foydalanishingiz mumkin.",
+          "SIM kartalar va Internet": "Mahalliy SIM-karta bilan Qirg'izistonda aloqada qolish oson. SIM-kartalarni aeroportda yoki shahardagi uyali aloqa operatorlaridan xarid qilishingiz mumkin. Asosiy provayderlar orasida Beeline, O! va Megacom bor. SIM kartani sotib olishdan oldin telefoningiz qulfdan chiqarilganligiga ishonch hosil qiling. Internet qamrovi odatda shahar va qishloqlarda yaxshi, ammo qishloq joylarda noaniq bo'lishi mumkin.",
+          "Internet narxlari": "Qirg‘izistonda internet narxlari odatda hamyonbop. 1 Gb hajmli asosiy maʼlumotlar paketi taxminan 100 KGS (taxminan $1,20 AQSH dollari) turadi, 10GB kabi kattaroq paketlar esa 500 KGS (taxminan $6 USD) turadi. Bir oy uchun cheksiz maʼlumot rejalari provayderga va ulanish tezligiga qarab 800 dan 1500 KGS (taxminan $9,50 dan $18 USD) gacha boʻlishi mumkin.",
+          "Valyuta va to'lovlar": "Mahalliy valyuta - Qirg'iziston so'mi (KGS). Bankomatlar yirik shaharlarda mavjud, ammo qishloq joylarda naqd pul olib yurish tavsiya etiladi. Kredit va debet kartalari shaharlarda ko'p joylarda qabul qilinadi, lekin chekka hududlarda kamroq. Valyuta ayirboshlash xizmatlari aeroportlarda, banklarda va ayirboshlash shoxobchalarida mavjud.",
+          "Til": "Qirgʻiz va rus tillari rasmiy tildir. Katta shaharlarda siz ingliz tilida so'zlashuvchilarni topishingiz mumkin, ayniqsa sayyohlik joylarida, lekin qishloq joylarda ba'zi bir asosiy qirg'iz yoki rus iboralarini bilish foydalidir. Tarjima ilovasi yoki iboralar juda foydali bo'lishi mumkin.",
+          "Salomatlik va xavfsizlik": "Qirg'iziston sayohatchilar uchun umuman xavfsiz, ammo standart ehtiyot choralarini ko'rish oqilona. Suv bilan yuqadigan kasalliklardan qochish uchun shisha yoki qaynatilgan suvni iching. Salomatlik va baxtsiz hodisalarni qoplaydigan sayohat sug'urtasiga ega ekanligingizga ishonch hosil qiling. Shoshilinch tibbiy yordam shaharlarda mavjud, ammo qishloq joylarida cheklangan bo'lishi mumkin.",
+          "Iqlim va kiyim": "Qirgʻiziston iqlimi kontinental, qishi sovuq, yozi issiq. Tog'larda harorat sezilarli darajada salqin bo'lishi mumkin, shuning uchun mos ravishda to'plang. Qatlamli kiyim, mustahkam yurish poyabzali va quyoshdan himoya qilish tavsiya etiladi. Qishda issiq kiyim, shu jumladan sifatli ko'ylagi, qo'lqop va bosh kiyimlarni olib keling.",
+          "Elektr va vilkalar": "Standart kuchlanish 220V, chastotasi esa 50Hz. Elektr vilkalari va rozetkalari C va F tipidagi. Elektron qurilmalaringizni quvvatlantirish uchun universal sayohat adapterini olib kelish tavsiya etiladi."
+        },
+        "details": "Batafsil ma'lumot va maslahatlar uchun sayohat qo'llanmalari va mahalliy manbalarga qarang. Qirg'izistonga birinchi sayohatingizdan zavqlaning va unutilmas xotiralar qoldiring!"
+      },
+      "TravelPreparation": {
+        "title": "Qirg'izistonga sayohatga tayyorlaning",
+        "Description": "Ushbu muhim sayohatga tayyorgarlik ko'rish orqali Qirg'izistonga silliq va yoqimli sayohatni ta'minlang.",
+        "Options": {
+          "Viza va pasport": "Fuqaroligingiz uchun viza talablarini tekshiring va pasportingiz mo'ljallangan bo'lishingizdan keyin kamida olti oy davomida amal qilishiga ishonch hosil qiling.",
+          "Salomatlik va emlashlar": "Qirgʻizistonga sayohat qilish uchun zarur boʻlgan emlashlar yoki sogʻliqni saqlash choralari boʻyicha tibbiy yordam koʻrsatuvchi provayderingiz bilan maslahatlashing.",
+          "Sayohat sug'urtasi": "Tibbiy xarajatlar yoki sayohatni bekor qilish kabi kutilmagan favqulodda vaziyatlarni qoplash uchun sayohat sug'urtasini sotib olishni o'ylab ko'ring.",
+          "Valyuta va pul masalalari": "Sayohatdan oldin mahalliy valyuta (Qirg'iziston so'mi) bilan tanishib chiqing va biroz pul almashtiring. Bankomatlar yirik shaharlarda mavjud.",
+          "Til": "Rus va qirgʻiz tillari rasmiy til boʻlsa-da, ingliz tillari keng tarqalgan emas. Rus yoki qirg'iz tillarida ba'zi asosiy iboralarni o'rganishni o'ylab ko'ring.",
+          "Ob-havo va kiyim": "Tashrif davomida ob-havo sharoitlariga mos kiyimlarni joylashtiring. Qirg'iziston issiq yoz va sovuq qishni boshdan kechiradi, shuning uchun qatlamlarni olib keling.",
+          "Xavfsizlik va xavfsizlik": "Qirg‘izistondagi hozirgi vaziyatdan xabardor bo‘ling va ehtiyot bo‘ling, ayniqsa chekka hududlarda. O'z narsalaringizni xavfsiz saqlang va atrofingizdan xabardor bo'ling.",
+          "Madaniy etiket": "Mahalliy urf-odat va an'analarni hurmat qiling, masalan, birovning uyiga kirishdan oldin oyoq kiyimingizni echib oling va odamlarni suratga olishdan oldin ruxsat so'rang."
+        },
+        "details": "Qirg'izistonga sayohatingizga xos bo'lgan qo'shimcha sayohat maslahatlari va maslahatlar uchun bizning keng qamrovli sayohat qo'llanmamizga murojaat qiling."
+      }
+    },
+    "sights": {
+      "name": "Diqqatga sazovor joylar",
+      "title": "Qirg‘izistonda borishga arziydigan joylar",
+      "subtitle": "Qirg'izistonda qayerga borish kerak?  Bundan tashqari, sayohatingizdan unumli foydalanish uchun shaharlar va viloyat markazlaridagi ob-havo sharoitlaridan xabardor bo‘ling va bu go‘zal mamlakatning doimiy o‘zgaruvchan ob-havosiga tayyor bo‘ling.",
+      "description": "Qirg'iziston bo'ylab tog'li ko'llar va milliy bog'lardan tortib shaharlar va tarixiy joylarga tashrif buyuradigan joylarni toping. Tadqiqotni boshlash uchun hududni tanlang.",
+      "keywords": "Qirg'iziston joylar, Qirg'iziston sayohati, Qirg'izistonni o'rganish, Qirg'iziston destinatsiyalari, Qirg'iziston turizmi, Qirg'izistondagi tashrif buyurish kerak bo'lgan joylar, eng yaxshi diqqatga sazovor joylar Qirg'iziston, Qirg'iziston landshaftlari, madaniy joylar Qirg'iziston, tabiiy mo''jizalar Qirg'iziston, Qirg'izistonda tashrif buyurish uchun eng yaxshi joylar",
+      "sights": "Qayerga borish kerak!",
+      "must-see": {
+        "subtitle": "Mintaqalar boʻyicha Qirgʻizistonning koʻrish kerak boʻlgan manzillari",
+        "description1": "Qirg‘iziston ulug‘vor tog‘lardan tortib, sokin ko‘llargacha bo‘lgan go‘zal tabiat manzaralari bilan mashhur. Mana, har bir mintaqaning eng go'zal joylari:",
+        "chuyregion": "Chuy viloyati",
+        "alaarchatitle": "Ala Archa milliy bog'i:",
+        "alaarchadescription": "Ajoyib manzaralar va piyoda yurish yo'llarini taklif etadi.",
+        "buranatitle": "Burana minorasi:",
+        "buranadescription": "Vodiy manzarali tarixiy minora.",
+        "issykulregion": "Issiqko'l viloyati",
+        "lakeissykkultitle": "Issiqko'l:",
+        "lakeissykkuldescription": "Plyajlari va kurortlari bo'lgan katta sho'r ko'l.",
+        "jetioguxtitle": "Jeti-O'g'iz:",
+        "jetioguzdescription": "Qizil tosh shakllari bilan mashhur.",
+        "karakoltitle": "Qorako‘l:",
+        "karakoldescription": "Oltin Arashan kabi go'zal tog'li joylarga kirish eshigi.",
+        "narynregion": "Norin viloyati",
+        "tashrabattitle": "Tosh Rabot:",
+        "tashrabatdescription": "Go'zal vodiydagi tarixiy tosh karvonsaroy.",
+        "sonkultitle": "Son-Ko'l ko'li:",
+        "sonkuldescription": "Ajoyib quyosh botishi bilan baland tog'li ko'l.",
+        "jalalabadregion": "Jalolobod viloyati",
+        "sarychelextitle": "Sari-Chelek biosfera rezervati:",
+        "sarychelekdescription": "Toza ko'llar va o'rmonlar bilan ajralib turadi.",
+        "arslanbobtitle": "Arslonbob:",
+        "arslanbobdescription": "Eng katta yong'oq o'rmoni va go'zal sharsharalar uchun uy.",
+        "oshregion": "O'sh viloyati",
+        "sulaymanmountaintitle": "Sulaymon tog'i:",
+        "sulaymanmountaindescription": "Panoramik manzarali muqaddas tog'.",
+        "alayvalleytitle": "Oloy vodiysi:",
+        "alayvalleydescription": "Pomir tog'larining ajoyib manzaralarini taqdim etadi.",
+        "batkenregion": "Botken viloyati",
+        "batkenvalleytitle": "Botken vodiysi:",
+        "batkenvalleydescription": "O'rik daraxtlari va noyob tosh shakllari bilan mashhur.",
+        "karakuljatitle": "Qora-Kulja:",
+        "karakuljadescription": "Chiroyli daryo vodiylari bilan ajralib turadi.",
+        "talasregion": "Talas viloyati",
+        "beshtashtitle": "Besh-Tosh milliy bog'i:",
+        "beshtashdescription": "Manzarali daryolar va alp yaylovlari bor.",
+        "manasordotitle": "Manas Ordo majmuasi:",
+        "manasordodescription": "Manas qahramonga bag'ishlangan madaniy sayt."
+      },
+      "highlights": [
+        "Qanday borish mumkin",
+        "Transport",
+        "Qaerda qolish",
+        "Nima yeyish kerak",
+        "Nima qilsa bo'ladi",
+        "Mavsum"
+      ]
+    },
+    "tours": {
+      "name": "Turlar",
+      "title": "Qirg‘iziston bo‘ylab sayohatlar",
+      "subtitle": "Qirg'izistonda shaxsiy va kichik guruh sayohatlari",
+      "description": "Qirg‘iziston bo‘ylab piyoda, otda yoki avtomobilda sayohat qiling, mahalliy madaniyat bilan tanishing. Kichik guruhga qo‘shiling yoki alohida tur tanlang.",
+      "description1": "Sayohatga tog' yo'llari, an'anaviy kigiz chodirida tunash yoki Issiqko'l bo'yida bir necha kun bo'lishi mumkin. Sizning qiziqishlaringizga va vaqtingizga mos keladigan marshrutni tanlang.\n\nBizning jamoamiz gidlar, transport va turar joy bilan yordam berishi mumkin. Sanalaringizni, guruh hajmini va afzal ko'rgan tezlikni muhokama qilish uchun bog'laning.",
+      "keywords": "Qirg'iziston turlari, Eng yaxshi Qirg'iziston sayohatlari, Qirg'izistonga sayohatlar, Qirg'izistondagi eng yaxshi sayyohlik kompaniyalari, Qirg'izistondagi sayyohlik agentligi, sarguzashtli turlar Qirg'iziston, gid turlar Qirg'iziston, madaniy sayohatlar Qirg'iziston, trekking turlari Qirg'iziston, ot minish sayohatlari Qirg'iziston, ko'chmanchi tajribalari Qirg'iziston, Qirg'iziston sayohat paketlari, Qirg'izistondagi eng yaxshi turlar, Qirg'iziston bo'ylab sayohatlar",
+      "tourPage": {
+        "level": "Daraja",
+        "duration": "Davomiyligi",
+        "price": "Narxi",
+        "day": "kun",
+        "days": "kunlar",
+        "details": "Tafsilotlar",
+        "things": "Mashg‘ulotlar",
+        "places": "Boriladigan joylar",
+        "addInfo": "Qo'shimcha ma'lumot",
+        "includings": "Narxga kiradi",
+        "excludings": "Narxga kirmaydi",
+        "from": "Boshlang‘ich narx",
+        "note": "Eslatma",
+        "person": "Shaxs",
+        "persons": "Shaxslar",
+        "andMore": "va boshqalar"
+      },
+      "TourPreparation": {
+        "title": "Qirg'izistonda sayohat qilish uchun zarur bo'lgan narsalar",
+        "Description": "Qulaylik, xavfsizlik va turli ob-havo sharoitlariga va ochiq havoda mashg'ulotlarga tayyor bo'lishni ta'minlash uchun Qirg'izistonga sayohatingizda olib kelishingiz kerak bo'lgan asosiy narsalarning to'liq ro'yxati.",
+        "Options": {
+          "Oyoq kiyimlari": "Qo'shimcha juftlik sifatida shahar sayohatlari uchun qulay piyoda poyabzali, o'rtacha yurish uchun mustahkam piyoda poyabzali, trekking uchun bardoshli piyoda botinkalari va tez quriydigan sandallarni olib keling.",
+          "Shlyapa": "Yuqori balandliklarda kuchli quyosh nurlaridan himoya qilish uchun keng qirrali shlyapa yoki bo'yin qopqog'i bilan quyosh qalpoqchasini o'rnatishni unutmang.",
+          "UV kremi": "Teringizni kuchli ultrabinafsha nurlaridan himoya qilish uchun yuqori SPFli keng spektrli quyosh kremini o'rashni unutmang, ayniqsa Qirg'izistondagi balandroq joylarda.",
+          "Kiyim": "Haroratning balandligi o'zgarishi bilan sezilarli darajada o'zgarishi mumkinligini hisobga olib, har xil harorat va ob-havo sharoitlariga mos kiyim qatlamlarini joylashtiring. Qor yoki yomg'irga tayyor bo'ling, ayniqsa tog'li hududlarda.",
+          "Tibbiy yordam": "Ehtiyot choralari sifatida shaxsiy tibbiy yordam vositalarini, masalan, zarur dori-darmonlar, bintlarni, og'riq qoldiruvchi vositalarni va oldindan mavjud bo'lgan tibbiy sharoitlar uchun har qanday maxsus narsalarni olib yurishni unutmang."
+        },
+        "overview": "Marshrutingiz va mavsumingiz uchun nima olib kelishingizni so'rang."
+      }
+    },
+    "articles": {
+      "name": "Maqolalar",
+      "title": "Qirg‘iziston madaniyati va tabiati",
+      "description": "Qirg‘iziston xalqi, urf-odatlari, taomlari va tabiati bilan tanishing.",
+      "keywords": [
+        "Qirg'iz madaniyati",
+        "Qirg'iz urf-odatlari",
+        "Qirg'iz tabiati",
+        "Burkut ovi",
+        "Ko'k-boru",
+        "Alabai itlari",
+        "Taygan",
+        "Qirg'iz tarixi",
+        "Markaziy Osiyo madaniyati",
+        "Ko'chmanchilar merosi",
+        "Madaniy izlanish",
+        "An'anaviy sport turlari",
+        "Qirg'izistonning diqqatga sazovor joylari",
+        "Madaniy tajribalar",
+        "Qirg'izistondagi sarguzasht",
+        "Meros zotlari",
+        "Madaniy an'analar",
+        "Noyob tajribalar",
+        "Qirg'izlarning turmush tarzi"
+      ]
+    },
+    "about": {
+      "title": "Biz haqimizda",
+      "subtitle": "Biz kimmiz?",
+      "description": "Qirg‘izistonga safaringizni rejalashtirishda yordam beramiz. Qachon kelishingiz va nimalarga qiziqishingizni ayting: yo‘nalish, gid va turar joyni birga tanlaymiz.",
+      "keywords": "Biz haqimizda, Bizning hikoyamiz, Qirg'iziston ishqibozlari, Sayohat ishtiyoqi, Ajoyib tajribalar, Jamoa, Qadriyatlar, Missiya",
+      "buttons": {
+        "our_team": "Bizning Jamoamiz",
+        "our_clients": "Bizning mijozlarimiz",
+        "contact_us": "Biz bilan bog'lanish"
+      }
+    },
+    "info": {
+      "seen": "Tashriflar: ",
+      "created": "Yaratilgan: ",
+      "modified": "Oxirgi tahrirlangan: "
+    },
+    "download": {
+      "text": "Mobil ilovalarimiz yordamida xaritalar, joylar va sayohat ma'lumotlarini qulay saqlang."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Foydali havolalar",
+          "links": [
+            {
+              "text": "Bosh sahifa",
+              "url": "/"
+            },
+            {
+              "text": "Diqqatga sazovor joylar",
+              "url": "/places"
+            },
+            {
+              "text": "Turlar",
+              "url": "/tours"
+            },
+            {
+              "text": "Aeroport o'tkazmalari",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Maxfiylik va huquqiy",
+          "links": [
+            {
+              "text": "Biz haqimizda",
+              "url": "/about"
+            },
+            {
+              "text": "Biz bilan bog'lanish",
+              "url": "/contact"
+            },
+            {
+              "text": "Maxfiylik siyosati",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Bog'lanish uchun ma'lumot",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzoqov, 49"
+          }
+        },
+        {
+          "title": "Ijtimoiy hisoblar",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "dasturchi",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

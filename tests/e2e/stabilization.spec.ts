@@ -223,15 +223,15 @@ test('shared control styles preserve keyboard language selection and the contact
   await page.goto('/en/places/fixture-lake');
   const languages = page.locator('#site-languages');
   await expect(languages).toBeHidden();
-  const toggle = page.getByRole('button', { name: 'Toggle language menu', exact: true });
+  const toggle = page.getByRole('button', { name: 'Choose language', exact: true });
   await toggle.focus();
   await page.keyboard.press('Enter');
   await expect(languages).toBeVisible();
-  await expect(languages.getByRole('link', { name: 'fr', exact: true })).toBeVisible();
+  await expect(languages.getByRole('link', { name: 'Français French', exact: true })).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(languages).toBeHidden();
   await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
-  await expect(page.getByRole('link', { name: 'Whatsapp contact', exact: true })).toBeInViewport();
+  await expect(page.getByRole('link', { name: /^WhatsApp · / })).toBeInViewport();
 });
 
 test('carousel controls work by keyboard and interaction suspends autoplay', async ({ page }) => {

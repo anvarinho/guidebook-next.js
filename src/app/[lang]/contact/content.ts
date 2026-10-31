@@ -1,3 +1,5 @@
+
+import additionalContactCopy from '@/translations/ui/app-lang-contact-content-ts-contactCopy.json';
 import type { Locale } from '@/lib/i18n.config'
 import { submissionCopy, type SubmissionCopy } from './submission-copy'
 
@@ -7,6 +9,7 @@ function withSubmissionCopy(base: Record<Locale, ContactCopy>): Record<Locale, C
 
 type ContactCopy = { intro: string; close: string; name: string; email: string; phone: string; subject: string; message: string; send: string; hint: string; optional: string }
 export const contactCopy = withSubmissionCopy({
+    ...additionalContactCopy as Record<Locale, ContactCopy>,
   en: { intro: 'Tell us where you want to go. We’ll help you shape the journey.', close: 'Close contact window', name: 'Your name', email: 'Your email', phone: 'Phone number', subject: 'Subject', message: 'Tell us about your trip', send: 'Open email draft', hint: 'Your email app will open with your message. Review it there before sending.', optional: 'optional' },
   fr: { intro: 'Dites-nous où vous rêvez d’aller. Nous vous aiderons à préparer le voyage.', close: 'Fermer la fenêtre de contact', name: 'Votre nom', email: 'Votre e-mail', phone: 'Téléphone', subject: 'Objet', message: 'Parlez-nous de votre voyage', send: 'Préparer un e-mail', hint: 'Votre application e-mail s’ouvrira avec votre message. Vérifiez-le avant de l’envoyer.', optional: 'facultatif' },
   de: { intro: 'Wohin möchten Sie reisen? Wir helfen Ihnen bei der Planung.', close: 'Kontaktfenster schließen', name: 'Ihr Name', email: 'Ihre E-Mail', phone: 'Telefonnummer', subject: 'Betreff', message: 'Erzählen Sie uns von Ihrer Reise', send: 'E-Mail-Entwurf öffnen', hint: 'Ihre E-Mail-App öffnet sich mit Ihrer Nachricht. Prüfen Sie diese vor dem Senden.', optional: 'optional' },

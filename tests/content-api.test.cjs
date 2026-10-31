@@ -31,6 +31,19 @@ function loadContentModules(fetch) {
   return load;
 }
 
+test('new website languages request English API content until API translations are available', async () => {
+  const requests = [];
+  const load = loadContentModules(async url => {
+    requests.push(url);
+    return { ok: true, json: async () => [] };
+  });
+  const { default: getAllPlaces } = load('src/lib/getAllPlaces.tsx');
+  await getAllPlaces('uk');
+  await getAllPlaces('kg');
+  await getAllPlaces('ru');
+  assert.deepEqual(requests.map(url => new URL(url).searchParams.get('lang')), ['en', 'en', 'ru']);
+});
+
 test('public loaders consistently cache content and encode query parameters', async () => {
   const requests = [];
   const load = loadContentModules(async (url, options) => {

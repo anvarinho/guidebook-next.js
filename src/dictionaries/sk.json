@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "sk-SK",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Načítava sa...",
+    "contactButton": "Máte nejaké otázky?",
+    "navigation": [
+      {
+        "text": "Domov",
+        "url": "/"
+      },
+      {
+        "text": "Zaujímavosti",
+        "url": "/places"
+      },
+      {
+        "text": "Zájazdy",
+        "url": "/tours"
+      },
+      {
+        "text": "Články",
+        "url": "/articles"
+      },
+      {
+        "text": "O nás",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Cestovný sprievodca Kirgizskom",
+      "description": "Vydajte sa po horských chodníkoch, zaplávajte si v Issyk-Kule alebo prenocujte v jurte u miestnej rodiny. Vyberte si trasu podľa seba.",
+      "subtitle": "Cestovný sprievodca Kirgizskom",
+      "subtitle1": "Prečo navštíviť Kirgizsko?",
+      "subtitle2": "Skúmanie Veľkej prírody",
+      "subtitle3": "Nekonečné skúmanie",
+      "subtitle4": "Naplánujte si výlet",
+      "subtitle5": "Kirgizsko, ktoré musíte navštíviť",
+      "paragraph": "Táto krásna vnútrozemská krajina, predtým súčasť Sovietskeho zväzu, sa rýchlo stáva jednou z najobľúbenejších turistických destinácií v Strednej Ázii. Turistický priemysel Kirgizska rýchlo rastie a cestujúcim ponúka možnosť preskúmať jednu z najpozoruhodnejších krajín sveta.",
+      "paragraph1": "Kirgizsko zaznamenalo v posledných rokoch dramatický nárast cestovného ruchu, keď sa dobrodruhovia hrnú na túry, tábory a výlety na koni cez jeho úžasnú krajinu. Ako prvý stredoázijský štát uvoľnil vízovú politiku – ponúka bezvízový vstup pre väčšinu západných a rozvinutých krajín – rozvinula sa silná sieť cestovného ruchu.",
+      "paragraph2": "Od iniciatív komunitného cestovného ruchu (CBT) po celej krajine až po penzióny a nezávislých sprievodcov, existuje mnoho spôsobov, ako zažiť úchvatnú scenériu Kirgizska. Turisti sa môžu vydať na úžasné túry z Karakolu, Kochkoru, Arslanbobu a dokonca aj z hlavného mesta Biškek. Upozorňujeme, že turistika si tu často vyžaduje primeranú úroveň kondície, pretože mnohé chodníky ponúkajú viac než len pokojnú prechádzku. Väčšina trekov sa pohybuje od 1 do 5 dní, aj keď sú k dispozícii aj dlhšie dobrodružstvá.\r\n\r\nPre tých, ktorí si chcú zachrániť nohy, je obľúbenou alternatívou jazda na koni. Vydajte sa na najúžasnejší konský trek v krajine do Song Kol alebo strávte pár dní relaxom a kúpaním pri krásnom jazere Issyk-Kul.",
+      "paragraph3": "Vďaka nespočetnému množstvu neznámych destinácií, túr a chodníkov sú možnosti na objavovanie neobmedzené. Či už hľadáte dobrodružstvo alebo relax, Kirgizsko má pre každého niečo.",
+      "paragraph4": "Ak chcete získať konkrétnejšie informácie o atrakciách, ako sa tam a v okolí dostať, a ďalšie tipy na cestovanie, prečítajte si nášho komplexného cestovného sprievodcu Kirgizskom. Vylepšite svoje cestovanie pomocou odporúčaných aplikácií na navigáciu, preklady a miestne štatistiky, aby ste si svoj výlet užili naplno.\r\n\r\nUžite si cestu a zažite jedinečnú krásu a kultúru Kirgizska",
+      "keywords": "Kirgizský turistický sprievodca, turistický sprievodca, Pohodlie pri cestovaní, Miestne atrakcie, Turistické služby, Kirgizské cestovné tipy, Kultúrne zážitky, Plánovanie výletov, Prehliadka, Dobrodružné cestovanie, Pohodlné zájazdy, Sprievodca mestom Biškek, Kirgizské turistické atrakcie, Turistické miesta, Miesta v mojej blízkosti k prehliadke, Miesta v mojom okolí, Turistické miesta, Turistická destinácia, Najkrajšie miesta na svete, Sprievodca na svete, Najkrajšie miesta na svete, Sprievodca na cestovanie, Krásne miesta, Biškek v Kirgizsku, Mesto Bishkek, Turista a sprievodca, PR turistické atrakcie, Zaujímavosti v okolí a ako to urobiť",
+      "button": "Poďme to zistiť!",
+      "button1": "Kam ísť!",
+      "button2": "Čo robiť",
+      "button3": "čítaj viac",
+      "button4": "Naše výlety",
+      "Transportation": {
+        "title": "Doprava v Kirgizsku | Cestovný sprievodca",
+        "Description": "Cestovanie po Kirgizsku môže byť samo o sebe dobrodružstvom. Tu je to, čo potrebujete vedieť:",
+        "Options": {
+          "Vnútroštátne lety": "Na dlhšie vzdialenosti, najmä ak je časový limit, sú k dispozícii vnútroštátne lety medzi veľkými mestami ako Biškek, Osh a Tamchy (neďaleko Cholpon-Ata v regióne Issyk-Kul). Skontrolujte letové poriadky a rezervácie leteckých spoločností.",
+          "Marshrutkas (Mikrobusy)": "Ide o najbežnejší a cenovo najefektívnejší spôsob dopravy na krátke až stredné vzdialenosti. Chodia po pevných trasách medzi mestami a obcami a sú medzi miestnymi veľmi obľúbené.",
+          "Zdieľané taxíky": "Zdieľané taxíky ponúkajú rýchlejšiu, ale o niečo drahšiu alternatívu k marshrutkám. Zvyčajne odchádzajú, keď sú plné a ceny sa dajú dohodnúť.",
+          "Autopožičovne": "Pre väčšiu flexibilitu je dobrou voľbou prenájom auta. Cesty vo vidieckych oblastiach môžu byť drsné, preto sa odporúča pohon 4x4. Uistite sa, že máte medzinárodný vodičský preukaz.",
+          "Vlaky": "K dispozícii sú obmedzené vlakové spoje, ktoré primárne spájajú Biškek s Balykchy pri jazere Issyk-Kul. Je to malebná trasa, ale pomalšia ako cestovanie po ceste.",
+          "Autobusy": "Vo veľkých mestách premávajú pravidelné autobusy, ktoré ponúkajú pohodlný spôsob cestovania. Nesmú však pokrývať odľahlé oblasti.",
+          "Stopovanie": "je bežnou praxou vo vidieckych oblastiach Kirgizska, kde môžu byť možnosti formálnej dopravy obmedzené. Je to relatívne bezpečné a kultúrne akceptované, ale buďte opatrní a používajte svoj úsudok, keď prijímate jazdy od cudzích ľudí."
+        },
+        "details": "Podrobné informácie o možnostiach dopravy nájdete v priloženom sprievodcovi."
+      },
+      "Accommodations": {
+        "title": "Ubytovanie v Kirgizsku | Cestovný sprievodca",
+        "Description": "Od útulných penziónov až po luxusné rezorty, Kirgizsko ponúka rôzne možnosti ubytovania, ktoré vyhovujú preferenciám a rozpočtu každého cestovateľa. Tu je niekoľko možností, ktoré treba zvážiť:",
+        "Options": {
+          "hotely": "Veľké kirgizské mestá ako Biškek a Osh sa môžu pochváliť radom hotelov s rôznymi rozpočtami a preferenciami. Od medzinárodných reťazcov až po butikové hotely nájdete pohodlné ubytovanie s vybavením, ako je Wi-Fi, klimatizácia a vlastné stravovacie možnosti.",
+          "Penzióny": "Pre autentickejší zážitok zvážte pobyt v penzióne, ktorý prevádzkujú miestne rodiny. Tieto útulné zariadenia ponúkajú vrelé privítanie a možnosť zažiť kirgizskú pohostinnosť. Často budete mať možnosť vychutnať si domáce jedlá a spoznať miestne zvyky a tradície.",
+          "Jurty": "Vo vidieckych oblastiach a horských oblastiach poskytujú tradičné jurty jedinečný zážitok z ubytovania. Tieto prenosné stavby podobné stanu ponúkajú základné, ale pohodlné ubytovanie, často s úžasným výhľadom na okolitú krajinu. Pobyty v jurtách môžu zahŕňať stravovanie a kultúrne aktivity.",
+          "Homestays": "Zažite život s kirgizskou rodinou výberom ubytovania v rodine. Budete mať príležitosť žiť s miestnymi obyvateľmi, zdieľať jedlá a zúčastňovať sa každodenných aktivít. Domáce ubytovanie ponúka autentickú kultúrnu výmenu a pohľad na tradičný spôsob života Kirgizska.",
+          "Ekologické chaty": "Pre ekologicky zmýšľajúcich cestovateľov poskytujú ekologické chaty trvalo udržateľné možnosti ubytovania v prírodnom prostredí. Tieto chaty uprednostňujú ochranu životného prostredia a často ponúkajú aktivity, ako je turistika, pozorovanie vtákov a zapojenie komunity.",
+          "Kempovanie": "je obľúbenou voľbou pre cestovateľov, ktorí hľadajú dobrodružstvo a samotu. Či už si postavíte stan vo vyhradenej kempingovej oblasti alebo divoký tábor na odľahlých miestach, určite dodržujte zásady Leave No Trace a získajte všetky potrebné povolenia."
+        },
+        "details": "Konkrétne odporúčania a možnosti rezervácie nájdete na webových stránkach cestovania, online rezervačných platformách a miestnych kanceláriách cestovného ruchu."
+      },
+      "Food": {
+        "title": "Jedlo v Kirgizsku | Cestovný sprievodca",
+        "Description": "Spoznávanie kirgizskej kuchyne je neoddeliteľnou súčasťou cestovateľského zážitku. Tu je to, čo potrebujete vedieť:",
+        "Options": {
+          "Tradičná kuchyňa": "Kirgizská kuchyňa je bohatá na chuť a dedičstvo, pričom tradičné jedlá ako beshbarmak (mäso a rezance), manty (halušky) a laghman (rezancová polievka) sú základmi. Nenechajte si ujsť ochutnanie fermentovaného kobylieho mlieka známeho ako kumis, obľúbený nápoj.",
+          "Nomádsky vplyv": "Kirgizská kuchyňa, ktorá odráža svoje nomádske dedičstvo, často obsahuje výdatné jedlá vyrobené z prísad, ako je mäso (najmä jahňacie a konské mäso), mliečne výrobky (napríklad kymyz a airan) a obilniny (vrátane ryže a pšenice). Jurty, tradičné nomádske stany, môžu ponúknuť autentické kulinárske zážitky vo vidieckych oblastiach.",
+          "Miestne trhy": "Navštívte miestne trhy, ako je Osh Bazaar v Biškeku, a ochutnajte rôzne kirgizské jedlá a občerstvenie, vrátane šašliku (grilované mäso na ražni), samsa (slané pečivo) a plov (pilaf). Tieto trhy ponúkajú aj možnosť nákupu čerstvého ovocia, orechov a korenia.",
+          "Čajovne a kaviarne": "V Kirgizsku sú všadeprítomné čajovne (chaykhana) a kaviarne, ktoré popri pečive, chlebe a ľahkých jedlách podávajú čaj (chai) a kávu (kofe). Vychutnajte si uvoľnenú atmosféru a pohostinnosť a vychutnajte si tradičné kirgizské pochúťky ako baursak (vyprážané cesto) a kurut (guličky zo sušeného jogurtu).",
+          "Medzinárodná kuchyňa": "V mestských oblastiach, ako je Biškek, nájdete pestrú škálu medzinárodných kuchýň vrátane ruskej, čínskej, kórejskej a európskej. Preskúmajte trendy reštaurácie, bistrá a food courty a ochutnajte svetové chute spolu s kirgizskou pohostinnosťou.",
+          "Street Food": "Vydajte sa do ulíc Kirgizska a objavte množstvo pouličných predajcov jedla, ktoré ponúkajú rýchle a chutné občerstvenie. Vyskúšajte obľúbené pouličné jedlá ako somsas (vyprážané alebo pečené obrátky plnené mäsom alebo zeleninou), vyprážané rezance laghman a grilovaný kukuričný klas.",
+          "Prehliadky jedla a kurzy varenia": "Vydajte sa na výlety za jedlom alebo sa zapojte do kurzov varenia a ponorte sa hlbšie do kirgizskej kuchyne a kulinárskych tradícií. Naučte sa pripravovať tradičné jedlá, navštívte miestne farmy a výrobcov a ponorte sa do pulzujúcej kulinárskej scény Kirgizska."
+        },
+        "details": "Viac informácií o kirgizskej kuchyni a možnostiach stravovania nájdete v priloženom sprievodcovi."
+      },
+      "Safety": {
+        "title": "Bezpečnosť v Kirgizsku | Cestovný sprievodca",
+        "Description": "Cestovanie do Kirgizska je vo všeobecnosti bezpečné, je však nevyhnutné uvedomiť si potenciálne riziká a prijať potrebné opatrenia. Tu je to, čo potrebujete vedieť:",
+        "Options": {
+          "Politická stabilita": "Kirgizsko zažilo v minulosti politickú nestabilitu vrátane protestov a občasných nepokojov. Zatiaľ čo väčšina turistických oblastí zostáva nedotknutá, buďte informovaní o miestnom vývoji a vyhýbajte sa veľkým zhromaždeniam alebo demonštráciám.",
+          "Kriminalita": "Drobná kriminalita, ako sú vreckové krádeže a krádeže, sa môže vyskytovať najmä v preplnených oblastiach a turistických centrách. Majte svoje veci v bezpečí a buďte ostražití.",
+          "terorizmus": "Hrozba terorizmu v Kirgizsku je nízka, no cestujúci by mali zostať ostražití, najmä v pohraničných oblastiach. Dodržujte všetky cestovné upozornenia vydané vašou vládou a buďte informovaní.",
+          "Prírodné riziká": "Kirgizsko je náchylné na prírodné nebezpečenstvá, ako sú zemetrasenia, lavíny a zosuvy pôdy, najmä v horských oblastiach. Buďte pripravení a dodržiavajte bezpečnostné pokyny, najmä pri trekingu alebo outdoorových aktivitách.",
+          "Bezpečnosť na cestách": "Podmienky na cestách v Kirgizsku sa môžu líšiť a jazda môže byť náročná, najmä vo vidieckych oblastiach. Buďte opatrní, dodržiavajte miestne dopravné predpisy a zvážte najatie seriózneho vodiča.",
+          "Zdravotné riziká": "Aj keď Kirgizsko nepredstavuje významné zdravotné riziká, cestujúci by mali mať aktuálne informácie o rutinnom očkovaní a mali by prijať preventívne opatrenia proti chorobám prenášaným jedlom a vodou.",
+          "Výšková choroba": "Cestovatelia navštevujúci vysokohorské oblasti by si mali byť vedomí rizika výškovej choroby. Urobte si čas na aklimatizáciu a vyhnite sa namáhavej fyzickej aktivite, kým sa vaše telo neprispôsobí.",
+          "Cestovné poistenie": "Je nevyhnutné mať cestovné poistenie, ktoré pokrýva liečebné náklady, núdzovú evakuáciu a zrušenie/prerušenie cesty. Uistite sa, že vaša poistná zmluva zahŕňa krytie činností, ktoré plánujete vykonávať."
+        },
+        "details": "Podrobnejšie bezpečnostné informácie a cestovné rady nájdete v oficiálnych vládnych zdrojoch a cestovných sprievodcoch."
+      },
+      "Prices": {
+        "title": "Ceny v Kirgizsku | Cestovný sprievodca",
+        "Description": "Pochopenie životných nákladov a výdavkov v Kirgizsku vám môže pomôcť efektívne si naplánovať rozpočet. Tu je prehľad cien bežných položiek a služieb:",
+        "Options": {
+          "Ubytovanie": "Cena ubytovania v Kirgizsku sa líši v závislosti od typu ubytovania a lokality. Cenovo dostupní cestujúci môžu nájsť cenovo dostupné možnosti, ako sú penzióny a hostely, zatiaľ čo luxusné hotely a rezorty uspokoja tých, ktorí hľadajú luxusné vybavenie. Ceny sa pohybujú od 10 dolárov za noc za lacné ubytovanie až po viac ako 100 dolárov za noc v luxusných zariadeniach.",
+          "Jedlo a stravovanie": "Stravovanie v Kirgizsku je vo všeobecnosti cenovo dostupné, najmä v miestnych reštauráciách a pouličných stánkoch s občerstvením. Tradičné jedlá ako beshbarmak a plov sú lacné a sýte, zvyčajne stoja 3 až 7 dolárov za jedlo v miestnych reštauráciách. Medzinárodná kuchyňa a kvalitné jedlá môžu byť drahšie, pričom jedlá v priemere stoja 10 až 20 USD alebo viac na osobu.",
+          "Doprava": "Náklady na dopravu v Kirgizsku sa líšia v závislosti od spôsobu cesty a vzdialenosti. Vnútroštátne lety medzi veľkými mestami ako Biškek a Osh sa môžu pohybovať od 50 do 150 USD alebo viac, zatiaľ čo zdieľané taxíky a marshrutky (mikrobusy) ponúkajú cenovo výhodné možnosti na kratšie vzdialenosti, ktoré zvyčajne stoja 1 až 10 USD v závislosti od trasy. Prenájom auta môže stáť 30 až 100 USD alebo viac za deň, v závislosti od typu vozidla a požičovne.",
+          "Aktivity a atrakcie": "Náklady na aktivity a atrakcie v Kirgizsku sa značne líšia v závislosti od skúseností. Vstupné do múzeí, historických pamiatok a národných parkov je vo všeobecnosti cenovo dostupné a pohybuje sa od 1 do 10 USD na osobu. Prehliadky so sprievodcom, exkurzie v prírode a dobrodružné aktivity, ako je jazda na koni a trekking, môžu spôsobiť dodatočné náklady, pričom ceny sa líšia v závislosti od trvania a zložitosti.",
+          "Nakupovanie": "Nakupovanie v Kirgizsku ponúka celý rad možností, od tradičných remesiel a suvenírov až po moderný tovar a elektroniku. Ceny sa líšia v závislosti od položky a lokality, ale zjednávanie je bežné na trhoch a bazároch. Buďte pripravení vyjednávať za najlepšiu cenu, najmä pri nákupe textílií, šperkov a ručne vyrábaných výrobkov.",
+          "Mena a výmenné kurzy": "Oficiálnou menou Kirgizska je kirgizský som (KGS). Výmenné kurzy kolíšu, preto je vhodné pred výmenou peňazí skontrolovať aktuálne kurzy. Hlavné kreditné karty sú akceptované vo väčších mestách a turistických oblastiach, ale na transakcie v menších mestách a vidieckych oblastiach sa odporúča nosiť hotovosť. (1 $ = 85-90soms)"
+        },
+        "details": "Najpresnejšie a najaktuálnejšie informácie o cenách v Kirgizsku nájdete v miestnych zdrojoch a najnovších cestovných sprievodcoch."
+      },
+      "Travel_Seasons": {
+        "title": "Cestovné sezóny v Kirgizsku | Cestovný sprievodca",
+        "Description": "Pochopenie cestovných sezón v Kirgizsku vám môže pomôcť naplánovať si cestu a čo najlepšie využiť vašu návštevu. Tu je prehľad rôznych ročných období a toho, čo môžete očakávať:",
+        "Options": {
+          "jar (marec až máj)": "Jar je krásny čas na návštevu Kirgizska, krajina ožíva, keď kvitnú kvety a rieky sa roztápajú roztopeným snehom. Počasie je mierne, takže je ideálne pre outdoorové aktivity, ako je turistika, trekking a jazda na koni. Pripravte sa však na občasné dažďové prehánky, najmä v apríli a máji.",
+          "Leto (jún až august)": "Leto je hlavnou turistickou sezónou v Kirgizsku s dlhými dňami, teplými teplotami a jasnou oblohou. Je to ideálny čas na outdoorové dobrodružstvá, ako je kempovanie, horolezectvo a objavovanie alpských jazier. V tomto období sa konajú obľúbené festivaly a podujatia, vrátane Svetových nomádskych hier v septembri.",
+          "jeseň (september až november)": "Jeseň je v Kirgizsku úžasná sezóna s krajinami namaľovanými v žiarivých odtieňoch červenej, oranžovej a zlatej, keď listy menia farbu. Počasie zostáva príjemné, takže je to skvelý čas na pešiu turistiku, pozorovanie divokej zveri a kultúrne zážitky. September je ideálny mesiac na návštevu World Nomad Games.",
+          "Zima (od decembra do februára)": "Zima premení Kirgizsko na zimnú krajinu zázrakov so zasneženými horami a zamrznutými jazerami, ktoré vytvárajú úchvatné scenérie. Zatiaľ čo teploty môžu klesnúť pod bod mrazu, milovníci zimných športov sa hrnú do lyžiarskych stredísk ako Karakol a Jyrgalan na lyžovanie, snowboarding a korčuľovanie. Február je oslavou tradičnej nomádskej hry Kok Boru (Buzkashi)."
+        },
+        "details": "Viac informácií o konkrétnych aktivitách, udalostiach a poveternostných podmienkach počas každého ročného obdobia nájdete v cestovných sprievodcoch a miestnych turistických zdrojoch."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Prvýkrát v Kirgizsku?",
+        "Description": "Ak navštevujete Kirgizsko prvýkrát, tu je komplexný sprievodca, ktorý vám pomôže čo najlepšie využiť vašu cestu:",
+        "Options": {
+          "Príchod a obchádzanie": "Väčšina medzinárodných cestujúcich prilieta na medzinárodné letisko Manas v Biškeku. Na prepravu do mesta sú ľahko dostupné taxíky a autobusy. V Kirgizsku môžete na prepravu použiť vnútroštátne lety, autobusy, marshrutky (mikrobusy) a zdieľané taxíky.",
+          "SIM karty a internet": "Zostať v spojení v Kirgizsku je jednoduché s miestnou SIM kartou. SIM karty si môžete zakúpiť na letisku alebo od poskytovateľov mobilných sietí v meste. Medzi hlavných poskytovateľov patria Beeline, O! a Megacom. Pred zakúpením SIM karty sa uistite, že je váš telefón odomknutý. Internetové pokrytie je vo všeobecnosti dobré v mestách a obciach, ale vo vidieckych oblastiach môže byť fľakaté.",
+          "Internetové ceny": "Internetové ceny v Kirgizsku sú vo všeobecnosti dostupné. Základný dátový balík s veľkosťou 1 GB môže stáť približne 100 KGS (približne 1,20 USD), zatiaľ čo väčšie balíky, napríklad 10 GB, môžu stáť približne 500 KGS (približne 6 USD). Neobmedzené dátové plány na mesiac sa môžu pohybovať od 800 do 1 500 KGS (približne 9,50 až 18 USD) v závislosti od poskytovateľa a rýchlosti pripojenia.",
+          "Mena a platby": "Miestnou menou je kirgizský som (KGS). Bankomaty sú k dispozícii vo veľkých mestách, ale vo vidieckych oblastiach sa odporúča nosiť hotovosť. Kreditné a debetné karty sú akceptované na mnohých miestach v mestách, ale menej v odľahlých oblastiach. Služby zmenárne sú k dispozícii na letiskách, v bankách a zmenárňach.",
+          "Jazyk": "Kirgizština a ruština sú úradnými jazykmi. Vo veľkých mestách môžete nájsť anglicky hovoriacich ľudí, najmä v turistických oblastiach, ale vo vidieckych oblastiach je užitočné poznať niektoré základné kirgizské alebo ruské frázy. Veľmi užitočná môže byť prekladateľská aplikácia alebo slovníček fráz.",
+          "Zdravie a bezpečnosť": "Kirgizsko je vo všeobecnosti pre cestovateľov bezpečné, ale je rozumné prijať štandardné preventívne opatrenia. Pite balenú alebo prevarenú vodu, aby ste sa vyhli chorobám prenášaným vodou. Uistite sa, že máte cestovné poistenie, ktoré pokrýva zdravie a úrazy. Pohotovostné lekárske služby sú dostupné v mestách, no vo vidieckych oblastiach môžu byť obmedzené.",
+          "Klíma a oblečenie": "Kirgizsko má kontinentálne podnebie s chladnými zimami a horúcimi letami. V horách môžu byť teploty výrazne nižšie, preto sa podľa toho zabaľte. Odporúča sa vrstvené oblečenie, pevná vychádzková obuv a ochrana pred slnkom. V zime si vezmite teplé oblečenie vrátane kvalitnej bundy, rukavíc a čiapok.",
+          "Elektrina a zástrčky": "Štandardné napätie je 220V a frekvencia je 50Hz. Napájacie zástrčky a zásuvky sú typu C a F. Odporúča sa mať so sebou univerzálny cestovný adaptér, aby ste mohli svoje elektronické zariadenia nabíjať."
+        },
+        "details": "Podrobnejšie informácie a tipy nájdete v cestovných sprievodcoch a miestnych zdrojoch. Užite si svoj prvý výlet do Kirgizska a urobte si nezabudnuteľné spomienky!"
+      },
+      "TravelPreparation": {
+        "title": "Pripravte sa na cestu do Kirgizska",
+        "Description": "Zabezpečte si hladký a príjemný výlet do Kirgizska tým, že sa postaráte o tieto nevyhnutné cestovné prípravy.",
+        "Options": {
+          "Vízum a pas": "Skontrolujte si vízovú povinnosť pre vašu štátnu príslušnosť a uistite sa, že váš pas je platný aspoň šesť mesiacov po plánovanom pobyte.",
+          "Zdravie a očkovanie": "Poraďte sa so svojím poskytovateľom zdravotnej starostlivosti o všetkých požadovaných očkovaniach alebo zdravotných opatreniach pri ceste do Kirgizska.",
+          "Cestovné poistenie": "Zvážte kúpu cestovného poistenia na pokrytie neočakávaných núdzových situácií, ako sú liečebné náklady alebo zrušenie cesty.",
+          "Mena a peniaze": "Pred cestou sa oboznámte s miestnou menou (Kirgizský som) a zameňte si nejaké peniaze. Vo veľkých mestách sú k dispozícii bankomaty.",
+          "Jazyk": "Zatiaľ čo ruština a kirgizština sú úradnými jazykmi, angličtina nie je rozšírená. Zvážte naučenie sa niektorých základných fráz v ruštine alebo kirgizštine.",
+          "Počasie a oblečenie": "Počas návštevy si zbaľte vhodné oblečenie vzhľadom na poveternostné podmienky. Kirgizsko zažíva horúce letá a studené zimy, preto si prineste vrstvy.",
+          "Bezpečnosť a ochrana": "Zostaňte informovaní o aktuálnej situácii v Kirgizsku a buďte opatrní, najmä v odľahlých oblastiach. Majte svoje veci v bezpečí a buďte si vedomí svojho okolia.",
+          "Kultúrna etiketa": "Rešpektujte miestne zvyky a tradície, napríklad vyzujte si topánky pred vstupom do niečího domu a pred fotografovaním ľudí si vyžiadajte povolenie."
+        },
+        "details": "Ďalšie cestovné tipy a rady špecifické pre vašu cestu do Kirgizska nájdete v našom komplexnom cestovnom sprievodcovi."
+      }
+    },
+    "sights": {
+      "name": "Zaujímavosti",
+      "title": "Kam sa vydať v Kirgizsku",
+      "subtitle": "Kam ísť v Kirgizsku?  Okrem toho buďte informovaní o poveternostných podmienkach v mestách a regionálnych centrách, aby ste si cestu užili čo najlepšie a boli pripravení na neustále sa meniace počasie v tejto krásnej krajine.",
+      "description": "Nájdite miesta na návštevu v Kirgizsku, od horských jazier a národných parkov až po mestá a historické miesta. Vyberte oblasť, ktorú chcete začať objavovať.",
+      "keywords": "Kirgizské miesta, kirgizské cestovanie, objavovanie Kirgizska, kirgizské destinácie, kirgizský cestovný ruch, miesta v Kirgizsku, ktoré musíte navštíviť, top atrakcie Kirgizska, kirgizská krajina, kultúrne pamiatky Kirgizska, prírodné divy Kirgizska, najlepšie miesta na návštevu v Kirgizsku",
+      "sights": "Kam ísť!",
+      "must-see": {
+        "subtitle": "Destinácie Kirgizska, ktoré musíte vidieť podľa regiónov",
+        "description1": "Kirgizsko je známe svojou krásnou prírodnou krajinou, od majestátnych hôr až po pokojné jazerá. Tu sú niektoré z najkrajších miest v každom regióne:",
+        "chuyregion": "Oblasť Chuy",
+        "alaarchatitle": "Národný park Ala Archa:",
+        "alaarchadescription": "Ponúka úchvatné výhľady a turistické chodníky.",
+        "buranatitle": "Burana Tower:",
+        "buranadescription": "Historický minaret s malebným výhľadom do údolia.",
+        "issykulregion": "Región Issyk-Kul",
+        "lakeissykkultitle": "Jazero Issyk-Kul:",
+        "lakeissykkuldescription": "Veľké slané jazero s plážami a letoviskami.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Známy pre svoje červené skalné útvary.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Brána do krásnych horských lokalít, ako je Altyn Arashan.",
+        "narynregion": "Región Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Historický kamenný karavanseráj v malebnom údolí.",
+        "sonkultitle": "Jazero Son-Kul:",
+        "sonkuldescription": "Vysokohorské jazero s úžasnými západmi slnka.",
+        "jalalabadregion": "Oblasť Jalal-Abad",
+        "sarychelextitle": "Biosférická rezervácia Sary-Chelek:",
+        "sarychelekdescription": "Ponúka nedotknuté jazerá a lesy.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Domov najväčšieho orechového lesa a krásnych vodopádov.",
+        "oshregion": "Región Oš",
+        "sulaymanmountaintitle": "Sulajmanská hora:",
+        "sulaymanmountaindescription": "Posvätná hora s panoramatickým výhľadom.",
+        "alayvalleytitle": "Alay Valley:",
+        "alayvalleydescription": "Ponúka nádherný výhľad na pohorie Pamír.",
+        "batkenregion": "Batken Region",
+        "batkenvalleytitle": "Batken Valley:",
+        "batkenvalleydescription": "Známy pre svoje marhule a jedinečné skalné útvary.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Ponúka krásne údolia riek.",
+        "talasregion": "Región Talas",
+        "beshtashtitle": "Národný park Besh-Tash:",
+        "beshtashdescription": "Má malebné rieky a alpské lúky.",
+        "manasordotitle": "Komplex Manas Ordo:",
+        "manasordodescription": "Kultúrne miesto venované hrdinovi Manasovi."
+      },
+      "highlights": [
+        "Ako sa dostať do",
+        "Doprava",
+        "Kde sa ubytovať",
+        "Čo jesť",
+        "Čo robiť",
+        "Sezóna"
+      ]
+    },
+    "tours": {
+      "name": "Zájazdy",
+      "title": "Zájazdy do Kirgizska",
+      "subtitle": "Súkromné ​​a malé skupinové zájazdy v Kirgizsku",
+      "description": "Objavte pešie, jazdecké, kultúrne a automobilové trasy po Kirgizsku. Pridajte sa k malej skupine alebo si vyberte súkromnú cestu podľa svojich záujmov.",
+      "description1": "Výlet môže zahŕňať horské chodníky, noc v tradičnom plstenom stane alebo niekoľko dní vedľa Issyk-Kul. Vyberte si trasu, ktorá vyhovuje vašim záujmom a času, ktorý máte.\n\nNáš tím môže pomôcť so sprievodcami, dopravou a ubytovaním. Spojte sa a prediskutovajte svoje dátumy, veľkosť skupiny a preferované tempo.",
+      "keywords": "Zájazdy do Kirgizska, Najlepšie zájazdy do Kirgizska, Zájazdy v Kirgizsku, Najlepšie zájazdové spoločnosti Kirgizska, Cestovná kancelária v Kirgizsku, dobrodružné zájazdy Kirgizsko, zájazdy so sprievodcom Kirgizsko, kultúrne zájazdy Kirgizsko, trekkingové zájazdy Kirgizsko, zájazdy na koni Kirgizsko cestovné zážitky Kirgizsko, najlepšie zájazdy Kyrgyzstan, najlepšie zájazdy Kyrgyzrgyz v Kirgizsku, preskúmajte Kirgizsko prostredníctvom zájazdov",
+      "tourPage": {
+        "level": "úroveň",
+        "duration": "Trvanie",
+        "price": "Cena",
+        "day": "deň",
+        "days": "dní",
+        "details": "Podrobnosti",
+        "things": "Aktivity",
+        "places": "Miesta na trase",
+        "addInfo": "Ďalšie informácie",
+        "includings": "Cena zahŕňa",
+        "excludings": "Cena nezahŕňa",
+        "from": "Od",
+        "note": "Poznámka",
+        "person": "Osoba",
+        "persons": "Osoby",
+        "andMore": "a ďalšie"
+      },
+      "TourPreparation": {
+        "title": "Základy cestovania v Kirgizsku",
+        "Description": "Úplný zoznam základných vecí, ktoré si treba vziať so sebou na cestu do Kirgizska, aby ste zaistili pohodlie, bezpečnosť a pripravenosť na rôzne poveternostné podmienky a outdoorové aktivity.",
+        "Options": {
+          "Topánky": "Vezmite si so sebou pohodlnú vychádzkovú obuv na túry do mesta, pevnú turistickú obuv na stredne náročné túry, odolnú turistickú obuv na trekking a rýchloschnúce sandále ako extra pár.",
+          "Klobúk": "Na ochranu pred intenzívnym slnkom vo vysokých nadmorských výškach si nezabudnite pribaliť klobúk so širokým okrajom alebo slnečnú čiapku s chlopňou na krk.",
+          "UV krém": "Nezabudnite si pribaliť širokospektrálny opaľovací krém s vysokým SPF, ktorý ochráni vašu pokožku pred intenzívnym UV žiarením, najmä vo vyšších nadmorských výškach v Kirgizsku.",
+          "Oblečenie": "Zabaľte si vhodné vrstvy oblečenia pre rôzne teploty a poveternostné podmienky, pretože teploty sa môžu výrazne meniť so zmenami nadmorskej výšky. Buďte pripravení na sneh alebo dážď, najmä v horských oblastiach.",
+          "Lekárska pomoc": "Nezabudnite nosiť osobné zdravotné pomôcky, ako sú potrebné lieky, leukoplasty, lieky proti bolesti a akékoľvek špecifické položky pre už existujúce zdravotné ťažkosti ako preventívne opatrenia."
+        },
+        "overview": "Opýtajte sa nás, čo si priniesť na vašu trasu a ročné obdobie."
+      }
+    },
+    "articles": {
+      "name": "Články",
+      "title": "Kultúra a príroda Kirgizska",
+      "description": "Spoznajte ľudí, tradície, kuchyňu a krajinu Kirgizska.",
+      "keywords": [
+        "kirgizská kultúra",
+        "kirgizské tradície",
+        "Kirgizská príroda",
+        "Lov na burkut",
+        "Kok-boru",
+        "Alabajské psy",
+        "Taigan",
+        "kirgizská história",
+        "Stredoázijská kultúra",
+        "Kočovné dedičstvo",
+        "Kultúrny prieskum",
+        "Tradičné športy",
+        "Chrty z Kirgizska",
+        "Kultúrne zážitky",
+        "Dobrodružstvo v Kirgizsku",
+        "Dedičné plemená",
+        "Kultúrne tradície",
+        "Jedinečné zážitky",
+        "Kirgizský životný štýl"
+      ]
+    },
+    "about": {
+      "title": "O nás",
+      "subtitle": "kto sme?",
+      "description": "Pomôžeme vám naplánovať cestu po Kirgizsku. Povedzte nám, kedy chcete prísť a čo vás zaujíma, a spoločne vyberieme trasu, sprievodcov aj ubytovanie.",
+      "keywords": "O nás, Náš príbeh, Kirgizskí nadšenci, Cestovateľská vášeň, Výnimočné zážitky, Tím, Hodnoty, Misia",
+      "buttons": {
+        "our_team": "Náš tím",
+        "our_clients": "Naši klienti",
+        "contact_us": "Kontaktujte nás"
+      }
+    },
+    "info": {
+      "seen": "Návštevy: ",
+      "created": "Vytvorené: ",
+      "modified": "Posledná úprava: "
+    },
+    "download": {
+      "text": "Majte mapy, miesta a cestovné informácie po ruke s našimi mobilnými aplikáciami."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Užitočné odkazy",
+          "links": [
+            {
+              "text": "Domov",
+              "url": "/"
+            },
+            {
+              "text": "Zaujímavosti",
+              "url": "/places"
+            },
+            {
+              "text": "Zájazdy",
+              "url": "/tours"
+            },
+            {
+              "text": "Letiskové transfery",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Ochrana osobných údajov a právne predpisy",
+          "links": [
+            {
+              "text": "O nás",
+              "url": "/about"
+            },
+            {
+              "text": "Kontaktujte nás",
+              "url": "/contact"
+            },
+            {
+              "text": "Zásady ochrany osobných údajov",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Kontaktné informácie",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Biškek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sociálne účty",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "vývojár",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

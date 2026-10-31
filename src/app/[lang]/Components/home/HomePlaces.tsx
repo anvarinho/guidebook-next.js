@@ -1,4 +1,12 @@
 "use client";
+import additionalTours from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-tours.json';
+import additionalArticles from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-articles.json';
+import additionalPlaces from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-places.json';
+import additionalDescription from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-description.json';
+import additionalTitle from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-title.json';
+import additionalReadMore from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-readMore.json';
+import additionalMorePlaces from '@/translations/ui/app-lang-Components-home-HomePlaces-tsx-morePlaces.json';
+import commonCopy from '@/translations/ui/common.json';
 import React, { useState } from "react";
 import styles from './homeplaces.module.css'
 import { Locale } from "@/lib/i18n.config";
@@ -28,6 +36,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
     
     const dictionary = {
         morePlaces : {
+            ...additionalMorePlaces,
             en: 'More Places',
             es: 'Más lugares',
             fr: 'Plus de lieux',
@@ -40,6 +49,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: 'المزيد من الأماكن'
         },
         readMore :{
+            ...additionalReadMore,
             en: 'Read More',
             es: 'Leer más',
             fr: 'Lire la suite',
@@ -52,6 +62,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: 'اقرأ المزيد'
         },
         title: {
+            ...additionalTitle,
             en: 'Kyrgyzstan',
             es: 'Kirguistán',
             fr: 'Kirghizistan',
@@ -64,6 +75,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: "قيرغيزستان"
         },
         description: {
+            ...additionalDescription,
             en: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
             es: 'Descubre la belleza inexplorada de Kirguistán con nuestra Guía completa, tu pasaporte a una tierra encantadora de maravillas naturales, cultura vibrante y tradiciones',
             fr: 'Découvrez la beauté inexplorée du Kirghizistan avec notre Guide complet, votre passeport pour une terre enchantée de merveilles naturelles, de culture vibrante et de traditions intemporelles.',
@@ -76,6 +88,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: "اكتشف جمال قيرغيزستان غير المكتشف مع كتابنا الشامل، جواز سفرك إلى أرض ساحرة من عجائب الطبيعة وثقافة حية وتقاليد خالدة. هذا الدليل المُحرَّف بعناية هو رفيقك الموثوق لرحلة لا تُنسى عبر هذه الجوهرة الوسطية الآسيوية."
         },
         places: {
+            ...additionalPlaces,
             en: 'Places to Visit',
             es: 'Lugares para Visitar',
             fr: 'Lieux à Visiter',
@@ -88,6 +101,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: "الأماكن للزيارة"
         },
         articles: {
+            ...additionalArticles,
             en: 'Facts About Kyrgyzstan',
             es: 'Datos sobre Kirguistán',
             fr: 'Faits sur le Kirghizistan',
@@ -100,6 +114,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
             ae: "حقائق عن قيرغيزستان"
         },
         tours: {
+            ...additionalTours,
             en: 'Our Tours',
             es: 'Nuestros Tours',
             fr: 'Nos Tours',
@@ -127,7 +142,7 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
                             <p>{place.description} ...</p>
                             <div className={styles.floatingbuttons}>
                                 <Link href={`/${lang}/places/${place.url}`} className={styles.floatingButton} title={place.title} rel="noopener noreferrer">{dictionary.readMore[lang]}</Link>
-                                <Link href={`/${lang}/places`} className={styles.floatingButton} title="Kyrgyzstan Where To Go!" rel="noopener noreferrer">{dictionary.morePlaces[lang]}</Link>
+                                <Link href={`/${lang}/places`} className={styles.floatingButton} title={dictionary.morePlaces[lang]} rel="noopener noreferrer">{dictionary.morePlaces[lang]}</Link>
                             </div>
                         </div>
                     </div>
@@ -138,19 +153,19 @@ const HomePlaces: React.FC<{ lang: Locale; places: PlaceAlias[] }> = ({ lang, pl
                     <h2>{dictionary.title[lang]}</h2>
                     <h4>{dictionary.description[lang]}</h4>
                     <div>
-                        <Link href={`/${lang}/places`} title="Kyrgyzstan Where To Go!" className={styles.floatingButton} >{dictionary.places[lang]}</Link>
-                        <Link href={`/${lang}/articles`} title="The Kyrgyzstan: on Culture, Traditions, and Nature" className={styles.floatingButton} >{dictionary.articles[lang]}</Link>
-                        <Link href={`/${lang}/tours`} title="Private tours in Kyrgyzstan!" className={styles.floatingButton} >{dictionary.tours[lang]}</Link>
+                        <Link href={`/${lang}/places`} title={dictionary.places[lang]} className={styles.floatingButton} >{dictionary.places[lang]}</Link>
+                        <Link href={`/${lang}/articles`} title={dictionary.articles[lang]} className={styles.floatingButton} >{dictionary.articles[lang]}</Link>
+                        <Link href={`/${lang}/tours`} title={dictionary.tours[lang]} className={styles.floatingButton} >{dictionary.tours[lang]}</Link>
                     </div>
                 </div>
             )}
 
             {places.length > 0 && (
                 <div className={styles.buttons}>
-                    <button onClick={handleSlideLeft} aria-label="Previous Place" disabled={currentSlide === 0}>
+                    <button onClick={handleSlideLeft} aria-label={commonCopy[lang].previousPlace} disabled={currentSlide === 0}>
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </button>
-                    <button onClick={handleSlideRight} aria-label="Next Place" disabled={currentSlide >= places.length - 1}>
+                    <button onClick={handleSlideRight} aria-label={commonCopy[lang].nextPlace} disabled={currentSlide >= places.length - 1}>
                         <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                 </div>

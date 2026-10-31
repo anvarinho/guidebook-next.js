@@ -1,5 +1,6 @@
 import { Locale } from "@/lib/i18n.config";
 import { absoluteSiteUrl, metaDescription, safeJsonLd } from "@/lib/seo";
+import { formatTourDuration } from '@/lib/formatTourDuration';
 
 interface Props {
   lang: Locale;
@@ -10,7 +11,7 @@ interface Props {
 export default function Meta({ lang, tour, page }: Props) {
   const url = absoluteSiteUrl(`${lang}/tours/${encodeURIComponent(tour.url)}`);
   const tourPage = page.tours.tourPage;
-  const duration = `${tour.days.length} ${tour.days.length === 1 ? tourPage.day : tourPage.days}`;
+  const duration = formatTourDuration(tour.days.length, lang);
   const prices = tour.price.map(Number).filter(price => Number.isFinite(price) && price > 0);
   const description = metaDescription(
     tour.description,

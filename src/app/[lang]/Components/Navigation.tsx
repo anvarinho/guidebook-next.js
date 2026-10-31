@@ -1,4 +1,7 @@
 'use client'
+import { isRtlLocale } from '@/lib/localeMetadata';
+import additionalLabels from '@/translations/ui/app-lang-Components-Navigation-tsx-labels.json';
+
 import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState } from 'react'
@@ -10,6 +13,7 @@ import MenuButton from './MenuButton'
 import styles from './navbar.module.css'
 
 const labels: Record<Locale, { open: string; close: string; navigation: string }> = {
+    ...additionalLabels as Record<Locale, { open: string; close: string; navigation: string }>,
   en: { open: 'Open menu', close: 'Close menu', navigation: 'Main navigation' },
   fr: { open: 'Ouvrir le menu', close: 'Fermer le menu', navigation: 'Navigation principale' },
   de: { open: 'Menü öffnen', close: 'Menü schließen', navigation: 'Hauptnavigation' },
@@ -90,7 +94,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
   }, [open])
 
   const navigation = (
-    <nav ref={navigationRef} id="site-navigation" className={styles.navigation} data-open={open} aria-label={copy.navigation} dir={lang === 'ae' ? 'rtl' : 'ltr'} onBlur={event => {
+    <nav ref={navigationRef} id="site-navigation" className={styles.navigation} data-open={open} aria-label={copy.navigation} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} onBlur={event => {
       const next = event.relatedTarget as Node | null
       if (!headerRef.current?.contains(next) && !event.currentTarget.contains(next)) setOpen(false)
     }}>
@@ -106,7 +110,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
 
   return (
     <>
-      <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-hidden={hidden && !open} data-open={open} dir={lang === 'ae' ? 'rtl' : 'ltr'} onFocus={() => setHidden(false)} onBlur={event => {
+      <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-hidden={hidden && !open} data-open={open} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} onFocus={() => setHidden(false)} onBlur={event => {
         const next = event.relatedTarget as Node | null
         if (!event.currentTarget.contains(next) && !navigationRef.current?.contains(next)) setOpen(false)
       }}>
@@ -116,7 +120,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
               <span className={styles.emblemRays}/>
               <span className={styles.emblemCenter}/>
             </span>
-            <span className={styles.brandName}>{name}</span>
+            <span className={styles.brandName} translate="no" lang="en" dir="ltr">{name}</span>
           </Link>
           <MenuButton ref={buttonRef} open={open} label={open ? copy.close : copy.open} onClick={() => setOpen(value => !value)}/>
           {!isMobile && navigation}

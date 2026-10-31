@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "ro-RO",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Încărcare...",
+    "contactButton": "Aveți întrebări?",
+    "navigation": [
+      {
+        "text": "Acasă",
+        "url": "/"
+      },
+      {
+        "text": "Obiective turistice",
+        "url": "/places"
+      },
+      {
+        "text": "Tururi",
+        "url": "/tours"
+      },
+      {
+        "text": "Articole",
+        "url": "/articles"
+      },
+      {
+        "text": "Despre noi",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Ghid de călătorie pentru Kârgâzstan",
+      "description": "Mergi pe poteci de munte, înoată în Issyk-Kul sau petrece o noapte într-o iurtă la o familie locală. Alege traseul care ți se potrivește.",
+      "subtitle": "Ghid de călătorie pentru Kârgâzstan",
+      "subtitle1": "De ce să vizitezi Kârgâzstan?",
+      "subtitle2": "Explorarea în aer liber",
+      "subtitle3": "Explorare fără sfârșit",
+      "subtitle4": "Planificați-vă călătoria",
+      "subtitle5": "Locuri de vizitat obligatoriu din Kârgâzstan",
+      "paragraph": "Această țară frumoasă, fără ieșire la mare, fost parte a Uniunii Sovietice, devine rapid una dintre cele mai populare destinații de călătorie din Asia Centrală. Industria turistică din Kârgâzstan este în creștere rapidă, oferind călătorilor șansa de a explora una dintre cele mai spectaculoase țări ale lumii.",
+      "paragraph1": "Kârgâzstanul a cunoscut o creștere dramatică a turismului în ultimii ani, deoarece aventurierii se îngrămădesc pentru a face drumeții, tabără și călărie prin peisajele sale uimitoare. Fiind prima națiune din Asia Centrală care și-a relaxat politicile de viză - oferind intrare fără viză pentru majoritatea țărilor occidentale și dezvoltate - s-a dezvoltat o rețea de turism puternică.",
+      "paragraph2": "De la inițiativele de turism bazat pe comunitate (CBT) din întreaga țară la pensiuni și ghizi independenți, există numeroase modalități de a experimenta peisajul uluitor al Kârgâzstanului. Drumeții se pot îmbarca în drumeții uimitoare din Karakol, Kochkor, Arslanbob și chiar din capitala Bishkek. Rețineți că drumețiile aici necesită adesea un nivel rezonabil de fitness, deoarece multe trasee oferă mai mult decât o simplă plimbare pe îndelete. Cele mai multe drumeții variază de la 1 la 5 zile, deși sunt disponibile aventuri mai lungi.\r\n\r\nPentru cei care doresc să-și salveze picioarele, călăria este o alternativă populară. Faceți cea mai spectaculoasă călătorie cu cai din țară până la Song Kol sau petreceți câteva zile relaxându-vă și înotând la frumosul lac Issyk-Kul.",
+      "paragraph3": "Cu nenumărate destinații, drumeții și trasee în afara drumurilor, oportunitățile de a explora sunt nelimitate. Fie că sunteți în căutarea aventurii sau a relaxării, Kârgâzstanul are ceva pentru toată lumea.",
+      "paragraph4": "Pentru informații mai specifice despre atracții, cum să ajungeți acolo și în jur și alte sfaturi de călătorie, asigurați-vă că citiți ghidul nostru de călătorie complet pentru Kârgâzstan. Îmbunătățiți-vă experiența de călătorie cu aplicații recomandate pentru navigare, traducere și informații locale pentru a profita la maximum de călătoria dvs.\r\n\r\nBucurați-vă de călătoria și experimentați frumusețea și cultura unică a Kârgâzstanului",
+      "keywords": "Ghid turistic Kârgâzstan, ghid turistic, Comoditate în călătorie, Atracții locale, Servicii turistice, Sfaturi de călătorie în Kârgâzstan, Experiențe culturale, Planificarea tururilor, Excursii, Călătorii de aventură, Tururi convenabile, Ghid de oraș Bișkek, Atracții turistice Kârgâzstan, Loc turistic, Locuri din apropierea mea de vizitat, Locuri de vizitat în apropierea mea, Locuri turistice, Cele mai frumoase destinații din lume, Cele mai frumoase destinații ale lumii, Cele mai frumoase destinații ale lumii, Cele mai frumoase destinații ale lumii lume, Călătorie cu ghid, Ghid de călătorie, Locuri frumoase, Bishkek în Kârgâzstan, Oraș Bishkek, Turist și ghid, Atractii turistice PR, Atracții din apropiere și cum să le execute",
+      "button": "Să aflăm!",
+      "button1": "Unde să mergi!",
+      "button2": "Ce să fac!",
+      "button3": "citeşte mai mult",
+      "button4": "Tururile noastre",
+      "Transportation": {
+        "title": "Transport în Kârgâzstan | Ghid de călătorie",
+        "Description": "Deplasarea în Kârgâzstan poate fi o aventură în sine. Iată ce trebuie să știți:",
+        "Options": {
+          "Zboruri interne": "Pentru distanțe mai lungi, mai ales dacă timpul este o constrângere, zboruri interne sunt disponibile între orașe mari precum Bishkek, Osh și Tamchy (lângă Cholpon-Ata în regiunea Issyk-Kul). Verificați companiile aeriene pentru orare și rezervări.",
+          "Marshrutkas (microbuze)": "Acestea sunt cele mai comune și mai rentabile mod de transport pentru distanțe scurte și medii. Urmează rute fixe între orașe și orașe și sunt foarte populare printre localnici.",
+          "Taxiuri comune": "Taxiurile comune oferă o alternativă mai rapidă, dar puțin mai scumpă, față de marshrutkas. De obicei pleacă când sunt pline, iar prețurile pot fi negociate.",
+          "Închirieri auto": "Pentru mai multă flexibilitate, închirierea unei mașini este o opțiune bună. Drumurile din mediul rural pot fi accidentate, așa că este recomandat un 4x4. Asigurați-vă că aveți un permis de conducere internațional.",
+          "Trenuri": "Sunt disponibile servicii feroviare limitate, care leagă în primul rând Bishkek de Balykchy lângă Lacul Issyk-Kul. Este un traseu pitoresc, dar mai lent decât călătoria rutieră.",
+          "Autobuze": "În marile orașe circulă autobuze regulate, oferind o modalitate confortabilă de călătorie. Cu toate acestea, este posibil să nu acopere zonele îndepărtate.",
+          "Autostopul": "este o practică comună în zonele rurale din Kârgâzstan, unde opțiunile oficiale de transport pot fi limitate. Este relativ sigur și acceptat cultural, dar fiți precaut și folosiți-vă judecata atunci când acceptați plimbări de la străini."
+        },
+        "details": "Pentru informații detaliate despre opțiunile de transport, vizitați ghidul furnizat."
+      },
+      "Accommodations": {
+        "title": "Cazare în Kârgâzstan | Ghid de călătorie",
+        "Description": "De la pensiuni confortabile la stațiuni de lux, Kârgâzstan oferă o varietate de opțiuni de cazare pentru a se potrivi preferințelor și bugetului fiecărui călător. Iată câteva opțiuni de luat în considerare:",
+        "Options": {
+          "Hoteluri": "Orașele mari din Kârgâzstan, cum ar fi Bishkek și Osh, se mândresc cu o gamă de hoteluri care se potrivesc diferitelor bugete și preferințe. De la lanțuri internaționale la hoteluri de tip boutique, veți găsi unități de cazare confortabile, cu facilități precum Wi-Fi, aer condiționat și opțiuni de luat masa în interior.",
+          "Pensiuni": "Pentru o experiență mai autentică, luați în considerare cazarea într-o pensiune condusă de familii locale. Aceste unități confortabile oferă o primire călduroasă și o șansă de a experimenta ospitalitatea kârgâză. Veți avea adesea ocazia să vă bucurați de mese de casă și să aflați despre obiceiurile și tradițiile locale.",
+          "Iurte": "În zonele rurale și regiunile muntoase, iurtele tradiționale oferă o experiență unică de cazare. Aceste structuri portabile, asemănătoare unui cort, oferă cazare de bază, dar confortabilă, adesea cu vederi uimitoare ale peisajelor din jur. Sejururile în iurtă pot include mese și activități culturale.",
+          "Găzduiri": "Experimentați viața cu o familie kârgâză, optând pentru o gazdă. Veți avea ocazia să trăiți cu localnicii, să împărțiți mesele și să participați la activitățile zilnice. Casele de cazare oferă un schimb cultural autentic și o perspectivă asupra modului tradițional de viață al Kârgâzstanului.",
+          "Eco-Lodges": "Pentru călătorii conștienți de mediu, cabanele ecologice oferă opțiuni de cazare durabile în cadru natural. Aceste cabane acordă prioritate conservării mediului și oferă adesea activități precum drumeții, observarea păsărilor și implicarea comunității.",
+          "Camping": "este o opțiune populară pentru călătorii care caută aventură și singurătate. Indiferent dacă instalați un cort într-o zonă de camping desemnată sau o tabără sălbatică în locații îndepărtate, asigurați-vă că urmați principiile Leave No Trace și obțineți toate permisele necesare."
+        },
+        "details": "Pentru recomandări specifice și opțiuni de rezervare, consultați site-urile web de călătorie, platformele de rezervare online și oficiile locale de turism."
+      },
+      "Food": {
+        "title": "Mâncare în Kârgâzstan | Ghid de călătorie",
+        "Description": "Explorarea bucătăriei kârgâze este o parte integrantă a experienței de călătorie. Iată ce trebuie să știți:",
+        "Options": {
+          "Bucătărie tradițională": "Bucătăria kârgâză este bogată în aromă și moștenire, mâncăruri tradiționale precum beshbarmak (carne și tăiței), manty (găluște) și laghman (supă cu tăiței) fiind de bază. Nu ratați să încercați laptele de iapă fermentat cunoscut sub numele de kumis, o băutură populară.",
+          "Influența nomade": "Reflectând moștenirea sa nomade, bucătăria kârgâză oferă adesea mâncăruri consistente preparate din ingrediente precum carnea (în special carnea de miel și cal), produse lactate (cum ar fi kymyz și airan) și cereale (inclusiv orez și grâu). Iurtele, corturi nomade tradiționale, pot oferi experiențe culinare autentice în zonele rurale.",
+          "Piețele locale": "Vizitați piețele locale, cum ar fi Osh Bazaar din Bishkek, pentru a gusta o varietate de mâncăruri și gustări kârgâzești, inclusiv șașlik (carne frigărui la grătar), samsa (produse de patiserie sărate) și plov (pilaf). Aceste piețe oferă, de asemenea, o oportunitate de a cumpăra fructe proaspete, nuci și condimente.",
+          "Ceainărie și cafenele": "Ceainăriile (chaykhana) și cafenelele sunt omniprezente în Kârgâzstan, servind ceai (chai) și cafea (kofe) alături de produse de patiserie, pâine și mese ușoare. Bucurați-vă de atmosfera relaxată și de ospitalitate în timp ce savurați delicii tradiționale din Kârgâz, cum ar fi baursak (aluat prăjit) și kurut (bile de iaurt uscat).",
+          "Bucătărie internațională": "În zonele urbane precum Bishkek, veți găsi o gamă diversă de bucătării internaționale, inclusiv rusă, chineză, coreeană și europeană. Explorați restaurante, bistrouri și restaurante la modă pentru a gusta aromele globale alături de ospitalitatea kârgâză.",
+          "Mâncarea Stradă": "Aventurați-vă pe străzile din Kârgâzstan pentru a descoperi o serie de vânzători de mâncare stradală care oferă gustări rapide și aromate. Încercați mâncăruri populare de stradă, cum ar fi somsas (turnițe prăjite sau coapte umplute cu carne sau legume), tăiței laghman prăjiți și porumb la grătar.",
+          "Tururi culinare și cursuri de gătit": "Porniți-vă în tururi culinare sau participați la cursuri de gătit pentru a aprofunda în bucătăria și tradițiile culinare din Kârgâz. Aflați cum să pregătiți mâncăruri tradiționale, vizitați fermele și producătorii locali și cufundați-vă în scena culinară vibrantă a Kârgâzstanului."
+        },
+        "details": "Pentru mai multe informații despre bucătăria kârgâză și opțiunile de luat masa, consultați ghidul furnizat."
+      },
+      "Safety": {
+        "title": "Siguranța în Kârgâzstan | Ghid de călătorie",
+        "Description": "Călătoria în Kârgâzstan este în general sigură, dar este esențial să fii conștient de potențialele riscuri și să iei măsurile de precauție necesare. Iată ce trebuie să știți:",
+        "Options": {
+          "Stabilitate Politică": "Kârgâzstanul s-a confruntat cu instabilitate politică în trecut, inclusiv proteste și tulburări ocazionale. În timp ce majoritatea zonelor turistice rămân neafectate, rămâneți la curent cu evoluțiile locale și evitați adunările sau demonstrațiile mari.",
+          "Crima": "Infracționalitatea minoră, cum ar fi hoțul de buzunare și furtul, pot apărea, în special în zonele aglomerate și punctele de interes turistic. Păstrați-vă bunurile în siguranță și fiți vigilenți.",
+          "Terorism": "Amenințarea terorismului în Kârgâzstan este scăzută, dar călătorii ar trebui să rămână vigilenți, în special în zonele de frontieră. Urmați toate recomandările de călătorie emise de guvernul dumneavoastră și rămâneți informat.",
+          "Pericole naturale": "Kârgâzstanul este predispus la pericole naturale, cum ar fi cutremure, avalanșe și alunecări de teren, în special în regiunile muntoase. Fiți pregătiți și urmați instrucțiunile de siguranță, în special atunci când faceți drumeții sau vă implicați în activități în aer liber.",
+          "Siguranța Rutieră": "Condițiile drumurilor din Kârgâzstan pot varia, iar conducerea poate fi dificilă, mai ales în zonele rurale. Fiți precauți, respectați legile locale de circulație și luați în considerare angajarea unui șofer reputat.",
+          "Riscuri pentru sănătate": "Deși Kârgâzstanul nu prezintă riscuri semnificative pentru sănătate, călătorii ar trebui să fie la curent cu vaccinările de rutină și să ia măsuri de precauție împotriva bolilor cauzate de alimente și apă.",
+          "Răul de altitudine": "Călătorii care vizitează zone de mare altitudine ar trebui să fie conștienți de riscul de rău de altitudine. Fă-ți timp pentru a te aclimatiza și evita activitățile fizice intense până când corpul tău se adaptează.",
+          "Asigurare de călătorie": "Este esențial să aveți o asigurare de călătorie care să acopere cheltuielile medicale, evacuarea de urgență și anularea/întreruperea călătoriei. Asigurați-vă că polița dvs. de asigurare include acoperire pentru activitățile în care intenționați să vă implicați."
+        },
+        "details": "Pentru informații mai detaliate despre siguranță și recomandări de călătorie, consultați sursele oficiale guvernamentale și ghidurile de călătorie."
+      },
+      "Prices": {
+        "title": "Prețuri în Kârgâzstan | Ghid de călătorie",
+        "Description": "Înțelegerea costului vieții și a cheltuielilor în Kârgâzstan vă poate ajuta să vă planificați bugetul în mod eficient. Iată o prezentare generală a prețurilor pentru articolele și serviciile comune:",
+        "Options": {
+          "Cazare": "Costul cazării în Kârgâzstan variază în funcție de tipul de cazare și locație. Călătorii cu buget redus pot găsi opțiuni la prețuri accesibile, cum ar fi pensiuni și pensiuni, în timp ce hotelurile și resorturile de lux se adresează celor care caută facilități de lux. Prețurile variază de la 10 USD pe noapte pentru cazare cu buget redus la peste 100 USD pe noapte pentru unitățile de lux.",
+          "Mâncare și mese": "Luarea mesei în Kârgâzstan este în general la prețuri accesibile, mai ales la restaurantele locale și la tarabe de mâncare stradală. Mâncărurile tradiționale precum beshbarmak și plov sunt ieftine și sățioase, costând de obicei între 3 și 7 USD pe masă la restaurantele locale. Bucătăria internațională și opțiunile de mese rafinate pot fi mai scumpe, cu mese în medie de 10 USD până la 20 USD sau mai mult de persoană.",
+          "Transport": "Costurile de transport în Kârgâzstan variază în funcție de modul de călătorie și distanță. Zborurile interne între orașe mari, precum Bishkek și Osh, pot varia de la 50 USD la 150 USD sau mai mult, în timp ce taxiurile comune și marshrutkas (microbuzele) oferă opțiuni economice pentru distanțe mai scurte, costând de obicei de la 1 USD la 10 USD, în funcție de rută. Închirierea unei mașini poate costa între 30 USD și 100 USD sau mai mult pe zi, în funcție de tipul de vehicul și de compania de închiriere.",
+          "Activități și atracții": "Costul activităților și atracțiilor din Kârgâzstan variază foarte mult în funcție de experiență. Taxele de intrare la muzee, situri istorice și parcuri naționale sunt în general accesibile, variind de la 1 USD la 10 USD de persoană. Tururile cu ghid, excursiile în aer liber și activitățile de aventură, cum ar fi călăria și drumețiile, pot implica costuri suplimentare, prețurile variind în funcție de durată și complexitate.",
+          "Cumpărături": "Cumpărăturile din Kârgâzstan oferă o gamă largă de opțiuni, de la obiecte de artizanat tradiționale și suveniruri până la produse și electronice moderne. Prețurile variază în funcție de articol și locație, dar negocierea este obișnuită în piețe și bazaruri. Fiți pregătit să negociați pentru cel mai bun preț, mai ales atunci când cumpărați textile, bijuterii și obiecte de artizanat.",
+          "Valută și cursuri de schimb": "Moneda oficială a Kârgâzstanului este som kirgâzstan (KGS). Ratele de schimb fluctuează, așa că este recomandabil să verificați cursurile curente înainte de a face schimb de bani. Principalele carduri de credit sunt acceptate în orașele mai mari și zonele turistice, dar este recomandat să purtați numerar pentru tranzacții în orașele mai mici și zonele rurale. (1 $ = 85-90 de somi)"
+        },
+        "details": "Pentru cele mai precise și actualizate informații despre prețurile din Kârgâzstan, consultați sursele locale și ghidurile de călătorie recente."
+      },
+      "Travel_Seasons": {
+        "title": "Sezoane de călătorie în Kârgâzstan | Ghid de călătorie",
+        "Description": "Înțelegerea anotimpurilor de călătorie în Kârgâzstan vă poate ajuta să vă planificați călătoria și să profitați la maximum de vizita dumneavoastră. Iată o prezentare generală a diferitelor anotimpuri și la ce să vă așteptați:",
+        "Options": {
+          "Primavara (martie pana in mai)": "Primăvara este o perioadă frumoasă pentru a vizita Kârgâzstanul, peisajul prinde viață pe măsură ce florile înfloresc și râurile se umflă de zăpadă topită. Vremea este blândă, fiind ideală pentru activități în aer liber, cum ar fi drumeții, drumeții și călărie. Cu toate acestea, fiți pregătiți pentru averse ocazionale de ploaie, în special în aprilie și mai.",
+          "Vara (iunie până în august)": "Vara este sezonul turistic de vârf în Kârgâzstan, cu zile lungi, temperaturi calde și cer senin. Este momentul perfect pentru aventuri în aer liber, cum ar fi campingul, alpinismul și explorarea lacurilor alpine. În această perioadă au loc festivaluri și evenimente populare, inclusiv Jocurile Mondiale Nomad din septembrie.",
+          "Toamna (septembrie până în noiembrie)": "Toamna este un anotimp uimitor în Kârgâzstan, cu peisaje pictate în nuanțe vibrante de roșu, portocaliu și auriu, pe măsură ce frunzele își schimbă culoarea. Vremea rămâne plăcută, făcându-l un moment excelent pentru drumeții, observarea faunei sălbatice și experiențe culturale. Septembrie este o lună ideală de vizitat pentru Jocurile Mondiale Nomad.",
+          "Iarna (decembrie până în februarie)": "Iarna transformă Kârgâzstanul într-un tărâm al minunilor de iarnă, cu munți acoperiți de zăpadă și lacuri înghețate care creează un peisaj uluitor. În timp ce temperaturile pot scădea sub zero, pasionații de sporturi de iarnă se îngrămădesc în stațiunile de schi precum Karakol și Jyrgalan pentru schi, snowboard și patinaj. Februarie marchează sărbătorirea jocului tradițional nomad, Kok Boru (Buzkashi)."
+        },
+        "details": "Pentru mai multe informații despre activități specifice, evenimente și condiții meteorologice din fiecare sezon, consultați ghidurile de călătorie și resursele turistice locale."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Prima dată în Kârgâzstan?",
+        "Description": "Dacă vizitați Kârgâzstanul pentru prima dată, iată un ghid cuprinzător care vă va ajuta să profitați la maximum de călătoria dvs.:",
+        "Options": {
+          "Sosire și deplasare": "Majoritatea călătorilor internaționali ajung pe Aeroportul Internațional Manas din Bishkek. Taxiurile și autobuzele sunt disponibile pentru transport în oraș. În Kârgâzstan, puteți folosi zboruri interne, autobuze, marshrutkas (microbuze) și taxiuri comune pentru a vă deplasa.",
+          "Cartele SIM și Internet": "Rămâneți conectat în Kârgâzstan este ușor cu o cartelă SIM locală. Puteți achiziționa carduri SIM de la aeroport sau de la furnizorii de rețele mobile din oraș. Printre furnizorii majori se numără Beeline, O! și Megacom. Asigurați-vă că telefonul este deblocat înainte de a cumpăra o cartelă SIM. Acoperirea internetului este în general bună în orașe și orașe, dar poate fi neregulată în zonele rurale.",
+          "Prețuri Internet": "Prețurile de internet în Kârgâzstan sunt în general accesibile. Un pachet de date de bază de 1 GB poate costa aproximativ 100 KGS (aproximativ 1,20 USD), în timp ce pachetele mai mari, cum ar fi 10 GB, ar putea costa aproximativ 500 KGS (aproximativ 6 USD). Planurile de date nelimitate pentru o lună pot varia de la 800 la 1500 KGS (aproximativ 9,50 USD până la 18 USD), în funcție de furnizor și de viteza conexiunii.",
+          "Moneda și plăți": "Moneda locală este kirghizstani Som (KGS). ATM-urile sunt disponibile în marile orașe, dar este recomandabil să transportați numerar în zonele rurale. Cardurile de credit și de debit sunt acceptate în multe locuri din orașe, dar mai puțin în zonele îndepărtate. Serviciile de schimb valutar sunt disponibile la aeroporturi, bănci și case de schimb valutar.",
+          "Limbă": "Kârgâzul și rusa sunt limbile oficiale. În orașele mari, s-ar putea să găsiți câțiva vorbitori de engleză, în special în zonele turistice, dar în regiunile rurale, este util să cunoașteți câteva expresii de bază în kârgâz sau rusă. O aplicație de traducere sau un manual de fraze poate fi de mare ajutor.",
+          "Sănătate și siguranță": "Kârgâzstanul este în general sigur pentru călători, dar este înțelept să luați măsuri de precauție standard. Bea apă îmbuteliată sau fiartă pentru a evita bolile transmise de apă. Asigurați-vă că aveți o asigurare de călătorie care acoperă sănătatea și accidentele. Serviciile medicale de urgență sunt disponibile în orașe, dar pot fi limitate în zonele rurale.",
+          "Clima și îmbrăcămintea": "Kârgâzstanul are o climă continentală, cu ierni reci și veri fierbinți. La munte, temperaturile pot fi semnificativ mai scăzute, așa că împachetați-vă corespunzător. Se recomandă îmbrăcăminte în straturi, pantofi robusti pentru mers și protecție solară. Iarna, aduceți haine calde, inclusiv o jachetă de bună calitate, mănuși și pălării.",
+          "Electricitate și prize": "Tensiunea standard este de 220 V, iar frecvența este de 50 Hz. Ștecherele și prizele de alimentare sunt de tip C și F. Este recomandabil să aduceți un adaptor de călătorie universal pentru a vă asigura că vă puteți încărca dispozitivele electronice."
+        },
+        "details": "Pentru informații și sfaturi mai detaliate, consultați ghidurile de călătorie și resursele locale. Bucurați-vă de prima călătorie în Kârgâzstan și creați amintiri de neuitat!"
+      },
+      "TravelPreparation": {
+        "title": "Pregătiți-vă pentru călătoria dvs. în Kârgâzstan",
+        "Description": "Asigurați-vă o călătorie lină și plăcută în Kârgâzstan, având grijă de aceste pregătiri esențiale de călătorie.",
+        "Options": {
+          "Viză și pașaport": "Verificați cerințele pentru viză pentru naționalitatea dvs. și asigurați-vă că pașaportul este valabil pentru cel puțin șase luni după șederea dorită.",
+          "Sănătate și vaccinări": "Consultați-vă furnizorul de asistență medicală pentru orice vaccinuri sau măsuri de precauție necesare pentru a călători în Kârgâzstan.",
+          "Asigurare de călătorie": "Luați în considerare achiziționarea unei asigurări de călătorie pentru a acoperi situațiile de urgență neașteptate, cum ar fi cheltuielile medicale sau anulările de călătorie.",
+          "Contează moneda și bani": "Familiarizați-vă cu moneda locală (Kyrgyzstani Som) și schimbați niște bani înainte de călătorie. ATM-urile sunt disponibile în marile orașe.",
+          "Limbă": "În timp ce rusă și kârgâză sunt limbile oficiale, engleza nu este vorbită pe scară largă. Luați în considerare să învățați câteva fraze de bază în rusă sau kârgâză.",
+          "Vremea și îmbrăcămintea": "Împachetați îmbrăcăminte adecvată pentru condițiile meteorologice în timpul vizitei dumneavoastră. Kârgâzstan se confruntă cu veri fierbinți și ierni reci, așa că aduceți straturi.",
+          "Siguranță și securitate": "Rămâneți la curent cu situația actuală din Kârgâzstan și fiți precauți, în special în zonele îndepărtate. Păstrați-vă bunurile în siguranță și fiți conștienți de împrejurimile dvs.",
+          "Eticheta culturală": "Respectați obiceiurile și tradițiile locale, cum ar fi să vă scoateți pantofii înainte de a intra în casa cuiva și să cereți permisiunea înainte de a fotografia oamenii."
+        },
+        "details": "Pentru sfaturi suplimentare de călătorie și sfaturi specifice călătoriei dvs. în Kârgâzstan, consultați ghidul nostru de călătorie cuprinzător."
+      }
+    },
+    "sights": {
+      "name": "Obiective turistice",
+      "title": "Locuri de vizitat în Kârgâzstan",
+      "subtitle": "Unde să mergi în Kârgâzstan?  În plus, rămâi informat despre condițiile meteorologice din orașe și centre regionale pentru a profita la maximum de călătoria ta confortabilă și pentru a fi pregătit pentru vremea în continuă schimbare a acestei țări frumoase.",
+      "description": "Găsiți locuri de vizitat în Kârgâzstan, de la lacuri montane și parcuri naționale până la orașe și situri istorice. Alegeți o regiune pentru a începe explorarea.",
+      "keywords": "Locuri din Kârgâzstan, călătorii în Kârgâzstan, explorați Kârgâzstan, destinații din Kârgâzstan, turism Kârgâzstan, locuri de vizitat obligatoriu în Kârgâzstan, atracții de top Kârgâzstan, peisaje Kârgâzstan, situri culturale Kârgâzstan, minuni naturale Kârgâzstan, cele mai bune locuri de vizitat în Kârgâzstan",
+      "sights": "Unde să mergi!",
+      "must-see": {
+        "subtitle": "Destinații obligatorii ale Kârgâzstanului pe regiuni",
+        "description1": "Kârgâzstanul este cunoscut pentru peisajele sale naturale frumoase, de la munți maiestuoși până la lacuri senine. Iată câteva dintre cele mai frumoase locuri din fiecare regiune:",
+        "chuyregion": "Regiunea Chuy",
+        "alaarchatitle": "Parcul Național Ala Archa:",
+        "alaarchadescription": "Oferă vederi uluitoare și trasee de drumeții.",
+        "buranatitle": "Turnul Burana:",
+        "buranadescription": "Un minaret istoric cu vederi pitorești la vale.",
+        "issykulregion": "Regiunea Issyk-Kul",
+        "lakeissykkultitle": "Lacul Issyk-Kul:",
+        "lakeissykkuldescription": "Un mare lac salin cu plaje și stațiuni.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Renumit pentru formațiunile sale roșii de stâncă.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Poartă către situri montane frumoase, cum ar fi Altyn Arashan.",
+        "narynregion": "Regiunea Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Un caravanserai istoric de piatră într-o vale pitorească.",
+        "sonkultitle": "Lacul Son-Kul:",
+        "sonkuldescription": "Un lac de mare altitudine cu apusuri uimitoare.",
+        "jalalabadregion": "Regiunea Jalal-Abad",
+        "sarychelextitle": "Rezervația Biosferei Sary-Chelek:",
+        "sarychelekdescription": "Oferă lacuri și păduri curate.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Adăpostește cea mai mare pădure de nuci și cascade frumoase.",
+        "oshregion": "Regiunea Osh",
+        "sulaymanmountaintitle": "Muntele Sulayman:",
+        "sulaymanmountaindescription": "Un munte sacru cu vederi panoramice.",
+        "alayvalleytitle": "Valea Alay:",
+        "alayvalleydescription": "Oferă vederi spectaculoase ale Munților Pamir.",
+        "batkenregion": "Regiunea Batken",
+        "batkenvalleytitle": "Valea Batken:",
+        "batkenvalleydescription": "Cunoscut pentru caisele și formațiunile stâncoase unice.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Prezintă văi frumoase ale râurilor.",
+        "talasregion": "Regiunea Talas",
+        "beshtashtitle": "Parcul Național Besh-Tash:",
+        "beshtashdescription": "Are râuri pitorești și pajiști alpine.",
+        "manasordotitle": "Complexul Manas Ordo:",
+        "manasordodescription": "Un site cultural dedicat eroului Manas."
+      },
+      "highlights": [
+        "Cum să ajungi la",
+        "Transport",
+        "Unde să stați",
+        "Ce să mănânci",
+        "Ce să fac",
+        "Sezon"
+      ]
+    },
+    "tours": {
+      "name": "Tururi",
+      "title": "Circuite în Kârgâzstan",
+      "subtitle": "Tururi private și pentru grupuri mici în Kârgâzstan",
+      "description": "Descoperă trasee de drumeție, călărie, excursii culturale și tururi cu mașina prin Kârgâzstan. Alătură-te unui grup mic sau alege un tur privat.",
+      "description1": "O excursie poate include trasee montane, o noapte într-un cort tradițional de pâslă sau câteva zile lângă Issyk-Kul. Alegeți un traseu care se potrivește intereselor dvs. și timpului de care aveți la dispoziție.\n\nEchipa noastră vă poate ajuta cu ghizi, transport și cazare. Luați legătura pentru a discuta datele dvs., dimensiunea grupului și ritmul preferat.",
+      "keywords": "Tururi Kârgâzstan, Cele mai bune excursii Kârgâzstan, Excursii în Kârgâzstan, Cele mai bune companii de turism Kârgâzstan, Agenție de turism în Kârgâzstan, excursii de aventură Kârgâzstan, excursii ghidate Kârgâzstan, excursii culturale Kârgâzstan, excursii de drumeții Kârgâzstan, excursii de călărie Kârgâzstan, experiență Kârgâzstan Kârgâzstan, experiență Kârgâzstan Kârgâzstan pachete, cele mai bune tururi în Kârgâzstan, explorați Kârgâzstan prin tururi",
+      "tourPage": {
+        "level": "Nivel",
+        "duration": "Durată",
+        "price": "Preţ",
+        "day": "Zi",
+        "days": "Zile",
+        "details": "Detalii",
+        "things": "Activități",
+        "places": "Locuri vizitate",
+        "addInfo": "Informații suplimentare",
+        "includings": "Inclus în preț",
+        "excludings": "Nu este inclus în preț",
+        "from": "De la",
+        "note": "Nota",
+        "person": "Persoană",
+        "persons": "Persoane",
+        "andMore": "si mai mult"
+      },
+      "TourPreparation": {
+        "title": "Esențiale pentru călătoria în Kârgâzstan",
+        "Description": "O listă cuprinzătoare de articole esențiale de adus în călătoria dvs. în Kârgâzstan pentru a vă asigura confort, siguranță și pregătire pentru diferite condiții meteorologice și activități în aer liber.",
+        "Options": {
+          "Pantofi": "Luați pantofi comozi pentru drumeții pentru tururile orașului, pantofi de drumeții robusti pentru drumeții moderate, cizme de drumeție durabile pentru drumeții și sandale cu uscare rapidă ca o pereche suplimentară.",
+          "Pălărie": "Nu uitați să împachetați o pălărie cu boruri largi sau o șapcă de soare cu clapă la gât pentru a vă proteja de soarele intens la altitudini mari.",
+          "Cremă UV": "Nu uitați să împachetați protecție solară cu SPF mare, cu spectru larg, pentru a vă proteja pielea de razele UV intense, în special la altitudini mai mari din Kârgâzstan.",
+          "Îmbrăcăminte": "Împachetați straturi de îmbrăcăminte adecvate pentru diferite temperaturi și condiții meteorologice, având în vedere că temperaturile pot varia semnificativ odată cu schimbările de altitudine. Fiți pregătiți pentru zăpadă sau ploaie, mai ales în zonele muntoase.",
+          "Ajutor medical": "Nu uitați să purtați ajutoare medicale personale, cum ar fi medicamentele necesare, aparate de protecție, analgezice și orice articole specifice pentru afecțiuni medicale preexistente, ca măsuri de precauție."
+        },
+        "overview": "Întreabă-ne ce să aducem pentru traseul tău și sezon."
+      }
+    },
+    "articles": {
+      "name": "Articole",
+      "title": "Cultura și natura Kârgâzstanului",
+      "description": "Descoperă oamenii, tradițiile, bucătăria și peisajele Kârgâzstanului.",
+      "keywords": [
+        "cultura kirghiza",
+        "tradiții kârgâze",
+        "natura kirghizei",
+        "Burkut vânătoare",
+        "Kok-boru",
+        "câini Alabai",
+        "Taigan",
+        "Istoria Kârgâzilor",
+        "cultura din Asia Centrală",
+        "Moștenirea nomadică",
+        "Explorarea culturală",
+        "Sporturi tradiționale",
+        "Ogii din Kârgâzstan",
+        "Experiențe culturale",
+        "Aventură în Kârgâzstan",
+        "Rasele de patrimoniu",
+        "Tradiții culturale",
+        "Experiențe unice",
+        "Stilul de viață kârgâz"
+      ]
+    },
+    "about": {
+      "title": "Despre noi",
+      "subtitle": "Cine suntem?",
+      "description": "Te ajutăm să-ți planifici călătoria în Kârgâzstan. Spune-ne când vrei să vii și ce te interesează, ca să alegem împreună traseul, ghizii și cazarea.",
+      "keywords": "Despre noi, Povestea noastră, Pasionați din Kârgâzstan, Pasiune de călătorie, Experiențe excepționale, Echipa, Valori, Misiune",
+      "buttons": {
+        "our_team": "Echipa noastră",
+        "our_clients": "Clienții noștri",
+        "contact_us": "Contactaţi-ne"
+      }
+    },
+    "info": {
+      "seen": "Vizite: ",
+      "created": "Creat: ",
+      "modified": "Ultima modificare: "
+    },
+    "download": {
+      "text": "Păstrați hărțile, locurile și informațiile de călătorie la îndemână cu aplicațiile noastre mobile."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Linkuri utile",
+          "links": [
+            {
+              "text": "Acasă",
+              "url": "/"
+            },
+            {
+              "text": "Obiective turistice",
+              "url": "/places"
+            },
+            {
+              "text": "Tururi",
+              "url": "/tours"
+            },
+            {
+              "text": "Transferuri aeroport",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Confidențialitate și legalitate",
+          "links": [
+            {
+              "text": "Despre noi",
+              "url": "/about"
+            },
+            {
+              "text": "Contactaţi-ne",
+              "url": "/contact"
+            },
+            {
+              "text": "Politica de confidențialitate",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Informații de contact",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Conturi sociale",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "dezvoltator",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,9 +1,11 @@
 import type { Locale } from "@/lib/i18n.config";
 import english from "./en.json";
+import { localeMetadata } from "@/lib/localeMetadata";
 
 export type TransferMessages = Record<keyof typeof english, string>;
 export type Translate = (text: string, values?: Record<string, string | number>) => string;
 export const transferLanguages: Record<Locale, { tag: string; name: string; og: string }> = {
+  ...Object.fromEntries(Object.entries(localeMetadata).map(([code, info]) => [code, { tag: info.tag, name: info.nativeName, og: info.og }])) as Record<Locale, { tag: string; name: string; og: string }>,
   en: { tag: "en", name: "English", og: "en_US" },
   it: { tag: "it", name: "Italiano", og: "it_IT" },
   fr: { tag: "fr", name: "Français", og: "fr_FR" },

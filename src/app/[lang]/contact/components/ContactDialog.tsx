@@ -1,4 +1,5 @@
 'use client'
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 
 import { useEffect, useRef, useState, useCallback } from 'react'
@@ -62,7 +63,7 @@ export default function ContactDialog({ lang, title, phone, email, address }: { 
   }, [open])
 
   return (
-    <dialog ref={dialogRef} className={styles.dialog} dir={lang === 'ae' ? 'rtl' : 'ltr'} aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-intro" onCancel={event => { event.preventDefault(); close() }} onClick={event => {
+    <dialog ref={dialogRef} className={styles.dialog} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-intro" onCancel={event => { event.preventDefault(); close() }} onClick={event => {
       if (event.target !== event.currentTarget) return
       const bounds = event.currentTarget.getBoundingClientRect()
       if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) close()

@@ -1,0 +1,57 @@
+import type { StaticImageData } from 'next/image';
+import type { Locale } from './i18n.config';
+import en from '../../public/en.png';
+import it from '../../public/it.png';
+import fr from '../../public/fr.png';
+import de from '../../public/de.png';
+import es from '../../public/es.png';
+import jp from '../../public/jp.png';
+import kr from '../../public/kr.png';
+import ae from '../../public/ae.png';
+import cn from '../../public/cn.png';
+import ru from '../../public/ru.png';
+import uz from '../../public/uz.png';
+import kz from '../../public/kz.png';
+import kg from '../../public/kg.png';
+import tr from '../../public/tr.png';
+import hi from '../../public/hi.png';
+import ur from '../../public/ur.png';
+import tg from '../../public/tg.png';
+import ms from '../../public/ms.png';
+import fa from '../../public/fa.png';
+import az from '../../public/az.png';
+import uk from '../../public/uk.png';
+import pl from '../../public/pl.png';
+import nl from '../../public/nl.png';
+import he from '../../public/he.png';
+import cs from '../../public/cs.png';
+import pt from '../../public/pt.png';
+import id from '../../public/id.png';
+import th from '../../public/th.png';
+import bn from '../../public/bn.png';
+import ne from '../../public/ne.png';
+import vi from '../../public/vi.png';
+import ka from '../../public/ka.png';
+import hy from '../../public/hy.png';
+import mn from '../../public/mn.png';
+import be from '../../public/be.png';
+import ro from '../../public/ro.png';
+import sv from '../../public/sv.png';
+import nb from '../../public/nb.png';
+import da from '../../public/da.png';
+import fi from '../../public/fi.png';
+import el from '../../public/el.png';
+import hr from '../../public/hr.png';
+import sr from '../../public/sr.png';
+import sk from '../../public/sk.png';
+import sl from '../../public/sl.png';
+import bg from '../../public/bg.png';
+import bs from '../../public/bs.png';
+import mk from '../../public/mk.png';
+import sq from '../../public/sq.png';
+import lt from '../../public/lt.png';
+
+// Static imports give refreshed artwork a new URL, including optimized image caches.
+export const flagAssets: Record<Locale, StaticImageData> = {
+  en, it, fr, de, es, jp, kr, ae, cn, ru, uz, kz, kg, tr, hi, ur, tg, ms, fa, az, uk, pl, nl, he, cs, pt, id, th, bn, ne, vi, ka, hy, mn, be, ro, sv, nb, da, fi, el, hr, sr, sk, sl, bg, bs, mk, sq, lt
+};

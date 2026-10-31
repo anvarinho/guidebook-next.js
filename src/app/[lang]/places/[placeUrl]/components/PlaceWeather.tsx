@@ -1,3 +1,5 @@
+
+import additionalLabels from '@/translations/ui/app-lang-places-placeUrl-components-PlaceWeather-tsx-labels.json';
 import type { CSSProperties } from "react";
 import type { Locale } from '@/lib/i18n.config';
 import getPlaceWeather from '@/lib/getPlaceWeather';
@@ -6,6 +8,7 @@ import { PlacesReveal } from '../../components/PlacesMotion';
 import styles from '../page.module.css';
 
 const labels: Record<Locale, string> = {
+    ...additionalLabels as Record<Locale, string>,
   en: 'Local weather', ru: 'Погода в этом месте', fr: 'Météo locale', de: 'Wetter vor Ort', es: 'Tiempo local',
   it: 'Meteo locale', jp: '現地の天気', kr: '현지 날씨', cn: '当地天气', ae: 'الطقس المحلي',
 };

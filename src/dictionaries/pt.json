@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "pt-PT",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Carregando...",
+    "contactButton": "Alguma dúvida?",
+    "navigation": [
+      {
+        "text": "Início",
+        "url": "/"
+      },
+      {
+        "text": "Atrações",
+        "url": "/places"
+      },
+      {
+        "text": "Passeios",
+        "url": "/tours"
+      },
+      {
+        "text": "Artigos",
+        "url": "/articles"
+      },
+      {
+        "text": "Sobre nós",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Guia de viagem do Quirguistão",
+      "description": "Percorra trilhos de montanha, nade no Issyk-Kul ou passe uma noite numa iurta com uma família local. Escolha o percurso que mais lhe agrada.",
+      "subtitle": "Guia de viagem do Quirguistão",
+      "subtitle1": "Por que visitar o Quirguistão?",
+      "subtitle2": "Explorando o ar livre",
+      "subtitle3": "Exploração sem fim",
+      "subtitle4": "Planeje sua viagem",
+      "subtitle5": "Lugares imperdíveis no Quirguistão",
+      "paragraph": "Este belo país sem litoral, anteriormente parte da União Soviética, está rapidamente a tornar-se num dos destinos turísticos mais populares da Ásia Central. A indústria turística do Quirguizistão está a crescer rapidamente, oferecendo aos viajantes a oportunidade de explorar um dos países mais espectaculares do mundo.",
+      "paragraph1": "O Quirguistão tem visto um aumento dramático no turismo nos últimos anos, à medida que os aventureiros se aglomeram para caminhadas, acampamentos e passeios a cavalo através de suas paisagens deslumbrantes. Sendo a primeira nação da Ásia Central a flexibilizar as suas políticas de vistos – oferecendo entrada sem visto para a maioria das nações ocidentais e desenvolvidas – desenvolveu-se uma forte rede de turismo.",
+      "paragraph2": "Desde iniciativas de Turismo de Base Comunitária (CBT) em todo o país até pousadas e guias independentes, existem inúmeras maneiras de vivenciar a paisagem deslumbrante do Quirguistão. Os caminhantes podem embarcar em caminhadas inspiradoras de Karakol, Kochkor, Arslanbob e até mesmo da capital, Bishkek. Observe que caminhar aqui geralmente requer um nível razoável de condicionamento físico, já que muitas trilhas oferecem mais do que apenas um passeio tranquilo. A maioria das caminhadas varia de 1 a 5 dias, embora aventuras mais longas estejam disponíveis.\r\n\r\nPara quem quer salvar as pernas, andar a cavalo é uma alternativa popular. Faça a caminhada a cavalo mais espetacular do país até Song Kol ou passe alguns dias relaxando e nadando no belo Lago Issyk-Kul.",
+      "paragraph3": "Com inúmeros destinos, caminhadas e trilhas incomuns, as oportunidades de exploração são ilimitadas. Esteja você em busca de aventura ou relaxamento, o Quirguistão tem algo para todos.",
+      "paragraph4": "Para obter informações mais específicas sobre atrações, como chegar lá e nos arredores, além de outras dicas de viagem, leia nosso guia de viagens completo no Quirguistão. Aprimore sua experiência de viagem com aplicativos recomendados para navegação, tradução e informações locais para aproveitar ao máximo sua viagem.\r\n\r\nAproveite sua viagem e experimente a beleza e a cultura únicas do Quirguistão",
+      "keywords": "Guia turístico do Quirguistão, guia turístico, Conveniência de viagem, Atrações locais, Serviços turísticos, Dicas de viagem do Quirguistão, Experiências culturais, Planejamento de turismo, Passeios turísticos, Viagens de aventura, Passeios convenientes, Guia da cidade de Bishkek, Atrações turísticas do Quirguistão, Ponto turístico, Lugares perto de mim para passear, Lugares para visitar perto de mim, Locais turísticos, Destino turístico, Destinos bonitos do mundo, Os locais mais bonitos do mundo, Os locais mais bonitos do mundo, Viajar com guia, Guia de viagem, Lugares bonitos, Bishkek no Quirguistão, cidade de Bishkek, turista e guia, atrações turísticas de RP, atrações próximas e como executá-lo",
+      "button": "Vamos descobrir!",
+      "button1": "Para onde ir!",
+      "button2": "O que fazer!",
+      "button3": "leia mais",
+      "button4": "Nossos passeios",
+      "Transportation": {
+        "title": "Transporte no Quirguistão | Guia de viagem",
+        "Description": "Locomover-se pelo Quirguistão pode ser uma aventura por si só. Aqui está o que você precisa saber:",
+        "Options": {
+          "Voos Domésticos": "Para distâncias mais longas, especialmente se o tempo for limitado, voos domésticos estão disponíveis entre grandes cidades como Bishkek, Osh e Tamchy (perto de Cholpon-Ata na região de Issyk-Kul). Verifique as companhias aéreas para horários e reservas.",
+          "Marshrutkas (microônibus)": "Estes são o modo de transporte mais comum e económico para distâncias curtas e médias. Eles seguem rotas fixas entre cidades e vilas e são muito populares entre os habitantes locais.",
+          "Táxis Compartilhados": "Os táxis compartilhados oferecem uma alternativa mais rápida, mas um pouco mais cara, aos marshrutkas. Eles normalmente saem quando estão cheios e os preços podem ser negociados.",
+          "Aluguel de carros": "Para maior flexibilidade, alugar um carro é uma boa opção. As estradas em áreas rurais podem ser acidentadas, por isso é recomendado um 4x4. Certifique-se de ter uma carteira de motorista internacional.",
+          "Trens": "Serviços de trem limitados estão disponíveis, principalmente conectando Bishkek a Balykchy, perto do Lago Issyk-Kul. É uma rota panorâmica, mas mais lenta que a viagem rodoviária.",
+          "Ônibus": "Ônibus regulares operam nas principais cidades, oferecendo uma maneira confortável de viajar. No entanto, podem não cobrir áreas remotas.",
+          "Pegando carona": "é uma prática comum nas zonas rurais do Quirguizistão, onde as opções formais de transporte podem ser limitadas. É relativamente seguro e culturalmente aceito, mas tenha cuidado e use seu bom senso ao aceitar caronas de estranhos."
+        },
+        "details": "Para obter informações detalhadas sobre as opções de transporte, visite o guia fornecido."
+      },
+      "Accommodations": {
+        "title": "Acomodações em Quirguistão | Guia de viagem",
+        "Description": "De pousadas aconchegantes a resorts de luxo, o Quirguistão oferece uma variedade de opções de acomodação para atender às preferências e orçamentos de cada viajante. Aqui estão algumas opções a serem consideradas:",
+        "Options": {
+          "Hotéis": "As principais cidades do Quirguistão, como Bishkek e Osh, possuem uma variedade de hotéis que atendem a diferentes orçamentos e preferências. De redes internacionais a hotéis boutique, você encontrará acomodações confortáveis ​​com comodidades como Wi-Fi, ar-condicionado e opções de refeições no local.",
+          "Pensões": "Para uma experiência mais autêntica, considere ficar em uma pousada administrada por famílias locais. Estes estabelecimentos acolhedores oferecem uma recepção calorosa e uma oportunidade de experimentar a hospitalidade do Quirguistão. Muitas vezes você terá a oportunidade de saborear refeições caseiras e aprender sobre os costumes e tradições locais.",
+          "Yurts": "Nas zonas rurais e nas regiões montanhosas, as yurts tradicionais proporcionam uma experiência de alojamento única. Estas estruturas portáteis, semelhantes a tendas, oferecem acomodações básicas mas confortáveis, muitas vezes com vistas deslumbrantes sobre as paisagens circundantes. As estadias em Yurt podem incluir refeições e atividades culturais.",
+          "Casas de família": "Experimente a vida com uma família quirguiz optando por uma casa de família. Você terá a oportunidade de conviver com os habitantes locais, compartilhar refeições e participar de atividades diárias. As casas de família oferecem um intercâmbio cultural autêntico e uma visão do modo de vida tradicional do Quirguistão.",
+          "Eco-lodges": "Para viajantes ecologicamente conscientes, os alojamentos ecológicos oferecem opções de acomodação sustentáveis ​​em ambientes naturais. Esses alojamentos priorizam a conservação ambiental e muitas vezes oferecem atividades como caminhadas, observação de pássaros e envolvimento comunitário.",
+          "Camping": "é uma opção popular para viajantes que buscam aventura e solidão. Quer você monte uma barraca em uma área de acampamento designada ou um acampamento selvagem em locais remotos, certifique-se de seguir os princípios de Não Deixar Rastros e obter todas as licenças necessárias."
+        },
+        "details": "Para recomendações específicas e opções de reserva, consulte sites de viagens, plataformas de reservas online e escritórios de turismo locais."
+      },
+      "Food": {
+        "title": "Comida no Quirguistão | Guia de viagem",
+        "Description": "Explorar a culinária do Quirguistão é parte integrante da experiência de viagem. Aqui está o que você precisa saber:",
+        "Options": {
+          "Cozinha Tradicional": "A culinária quirguiz é rica em sabor e herança, sendo pratos tradicionais como beshbarmak (carne e macarrão), manty (bolinhos) e laghman (sopa de macarrão) básicos. Não deixe de experimentar o leite de égua fermentado conhecido como kumis, uma bebida popular.",
+          "Influência Nômade": "Refletindo a sua herança nómada, a cozinha quirguiz apresenta frequentemente pratos saudáveis ​​feitos com ingredientes como carne (especialmente carne de cordeiro e cavalo), produtos lácteos (como kymyz e airan) e grãos (incluindo arroz e trigo). Yurts, tradicionais tendas nômades, podem oferecer experiências gastronômicas autênticas em áreas rurais.",
+          "Mercados Locais": "Visite mercados locais como Osh Bazaar em Bishkek para provar uma variedade de pratos e lanches do Quirguistão, incluindo shashlik (carne grelhada no espeto), samsa (doces salgados) e plov (pilaf). Esses mercados também oferecem a oportunidade de comprar frutas frescas, nozes e especiarias.",
+          "Casas de chá e cafés": "Casas de chá (chaykhana) e cafés são onipresentes no Quirguistão, servindo chá (chai) e café (kofe) junto com doces, pão e refeições leves. Aproveite o ambiente descontraído e a hospitalidade enquanto saboreia guloseimas tradicionais do Quirguistão, como baursak (massa frita) e kurut (bolas de iogurte secas).",
+          "Cozinha Internacional": "Em áreas urbanas como Bishkek, você encontrará uma grande variedade de cozinhas internacionais, incluindo russa, chinesa, coreana e europeia. Explore restaurantes, bistrôs e praças de alimentação da moda para provar sabores globais junto com a hospitalidade do Quirguistão.",
+          "Comida de rua": "Aventure-se pelas ruas do Quirguistão para descobrir uma variedade de vendedores de comida de rua que oferecem lanches rápidos e saborosos. Experimente comidas de rua populares, como somsas (tortas fritas ou assadas recheadas com carne ou vegetais), macarrão laghman frito e espiga de milho grelhada.",
+          "Passeios gastronômicos e aulas de culinária": "Embarque em passeios gastronômicos ou participe de aulas de culinária para se aprofundar na culinária e nas tradições culinárias do Quirguistão. Aprenda a preparar pratos tradicionais, visite fazendas e produtores locais e mergulhe na vibrante cena culinária do Quirguistão."
+        },
+        "details": "Para obter mais informações sobre a culinária e opções gastronômicas do Quirguistão, consulte o guia fornecido."
+      },
+      "Safety": {
+        "title": "Segurança no Quirguistão | Guia de viagem",
+        "Description": "Viajar para o Quirguistão geralmente é seguro, mas é essencial estar ciente dos riscos potenciais e tomar as precauções necessárias. Aqui está o que você precisa saber:",
+        "Options": {
+          "Estabilidade política": "O Quirguistão sofreu instabilidade política no passado, incluindo protestos e distúrbios ocasionais. Embora a maioria das áreas turísticas permaneça inalterada, mantenha-se informado sobre os desenvolvimentos locais e evite grandes reuniões ou manifestações.",
+          "Crime": "Podem ocorrer pequenos crimes, como furtos e furtos, especialmente em áreas movimentadas e pontos turísticos. Mantenha seus pertences seguros e esteja atento.",
+          "Terrorismo": "A ameaça do terrorismo no Quirguizistão é baixa, mas os viajantes devem permanecer vigilantes, especialmente nas zonas fronteiriças. Siga todos os avisos de viagem emitidos pelo seu governo e mantenha-se informado.",
+          "Riscos Naturais": "O Quirguistão está sujeito a riscos naturais, como terremotos, avalanches e deslizamentos de terra, especialmente em regiões montanhosas. Esteja preparado e siga as orientações de segurança, especialmente ao fazer caminhadas ou atividades ao ar livre.",
+          "Segurança Rodoviária": "As condições das estradas no Quirguistão podem variar e a condução pode ser um desafio, especialmente nas zonas rurais. Tenha cuidado, cumpra as leis de trânsito locais e considere contratar um motorista confiável.",
+          "Riscos para a saúde": "Embora o Quirguistão não represente riscos significativos para a saúde, os viajantes devem estar atualizados sobre as vacinações de rotina e tomar precauções contra doenças transmitidas por alimentos e pela água.",
+          "Doença de altitude": "Os viajantes que visitam áreas de grande altitude devem estar cientes do risco do mal da altitude. Reserve um tempo para se aclimatar e evite atividades físicas extenuantes até que seu corpo se ajuste.",
+          "Seguro de viagem": "É essencial ter um seguro de viagem que cubra despesas médicas, evacuação de emergência e cancelamento/interrupção de viagem. Certifique-se de que sua apólice de seguro inclua cobertura para atividades que você planeja realizar."
+        },
+        "details": "Para obter informações de segurança e conselhos de viagem mais detalhados, consulte fontes oficiais do governo e guias de viagem."
+      },
+      "Prices": {
+        "title": "Preços no Quirguistão | Guia de viagem",
+        "Description": "Compreender o custo de vida e as despesas no Quirguistão pode ajudá-lo a planear o seu orçamento de forma eficaz. Aqui está uma visão geral dos preços de itens e serviços comuns:",
+        "Options": {
+          "Alojamento": "O custo da acomodação no Quirguistão varia dependendo do tipo de hospedagem e localização. Os viajantes com orçamento limitado podem encontrar opções acessíveis, como pensões e albergues, enquanto os hotéis e resorts de luxo atendem àqueles que procuram comodidades de luxo. Os preços variam de US$ 10 por noite para acomodações econômicas a mais de US$ 100 por noite para estabelecimentos de luxo.",
+          "Comida e Jantar": "Jantar fora no Quirguistão geralmente é acessível, especialmente em restaurantes locais e barracas de comida de rua. Pratos tradicionais como beshbarmak e plov são baratos e fartos, normalmente custando entre US$ 3 e US$ 7 por refeição em restaurantes locais. A culinária internacional e as opções gastronômicas requintadas podem ser mais caras, com refeições custando em média US$ 10 a US$ 20 ou mais por pessoa.",
+          "Transporte": "Os custos de transporte no Quirguistão variam dependendo do modo de viagem e da distância. Os voos domésticos entre grandes cidades como Bishkek e Osh podem variar de US$ 50 a US$ 150 ou mais, enquanto táxis compartilhados e marshrutkas (microônibus) oferecem opções econômicas para distâncias mais curtas, normalmente custando US$ 1 a US$ 10 dependendo da rota. Alugar um carro pode custar de US$ 30 a US$ 100 ou mais por dia, dependendo do tipo de veículo e da locadora.",
+          "Atividades e atrações": "O custo das atividades e atrações no Quirguistão varia muito dependendo da experiência. As taxas de entrada em museus, locais históricos e parques nacionais são geralmente acessíveis, variando de US$ 1 a US$ 10 por pessoa. Visitas guiadas, excursões ao ar livre e atividades de aventura como passeios a cavalo e trekking podem incorrer em custos adicionais, com preços variando de acordo com a duração e a complexidade.",
+          "Compras": "As compras no Quirguistão oferecem uma variedade de opções, desde artesanato tradicional e lembranças até produtos modernos e eletrônicos. Os preços variam dependendo do item e da localização, mas a negociação é comum em mercados e bazares. Esteja preparado para negociar o melhor preço, principalmente na compra de tecidos, joias e artesanato.",
+          "Moeda e taxas de câmbio": "A moeda oficial do Quirguistão é o som do Quirguistão (KGS). As taxas de câmbio flutuam, por isso é aconselhável verificar as taxas atuais antes de trocar dinheiro. Os principais cartões de crédito são aceitos nas grandes cidades e áreas turísticas, mas é recomendável levar dinheiro para transações em cidades menores e áreas rurais. (1$ = 85-90 dólares)"
+        },
+        "details": "Para obter informações mais precisas e atualizadas sobre preços no Quirguistão, consulte fontes locais e guias de viagem recentes."
+      },
+      "Travel_Seasons": {
+        "title": "Temporadas de viagem no Quirguistão | Guia de viagem",
+        "Description": "Compreender as estações de viagem no Quirguistão pode ajudá-lo a planejar sua viagem e aproveitar ao máximo sua visita. Aqui está uma visão geral das diferentes estações e o que esperar:",
+        "Options": {
+          "Primavera (março a maio)": "A primavera é uma época linda para visitar o Quirguistão, com a paisagem ganhando vida à medida que as flores desabrocham e os rios enchem com a neve derretida. O clima é ameno, tornando-o ideal para atividades ao ar livre como caminhadas, trekking e passeios a cavalo. No entanto, esteja preparado para pancadas de chuva ocasionais, especialmente em abril e maio.",
+          "Verão (junho a agosto)": "O verão é a alta temporada turística no Quirguistão, com dias longos, temperaturas amenas e céu limpo. É o momento perfeito para aventuras ao ar livre, como acampar, escalar montanhas e explorar lagos alpinos. Festivais e eventos populares acontecem durante esta época, incluindo os Jogos Mundiais Nômades em setembro.",
+          "Outono (setembro a novembro)": "O outono é uma estação deslumbrante no Quirguistão, com paisagens pintadas em tons vibrantes de vermelho, laranja e dourado à medida que as folhas mudam de cor. O clima permanece agradável, sendo um excelente momento para caminhadas, observação de vida selvagem e experiências culturais. Setembro é um mês ideal para visitar os Jogos Mundiais Nômades.",
+          "Inverno (dezembro a fevereiro)": "O inverno transforma o Quirguistão num país das maravilhas do inverno, com montanhas cobertas de neve e lagos congelados criando paisagens deslumbrantes. Embora as temperaturas possam cair abaixo de zero, os entusiastas dos esportes de inverno migram para resorts de esqui como Karakol e Jyrgalan para esquiar, praticar snowboard e patinar no gelo. Fevereiro marca a celebração do tradicional jogo nômade, Kok Boru (Buzkashi)."
+        },
+        "details": "Para obter mais informações sobre atividades, eventos e condições climáticas específicas durante cada estação, consulte guias de viagem e recursos turísticos locais."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Primeira vez no Quirguistão?",
+        "Description": "Se você estiver visitando o Quirguistão pela primeira vez, aqui está um guia completo para ajudá-lo a aproveitar ao máximo sua viagem:",
+        "Options": {
+          "Chegada e locomoção": "A maioria dos viajantes internacionais chega ao Aeroporto Internacional de Manas, em Bishkek. Táxis e ônibus estão prontamente disponíveis para transporte para a cidade. No Quirguistão, você pode usar voos domésticos, ônibus, marshrutkas (microônibus) e táxis compartilhados para se locomover.",
+          "Cartões SIM e Internet": "Ficar conectado no Quirguistão é fácil com um cartão SIM local. Você pode comprar cartões SIM no aeroporto ou nas operadoras de telefonia móvel da cidade. Os principais fornecedores incluem Beeline, O! e Megacom. Certifique-se de que seu telefone esteja desbloqueado antes de comprar um cartão SIM. A cobertura da Internet é geralmente boa nas cidades e vilas, mas pode ser irregular nas áreas rurais.",
+          "Preços da Internet": "Os preços da Internet no Quirguistão são geralmente acessíveis. Um pacote de dados básico de 1 GB pode custar cerca de 100 KGS (aproximadamente US$ 1,20), enquanto pacotes maiores, como 10 GB, podem custar cerca de 500 KGS (aproximadamente US$ 6). Planos de dados ilimitados por um mês podem variar de 800 a 1.500 KGS (aproximadamente US$ 9,50 a US$ 18), dependendo do provedor e da velocidade da conexão.",
+          "Moeda e Pagamentos": "A moeda local é o Som do Quirguistão (KGS). Caixas eletrônicos estão disponíveis nas principais cidades, mas é aconselhável levar dinheiro nas áreas rurais. Cartões de crédito e débito são aceitos em muitos lugares das cidades, mas menos em áreas remotas. Os serviços de câmbio estão disponíveis em aeroportos, bancos e casas de câmbio.",
+          "Linguagem": "O Quirguistão e o Russo são as línguas oficiais. Nas grandes cidades, você pode encontrar alguns falantes de inglês, especialmente em áreas turísticas, mas nas regiões rurais é útil conhecer algumas frases básicas do Quirguistão ou do Russo. Um aplicativo de tradução ou livro de frases pode ser muito útil.",
+          "Saúde e Segurança": "O Quirguistão é geralmente seguro para os viajantes, mas é aconselhável tomar as precauções padrão. Beba água engarrafada ou fervida para evitar doenças transmitidas pela água. Certifique-se de ter um seguro de viagem que cubra saúde e acidentes. Os serviços médicos de emergência estão disponíveis nas cidades, mas podem ser limitados nas zonas rurais.",
+          "Clima e Vestuário": "O Quirguistão tem um clima continental com invernos frios e verões quentes. Nas montanhas, as temperaturas podem ser significativamente mais baixas, então faça as malas adequadamente. Roupas em camadas, sapatos resistentes e proteção solar são recomendados. No inverno, leve roupas quentes, incluindo jaqueta, luvas e chapéus de boa qualidade.",
+          "Eletricidade e Plugues": "A tensão padrão é 220 V e a frequência é 50 Hz. Os plugues e tomadas são do tipo C e F. É aconselhável trazer um adaptador universal de viagem para garantir que você possa carregar seus dispositivos eletrônicos."
+        },
+        "details": "Para obter informações e dicas mais detalhadas, consulte guias de viagem e recursos locais. Aproveite sua primeira viagem ao Quirguistão e crie lembranças inesquecíveis!"
+      },
+      "TravelPreparation": {
+        "title": "Prepare-se para sua viagem ao Quirguistão",
+        "Description": "Garanta uma viagem tranquila e agradável ao Quirguistão cuidando desses preparativos essenciais para a viagem.",
+        "Options": {
+          "Visto e Passaporte": "Verifique os requisitos de visto para a sua nacionalidade e certifique-se de que o seu passaporte seja válido por pelo menos seis meses além da estadia pretendida.",
+          "Saúde e Vacinas": "Consulte o seu médico para obter informações sobre as vacinas ou precauções de saúde necessárias ao viajar para o Quirguistão.",
+          "Seguro de viagem": "Considere adquirir um seguro de viagem para cobrir emergências inesperadas, como despesas médicas ou cancelamentos de viagens.",
+          "Moeda e dinheiro são importantes": "Familiarize-se com a moeda local (Som do Quirguistão) e troque algum dinheiro antes da sua viagem. Caixas eletrônicos estão disponíveis nas principais cidades.",
+          "Linguagem": "Embora o russo e o quirguiz sejam as línguas oficiais, o inglês não é amplamente falado. Considere aprender algumas frases básicas em russo ou quirguiz.",
+          "Clima e roupas": "Leve roupas adequadas às condições climáticas durante sua visita. O Quirguistão tem verões quentes e invernos frios, então traga camadas.",
+          "Segurança e proteção": "Mantenha-se informado sobre a situação atual no Quirguistão e tenha cautela, especialmente em áreas remotas. Mantenha seus pertences seguros e esteja atento ao que está ao seu redor.",
+          "Etiqueta Cultural": "Respeite os costumes e tradições locais, como tirar os sapatos antes de entrar na casa de alguém e pedir permissão antes de tirar fotos de pessoas."
+        },
+        "details": "Para dicas de viagem adicionais e conselhos específicos para sua viagem ao Quirguistão, consulte nosso guia de viagem completo."
+      }
+    },
+    "sights": {
+      "name": "Atrações",
+      "title": "Locais a visitar no Quirguistão",
+      "subtitle": "Para onde ir no Quirguistão?  Além disso, mantenha-se informado sobre as condições climáticas nas cidades e centros regionais para aproveitar ao máximo sua viagem com conforto e estar preparado para as constantes mudanças climáticas neste belo país.",
+      "description": "Encontre lugares para visitar em todo o Quirguistão, desde lagos de montanha e parques nacionais até cidades e locais históricos. Escolha uma região para começar a explorar.",
+      "keywords": "Lugares no Quirguistão, viagens no Quirguistão, explorar o Quirguistão, destinos no Quirguistão, turismo no Quirguistão, lugares imperdíveis no Quirguistão, principais atrações no Quirguistão, paisagens do Quirguistão, locais culturais Quirguistão, maravilhas naturais no Quirguistão, melhores lugares para visitar no Quirguistão",
+      "sights": "Para onde ir!",
+      "must-see": {
+        "subtitle": "Destinos imperdíveis do Quirguistão por regiões",
+        "description1": "O Quirguistão é conhecido pelas suas belas paisagens naturais, desde montanhas majestosas a lagos serenos. Aqui estão alguns dos lugares mais bonitos de cada região:",
+        "chuyregion": "Região do Chuy",
+        "alaarchatitle": "Parque Nacional Ala Archa:",
+        "alaarchadescription": "Oferece vistas deslumbrantes e trilhas para caminhadas.",
+        "buranatitle": "Torre Burana:",
+        "buranadescription": "Um minarete histórico com vistas panorâmicas do vale.",
+        "issykulregion": "Região de Issyk-Kul",
+        "lakeissykkultitle": "Lago Issyk-Kul:",
+        "lakeissykkuldescription": "Um grande lago salino com praias e resorts.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Famosa por suas formações rochosas vermelhas.",
+        "karakoltitle": "Caracol:",
+        "karakoldescription": "Porta de entrada para belos locais montanhosos como Altyn Arashan.",
+        "narynregion": "Região de Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Um caravançarai de pedra histórico em um vale pitoresco.",
+        "sonkultitle": "Lago Son-Kul:",
+        "sonkuldescription": "Um lago de grande altitude com pôr do sol deslumbrante.",
+        "jalalabadregion": "Região de Jalal-Abad",
+        "sarychelextitle": "Reserva da Biosfera Sary-Chelek:",
+        "sarychelekdescription": "Apresenta lagos e florestas cristalinas.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Lar da maior floresta de nogueiras e belas cachoeiras.",
+        "oshregion": "Região de Osh",
+        "sulaymanmountaintitle": "Montanha Sulayman:",
+        "sulaymanmountaindescription": "Uma montanha sagrada com vistas panorâmicas.",
+        "alayvalleytitle": "Vale Alay:",
+        "alayvalleydescription": "Oferece vistas espetaculares das Montanhas Pamir.",
+        "batkenregion": "Região de Batken",
+        "batkenvalleytitle": "Vale Batken:",
+        "batkenvalleydescription": "Conhecida por seus damasqueiros e formações rochosas únicas.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Apresenta belos vales fluviais.",
+        "talasregion": "Região de Talas",
+        "beshtashtitle": "Parque Nacional Besh-Tash:",
+        "beshtashdescription": "Possui rios pitorescos e prados alpinos.",
+        "manasordotitle": "Complexo Manas Ordo:",
+        "manasordodescription": "Um site cultural dedicado ao herói Manas."
+      },
+      "highlights": [
+        "Como chegar",
+        "Transporte",
+        "Onde ficar",
+        "O que comer",
+        "O que fazer",
+        "Temporada"
+      ]
+    },
+    "tours": {
+      "name": "Passeios",
+      "title": "Viagens pelo Quirguistão",
+      "subtitle": "Excursões privadas e para pequenos grupos no Quirguistão",
+      "description": "Descubra percursos a pé, a cavalo, culturais e de carro pelo Quirguistão. Viaje num pequeno grupo ou escolha um circuito privado de acordo com os seus interesses.",
+      "description1": "Uma viagem pode incluir trilhas nas montanhas, uma noite em uma tradicional tenda de feltro ou alguns dias ao lado de Issyk-Kul. Escolha um percurso que se adapte aos seus interesses e ao tempo de que dispõe.\n\nNossa equipe pode ajudar com guias, transporte e hospedagem. Entre em contato para discutir suas datas, tamanho do grupo e ritmo preferido.",
+      "keywords": "Passeios no Quirguistão, Melhores passeios no Quirguistão, Viagens no Quirguistão, Melhores empresas de passeios no Quirguistão, Agência de viagens no Quirguistão, passeios de aventura no Quirguistão, visitas guiadas no Quirguistão, passeios culturais no Quirguistão, passeios de trekking no Quirguistão, passeios a cavalo no Quirguistão, experiências nômades no Quirguistão, pacotes de viagens no Quirguistão, melhores passeios no Quirguistão, explorar o Quirguistão através de passeios",
+      "tourPage": {
+        "level": "Nível",
+        "duration": "Duração",
+        "price": "Preço",
+        "day": "Dia",
+        "days": "Dias",
+        "details": "Detalhes",
+        "things": "Atividades",
+        "places": "Locais visitados",
+        "addInfo": "Informações adicionais",
+        "includings": "Incluído no preço",
+        "excludings": "Não incluído no preço",
+        "from": "A partir de",
+        "note": "Observação",
+        "person": "Pessoa",
+        "persons": "Pessoas",
+        "andMore": "e mais"
+      },
+      "TourPreparation": {
+        "title": "Fundamentos para viajar no Quirguistão",
+        "Description": "Uma lista abrangente de itens essenciais para levar em sua viagem ao Quirguistão para garantir conforto, segurança e preparação para diversas condições climáticas e atividades ao ar livre.",
+        "Options": {
+          "Sapato": "Leve calçados confortáveis ​​para passeios pela cidade, calçados resistentes para caminhadas moderadas, botas duráveis ​​para trekking e sandálias de secagem rápida como par extra.",
+          "Chapéu": "Não se esqueça de levar um chapéu de aba larga ou um boné com aba no pescoço para se proteger do sol intenso em grandes altitudes.",
+          "Creme UV": "Não se esqueça de levar protetor solar de amplo espectro com FPS alto para proteger sua pele dos intensos raios UV, especialmente em altitudes mais elevadas no Quirguistão.",
+          "Roupas": "Leve camadas de roupas adequadas para temperaturas e condições climáticas variadas, considerando que as temperaturas podem variar significativamente com as mudanças de altitude. Esteja preparado para neve ou chuva, especialmente em áreas montanhosas.",
+          "Assistência Médica": "Lembre-se de levar consigo equipamentos médicos pessoais, como medicamentos necessários, band-aids, analgésicos e quaisquer itens específicos para condições médicas pré-existentes, como precaução."
+        },
+        "overview": "Pergunte-nos o que levar para o seu percurso e a temporada."
+      }
+    },
+    "articles": {
+      "name": "Artigos",
+      "title": "Cultura e natureza do Quirguistão",
+      "description": "Conheça as pessoas, as tradições, a gastronomia e as paisagens do Quirguistão.",
+      "keywords": [
+        "Cultura quirguiz",
+        "Tradições do Quirguistão",
+        "Natureza quirguiz",
+        "Caça burkut",
+        "Kok-boru",
+        "Cães Alabai",
+        "Taigan",
+        "História do Quirguistão",
+        "Cultura da Ásia Central",
+        "Herança nômade",
+        "Exploração cultural",
+        "Esportes tradicionais",
+        "Galgos do Quirguistão",
+        "Experiências culturais",
+        "Aventura no Quirguistão",
+        "Raças herdadas",
+        "Tradições culturais",
+        "Experiências únicas",
+        "Estilo de vida quirguiz"
+      ]
+    },
+    "about": {
+      "title": "Sobre nós",
+      "subtitle": "Quem somos?",
+      "description": "Ajudamos a planear a sua viagem ao Quirguistão. Diga-nos quando quer viajar e o que lhe interessa, para escolhermos em conjunto o percurso, os guias e o alojamento.",
+      "keywords": "Sobre nós, Nossa história, Entusiastas do Quirguistão, Paixão por viagens, Experiências excepcionais, Equipe, Valores, Missão",
+      "buttons": {
+        "our_team": "Nossa equipe",
+        "our_clients": "Nossos clientes",
+        "contact_us": "Contate-nos"
+      }
+    },
+    "info": {
+      "seen": "Visitas: ",
+      "created": "Criado: ",
+      "modified": "Última modificação: "
+    },
+    "download": {
+      "text": "Mantenha mapas, lugares e informações de viagem à mão com nossos aplicativos móveis."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Links úteis",
+          "links": [
+            {
+              "text": "Início",
+              "url": "/"
+            },
+            {
+              "text": "Atrações",
+              "url": "/places"
+            },
+            {
+              "text": "Passeios",
+              "url": "/tours"
+            },
+            {
+              "text": "Transferências de aeroporto",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privacidade e Jurídico",
+          "links": [
+            {
+              "text": "Sobre nós",
+              "url": "/about"
+            },
+            {
+              "text": "Contate-nos",
+              "url": "/contact"
+            },
+            {
+              "text": "política de Privacidade",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Informações de contato",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bisqueque, Razzakov 49"
+          }
+        },
+        {
+          "title": "Contas Sociais",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "desenvolvedor",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

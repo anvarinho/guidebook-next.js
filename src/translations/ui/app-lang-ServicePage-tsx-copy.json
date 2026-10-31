@@ -1,0 +1,802 @@
+{
+  "uz": {
+    "notFound": {
+      "eyebrow": "Boshqa yo'l",
+      "title": "Bu sahifa sayohatga chiqqanga o'xshaydi.",
+      "description": "U iz qoldirishni unutdi. Keling, sizni kashf qilish uchun yaxshiroq joy topaylik."
+    },
+    "error": {
+      "eyebrow": "Qisqa uzilish",
+      "title": "Biz qiyin vaziyatga tushib qoldik.",
+      "description": "Bu sahifani yuklashda nimadir xato ketdi. Yana bir urinib ko'ring yoki kashf qilishda davom eting."
+    },
+    "loading": {
+      "eyebrow": "Yo'lingizni topish",
+      "title": "Sayohat shakllanmoqda.",
+      "description": "Biz sizning yo'riqnomangizni tayyorlamoqdamiz."
+    },
+    "home": "Qo'llanmaga qaytish",
+    "places": "Joylarni o'rganing",
+    "retry": "Qayta urinib ko'ring"
+  },
+  "kz": {
+    "notFound": {
+      "eyebrow": "Басқа маршрут",
+      "title": "Бұл бет саяхатқа шыққан сияқты.",
+      "description": "Ол із қалдыруды ұмытып кетті. Сізге зерттеу үшін жақсырақ жерден табайық."
+    },
+    "error": {
+      "eyebrow": "Қысқа үзіліс",
+      "title": "Біз өрескел патчқа тап болдық.",
+      "description": "Бұл бетті жүктеу кезінде бірдеңе дұрыс болмады. Тағы бір рет көріңіз немесе зерттеуді жалғастырыңыз."
+    },
+    "loading": {
+      "eyebrow": "Жолыңызды табу",
+      "title": "Саяхат қалыптасып келеді.",
+      "description": "Біз сіздің гидіңізді дайындап жатырмыз."
+    },
+    "home": "Нұсқаулыққа оралу",
+    "places": "Орындарды зерттеңіз",
+    "retry": "Қайтадан байқап көріңіз"
+  },
+  "kg": {
+    "notFound": {
+      "eyebrow": "Башка маршрут",
+      "title": "Бул барак саякатка чыкты окшойт.",
+      "description": "Из калтырууну унутуп калыптыр. Келиңиз, сизди изилдөө үчүн жакшыраак жерден табалы."
+    },
+    "error": {
+      "eyebrow": "Кыскача тыныгуу",
+      "title": "Биз катаал жерди басып калдык.",
+      "description": "Бул баракты жүктөөдө бир жерден ката кетти. Дагы бир жолу аракет кылып көрүңүз же изилдөөнү улантыңыз."
+    },
+    "loading": {
+      "eyebrow": "Жолду табуу",
+      "title": "Сапар калыптанып жатат.",
+      "description": "Биз сиздин жолду даярдап жатабыз."
+    },
+    "home": "Гидге кайтуу",
+    "places": "жерлерди изилдөө",
+    "retry": "Кайра аракет кыл"
+  },
+  "tr": {
+    "notFound": {
+      "eyebrow": "Farklı bir rota",
+      "title": "Görünüşe göre bu sayfa yürüyüşe çıkmış.",
+      "description": "Bir iz bırakmayı unuttu. Hadi sana keşfedecek daha iyi bir yer bulalım."
+    },
+    "error": {
+      "eyebrow": "Kısa bir kesinti",
+      "title": "Zorlu bir dönemden geçtik.",
+      "description": "Bu sayfa yüklenirken bir şeyler ters gitti. Bir kez daha deneyin veya keşfetmeye devam edin."
+    },
+    "loading": {
+      "eyebrow": "Yolunu bulmak",
+      "title": "Yolculuk şekilleniyor.",
+      "description": "Rehberinizi hazırlıyoruz."
+    },
+    "home": "Kılavuza geri dön",
+    "places": "Yerleri keşfedin",
+    "retry": "Tekrar deneyin"
+  },
+  "hi": {
+    "notFound": {
+      "eyebrow": "एक अलग मार्ग",
+      "title": "ऐसा लगता है जैसे यह पृष्ठ लंबी पैदल यात्रा पर गया हो।",
+      "description": "यह एक निशान छोड़ना भूल गया. आइए आपको तलाशने के लिए कहीं बेहतर जगह खोजें।"
+    },
+    "error": {
+      "eyebrow": "एक संक्षिप्त व्यवधान",
+      "title": "हम एक मुश्किल स्थिति में पहुँच गये।",
+      "description": "इस पेज को लोड करते समय कुछ गलत हो गया. इसे एक और प्रयास करें या अन्वेषण जारी रखें।"
+    },
+    "loading": {
+      "eyebrow": "अपना रास्ता ढूँढना",
+      "title": "यात्रा आकार ले रही है.",
+      "description": "हम आपका गाइड तैयार कर रहे हैं."
+    },
+    "home": "गाइड पर वापस जाएँ",
+    "places": "स्थानों का अन्वेषण करें",
+    "retry": "पुनः प्रयास करें"
+  },
+  "ur": {
+    "notFound": {
+      "eyebrow": "ایک مختلف راستہ",
+      "title": "ایسا لگتا ہے کہ یہ صفحہ پیدل سفر کر رہا ہے۔",
+      "description": "یہ ایک پگڈنڈی چھوڑنا بھول گیا۔ آئیے آپ کو دریافت کرنے کے لیے کہیں بہتر تلاش کرتے ہیں۔"
+    },
+    "error": {
+      "eyebrow": "ایک مختصر وقفہ",
+      "title": "ہم نے ایک کچا پیچ مارا۔",
+      "description": "اس صفحہ کو لوڈ کرتے وقت کچھ غلط ہو گیا۔ اسے دوبارہ آزمائیں یا دریافت کرنا جاری رکھیں۔"
+    },
+    "loading": {
+      "eyebrow": "اپنا راستہ تلاش کرنا",
+      "title": "سفر کی شکل اختیار کر رہا ہے۔",
+      "description": "ہم آپ کا گائیڈ تیار کر رہے ہیں۔"
+    },
+    "home": "گائیڈ پر واپس جائیں۔",
+    "places": "جگہیں دریافت کریں۔",
+    "retry": "دوبارہ کوشش کریں۔"
+  },
+  "tg": {
+    "notFound": {
+      "eyebrow": "Роҳи дигар",
+      "title": "Чунин ба назар мерасад, ки ин саҳифа сайругашт кардааст.",
+      "description": "Он тарк кардани пайраҳаро фаромӯш кардааст. Биёед шуморо дар ҷои беҳтаре барои омӯхтан пайдо кунем."
+    },
+    "error": {
+      "eyebrow": "Танаффуси кӯтоҳ",
+      "title": "Мо як пораи ноҳамворро задем.",
+      "description": "Ҳангоми боркунии ин саҳифа чизе хато кард. Боз як кӯшиш кунед ё ҷустуҷӯро идома диҳед."
+    },
+    "loading": {
+      "eyebrow": "Ҷустуҷӯи роҳи худ",
+      "title": "Сафар шакл гирифта истодааст.",
+      "description": "Мо дастури шуморо омода карда истодаем."
+    },
+    "home": "Бозгашт ба дастур",
+    "places": "Ҷойҳоро омӯзед",
+    "retry": "Як бори дигар санҷед"
+  },
+  "ms": {
+    "notFound": {
+      "eyebrow": "Laluan yang berbeza",
+      "title": "Nampaknya halaman ini pergi mendaki.",
+      "description": "Ia terlupa meninggalkan jejak. Mari cari anda di tempat yang lebih baik untuk diterokai."
+    },
+    "error": {
+      "eyebrow": "Gangguan singkat",
+      "title": "Kami terkena tompok kasar.",
+      "description": "Kesilapan telah berlaku semasa memuatkan halaman ini. Cuba lagi atau teruskan meneroka."
+    },
+    "loading": {
+      "eyebrow": "Mencari jalan anda",
+      "title": "Perjalanan semakin terbentuk.",
+      "description": "Kami sedang menyediakan panduan anda."
+    },
+    "home": "Kembali kepada panduan",
+    "places": "Terokai tempat",
+    "retry": "Cuba lagi"
+  },
+  "fa": {
+    "notFound": {
+      "eyebrow": "یک مسیر متفاوت",
+      "title": "به نظر می رسد این صفحه پیاده روی کرده است.",
+      "description": "فراموش کرد ردی از خود به جای بگذارد. بیایید شما را جایی بهتر برای کاوش پیدا کنیم."
+    },
+    "error": {
+      "eyebrow": "یک وقفه کوتاه",
+      "title": "یک تکه ناهموار زدیم.",
+      "description": "هنگام بارگیری این صفحه مشکلی پیش آمد. دوباره امتحان کنید یا به کاوش ادامه دهید."
+    },
+    "loading": {
+      "eyebrow": "پیدا کردن راه",
+      "title": "سفر در حال شکل گیری است.",
+      "description": "ما راهنمای شما را آماده می کنیم."
+    },
+    "home": "بازگشت به راهنما",
+    "places": "مکان ها را کاوش کنید",
+    "retry": "دوباره امتحان کنید"
+  },
+  "az": {
+    "notFound": {
+      "eyebrow": "Fərqli bir marşrut",
+      "title": "Deyəsən bu səhifə gəzintiyə çıxdı.",
+      "description": "Bir iz qoymağı unudub. Gəlin sizi kəşf etmək üçün daha yaxşı yerdə tapaq."
+    },
+    "error": {
+      "eyebrow": "Qısa fasilə",
+      "title": "Biz kobud yamağı vurduq.",
+      "description": "Bu səhifəni yükləyərkən xəta baş verdi. Yenidən cəhd edin və ya kəşf etməyə davam edin."
+    },
+    "loading": {
+      "eyebrow": "Yolunuzu tapmaq",
+      "title": "Səyahət formalaşır.",
+      "description": "Bələdçinizi hazırlayırıq."
+    },
+    "home": "Bələdçiyə qayıt",
+    "places": "Yerləri araşdırın",
+    "retry": "Yenidən cəhd edin"
+  },
+  "uk": {
+    "notFound": {
+      "eyebrow": "Інший маршрут",
+      "title": "Схоже, ця сторінка пішла в похід.",
+      "description": "Воно забуло залишити слід. Давайте знайдемо вам місце, де краще досліджувати."
+    },
+    "error": {
+      "eyebrow": "Коротка перерва",
+      "title": "Ми потрапили в складну ділянку.",
+      "description": "Під час завантаження цієї сторінки сталася помилка. Спробуйте ще раз або продовжуйте дослідження."
+    },
+    "loading": {
+      "eyebrow": "Знайти свій шлях",
+      "title": "Подорож набуває форми.",
+      "description": "Ми готуємо ваш путівник."
+    },
+    "home": "Повертаємось до посібника",
+    "places": "Досліджуйте місця",
+    "retry": "Спробуйте знову"
+  },
+  "pl": {
+    "notFound": {
+      "eyebrow": "Inna trasa",
+      "title": "Wygląda na to, że ta strona poszła w górę.",
+      "description": "Zapomniało zostawić ślad. Znajdźmy Ci lepsze miejsce do zwiedzania."
+    },
+    "error": {
+      "eyebrow": "Krótka przerwa",
+      "title": "Trafiliśmy na trudny teren.",
+      "description": "Coś poszło nie tak podczas ładowania tej strony. Spróbuj jeszcze raz lub kontynuuj eksplorację."
+    },
+    "loading": {
+      "eyebrow": "Znalezienie swojej drogi",
+      "title": "Podróż nabiera kształtów.",
+      "description": "Przygotowujemy Twój przewodnik."
+    },
+    "home": "Powrót do przewodnika",
+    "places": "Odkrywaj miejsca",
+    "retry": "Spróbuj ponownie"
+  },
+  "nl": {
+    "notFound": {
+      "eyebrow": "Een ander traject",
+      "title": "Het lijkt erop dat deze pagina ging wandelen.",
+      "description": "Hij vergat een spoor achter te laten. Laten we een betere plek zoeken om te verkennen."
+    },
+    "error": {
+      "eyebrow": "Een korte onderbreking",
+      "title": "We hebben een moeilijke periode bereikt.",
+      "description": "Er is iets misgegaan bij het laden van deze pagina. Probeer het nog eens of ga verder met verkennen."
+    },
+    "loading": {
+      "eyebrow": "Je weg vinden",
+      "title": "De reis krijgt vorm.",
+      "description": "Wij bereiden uw gids voor."
+    },
+    "home": "Terug naar de gids",
+    "places": "Ontdek plaatsen",
+    "retry": "Probeer het opnieuw"
+  },
+  "he": {
+    "notFound": {
+      "eyebrow": "מסלול אחר",
+      "title": "נראה שהדף הזה יצא לטיולים.",
+      "description": "זה שכח להשאיר שובל. בוא נמצא לך מקום טוב יותר לחקור."
+    },
+    "error": {
+      "eyebrow": "הפרעה קצרה",
+      "title": "פגענו בנקודה קשה.",
+      "description": "משהו השתבש בעת טעינת הדף הזה. נסה זאת שוב או המשך לחקור."
+    },
+    "loading": {
+      "eyebrow": "מוצא את הדרך שלך",
+      "title": "המסע הולך ומתגבש.",
+      "description": "אנחנו מכינים את המדריך שלך."
+    },
+    "home": "חזרה למדריך",
+    "places": "חקור מקומות",
+    "retry": "נסה שוב"
+  },
+  "cs": {
+    "notFound": {
+      "eyebrow": "Jiná trasa",
+      "title": "Vypadá to, že tato stránka šla na výlet.",
+      "description": "Zapomnělo zanechat stopu. Najdeme vás někde lépe k prozkoumání."
+    },
+    "error": {
+      "eyebrow": "Krátké přerušení",
+      "title": "Narazili jsme na hrubou záplatu.",
+      "description": "Při načítání této stránky se něco pokazilo. Zkuste to znovu nebo pokračujte v průzkumu."
+    },
+    "loading": {
+      "eyebrow": "Hledání cesty",
+      "title": "Cesta dostává obrysy.",
+      "description": "Připravujeme vašeho průvodce."
+    },
+    "home": "Zpět k průvodci",
+    "places": "Prozkoumejte místa",
+    "retry": "Zkuste to znovu"
+  },
+  "pt": {
+    "notFound": {
+      "eyebrow": "Uma rota diferente",
+      "title": "Parece que esta página fez uma caminhada.",
+      "description": "Esqueceu de deixar rastro. Vamos encontrar um lugar melhor para você explorar."
+    },
+    "error": {
+      "eyebrow": "Uma breve interrupção",
+      "title": "Passamos por uma fase difícil.",
+      "description": "Algo deu errado ao carregar esta página. Experimente novamente ou continue explorando."
+    },
+    "loading": {
+      "eyebrow": "Encontrando seu caminho",
+      "title": "A jornada está tomando forma.",
+      "description": "Estamos preparando seu guia."
+    },
+    "home": "Voltar ao guia",
+    "places": "Explorar lugares",
+    "retry": "Tente novamente"
+  },
+  "id": {
+    "notFound": {
+      "eyebrow": "Rute yang berbeda",
+      "title": "Sepertinya halaman ini mengalami kenaikan.",
+      "description": "Ia lupa meninggalkan jejak. Mari temukan tempat yang lebih baik untuk Anda jelajahi."
+    },
+    "error": {
+      "eyebrow": "Gangguan singkat",
+      "title": "Kami mengalami masa sulit.",
+      "description": "Terjadi masalah saat memuat halaman ini. Cobalah lagi atau lanjutkan penjelajahan."
+    },
+    "loading": {
+      "eyebrow": "Menemukan jalanmu",
+      "title": "Perjalanan mulai terbentuk.",
+      "description": "Kami sedang menyiapkan panduan Anda."
+    },
+    "home": "Kembali ke panduan",
+    "places": "Jelajahi tempat",
+    "retry": "Coba lagi"
+  },
+  "th": {
+    "notFound": {
+      "eyebrow": "เส้นทางที่แตกต่าง",
+      "title": "ดูเหมือนเพจนี้จะไปเดินป่านะ",
+      "description": "มันลืมทิ้งร่องรอยไว้ เรามาหาคุณที่ไหนสักแห่งที่ดีกว่าในการสำรวจกันดีกว่า"
+    },
+    "error": {
+      "eyebrow": "การหยุดชะงักช่วงสั้นๆ",
+      "title": "เราเจอจุดที่ยากลำบาก",
+      "description": "เกิดข้อผิดพลาดขณะโหลดหน้านี้ ลองอีกครั้งหรือสำรวจต่อ"
+    },
+    "loading": {
+      "eyebrow": "ค้นหาเส้นทางของคุณ",
+      "title": "การเดินทางกำลังเป็นรูปเป็นร่าง",
+      "description": "เรากำลังเตรียมไกด์ของคุณให้พร้อม"
+    },
+    "home": "กลับไปที่คำแนะนำ",
+    "places": "สำรวจสถานที่ต่างๆ",
+    "retry": "ลองอีกครั้ง"
+  },
+  "bn": {
+    "notFound": {
+      "eyebrow": "একটি ভিন্ন রুট",
+      "title": "মনে হচ্ছে এই পৃষ্ঠা হাইকিং হয়েছে.",
+      "description": "এটি একটি লেজ ছেড়ে ভুলে গেছে. আসুন আপনাকে অন্বেষণ করার জন্য আরও ভাল কোথাও খুঁজে পাই।"
+    },
+    "error": {
+      "eyebrow": "একটি সংক্ষিপ্ত বাধা",
+      "title": "আমরা একটি রুক্ষ প্যাচ আঘাত.",
+      "description": "এই পৃষ্ঠাটি লোড করার সময় কিছু ভুল হয়েছে৷ এটি আবার চেষ্টা করুন বা অন্বেষণ চালিয়ে যান।"
+    },
+    "loading": {
+      "eyebrow": "তোমার পথ খোঁজা",
+      "title": "যাত্রা রূপ নিচ্ছে।",
+      "description": "আমরা আপনার গাইড প্রস্তুত করছি."
+    },
+    "home": "গাইডে ফিরে যান",
+    "places": "স্থানগুলি অন্বেষণ করুন",
+    "retry": "আবার চেষ্টা করুন"
+  },
+  "ne": {
+    "notFound": {
+      "eyebrow": "फरक बाटो",
+      "title": "यो पृष्ठ पदयात्रा गयो जस्तो देखिन्छ।",
+      "description": "बाटो छोड्न बिर्सियो। तपाईँलाई अन्वेषण गर्न अझ राम्रो ठाउँ खोजौं।"
+    },
+    "error": {
+      "eyebrow": "छोटो अवरोध",
+      "title": "हामीले एउटा नराम्रो प्याचमा हान्यौं।",
+      "description": "यो पृष्ठ लोड गर्दा केही गडबड भयो। यसलाई फेरि प्रयास गर्नुहोस् वा अन्वेषण जारी राख्नुहोस्।"
+    },
+    "loading": {
+      "eyebrow": "आफ्नो बाटो खोज्दै",
+      "title": "यात्राले आकार लिइरहेको छ ।",
+      "description": "हामी तपाईंको गाइड तयार गर्दैछौं।"
+    },
+    "home": "गाइड मा फर्कनुहोस्",
+    "places": "ठाउँहरू अन्वेषण गर्नुहोस्",
+    "retry": "पुन: प्रयास गर्नुहोस्"
+  },
+  "vi": {
+    "notFound": {
+      "eyebrow": "Một tuyến đường khác",
+      "title": "Có vẻ như trang này đã đi bộ đường dài.",
+      "description": "Nó quên để lại dấu vết. Hãy tìm cho bạn một nơi nào đó tốt hơn để khám phá."
+    },
+    "error": {
+      "eyebrow": "Sự gián đoạn ngắn ngủi",
+      "title": "Chúng tôi gặp phải một bản vá thô.",
+      "description": "Đã xảy ra lỗi khi tải trang này. Hãy thử lại hoặc tiếp tục khám phá."
+    },
+    "loading": {
+      "eyebrow": "Tìm đường đi",
+      "title": "Cuộc hành trình đang thành hình.",
+      "description": "Chúng tôi đang chuẩn bị sẵn sàng hướng dẫn cho bạn."
+    },
+    "home": "Quay lại hướng dẫn",
+    "places": "Khám phá địa điểm",
+    "retry": "Thử lại"
+  },
+  "ka": {
+    "notFound": {
+      "eyebrow": "განსხვავებული მარშრუტი",
+      "title": "როგორც ჩანს, ეს გვერდი ლაშქრობაში წავიდა.",
+      "description": "მას დაავიწყდა კვალის დატოვება. მოდი გიპოვოთ სადმე უკეთესი შესასწავლად."
+    },
+    "error": {
+      "eyebrow": "ხანმოკლე შეწყვეტა",
+      "title": "ჩვენ უხეში ნაჭერი მოვხვდით.",
+      "description": "ამ გვერდის ჩატვირთვისას მოხდა რაღაც შეცდომა. სცადეთ კიდევ ერთხელ ან განაგრძეთ შესწავლა."
+    },
+    "loading": {
+      "eyebrow": "გზის პოვნა",
+      "title": "მოგზაურობა ფორმას იღებს.",
+      "description": "ჩვენ ვამზადებთ თქვენს მეგზურს."
+    },
+    "home": "დაუბრუნდით სახელმძღვანელოს",
+    "places": "გამოიკვლიეთ ადგილები",
+    "retry": "სცადეთ ხელახლა"
+  },
+  "hy": {
+    "notFound": {
+      "eyebrow": "Տարբեր երթուղի",
+      "title": "Կարծես թե այս էջը գնացել է արշավի:",
+      "description": "Այն մոռացել է հետք թողնել: Եկեք գտնենք ձեզ ինչ-որ տեղ ավելի լավ ուսումնասիրելու համար:"
+    },
+    "error": {
+      "eyebrow": "Կարճ ընդհատում",
+      "title": "Մենք խփեցինք կոպիտ կարկատան:",
+      "description": "Ինչ-որ սխալ առաջացավ այս էջը բեռնելիս: Նորից փորձեք կամ շարունակեք ուսումնասիրությունը:"
+    },
+    "loading": {
+      "eyebrow": "Գտնելով ձեր ճանապարհը",
+      "title": "Ճանապարհորդությունը ձևավորվում է:",
+      "description": "Մենք պատրաստում ենք ձեր ուղեցույցը:"
+    },
+    "home": "Վերադարձ դեպի ուղեցույց",
+    "places": "Ուսումնասիրեք վայրերը",
+    "retry": "Նորից փորձեք"
+  },
+  "mn": {
+    "notFound": {
+      "eyebrow": "Өөр зам",
+      "title": "Энэ хуудас явган аялал хийсэн бололтой.",
+      "description": "Энэ нь ул мөр үлдээхээ мартжээ. Таныг судлахад илүү тохиромжтой газар олъё."
+    },
+    "error": {
+      "eyebrow": "Богино тасалдал",
+      "title": "Бид бүдүүлэг үеийг давлаа.",
+      "description": "Энэ хуудсыг ачаалах явцад алдаа гарлаа. Дахин оролдох эсвэл үргэлжлүүлэн судлах."
+    },
+    "loading": {
+      "eyebrow": "Замаа хайж байна",
+      "title": "Аялал хэлбэржиж байна.",
+      "description": "Бид таны хөтөчийг бэлдэж байна."
+    },
+    "home": "Хөтөч рүү буцах",
+    "places": "Газар судлах",
+    "retry": "Дахин оролдоно уу"
+  },
+  "be": {
+    "notFound": {
+      "eyebrow": "Іншы маршрут",
+      "title": "Здаецца, гэтая старонка пайшла ў паход.",
+      "description": "Яно забылася пакінуць след. Давайце знойдзем вам лепшае месца для вывучэння."
+    },
+    "error": {
+      "eyebrow": "Кароткі перапынак",
+      "title": "Мы трапілі ў цяжкі ўчастак.",
+      "description": "Падчас загрузкі гэтай старонкі нешта пайшло не так. Паспрабуйце яшчэ раз або працягвайце вывучэнне."
+    },
+    "loading": {
+      "eyebrow": "Пошук свайго шляху",
+      "title": "Падарожжа набывае форму.",
+      "description": "Мы рыхтуем ваш гід."
+    },
+    "home": "Вярнуцца да кіраўніцтва",
+    "places": "Даследуйце месцы",
+    "retry": "Паспрабуйце яшчэ раз"
+  },
+  "ro": {
+    "notFound": {
+      "eyebrow": "Un alt traseu",
+      "title": "Se pare că această pagină a făcut drumeții.",
+      "description": "A uitat să lase o urmă. Haideți să vă găsim un loc mai bun de explorat."
+    },
+    "error": {
+      "eyebrow": "O scurtă întrerupere",
+      "title": "Ne-am lovit de un petec dur.",
+      "description": "A apărut o eroare la încărcarea acestei pagini. Mai încercați sau continuați să explorați."
+    },
+    "loading": {
+      "eyebrow": "Găsindu-ți drumul",
+      "title": "Călătoria prinde contur.",
+      "description": "Vă pregătim ghidul."
+    },
+    "home": "Înapoi la ghid",
+    "places": "Explorează locuri",
+    "retry": "Încearcă din nou"
+  },
+  "sv": {
+    "notFound": {
+      "eyebrow": "En annan väg",
+      "title": "Det verkar som om den här sidan vandrade.",
+      "description": "Den glömde att lämna ett spår. Låt oss hitta en bättre plats att utforska."
+    },
+    "error": {
+      "eyebrow": "Ett kort avbrott",
+      "title": "Vi drabbades av ett hårt ställe.",
+      "description": "Något gick fel när den här sidan laddades. Ge det ett nytt försök eller fortsätt utforska."
+    },
+    "loading": {
+      "eyebrow": "Hitta din väg",
+      "title": "Resan tar form.",
+      "description": "Vi förbereder din guide."
+    },
+    "home": "Tillbaka till guiden",
+    "places": "Utforska platser",
+    "retry": "Försök igen"
+  },
+  "nb": {
+    "notFound": {
+      "eyebrow": "En annen rute",
+      "title": "Det ser ut til at denne siden gikk tur.",
+      "description": "Den glemte å legge igjen et spor. La oss finne deg et bedre sted å utforske."
+    },
+    "error": {
+      "eyebrow": "Et kort avbrudd",
+      "title": "Vi traff et tøft sted.",
+      "description": "Noe gikk galt under innlasting av denne siden. Gi det et nytt forsøk eller fortsett å utforske."
+    },
+    "loading": {
+      "eyebrow": "Finner veien",
+      "title": "Reisen tar form.",
+      "description": "Vi gjør din guide klar."
+    },
+    "home": "Tilbake til guiden",
+    "places": "Utforsk steder",
+    "retry": "Prøv igjen"
+  },
+  "da": {
+    "notFound": {
+      "eyebrow": "En anderledes rute",
+      "title": "Det ser ud til, at denne side har været på vandretur.",
+      "description": "Den glemte at efterlade et spor. Lad os finde dig et bedre sted at udforske."
+    },
+    "error": {
+      "eyebrow": "En kort afbrydelse",
+      "title": "Vi ramte et hårdt sted.",
+      "description": "Noget gik galt under indlæsning af denne side. Prøv det igen, eller fortsæt med at udforske."
+    },
+    "loading": {
+      "eyebrow": "At finde vej",
+      "title": "Rejsen tager form.",
+      "description": "Vi gør din guide klar."
+    },
+    "home": "Tilbage til guiden",
+    "places": "Udforsk steder",
+    "retry": "Prøv igen"
+  },
+  "fi": {
+    "notFound": {
+      "eyebrow": "Erilainen reitti",
+      "title": "Näyttää siltä, ​​että tämä sivu meni vaellukselle.",
+      "description": "Se unohti jättää jälkensä. Etsitään sinulle parempi paikka tutkia."
+    },
+    "error": {
+      "eyebrow": "Lyhyt keskeytys",
+      "title": "Löysimme karkean pisteen.",
+      "description": "Jotain meni pieleen tätä sivua ladattaessa. Kokeile uudelleen tai jatka tutkimista."
+    },
+    "loading": {
+      "eyebrow": "Tiesi löytäminen",
+      "title": "Matka muotoutuu.",
+      "description": "Valmistelemme ohjettasi."
+    },
+    "home": "Takaisin oppaaseen",
+    "places": "Tutustu paikkoihin",
+    "retry": "Yritä uudelleen"
+  },
+  "el": {
+    "notFound": {
+      "eyebrow": "Μια διαφορετική διαδρομή",
+      "title": "Φαίνεται ότι αυτή η σελίδα έκανε πεζοπορία.",
+      "description": "Ξέχασε να αφήσει ίχνος. Ας σας βρούμε κάπου καλύτερα για εξερεύνηση."
+    },
+    "error": {
+      "eyebrow": "Μια σύντομη διακοπή",
+      "title": "Χτυπήσαμε ένα τραχύ κομμάτι.",
+      "description": "Παρουσιάστηκε κάποιο πρόβλημα κατά τη φόρτωση αυτής της σελίδας. Δοκιμάστε το ξανά ή συνεχίστε την εξερεύνηση."
+    },
+    "loading": {
+      "eyebrow": "Βρίσκοντας το δρόμο σας",
+      "title": "Το ταξίδι παίρνει σάρκα και οστά.",
+      "description": "Ετοιμάζουμε τον οδηγό σας."
+    },
+    "home": "Επιστροφή στον οδηγό",
+    "places": "Εξερευνήστε μέρη",
+    "retry": "Προσπαθήστε ξανά"
+  },
+  "hr": {
+    "notFound": {
+      "eyebrow": "Drugačija ruta",
+      "title": "Čini se da je ova stranica krenula u planinarenje.",
+      "description": "Zaboravio je ostaviti trag. Pronađimo te negdje bolje za istraživanje."
+    },
+    "error": {
+      "eyebrow": "Kratak prekid",
+      "title": "Naišli smo na tešku situaciju.",
+      "description": "Nešto nije u redu prilikom učitavanja ove stranice. Pokušajte još jednom ili nastavite s istraživanjem."
+    },
+    "loading": {
+      "eyebrow": "Pronaći svoj put",
+      "title": "Putovanje poprima oblik.",
+      "description": "Pripremamo vaš vodič."
+    },
+    "home": "Povratak na vodič",
+    "places": "Istražite mjesta",
+    "retry": "Pokušajte ponovno"
+  },
+  "sr": {
+    "notFound": {
+      "eyebrow": "Другачија рута",
+      "title": "Изгледа да је ова страница кренула у планинарење.",
+      "description": "Заборавио је да остави траг. Хајде да вас пронађемо негде боље за истраживање."
+    },
+    "error": {
+      "eyebrow": "Кратак прекид",
+      "title": "Наишли смо на тежак део.",
+      "description": "Нешто је пошло наопако при учитавању ове странице. Покушајте поново или наставите да истражујете."
+    },
+    "loading": {
+      "eyebrow": "Проналажење свог пута",
+      "title": "Путовање добија облик.",
+      "description": "Спремамо ваш водич."
+    },
+    "home": "Назад на водич",
+    "places": "Истражите места",
+    "retry": "Покушајте поново"
+  },
+  "sk": {
+    "notFound": {
+      "eyebrow": "Iná trasa",
+      "title": "Zdá sa, že táto stránka bola na turistike.",
+      "description": "Zabudlo zanechať stopu. Nájdeme vás niekde lepšie na preskúmanie."
+    },
+    "error": {
+      "eyebrow": "Krátke prerušenie",
+      "title": "Narazili sme na hrubú záplatu.",
+      "description": "Pri načítavaní tejto stránky sa vyskytla chyba. Skúste to znova alebo pokračujte v skúmaní."
+    },
+    "loading": {
+      "eyebrow": "Hľadanie cesty",
+      "title": "Cesta naberá tvar.",
+      "description": "Pripravujeme vášho sprievodcu."
+    },
+    "home": "Späť k sprievodcovi",
+    "places": "Preskúmajte miesta",
+    "retry": "Skúste to znova"
+  },
+  "sl": {
+    "notFound": {
+      "eyebrow": "Drugačna pot",
+      "title": "Videti je, da se je ta stran odpravila na pohod.",
+      "description": "Pozabil je pustiti sled. Poiščimo vas bolje za raziskovanje."
+    },
+    "error": {
+      "eyebrow": "Kratka prekinitev",
+      "title": "Naleteli smo na težko obdobje.",
+      "description": "Med nalaganjem te strani je šlo nekaj narobe. Poskusite znova ali nadaljujte z raziskovanjem."
+    },
+    "loading": {
+      "eyebrow": "Iskanje poti",
+      "title": "Potovanje dobiva obliko.",
+      "description": "Pripravljamo vaš vodnik."
+    },
+    "home": "Nazaj k vodniku",
+    "places": "Raziščite mesta",
+    "retry": "poskusi ponovno"
+  },
+  "bg": {
+    "notFound": {
+      "eyebrow": "Различен маршрут",
+      "title": "Изглежда, че тази страница тръгна на поход.",
+      "description": "Забрави да остави следа. Нека ви намерим по-добро място за изследване."
+    },
+    "error": {
+      "eyebrow": "Кратко прекъсване",
+      "title": "Попаднахме на труден етап.",
+      "description": "Нещо се обърка при зареждането на тази страница. Опитайте отново или продължете да изследвате."
+    },
+    "loading": {
+      "eyebrow": "Намиране на своя път",
+      "title": "Пътуването се оформя.",
+      "description": "Подготвяме вашето ръководство."
+    },
+    "home": "Обратно към ръководството",
+    "places": "Разгледайте места",
+    "retry": "Опитайте отново"
+  },
+  "bs": {
+    "notFound": {
+      "eyebrow": "Drugačija ruta",
+      "title": "Izgleda da je ova stranica krenula u planinarenje.",
+      "description": "Zaboravio je da ostavi trag. Hajde da vas nađemo na nekom boljem mestu za istraživanje."
+    },
+    "error": {
+      "eyebrow": "Kratak prekid",
+      "title": "Naišli smo na težak deo.",
+      "description": "Nešto nije u redu prilikom učitavanja ove stranice. Pokušajte još jednom ili nastavite istraživati."
+    },
+    "loading": {
+      "eyebrow": "Pronalaženje svog puta",
+      "title": "Putovanje dobija oblik.",
+      "description": "Spremamo vaš vodič."
+    },
+    "home": "Nazad na vodič",
+    "places": "Istražite mjesta",
+    "retry": "Pokušajte ponovo"
+  },
+  "mk": {
+    "notFound": {
+      "eyebrow": "Различен пат",
+      "title": "Изгледа оваа страница отиде на планинарење.",
+      "description": "Заборавило да остави трага. Ајде да ве најдеме некаде подобро за истражување."
+    },
+    "error": {
+      "eyebrow": "Краток прекин",
+      "title": "Погодивме груба лепенка.",
+      "description": "Нешто тргна наопаку при вчитувањето на оваа страница. Пробајте уште еднаш или продолжете со истражување."
+    },
+    "loading": {
+      "eyebrow": "Наоѓање на вашиот пат",
+      "title": "Патувањето се обликува.",
+      "description": "Го подготвуваме вашиот водич."
+    },
+    "home": "Назад кон водичот",
+    "places": "Истражувајте места",
+    "retry": "Обидете се повторно"
+  },
+  "sq": {
+    "notFound": {
+      "eyebrow": "Një rrugë ndryshe",
+      "title": "Duket sikur kjo faqe shkoi në ecje.",
+      "description": "Harroi të linte një gjurmë. Le t'ju gjejmë diku më të mirë për të eksploruar."
+    },
+    "error": {
+      "eyebrow": "Një ndërprerje e shkurtër",
+      "title": "Ne goditëm një copë toke të ashpër.",
+      "description": "Ndodhi një gabim gjatë ngarkimit të kësaj faqeje. Provojeni edhe një herë ose vazhdoni të eksploroni."
+    },
+    "loading": {
+      "eyebrow": "Duke gjetur rrugën tuaj",
+      "title": "Udhëtimi po merr formë.",
+      "description": "Ne po bëjmë gati udhëzuesin tuaj."
+    },
+    "home": "Kthehu te udhëzuesi",
+    "places": "Eksploroni vendet",
+    "retry": "Provo sërish"
+  },
+  "lt": {
+    "notFound": {
+      "eyebrow": "Kitoks maršrutas",
+      "title": "Atrodo, kad šis puslapis išvyko į žygius.",
+      "description": "Pamiršo palikti pėdsaką. Raskime kur geriau ištirti."
+    },
+    "error": {
+      "eyebrow": "Trumpas pertraukimas",
+      "title": "Pataikėme grubią vietą.",
+      "description": "Įkeliant šį puslapį įvyko klaida. Išbandykite dar kartą arba tęskite tyrinėjimą."
+    },
+    "loading": {
+      "eyebrow": "Ieškodamas savo kelio",
+      "title": "Kelionė įgauna formą.",
+      "description": "Mes ruošiame jūsų vadovą."
+    },
+    "home": "Atgal į vadovą",
+    "places": "Tyrinėkite vietas",
+    "retry": "Bandykite dar kartą"
+  }
+}

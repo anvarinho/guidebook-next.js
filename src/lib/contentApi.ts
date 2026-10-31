@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import type { z } from 'zod';
+import { contentLocale } from './i18n.config';
 
 const CONTENT_REVALIDATE_SECONDS = 60;
 
@@ -45,6 +46,6 @@ export async function getContent<T>(
   params: Record<string, string> = {},
   allowMissing = false,
 ): Promise<T | undefined> {
-  const query = new URLSearchParams(params).toString();
+  const query = new URLSearchParams(params.lang ? { ...params, lang: contentLocale(params.lang) } : params).toString();
   return requestContent(path, query, schema, allowMissing) as Promise<T | undefined>;
 }

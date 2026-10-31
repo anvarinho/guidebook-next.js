@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import { Suspense } from "react";
@@ -27,7 +28,7 @@ export default async function Places(
 
   const [{ page }, places] = await Promise.all([getDictionary(lang), getPlacesWithWeather(lang)]);
   return (
-      <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={lang === 'ae' ? 'rtl' : 'ltr'}>
+      <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
         <Meta lang={lang} places={places} page={page}/>
           <header className={styles.pageIntro}>
             <PlacesReveal className={styles.introTitle}>

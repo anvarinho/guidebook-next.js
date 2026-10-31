@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "nl-NL",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Laden...",
+    "contactButton": "Heeft u vragen?",
+    "navigation": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Bezienswaardigheden",
+        "url": "/places"
+      },
+      {
+        "text": "Rondreizen",
+        "url": "/tours"
+      },
+      {
+        "text": "Artikelen",
+        "url": "/articles"
+      },
+      {
+        "text": "Over ons",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Reisgids Kirgizië",
+      "description": "Wandel door de bergen, zwem in het Issyk-Kulmeer of overnacht in een joert bij een lokale familie. Kies een route die bij je past.",
+      "subtitle": "Reisgids Kirgizië",
+      "subtitle1": "Waarom Kirgizië bezoeken?",
+      "subtitle2": "Het verkennen van de natuur",
+      "subtitle3": "Eindeloze verkenning",
+      "subtitle4": "Plan uw reis",
+      "subtitle5": "Kirgizië must-visit plaatsen",
+      "paragraph": "Dit prachtige, geheel door land omgeven land, voorheen onderdeel van de Sovjet-Unie, is in snel tempo een van de meest populaire reisbestemmingen in Centraal-Azië aan het worden. De toeristische sector in Kirgizië groeit snel en biedt reizigers de kans om een ​​van de meest spectaculaire landen ter wereld te verkennen.",
+      "paragraph1": "Kirgizië heeft de afgelopen jaren een dramatische toename van het toerisme gezien, terwijl avonturiers massaal wandelen, kamperen en paardrijden door het adembenemende landschap. Als eerste Centraal-Aziatische land dat zijn visumbeleid heeft versoepeld – waardoor visumvrije toegang wordt geboden aan de meeste westerse en ontwikkelde landen – heeft zich een sterk toeristisch netwerk ontwikkeld.",
+      "paragraph2": "Van Community Based Tourism (CBT)-initiatieven in het hele land tot pensions en onafhankelijke gidsen: er zijn talloze manieren om het adembenemende landschap van Kirgizië te ervaren. Wandelaars kunnen ontzagwekkende tochten maken vanuit Karakol, Kochkor, Arslanbob en zelfs de hoofdstad Bishkek. Houd er rekening mee dat wandelen hier vaak een redelijk conditieniveau vereist, aangezien veel routes meer bieden dan alleen een ontspannen wandeling. De meeste tochten variëren van 1 tot 5 dagen, maar langere avonturen zijn ook mogelijk.\r\n\r\nVoor degenen die hun benen willen sparen, is paardrijden een populair alternatief. Maak de meest spectaculaire trektocht te paard van het land naar Song Kol, of breng een paar dagen door met ontspannen en zwemmen aan het prachtige Issyk-Kul-meer.",
+      "paragraph3": "Met talloze buiten de gebaande paden gelegen bestemmingen, tochten en routes zijn de mogelijkheden om te verkennen grenzeloos. Of u nu op zoek bent naar avontuur of ontspanning, Kirgizië heeft voor ieder wat wils.",
+      "paragraph4": "Voor meer specifieke informatie over bezienswaardigheden, hoe u er kunt komen en rond, en andere reistips, kunt u onze uitgebreide reisgids voor Kirgizië lezen. Verbeter uw reiservaring met aanbevolen apps voor navigatie, vertaling en lokale inzichten om het meeste uit uw reis te halen.\r\n\r\nGeniet van uw reis en ervaar de unieke schoonheid en cultuur van Kirgizië",
+      "keywords": "Toeristische gids van Kirgizië, Toeristische gids, Reisgemak, Lokale bezienswaardigheden, Toeristische diensten, Reistips voor Kirgizië, Culturele ervaringen, Reisplanning, Bezienswaardigheden, Avontuurlijke reizen, Handige rondleidingen, Stadsgids van Bishkek, Toeristische attracties van Kirgizië, Toeristische plek, Plaatsen bij mij in de buurt om bezienswaardigheden te bekijken, Plaatsen om te bezoeken bij mij in de buurt, Toeristische plaatsen, Toeristische bestemming, Mooie bestemmingen ter wereld, 's Werelds mooiste locaties, De mooiste plekken ter wereld, Reizen met gids, Gids voor reizen, Mooie plekken, Bishkek in Kirgizië, Stad Bishkek, Toerist en gids, PR toeristische attracties, Attracties in de buurt en hoe deze uit te voeren",
+      "button": "Laten we het ontdekken!",
+      "button1": "Waar te gaan!",
+      "button2": "Wat te doen!",
+      "button3": "lees meer",
+      "button4": "Onze rondleidingen",
+      "Transportation": {
+        "title": "Vervoer in Kirgizië | Reisgids",
+        "Description": "Rondreizen in Kirgizië kan een avontuur op zich zijn. Dit is wat u moet weten:",
+        "Options": {
+          "Binnenlandse vluchten": "Voor langere afstanden, vooral als de tijd beperkt is, zijn binnenlandse vluchten beschikbaar tussen grote steden als Bishkek, Osh en Tamchy (in de buurt van Cholpon-Ata in de regio Issyk-Kul). Controleer luchtvaartmaatschappijen op dienstregelingen en boekingen.",
+          "Marshrutka's (minibussen)": "Dit zijn de meest voorkomende en kosteneffectieve vervoerswijzen voor korte tot middellange afstanden. Ze volgen vaste routes tussen steden en dorpen en zijn erg populair onder de lokale bevolking.",
+          "Gedeelde taxi's": "Gedeelde taxi's bieden een sneller maar iets duurder alternatief voor marshrutka's. Ze vertrekken meestal als ze vol zijn en er kan over de prijzen worden onderhandeld.",
+          "Autoverhuur": "Voor meer flexibiliteit is het huren van een auto een goede optie. Wegen in landelijke gebieden kunnen ruig zijn, dus een 4x4 wordt aanbevolen. Zorg ervoor dat u over een internationaal rijbewijs beschikt.",
+          "Treinen": "Er zijn beperkte treindiensten beschikbaar, die voornamelijk Bishkek verbinden met Balykchy nabij het Issyk-Kul-meer. Het is een mooie route, maar langzamer dan over de weg.",
+          "Bussen": "Er rijden regelmatig bussen in de grote steden en bieden een comfortabele manier van reizen. Het is echter mogelijk dat ze geen afgelegen gebieden bestrijken.",
+          "Liften": "is een gangbare praktijk in plattelandsgebieden van Kirgizië, waar de formele transportmogelijkheden beperkt kunnen zijn. Het is relatief veilig en cultureel geaccepteerd, maar wees voorzichtig en gebruik uw oordeel wanneer u ritten van vreemden accepteert."
+        },
+        "details": "Bezoek de meegeleverde gids voor gedetailleerde inzichten over transportopties."
+      },
+      "Accommodations": {
+        "title": "Accommodaties in Kirgizië | Reisgids",
+        "Description": "Van gezellige pensions tot luxe resorts, Kirgizië biedt een verscheidenheid aan accommodatiemogelijkheden voor de voorkeuren en het budget van elke reiziger. Hier zijn enkele keuzes die u kunt overwegen:",
+        "Options": {
+          "Hotels": "De grote steden van Kirgizië, zoals Bishkek en Osh, beschikken over een scala aan hotels voor verschillende budgetten en voorkeuren. Van internationale ketens tot boetiekhotels, u vindt comfortabele accommodaties met voorzieningen zoals Wi-Fi, airconditioning en eigen eetgelegenheden.",
+          "Pensions": "Voor een meer authentieke ervaring kun je overwegen om in een pension te verblijven dat wordt gerund door lokale families. Deze gezellige etablissementen bieden een warm welkom en een kans om Kirgizische gastvrijheid te ervaren. Je hebt vaak de mogelijkheid om te genieten van zelfgemaakte maaltijden en meer te weten te komen over lokale gebruiken en tradities.",
+          "Yurts": "In landelijke en bergachtige streken bieden traditionele yurts een unieke verblijfservaring. Deze draagbare, tentachtige structuren bieden eenvoudige maar comfortabele accommodatie, vaak met een prachtig uitzicht op het omliggende landschap. Yurtverblijven kunnen maaltijden en culturele activiteiten omvatten.",
+          "Gastgezinnen": "Ervaar het leven bij een Kirgizische familie door te kiezen voor een gastgezin. Je krijgt de kans om bij de lokale bevolking te wonen, maaltijden te delen en deel te nemen aan dagelijkse activiteiten. Gastgezinnen bieden een authentieke culturele uitwisseling en inzicht in de traditionele manier van leven van Kirgizië.",
+          "Eco-lodges": "Voor milieubewuste reizigers bieden eco-lodges duurzame accommodatiemogelijkheden in een natuurlijke omgeving. Deze lodges geven prioriteit aan milieubehoud en bieden vaak activiteiten aan zoals wandelen, vogels kijken en betrokkenheid van de gemeenschap.",
+          "Camping": "is een populaire optie voor reizigers die op zoek zijn naar avontuur en eenzaamheid. Of u nu een tent op een aangewezen kampeerterrein opzet of wildkampeert op afgelegen locaties, zorg ervoor dat u de Leave No Trace-principes volgt en de benodigde vergunningen verkrijgt."
+        },
+        "details": "Voor specifieke aanbevelingen en boekingsopties kunt u reiswebsites, online boekingsplatforms en lokale toerismebureaus raadplegen."
+      },
+      "Food": {
+        "title": "Eten in Kirgizië | Reisgids",
+        "Description": "Het verkennen van de Kirgizische keuken is een integraal onderdeel van de reiservaring. Dit is wat u moet weten:",
+        "Options": {
+          "Traditionele keuken": "De Kirgizische keuken is rijk aan smaak en erfgoed, waarbij traditionele gerechten als beshbarmak (vlees en noedels), manty (dumplings) en laghman (noedelsoep) de hoofdbestanddelen zijn. Mis het proberen van gefermenteerde merriemelk niet, bekend als kumis, een populaire drank.",
+          "Nomadische invloed": "Als weerspiegeling van het nomadische erfgoed biedt de Kirgizische keuken vaak hartige gerechten gemaakt van ingrediënten als vlees (vooral lams- en paardenvlees), zuivelproducten (zoals Kymyz en Airan) en granen (waaronder rijst en tarwe). Yurts, traditionele nomadententen, bieden mogelijk authentieke eetervaringen op het platteland.",
+          "Lokale markten": "Bezoek lokale markten zoals de Osh Bazaar in Bishkek en proef een verscheidenheid aan Kirgizische gerechten en snacks, waaronder shashlik (gegrild spiesje), samsa (hartig gebak) en plov (pilaf). Deze markten bieden ook de mogelijkheid om vers fruit, noten en kruiden te kopen.",
+          "Theehuizen en cafés": "Theehuizen (chaykhana) en cafés zijn alomtegenwoordig in Kirgizië, waar thee (chai) en koffie (kofe) worden geserveerd, naast gebak, brood en lichte maaltijden. Geniet van de ontspannen sfeer en gastvrijheid terwijl u geniet van traditionele Kirgizische lekkernijen zoals baursak (gefrituurd deeg) en kurut (gedroogde yoghurtballetjes).",
+          "Internationale keuken": "In stedelijke gebieden zoals Bishkek vind je een breed scala aan internationale keukens, waaronder Russisch, Chinees, Koreaans en Europees. Verken trendy restaurants, bistro's en foodcourts en proef internationale smaken en Kirgizische gastvrijheid.",
+          "Straatvoedsel": "Ga de straten van Kirgizië in en ontdek een scala aan straatvoedselverkopers die snelle en smaakvolle snacks aanbieden. Probeer populair straatvoedsel zoals somsas (gefrituurde of gebakken omzet gevuld met vlees of groenten), gefrituurde Laghman-noedels en gegrilde maïskolven.",
+          "Culinaire rondleidingen en kooklessen": "Ga mee op foodtours of neem deel aan kooklessen om dieper in de Kirgizische keuken en culinaire tradities te duiken. Leer hoe u traditionele gerechten kunt bereiden, bezoek lokale boerderijen en producenten en dompel uzelf onder in de levendige culinaire scene van Kirgizië."
+        },
+        "details": "Raadpleeg de meegeleverde gids voor meer informatie over de Kirgizische keuken en eetgelegenheden."
+      },
+      "Safety": {
+        "title": "Veiligheid in Kirgizië | Reisgids",
+        "Description": "Reizen naar Kirgizië is over het algemeen veilig, maar het is essentieel dat u zich bewust bent van de mogelijke risico's en de nodige voorzorgsmaatregelen neemt. Dit is wat u moet weten:",
+        "Options": {
+          "Politieke stabiliteit": "Kirgizië heeft in het verleden te maken gehad met politieke instabiliteit, waaronder protesten en incidentele onrust. Hoewel de meeste toeristische gebieden onaangetast blijven, moet u op de hoogte blijven van lokale ontwikkelingen en grote bijeenkomsten of demonstraties vermijden.",
+          "Misdaad": "Kleine criminaliteit zoals zakkenrollen en diefstal kunnen voorkomen, vooral in drukke gebieden en toeristische hotspots. Houd uw bezittingen veilig en wees waakzaam.",
+          "Terrorisme": "De terreurdreiging in Kirgizië is laag, maar reizigers moeten waakzaam blijven, vooral in de grensgebieden. Volg eventuele reisadviezen van uw overheid en blijf op de hoogte.",
+          "Natuurlijke gevaren": "Kirgizië is gevoelig voor natuurlijke gevaren zoals aardbevingen, lawines en aardverschuivingen, vooral in bergachtige streken. Wees voorbereid en volg de veiligheidsrichtlijnen, vooral tijdens het wandelen of deelnemen aan buitenactiviteiten.",
+          "Verkeersveiligheid": "De wegomstandigheden in Kirgizië kunnen variëren en autorijden kan een uitdaging zijn, vooral in landelijke gebieden. Wees voorzichtig, houd u aan de plaatselijke verkeerswetten en overweeg een betrouwbare chauffeur in te huren.",
+          "Gezondheidsrisico's": "Hoewel Kirgizië geen significante gezondheidsrisico's met zich meebrengt, moeten reizigers op de hoogte zijn van routinematige vaccinaties en voorzorgsmaatregelen nemen tegen door voedsel en water overgedragen ziekten.",
+          "Hoogteziekte": "Reizigers die gebieden op grote hoogte bezoeken, moeten zich bewust zijn van het risico op hoogteziekte. Neem de tijd om te acclimatiseren en vermijd zware lichamelijke activiteit totdat uw lichaam zich heeft aangepast.",
+          "Reisverzekering": "Het is essentieel om een ​​reisverzekering af te sluiten die medische kosten, noodevacuatie en annulering/onderbreking van de reis dekt. Zorg ervoor dat uw verzekeringspolis dekking biedt voor de activiteiten die u van plan bent te ondernemen."
+        },
+        "details": "Raadpleeg officiële overheidsbronnen en reisgidsen voor meer gedetailleerde veiligheidsinformatie en reisadviezen."
+      },
+      "Prices": {
+        "title": "Prijzen in Kirgizië | Reisgids",
+        "Description": "Als u de kosten van levensonderhoud en uitgaven in Kirgizië begrijpt, kunt u uw budget effectief plannen. Hier vindt u een overzicht van de prijzen voor veel voorkomende artikelen en diensten:",
+        "Options": {
+          "Accommodatie": "De kosten van accommodatie in Kirgizië variëren afhankelijk van het type accommodatie en de locatie. Budgetreizigers kunnen betaalbare opties vinden, zoals pensions en hostels, terwijl luxe hotels en resorts zich richten op mensen die op zoek zijn naar luxe voorzieningen. Prijzen variëren van slechts $ 10 per nacht voor budgetaccommodaties tot meer dan $ 100 per nacht voor luxe accommodaties.",
+          "Eten en dineren": "Uit eten gaan in Kirgizië is over het algemeen betaalbaar, vooral bij lokale eetgelegenheden en kraampjes met eetkraampjes. Traditionele gerechten zoals beshbarmak en plov zijn goedkoop en vullend en kosten doorgaans tussen de $ 3 en $ 7 per maaltijd in lokale restaurants. Internationale gerechten en verfijnde eetgelegenheden kunnen duurder zijn, met maaltijden die gemiddeld $ 10 tot $ 20 of meer per persoon kosten.",
+          "Vervoer": "De transportkosten in Kirgizië variëren afhankelijk van de manier van reizen en de afstand. Binnenlandse vluchten tussen grote steden als Bishkek en Osh kunnen variëren van $50 tot $150 of meer, terwijl gedeelde taxi's en marshrutka's (minibussen) budgetvriendelijke opties bieden voor kortere afstanden, die doorgaans $1 tot $10 kosten, afhankelijk van de route. Het huren van een auto kan $30 tot $100 of meer per dag kosten, afhankelijk van het voertuigtype en het verhuurbedrijf.",
+          "Activiteiten en attracties": "De kosten van activiteiten en attracties in Kirgizië variëren sterk, afhankelijk van de ervaring. Toegangsprijzen voor musea, historische bezienswaardigheden en nationale parken zijn over het algemeen betaalbaar, variërend van $ 1 tot $ 10 per persoon. Rondleidingen, excursies in de buitenlucht en avontuurlijke activiteiten zoals paardrijden en wandelen kunnen extra kosten met zich meebrengen, waarbij de prijzen variëren op basis van de duur en complexiteit.",
+          "Winkelen": "Winkelen in Kirgizië biedt een scala aan mogelijkheden, van traditioneel handwerk en souvenirs tot moderne goederen en elektronica. Prijzen variëren afhankelijk van het artikel en de locatie, maar onderhandelen is gebruikelijk op markten en bazaars. Wees bereid om te onderhandelen over de beste prijs, vooral bij de aankoop van textiel, sieraden en handgemaakt handwerk.",
+          "Valuta en wisselkoersen": "De officiële munteenheid van Kirgizië is de Kirgizische som (KGS). Wisselkoersen fluctueren, dus het is raadzaam om de actuele koersen te controleren voordat u geld wisselt. De belangrijkste creditcards worden in grotere steden en toeristische gebieden geaccepteerd, maar in kleinere steden en landelijke gebieden wordt aanbevolen contant geld mee te nemen voor transacties. (1$ = 85-90som)"
+        },
+        "details": "Raadpleeg lokale bronnen en recente reisgidsen voor de meest nauwkeurige en actuele informatie over de prijzen in Kirgizië."
+      },
+      "Travel_Seasons": {
+        "title": "Reisseizoenen in Kirgizië | Reisgids",
+        "Description": "Als u de reisseizoenen in Kirgizië begrijpt, kunt u uw reis plannen en het meeste uit uw bezoek halen. Hier is een overzicht van de verschillende seizoenen en wat u kunt verwachten:",
+        "Options": {
+          "Lente (maart tot mei)": "De lente is een prachtige tijd om Kirgizië te bezoeken, waarbij het landschap tot leven komt terwijl bloemen bloeien en rivieren aanzwellen van gesmolten sneeuw. Het weer is mild, waardoor het ideaal is voor buitenactiviteiten zoals wandelen, wandelen en paardrijden. Wees echter voorbereid op incidentele regenbuien, vooral in april en mei.",
+          "Zomer (juni tot augustus)": "De zomer is het toeristische hoogseizoen in Kirgizië, met lange dagen, warme temperaturen en een heldere hemel. Het is de perfecte tijd voor buitenavonturen zoals kamperen, bergbeklimmen en het verkennen van bergmeren. In deze periode vinden populaire festivals en evenementen plaats, waaronder de World Nomad Games in september.",
+          "Herfst (september tot november)": "De herfst is een prachtig seizoen in Kirgizië, met landschappen geschilderd in levendige tinten rood, oranje en goud terwijl de bladeren van kleur veranderen. Het weer blijft aangenaam, waardoor het een uitstekende tijd is voor trekking, het spotten van wilde dieren en culturele ervaringen. September is een ideale maand om te bezoeken voor de World Nomad Games.",
+          "Winter (december tot februari)": "De winter transformeert Kirgizië in een winterwonderland, waar besneeuwde bergen en bevroren meren een adembenemend landschap creëren. Terwijl de temperaturen tot onder het vriespunt kunnen dalen, trekken wintersportliefhebbers massaal naar skigebieden als Karakol en Jyrgalan om te skiën, snowboarden en schaatsen. Februari markeert de viering van het traditionele nomadische spel Kok Boru (Buzkashi)."
+        },
+        "details": "Voor meer informatie over specifieke activiteiten, evenementen en weersomstandigheden tijdens elk seizoen kunt u reisgidsen en plaatselijke toeristische bronnen raadplegen."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Eerste keer in Kirgizië?",
+        "Description": "Als u Kirgizië voor de eerste keer bezoekt, vindt u hier een uitgebreide gids om u te helpen het meeste uit uw reis te halen:",
+        "Options": {
+          "Aankomst en vervoer": "De meeste internationale reizigers komen aan op de internationale luchthaven Manas in Bishkek. Taxi's en bussen zijn direct beschikbaar voor vervoer naar de stad. Binnen Kirgizië kunt u binnenlandse vluchten, bussen, marshrutka's (minibussen) en gedeelde taxi's gebruiken om u te verplaatsen.",
+          "SIM-kaarten en internet": "Verbonden blijven in Kirgizië is eenvoudig met een lokale simkaart. U kunt simkaarten kopen op de luchthaven of bij mobiele netwerkaanbieders in de stad. Grote aanbieders zijn onder meer Beeline, O! en Megacom. Zorg ervoor dat uw telefoon ontgrendeld is voordat u een simkaart aanschaft. De internetdekking is over het algemeen goed in steden en dorpen, maar kan in landelijke gebieden onregelmatig zijn.",
+          "Internetprijzen": "Internetprijzen in Kirgizië zijn over het algemeen betaalbaar. Een basisdatapakket van 1 GB kan ongeveer 100 kg (ongeveer $ 1,20 USD) kosten, terwijl grotere pakketten, zoals 10 GB, ongeveer 500 kg (ongeveer $ 6 USD) kunnen kosten. Onbeperkte data-abonnementen voor een maand kunnen variëren van 800 tot 1500 KGS (ongeveer $ 9,50 tot $ 18 USD), afhankelijk van de provider en de snelheid van de verbinding.",
+          "Valuta en betalingen": "De lokale munteenheid is de Kirgizische som (KGS). Geldautomaten zijn beschikbaar in de grote steden, maar op het platteland is het raadzaam om contant geld mee te nemen. Credit- en debetkaarten worden op veel plaatsen in steden geaccepteerd, maar in afgelegen gebieden minder. Valutawisseldiensten zijn beschikbaar op luchthavens, banken en wisselkantoren.",
+          "Taal": "Kirgizisch en Russisch zijn de officiële talen. In de grote steden zul je misschien een aantal Engelssprekenden tegenkomen, vooral in toeristische gebieden, maar op het platteland is het handig om enkele basiszinnen in het Kirgizisch of Russisch te kennen. Een vertaalapp of taalgids kan erg nuttig zijn.",
+          "Gezondheid en veiligheid": "Kirgizië is over het algemeen veilig voor reizigers, maar het is verstandig om standaardvoorzorgsmaatregelen te nemen. Drink gebotteld of gekookt water om door water overgedragen ziekten te voorkomen. Zorg ervoor dat u een reisverzekering heeft die ziektekosten en ongevallen dekt. Medische nooddiensten zijn beschikbaar in steden, maar kunnen beperkt zijn in plattelandsgebieden.",
+          "Klimaat en kleding": "Kirgizië heeft een landklimaat met koude winters en hete zomers. In de bergen kunnen de temperaturen aanzienlijk koeler zijn, dus pak je spullen dienovereenkomstig in. Gelaagde kleding, stevige wandelschoenen en bescherming tegen de zon worden aanbevolen. Neem in de winter warme kleding mee, waaronder een jas van goede kwaliteit, handschoenen en hoeden.",
+          "Elektriciteit en stekkers": "De standaardspanning is 220V en de frequentie is 50Hz. Stekkers en stopcontacten zijn van het type C en F. Het is raadzaam om een ​​universele reisadapter mee te nemen, zodat je je elektronische apparaten kunt opladen."
+        },
+        "details": "Raadpleeg reisgidsen en lokale bronnen voor meer gedetailleerde informatie en tips. Geniet van je eerste reis naar Kirgizië en maak onvergetelijke herinneringen!"
+      },
+      "TravelPreparation": {
+        "title": "Bereid u voor op uw reis naar Kirgizië",
+        "Description": "Zorg voor een vlotte en plezierige reis naar Kirgizië door deze essentiële reisvoorbereidingen te regelen.",
+        "Options": {
+          "Visum en paspoort": "Controleer de visumvereisten voor uw nationaliteit en zorg ervoor dat uw paspoort nog minimaal zes maanden geldig is na uw geplande verblijf.",
+          "Gezondheid en vaccinaties": "Raadpleeg uw arts voor de vereiste vaccinaties of gezondheidsmaatregelen als u naar Kirgizië reist.",
+          "Reisverzekering": "Overweeg een reisverzekering af te sluiten om onverwachte noodsituaties, zoals medische kosten of reisannuleringen, te dekken.",
+          "Valuta- en geldzaken": "Maak uzelf vertrouwd met de lokale munteenheid (Kirgizische som) en wissel wat geld voordat u op reis gaat. In de grote steden zijn pinautomaten aanwezig.",
+          "Taal": "Hoewel Russisch en Kirgizisch de officiële talen zijn, wordt Engels niet veel gesproken. Overweeg enkele basiszinnen in het Russisch of Kirgizisch te leren.",
+          "Weer en kleding": "Zorg ervoor dat u geschikte kleding meeneemt voor de weersomstandigheden tijdens uw bezoek. Kirgizië ervaart hete zomers en koude winters, dus neem laagjes mee.",
+          "Veiligheid en beveiliging": "Blijf op de hoogte van de huidige situatie in Kirgizië en wees voorzichtig, vooral in afgelegen gebieden. Houd uw bezittingen veilig en houd rekening met uw omgeving.",
+          "Culturele etiquette": "Respecteer lokale gebruiken en tradities, zoals het uittrekken van uw schoenen voordat u iemands huis betreedt en toestemming vragen voordat u foto's van mensen maakt."
+        },
+        "details": "Voor aanvullende reistips en advies specifiek voor uw reis naar Kirgizië kunt u onze uitgebreide reisgids raadplegen."
+      }
+    },
+    "sights": {
+      "name": "Bezienswaardigheden",
+      "title": "Bezienswaardigheden in Kirgizië",
+      "subtitle": "Waar te gaan in Kirgizië?  Blijf bovendien op de hoogte van de weersomstandigheden in steden en regionale centra om het meeste uit uw reis comfortabel te maken en voorbereid te zijn op voortdurend veranderend weer in dit prachtige land.",
+      "description": "Vind plaatsen om te bezoeken in heel Kirgizië, van bergmeren en nationale parken tot steden en historische bezienswaardigheden. Kies een regio om te verkennen.",
+      "keywords": "Kirgizië plaatsen, Kirgizië reizen, Kirgizië verkennen, Kirgizië bestemmingen, Kirgizië toerisme, plaatsen die je moet bezoeken in Kirgizië, topattracties Kirgizië, Kirgizië landschappen, culturele bezienswaardigheden Kirgizië, natuurlijke wonderen Kirgizië, de beste plaatsen om te bezoeken in Kirgizië",
+      "sights": "Waar te gaan!",
+      "must-see": {
+        "subtitle": "Must-see bestemmingen van Kirgizië per regio",
+        "description1": "Kirgizië staat bekend om zijn prachtige natuurlijke landschappen, van majestueuze bergen tot serene meren. Hier zijn enkele van de mooiste plekken in elke regio:",
+        "chuyregion": "Chuy-regio",
+        "alaarchatitle": "Nationaal park Ala Archa:",
+        "alaarchadescription": "Biedt een adembenemend uitzicht en wandelpaden.",
+        "buranatitle": "Burana-toren:",
+        "buranadescription": "Een historische minaret met schilderachtig uitzicht op de vallei.",
+        "issykulregion": "Issyk-Kul-regio",
+        "lakeissykkultitle": "Issyk-Kul-meer:",
+        "lakeissykkuldescription": "Een groot zoutmeer met stranden en resorts.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Beroemd om zijn rode rotsformaties.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Toegangspoort tot prachtige berggebieden zoals Altyn Arashan.",
+        "narynregion": "Naryn-regio",
+        "tashrabattitle": "Tasj Rabat:",
+        "tashrabatdescription": "Een historische stenen karavanserai in een schilderachtige vallei.",
+        "sonkultitle": "Son-Kul-meer:",
+        "sonkuldescription": "Een hooggelegen meer met prachtige zonsondergangen.",
+        "jalalabadregion": "Regio Jalal-Abad",
+        "sarychelextitle": "Biosfeerreservaat Sary-Chelek:",
+        "sarychelekdescription": "Beschikt over ongerepte meren en bossen.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "De thuisbasis van het grootste walnotenbos en prachtige watervallen.",
+        "oshregion": "Osh-regio",
+        "sulaymanmountaintitle": "Sulayman-berg:",
+        "sulaymanmountaindescription": "Een heilige berg met panoramisch uitzicht.",
+        "alayvalleytitle": "Alay-vallei:",
+        "alayvalleydescription": "Biedt een spectaculair uitzicht op het Pamirgebergte.",
+        "batkenregion": "Batken-regio",
+        "batkenvalleytitle": "Batken-vallei:",
+        "batkenvalleydescription": "Bekend om zijn abrikozenbomen en unieke rotsformaties.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Beschikt over prachtige riviervalleien.",
+        "talasregion": "Talas-regio",
+        "beshtashtitle": "Nationaal park Besh-Tash:",
+        "beshtashdescription": "Heeft schilderachtige rivieren en alpenweiden.",
+        "manasordotitle": "Manas Ordo-complex:",
+        "manasordodescription": "Een culturele site gewijd aan de held Manas."
+      },
+      "highlights": [
+        "Hoe te bereiken",
+        "Vervoer",
+        "Waar te verblijven",
+        "Wat te eten",
+        "Wat te doen",
+        "Seizoen"
+      ]
+    },
+    "tours": {
+      "name": "Rondreizen",
+      "title": "Rondreizen door Kirgizië",
+      "subtitle": "Privé- en kleine groepsreizen in Kirgizië",
+      "description": "Bekijk wandel-, paardrij-, culturele en roadtrips in Kirgizië. Kies voor een privétour of sluit je aan bij een kleine groep, met tijd voor de plaatsen die je interesseren.",
+      "description1": "Een reis kan bergwandelingen omvatten, een nacht in een traditionele vilten tent of een paar dagen naast Issyk-Kul. Kies een route die past bij uw interesses en de tijd die u heeft.\n\nOns team kan u helpen met gidsen, vervoer en accommodatie. Neem contact op om uw data, groepsgrootte en voorkeurstempo te bespreken.",
+      "keywords": "Kirgizië tours, Beste Kirgizië Tours, Trips in Kirgizië, Beste Kirgizië Tours Bedrijven, Reisbureau in Kirgizië, avontuurlijke reizen Kirgizië, rondleidingen Kirgizië, culturele reizen Kirgizië, trektochten Kirgizië, paardrijtochten Kirgizië, nomadische ervaringen Kirgizië, Kirgizië reispakketten, beste tours in Kirgizië, verken Kirgizië via rondleidingen",
+      "tourPage": {
+        "level": "Niveau",
+        "duration": "Duur",
+        "price": "Prijs",
+        "day": "Dag",
+        "days": "Dagen",
+        "details": "Details",
+        "things": "Activiteiten",
+        "places": "Plaatsen op de route",
+        "addInfo": "Aanvullende informatie",
+        "includings": "Inbegrepen bij de prijs",
+        "excludings": "Niet inbegrepen bij de prijs",
+        "from": "Vanaf",
+        "note": "Opmerking",
+        "person": "Persoon",
+        "persons": "Personen",
+        "andMore": "en meer"
+      },
+      "TourPreparation": {
+        "title": "Benodigdheden voor reizen in Kirgizië",
+        "Description": "Een uitgebreide lijst met essentiële items die u mee moet nemen tijdens uw reis naar Kirgizië om comfort, veiligheid en voorbereiding op wisselende weersomstandigheden en buitenactiviteiten te garanderen.",
+        "Options": {
+          "Schoenen": "Neem comfortabele wandelschoenen mee voor stadstochten, stevige wandelschoenen voor middelzware wandelingen, duurzame wandelschoenen voor trekking en sneldrogende sandalen als extra paar.",
+          "Hoed": "Vergeet niet een hoed met een brede rand of een zonnepet met nekflap mee te nemen, ter bescherming tegen de intense zon op grote hoogte.",
+          "UV-crème": "Vergeet niet om een ​​breedspectrum zonnebrandcrème met een hoge SPF mee te nemen om uw huid te beschermen tegen de intense UV-stralen, vooral op grotere hoogten in Kirgizië.",
+          "Kleding": "Zorg voor geschikte kledinglagen voor variërende temperaturen en weersomstandigheden, aangezien de temperatuur aanzienlijk kan variëren als gevolg van hoogteverschillen. Wees voorbereid op sneeuw of regen, vooral in bergachtige gebieden.",
+          "Medische hulp": "Vergeet niet om als voorzorgsmaatregel persoonlijke medische hulpmiddelen mee te nemen, zoals noodzakelijke medicijnen, pleisters, pijnstillers en eventuele specifieke artikelen voor reeds bestaande medische aandoeningen."
+        },
+        "overview": "Vraag ons wat u mee moet nemen voor uw route en het seizoen."
+      }
+    },
+    "articles": {
+      "name": "Artikelen",
+      "title": "Cultuur en natuur in Kirgizië",
+      "description": "Lees over de mensen, tradities, keuken en landschappen van Kirgizië.",
+      "keywords": [
+        "Kirgizische cultuur",
+        "Kirgizische tradities",
+        "Kirgizische natuur",
+        "Burkut-jacht",
+        "Kok-boru",
+        "Alabai honden",
+        "Taigan",
+        "Kirgizische geschiedenis",
+        "Centraal-Aziatische cultuur",
+        "Nomadisch erfgoed",
+        "Culturele verkenning",
+        "Traditionele sporten",
+        "Windhonden van Kirgizië",
+        "Culturele ervaringen",
+        "Avontuur in Kirgizië",
+        "Erfgoedrassen",
+        "Culturele tradities",
+        "Unieke ervaringen",
+        "Kirgizische levensstijl"
+      ]
+    },
+    "about": {
+      "title": "Over ons",
+      "subtitle": "Wie zijn wij?",
+      "description": "We helpen je een reis door Kirgizië te plannen. Vertel wanneer je wilt komen en wat je graag doet, dan zoeken we samen naar routes, gidsen en overnachtingen.",
+      "keywords": "Over ons, ons verhaal, liefhebbers van Kirgizië, reispassie, uitzonderlijke ervaringen, team, waarden, missie",
+      "buttons": {
+        "our_team": "Ons team",
+        "our_clients": "Onze klanten",
+        "contact_us": "Neem contact met ons op"
+      }
+    },
+    "info": {
+      "seen": "Bezoeken: ",
+      "created": "Gemaakt: ",
+      "modified": "Laatst gewijzigd: "
+    },
+    "download": {
+      "text": "Houd kaarten, plaatsen en reisinformatie bij de hand met onze mobiele apps."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Nuttige koppelingen",
+          "links": [
+            {
+              "text": "Home",
+              "url": "/"
+            },
+            {
+              "text": "Bezienswaardigheden",
+              "url": "/places"
+            },
+            {
+              "text": "Rondreizen",
+              "url": "/tours"
+            },
+            {
+              "text": "Luchthaventransfers",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privacy en juridisch",
+          "links": [
+            {
+              "text": "Over ons",
+              "url": "/about"
+            },
+            {
+              "text": "Neem contact met ons op",
+              "url": "/contact"
+            },
+            {
+              "text": "Privacybeleid",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Contactgegevens",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bisjkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Sociale rekeningen",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "ontwikkelaar",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

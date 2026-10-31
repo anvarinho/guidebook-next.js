@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "sq-AL",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Po ngarkohet...",
+    "contactButton": "Ndonjë pyetje?",
+    "navigation": [
+      {
+        "text": "Ballina",
+        "url": "/"
+      },
+      {
+        "text": "Vende për t’u vizituar",
+        "url": "/places"
+      },
+      {
+        "text": "Ture",
+        "url": "/tours"
+      },
+      {
+        "text": "Artikuj",
+        "url": "/articles"
+      },
+      {
+        "text": "Rreth nesh",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Udhëzues udhëtimi në Kirgistan",
+      "description": "Ecni në shtigjet malore, notoni në Isik-Kul ose kaloni një natë në jurtë me një familje vendase. Zgjidhni itinerarin që ju përshtatet.",
+      "subtitle": "Udhëzues udhëtimi në Kirgistan",
+      "subtitle1": "Pse të vizitoni Kirgistanin?",
+      "subtitle2": "Eksplorimi i Madh jashtë",
+      "subtitle3": "Eksplorim i pafund",
+      "subtitle4": "Planifikoni udhëtimin tuaj",
+      "subtitle5": "Vendet që duhen vizituar në Kirgistan",
+      "paragraph": "Ky vend i bukur, pa dalje në det, dikur pjesë e Bashkimit Sovjetik, po bëhet shpejt një nga destinacionet më të njohura të udhëtimit në Azinë Qendrore. Industria e turizmit në Kirgistan po rritet me shpejtësi, duke u ofruar udhëtarëve mundësinë për të eksploruar një nga vendet më spektakolare në botë.",
+      "paragraph1": "Kirgistani ka parë një rritje dramatike të turizmit vitet e fundit pasi aventurierët dynden për të ecur, kampe dhe udhëtim me kuaj nëpër peizazhet e tij mahnitëse. Si vendi i parë i Azisë Qendrore që relakson politikat e tij të vizave - duke ofruar hyrje pa viza për shumicën e vendeve perëndimore dhe të zhvilluara - është zhvilluar një rrjet i fortë turistik.",
+      "paragraph2": "Nga iniciativat e Turizmit të Bazuar në Komunitet (CBT) në të gjithë vendin deri te bujtinat dhe guidat e pavarura, ka mënyra të shumta për të përjetuar peizazhin befasues të Kirgistanit. Alpinistët mund të nisin udhëtime mahnitëse nga Karakoli, Kochkor, Arslanbob dhe madje edhe kryeqyteti, Bishkek. Vini re se ecja këtu shpesh kërkon një nivel të arsyeshëm fitnesi, pasi shumë shtigje ofrojnë më shumë sesa thjesht një shëtitje të qetë. Shumica e udhëtimeve variojnë nga 1 deri në 5 ditë, megjithëse aventura më të gjata janë në dispozicion.\r\n\r\nPër ata që kërkojnë të ruajnë këmbët e tyre, kalërimi është një alternativë popullore. Merrni udhëtimin më spektakolar të kuajve në vend për në Song Kol, ose kaloni disa ditë duke u relaksuar dhe notuar në liqenin e bukur Issyk-Kul.",
+      "paragraph3": "Me destinacione, udhëtime dhe shtigje të panumërta jashtë rrugës, mundësitë për të eksploruar janë të pafundme. Pavarësisht nëse jeni duke kërkuar aventura apo relaksim, Kirgistani ka diçka për të gjithë.",
+      "paragraph4": "Për informacion më specifik mbi atraksionet, si të shkoni atje dhe përreth, dhe këshilla të tjera udhëtimi, sigurohuni që të lexoni udhëzuesin tonë gjithëpërfshirës të udhëtimit në Kirgistan. Përmirësoni përvojën tuaj të udhëtimit me aplikacionet e rekomanduara për navigim, përkthim dhe informacione lokale për të përfituar sa më shumë nga udhëtimi juaj.\r\n\r\nShijoni udhëtimin tuaj dhe përjetoni bukurinë dhe kulturën unike të Kirgistanit",
+      "keywords": "Udhërrëfyes turistik i Kirgistanit, udhëzues turistik, komoditet udhëtimi, atraksione lokale, shërbime turistike, këshilla për udhëtime në Kirgistan, Eksperienca kulturore, Planifikim turne, vizita turistike, udhëtime aventurore, turne të përshtatshëm, udhëzues i qytetit Bishkek, atraksione turistike në Kirgistan, Vende turistike, Vende pranë meje për t'u vizituar, Vende turistike pranë meje, Vende turistike pranë meje, Vende turistike pranë meje, bota, lokacionet më të bukura në botë, Vendet më të bukura në botë, Udhëtoni me guidë, Udhëzues për udhëtime, Vende të bukura, Bishkek në Kirgistan, Qyteti Bishkek, Turist dhe udhërrëfyes, atraksione turistike PR, Atraksione në afërsi dhe si ta ekzekutoni atë",
+      "button": "Le të zbulojmë!",
+      "button1": "Ku të Shkoni!",
+      "button2": "Çfarë duhet bërë!",
+      "button3": "lexoni më shumë",
+      "button4": "Udhëtimet tona",
+      "Transportation": {
+        "title": "Transporti në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Shëtitja rreth Kirgistanit mund të jetë një aventurë më vete. Ja çfarë duhet të dini:",
+        "Options": {
+          "Fluturime të brendshme": "Për distanca më të gjata, veçanërisht nëse koha është një kufizim, fluturimet e brendshme janë të disponueshme midis qyteteve kryesore si Bishkek, Osh dhe Tamchy (afër Cholpon-Ata në rajonin Issyk-Kul). Kontrolloni linjat ajrore për oraret dhe rezervimet.",
+          "Marshrutka (minibusë)": "Këto janë mënyrat më të zakonshme dhe me kosto efektive të transportit për distanca të shkurtra dhe të mesme. Ata ndjekin rrugë fikse midis qyteteve dhe qytezave dhe janë shumë të njohura në mesin e vendasve.",
+          "Taksitë e përbashkëta": "Taksitë e përbashkëta ofrojnë një alternativë më të shpejtë, por pak më të shtrenjtë për marshrutka. Zakonisht largohen kur janë plot dhe çmimet mund të negociohen.",
+          "Makina me qira": "Për më shumë fleksibilitet, marrja me qira e një makine është një opsion i mirë. Rrugët në zonat rurale mund të jenë të vrazhda, kështu që rekomandohet një 4x4. Sigurohuni që të keni një leje drejtimi ndërkombëtare.",
+          "Trenat": "Shërbimet e kufizuara të trenave janë të disponueshme, kryesisht që lidhin Bishkek me Balykchy pranë liqenit Issyk-Kul. Është një rrugë piktoreske, por më e ngadaltë se udhëtimi rrugor.",
+          "Autobusët": "Autobusët e rregullt operojnë në qytetet kryesore, duke ofruar një mënyrë komode për të udhëtuar. Megjithatë, ato mund të mos mbulojnë zona të largëta.",
+          "HitchHiking": "është një praktikë e zakonshme në zonat rurale të Kirgistanit, ku mundësitë e transportit formal mund të jenë të kufizuara. Është relativisht i sigurt dhe i pranuar kulturalisht, por tregohuni të kujdesshëm dhe përdorni gjykimin tuaj kur pranoni udhëtime nga të huajt."
+        },
+        "details": "Për informacione të hollësishme mbi opsionet e transportit, vizitoni udhëzuesin e dhënë."
+      },
+      "Accommodations": {
+        "title": "Strehim në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Nga bujtina komode tek resortet luksoze, Kirgistani ofron një shumëllojshmëri opsionesh akomodimi që i përshtaten preferencave dhe buxhetit të çdo udhëtari. Këtu janë disa zgjedhje për t'u marrë parasysh:",
+        "Options": {
+          "Hotele": "Qytetet kryesore të Kirgistanit si Bishkek dhe Osh mburren me një sërë hotelesh që ofrojnë buxhete dhe preferenca të ndryshme. Nga zinxhirët ndërkombëtarë deri te hotelet butikë, do të gjeni akomodime të rehatshme me pajisje të tilla si Wi-Fi, ajrin e kondicionuar dhe opsionet e ngrënies në shtëpi.",
+          "Bujtinat": "Për një përvojë më autentike, merrni parasysh qëndrimin në një bujtinë të drejtuar nga familjet vendase. Këto institucione komode ofrojnë një pritje të ngrohtë dhe një shans për të përjetuar mikpritjen Kirgistan. Shpesh do të keni mundësinë të shijoni ushqime të bëra në shtëpi dhe të mësoni për zakonet dhe traditat lokale.",
+          "Jurts": "Në zonat rurale dhe rajonet malore, yurts tradicionale ofrojnë një përvojë unike akomodimi. Këto struktura portative, të ngjashme me tendën ofrojnë strehim bazë, por të rehatshëm, shpesh me pamje mahnitëse të peizazheve përreth. Qëndrimet në jurt mund të përfshijnë ushqime dhe aktivitete kulturore.",
+          "Banesa në shtëpi": "Përjetoni jetën me një familje kirgize duke zgjedhur një shtëpi në shtëpi. Do të keni mundësinë të jetoni me vendasit, të ndani vakte dhe të merrni pjesë në aktivitetet e përditshme. Shtëpitë në shtëpi ofrojnë një shkëmbim autentik kulturor dhe një pasqyrë të mënyrës tradicionale të jetesës së Kirgistanit.",
+          "Eko-lozha": "Për udhëtarët e ndërgjegjshëm për mjedisin, eko-lozhat ofrojnë mundësi të qëndrueshme akomodimi në mjedise natyrore. Këto shtëpiza kanë prioritet ruajtjen e mjedisit dhe shpesh ofrojnë aktivitete të tilla si ecja, vëzhgimi i shpendëve dhe angazhimi i komunitetit.",
+          "Kampingu": "është një opsion popullor për udhëtarët që kërkojnë aventura dhe vetmi. Pavarësisht nëse vendosni një tendë në një zonë të caktuar kampingu ose kamp të egër në vende të largëta, sigurohuni që të ndiqni parimet e Leave No Trace dhe të merrni çdo leje të nevojshme."
+        },
+        "details": "Për rekomandime specifike dhe opsione rezervimi, konsultohuni me faqet e internetit të udhëtimit, platformat e rezervimit në internet dhe zyrat lokale të turizmit."
+      },
+      "Food": {
+        "title": "Ushqimi në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Eksplorimi i kuzhinës Kirgize është një pjesë integrale e përvojës së udhëtimit. Ja çfarë duhet të dini:",
+        "Options": {
+          "Kuzhina Tradicionale": "Kuzhina kirgize është e pasur me shije dhe trashëgimi, me pjatat tradicionale si beshbarmak (mish dhe petë), manty (petë) dhe laghman (supë me petë). Mos humbisni të provoni qumështin e pelës së fermentuar të njohur si kumis, një pije e njohur.",
+          "Ndikimi Nomade": "Duke reflektuar trashëgiminë e saj nomade, kuzhina Kirgize shpesh përmban pjata të shijshme të bëra nga përbërës si mishi (veçanërisht mishi i qengjit dhe i kalit), produktet e qumështit (të tilla si kymyz dhe airani) dhe drithëra (duke përfshirë orizin dhe grurin). Yurts, tenda tradicionale nomade, mund të ofrojnë përvoja autentike të ngrënies në zonat rurale.",
+          "Tregjet Lokale": "Vizitoni tregjet lokale si Osh Pazari në Bishkek për të shijuar një shumëllojshmëri pjatash dhe ushqimesh kirgize, duke përfshirë shashlik (mish i pjekur në skarë), samsa (pasta të shijshme) dhe plov (pilaf). Këto tregje ofrojnë gjithashtu një mundësi për të blerë fruta të freskëta, arra dhe erëza.",
+          "Çajtore dhe kafene": "Çajtoret (chaykhana) dhe kafenetë janë të kudondodhura në Kirgistan, duke shërbyer çaj (chai) dhe kafe (kofe) së bashku me pasta, bukë dhe ushqime të lehta. Shijoni atmosferën e relaksuar dhe mikpritjen ndërsa shijoni ëmbëlsirat tradicionale Kirgistane si baursak (brumë i skuqur) dhe kurut (topa jogurti të thata).",
+          "Kuzhina Ndërkombëtare": "Në zonat urbane si Bishkek, do të gjeni një gamë të larmishme kuzhinash ndërkombëtare, duke përfshirë ruse, kineze, koreane dhe evropiane. Eksploroni restorante në modë, bistro dhe fusha ushqimore për një shije të shijeve globale së bashku me mikpritjen Kirgize.",
+          "Ushqimi i rrugës": "Shkoni në rrugët e Kirgistanit për të zbuluar një sërë shitësish ushqimesh në rrugë që ofrojnë ushqime të shpejta dhe të shijshme. Provoni ushqime të njohura të rrugës si somsa (të skuqura ose të pjekura të mbushura me mish ose perime), petë të skuqura laghman dhe misër të pjekur në skarë.",
+          "Turne ushqimore dhe kurse gatimi": "Filloni në turne ushqimore ose bashkohuni në klasa gatimi për të gërmuar më thellë në kuzhinën Kirgize dhe traditat e kuzhinës. Mësoni se si të përgatisni pjata tradicionale, vizitoni fermat dhe prodhuesit vendas dhe zhytuni në skenën e gjallë të kuzhinës së Kirgistanit."
+        },
+        "details": "Për më shumë informacion mbi kuzhinën Kirgize dhe opsionet e ngrënies, referojuni udhëzuesit të dhënë."
+      },
+      "Safety": {
+        "title": "Siguria në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Udhëtimi për në Kirgistan është përgjithësisht i sigurt, por është thelbësore të jeni të vetëdijshëm për rreziqet e mundshme dhe të merrni masat e nevojshme paraprake. Ja çfarë duhet të dini:",
+        "Options": {
+          "Stabiliteti Politik": "Kirgistani ka përjetuar paqëndrueshmëri politike në të kaluarën, duke përfshirë protesta dhe trazira të herëpashershme. Ndërsa shumica e zonave turistike mbeten të paprekura, qëndroni të informuar për zhvillimet lokale dhe shmangni tubimet ose demonstratat e mëdha.",
+          "Krimi": "Krimet e vogla si vjedhja e xhepave dhe vjedhja mund të ndodhin, veçanërisht në zonat e mbushura me njerëz dhe pikat e nxehta turistike. Mbani gjërat tuaja të sigurta dhe jini vigjilentë.",
+          "Terrorizmi": "Kërcënimi i terrorizmit në Kirgistan është i ulët, por udhëtarët duhet të qëndrojnë vigjilentë, veçanërisht në zonat kufitare. Ndiqni çdo këshillë udhëtimi të lëshuar nga qeveria juaj dhe qëndroni të informuar.",
+          "Rreziqet natyrore": "Kirgistani është i prirur ndaj rreziqeve natyrore si tërmetet, ortekët dhe rrëshqitjet e dheut, veçanërisht në rajonet malore. Jini të përgatitur dhe ndiqni udhëzimet e sigurisë, veçanërisht kur udhëtoni ose angazhoheni në aktivitete në natyrë.",
+          "Siguria Rrugore": "Kushtet e rrugëve në Kirgistan mund të ndryshojnë dhe ngasja mund të jetë sfiduese, veçanërisht në zonat rurale. Tregoni kujdes, respektoni ligjet lokale të trafikut dhe merrni parasysh punësimin e një shoferi me reputacion.",
+          "Rreziqet për shëndetin": "Ndërsa Kirgistani nuk paraqet rreziqe të konsiderueshme për shëndetin, udhëtarët duhet të jenë të përditësuar për vaksinimet rutinë dhe të marrin masa paraprake kundër sëmundjeve ushqimore dhe të ujit.",
+          "Sëmundja e lartësisë": "Udhëtarët që vizitojnë zonat me lartësi të madhe duhet të jenë të vetëdijshëm për rrezikun e sëmundjes në lartësi. Merrni kohë për t'u ambientuar dhe për të shmangur aktivitetin e rëndë fizik derisa trupi juaj të përshtatet.",
+          "Sigurimi i Udhëtimit": "Është thelbësore të keni sigurim udhëtimi që mbulon shpenzimet mjekësore, evakuimin urgjent dhe anulimin/ndërprerjen e udhëtimit. Sigurohuni që politika juaj e sigurimit të përfshijë mbulimin për aktivitetet në të cilat planifikoni të angazhoheni."
+        },
+        "details": "Për informacion më të detajuar të sigurisë dhe këshilla udhëtimi, konsultohuni me burimet zyrtare të qeverisë dhe udhëzuesit e udhëtimit."
+      },
+      "Prices": {
+        "title": "Çmimet në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Kuptimi i kostos së jetesës dhe shpenzimeve në Kirgistan mund t'ju ndihmojë të planifikoni buxhetin tuaj në mënyrë efektive. Këtu është një përmbledhje e çmimeve për artikujt dhe shërbimet e zakonshme:",
+        "Options": {
+          "Akomodimi": "Kostoja e akomodimit në Kirgistan ndryshon në varësi të llojit të akomodimit dhe vendndodhjes. Udhëtarët me buxhet mund të gjejnë opsione të përballueshme si bujtina dhe bujtina, ndërsa hotelet dhe vendpushimet luksoze kujdesen për ata që kërkojnë pajisje luksoze. Çmimet variojnë nga 10 dollarë për natë për akomodime buxhetore deri në mbi 100 dollarë për natë për objektet luksoze.",
+          "Ushqimi dhe Ngrënia": "Ushqimi në Kirgistan është përgjithësisht i përballueshëm, veçanërisht në restorantet lokale dhe tezgat e ushqimit në rrugë. Pjatat tradicionale si beshbarmak dhe plov janë të lira dhe ngopëse, zakonisht kushtojnë nga 3 deri në 7 dollarë për vakt në restorantet lokale. Kuzhina ndërkombëtare dhe opsionet e ngrënies së mirë mund të jenë më të shtrenjta, me vakte mesatarisht 10 deri në 20 dollarë ose më shumë për person.",
+          "Transporti": "Kostot e transportit në Kirgistan ndryshojnë në varësi të mënyrës së udhëtimit dhe distancës. Fluturimet e brendshme midis qyteteve të mëdha si Bishkek dhe Osh mund të variojnë nga 50 deri në 150 dollarë ose më shumë, ndërsa taksitë e përbashkëta dhe marshrutka (minibusët) ofrojnë opsione buxhetore për distanca më të shkurtra, që zakonisht kushtojnë 1 deri në 10 dollarë në varësi të rrugës. Marrja me qira e një makine mund të kushtojë 30 deri në 100 dollarë ose më shumë në ditë, në varësi të llojit të automjetit dhe kompanisë që jep me qira.",
+          "Aktivitetet dhe atraksionet": "Kostoja e aktiviteteve dhe atraksioneve në Kirgistan ndryshon shumë në varësi të përvojës. Tarifat e hyrjes në muze, vendet historike dhe parqet kombëtare janë përgjithësisht të përballueshme, duke filluar nga 1 deri në 10 dollarë për person. Udhëtimet me guidë, ekskursionet në natyrë dhe aktivitetet aventureske si kalërimi dhe ecja me kalë mund të shkaktojnë kosto shtesë, me çmime që ndryshojnë në bazë të kohëzgjatjes dhe kompleksitetit.",
+          "Pazar": "Blerja në Kirgistan ofron një sërë opsionesh, nga artizanat tradicionale dhe suvenire deri te mallrat dhe pajisjet elektronike moderne. Çmimet ndryshojnë në varësi të artikullit dhe vendndodhjes, por pazaret janë të zakonshme në tregje dhe pazare. Jini të përgatitur për të negociuar për çmimin më të mirë, veçanërisht kur blini tekstile, bizhuteri dhe vepra artizanale të punuar me dorë.",
+          "Valuta dhe kurset e këmbimit": "Monedha zyrtare e Kirgistanit është som Kirgistani (KGS). Kurset e këmbimit luhaten, prandaj është e këshillueshme që të kontrolloni normat aktuale përpara se të shkëmbeni para. Kartat kryesore të kreditit pranohen në qytete më të mëdha dhe zona turistike, por rekomandohet të mbani para në dorë për transaksione në qytete më të vogla dhe zona rurale. (1$ = 85-90som)"
+        },
+        "details": "Për informacionin më të saktë dhe më të përditësuar mbi çmimet në Kirgistan, konsultohuni me burimet lokale dhe udhëzuesit e fundit të udhëtimit."
+      },
+      "Travel_Seasons": {
+        "title": "Stinët e udhëtimit në Kirgistan | Udhëzues udhëtimi",
+        "Description": "Kuptimi i stinëve të udhëtimit në Kirgistan mund t'ju ndihmojë të planifikoni udhëtimin tuaj dhe të shfrytëzoni sa më shumë vizitën tuaj. Këtu keni një përmbledhje të stinëve të ndryshme dhe çfarë të prisni:",
+        "Options": {
+          "Pranvera (Mars-Maj)": "Pranvera është një kohë e bukur për të vizituar Kirgistanin, me peizazhin që merr jetë ndërsa lulet lulëzojnë dhe lumenjtë fryhen nga bora e shkrirë. Moti është i butë, duke e bërë atë ideal për aktivitete në natyrë si shëtitje, trekking dhe hipur mbi kalë. Megjithatë, përgatituni për reshje të herëpashershme shiu, veçanërisht në prill dhe maj.",
+          "Vera (qershor-gusht)": "Vera është sezoni kulmor turistik në Kirgistan, me ditë të gjata, temperatura të ngrohta dhe qiell të pastër. Është koha e përkryer për aventura në natyrë si kampingu, ngjitja në mal dhe eksplorimi i liqeneve alpine. Festivalet dhe ngjarjet e njohura zhvillohen gjatë kësaj kohe, duke përfshirë Lojërat Botërore të Nomadëve në shtator.",
+          "Vjeshtë (shtator-nëntor)": "Vjeshta është një stinë mahnitëse në Kirgistan, me peizazhe të pikturuara me nuanca të gjalla të së kuqes, portokallisë dhe ari, ndërsa gjethet ndryshojnë ngjyrën. Moti mbetet i këndshëm, duke e bërë atë një kohë të shkëlqyeshme për ecje, zbulim të kafshëve të egra dhe përvoja kulturore. Shtatori është një muaj ideal për t'u vizituar për Lojërat Botërore të Nomadëve.",
+          "Dimër (dhjetor-shkurt)": "Dimri e shndërron Kirgistanin në një vend të çudirave dimërore, me male të mbuluara me borë dhe liqene të ngrirë që krijojnë peizazhe të lë pa frymë. Ndërsa temperaturat mund të bien nën zero, entuziastët e sporteve dimërore dynden në vendpushimet e skive si Karakol dhe Jyrgalan për ski, snowboard dhe patinazh në akull. Shkurti shënon festën e lojës tradicionale nomade, Kok Boru (Buzkashi)."
+        },
+        "details": "Për më shumë informacion mbi aktivitetet specifike, ngjarjet dhe kushtet e motit gjatë çdo sezoni, konsultohuni me udhëzuesit e udhëtimit dhe burimet lokale të turizmit."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Hera e parë në Kirgistan?",
+        "Description": "Nëse jeni duke vizituar Kirgistanin për herë të parë, këtu është një udhëzues gjithëpërfshirës për t'ju ndihmuar të përfitoni sa më shumë nga udhëtimi juaj:",
+        "Options": {
+          "Mbërritja dhe kthimi përreth": "Shumica e udhëtarëve ndërkombëtarë mbërrijnë në Aeroportin Ndërkombëtar Manas në Bishkek. Taksitë dhe autobusët janë të disponueshëm për transport në qytet. Brenda Kirgistanit, ju mund të përdorni fluturime të brendshme, autobusë, marshrutka (minibusë) dhe taksi të përbashkëta për të lëvizur.",
+          "Kartat SIM dhe Interneti": "Qëndrimi i lidhur në Kirgistan është i lehtë me një kartë SIM lokale. Mund të blini karta SIM në aeroport ose nga ofruesit e rrjetit celular në qytet. Ofruesit kryesorë përfshijnë Beeline, O! dhe Megacom. Sigurohuni që telefoni juaj të jetë i shkyçur përpara se të blini një kartë SIM. Mbulimi me internet është përgjithësisht i mirë në qytete dhe qyteza, por mund të jetë i dobët në zonat rurale.",
+          "Çmimet e internetit": "Çmimet e internetit në Kirgistan janë përgjithësisht të përballueshme. Një paketë bazë e të dhënave prej 1 GB mund të kushtojë rreth 100 KGS (afërsisht 1,20 dollarë USD), ndërsa paketat më të mëdha, të tilla si 10 GB, mund të kushtojnë rreth 500 KGS (përafërsisht 6 USD). Planet e pakufizuara të të dhënave për një muaj mund të variojnë nga 800 në 1500 KGS (afërsisht 9,50 dollarë deri në 18 dollarë USD) në varësi të ofruesit dhe shpejtësisë së lidhjes.",
+          "Valuta dhe pagesat": "Monedha vendase është Som Kirgistani (KGS). ATM-të janë të disponueshme në qytetet kryesore, por këshillohet që të mbani para në zonat rurale. Kartat e kreditit dhe të debitit pranohen në shumë vende në qytete, por më pak në zona të largëta. Shërbimet e këmbimit valutor ofrohen në aeroporte, banka dhe zyra këmbimi.",
+          "Gjuha": "Kirgistanishtja dhe Rusishtja janë gjuhët zyrtare. Në qytetet e mëdha, mund të gjeni disa folës anglisht, veçanërisht në zonat turistike, por në rajonet rurale, është e dobishme të dini disa fraza bazë kirgize ose ruse. Një aplikacion përkthimi ose një libër frazash mund të jetë shumë i dobishëm.",
+          "Shëndeti dhe Siguria": "Kirgistani është përgjithësisht i sigurt për udhëtarët, por është e mençur të merren masa paraprake standarde. Pini ujë në shishe ose të zier për të shmangur sëmundjet që vijnë nga uji. Sigurohuni që të keni sigurim udhëtimi që mbulon shëndetin dhe aksidentet. Shërbimet e urgjencës mjekësore janë të disponueshme në qytete, por mund të kufizohen në zonat rurale.",
+          "Klima dhe Veshja": "Kirgistani ka një klimë kontinentale me dimër të ftohtë dhe verë të nxehtë. Në male, temperaturat mund të jenë dukshëm më të ftohta, kështu që paketoni në përputhje me rrethanat. Rekomandohen veshje me shtresa, këpucë të forta për ecje dhe mbrojtje nga dielli. Në dimër, merrni me vete veshje të ngrohta, duke përfshirë një xhaketë të cilësisë së mirë, doreza dhe kapele.",
+          "Energjia elektrike dhe priza": "Tensioni standard është 220 V, dhe frekuenca është 50 Hz. Prizat dhe prizat e rrymës janë të tipit C dhe F. Këshillohet që të merrni me vete një përshtatës universal udhëtimi për t'u siguruar që mund të karikoni pajisjet tuaja elektronike."
+        },
+        "details": "Për informacion dhe këshilla më të hollësishme, referojuni udhëzuesve të udhëtimit dhe burimeve lokale. Shijoni udhëtimin tuaj të parë në Kirgistan dhe krijoni kujtime të paharrueshme!"
+      },
+      "TravelPreparation": {
+        "title": "Përgatituni për udhëtimin tuaj në Kirgistan",
+        "Description": "Siguroni një udhëtim të qetë dhe të këndshëm në Kirgistan duke u kujdesur për këto përgatitje thelbësore të udhëtimit.",
+        "Options": {
+          "Vizë dhe pasaportë": "Kontrolloni kërkesat për vizë për kombësinë tuaj dhe sigurohuni që pasaporta juaj të jetë e vlefshme për të paktën gjashtë muaj përtej qëndrimit tuaj të synuar.",
+          "Shëndeti dhe vaksinat": "Konsultohuni me ofruesin tuaj të kujdesit shëndetësor për çdo vaksinim të kërkuar ose masa paraprake shëndetësore për të udhëtuar në Kirgistan.",
+          "Sigurimi i Udhëtimit": "Merrni parasysh blerjen e sigurimit të udhëtimit për të mbuluar urgjencat e papritura, të tilla si shpenzimet mjekësore ose anulimet e udhëtimit.",
+          "Çështjet e monedhës dhe parave": "Njihuni me monedhën vendase (Som Kirgistani) dhe shkëmbeni disa para përpara udhëtimit tuaj. ATM-të janë në dispozicion në qytetet kryesore.",
+          "Gjuha": "Ndërsa rusishtja dhe kirgistanishtja janë gjuhët zyrtare, anglishtja nuk flitet gjerësisht. Merrni parasysh të mësoni disa fraza bazë në rusisht ose kirgize.",
+          "Moti dhe Veshja": "Paketoni veshje të përshtatshme për kushtet e motit gjatë vizitës suaj. Kirgistani përjeton verë të nxehtë dhe dimër të ftohtë, ndaj sillni shtresa.",
+          "Siguria dhe Siguria": "Qëndroni të informuar për situatën aktuale në Kirgistan dhe tregohuni të kujdesshëm, veçanërisht në zonat e largëta. Mbani gjërat tuaja të sigurta dhe jini të vetëdijshëm për rrethinën tuaj.",
+          "Etiketa kulturore": "Respektoni zakonet dhe traditat lokale, të tilla si heqja e këpucëve përpara se të hyni në shtëpinë e dikujt dhe të kërkoni leje përpara se të fotografoni njerëzit."
+        },
+        "details": "Për këshilla shtesë udhëtimi dhe këshilla specifike për udhëtimin tuaj në Kirgistan, referojuni udhëzuesit tonë gjithëpërfshirës të udhëtimit."
+      }
+    },
+    "sights": {
+      "name": "Vende për t’u vizituar",
+      "title": "Vende për t’u vizituar në Kirgistan",
+      "subtitle": "Ku të shkoni në Kirgistan?  Për më tepër, qëndroni të informuar për kushtet e motit në qytete dhe qendra rajonale për të shfrytëzuar sa më shumë udhëtimin tuaj të rehatshëm dhe për t'u përgatitur për ndryshimin e vazhdueshëm të motit të këtij vendi të bukur.",
+      "description": "Gjeni vende për t'u vizituar në të gjithë Kirgistanin, nga liqenet malore dhe parqet kombëtare te qytetet dhe vendet historike. Zgjidhni një rajon për të filluar eksplorimin.",
+      "keywords": "Vendet e Kirgistanit, udhëtimet e Kirgistanit, eksploroni Kirgistanin, destinacionet e Kirgistanit, turizmin e Kirgistanit, vendet që duhen vizituar në Kirgistan, atraksionet kryesore Kirgistani, peizazhet e Kirgistanit, vendet kulturore Kirgistani, mrekullitë natyrore Kirgistani, vendet më të mira për t'u vizituar në Kirgistan",
+      "sights": "Ku të Shkoni!",
+      "must-see": {
+        "subtitle": "Destinacionet që duhen parë të Kirgistanit sipas rajoneve",
+        "description1": "Kirgistani është i njohur për peizazhet e tij të bukura natyrore, nga malet madhështore te liqenet e qetë. Këtu janë disa nga vendet më të bukura në çdo rajon:",
+        "chuyregion": "Rajoni Chuy",
+        "alaarchatitle": "Parku Kombëtar Ala Archa:",
+        "alaarchadescription": "Ofron pamje të lë pa frymë dhe shtigje ecjeje.",
+        "buranatitle": "Kulla e Buranës:",
+        "buranadescription": "Një minare historike me pamje piktoreske të luginës.",
+        "issykulregion": "Rajoni Issyk-Kul",
+        "lakeissykkultitle": "Liqeni Issyk-Kul:",
+        "lakeissykkuldescription": "Një liqen i madh i kripur me plazhe dhe vendpushime.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "I famshëm për formacionet e tij shkëmbore të kuqe.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Porta për në vendet e bukura malore si Altyn Arashan.",
+        "narynregion": "Rajoni Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Një karvanserai historik guri në një luginë piktoreske.",
+        "sonkultitle": "Liqeni Son-Kul:",
+        "sonkuldescription": "Një liqen me lartësi të madhe me perëndime mahnitëse.",
+        "jalalabadregion": "Rajoni Xhalal-Abad",
+        "sarychelextitle": "Rezerva e biosferës Sary-Chelek:",
+        "sarychelekdescription": "Përmban liqene dhe pyje të pacenuar.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Shtëpia e pyllit më të madh të arrave dhe ujëvarat e bukura.",
+        "oshregion": "Rajoni i Oshit",
+        "sulaymanmountaintitle": "Mali Sulejman:",
+        "sulaymanmountaindescription": "Një mal i shenjtë me pamje panoramike.",
+        "alayvalleytitle": "Lugina e Alay:",
+        "alayvalleydescription": "Ofron pamje spektakolare të maleve Pamir.",
+        "batkenregion": "Rajoni i Batkenit",
+        "batkenvalleytitle": "Lugina e Batkenit:",
+        "batkenvalleydescription": "E njohur për pemët e saj me kajsi dhe formacionet unike shkëmbore.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "Përmban lugina të bukura lumore.",
+        "talasregion": "Rajoni Talas",
+        "beshtashtitle": "Parku Kombëtar Besh-Tash:",
+        "beshtashdescription": "Ka lumenj piktoreske dhe livadhe alpine.",
+        "manasordotitle": "Kompleksi Manas Ordo:",
+        "manasordodescription": "Një vend kulturor kushtuar heroit Manas."
+      },
+      "highlights": [
+        "Si të arrini në",
+        "Transporti",
+        "Ku të qëndroni",
+        "Çfarë duhet të hani",
+        "Çfarë duhet bërë",
+        "Sezoni"
+      ]
+    },
+    "tours": {
+      "name": "Ture",
+      "title": "Udhëtime në Kirgistan",
+      "subtitle": "Turne private dhe grupore të vogla në Kirgistan",
+      "description": "Zbuloni itinerare për ecje, kalërim, vizita kulturore dhe udhëtime me makinë në Kirgistan. Bashkohuni me një grup të vogël ose zgjidhni një tur privat.",
+      "description1": "Një udhëtim mund të përfshijë shtigje malore, një natë në një jurtë tradicionale ose disa ditë pranë Issyk-Kul. Zgjidhni një rrugë që i përshtatet interesave tuaja dhe kohës që keni.\n\nEkipi ynë mund të ndihmojë me guidat, transportin dhe akomodimin. Kontaktoni për të diskutuar datat tuaja, madhësinë e grupit dhe ritmin e preferuar.",
+      "keywords": "Udhëtime në Kirgistan, Udhëtime më të mira në Kirgistan, Kompanitë më të mira të turneut në Kirgistan, Agjensi udhëtimi në Kirgistan, turne aventureske në Kirgistan, turne me guida Kirgistan, turne kulturore Kirgistan, turne trekking Kirgistan, turne hipur në kalë turne në Kirgistan, eksploroni Kirgistanin përmes turneve",
+      "tourPage": {
+        "level": "Niveli",
+        "duration": "Kohëzgjatja",
+        "price": "Çmimi",
+        "day": "Dita",
+        "days": "Ditët",
+        "details": "Detajet",
+        "things": "Aktivitete",
+        "places": "Vende në itinerar",
+        "addInfo": "Informacione shtese",
+        "includings": "Përfshihet në çmim",
+        "excludings": "Nuk përfshihet në çmim",
+        "from": "Nga",
+        "note": "Shënim",
+        "person": "Personi",
+        "persons": "Personat",
+        "andMore": "dhe më shumë"
+      },
+      "TourPreparation": {
+        "title": "Bazat për udhëtime në Kirgistan",
+        "Description": "Një listë gjithëpërfshirëse e artikujve thelbësorë për të sjellë në udhëtimin tuaj në Kirgistan për të siguruar rehati, siguri dhe gatishmëri për kushte të ndryshme të motit dhe aktivitete në natyrë.",
+        "Options": {
+          "Këpucët": "Merr si një palë këpucë të rehatshme ecjeje për turne në qytet, këpucë të forta ecjeje për ecje të moderuara, çizme ecjeje të qëndrueshme për ecje dhe sandale që thahen shpejt.",
+          "Kapelë": "Mos harroni të paketoni një kapelë me strehë të gjerë ose një kapak dielli me një kapak në qafë për t'u mbrojtur nga dielli intensiv në lartësi të mëdha.",
+          "Krem UV": "Mos harroni të paketoni krem ​​dielli me spektër të gjerë me SPF të lartë për të mbrojtur lëkurën tuaj nga rrezet e forta UV, veçanërisht në lartësi më të larta në Kirgistan.",
+          "Veshje": "Paketoni shtresat e përshtatshme të veshjeve për temperaturat dhe kushtet e ndryshme të motit, duke pasur parasysh se temperaturat mund të ndryshojnë ndjeshëm me ndryshimet e lartësisë. Jini të përgatitur për borë ose shi, veçanërisht në zonat malore.",
+          "Ndihma Mjekësore": "Mos harroni të mbani si masa paraprake ndihmat mjekësore personale, të tilla si medikamentet e nevojshme, fasha, qetësuesit e dhimbjes dhe çdo send specifik për gjendjet mjekësore para-ekzistuese."
+        },
+        "overview": "Na pyesni se çfarë të sjellim për rrugën tuaj dhe sezonin."
+      }
+    },
+    "articles": {
+      "name": "Artikuj",
+      "title": "Kultura dhe natyra e Kirgistanit",
+      "description": "Njihuni me njerëzit, traditat, kuzhinën dhe peizazhet e Kirgistanit.",
+      "keywords": [
+        "Kultura e Kirgistanit",
+        "Traditat e Kirgistanit",
+        "Natyra Kirgistan",
+        "Gjuetia e Burkut",
+        "Kok-boru",
+        "Qentë Alabai",
+        "Tajgani",
+        "Historia e Kirgistanit",
+        "Kultura e Azisë Qendrore",
+        "Trashëgimia nomade",
+        "Eksplorimi kulturor",
+        "Sportet tradicionale",
+        "Zonat e qytetit të Kirgistanit",
+        "Përvoja kulturore",
+        "Aventurë në Kirgistan",
+        "Racat e trashëgimisë",
+        "Traditat kulturore",
+        "Eksperienca unike",
+        "Mënyra e jetesës së Kirgistanit"
+      ]
+    },
+    "about": {
+      "title": "Rreth nesh",
+      "subtitle": "Kush jemi ne?",
+      "description": "Ju ndihmojmë të planifikoni udhëtimin në Kirgistan. Na tregoni kur dëshironi të vini dhe çfarë ju intereson, që të zgjedhim së bashku itinerarin, guidat dhe akomodimin.",
+      "keywords": "Rreth nesh, historia jonë, entuziastët e Kirgistanit, pasioni i udhëtimit, përvoja të jashtëzakonshme, ekipi, vlerat, misioni",
+      "buttons": {
+        "our_team": "Ekipi ynë",
+        "our_clients": "Klientët tanë",
+        "contact_us": "Na kontaktoni"
+      }
+    },
+    "info": {
+      "seen": "Vizitat: ",
+      "created": "Krijuar: ",
+      "modified": "Ndryshuar së fundi: "
+    },
+    "download": {
+      "text": "Mbani në dispozicion hartat, vendet dhe informacionin e udhëtimit me aplikacionet tona celulare."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Lidhje të dobishme",
+          "links": [
+            {
+              "text": "Ballina",
+              "url": "/"
+            },
+            {
+              "text": "Vende për t’u vizituar",
+              "url": "/places"
+            },
+            {
+              "text": "Ture",
+              "url": "/tours"
+            },
+            {
+              "text": "Transfertat në aeroport",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Privatësia dhe Ligjore",
+          "links": [
+            {
+              "text": "Rreth nesh",
+              "url": "/about"
+            },
+            {
+              "text": "Na kontaktoni",
+              "url": "/contact"
+            },
+            {
+              "text": "Politika e privatësisë",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Informacioni i Kontaktit",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Llogaritë sociale",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "zhvilluesi",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

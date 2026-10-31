@@ -1,0 +1,252 @@
+{
+  "en": {
+    "book": "Plan a trip",
+    "download": "Download",
+    "back": "Back"
+  },
+  "it": {
+    "book": "Organizza il viaggio",
+    "download": "Scarica",
+    "back": "Indietro"
+  },
+  "fr": {
+    "book": "Préparer un voyage",
+    "download": "Télécharger",
+    "back": "Retour"
+  },
+  "de": {
+    "book": "Reise planen",
+    "download": "Herunterladen",
+    "back": "Zurück"
+  },
+  "es": {
+    "book": "Planear un viaje",
+    "download": "Descargar",
+    "back": "Volver"
+  },
+  "jp": {
+    "book": "旅行の相談をする",
+    "download": "ダウンロード",
+    "back": "戻る"
+  },
+  "kr": {
+    "book": "여행 상담하기",
+    "download": "다운로드",
+    "back": "뒤로"
+  },
+  "ae": {
+    "book": "خطط لرحلتك",
+    "download": "تنزيل",
+    "back": "رجوع"
+  },
+  "cn": {
+    "book": "规划行程",
+    "download": "下载",
+    "back": "返回"
+  },
+  "ru": {
+    "book": "Спланировать поездку",
+    "download": "Скачать",
+    "back": "Назад"
+  },
+  "uz": {
+    "book": "Safarni rejalashtirish",
+    "download": "Yuklab olish",
+    "back": "Orqaga"
+  },
+  "kz": {
+    "book": "Сапарды жоспарлау",
+    "download": "Жүктеп алу",
+    "back": "Артқа"
+  },
+  "kg": {
+    "book": "Сапарды пландоо",
+    "download": "Жүктөп алуу",
+    "back": "Артка"
+  },
+  "tr": {
+    "book": "Seyahat planla",
+    "download": "İndir",
+    "back": "Geri"
+  },
+  "hi": {
+    "book": "यात्रा की योजना बनाएँ",
+    "download": "डाउनलोड करें",
+    "back": "वापस"
+  },
+  "ur": {
+    "book": "سفر کی منصوبہ بندی کریں",
+    "download": "ڈاؤن لوڈ کریں",
+    "back": "واپس"
+  },
+  "tg": {
+    "book": "Банақшагирии сафар",
+    "download": "Боргирӣ",
+    "back": "Бозгашт"
+  },
+  "ms": {
+    "book": "Rancang perjalanan",
+    "download": "Muat turun",
+    "back": "Kembali"
+  },
+  "fa": {
+    "book": "برنامه‌ریزی سفر",
+    "download": "دانلود",
+    "back": "بازگشت"
+  },
+  "az": {
+    "book": "Səfəri planlaşdırın",
+    "download": "Yüklə",
+    "back": "Geri"
+  },
+  "uk": {
+    "book": "Спланувати подорож",
+    "download": "Завантажити",
+    "back": "Назад"
+  },
+  "pl": {
+    "book": "Zaplanuj podróż",
+    "download": "Pobierz",
+    "back": "Wróć"
+  },
+  "nl": {
+    "book": "Plan je reis",
+    "download": "Downloaden",
+    "back": "Terug"
+  },
+  "he": {
+    "book": "תכנון טיול",
+    "download": "להורדה",
+    "back": "חזרה"
+  },
+  "cs": {
+    "book": "Naplánovat cestu",
+    "download": "Stáhnout",
+    "back": "Zpět"
+  },
+  "pt": {
+    "book": "Planear a viagem",
+    "download": "Descarregar",
+    "back": "Voltar"
+  },
+  "id": {
+    "book": "Rencanakan perjalanan",
+    "download": "Unduh",
+    "back": "Kembali"
+  },
+  "th": {
+    "book": "วางแผนการเดินทาง",
+    "download": "ดาวน์โหลด",
+    "back": "ย้อนกลับ"
+  },
+  "bn": {
+    "book": "ভ্রমণের পরিকল্পনা করুন",
+    "download": "ডাউনলোড করুন",
+    "back": "ফিরে যান"
+  },
+  "ne": {
+    "book": "यात्राको योजना बनाउनुहोस्",
+    "download": "डाउनलोड गर्नुहोस्",
+    "back": "पछाडि"
+  },
+  "vi": {
+    "book": "Lên kế hoạch chuyến đi",
+    "download": "Tải xuống",
+    "back": "Quay lại"
+  },
+  "ka": {
+    "book": "დაგეგმეთ მოგზაურობა",
+    "download": "ჩამოტვირთვა",
+    "back": "უკან"
+  },
+  "hy": {
+    "book": "Պլանավորել ուղևորությունը",
+    "download": "Ներբեռնել",
+    "back": "Հետ"
+  },
+  "mn": {
+    "book": "Аяллаа төлөвлөх",
+    "download": "Татах",
+    "back": "Буцах"
+  },
+  "be": {
+    "book": "Спланаваць падарожжа",
+    "download": "Спампаваць",
+    "back": "Назад"
+  },
+  "ro": {
+    "book": "Planifică o călătorie",
+    "download": "Descarcă",
+    "back": "Înapoi"
+  },
+  "sv": {
+    "book": "Planera en resa",
+    "download": "Ladda ner",
+    "back": "Tillbaka"
+  },
+  "nb": {
+    "book": "Planlegg en reise",
+    "download": "Last ned",
+    "back": "Tilbake"
+  },
+  "da": {
+    "book": "Planlæg en rejse",
+    "download": "Download",
+    "back": "Tilbage"
+  },
+  "fi": {
+    "book": "Suunnittele matka",
+    "download": "Lataa",
+    "back": "Takaisin"
+  },
+  "el": {
+    "book": "Σχεδιάστε το ταξίδι σας",
+    "download": "Λήψη",
+    "back": "Πίσω"
+  },
+  "hr": {
+    "book": "Isplanirajte putovanje",
+    "download": "Preuzmi",
+    "back": "Natrag"
+  },
+  "sr": {
+    "book": "Испланирајте путовање",
+    "download": "Преузми",
+    "back": "Назад"
+  },
+  "sk": {
+    "book": "Naplánovať cestu",
+    "download": "Stiahnuť",
+    "back": "Späť"
+  },
+  "sl": {
+    "book": "Načrtujte potovanje",
+    "download": "Prenesi",
+    "back": "Nazaj"
+  },
+  "bg": {
+    "book": "Планирайте пътуване",
+    "download": "Изтегляне",
+    "back": "Назад"
+  },
+  "bs": {
+    "book": "Isplanirajte putovanje",
+    "download": "Preuzmi",
+    "back": "Nazad"
+  },
+  "mk": {
+    "book": "Испланирајте патување",
+    "download": "Преземи",
+    "back": "Назад"
+  },
+  "sq": {
+    "book": "Planifikoni udhëtimin",
+    "download": "Shkarko",
+    "back": "Kthehu"
+  },
+  "lt": {
+    "book": "Planuoti kelionę",
+    "download": "Atsisiųsti",
+    "back": "Atgal"
+  }
+}

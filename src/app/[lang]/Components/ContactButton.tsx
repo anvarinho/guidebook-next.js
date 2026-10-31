@@ -1,4 +1,8 @@
 "use client";
+import reviewedLabels from '@/translations/ui/reviewed-labels.json';
+
+import additionalContactMe from '@/translations/ui/app-lang-Components-ContactButton-tsx-contactMe.json';
+
 import React, { useState, useEffect } from "react";
 import styles from "./controls.module.css";
 import { usePathname } from "next/navigation";
@@ -12,6 +16,7 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
   const pathname = usePathname();
   const isManas = pathname.split("/")[2] === "manas";
   const contactMe = {
+    ...additionalContactMe,
     en: "Any Questions?",
     es: "¿Alguna pregunta?",
     fr: "Des questions ?",
@@ -22,19 +27,6 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     cn: "有问题吗？",
     jp: "質問はありますか？",
     ae: "هل لديك أي أسئلة؟",
-  };
-
-  const bookTour = {
-    en: "Book it!",
-    es: "¡Reservar!",
-    fr: "Réserver !",
-    de: "Buchen!",
-    it: "Prenota!",
-    ru: "Забронировать!",
-    kr: "예약!",
-    cn: "预订!",
-    jp: "予約!",
-    ae: "!احجز",
   };
 
   useEffect(() => {
@@ -68,14 +60,14 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
     <div className={`${styles.contactBtn} ${isScrolled ? "" : styles.active}`}>
       <div className={styles.contactBox}>
         {pathname.includes("/tours/") ? (
-          <h4>{bookTour[lang]}</h4>
+          <h4>{reviewedLabels[lang].book}</h4>
         ) : (
           <h4>{contactMe[lang]}</h4>
         )}
         {pathname.includes("/tours/") ? (
           <Link
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=https://central-asia.live${pathname}%20${bookTour[lang]}`}
-            title="Whatsapp contact"
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${encodeURIComponent(`https://central-asia.live${pathname} ${reviewedLabels[lang].book}`)}`}
+            title={`WhatsApp · ${reviewedLabels[lang].book}`}
             target="_blank"
             onClick={() =>
               sendAnalyticsEvent({
@@ -89,8 +81,8 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
           </Link>
         ) : (
           <Link
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=Hello!!!`}
-            title="Whatsapp contact"
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+            title={`WhatsApp · ${contactMe[lang]}`}
             target="_blank"
           >
             {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}

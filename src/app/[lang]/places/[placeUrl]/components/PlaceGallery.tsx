@@ -1,4 +1,6 @@
 'use client';
+import additionalLabels from '@/translations/ui/app-lang-places-placeUrl-components-PlaceGallery-tsx-labels.json';
+
 
 import ArrowIcon from '@/components/ArrowIcon';
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type PointerEvent, type SyntheticEvent } from 'react';
@@ -8,6 +10,7 @@ import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
 
 const labels = {
+    ...additionalLabels,
   en: ['Photo gallery', 'Previous photo', 'Next photo', 'Photo'],
   ru: ['Фотогалерея', 'Предыдущее фото', 'Следующее фото', 'Фото'],
   ae: ['معرض الصور', 'الصورة السابقة', 'الصورة التالية', 'صورة'],

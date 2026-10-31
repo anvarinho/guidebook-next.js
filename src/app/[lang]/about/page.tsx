@@ -1,3 +1,4 @@
+import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
 import { Metadata } from 'next'
@@ -29,7 +30,7 @@ export default async function Home(
   const copy = aboutContent[lang]
   const destinations = ['places', 'tours', 'articles']
   return (
-    <article className={styles.about} dir={lang === 'ae' ? 'rtl' : 'ltr'} aria-labelledby="about-title">
+    <article className={styles.about} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} aria-labelledby="about-title">
       <Meta lang={lang} page={page}/>
       <div className={styles.container}>
         <header className={styles.hero}>
