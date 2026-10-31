@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
-import { i18n, contentLocales } from '../../src/lib/i18n.config';
+import { i18n, baseLocales } from '../../src/lib/i18n.config';
 import { localeMetadata } from '../../src/lib/localeMetadata';
 
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const escapeHtml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#x27;');
-const added = i18n.locales.filter(locale => !contentLocales.some(original => original === locale));
+const added = i18n.locales.filter(locale => !baseLocales.some(original => original === locale));
 
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', route => {
@@ -52,7 +52,7 @@ test('new languages switch from the popup and keep the API content usable', asyn
   await expect(page).toHaveURL('/uk/places/fixture-lake?source=language');
   await expect(page.locator('html')).toHaveAttribute('lang', 'uk');
   await expect(page.locator('[data-place-page]')).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Fixture lake', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Тестове озеро', exact: true })).toBeVisible();
   await expect(page.locator('footer')).toContainText(json('src/dictionaries/uk.json').page.about.buttons.contact_us);
   expect((await context.cookies()).find(cookie => cookie.name === 'lang')?.value).toBe('uk');
   const root = await page.request.get('/', { maxRedirects: 0 });

@@ -18,7 +18,13 @@ fn main() -> std::io::Result<()> {
         let request = String::from_utf8_lossy(&buffer[..count]);
         let target = request.split_whitespace().nth(1).unwrap_or("");
         let path = target.split('?').next().unwrap_or("").trim_end_matches('/');
-        let place = include_str!("place.json").trim();
+        let lang = target.split('?').nth(1).unwrap_or("").split('&')
+            .find_map(|pair| pair.strip_prefix("lang=")).unwrap_or("en");
+        let place = if lang == "uk" {
+            include_str!("place.json").trim().replace("Fixture lake", "Тестове озеро")
+        } else {
+            include_str!("place.json").trim().to_owned()
+        };
         let tour = include_str!("tour.json").trim();
         let article = include_str!("article.json").trim();
         let (status, body) = match path {
