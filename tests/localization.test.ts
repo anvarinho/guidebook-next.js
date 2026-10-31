@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { contentLocale, contentLocales, i18n } from '../src/lib/i18n.config';
+import { baseLocales, contentLocale, contentLocales, i18n } from '../src/lib/i18n.config';
 import { isRtlLocale, localeMetadata } from '../src/lib/localeMetadata';
 import { formatTourDuration } from '../src/lib/formatTourDuration';
 
@@ -51,15 +51,17 @@ function validate(source: unknown, translated: unknown, path: string) {
   for (const [key, value] of Object.entries(original)) validate(value, target[key], `${path}.${key}`);
 }
 
-test('all 50 locales have valid language metadata and the original API language behavior', () => {
+test('all 50 locales have valid language metadata and request their own API language', () => {
   assert.equal(i18n.locales.length, 50);
   assert.equal(new Set(i18n.locales).size, 50);
+  assert.deepEqual(contentLocales, i18n.locales);
+  assert.equal(contentLocale('invalid'), 'en');
   for (const locale of i18n.locales) {
     const info = localeMetadata[locale];
     assert.ok(info.name && info.nativeName && info.og);
     assert.doesNotThrow(() => new Intl.NumberFormat(info.languageTag));
     assert.equal(info.dir, isRtlLocale(locale) ? 'rtl' : 'ltr');
-    assert.equal(contentLocale(locale), contentLocales.find(value => value === locale) ?? 'en');
+    assert.equal(contentLocale(locale), locale);
   }
   assert.equal(localeMetadata.kz.tag, 'kk');
   assert.equal(localeMetadata.kg.tag, 'ky');
@@ -90,7 +92,7 @@ test('cultural terms describe summer pastures and yurts without literal mistrans
 });
 
 test('all 40 new languages have complete static translations with preserved placeholders and URLs', () => {
-  for (const locale of i18n.locales.filter(code => !contentLocales.some(original => original === code))) {
+  for (const locale of i18n.locales.filter(code => !baseLocales.some(original => original === code))) {
     for (const directory of domains) validate(json(`${directory}/en.json`), json(`${directory}/${locale}.json`), `${locale}:${directory}`);
     const dictionary = json(`src/dictionaries/${locale}.json`);
     assert.equal(dictionary.page.langCode, localeMetadata[locale].languageTag);

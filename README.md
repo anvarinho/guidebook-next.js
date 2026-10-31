@@ -118,7 +118,7 @@ Public pages live under `src/app/[lang]`. Replace `{lang}` with a supported loca
 
 **Supported languages**
 
-English `en` · Russian `ru` · French `fr` · German `de` · Spanish `es` · Italian `it` · Japanese `jp` · Korean `kr` · Arabic `ae` · Chinese `cn`
+All 50 locales in [`i18n.config.tsx`](src/lib/i18n.config.tsx) support both website copy and translated API content. Content requests use the selected locale directly, including the application's `jp`, `kr`, `ae`, `cn`, `kz`, and `kg` codes. See the [translation notes](src/translations/README.md) for the locale conventions and translation files.
 
 Main translation dictionaries live in [`src/dictionaries`](src/dictionaries). The [intro](src/app/intro/translations), [Manas experience](src/app/%5Blang%5D/manas/translations), and [airport transfer guide](src/app/%5Blang%5D/manas-airport-transfers/translations) have their own translations alongside their page content.
 

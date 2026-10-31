@@ -31,17 +31,20 @@ function loadContentModules(fetch) {
   return load;
 }
 
-test('new website languages request English API content until API translations are available', async () => {
+test('all 50 website languages request their own places, tours, and articles', async () => {
   const requests = [];
   const load = loadContentModules(async url => {
     requests.push(url);
     return { ok: true, json: async () => [] };
   });
-  const { default: getAllPlaces } = load('src/lib/getAllPlaces.tsx');
-  await getAllPlaces('uk');
-  await getAllPlaces('kg');
-  await getAllPlaces('ru');
-  assert.deepEqual(requests.map(url => new URL(url).searchParams.get('lang')), ['en', 'en', 'ru']);
+  const { i18n } = load('src/lib/i18n.config.tsx');
+  for (const locale of i18n.locales) {
+    for (const collection of ['Places', 'Tours', 'Articles']) {
+      await load(`src/lib/getAll${collection}.tsx`).default(locale);
+      assert.equal(new URL(requests.at(-1)).searchParams.get('lang'), locale);
+    }
+  }
+  assert.equal(requests.length, 150);
 });
 
 test('public loaders consistently cache content and encode query parameters', async () => {

@@ -680,9 +680,11 @@ const nextConfig = {
     ],
     // unoptimized: true,
   },
-  // experimental: {
-  //   serverActions: true,
-  // }
+  experimental: {
+    // Prerendering all 50 locales must fit the content API's request limit.
+    cpus: 2,
+    staticGenerationMaxConcurrency: 1,
+  },
 };
 
 
