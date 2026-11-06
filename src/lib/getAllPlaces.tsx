@@ -1,4 +1,4 @@
-import { getContent } from './contentApi';
+import { getContent, getSitemapContent } from './contentApi';
 import { placesSchema, paginatedPlacesSchema, regionalPlacesSchema } from './contentSchemas';
 
 export { default as getPlace } from './getPlace';
@@ -17,21 +17,22 @@ export function getPlacesByRegion(lang: string, region: string, url: string) {
 }
 
 export async function sitemapPlaces() {
-  const places: PlaceAlias[] = [];
+  const places: { placeUrl: string; lastModified?: string }[] = [];
   let offset = 0;
 
   // Keep the sitemap complete while respecting the API's per-request limit. The
   // same route may return fewer than 100 records, so advance by the actual page size.
   while (true) {
-    const data = await getContent('places/more', paginatedPlacesSchema, {
+    const data = await getSitemapContent('places/more', paginatedPlacesSchema, {
       lang: 'en', offset: String(offset), limit: '100',
     });
     if (!data.places.length) break;
-    places.push(...data.places);
+    // Sitemap generation only needs identifiers/dates, not full place bodies.
+    places.push(...data.places.map(place => ({ placeUrl: place.url, lastModified: place.created })));
     offset += data.places.length;
   }
 
-  return places.map(place => ({ placeUrl: place.url, lastModified: place.created }));
+  return places;
 }
 
 export function getHomePlaces(lang: string) {

@@ -1,0 +1,15 @@
+[Unit]
+Description=Record GuideBook server directory sizes
+After=local-fs.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+UMask=0027
+ExecStart=/usr/local/sbin/guidebook-health.py snapshot
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/log/guidebook-health
+PrivateTmp=true

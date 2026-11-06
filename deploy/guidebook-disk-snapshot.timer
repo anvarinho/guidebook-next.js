@@ -1,0 +1,11 @@
+[Unit]
+Description=Record largest GuideBook server directories daily
+
+[Timer]
+OnCalendar=*-*-* 03:00:00 UTC
+RandomizedDelaySec=5min
+Persistent=true
+Unit=guidebook-disk-snapshot.service
+
+[Install]
+WantedBy=timers.target

@@ -11,7 +11,7 @@ function handler(getContent) {
     compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
   vm.runInNewContext(source, { module, exports: module.exports, require(name) {
-    if (name === '@/lib/contentApi') return { getContent };
+    if (name === '@/lib/contentApi') return { getContent, ContentApiError: class ContentApiError extends Error {} };
     if (name === '@/lib/contentSchemas') return { paginatedPlacesSchema: {} };
     if (name === '@/lib/getLocalBase64') return () => undefined;
     if (name === '@/lib/i18n.config') return { i18n: { locales: ['en', 'ru'] } };
