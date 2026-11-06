@@ -1,3 +1,0 @@
-module.exports=[[34626,a=>{let b=(0,a.i(11857).registerClientReference)(function(){throw Error("Attempted to call the default export of [project]/src/app/[lang]/ServicePage.tsx from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/src/app/[lang]/ServicePage.tsx","default");a.s(["default",0,b])},77758,a=>{var b=a.i(34626);a.n(b)},66602,a=>{var b=a.i(7997),c=a.i(77758);a.s(["default",0,function(){return(0,b.jsx)(c.default,{state:"notFound"})}])}],29086,function(a){a.n(a.i(66602))}];
-
-//# sourceMappingURL=src_app_%5Blang%5D_0c0mhvhkc3o-6._.js.map

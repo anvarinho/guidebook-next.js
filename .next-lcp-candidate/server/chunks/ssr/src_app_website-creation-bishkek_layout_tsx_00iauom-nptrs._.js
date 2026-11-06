@@ -1,3 +1,0 @@
-module.exports=[89384,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsxs)("html",{lang:"ru",className:"font-jura","data-scroll-behavior":"smooth",children:[(0,b.jsx)("head",{children:(0,b.jsx)("link",{rel:"shortcut icon",href:"/favicon.png",sizes:"any"})}),a]})},"metadata",0,{title:"Создание Сайтов в Бишкеке",description:"Разработка веб-сайтов и мобильных приложений. Полный спектр услуг: создание, продвижение, разработка под iOS и Android. Качественно, недорого, в срок. Контакты: anvarinho@gmail.com."}])},42983,function(a){a.n(a.i(89384))}];
-
-//# sourceMappingURL=src_app_website-creation-bishkek_layout_tsx_00iauom-nptrs._.js.map
