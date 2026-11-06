@@ -1,0 +1,3 @@
+module.exports=[67357,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{children:a})})},"metadata",0,{robots:{index:!1,follow:!1},title:"Admin login | GuideBook",description:"Sign in to GuideBook administration."}])},49384,function(a){a.n(a.i(67357))}];
+
+//# sourceMappingURL=src_app_login_layout_tsx_1th9usmxc55gd._.js.map

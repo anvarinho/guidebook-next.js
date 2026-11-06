@@ -1,0 +1,17 @@
+[Unit]
+Description=Bound Guidebook regenerable runtime caches
+After=pm2-root.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/guidebook-cache-budget /var/www/frontend --apply
+Nice=15
+IOSchedulingClass=idle
+MemoryMax=128M
+TimeoutStartSec=120
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=-/var/www/frontend/.next-build/server/route-cache -/var/www/frontend/.next-build/cache
+PrivateTmp=true
+

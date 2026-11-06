@@ -1,4 +1,4 @@
-import { getContent } from './contentApi';
+import { getContent, getSitemapContent } from './contentApi';
 import { toursSchema } from './contentSchemas';
 
 export { default as getTour } from './getTour';
@@ -8,6 +8,6 @@ export default function getAllTours(lang: string) {
 }
 
 export async function sitemapTours() {
-  const tours = await getAllTours('en');
+  const tours = await getSitemapContent('tours/', toursSchema, { lang: 'en' });
   return tours.map(tour => ({ tourUrl: tour.url }));
 }

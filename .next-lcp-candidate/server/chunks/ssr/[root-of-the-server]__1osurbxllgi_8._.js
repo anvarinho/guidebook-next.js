@@ -1,0 +1,3 @@
+module.exports=[70406,(a,b,c)=>{b.exports=a.x("next/dist/compiled/@opentelemetry/api",()=>require("next/dist/compiled/@opentelemetry/api"))},81111,(a,b,c)=>{b.exports=a.x("node:stream",()=>require("node:stream"))},3755,a=>{"use strict";var b=a.i(83591),c=a.i(68435);a.S([b,"003134e998eaddc799d9d623c89022c6beb6c3ad94,$",0,c,"6093095e3d0cf5c5afa4a463a5a371e6df281a248a,p"],3755)},63380,a=>{a.v(b=>Promise.all(["server/chunks/ssr/[root-of-the-server]__1g5uuco5u591l._.js"].map(b=>a.l(b))).then(()=>b(14952)))}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__1osurbxllgi_8._.js.map

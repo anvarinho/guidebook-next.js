@@ -87,8 +87,14 @@ test('legacy detail imports reuse the same loader and encoded request URL', asyn
   for (const name of ['Place', 'Tour', 'Article']) {
     const detail = load(`src/lib/get${name}.tsx`).default;
     assert.equal(load(`src/lib/getAll${name}s.tsx`)[`get${name}`], detail);
-    await detail('a/b?', 'ru');
-    assert.equal(requests.at(-1), `https://example.test/api/${name.toLowerCase()}s/a%2Fb%3F?lang=ru`);
+    const slug = name === 'Article' ? 'valid-article' : 'a/b?';
+    await detail(slug, 'ru');
+    assert.equal(requests.at(-1), `https://example.test/api/${name.toLowerCase()}s/${encodeURIComponent(slug)}?lang=ru`);
+    if (name === 'Article') {
+      const count = requests.length;
+      assert.equal(await detail('a/b?', 'ru'), undefined);
+      assert.equal(requests.length, count);
+    }
   }
 });
 

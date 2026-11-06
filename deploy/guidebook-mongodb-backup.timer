@@ -1,0 +1,11 @@
+[Unit]
+Description=Back up GuideBook MongoDB daily
+
+[Timer]
+OnCalendar=*-*-* 02:30:00 UTC
+RandomizedDelaySec=10min
+Persistent=true
+Unit=guidebook-mongodb-backup.service
+
+[Install]
+WantedBy=timers.target

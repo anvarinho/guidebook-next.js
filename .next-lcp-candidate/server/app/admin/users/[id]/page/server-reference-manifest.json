@@ -1,0 +1,25 @@
+{
+  "node": {
+    "003134e998eaddc799d9d623c89022c6beb6c3ad94": {
+      "workers": {
+        "app/admin/users/[id]/page": {
+          "moduleId": 92140,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "src/lib/auth.js"
+    },
+    "6093095e3d0cf5c5afa4a463a5a371e6df281a248a": {
+      "workers": {
+        "app/admin/users/[id]/page": {
+          "moduleId": 92140,
+          "async": false
+        }
+      },
+      "exportedName": "saveUser",
+      "filename": "src/app/admin/lib/actions.js"
+    }
+  },
+  "edge": {}
+}

@@ -1,0 +1,3 @@
+module.exports=[74167,a=>{"use strict";var b=a.i(87924);a.s(["default",0,function({reset:a}){return(0,b.jsxs)("section",{className:"panel",children:[(0,b.jsx)("h1",{children:"We couldn’t load this page"}),(0,b.jsx)("p",{className:"muted",children:"Try again in a moment. If the problem continues, contact your administrator."}),(0,b.jsx)("button",{onClick:a,children:"Try again"})]})}])}];
+
+//# sourceMappingURL=src_app_admin_error_tsx_1frhadi_nqfit._.js.map

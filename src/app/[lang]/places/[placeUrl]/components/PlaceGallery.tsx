@@ -160,7 +160,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
     onError?: () => void, preload = false) => (
     <Image key={key} src={imageUrl(images[photoIndex])}
       alt={preload ? '' : `${name} — ${t[3]} ${photoIndex + 1}`} aria-hidden={preload || undefined}
-      fill sizes="(max-width: 1200px) 100vw, 1200px" fetchPriority={priority && photoIndex === 0 ? 'high' : undefined}
+      fill sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 80px), 1200px" fetchPriority={priority && photoIndex === 0 ? 'high' : undefined}
       loading={detailMotion || (priority && photoIndex === 0) ? 'eager' : 'lazy'}
       {...(detailMotion && priority && photoIndex === 0 ? { placeholder: 'empty' as const } : imagePlaceholder(blurDataURLs[photoIndex]))}
       onLoad={onLoad} onError={onError} />
@@ -201,7 +201,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
             {detailMotion && pending && <div className={`${styles.galleryPhoto} ${styles.galleryPhotoPreload}`} data-direction={pending.direction}
               key={`photo-${pending.index}`}>
               <Image src={imageUrl(images[pending.index])} alt="" aria-hidden
-                fill sizes="(max-width: 1200px) 100vw, 1200px"
+                fill sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 80px), 1200px"
                 loading="eager" {...imagePlaceholder(blurDataURLs[pending.index])}
                 onLoad={event => { void commitLoadedPhoto(event, pending); }}
                 onError={() => failPendingPhoto(pending)} />

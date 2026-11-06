@@ -668,10 +668,12 @@ const nextConfig = {
     ];
   },
   images: {
+    maximumDiskCacheSize: 256 * 1024 * 1024,
     // WebP costs less CPU to encode on a cold image cache than AVIF.
     formats: ["image/webp"],
     minimumCacheTTL: 86400,
-    // Match gallery thumbnails at 1x/2x/3x without downloading 256/384px images.
+    deviceSizes: [384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    // Keep thumbnail widths and a compact 384px source available to content images.
     imageSizes: [32, 48, 64, 72, 88, 96, 128, 144, 176, 216, 256, 264, 384],
     remotePatterns: [
       { hostname: "159.65.95.44" },
@@ -692,5 +694,5 @@ const nextConfig = {
 // Keep production builds from overwriting chunks used by a running dev server.
 module.exports = (phase) => ({
   ...nextConfig,
-  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next' : '.next-build',
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next' : (process.env.NEXT_DIST_DIR || '.next-build'),
 });

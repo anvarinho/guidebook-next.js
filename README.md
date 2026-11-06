@@ -12,7 +12,7 @@ read local stories, and plan your journey from Manas Airport.
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-171717?style=flat-square&logo=nextdotjs&logoColor=white)
 ![React 19](https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Languages](https://img.shields.io/badge/Languages-10-1B3E32?style=flat-square)
+![Languages](https://img.shields.io/badge/Languages-50-1B3E32?style=flat-square)
 
 [Explore](#explore) · [Quick start](#quick-start) · [Configuration](#configuration) · [Project map](#project-map) · [Deployment](#deployment)
 
@@ -30,7 +30,7 @@ read local stories, and plan your journey from Manas Airport.
 | 🦅 **Culture** | Explore the epic of Manas through an illustrated, interactive experience. |
 | 🚐 **Airport transfers** | Compare transfer options and plan onward travel from Manas Airport. |
 | 🎨 **Immersive home page** | Explore layered artwork and parallax scenes inspired by Kyrgyz landscapes and culture. |
-| 🌍 **Ten languages** | Access localized pages, navigation, and travel content. |
+| 🌍 **Fifty languages** | Access localized pages, navigation, and travel content. |
 | ⚙️ **Administration** | Manage content and users through the MongoDB-backed admin area. |
 
 Built with **Next.js App Router**, **React**, and **TypeScript**, with CSS Modules for styling, optimized imagery, and localized SEO metadata.
@@ -55,7 +55,7 @@ CONTENT_API_URL=http://localhost:4000
 NEXT_PUBLIC_URL=
 ```
 
-> **Content API:** Set server-only `CONTENT_API_URL` to your backend origin (without `/api`). The backend must serve places, tours, articles, and reviews; its implementation is not included here. Do not point development or CI at production by accident. `SITE_URL` controls canonical/SEO URLs independently. `NEXT_PUBLIC_URL` is retained only as a public image/asset origin; empty uses same-origin images. See [.env.example](.env.example), [CONFIGURATION.md](CONFIGURATION.md), and [CONTACT.md](CONTACT.md).
+> **Content API:** Set server-only `CONTENT_API_URL` to your backend origin (without `/api`). The backend must serve places, tours, articles, and reviews; its implementation is not included here. Do not point development or CI at production by accident. `SITE_URL` controls canonical/SEO URLs independently. `NEXT_PUBLIC_URL` is retained only as a public image/asset origin; empty uses same-origin images. See [.env.example](.env.example), [docs/configuration.md](docs/configuration.md), and [docs/contact.md](docs/contact.md).
 
 ### 3. Start exploring
 
@@ -139,7 +139,10 @@ src/
 ├── dictionaries/               Main site translations
 └── lib/                        Content fetching, locales, imagery, and SEO
 public/                         Images, icons, fonts, and static assets
-scripts/                        Image optimization and placeholder generation
+scripts/                        Image/admin tools, cache control, and diagnostics
+deploy/                         Nginx, systemd, backup, and log-retention templates
+docs/                           Configuration, admin, contact, operations, performance
+tests/                          Regression tests and isolated browser fixtures
 ```
 
 The home page uses the intro experience in `src/app/intro`, with scene artwork and animation behavior defined separately from content styling. Public place, tour, and article content comes from the configured API; the admin area connects to MongoDB.
@@ -155,10 +158,10 @@ npm start
 
 - Set `SITE_URL` to the canonical site origin, `CONTENT_API_URL` to the backend origin, and `NEXT_PUBLIC_URL` to the public image/asset origin before building.
 - Ensure the content API is reachable from the server during rendering.
-- Configure NextAuth and the admin database as described in [CONFIGURATION.md](CONFIGURATION.md). Configure the separate contact inbox using [CONTACT.md](CONTACT.md).
+- Configure NextAuth and the admin database as described in [docs/configuration.md](docs/configuration.md). Configure the separate contact inbox using [docs/contact.md](docs/contact.md).
 - Add contact, analytics, and map settings as needed.
 
-Development output lives in `.next`; production output lives in `.next-build`, so building does not overwrite chunks used by a running development server.
+Development output lives in `.next`; production output lives in the real `.next-build/` directory in the project root. Production uses one PM2 process, `frontend`; see [operations](docs/operations.md) for cache budgets, monitoring, backups, and deployment.
 
 ---
 

@@ -36,9 +36,12 @@ export function proxy(request: NextRequest) {
     return NextResponse.next()
   }
 
-  const url = request.nextUrl.clone()
-  url.pathname = `/${i18n.defaultLocale}${pathname}`
-  return NextResponse.rewrite(url)
+  // Known legacy redirects are handled by next.config.js before Proxy. Unknown
+  // roots must not be rewritten to an HTTPS URL on the HTTP-only Node listener.
+  return new NextResponse('Not found', {
+    status: 404,
+    headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' },
+  })
 }
 
 export const config = {

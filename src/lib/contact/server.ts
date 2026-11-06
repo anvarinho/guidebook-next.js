@@ -3,21 +3,27 @@ import { isIP } from 'node:net'
 import { createContactHandler } from './handler'
 import { consumeContactLimit } from './limiter'
 import { storeContactMessage } from './storage'
+import { getApiRequestId, logApiError, requestIdHeaders } from '../apiDiagnostics'
 
 // Imported exclusively by the Node route. Never import this module from a client component.
 let connection: Promise<MongoClient> | undefined
 export async function submitContact(request: Request): Promise<Response> {
+  const requestId = getApiRequestId(request)
   const uri = process.env.CONTACT_MONGODB_URI
   const database = process.env.CONTACT_MONGODB_DATABASE
   const origin = process.env.CONTACT_ORIGIN
   const secret = process.env.CONTACT_RATE_LIMIT_SECRET
   const ipHeader = process.env.CONTACT_TRUSTED_IP_HEADER
   if (!uri || !database || !origin || !secret || secret.length < 32 || !/^[a-zA-Z0-9_-]+$/.test(database)) {
-    return Response.json({ error: 'unavailable' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
+    logApiError({ requestId, route: '/api/contact', status: 503, errorCode: 'contact_configuration_missing', field: 'environment' })
+    return Response.json({ error: 'unavailable' }, { status: 503, headers: { 'Cache-Control': 'no-store', ...requestIdHeaders(requestId) } })
   }
   try {
     if (new URL(origin).origin !== origin || !['https:', 'http:'].includes(new URL(origin).protocol)) throw new Error('Invalid origin')
-  } catch { return Response.json({ error: 'unavailable' }, { status: 503 }) }
+  } catch {
+    logApiError({ requestId, route: '/api/contact', status: 503, errorCode: 'contact_origin_invalid', field: 'CONTACT_ORIGIN' })
+    return Response.json({ error: 'unavailable' }, { status: 503, headers: requestIdHeaders(requestId) })
+  }
   const getDatabase = async () => {
     if (!connection) {
       connection = new MongoClient(uri, { serverSelectionTimeoutMS: 5000, connectTimeoutMS: 5000, socketTimeoutMS: 10000, maxPoolSize: 5 }).connect()

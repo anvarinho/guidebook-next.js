@@ -45,6 +45,17 @@ test('content API uses only the configured server origin and retains revalidatio
   assert.ok(request.options.signal);
 });
 
+test('sitemap fetches retain hourly revalidation independently of visible content', async () => {
+  const requests = [];
+  const load = loadApi(async (url, options) => {
+    requests.push({ url, options });
+    return { ok: true, json: async () => [] };
+  });
+  await load('src/lib/getAllTours.tsx').sitemapTours();
+  await load('src/lib/getAllTours.tsx').default('en');
+  assert.deepEqual(requests.map(request => request.options.next.revalidate), [3600, 60]);
+});
+
 test('invalid content is rejected at the API boundary without echoing its values', async () => {
   const load = loadApi(async () => ({ ok: true, json: async () => [{ url: 'malformed-record' }] }));
   await assert.rejects(load('src/lib/getAllPlaces.tsx').default('en'), error => {

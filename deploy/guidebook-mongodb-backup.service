@@ -1,0 +1,16 @@
+[Unit]
+Description=Create a compressed GuideBook MongoDB backup
+After=mongod.service guidebook-rust-api.service
+Requires=mongod.service guidebook-rust-api.service
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+UMask=0077
+ExecStart=/usr/local/sbin/guidebook-mongodb-backup.py
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/backups/guidebook/mongodb
+PrivateTmp=true
