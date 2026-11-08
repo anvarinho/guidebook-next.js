@@ -248,5 +248,10 @@
     "book": "Planuoti kelionę",
     "download": "Atsisiųsti",
     "back": "Atgal"
+  },
+  "fil": {
+    "book": "Magplano ng biyahe",
+    "download": "I-download",
+    "back": "Bumalik"
   }
 }

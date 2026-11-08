@@ -42,4 +42,5 @@ export const additionalDictionary: Record<AdditionalLocale, () => Promise<Messag
   mk: () => import("../dictionaries/mk.json").then(module => module.default as unknown as Messages),
   sq: () => import("../dictionaries/sq.json").then(module => module.default as unknown as Messages),
   lt: () => import("../dictionaries/lt.json").then(module => module.default as unknown as Messages),
+  fil: () => import("../dictionaries/fil.json").then(module => module.default as unknown as Messages),
 };

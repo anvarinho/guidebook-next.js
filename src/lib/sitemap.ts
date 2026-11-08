@@ -3,7 +3,7 @@ import { i18n, type Locale } from './i18n.config';
 import { absoluteSiteUrl, localizedPageAlternates } from './seo';
 import { transferUpdated } from '@/app/[lang]/manas-airport-transfers/seo';
 
-// Each URL has 51 language alternates. Bound the XML expansion per response,
+// Each URL has every language alternate plus x-default. Bound the XML expansion per response,
 // rather than constructing the previous 59 MB response across all 50 locales.
 export const SITEMAP_ENTRIES_PER_SHARD = 500;
 export type SitemapPath = { path: string; lastModified?: string };
@@ -34,7 +34,7 @@ export function sitemapIds(count: number) {
 }
 
 export function parseSitemapId(id: string): { lang: Locale; part: number } | undefined {
-  const match = /^([a-z]{2})-(0|[1-9]\d{0,5})$/.exec(id);
+  const match = /^([a-z]{2,3})-(0|[1-9]\d{0,5})$/.exec(id);
   if (!match || !i18n.locales.some(lang => lang === match[1])) return undefined;
   return { lang: match[1] as Locale, part: Number(match[2]) };
 }

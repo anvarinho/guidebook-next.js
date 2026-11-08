@@ -798,5 +798,25 @@
     "home": "Atgal į vadovą",
     "places": "Tyrinėkite vietas",
     "retry": "Bandykite dar kartą"
+  },
+  "fil": {
+    "notFound": {
+      "eyebrow": "Ibang ruta",
+      "title": "Mukhang namundok ang pahinang ito.",
+      "description": "Nakalimutan nitong mag-iwan ng bakas. Humanap tayo ng ibang lugar na matutuklasan."
+    },
+    "error": {
+      "eyebrow": "Sandaling abala",
+      "title": "May naging problema.",
+      "description": "Nagkaroon ng problema sa pag-load ng pahinang ito. Subukan muli o magpatuloy sa pagtuklas."
+    },
+    "loading": {
+      "eyebrow": "Hinahanap ang daan",
+      "title": "Binubuo na ang iyong paglalakbay.",
+      "description": "Inihahanda namin ang iyong gabay."
+    },
+    "home": "Bumalik sa gabay",
+    "places": "Tuklasin ang mga lugar",
+    "retry": "Subukan muli"
   }
 }

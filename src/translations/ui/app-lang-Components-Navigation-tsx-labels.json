@@ -198,5 +198,10 @@
     "open": "Atidaryti meniu",
     "close": "Uždaryti meniu",
     "navigation": "Pagrindinė navigacija"
+  },
+  "fil": {
+    "open": "Buksan ang menu",
+    "close": "Isara ang menu",
+    "navigation": "Pangunahing nabigasyon"
   }
 }

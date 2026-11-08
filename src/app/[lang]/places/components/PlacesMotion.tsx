@@ -37,7 +37,7 @@ export function PlaceScrollReset() {
       mounted.current = true;
       return;
     }
-    if (restoredPath || window.location.hash || !/^\/[a-z]{2}\/places\/[^/]+\/?$/i.test(pathname)) return;
+    if (restoredPath || window.location.hash || !/^\/[a-z]{2,3}\/places\/[^/]+\/?$/i.test(pathname)) return;
 
     // Next.js owns route scrolling and browser history restoration. Keep this immediate
     // fallback for pushed detail routes without overriding a later Back/Forward restore.

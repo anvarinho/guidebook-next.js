@@ -31,7 +31,7 @@ function loadContentModules(fetch) {
   return load;
 }
 
-test('all 50 website languages request their own places, tours, and articles', async () => {
+test('all website languages request their own places, tours, and articles', async () => {
   const requests = [];
   const load = loadContentModules(async url => {
     requests.push(url);
@@ -44,7 +44,7 @@ test('all 50 website languages request their own places, tours, and articles', a
       assert.equal(new URL(requests.at(-1)).searchParams.get('lang'), locale);
     }
   }
-  assert.equal(requests.length, 150);
+  assert.equal(requests.length, i18n.locales.length * 3);
 });
 
 test('public loaders consistently cache content and encode query parameters', async () => {

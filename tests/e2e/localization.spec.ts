@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test('all 50 homepages render in their own language with localized metadata', async ({ request }) => {
+test('all homepages render in their own language with localized metadata', async ({ request }) => {
   for (const locale of i18n.locales) {
     const response = await request.get(`/${locale}`);
     expect(response.status(), locale).toBe(200);
@@ -43,21 +43,23 @@ test('every new locale renders translated about, Manas, and airport transfer pag
   }
 });
 
-test('new languages switch from the popup and keep the API content usable', async ({ page, context }) => {
-  await page.goto('/en/places/fixture-lake?source=language');
-  await page.getByRole('button', { name: 'Choose language', exact: true }).click();
-  const popup = page.getByRole('dialog', { name: 'Choose your language', exact: true });
-  await popup.getByRole('searchbox').fill('uk');
-  await popup.getByRole('link', { name: 'Українська Ukrainian', exact: true }).click();
-  await expect(page).toHaveURL('/uk/places/fixture-lake?source=language');
-  await expect(page.locator('html')).toHaveAttribute('lang', 'uk');
-  await expect(page.locator('[data-place-page]')).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Тестове озеро', exact: true })).toBeVisible();
-  await expect(page.locator('footer')).toContainText(json('src/dictionaries/uk.json').page.about.buttons.contact_us);
-  expect((await context.cookies()).find(cookie => cookie.name === 'lang')?.value).toBe('uk');
-  const root = await page.request.get('/', { maxRedirects: 0 });
-  expect(root.headers().location).toBe('/uk');
-});
+for (const [locale, label, title] of [['uk', 'Українська Ukrainian', 'Тестове озеро'], ['fil', 'Filipino Filipino', 'Subok na lawa']]) {
+  test(`${locale} switches from the popup and keeps the API content usable`, async ({ page, context }) => {
+    await page.goto('/en/places/fixture-lake?source=language');
+    await page.getByRole('button', { name: 'Choose language', exact: true }).click();
+    const popup = page.getByRole('dialog', { name: 'Choose your language', exact: true });
+    await popup.getByRole('searchbox').fill(locale);
+    await popup.getByRole('link', { name: label, exact: true }).click();
+    await expect(page).toHaveURL(`/${locale}/places/fixture-lake?source=language`);
+    await expect(page.locator('html')).toHaveAttribute('lang', locale);
+    await expect(page.locator('[data-place-page]')).toBeVisible();
+    await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible();
+    await expect(page.locator('footer')).toContainText(json(`src/dictionaries/${locale}.json`).page.about.buttons.contact_us);
+    expect((await context.cookies()).find(cookie => cookie.name === 'lang')?.value).toBe(locale);
+    const root = await page.request.get('/', { maxRedirects: 0 });
+    expect(root.headers().location).toBe(`/${locale}`);
+  });
+}
 
 test('Hebrew, Persian, and Urdu pages and contact forms use RTL and translated labels', async ({ page }) => {
   const contact = json('src/translations/ui/app-lang-contact-content-ts-contactCopy.json');

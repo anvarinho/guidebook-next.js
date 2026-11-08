@@ -22,6 +22,8 @@ fn main() -> std::io::Result<()> {
             .find_map(|pair| pair.strip_prefix("lang=")).unwrap_or("en");
         let place = if lang == "uk" {
             include_str!("place.json").trim().replace("Fixture lake", "Тестове озеро")
+        } else if lang == "fil" {
+            include_str!("place.json").trim().replace("Fixture lake", "Subok na lawa")
         } else {
             include_str!("place.json").trim().to_owned()
         };

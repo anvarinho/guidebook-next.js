@@ -238,5 +238,11 @@
     "more": "Ištirkite daugiau vietų",
     "retry": "Nepavyko įkelti vietų. Bandykite dar kartą",
     "end": "Jūs ištyrėte visas mūsų vietas."
+  },
+  "fil": {
+    "loading": "Nilo-load ang mga lugar…",
+    "more": "Tumuklas pa ng mga lugar",
+    "retry": "Hindi ma-load ang mga lugar. Subukan muli",
+    "end": "Nakita mo na ang lahat ng aming mga lugar."
   }
 }

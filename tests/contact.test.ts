@@ -9,8 +9,8 @@ test('contact accepts new website locales and keeps the submitted language', asy
   const { createContactHandler } = await import('../src/lib/contact/handler')
   const saved: { lang: string }[] = []
   const handler = createContactHandler({ origin: 'https://guide.test', consume: async () => true, save: async value => { saved.push(value); return true } })
-  for (const lang of ['uk', 'kg', 'he', 'uz']) assert.equal((await handler(request({ ...valid, lang }))).status, 201)
-  assert.deepEqual(saved.map(value => value.lang), ['uk', 'kg', 'he', 'uz'])
+  for (const lang of ['uk', 'kg', 'he', 'uz', 'fil']) assert.equal((await handler(request({ ...valid, lang }))).status, 201)
+  assert.deepEqual(saved.map(value => value.lang), ['uk', 'kg', 'he', 'uz', 'fil'])
 })
 
 test('contact succeeds only after acknowledged durable storage', async () => {
@@ -85,9 +85,10 @@ test('address-limited attempts cannot exhaust the global quota for other visitor
   assert.equal(await consumeContactLimit(collection, '203.0.113.3', 'test-only', 123456789), true)
 })
 
-test('all fifty languages have honest localized submission states', async () => {
+test('all languages have honest localized submission states', async () => {
   const { contactCopy } = await import('../src/app/[lang]/contact/content')
-  assert.equal(Object.keys(contactCopy).length, 50)
+  const { i18n } = await import('../src/lib/i18n.config')
+  assert.equal(Object.keys(contactCopy).length, i18n.locales.length)
   for (const copy of Object.values(contactCopy)) {
     for (const key of ['pending', 'success', 'error', 'invalid', 'rateLimit', 'send'] as const) assert.ok(copy[key]?.length > 5, key)
     assert.equal(/draft|email app/i.test(copy.send + copy.hint), false)

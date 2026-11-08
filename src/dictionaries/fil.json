@@ -1,0 +1,371 @@
+{
+  "page": {
+    "langCode": "fil-PH",
+    "name": "GuideBook of Kyrgyzstan",
+    "loading": "Nilo-load...",
+    "contactButton": "May mga tanong ka ba?",
+    "navigation": [
+      {
+        "text": "Unang pahina",
+        "url": "/"
+      },
+      {
+        "text": "Mga pasyalan",
+        "url": "/places"
+      },
+      {
+        "text": "Mga tour",
+        "url": "/tours"
+      },
+      {
+        "text": "Mga artikulo",
+        "url": "/articles"
+      },
+      {
+        "text": "Tungkol sa amin",
+        "url": "/about"
+      }
+    ],
+    "home": {
+      "title": "Gabay sa Paglalakbay sa Kyrgyzstan",
+      "description": "Maglakad sa mga bundok, lumangoy sa Issyk-Kul o makituloy sa isang pamilya sa yurt. Pumili ng rutang akma sa iyo.",
+      "subtitle": "Gabay sa Paglalakbay sa Kyrgyzstan",
+      "subtitle1": "Bakit Bisitahin ang Kyrgyzstan?",
+      "subtitle2": "Pagtuklas sa Kalikasan",
+      "subtitle3": "Walang Hanggang Pagtuklas",
+      "subtitle4": "Planuhin ang Iyong Biyahe",
+      "subtitle5": "Mga dapat bisitahin sa Kyrgyzstan",
+      "paragraph": "Ang magandang bansang ito na walang baybayin, na dating bahagi ng Unyong Sobyet, ay mabilis na nagiging isa sa mga pinakapopular na destinasyon sa Gitnang Asya. Mabilis ang paglago ng turismo sa Kyrgyzstan, na nagbibigay sa mga manlalakbay ng pagkakataong tuklasin ang isa sa mga pinakakahanga-hangang bansa sa mundo.",
+      "paragraph1": "Malaki ang itinaas ng turismo sa Kyrgyzstan nitong mga nakaraang taon dahil sa mga bisitang naglalakad, nagkakamping at nangangabayo sa magagandang tanawin nito. Bilang unang bansa sa Gitnang Asya na nagluwag ng patakaran sa visa at nagbigay ng pagpasok nang walang visa sa karamihan ng mga bansang Kanluranin at mauunlad na bansa, nakabuo ito ng malawak na network ng serbisyo sa turismo.",
+      "paragraph2": "Mula sa mga programa ng Community Based Tourism (CBT) sa buong bansa hanggang sa mga guesthouse at malalayang gabay, maraming paraan upang maranasan ang kahanga-hangang kalikasan ng Kyrgyzstan. Maaaring magsimula ng paglalakad sa Karakol, Kochkor, Arslanbob at maging sa kabiserang Bishkek. Tandaan na kailangan ng sapat na lakas ng katawan dahil maraming ruta ang higit pa sa magaan na pamamasyal. Karamihan ay tumatagal ng 1 hanggang 5 araw, ngunit mayroon ding mas mahahabang paglalakbay.\r\n\r\nPara sa gustong magpahinga ang mga binti, popular ang pangangabayo. Subukan ang magandang ruta patungong Song Kol, o maglaan ng ilang araw para magpahinga at lumangoy sa Lawa ng Issyk-Kul.",
+      "paragraph3": "Sa dami ng mga di-karaniwang destinasyon at ruta, walang hanggan ang mga pagkakataong tumuklas. Pakikipagsapalaran man o pahinga ang hanap mo, may maiaalok ang Kyrgyzstan para sa lahat.",
+      "paragraph4": "Para sa tiyak na impormasyon tungkol sa mga pasyalan, pagpunta at paglilibot, at iba pang payo, basahin ang aming detalyadong gabay sa Kyrgyzstan. Gumamit ng mga inirerekomendang app para sa nabigasyon, pagsasalin at lokal na impormasyon upang masulit ang iyong biyahe.\r\n\r\nMasiyahan sa iyong paglalakbay at maranasan ang natatanging ganda at kultura ng Kyrgyzstan.",
+      "keywords": "gabay sa Kyrgyzstan, gabay sa paglalakbay, maginhawang biyahe, lokal na pasyalan, serbisyo sa turismo, mga payo sa Kyrgyzstan, karanasang pangkultura, pagpaplano ng tour, pamamasyal, pakikipagsapalaran, mga tour, gabay sa Bishkek, mga atraksyon sa Kyrgyzstan, mga destinasyon, mga malapit na pasyalan, magagandang lugar sa mundo, paglalakbay na may gabay, Bishkek sa Kyrgyzstan",
+      "button": "Tuklasin natin!",
+      "button1": "Saan pupunta?",
+      "button2": "Ano ang gagawin?",
+      "button3": "magbasa pa",
+      "button4": "Aming mga tour",
+      "Transportation": {
+        "title": "Transportasyon sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Maaaring maging isang pakikipagsapalaran ang paglilibot sa Kyrgyzstan. Narito ang dapat malaman:",
+        "Options": {
+          "Mga lokal na lipad": "Para sa malalayong biyahe, lalo na kung kulang sa oras, may mga lokal na lipad sa pagitan ng Bishkek, Osh at Tamchy, malapit sa Cholpon-Ata sa Rehiyon ng Issyk-Kul. Tingnan ang iskedyul at pagpapareserba sa mga airline.",
+          "Marshrutka (mga minibus)": "Ito ang pinakakaraniwan at matipid na transportasyon para sa maikli hanggang katamtamang layo. May nakatakdang ruta ang mga ito sa pagitan ng mga lungsod at bayan at madalas gamitin ng mga lokal.",
+          "Mga taksing pinagsasaluhan": "Mas mabilis ngunit bahagyang mas mahal ang mga taksing pinagsasaluhan kaysa sa marshrutka. Karaniwang umaalis ang mga ito kapag puno na, at maaaring makipagtawaran sa pamasahe.",
+          "Pag-upa ng sasakyan": "Mainam ang pag-upa ng sasakyan kung gusto mo ng malayang iskedyul. Maaaring lubak-lubak ang mga daan sa kanayunan, kaya inirerekomenda ang 4x4. Tiyaking mayroon kang pandaigdigang permit sa pagmamaneho.",
+          "Mga tren": "Limitado ang serbisyo ng tren, pangunahin sa pagitan ng Bishkek at Balykchy malapit sa Lawa ng Issyk-Kul. Maganda ang tanawin ngunit mas mabagal kaysa sa paglalakbay sa kalsada.",
+          "Mga bus": "May regular na bus sa malalaking lungsod para sa komportableng biyahe. Gayunman, maaaring hindi makarating ang mga ito sa malalayong lugar.",
+          "Pakikisakay": "Karaniwan ang pakikisakay sa kanayunan ng Kyrgyzstan, kung saan maaaring limitado ang regular na transportasyon. Tinatanggap ito sa kultura at karaniwang ligtas, ngunit mag-ingat at magpasya nang mabuti kapag sasakay sa hindi kakilala."
+        },
+        "details": "Para sa detalyadong impormasyon sa transportasyon, tingnan ang ibinigay na gabay."
+      },
+      "Accommodations": {
+        "title": "Mga Matutuluyan sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Mula sa mga maginhawang guesthouse hanggang sa mga marangyang resort, may matutuluyan sa Kyrgyzstan para sa iba't ibang kagustuhan at badyet. Narito ang ilang pagpipilian:",
+        "Options": {
+          "Mga hotel": "May iba't ibang hotel sa Bishkek at Osh para sa iba't ibang badyet at pangangailangan. Mula sa mga internasyonal na hotel hanggang sa maliliit na boutique hotel, makakakita ka ng komportableng silid na may Wi-Fi, air conditioning at kainan.",
+          "Mga guesthouse": "Para sa mas malapit na karanasan sa lokal na buhay, pumili ng guesthouse na pinapatakbo ng pamilya. Mararanasan mo ang mainit na pagtanggap ng mga Kyrgyz, lutong-bahay at mga lokal na kaugalian at tradisyon.",
+          "Mga yurt": "Sa kanayunan at kabundukan, nagbibigay ang tradisyonal na yurt ng natatanging panunuluyan. Ang mga toldang ito na madaling ilipat ay payak ngunit komportable, at madalas ay may magandang tanawin. Maaaring kasama ang pagkain at mga gawaing pangkultura.",
+          "Panunuluyan sa pamilya": "Maranasan ang buhay kasama ang isang pamilyang Kyrgyz. Makakasalo mo sila sa pagkain at makikibahagi sa pang-araw-araw na gawain. Nagbibigay ito ng pagpapalitan ng kultura at pag-unawa sa tradisyonal na pamumuhay.",
+          "Mga tuluyang makakalikasan": "Para sa mga manlalakbay na nagmamalasakit sa kalikasan, may mga tuluyang inuuna ang pangangalaga sa kapaligiran. Madalas silang mag-alok ng paglalakad, pagmamasid ng ibon at pakikilahok sa komunidad.",
+          "Pagkakamping": "Popular ito sa mga naghahanap ng pakikipagsapalaran at katahimikan. Sa itinalagang kampo man o malayong lugar, sundin ang mga prinsipyo ng Leave No Trace at kumuha ng kinakailangang permit."
+        },
+        "details": "Para sa mga rekomendasyon at pagpapareserba, tingnan ang mga website sa paglalakbay, online booking platform at lokal na tanggapan ng turismo."
+      },
+      "Food": {
+        "title": "Pagkain sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Mahalagang bahagi ng paglalakbay ang pagtikim ng lutuing Kyrgyz. Narito ang dapat malaman:",
+        "Options": {
+          "Tradisyonal na lutuin": "Mayaman sa lasa at pamana ang lutuing Kyrgyz. Kabilang sa mga karaniwang putahe ang beshbarmak (karne at pansit), manty (dumpling) at laghman (sopas na may pansit). Tikman din ang kumis, isang popular na inuming pinaasim na gatas ng kabayo.",
+          "Impluwensiya ng mga nomad": "Makikita ang pamana ng mga nomad sa masaganang putaheng may karne, lalo na tupa at kabayo, mga produktong gatas gaya ng kymyz at airan, at mga butil gaya ng bigas at trigo. Maaaring kumain ng tradisyonal na pagkain sa mga yurt sa kanayunan.",
+          "Mga lokal na pamilihan": "Bisitahin ang Osh Bazaar sa Bishkek para tikman ang shashlik (inihaw na karne), samsa (pastel na may palaman) at plov (kaning may sangkap). Makakabili rin ng sariwang prutas, mani at pampalasa.",
+          "Mga tsaa-han at café": "Karaniwan ang mga chaykhana at café na naghahain ng tsaa (chai), kape (kofe), tinapay at magaang pagkain. Magpahinga at tikman ang baursak (piniritong masa) at kurut (pinatuyong bolang yogurt).",
+          "Mga lutuing internasyonal": "Sa Bishkek at iba pang lungsod, may lutuing Ruso, Tsino, Koreano at Europeo. Tuklasin ang mga restawran, bistro at food court para sa iba't ibang lasa at pagkamapagpatuloy ng mga Kyrgyz.",
+          "Pagkaing kalye": "Tuklasin ang mga tindero ng mabilis at masarap na meryenda. Subukan ang samsa na may karne o gulay, piniritong laghman at inihaw na mais.",
+          "Mga food tour at klase sa pagluluto": "Sumali sa food tour o klase sa pagluluto upang mas makilala ang lutuing Kyrgyz. Matutong maghanda ng mga tradisyonal na putahe, bumisita sa mga bukid at tagagawa, at maranasan ang lokal na kultura ng pagkain."
+        },
+        "details": "Para sa higit pang impormasyon sa lutuing Kyrgyz at mga kainan, tingnan ang ibinigay na gabay."
+      },
+      "Safety": {
+        "title": "Kaligtasan sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Karaniwang ligtas ang paglalakbay sa Kyrgyzstan, ngunit mahalagang alamin ang mga posibleng panganib at mag-ingat. Narito ang dapat malaman:",
+        "Options": {
+          "Katatagang pampolitika": "Nakaranas na ang Kyrgyzstan ng kawalang-katatagang pampolitika, protesta at paminsan-minsang kaguluhan. Bagama't hindi naaapektuhan ang karamihan ng mga pasyalan, alamin ang mga lokal na pangyayari at iwasan ang malalaking pagtitipon o demonstrasyon.",
+          "Krimen": "Maaaring magkaroon ng pandurukot at pagnanakaw, lalo na sa mataong lugar at popular na pasyalan. Ingatan ang iyong mga gamit at manatiling mapagmatyag.",
+          "Terorismo": "Mababa ang banta ng terorismo sa Kyrgyzstan, ngunit manatiling mapagmatyag, lalo na sa mga lugar malapit sa hangganan. Sundin ang mga abiso sa paglalakbay ng iyong pamahalaan at manatiling may alam sa mga pangyayari.",
+          "Mga likas na panganib": "Maaaring magkaroon ng lindol, pagguho ng niyebe at pagguho ng lupa, lalo na sa kabundukan. Maghanda at sundin ang mga patakaran sa kaligtasan kapag naglalakad o gumagawa ng mga aktibidad sa kalikasan.",
+          "Kaligtasan sa kalsada": "Iba-iba ang kondisyon ng kalsada at maaaring mahirap magmaneho, lalo na sa kanayunan. Mag-ingat, sundin ang batas-trapiko at isaalang-alang ang pagkuha ng mapagkakatiwalaang drayber.",
+          "Mga panganib sa kalusugan": "Bagama't walang malaking panganib sa kalusugan para sa karamihan ng mga bisita, tiyaking napapanahon ang regular na bakuna at mag-ingat laban sa sakit mula sa pagkain at tubig.",
+          "Altitude sickness": "Alamin ang panganib ng pagkakasakit dahil sa taas kapag bibisita sa matataas na lugar. Bigyan ng oras ang katawan na masanay at iwasan muna ang mabibigat na gawain.",
+          "Insurance sa paglalakbay": "Mahalagang may insurance para sa gastusing medikal, agarang paglikas at pagkansela o pagkaantala ng biyahe. Tiyaking sakop ang mga aktibidad na balak mong gawin."
+        },
+        "details": "Para sa mas detalyadong impormasyon at mga abiso sa kaligtasan, sumangguni sa opisyal na sanggunian ng pamahalaan at mga gabay sa paglalakbay."
+      },
+      "Prices": {
+        "title": "Mga Presyo sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Makakatulong sa pagpaplano ng badyet ang pag-unawa sa mga gastusin sa Kyrgyzstan. Narito ang pangkalahatang presyo ng karaniwang produkto at serbisyo:",
+        "Options": {
+          "Matutuluyan": "Nag-iiba ang presyo ayon sa uri ng tuluyan at lokasyon. May abot-kayang guesthouse at hostel, at mayroon ding marangyang hotel at resort. Maaaring magsimula sa $10 kada gabi ang murang tuluyan at lumampas sa $100 ang marangyang pagpipilian.",
+          "Pagkain at kainan": "Karaniwang abot-kaya ang pagkain sa lokal na kainan at mga puwesto sa kalye. Nakakabusog ang beshbarmak at plov, na karaniwang nagkakahalaga ng $3 hanggang $7 bawat pagkain. Maaaring umabot sa $10 hanggang $20 o higit pa bawat tao ang internasyonal o marangyang kainan.",
+          "Transportasyon": "Nag-iiba ang pamasahe ayon sa uri ng transportasyon at layo. Ang lipad sa pagitan ng Bishkek at Osh ay maaaring $50 hanggang $150 o higit pa. Para sa mas maiikling biyahe, karaniwang $1 hanggang $10 ang taksing pinagsasaluhan o marshrutka. Maaaring $30 hanggang $100 o higit pa kada araw ang pag-upa ng sasakyan, depende sa uri at kumpanya.",
+          "Mga gawain at pasyalan": "Nag-iiba ang gastos ayon sa karanasan. Karaniwang $1 hanggang $10 bawat tao ang pagpasok sa museo, makasaysayang lugar at pambansang parke. May karagdagang bayad ang mga tour na may gabay, pangangabayo at paglalakad sa bundok, depende sa tagal at hirap.",
+          "Pamimili": "Mula sa mga tradisyonal na likhang-kamay at souvenir hanggang sa makabagong produkto at electronics, maraming mabibili sa Kyrgyzstan. Nag-iiba ang presyo ayon sa bagay at lokasyon. Karaniwan ang tawaran sa mga bazaar, lalo na sa tela, alahas at likhang-kamay.",
+          "Pera at palitan": "Ang opisyal na salapi ay Kyrgyzstani som (KGS). Nagbabago ang palitan, kaya tingnan ang kasalukuyang halaga bago magpapalit. Tumatanggap ng pangunahing credit card sa malalaking lungsod at pasyalan, ngunit magdala ng cash sa maliliit na bayan at kanayunan. (1$ = 85–90 som)"
+        },
+        "details": "Para sa pinakatumpak at pinakabagong presyo, sumangguni sa mga lokal na sanggunian at bagong gabay sa paglalakbay."
+      },
+      "Travel_Seasons": {
+        "title": "Mga Panahon ng Paglalakbay sa Kyrgyzstan | Gabay sa Paglalakbay",
+        "Description": "Makakatulong ang pag-unawa sa mga panahon upang maplano at masulit ang iyong biyahe. Narito ang aasahan sa bawat panahon:",
+        "Options": {
+          "Tagsibol (Marso hanggang Mayo)": "Maganda ang tagsibol sa Kyrgyzstan: namumulaklak ang mga halaman at lumalakas ang agos ng ilog mula sa natutunaw na niyebe. Banayad ang panahon para sa paglalakad at pangangabayo. Maghanda sa paminsan-minsang ulan, lalo na sa Abril at Mayo.",
+          "Tag-araw (Hunyo hanggang Agosto)": "Ito ang pinakamaraming turista: mahaba ang araw, mainit ang temperatura at maaliwalas ang langit. Mainam para sa pagkakamping, pamumundok at pagtuklas sa mga lawa sa kabundukan. May mga pagdiriwang din sa panahong ito, kabilang ang World Nomad Games sa Setyembre.",
+          "Taglagas (Setyembre hanggang Nobyembre)": "Nagiging pula, kahel at ginto ang mga tanawin habang nagbabago ang kulay ng mga dahon. Kaaya-aya ang panahon para sa paglalakad, pagmamasid ng hayop at mga karanasang pangkultura. Mainam ang Setyembre para sa World Nomad Games.",
+          "Taglamig (Disyembre hanggang Pebrero)": "Nababalutan ng niyebe ang mga bundok at nagyeyelo ang ilang lawa, na lumilikha ng kahanga-hangang tanawin. Bagama't napakalamig, dinarayo ang Karakol at Jyrgalan para sa skiing, snowboarding at ice skating. Ipinagdiriwang sa Pebrero ang tradisyonal na larong kok-boru (buzkashi)."
+        },
+        "details": "Para sa mga aktibidad, pagdiriwang at lagay ng panahon, tingnan ang mga gabay sa paglalakbay at lokal na sanggunian sa turismo."
+      },
+      "FirstTimeInKyrgyzstan": {
+        "title": "Unang Beses sa Kyrgyzstan?",
+        "Description": "Kung unang pagbisita mo sa Kyrgyzstan, narito ang gabay upang masulit ang iyong biyahe:",
+        "Options": {
+          "Pagdating at paglilibot": "Karamihan ng mga internasyonal na bisita ay dumarating sa Paliparang Pandaigdig ng Manas sa Bishkek. May taksi at bus papunta sa lungsod. Sa loob ng bansa, maaaring sumakay ng lokal na eroplano, bus, marshrutka at taksing pinagsasaluhan.",
+          "Mga SIM card at internet": "Madaling manatiling konektado gamit ang lokal na SIM card. Makakabili sa paliparan o sa mga tindahan ng mobile provider sa lungsod. Kabilang sa mga pangunahing provider ang Beeline, O! at Megacom. Tiyaking bukas sa ibang network ang iyong telepono. Maayos ang saklaw sa mga lungsod at bayan ngunit maaaring mahina sa kanayunan.",
+          "Mga presyo ng internet": "Karaniwang abot-kaya ang internet. Maaaring humigit-kumulang 100 KGS (mga $1.20 USD) ang 1GB at 500 KGS (mga $6 USD) ang 10GB. Ang walang limitasyong data sa isang buwan ay maaaring 800 hanggang 1500 KGS (mga $9.50 hanggang $18 USD), depende sa provider at bilis.",
+          "Pera at pagbabayad": "Kyrgyzstani som (KGS) ang lokal na pera. May ATM sa malalaking lungsod, ngunit magdala ng cash sa kanayunan. Tumatanggap ng credit at debit card sa maraming lugar sa lungsod, ngunit mas limitado sa malalayong lugar. May palitan sa paliparan, bangko at mga tanggapan ng palitan.",
+          "Wika": "Kyrgyz at Ruso ang mga opisyal na wika. May ilang nagsasalita ng Ingles sa malalaking lungsod, lalo na sa pasyalan, ngunit kapaki-pakinabang ang mga pangunahing pariralang Kyrgyz o Ruso sa kanayunan. Makakatulong ang translation app o aklat ng mga parirala.",
+          "Kalusugan at kaligtasan": "Karaniwang ligtas para sa bisita ang Kyrgyzstan, ngunit sundin ang karaniwang pag-iingat. Uminom ng de-bote o pinakuluang tubig. Tiyaking may insurance para sa kalusugan at aksidente. May serbisyong medikal sa lungsod ngunit maaaring limitado sa kanayunan.",
+          "Klima at damit": "Kontinental ang klima: malamig ang taglamig at mainit ang tag-araw. Mas malamig sa bundok, kaya maghanda ng angkop na damit. Inirerekomenda ang patong-patong na damit, matibay na sapatos at panangga sa araw. Sa taglamig, magdala ng mainit na jacket, guwantes at sombrero.",
+          "Kuryente at saksakan": "220V at 50Hz ang pamantayan. Uri C at F ang mga saksakan. Magdala ng universal travel adapter para ma-charge ang iyong mga kagamitan."
+        },
+        "details": "Para sa higit pang detalye at payo, tingnan ang mga gabay at lokal na sanggunian. Masiyahan sa iyong unang biyahe sa Kyrgyzstan at gumawa ng mga di-malilimutang alaala!"
+      },
+      "TravelPreparation": {
+        "title": "Maghanda para sa Iyong Biyahe sa Kyrgyzstan",
+        "Description": "Asikasuhin ang mahahalagang paghahanda para sa maayos at masayang paglalakbay sa Kyrgyzstan.",
+        "Options": {
+          "Visa at pasaporte": "Tingnan ang patakaran sa visa para sa iyong nasyonalidad at tiyaking may bisa ang pasaporte nang hindi bababa sa anim na buwan matapos ang planong pananatili.",
+          "Kalusugan at bakuna": "Kumonsulta sa iyong doktor tungkol sa mga kinakailangang bakuna at pag-iingat sa kalusugan para sa biyahe sa Kyrgyzstan.",
+          "Insurance sa paglalakbay": "Isaalang-alang ang insurance para sa mga hindi inaasahang pangyayari, gaya ng gastusing medikal o pagkansela ng biyahe.",
+          "Pera at badyet": "Kilalanin ang lokal na pera, ang Kyrgyzstani som, at magpapalit bago bumiyahe. May mga ATM sa malalaking lungsod.",
+          "Wika": "Bagama't opisyal na wika ang Ruso at Kyrgyz, hindi laganap ang Ingles. Pag-aralan ang ilang pangunahing parirala sa Ruso o Kyrgyz.",
+          "Panahon at damit": "Magdala ng damit na angkop sa panahon ng iyong pagbisita. Mainit ang tag-araw at malamig ang taglamig, kaya maghanda ng mga patong na damit.",
+          "Kaligtasan at seguridad": "Alamin ang kasalukuyang sitwasyon at mag-ingat, lalo na sa malalayong lugar. Ingatan ang iyong mga gamit at maging mapagmatyag sa paligid.",
+          "Paggalang sa kultura": "Igalang ang lokal na kaugalian, gaya ng paghuhubad ng sapatos bago pumasok sa bahay at paghingi ng pahintulot bago kumuha ng larawan ng mga tao."
+        },
+        "details": "Para sa dagdag na payong angkop sa iyong biyahe, tingnan ang aming detalyadong gabay sa Kyrgyzstan."
+      }
+    },
+    "sights": {
+      "name": "Mga pasyalan",
+      "title": "Mga lugar na mapupuntahan sa Kyrgyzstan",
+      "subtitle": "Saan pupunta sa Kyrgyzstan? Alamin din ang lagay ng panahon sa mga lungsod at sentro ng rehiyon upang maging komportable at handa sa pabago-bagong panahon ng magandang bansang ito.",
+      "description": "Humanap ng mga lugar sa buong Kyrgyzstan, mula sa mga lawa sa bundok at pambansang parke hanggang sa mga bayan at makasaysayang lugar. Pumili ng rehiyon upang magsimulang tumuklas.",
+      "keywords": "mga lugar sa Kyrgyzstan, paglalakbay sa Kyrgyzstan, tuklasin ang Kyrgyzstan, mga destinasyon sa Kyrgyzstan, turismo sa Kyrgyzstan, mga dapat bisitahin, pangunahing atraksyon, mga tanawin, mga pook pangkultura, likas na yaman, pinakamagagandang pasyalan",
+      "sights": "Saan pupunta?",
+      "must-see": {
+        "subtitle": "Mga Dapat Makitang Destinasyon ayon sa Rehiyon",
+        "description1": "Kilala ang Kyrgyzstan sa magagandang tanawin, mula sa mariringal na bundok hanggang sa payapang lawa. Narito ang ilan sa pinakamagagandang lugar sa bawat rehiyon:",
+        "chuyregion": "Rehiyon ng Chuy",
+        "alaarchatitle": "Pambansang Parke ng Ala Archa:",
+        "alaarchadescription": "May kahanga-hangang tanawin at mga ruta ng paglalakad.",
+        "buranatitle": "Tore ng Burana:",
+        "buranadescription": "Makasaysayang minarete na may magandang tanawin ng lambak.",
+        "issykulregion": "Rehiyon ng Issyk-Kul",
+        "lakeissykkultitle": "Lawa ng Issyk-Kul:",
+        "lakeissykkuldescription": "Malaking lawa na bahagyang maalat, na may mga dalampasigan at resort.",
+        "jetioguxtitle": "Jeti-Oguz:",
+        "jetioguzdescription": "Kilala sa mga pulang pormasyon ng bato.",
+        "karakoltitle": "Karakol:",
+        "karakoldescription": "Panimulang lugar patungo sa magagandang bundok gaya ng Altyn Arashan.",
+        "narynregion": "Rehiyon ng Naryn",
+        "tashrabattitle": "Tash Rabat:",
+        "tashrabatdescription": "Makasaysayang tuluyang bato para sa mga karaban sa isang magandang lambak.",
+        "sonkultitle": "Lawa ng Son-Kul:",
+        "sonkuldescription": "Lawa sa mataas na lugar na may kahanga-hangang paglubog ng araw.",
+        "jalalabadregion": "Rehiyon ng Jalal-Abad",
+        "sarychelextitle": "Reserbang Biyospera ng Sary-Chelek:",
+        "sarychelekdescription": "May malilinis na lawa at kagubatan.",
+        "arslanbobtitle": "Arslanbob:",
+        "arslanbobdescription": "Tahanan ng pinakamalaking kagubatan ng walnut at magagandang talon.",
+        "oshregion": "Rehiyon ng Osh",
+        "sulaymanmountaintitle": "Bundok Sulayman:",
+        "sulaymanmountaindescription": "Sagradong bundok na may malawak na tanawin.",
+        "alayvalleytitle": "Lambak ng Alay:",
+        "alayvalleydescription": "May kahanga-hangang tanawin ng Kabundukan ng Pamir.",
+        "batkenregion": "Rehiyon ng Batken",
+        "batkenvalleytitle": "Lambak ng Batken:",
+        "batkenvalleydescription": "Kilala sa mga punong aprikot at natatanging pormasyon ng bato.",
+        "karakuljatitle": "Kara-Kulja:",
+        "karakuljadescription": "May magagandang lambak at ilog.",
+        "talasregion": "Rehiyon ng Talas",
+        "beshtashtitle": "Pambansang Parke ng Besh-Tash:",
+        "beshtashdescription": "May magagandang ilog at parang sa kabundukan.",
+        "manasordotitle": "Kompleks ng Manas Ordo:",
+        "manasordodescription": "Pook pangkultura na nakalaan sa bayaning si Manas."
+      },
+      "highlights": [
+        "Paano pumunta",
+        "Transportasyon",
+        "Saan manunuluyan",
+        "Ano ang kakainin",
+        "Ano ang gagawin",
+        "Panahon"
+      ]
+    },
+    "tours": {
+      "name": "Mga tour",
+      "title": "Mga Tour sa Kyrgyzstan",
+      "subtitle": "Pribado at Maliit na Pangkat na Tour sa Kyrgyzstan",
+      "description": "Tingnan ang mga paglalakad, pangangabayo, paglalakbay na pangkultura at biyahe sa kalsada sa Kyrgyzstan. Pumili ng pribadong tour o sumali sa maliit na grupo, na may oras para sa mga lugar na gusto mo.",
+      "description1": "Maaaring kabilang sa biyahe ang paglalakad sa bundok, isang gabi sa tradisyonal na toldang felt o ilang araw sa tabi ng Issyk-Kul. Pumili ng rutang tugma sa iyong mga interes at oras.\n\nMatutulungan ka ng aming team sa mga gabay, transportasyon at matutuluyan. Makipag-ugnayan upang pag-usapan ang mga petsa, bilang ng kasama at nais mong bilis ng paglalakbay.",
+      "keywords": "mga tour sa Kyrgyzstan, pinakamahusay na tour, paglalakbay sa Kyrgyzstan, mga kumpanya ng tour, ahensiya sa paglalakbay, pakikipagsapalaran, tour na may gabay, mga tour na pangkultura, paglalakad sa bundok, pangangabayo, karanasan sa buhay nomad, mga travel package, tuklasin ang Kyrgyzstan",
+      "tourPage": {
+        "level": "Antas",
+        "duration": "Tagal",
+        "price": "Presyo",
+        "day": "Araw",
+        "days": "Mga araw",
+        "details": "Mga detalye",
+        "things": "Mga aktibidad",
+        "places": "Mga lugar na bibisitahin",
+        "addInfo": "Karagdagang impormasyon",
+        "includings": "Kasama sa presyo",
+        "excludings": "Hindi kasama sa presyo",
+        "from": "Mula sa",
+        "note": "Paalala",
+        "person": "Tao",
+        "persons": "Mga tao",
+        "andMore": "at marami pa"
+      },
+      "TourPreparation": {
+        "title": "Mahahalagang Gamit sa Paglalakbay sa Kyrgyzstan",
+        "Description": "Mga mahalagang dadalhin sa iyong biyahe upang manatiling komportable, ligtas at handa sa iba't ibang lagay ng panahon at mga aktibidad sa kalikasan.",
+        "Options": {
+          "Sapatos": "Magdala ng komportableng sapatos para sa lungsod, matibay na sapatos para sa katamtamang paglalakad, bota para sa trekking at mabilis matuyong sandalyas bilang reserba.",
+          "Sombrero": "Magdala ng sombrerong may malapad na gilid o takip sa batok upang maprotektahan laban sa matinding araw sa matataas na lugar.",
+          "Sunscreen": "Magdala ng broad-spectrum sunscreen na may mataas na SPF para sa matinding UV, lalo na sa matataas na lugar sa Kyrgyzstan.",
+          "Damit": "Magdala ng mga patong na damit para sa nagbabagong temperatura at panahon. Malaki ang pagbabago ng lamig ayon sa taas. Maghanda sa niyebe at ulan, lalo na sa kabundukan.",
+          "Paunang lunas": "Magdala ng mga personal na gamot, benda, pampawala ng sakit at mga partikular na gamit para sa dati nang kondisyon bilang pag-iingat."
+        },
+        "overview": "Magtanong sa amin kung ano ang dapat dalhin para sa iyong ruta at panahon."
+      }
+    },
+    "articles": {
+      "name": "Mga artikulo",
+      "title": "Kultura at kalikasan sa Kyrgyzstan",
+      "description": "Magbasa tungkol sa mga tao, tradisyon, pagkain at tanawin ng Kyrgyzstan.",
+      "keywords": [
+        "Kulturang Kyrgyz",
+        "Mga tradisyong Kyrgyz",
+        "Kalikasan ng Kyrgyzstan",
+        "Pangangaso gamit ang agila",
+        "Kok-boru",
+        "Mga asong Alabai",
+        "Taigan",
+        "Kasaysayan ng Kyrgyz",
+        "Kultura ng Gitnang Asya",
+        "Pamana ng mga nomad",
+        "Pagtuklas sa kultura",
+        "Tradisyonal na palakasan",
+        "Mga asong pangaso ng Kyrgyzstan",
+        "Mga karanasang pangkultura",
+        "Pakikipagsapalaran sa Kyrgyzstan",
+        "Mga katutubong lahi",
+        "Mga tradisyong pangkultura",
+        "Mga natatanging karanasan",
+        "Pamumuhay ng mga Kyrgyz"
+      ]
+    },
+    "about": {
+      "title": "Tungkol sa Amin",
+      "subtitle": "Sino Kami?",
+      "description": "Tinutulungan namin ang mga bisita na magplano ng paglalakbay sa Kyrgyzstan. Ibahagi ang mga petsa at interes mo, at tutulong kami sa ruta, gabay at matutuluyan.",
+      "keywords": "tungkol sa amin, aming kuwento, mga mahilig sa Kyrgyzstan, hilig sa paglalakbay, natatanging karanasan, team, mga pagpapahalaga, misyon",
+      "buttons": {
+        "our_team": "Aming team",
+        "our_clients": "Aming mga bisita",
+        "contact_us": "Makipag-ugnayan"
+      }
+    },
+    "info": {
+      "seen": "Mga pagbisita: ",
+      "created": "Nilikha: ",
+      "modified": "Huling binago: "
+    },
+    "download": {
+      "text": "Laging dalhin ang mga mapa, lugar at impormasyon sa paglalakbay gamit ang aming mga mobile app."
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Mga Kapaki-pakinabang na Link",
+          "links": [
+            {
+              "text": "Unang pahina",
+              "url": "/"
+            },
+            {
+              "text": "Mga pasyalan",
+              "url": "/places"
+            },
+            {
+              "text": "Mga tour",
+              "url": "/tours"
+            },
+            {
+              "text": "Mga hatid-sundo sa paliparan",
+              "url": "/manas-airport-transfers"
+            }
+          ]
+        },
+        {
+          "title": "Pagkapribado at Legal",
+          "links": [
+            {
+              "text": "Tungkol sa amin",
+              "url": "/about"
+            },
+            {
+              "text": "Makipag-ugnayan",
+              "url": "/contact"
+            },
+            {
+              "text": "Patakaran sa pagkapribado",
+              "url": "/privacy-policy"
+            }
+          ]
+        },
+        {
+          "title": "Impormasyon sa Pakikipag-ugnayan",
+          "info": {
+            "phone": "+996 500 490 806",
+            "email": "anvarinho@gmail.com",
+            "address": "Bishkek, Razzakov 49"
+          }
+        },
+        {
+          "title": "Mga Social Account",
+          "links": [
+            {
+              "text": "@guidebookofkg",
+              "icon": "instagram.svg",
+              "url": "https://www.instagram.com/guidebookofkg"
+            },
+            {
+              "text": "+996 500 490 806",
+              "icon": "whatsapp.svg",
+              "url": "https://wa.me/996500490806?text=Hello!!!"
+            },
+            {
+              "text": "tagabuo",
+              "icon": "twitter.svg",
+              "url": "https://anvarinho.github.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

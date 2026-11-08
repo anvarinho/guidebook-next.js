@@ -358,5 +358,14 @@
     "Tęsti skaidrių demonstraciją",
     "{n} iš {total}",
     "Eiti į skaidrę {n}"
+  ],
+  "fil": [
+    "Galerya ng mga larawan",
+    "Nakaraang slide",
+    "Susunod na slide",
+    "Ihinto muna ang slideshow",
+    "Ipagpatuloy ang slideshow",
+    "{n} sa {total}",
+    "Pumunta sa slide {n}"
   ]
 }

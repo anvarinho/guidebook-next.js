@@ -1718,5 +1718,48 @@
     "next": "Kiti atsiliepimai",
     "loading": "Įkeliami keliautojų atsiliepimai…",
     "empty": "Turite klausimų apie kelionę su mumis? Susisiekite su mūsų komanda."
+  },
+  "fil": {
+    "intro": "Isang bansang matutuklasan. Mga taong makikilala. Isang paglalakbay na para sa iyo.",
+    "landscape": "Sa baybayin ng Issyk-Kul",
+    "yurt": "Mas malapit sa buhay ng mga nomad",
+    "story": "Nagsisimula ang magagandang paglalakbay sa pagkilala sa kapwa.",
+    "explore": "Ang iyong daan patungong Kyrgyzstan",
+    "cards": [
+      [
+        "Hanapin ang iyong destinasyon",
+        "Tuklasin ang mga lawa, lambak sa kabundukan at mga lugar na sulit paglaanan ng oras."
+      ],
+      [
+        "Maglaan ng oras para sa pakikipagsapalaran",
+        "Tingnan ang mga ruta at hanapin ang biyaheng tugma sa iyong mga interes."
+      ],
+      [
+        "Kilalanin pa ang lugar",
+        "Magbasa ng mga kuwento at praktikal na gabay bago bumiyahe."
+      ]
+    ],
+    "journey": "Mula sa isang ideya tungo sa iyong susunod na pakikipagsapalaran.",
+    "steps": [
+      [
+        "Humanap ng inspirasyon",
+        "Magsimula sa isang lugar, tanawin o karanasang tumatak sa iyo."
+      ],
+      [
+        "Ibahagi ang iyong mga plano",
+        "Sabihin ang iyong mga petsa, bilang ng kasama at mga nais gawin."
+      ],
+      [
+        "Sama-samang ayusin ang mga detalye",
+        "Pag-usapan natin ang ruta, bilis ng paglalakbay at mga praktikal na paghahanda."
+      ]
+    ],
+    "invitation": "Dito nagsisimula ang iyong susunod na kuwento.",
+    "invitationBody": "Unang pagbisita man o pagbabalik sa paboritong lugar, sabihin sa amin ang iyong mga plano.",
+    "reviews": "Mga sinasabi ng aming mga bisita",
+    "previous": "Mga naunang review",
+    "next": "Mga susunod na review",
+    "loading": "Nilo-load ang mga review ng manlalakbay…",
+    "empty": "May tanong tungkol sa paglalakbay kasama namin? Makipag-ugnayan sa aming team."
   }
 }

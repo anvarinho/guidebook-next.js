@@ -238,5 +238,11 @@
     "search": "Ieškoti kalbų",
     "close": "Uždaryti",
     "empty": "Kalbų nerasta. Pabandykite kitą pavadinimą arba kodą."
+  },
+  "fil": {
+    "title": "Piliin ang iyong wika",
+    "search": "Maghanap ng wika",
+    "close": "Isara",
+    "empty": "Walang nakitang wika. Subukan ang ibang pangalan o code."
   }
 }

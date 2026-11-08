@@ -16,7 +16,7 @@ test('sitemap shards bound language-alternate expansion without dropping URLs', 
     assert.equal(entries.length, paths.length);
     assert.equal(new Set(entries.map(entry => entry.url)).size, paths.length);
     assert.ok(entries.every(entry => entry.url.includes(`/${lang}`)));
-    assert.equal(Object.keys(entries[0].alternates!.languages!).length, 51);
+    assert.equal(Object.keys(entries[0].alternates!.languages!).length, i18n.locales.length + 1);
   }
 });
 
@@ -24,10 +24,11 @@ test('sitemap index retains the stable discovery URL and lists every shard', () 
   const ids = sitemapIds(501);
   const xml = sitemapIndex(ids);
   assert.match(xml, /<sitemapindex /);
-  assert.equal((xml.match(/<sitemap>/g) || []).length, 100);
+  assert.equal((xml.match(/<sitemap>/g) || []).length, i18n.locales.length * 2);
   assert.ok(xml.length < 15000);
   assert.match(xml, /sitemaps\/sitemap\/en-0\.xml/);
   assert.match(xml, /sitemaps\/sitemap\/lt-1\.xml/);
+  assert.match(xml, /sitemaps\/sitemap\/fil-1\.xml/);
 });
 
 test('sitemap paths preserve dates, escaping, content kinds and deduplicate records', () => {
@@ -40,4 +41,5 @@ test('sitemap paths preserve dates, escaping, content kinds and deduplicate reco
 test('invalid sitemap identifiers are rejected before content access', () => {
   for (const id of ['en', 'xx-0', 'en--1', 'en-01', '../en-0', 'en-9999999']) assert.equal(parseSitemapId(id), undefined);
   assert.deepEqual(parseSitemapId('en-2'), { lang: 'en', part: 2 });
+  assert.deepEqual(parseSitemapId('fil-0'), { lang: 'fil', part: 0 });
 });

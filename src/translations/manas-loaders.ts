@@ -42,4 +42,5 @@ export const additionalManas: Record<AdditionalLocale, () => Promise<Messages>> 
   mk: () => import("../app/[lang]/manas/translations/mk.json").then(module => module.default as unknown as Messages),
   sq: () => import("../app/[lang]/manas/translations/sq.json").then(module => module.default as unknown as Messages),
   lt: () => import("../app/[lang]/manas/translations/lt.json").then(module => module.default as unknown as Messages),
+  fil: () => import("../app/[lang]/manas/translations/fil.json").then(module => module.default as unknown as Messages),
 };

@@ -51,6 +51,7 @@ export const localeMetadata = {
   mk: {"name":"Macedonian","nativeName":"Македонски","tag":"mk","languageTag":"mk-MK","og":"mk_MK","dir":"ltr"},
   sq: {"name":"Albanian","nativeName":"Shqip","tag":"sq","languageTag":"sq-AL","og":"sq_AL","dir":"ltr"},
   lt: {"name":"Lithuanian","nativeName":"Lietuvių","tag":"lt","languageTag":"lt-LT","og":"lt_LT","dir":"ltr"},
+  fil: {"name":"Filipino","nativeName":"Filipino","tag":"fil","languageTag":"fil-PH","og":"fil_PH","dir":"ltr"},
 } as const;
 
 export const languageTags = Object.fromEntries(Object.entries(localeMetadata).map(([code, info]) => [code, info.tag])) as Record<Locale, string>;

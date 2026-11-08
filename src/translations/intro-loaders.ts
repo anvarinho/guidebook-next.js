@@ -42,4 +42,5 @@ export const additionalIntro: Record<AdditionalLocale, () => Promise<Messages>> 
   mk: () => import("../app/intro/translations/mk.json").then(module => module.default as unknown as Messages),
   sq: () => import("../app/intro/translations/sq.json").then(module => module.default as unknown as Messages),
   lt: () => import("../app/intro/translations/lt.json").then(module => module.default as unknown as Messages),
+  fil: () => import("../app/intro/translations/fil.json").then(module => module.default as unknown as Messages),
 };

@@ -248,5 +248,10 @@
     "languageMenu": "Pasirinkite kalbą",
     "previousPlace": "Ankstesnė vieta",
     "nextPlace": "Kita vieta"
+  },
+  "fil": {
+    "languageMenu": "Pumili ng wika",
+    "previousPlace": "Nakaraang lugar",
+    "nextPlace": "Susunod na lugar"
   }
 }

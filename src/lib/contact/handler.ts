@@ -8,6 +8,7 @@ export type ContactDependencies = {
   save: (message: ContactMessage) => Promise<boolean>
 }
 const locales: readonly string[] = i18n.locales
+const maxLocaleLength = Math.max(...locales.map(locale => locale.length))
 const MAX_BYTES = 18000
 function reply(status: number, requestId: string, error?: string) {
   return Response.json(error ? { error } : { ok: true }, { status, headers: { 'Cache-Control': 'no-store', ...requestIdHeaders(requestId), ...(status === 429 ? { 'Retry-After': '900' } : {}) } })
@@ -17,7 +18,7 @@ function validate(value: unknown): ValidationResult {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return { field: 'body', errorCode: 'invalid_body' }
   const raw = value as Record<string, unknown>
   const data: Record<string, unknown> = { phone: '', subject: '', website: '', ...raw }
-  const limits = { name: 120, email: 254, phone: 40, subject: 160, message: 4000, lang: 2, website: 200 }
+  const limits = { name: 120, email: 254, phone: 40, subject: 160, message: 4000, lang: maxLocaleLength, website: 200 }
   for (const [key, limit] of Object.entries(limits)) {
     if (typeof data[key] !== 'string' || data[key].length > limit || /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(data[key])) {
       return { field: key, errorCode: 'invalid_field' }

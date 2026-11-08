@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { baseLocales, i18n } from '../../src/lib/i18n.config';
 
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', route => {
@@ -18,14 +19,14 @@ test('language popup searches names and codes, traps focus, and restores focus o
   await expect(popup).toBeVisible();
   const search = popup.getByRole('searchbox', { name: 'Search languages' });
   await expect(search).toBeFocused();
-  await expect(popup.getByRole('link')).toHaveCount(50);
-  await expect(popup.getByRole('listitem')).toHaveCount(50);
+  await expect(popup.getByRole('link')).toHaveCount(i18n.locales.length);
+  await expect(popup.getByRole('listitem')).toHaveCount(i18n.locales.length);
   await expect(popup.locator('button:disabled')).toHaveCount(0);
   await expect(popup.locator('[aria-current="true"]')).toContainText('English');
   await expect(page.locator('html')).toHaveCSS('overflow', 'hidden');
   await popup.screenshot({ path: test.info().outputPath('language-popup-desktop.png') });
 
-  for (const [query, expected] of [['francais', 'Français French'], ['日本語', '日本語 Japanese'], ['ja', '日本語 Japanese'], ['ARABIC', 'العربية Arabic'], ['한국어', '한국어 Korean']]) {
+  for (const [query, expected] of [['francais', 'Français French'], ['日本語', '日本語 Japanese'], ['ja', '日本語 Japanese'], ['ARABIC', 'العربية Arabic'], ['한국어', '한국어 Korean'], ['Filipino', 'Filipino Filipino'], ['fil', 'Filipino Filipino']]) {
     await search.fill(query);
     await expect(popup.getByRole('link')).toHaveCount(1);
     await expect(popup.getByRole('link', { name: expected, exact: true })).toBeVisible();
@@ -48,16 +49,16 @@ test('language popup searches names and codes, traps focus, and restores focus o
   await expect(page.locator('html')).not.toHaveCSS('overflow', 'hidden');
   await trigger.click();
   await expect(search).toHaveValue('');
-  await expect(popup.getByRole('link')).toHaveCount(50);
+  await expect(popup.getByRole('link')).toHaveCount(i18n.locales.length);
 });
 
-test('all 50 languages are selectable and code searches find the correct destination', async ({ page }) => {
+test('all languages are selectable and code searches find the correct destination', async ({ page }) => {
   await page.goto('/en/places/fixture-lake');
   await page.getByRole('button', { name: 'Choose language', exact: true }).click();
   const popup = page.getByRole('dialog', { name: 'Choose your language', exact: true });
   const search = popup.getByRole('searchbox');
-  const codes = 'uz kz kg tr hi ur tg ms fa az uk pl nl he cs pt id th bn ne vi ka hy mn be ro sv nb da fi el hr sr sk sl bg bs mk sq lt'.split(' ');
-  await expect(popup.getByRole('link')).toHaveCount(50);
+  const codes = i18n.locales.filter(locale => !baseLocales.some(original => original === locale));
+  await expect(popup.getByRole('link')).toHaveCount(i18n.locales.length);
   await expect(popup).not.toContainText('Coming soon');
   for (const code of codes) {
     await search.fill(code);
@@ -106,7 +107,7 @@ test('old and new flags share the flat artwork and white outline in both themes'
     await page.goto('/en/places/fixture-lake');
     await page.getByRole('button', { name: 'Choose language', exact: true }).click();
     const popup = page.getByRole('dialog', { name: 'Choose your language', exact: true });
-    for (const locale of ['en', 'uz', 'ne']) {
+    for (const locale of ['en', 'uz', 'ne', 'fil']) {
       await popup.getByRole('searchbox').fill(locale);
       const flag = popup.getByRole('link').locator('img');
       await expect(flag).toHaveAttribute('src', new RegExp(`${locale}\\.[a-zA-Z0-9_-]+\\.png`));

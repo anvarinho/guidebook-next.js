@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { baseLocales, contentLocale, contentLocales, i18n } from '../src/lib/i18n.config';
 import { isRtlLocale, localeMetadata } from '../src/lib/localeMetadata';
 import { formatTourDuration } from '../src/lib/formatTourDuration';
@@ -51,9 +51,9 @@ function validate(source: unknown, translated: unknown, path: string) {
   for (const [key, value] of Object.entries(original)) validate(value, target[key], `${path}.${key}`);
 }
 
-test('all 50 locales have valid language metadata and request their own API language', () => {
-  assert.equal(i18n.locales.length, 50);
-  assert.equal(new Set(i18n.locales).size, 50);
+test('all locales have valid language metadata and request their own API language', () => {
+  assert.ok(i18n.locales.includes('fil'));
+  assert.equal(new Set(i18n.locales).size, i18n.locales.length);
   assert.deepEqual(contentLocales, i18n.locales);
   assert.equal(contentLocale('invalid'), 'en');
   for (const locale of i18n.locales) {
@@ -65,9 +65,12 @@ test('all 50 locales have valid language metadata and request their own API lang
   }
   assert.equal(localeMetadata.kz.tag, 'kk');
   assert.equal(localeMetadata.kg.tag, 'ky');
+  assert.equal(localeMetadata.fil.tag, 'fil');
+  assert.equal(localeMetadata.fil.languageTag, 'fil-PH');
+  assert.equal(localeMetadata.fil.og, 'fil_PH');
 });
 
-test('all 50 languages preserve the English brand and complete, distinct intro descriptions', () => {
+test('all languages preserve the English brand and complete, distinct intro descriptions', () => {
   const english = json('src/app/intro/translations/en.json');
   const descriptionKeys = Object.keys(english).filter(key => key.endsWith('Description'));
   for (const locale of i18n.locales) {
@@ -91,7 +94,7 @@ test('cultural terms describe summer pastures and yurts without literal mistrans
   }
 });
 
-test('all 40 new languages have complete static translations with preserved placeholders and URLs', () => {
+test('all additional languages have complete static translations with preserved placeholders and URLs', () => {
   for (const locale of i18n.locales.filter(code => !baseLocales.some(original => original === code))) {
     for (const directory of domains) validate(json(`${directory}/en.json`), json(`${directory}/${locale}.json`), `${locale}:${directory}`);
     const dictionary = json(`src/dictionaries/${locale}.json`);
@@ -105,5 +108,14 @@ test('all 40 new languages have complete static translations with preserved plac
       assert.equal(pair.length, 2, `${locale}: incomplete about-page card`);
       assert.ok(pair.every((value: unknown) => typeof value === 'string' && value.trim()));
     }
+  }
+});
+
+test('all locales have complete shared UI translations with preserved placeholders', () => {
+  for (const file of readdirSync('src/translations/ui').filter(file => file.endsWith('.json'))) {
+    const translations = json(`src/translations/ui/${file}`);
+    const source = translations.en ?? translations.lt;
+    const locales = translations.en ? i18n.locales : i18n.locales.filter(code => !baseLocales.some(original => original === code));
+    for (const locale of locales) validate(source, translations[locale], `${locale}:ui/${file}`);
   }
 });

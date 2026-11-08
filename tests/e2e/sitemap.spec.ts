@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { i18n } from '../../src/lib/i18n.config';
 
 test('sitemap index and language shards preserve every URL and language alternate', async ({ page, request }) => {
   const index = await request.get('/sitemap.xml');
@@ -11,7 +12,7 @@ test('sitemap index and language shards preserve every URL and language alternat
     if (document.querySelector('parsererror')) throw Error('Invalid sitemap index XML');
     return [...document.querySelectorAll('sitemap > loc')].map(node => node.textContent!);
   }, xml);
-  expect(urls).toHaveLength(50);
+  expect(urls).toHaveLength(i18n.locales.length);
   for (const url of urls) {
     const path = new URL(url).pathname;
     const response = await request.get(path);
@@ -27,7 +28,7 @@ test('sitemap index and language shards preserve every URL and language alternat
       }));
     }, body);
     expect(entries).toHaveLength(11);
-    expect(entries.every(entry => entry.alternateCount === 51)).toBe(true);
+    expect(entries.every(entry => entry.alternateCount === i18n.locales.length + 1)).toBe(true);
     expect(entries.some(entry => entry.url.endsWith('/places/fixture-lake'))).toBe(true);
     expect(entries.some(entry => entry.url.endsWith('/articles/fixture-story'))).toBe(true);
     expect(entries.some(entry => entry.url.endsWith('/tours/fixture-tour'))).toBe(true);

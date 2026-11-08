@@ -50,8 +50,9 @@ import bs from '../../public/bs.png';
 import mk from '../../public/mk.png';
 import sq from '../../public/sq.png';
 import lt from '../../public/lt.png';
+import fil from '../../public/fil.png';
 
 // Static imports give refreshed artwork a new URL, including optimized image caches.
 export const flagAssets: Record<Locale, StaticImageData> = {
-  en, it, fr, de, es, jp, kr, ae, cn, ru, uz, kz, kg, tr, hi, ur, tg, ms, fa, az, uk, pl, nl, he, cs, pt, id, th, bn, ne, vi, ka, hy, mn, be, ro, sv, nb, da, fi, el, hr, sr, sk, sl, bg, bs, mk, sq, lt
+  en, it, fr, de, es, jp, kr, ae, cn, ru, uz, kz, kg, tr, hi, ur, tg, ms, fa, az, uk, pl, nl, he, cs, pt, id, th, bn, ne, vi, ka, hy, mn, be, ro, sv, nb, da, fi, el, hr, sr, sk, sl, bg, bs, mk, sq, lt, fil
 };

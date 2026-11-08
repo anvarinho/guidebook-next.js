@@ -42,4 +42,5 @@ export const additionalTransfers: Record<AdditionalLocale, () => Promise<Message
   mk: () => import("../app/[lang]/manas-airport-transfers/translations/mk.json").then(module => module.default as unknown as Messages),
   sq: () => import("../app/[lang]/manas-airport-transfers/translations/sq.json").then(module => module.default as unknown as Messages),
   lt: () => import("../app/[lang]/manas-airport-transfers/translations/lt.json").then(module => module.default as unknown as Messages),
+  fil: () => import("../app/[lang]/manas-airport-transfers/translations/fil.json").then(module => module.default as unknown as Messages),
 };

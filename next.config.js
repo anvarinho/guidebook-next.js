@@ -683,7 +683,7 @@ const nextConfig = {
     // unoptimized: true,
   },
   experimental: {
-    // Prerendering all 50 locales must fit the content API's request limit.
+    // Prerendering every locale must fit the content API's request limit.
     cpus: 2,
     staticGenerationMaxConcurrency: 1,
   },

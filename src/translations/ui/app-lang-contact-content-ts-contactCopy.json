@@ -478,5 +478,17 @@
     "send": "Atidaryti el. laiško juodraštį",
     "hint": "Jūsų el. pašto programa bus atidaryta su jūsų pranešimu. Prieš siųsdami peržiūrėkite jį ten.",
     "optional": "neprivaloma"
+  },
+  "fil": {
+    "intro": "Sabihin kung saan mo gustong pumunta. Tutulungan ka naming planuhin ang iyong paglalakbay.",
+    "close": "Isara ang contact window",
+    "name": "Iyong pangalan",
+    "email": "Iyong email",
+    "phone": "Numero ng telepono",
+    "subject": "Paksa",
+    "message": "Ikuwento ang iyong plano sa paglalakbay",
+    "send": "Buksan ang draft ng email",
+    "hint": "Bubuksan ng iyong email app ang mensahe. Suriin ito bago ipadala.",
+    "optional": "opsyonal"
   }
 }

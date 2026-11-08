@@ -3,7 +3,7 @@ export const baseLocales = ["en","it","fr","de","es","jp","kr","ae","cn","ru"] a
 
 export const i18n = {
     defaultLocale: 'en',
-    locales: ["en","it","fr","de","es","jp","kr","ae","cn","ru","uz","kz","kg","tr","hi","ur","tg","ms","fa","az","uk","pl","nl","he","cs","pt","id","th","bn","ne","vi","ka","hy","mn","be","ro","sv","nb","da","fi","el","hr","sr","sk","sl","bg","bs","mk","sq","lt"]
+    locales: ["en","it","fr","de","es","jp","kr","ae","cn","ru","uz","kz","kg","tr","hi","ur","tg","ms","fa","az","uk","pl","nl","he","cs","pt","id","th","bn","ne","vi","ka","hy","mn","be","ro","sv","nb","da","fi","el","hr","sr","sk","sl","bg","bs","mk","sq","lt","fil"]
 } as const;
 
 // The content API uses the same locale keys as the website and database.

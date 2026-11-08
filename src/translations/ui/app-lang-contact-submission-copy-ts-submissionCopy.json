@@ -358,5 +358,14 @@
     "error": "Negalėjome patvirtinti gavimo. Jūsų tekstas saugomas čia; bandykite dar kartą vėliau arba susisiekite su mumis tiesiogiai.",
     "invalid": "Patikrinkite savo vardą, el. pašto adresą ir pranešimą, tada bandykite dar kartą.",
     "rateLimit": "Per daug prašymų. Prieš bandydami dar kartą, palaukite 15 minučių."
+  },
+  "fil": {
+    "send": "Ipadala ang mensahe",
+    "hint": "Ligtas na ise-save ang iyong mensahe para masuri ng aming team.",
+    "pending": "Ipinapadala ang iyong mensahe…",
+    "success": "Na-save na ang iyong mensahe. Susuriin ito ng aming team.",
+    "error": "Hindi namin makumpirma ang pagtanggap. Nananatili rito ang iyong teksto; subukan muli mamaya o direktang makipag-ugnayan sa amin.",
+    "invalid": "Suriin ang iyong pangalan, email at mensahe, pagkatapos ay subukan muli.",
+    "rateLimit": "Masyadong maraming kahilingan. Maghintay ng 15 minuto bago subukan muli."
   }
 }

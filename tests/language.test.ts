@@ -4,7 +4,7 @@ import { NextRequest } from 'next/server';
 import { proxy } from '../src/proxy';
 
 test('root uses an allowlisted preference with English fallback and private nonpermanent redirect', () => {
-  for (const [cookie, expected] of [['ru', 'ru'], ['ae', 'ae'], ['unknown', 'en'], ['//evil.test', 'en'], ['', 'en']]) {
+  for (const [cookie, expected] of [['ru', 'ru'], ['ae', 'ae'], ['fil', 'fil'], ['unknown', 'en'], ['//evil.test', 'en'], ['', 'en']]) {
     const request = new NextRequest('https://example.test/?campaign=guide', { headers: { cookie: `lang=${cookie}` } });
     const response = proxy(request);
     assert.equal(response.status, 307);

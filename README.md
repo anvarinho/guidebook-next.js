@@ -12,7 +12,7 @@ read local stories, and plan your journey from Manas Airport.
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-171717?style=flat-square&logo=nextdotjs&logoColor=white)
 ![React 19](https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Languages](https://img.shields.io/badge/Languages-50-1B3E32?style=flat-square)
+![Languages](https://img.shields.io/badge/Languages-51-1B3E32?style=flat-square)
 
 [Explore](#explore) · [Quick start](#quick-start) · [Configuration](#configuration) · [Project map](#project-map) · [Deployment](#deployment)
 
@@ -118,7 +118,7 @@ Public pages live under `src/app/[lang]`. Replace `{lang}` with a supported loca
 
 **Supported languages**
 
-All 50 locales in [`i18n.config.tsx`](src/lib/i18n.config.tsx) support both website copy and translated API content. Content requests use the selected locale directly, including the application's `jp`, `kr`, `ae`, `cn`, `kz`, and `kg` codes. See the [translation notes](src/translations/README.md) for the locale conventions and translation files.
+All 51 locales in [`i18n.config.tsx`](src/lib/i18n.config.tsx), including Filipino (`fil`), support both website copy and translated API content. Content requests use the selected locale directly, including the application's `jp`, `kr`, `ae`, `cn`, `kz`, and `kg` codes. See the [translation notes](src/translations/README.md) for the locale conventions and translation files.
 
 Main translation dictionaries live in [`src/dictionaries`](src/dictionaries). The [intro](src/app/intro/translations), [Manas experience](src/app/%5Blang%5D/manas/translations), and [airport transfer guide](src/app/%5Blang%5D/manas-airport-transfers/translations) have their own translations alongside their page content.
 
