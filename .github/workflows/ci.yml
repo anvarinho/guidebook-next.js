@@ -18,6 +18,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
+      - run: npm run typecheck:tests
       - run: npx playwright install --with-deps chromium
       # Official MongoDB Ubuntu repository; only the server binary is needed.
       # https://www.mongodb.com/docs/v8.0/tutorial/install-mongodb-on-ubuntu/

@@ -45,6 +45,8 @@ You’ll need **Node.js 22 or newer** and **npm** (CI uses Node 24). Content-dri
 npm ci
 ```
 
+Production builds also work after `npm ci --omit=dev`; the app's required type declarations are installed with production dependencies. Test files use `tsconfig.test.json` and are checked separately with `npm run typecheck:tests` after installing development dependencies.
+
 ### 2. Configure your environment
 
 Create `.env.local` in the project root:
