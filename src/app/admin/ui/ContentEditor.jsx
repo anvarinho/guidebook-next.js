@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { Heading, text } from './Collection';
 import ContentForm from './ContentForm';
 import { contentCheck } from '../lib/metrics';
-const locales = ['en','it','fr','de','es','jp','kr','ae','cn','ru'];
+import { i18n } from '@/lib/i18n.config';
+const locales = i18n.locales;
 export default function ContentEditor({ kind, record, locale }) {
   const names = kind==='places'?['name','title','region','keywords','description']:kind==='tours'?['title','keywords','description']:['title','subtitle','keywords'];
   const supported = names.some(name => record[name] && typeof record[name] === 'object') ? locales : ['en'];

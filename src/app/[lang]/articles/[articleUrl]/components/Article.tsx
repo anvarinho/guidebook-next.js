@@ -1,3 +1,4 @@
+import { articleImageAlt } from '@/lib/articleImageAlt';
 import getBase64 from '@/lib/getLocalBase64';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import ArrowIcon from '@/components/ArrowIcon';
@@ -25,12 +26,12 @@ export default async function Article({ article, lang }: Props) {
     <article className={styles.article}>
         {article.image && (
           <PlacesReveal className={styles.heroImage}>
-              <picture className={styles.image}>
+              <picture className={styles.image} style={article.url === 'what-is-kyrgyzstan-known-for' ? { aspectRatio: '1600 / 900' } : undefined}>
                 <Image
                 {...imagePlaceholder(getBase64(article.image))}
                 src={baseUrl + article.image} 
-                alt={article.title}
-                sizes="(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"
+                alt={articleImageAlt(article.image, lang, article.title)}
+                sizes={article.url === 'what-is-kyrgyzstan-known-for' ? "(max-width: 700px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 80px), 1200px" : "(min-width: 800px) 546px, (min-width: 760px) calc(-795vw + 6752px), (min-width: 620px) 526px, calc(92vw - 26px)"}
                 // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill 
                 priority

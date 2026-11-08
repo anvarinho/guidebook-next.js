@@ -10,7 +10,7 @@ interface Props {
 export default function Meta({ lang, article, page }: Props) {
   const url = absoluteSiteUrl(`${lang}/articles/${encodeURIComponent(article.url)}`);
   const imagePath = article.image || article.paragraphs.find(paragraph => paragraph.image)?.image;
-  const description = metaDescription(article.subtitle, article.paragraphs[0]?.text);
+  const description = metaDescription(article.subtitle.trim() || article.paragraphs[0]?.text);
   const publishedDate = new Date(article.createdAt);
   const data = {
     "@context": "https://schema.org",
@@ -25,7 +25,7 @@ export default function Meta({ lang, article, page }: Props) {
         ...(imagePath ? { image: [absoluteSiteUrl(imagePath)] } : {}),
         ...(Number.isNaN(publishedDate.getTime()) ? {} : { datePublished: publishedDate.toISOString() }),
         inLanguage: page.langCode,
-        author: {
+        author: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : {
           "@type": "Person",
           name: "Anvar Jumabaev",
         },

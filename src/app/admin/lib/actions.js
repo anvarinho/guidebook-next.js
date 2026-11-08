@@ -7,10 +7,11 @@ import { z } from 'zod';
 import { requireAdmin } from '@/lib/auth';
 import { connectToDatabase } from './mongodb';
 import { ObjectId } from 'mongodb';
+import { i18n } from '@/lib/i18n.config';
 
 export async function previewContent(formData) {
   await requireAdmin();
-  const result = z.object({text:z.string().max(200000),locale:z.enum(['en','it','fr','de','es','jp','kr','ae','cn','ru'])}).strict().safeParse(Object.fromEntries(formData));
+  const result = z.object({text:z.string().max(200000),locale:z.enum(i18n.locales)}).strict().safeParse(Object.fromEntries(formData));
   if (!result.success) return { ok:false,html:'',message:'The preview is too long. Preview up to 200,000 characters at a time.' };
   const { renderContentHtml } = await import('@/lib/contentHtml.server');
   return { ok:true,html:renderContentHtml(result.data.text,{lang:result.data.locale}),message:'' };
@@ -60,7 +61,7 @@ export async function saveContent(_state, formData) {
   const fields = [...formData.entries()].filter(([key]) => !key.startsWith('$ACTION_'));
   const schema = z.object({
     kind:z.enum(['places','tours','articles']), url:z.string().min(1).max(200).regex(/^[\p{L}\p{N}_-]+$/u),
-    locale:z.enum(['en','it','fr','de','es','jp','kr','ae','cn','ru']),
+    locale:z.enum(i18n.locales),
     name:z.string().min(1).max(1000).optional(),title:z.string().min(1).max(1000).optional(),subtitle:z.string().max(3000).optional(),
     region:z.string().max(1000).optional(),keywords:z.string().max(5000).optional(),description:z.string().max(200000).optional(),
     paragraphs:z.string().max(500000).optional(),
@@ -96,7 +97,7 @@ export async function saveContent(_state, formData) {
   } catch { return { ok:false,message:'Unable to save. Reload and try again. Nonlocalized fields can only be edited in English.' }; }
   revalidatePath(`/admin/${kind}/${url}`);
   revalidatePath(`/admin/${kind}`);
-  for (const language of ['en','it','fr','de','es','jp','kr','ae','cn','ru']) {
+  for (const language of i18n.locales) {
     revalidatePath(`/${language}/${kind}/${url}`);
     revalidatePath(`/${language}/${kind}`);
   }

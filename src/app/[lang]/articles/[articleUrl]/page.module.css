@@ -68,3 +68,17 @@
 @media (prefers-reduced-motion: reduce) {
   .main :is(a, button) { transition: none; }
 }
+
+/* Rich article content uses the same sanitized renderer as other content pages. */
+.richContent { overflow-wrap: anywhere; }
+.richContent p { margin-block: 0 1.1em; white-space: normal; }
+.richContent :is(h3,h4) { margin-block: 1.6em .65em; font-size: 1.3em; line-height: 1.4; }
+.richContent :is(ul,ol) { padding-inline-start: 1.5em; margin-block: 1em; }
+.richContent li { margin-block: .5em; line-height: 1.8; }
+.contentLink { text-decoration: underline; text-underline-offset: .18em; }
+.contentLink:hover { text-decoration-thickness: 2px; }
+.tableScroll { max-width: 100%; overflow-x: auto; margin-block: 1.5em; }
+.contentTable { width: 100%; border-collapse: collapse; font-size: .95em; line-height: 1.7; }
+.contentTable :is(th,td) { min-width: 9ch; padding: .8em; border: 1px solid var(--line); text-align: start; vertical-align: top; }
+.contentTable th { font-weight: 600; background: var(--panel); }
+.contentImage { display: block; width: 100%; height: auto; border-radius: 16px; margin-block: 1.5em .6em; }

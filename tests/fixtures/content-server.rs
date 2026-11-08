@@ -54,7 +54,11 @@ fn main() -> std::io::Result<()> {
             "/api/places/fixture-lake" => (200, place.to_owned()),
             "/api/tours" => (200, format!("[{tour}]")),
             "/api/tours/fixture-tour" => (200, tour.to_owned()),
-            "/api/articles" => (200, format!("[{article}]")),
+            "/api/articles" => {
+                let offset = target.split('?').nth(1).unwrap_or("").split('&')
+                    .find_map(|pair| pair.strip_prefix("offset=")).unwrap_or("0");
+                (200, if offset == "0" { format!("[{article}]") } else { "[]".to_owned() })
+            }
             "/api/articles/fixture-story" => (200, article.to_owned()),
             "/api/reviews" => (200, "[]".to_owned()),
             _ => (404, "{\"error\":\"Missing test fixture\"}".to_owned()),

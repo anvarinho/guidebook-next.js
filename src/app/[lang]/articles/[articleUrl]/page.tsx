@@ -1,3 +1,4 @@
+import { articleImageAlt } from '@/lib/articleImageAlt';
 import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
@@ -75,15 +76,16 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   if (!article) notFound()
   const { page } = await getDictionary(lang)
   const imagePath = article.image || article.paragraphs.find((paragraph: Paragraph) => paragraph.image)?.image
-  const description = metaDescription(article.subtitle, article.paragraphs[0]?.text)
+  const description = metaDescription(article.subtitle.trim() || article.paragraphs[0]?.text)
   const pageUrl = absoluteSiteUrl(`${lang}/articles/${encodeURIComponent(article.url)}`)
-  const images = imagePath ? [{ url: absoluteSiteUrl(imagePath), alt: article.title }] : []
+  const images = imagePath ? [{ url: absoluteSiteUrl(imagePath), alt: articleImageAlt(imagePath, lang, article.title) }] : []
   const publishedTime = new Date(article.createdAt).toISOString()
   return {
     metadataBase: new URL(`${siteUrl}/`),
     title: article.title,
     description,
     keywords: article.keywords,
+    authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : undefined,
     applicationName: 'GuideBook of Kyrgyzstan',
     category: 'Travel',
     openGraph: {
@@ -95,7 +97,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       locale: page.langCode.replace('-', '_'),
       type: 'article',
       publishedTime,
-      authors: ['Anvar Jumabaev'],
+      authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : ['Anvar Jumabaev'],
     },
     alternates: {
       canonical: pageUrl,
@@ -105,7 +107,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       card: images.length ? 'summary_large_image' : 'summary',
       title: article.title,
       description,
-      creator: '@anvarinho',
+      creator: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : '@anvarinho',
       images: images.map(image => image.url),
     },
     robots: {

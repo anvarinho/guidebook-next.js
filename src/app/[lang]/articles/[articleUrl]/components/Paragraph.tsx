@@ -4,6 +4,7 @@ import styles from '../page.module.css'
 import Image from "next/image";
 import { Locale } from "@/lib/i18n.config";
 import Link from "next/link";
+import { renderContentHtml } from '@/lib/contentHtml.server';
 import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
@@ -14,6 +15,10 @@ type Props = {
 
 export default function Article({ paragraph, lang, priority}: Props) {
     const baseUrl = `${process.env.NEXT_PUBLIC_URL}/`;
+    const html = renderContentHtml(paragraph.text, {
+        lang,
+        classes: { link: styles.contentLink, table: styles.contentTable, tableScroll: styles.tableScroll, markdownImage: styles.contentImage },
+    });
     return (
         <PlacesReveal className={styles.paragraph}>
                 {paragraph.image && (
@@ -32,12 +37,12 @@ export default function Article({ paragraph, lang, priority}: Props) {
             
             
             <div className={styles.paragraphCopy}>
-            {paragraph.link ? (
+            {paragraph.title && (paragraph.link ? (
             <Link href={`${baseUrl}${lang}/${paragraph.link}`} target='_blank'>
                 <h2>{paragraph.title}</h2>
             </Link>
-            ): <h2>{paragraph.title}</h2>}
-            <p>{paragraph.text}</p>
+            ): <h2>{paragraph.title}</h2>)}
+            <div className={styles.richContent} dangerouslySetInnerHTML={{ __html: html }} />
             </div>
         </PlacesReveal>
     )
