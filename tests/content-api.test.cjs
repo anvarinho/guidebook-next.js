@@ -87,23 +87,45 @@ test('legacy detail imports reuse the same loader and encoded request URL', asyn
   for (const name of ['Place', 'Tour', 'Article']) {
     const detail = load(`src/lib/get${name}.tsx`).default;
     assert.equal(load(`src/lib/getAll${name}s.tsx`)[`get${name}`], detail);
-    const slug = name === 'Article' ? 'valid-article' : 'a/b?';
+    const slug = 'valid-item';
     await detail(slug, 'ru');
     assert.equal(requests.at(-1), `https://example.test/api/${name.toLowerCase()}s/${encodeURIComponent(slug)}?lang=ru`);
-    if (name === 'Article') {
-      const count = requests.length;
-      assert.equal(await detail('a/b?', 'ru'), undefined);
-      assert.equal(requests.length, count);
-    }
+    const count = requests.length;
+    assert.equal(await detail('a/b?', 'ru'), undefined);
+    assert.equal(requests.length, count);
   }
 });
 
+test('malformed detail URLs skip the backend for every content collection', async () => {
+  let requests = 0;
+  const load = loadContentModules(async () => { requests++; throw new Error('Unexpected request'); });
+  const invalid = ['', 'a'.repeat(201), 'tour Book it!', 'bişkek-city', 'bi%C5%9Fkek-city',
+    'tour%2520Book%2520it!', 'apple-logo.png', '../tour', 'a/b', 'a?b', 'a#b',
+    'UPPERCASE', '-tour', 'tour-', 'two--hyphens', 'tour_name'];
+  for (const name of ['Place', 'Tour', 'Article']) {
+    const detail = load(`src/lib/get${name}.tsx`).default;
+    for (const slug of invalid) assert.equal(await detail(slug, 'en'), undefined);
+  }
+  assert.equal(requests, 0);
+});
+
+test('valid slug boundaries reach the API and genuine upstream failures propagate', async () => {
+  const calls = [];
+  const load = loadContentModules(async url => { calls.push(url); return { ok: false, status: 503 }; });
+  for (const name of ['Place', 'Tour', 'Article']) {
+    for (const slug of ['a', '123', 'tour-123-name', 'a'.repeat(200)]) {
+      await assert.rejects(load(`src/lib/get${name}.tsx`).default(slug, 'en'), /503/);
+    }
+  }
+  assert.equal(calls.length, 12);
+});
+
 test('only missing detail content returns undefined; server failures propagate', async () => {
-  for (const status of [404, 500]) {
+  for (const status of [404, 400, 500]) {
     const load = loadContentModules(async () => ({ ok: false, status }));
     const getPlace = load('src/lib/getPlace.tsx').default;
     if (status === 404) assert.equal(await getPlace('missing', 'en'), undefined);
-    else await assert.rejects(getPlace('missing', 'en'), /500/);
+    else await assert.rejects(getPlace('missing', 'en'), new RegExp(String(status)));
     await assert.rejects(load('src/lib/getAllPlaces.tsx').default('en'), new RegExp(String(status)));
   }
 });

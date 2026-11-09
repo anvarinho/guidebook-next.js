@@ -48,6 +48,29 @@ wall time), about 0.55% of one CPU averaged over five minutes.
 
 ## Request controls
 
+### Malformed content URLs
+
+`src/lib/contentSlug.ts` shares the Rust API's lowercase ASCII, hyphenated,
+200-character slug contract across place, tour, and article loaders. Invalid
+slugs resolve as missing content without fetching the API; the existing page
+and metadata handlers use `notFound()`. Genuine upstream failures still throw.
+
+For immediate protection before a frontend rebuild, install
+`deploy/nginx-content-slugs.conf` as
+`/etc/nginx/conf.d/guidebook-content-slugs.conf` and
+`deploy/nginx-content-slug-guard.conf` as
+`/etc/nginx/snippets/guidebook-content-slug-guard.conf`. Include the latter
+inside the public frontend `location /`, as shown in
+`deploy/nginx-public-proxy.conf`. Validate with `nginx -t` before reloading.
+The guard checks normalized paths, ignores query strings, and returns 404
+without contacting Next.js for malformed localized content-detail URLs. API,
+authentication, assets, and listing routes retain their existing handling.
+The map covers two-letter locales and `fil`; update it when adding other
+three-letter locale codes. An optional trailing slash is allowed.
+
+The edge guard is effective immediately after reload. Loader source changes
+require the next frontend build to protect direct Node requests as well.
+
 `deploy/nginx-resource-limits.conf` is installed in Nginx's `http` context;
 `deploy/nginx-public-proxy.conf` replaces the canonical HTTPS server's public
 proxy location. Existing backend and authentication locations are preserved.
