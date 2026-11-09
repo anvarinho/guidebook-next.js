@@ -68,6 +68,14 @@ authentication, assets, and listing routes retain their existing handling.
 The map covers two-letter locales and `fil`; update it when adding other
 three-letter locale codes. An optional trailing slash is allowed.
 
+Known tour slugs followed by a space and booking text are recovered before
+the invalid-slug guard: a temporary 302 opens WhatsApp at `996500490806` with
+a clean message containing the canonical tour URL. Percent-encoded and multiply
+encoded spaces are supported. The original suffix and query string are not
+forwarded. Unknown tour slugs, invalid place/article paths, and file-like paths
+still return 404. Keep the booking map's explicit tour allowlist synchronized
+with published slugs. This redirect opens a chat; it does not send a message.
+
 The edge guard is effective immediately after reload. Loader source changes
 require the next frontend build to protect direct Node requests as well.
 
