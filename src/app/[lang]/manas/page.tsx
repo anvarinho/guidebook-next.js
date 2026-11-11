@@ -1,10 +1,11 @@
+import { localeMetadata } from "@/lib/localeMetadata";
 import type { Metadata, Viewport } from "next";
 import "../../cormorant-sc.css";
 import assets from "./assets.json";
 import Manas from "./Manas";
 import { interactiveMessages } from "./interactive-messages";
 import ManasContent from "./ManasContent";
-import { absoluteSiteUrl, localizedPageAlternates, safeJsonLd, hreflangByLocale } from "@/lib/seo";
+import { absoluteSiteUrl, localizedPageAlternates, safeJsonLd } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n.config";
 import { getManasMessages, manasLanguages } from "./translations";
 import "./manas.css";
@@ -25,7 +26,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     description,
     type: "website",
     url: absoluteSiteUrl(`${params.lang}/manas`),
-    locale: hreflangByLocale[params.lang].replace("-", "_"),
+    locale: localeMetadata[params.lang].og,
     images: [{ url: "/manas/manas-hero.jpg", width: assets["/manas/manas-hero.jpg"].width, height: assets["/manas/manas-hero.jpg"].height, alt: messages.metaImage }],
   },
   twitter: { card: "summary_large_image", title, description, images: ["/manas/manas-hero.jpg"] },

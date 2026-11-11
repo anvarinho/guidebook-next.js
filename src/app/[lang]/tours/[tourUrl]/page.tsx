@@ -15,7 +15,6 @@ import Meta from "./meta";
 import { notFound } from "next/navigation";
 import TourGallery from "./TourGallery";
 import TourDescription from "./TourDescription";
-import { PlacesReveal } from "../../places/components/PlacesMotion";
 import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
@@ -46,13 +45,13 @@ export default async function Tour(props: Params) {
       <Meta lang={lang} tour={data} page={page} />
       <article>
         <header className={styles.header}>
-          <PlacesReveal className={styles.heading}>
+          <div className={styles.heading}>
             <Link href={`/${lang}/tours`} className={styles.breadcrumb}>
               <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.tours.name}
             </Link>
             <h1>{data.title}</h1>
-          </PlacesReveal>
-          <PlacesReveal className={styles.summaryCard} order={1}>
+          </div>
+          <div className={styles.summaryCard}>
             <p className={styles.priceLabel}>{t.from}</p>
             <p className={styles.heroPrice}><bdi>${data.price[data.price.length - 1]}</bdi></p>
             <dl className={styles.facts}>
@@ -62,12 +61,12 @@ export default async function Tour(props: Params) {
             <a href="#itinerary" className={styles.detailsLink}>
               {t.details}<span className={shared.cardArrow} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
             </a>
-          </PlacesReveal>
+          </div>
         </header>
         <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
-          <PlacesReveal className={styles.heroGallery}>
+          <div className={styles.heroGallery}>
             <TourGallery images={data.images} name={data.title} lang={lang} priority/>
-          </PlacesReveal>
+          </div>
           <div className={styles.overview}>
             {transferMessages && <p className={styles.transferComparison}>
               <Link href={`/${lang}/manas-airport-transfers`}>{transferMessages.s216} <span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
@@ -75,9 +74,9 @@ export default async function Tour(props: Params) {
             <TourDescription description={data.description} lang={lang} />
           </div>
           <section id="itinerary" className={styles.itinerary} aria-labelledby="itinerary-title">
-            <PlacesReveal className={styles.sectionHeading}>
+            <div className={styles.sectionHeading}>
               <h2 id="itinerary-title">{t.details}</h2><span aria-hidden="true"/>
-            </PlacesReveal>
+            </div>
             <nav className={styles.daysNavigation} aria-label={t.details}>
               {data.days.map((_, index) => <a href={`#day${index + 1}`} key={index}>{t.day} {index + 1}</a>)}
               <a href="#note">{t.note}</a>
@@ -87,11 +86,11 @@ export default async function Tour(props: Params) {
             </div>
           </section>
           <section className={styles.extra} id="note" aria-labelledby="info-title">
-            <PlacesReveal className={styles.sectionHeading}>
+            <div className={styles.sectionHeading}>
               <h2 id="info-title">{t.addInfo}</h2><span aria-hidden="true"/>
-            </PlacesReveal>
+            </div>
             <div className={styles.infoList}>
-              {data.price.length > 1 && <PlacesReveal className={styles.infoCard}>
+              {data.price.length > 1 && <div className={styles.infoCard}>
                 <h3>{t.price}</h3>
                 <table className={styles.pricingTable}>
                   <tbody>{data.price.map((fee, index) => <tr key={index}>
@@ -99,27 +98,27 @@ export default async function Tour(props: Params) {
                     <td><bdi>${fee}</bdi></td>
                   </tr>)}</tbody>
                 </table>
-              </PlacesReveal>}
-              <PlacesReveal className={styles.infoCard} order={1}>
+              </div>}
+              <div className={styles.infoCard}>
                 <h3>{t.includings}</h3>
                 <ul className={styles.included}>{data.includings.map((text, index) => <li key={index}>{text}</li>)}</ul>
-              </PlacesReveal>
-              <PlacesReveal className={styles.infoCard} order={2}>
+              </div>
+              <div className={styles.infoCard}>
                 <h3>{t.excludings}</h3>
                 <ul className={styles.excluded}>{data.excludings.map((text, index) => <li key={index}>{text}</li>)}</ul>
-              </PlacesReveal>
+              </div>
             </div>
           </section>
           <section className={styles.essentials} aria-labelledby="essentials-title">
-            <PlacesReveal className={styles.essentialsIntro}>
+            <div className={styles.essentialsIntro}>
               <p className={shared.eyebrow}>{t.note}</p>
               <h2 id="essentials-title">{preparation.title}</h2>
               <p>{preparation.Description}</p>
-            </PlacesReveal>
+            </div>
             <div className={styles.packingList}>
-              {Object.entries(preparation.Options).map(([key, value]) => <PlacesReveal key={key}>
+              {Object.entries(preparation.Options).map(([key, value]) => <div key={key}>
                 <div className={styles.packingItem}><h3>{key}</h3><p>{value}</p></div>
-              </PlacesReveal>)}
+              </div>)}
               <p className={styles.preparationNote}>{preparation.overview}</p>
             </div>
           </section>

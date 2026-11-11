@@ -3,8 +3,18 @@ const path = require('node:path');
 const sharp = require('sharp');
 
 const root = path.resolve(__dirname, '..');
-const sourceDirectory = path.join(root, 'public/intro');
-const outputDirectory = path.join(sourceDirectory, 'optimized');
+// Full-size PNG sources stay out of public/ so they are never served; images the
+// intro serves directly as PNG (e.g. flag.png) remain in public/intro.
+const sourceDirectories = [path.join(root, 'assets/intro'), path.join(root, 'public/intro')];
+const outputDirectory = path.join(root, 'public/intro/optimized');
+
+async function findSource(name) {
+  for (const directory of sourceDirectories) {
+    const candidate = path.join(directory, `${name}.png`);
+    try { await fs.access(candidate); return candidate; } catch {}
+  }
+  throw new Error(`Missing intro source image: ${name}.png`);
+}
 
 async function main() {
   const files = (await fs.readdir(path.join(root, 'src/app/intro')))
@@ -21,7 +31,7 @@ async function main() {
   const manifest = {};
   // Sequential encoding bounds memory use and always starts from the original PNG.
   for (const name of [...names].sort()) {
-    const source = path.join(sourceDirectory, `${name}.png`);
+    const source = await findSource(name);
     const destination = path.join(outputDirectory, `${name}.webp`);
     const original = await fs.stat(source);
     const info = await sharp(source)

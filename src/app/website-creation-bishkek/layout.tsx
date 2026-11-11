@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className="font-jura" data-scroll-behavior="smooth">
+    <html lang="ru" className="font-jura">
       <head>
         <link rel="shortcut icon" href="/favicon.png" sizes="any" />
       </head>

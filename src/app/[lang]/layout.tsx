@@ -16,6 +16,7 @@ import LanguageShell from './Components/LanguageShell'
 import Flags from './Components/Flags'
 import Meta from './metalayout';
 import { getDictionary } from '@/lib/dictionary'
+import { contactInfo } from '@/lib/contactInfo'
 import ContactDialog from './contact/components/ContactDialog'
 
 export async function generateStaticParams() {
@@ -36,7 +37,7 @@ export default async function RootLayout(
 
   const lang = params.lang as Locale
   const { page } = await getDictionary(lang)
-  const contact = page.footer.sections.find(section => section.info)?.info
+  const contact = contactInfo(page)
   return (
     <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
       <head>
@@ -44,7 +45,6 @@ export default async function RootLayout(
         <Meta lang={lang}/>
       </head>
 
-      {/* <GoogleTagManager gtmId={`${process.env.GOOGLE_TAGS_ID}`}/> */}
       <body className={['ru', 'kz', 'kg', 'tg', 'uk', 'mn', 'be', 'sr', 'bg', 'mk'].includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
@@ -55,9 +55,7 @@ export default async function RootLayout(
           {children}
         </LanguageShell>
         <ContactDialog lang={lang} title={page.about.buttons.contact_us}
-          phone={process.env.NEXT_PUBLIC_PHONE_NUMBER || contact?.phone || '+996 500 490 806'}
-          email={process.env.NEXT_PUBLIC_EMAIL || contact?.email || 'anvarinho@gmail.com'}
-          address={contact?.address || ''}/>
+          phone={contact.phone} email={contact.email} address={contact.address}/>
       </body>
     </html>
   )
@@ -98,9 +96,7 @@ export const metadata: Metadata = {
     },
     locale: 'en_US',
   },
-  verification: {
-    google: "google-site-verification=353073521"
-  },
+  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
   appLinks: {
     ios: {
       url: "https://apps.apple.com/us/app/guidebook-kyrgyzstan/id1575382810",
@@ -125,7 +121,7 @@ export const metadata: Metadata = {
       url: `${siteUrl}/uploads/bozteri.jpg`,
       width: 800,
       height: 600,
-      alt: "Karakol Cable Lift"
+      alt: "Boz-Teri valley in Kyrgyzstan"
     }
   }
 }

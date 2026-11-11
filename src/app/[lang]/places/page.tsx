@@ -11,7 +11,6 @@ import { Locale } from '@/lib/i18n.config'
 import { LoadMore } from "./load-more";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import Meta from "./meta";
-import { PlacesReveal } from './components/PlacesMotion';
 import Link from 'next/link';
 import { aboutContent } from '../about/content';
 
@@ -31,25 +30,25 @@ export default async function Places(
       <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
         <Meta lang={lang} places={places} page={page}/>
           <header className={styles.pageIntro}>
-            <PlacesReveal className={styles.introTitle}>
-              <p className={styles.eyebrow} data-reveal-copy>{page.sights.name}</p>
-              <h1 data-reveal-copy>{page.sights.title}</h1>
-            </PlacesReveal>
-            <PlacesReveal className={styles.introAside} order={1}>
-              <p className={styles.description} data-reveal-copy>{page.sights.description}</p>
-              <a href="#destinations" className={styles.exploreLink} data-reveal-copy>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
-            </PlacesReveal>
+            <div className={styles.introTitle}>
+              <p className={styles.eyebrow}>{page.sights.name}</p>
+              <h1>{page.sights.title}</h1>
+            </div>
+            <div className={styles.introAside}>
+              <p className={styles.description}>{page.sights.description}</p>
+              <a href="#destinations" className={styles.exploreLink}>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
+            </div>
           </header>
           <section id="destinations" className={styles.featuredSection} aria-label={page.sights.sights}>
             <div className={styles.featuredGrid}>
               {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority={i === 0} featured order={i}/>)}
             </div>
           </section>
-          <PlacesReveal className={styles.collectionHeading}>
-            <h2 data-reveal-copy>{page.sights.sights}</h2>
+          <div className={styles.collectionHeading}>
+            <h2>{page.sights.sights}</h2>
             <span className={styles.collectionLine} aria-hidden="true"/>
             <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
-          </PlacesReveal>
+          </div>
           <div className={styles.placesDiv}>
             <div className={styles.placesList}>
                 <Suspense fallback={
@@ -61,10 +60,10 @@ export default async function Places(
                 </Suspense>
             </div>
           </div>
-          <PlacesReveal className={styles.contactPanel}>
-            <div><h2 data-reveal-copy>{aboutContent[lang].invitation}</h2><p data-reveal-copy>{aboutContent[lang].invitationBody}</p></div>
-            <Link href={`/${lang}/contact`} data-reveal-copy>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
-          </PlacesReveal>
+          <div className={styles.contactPanel}>
+            <div><h2>{aboutContent[lang].invitation}</h2><p>{aboutContent[lang].invitationBody}</p></div>
+            <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
+          </div>
       </div>
   )
 }

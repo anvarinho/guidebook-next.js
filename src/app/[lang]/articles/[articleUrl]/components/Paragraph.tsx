@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Locale } from "@/lib/i18n.config";
 import Link from "next/link";
 import { renderContentHtml } from '@/lib/contentHtml.server';
-import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
     paragraph: Paragraph,
@@ -20,7 +19,7 @@ export default function Article({ paragraph, lang, priority}: Props) {
         classes: { link: styles.contentLink, table: styles.contentTable, tableScroll: styles.tableScroll, markdownImage: styles.contentImage },
     });
     return (
-        <PlacesReveal className={styles.paragraph}>
+        <div className={styles.paragraph}>
                 {paragraph.image && (
                     <picture className={styles.image}>
                         <Image
@@ -44,6 +43,6 @@ export default function Article({ paragraph, lang, priority}: Props) {
             ): <h2>{paragraph.title}</h2>)}
             <div className={styles.richContent} dangerouslySetInnerHTML={{ __html: html }} />
             </div>
-        </PlacesReveal>
+        </div>
     )
 }

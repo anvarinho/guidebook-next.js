@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { NextRequest } from 'next/server';
 import { proxy } from '../src/proxy';
 
@@ -25,4 +26,13 @@ test('root is not overridden by a permanent Next config redirect', async () => {
   const resolved = typeof config === 'function' ? config('phase-production-server') : config;
   const redirects = await resolved.redirects!();
   assert.equal(redirects.some((entry: { source: string }) => entry.source === '/'), false);
+});
+
+test('legacy redirects are exact, slash-free and never loop', async () => {
+  const legacy: Record<string, string> = JSON.parse(readFileSync(new URL('../legacy-redirects.json', import.meta.url), 'utf8'));
+  for (const [source, destination] of Object.entries(legacy)) {
+    assert.match(source, /^\/[^:*?]*[^/]$/, source);
+    assert.match(destination, /^\/[a-z]{2,3}(\/[^/]+)*$/, destination);
+    assert.equal(legacy[destination], undefined, `${destination} must not redirect again`);
+  }
 });

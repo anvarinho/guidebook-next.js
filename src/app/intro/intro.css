@@ -33,6 +33,10 @@ html.intro-loading body {
 .kyrgyz-intro {
   scroll-behavior: smooth;
 }
+/* Smooth anchor scrolling is reserved for the home page; other pages jump instantly. */
+html:has(.kyrgyz-intro), html:has(.kyrgyz-intro) body {
+  scroll-behavior: smooth;
+}
 .kyrgyz-intro {
   margin: 0;
   background: var(--night);

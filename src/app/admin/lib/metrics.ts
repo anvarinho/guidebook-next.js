@@ -3,7 +3,8 @@ import type { Document } from 'mongodb';
 export const LOCALES = ['en','it','fr','de','es','jp','kr','ae','cn','ru'] as const;
 export const CONTENT_KINDS = ['places','tours','articles'] as const;
 export type ContentKind = typeof CONTENT_KINDS[number];
-export type Query = Record<string, string | string[] | undefined>;
+// Raw search params, or the already-parsed filters from collectionQuery (numeric page).
+export type Query = Record<string, string | number | string[] | undefined>;
 export const DAY = 86400000;
 export const RESPONSE_CLASSES = ['1xx','2xx','3xx','4xx_other','5xx_other','429','503','504'];
 export const API_ROUTES = ['/api/user/login','/api/user/signup','/api/user/:id','/api/admin','/api/places','/api/places/home','/api/places/region','/api/places/ios','/api/places/more','/api/places/:id','/api/orders','/api/orders/:id','/api/tours','/api/tours/:slug','/api/articles','/api/articles/:slug','/api/reviews','invalid','unmatched'];

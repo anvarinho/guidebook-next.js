@@ -16,7 +16,7 @@
 .statusPage h1 { max-width: 18ch; margin-top: 34px; font-size: clamp(32px, 4.5vw, 58px); font-weight: 600; line-height: 1.1; letter-spacing: -.05em; text-wrap: balance; }
 .statusPage p { max-width: 54ch; margin-top: 18px; color: rgba(var(--foreground-rgb, 20, 20, 20), .65); font-size: 15px; line-height: 1.8; text-wrap: pretty; }
 .statusActions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
-.orangeButton, .darkButton { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 52px; padding: 12px 22px; border-radius: 12px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.4; cursor: pointer; transition: transform .25s, background .25s; }
+.orangeButton, .darkButton { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 52px; padding: 12px 22px; border-radius: 12px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.4; cursor: pointer; }
 .orangeButton { border: 1px solid var(--main-active-color, #ff6500); background: var(--main-active-color, #ff6500); color: #171717; }
 .orangeButton:hover { transform: translateY(-2px); background: #ff7d29; }
 .darkButton { border: 1px solid #171717; background: #171717; color: #fff; }
@@ -29,4 +29,3 @@
   .statusPage h1 { margin-top: 28px; }
   .statusPage p { font-size: 14px; }
 }
-@media (prefers-reduced-motion: reduce) { .orangeButton, .darkButton { transition: none; } }

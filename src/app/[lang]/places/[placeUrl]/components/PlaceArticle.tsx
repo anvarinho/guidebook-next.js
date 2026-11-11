@@ -9,12 +9,10 @@ import { GoogleMapsEmbed, YouTubeEmbed } from '@next/third-parties/google';
 import type { Locale } from '@/lib/i18n.config';
 import { getDictionary } from '@/lib/dictionary';
 import Link from 'next/link';
-import PlaceDescription from './PlaceDescripiton';
+import PlaceDescription from './PlaceDescription';
 import PlaceGallery from './PlaceGallery';
 import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
-import { PlacesReveal } from '../../components/PlacesMotion';
-import ArticleReadingProgress from './ArticleReadingProgress';
 import ViewportMap from './ViewportMap';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
@@ -39,31 +37,30 @@ export default async function PlaceArticle({ promise, lang }: {
 
   return (
     <article data-place-page className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
-      <PlacesReveal className={styles.breadcrumbMotion} order={0}>
+      <div className={styles.breadcrumbMotion}>
         <nav className={styles.breadcrumb} aria-label={page.sights.name}>
           <Link href={`/${lang}/places`}><span aria-hidden="true"><ArrowIcon direction="left"/></span> {page.sights.name}</Link>
           <span aria-hidden="true">/</span>
           <span>{place.region}</span>
         </nav>
-      </PlacesReveal>
+      </div>
       <header className={styles.articleHeader}>
-        <PlacesReveal order={1}>
-        <h1 data-reveal-copy>{place.title}</h1>
-        <div className={styles.info} data-reveal-copy>
+        <div>
+        <h1>{place.title}</h1>
+        <div className={styles.info}>
           {createdDate && <time dateTime={createdDate.toISOString()}>
             {page.info.created}{createdDate.toLocaleDateString(page.langCode, { day: 'numeric', month: 'long', year: 'numeric' })}
           </time>}
           <span>{page.info.seen}{Math.floor(place.viewCount).toLocaleString(page.langCode)}</span>
         </div>
-        </PlacesReveal>
+        </div>
       </header>
-      <PlacesReveal order={3} gallery>
-        <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detailMotion/>
-      </PlacesReveal>
+      <div>
+        <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detail/>
+      </div>
 
       <div className={styles.articleLayout}>
         <div className={styles.articleBody} id="place-article-body">
-          <ArticleReadingProgress bodyId="place-article-body" />
           <PlaceDescription text={place.description} highlights={page.sights.highlights} name={place.name} lang={lang}/>
           {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
             <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
@@ -79,7 +76,7 @@ export default async function PlaceArticle({ promise, lang }: {
           <Suspense fallback={null}>
             <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather}/>
           </Suspense>
-          <PlacesReveal className={styles.locationCardMotion} order={1}>
+          <div className={styles.locationCardMotion}>
           <section className={styles.locationCard}>
             <div className={styles.locationHeading}>
               <p>{place.region}</p>
@@ -108,21 +105,21 @@ export default async function PlaceArticle({ promise, lang }: {
               </svg>
             </Link>
           </section>
-          </PlacesReveal>
+          </div>
         </aside>
       </div>
 
       {sights.length > 0 && <section className={styles.related} aria-labelledby="local-sights-title">
-        <PlacesReveal className={styles.relatedHeading}><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></PlacesReveal>
+        <div className={styles.relatedHeading}><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></div>
         <div className={styles.relatedGrid}>
           {sights.map((sight, index) => <div className={styles.relatedItem} key={sight._id}>
             <PlaceCard blurDataURL={getBase64(sight.images[0])} place={sight} lang={lang} detailPage order={index}/>
-            {sight.description && <PlacesReveal><p className={styles.relatedSummary}>{sight.description}</p></PlacesReveal>}
+            {sight.description && <div><p className={styles.relatedSummary}>{sight.description}</p></div>}
           </div>)}
         </div>
       </section>}
       {places.length > 0 && <section className={styles.related} aria-labelledby="region-sights-title">
-        <PlacesReveal className={styles.relatedHeading}><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></PlacesReveal>
+        <div className={styles.relatedHeading}><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></div>
         <div className={styles.relatedGrid}>
           {places.map((sight, index) => <PlaceCard blurDataURL={getBase64(sight.images[0])} key={sight.url} place={sight} lang={lang} detailPage order={index}/>)}
         </div>

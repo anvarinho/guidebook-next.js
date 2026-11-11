@@ -1,10 +1,6 @@
-'use client';
-
-import { useRef } from 'react';
 import Image from 'next/image';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
-import { useReveal } from '../../places/components/useReveal';
 import shared from '../../places/page.module.css';
 import styles from '../articles.module.css';
 
@@ -17,13 +13,10 @@ type Props = {
 };
 
 export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataURL, dateLabel, dateTime, views, viewsLabel, featured = false, order = 0 }: Props) {
-  const ref = useRef<HTMLAnchorElement>(null);
-  useReveal(ref, order);
-
   return (
-    <Link ref={ref} data-reveal-group href={href} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
+    <Link href={href} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
-        <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`} data-reveal-image>
+        <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`}>
           {imageUrl && <Image src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}
             sizes={featured ? '(max-width: 600px) 100vw, (max-width: 991px) 60vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw'}
             {...imagePlaceholder(blurDataURL)} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>}

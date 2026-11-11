@@ -12,7 +12,7 @@
 .column { min-width: 0; }
 .column h3 { margin-bottom: 18px; font-size: 13px; font-weight: 600; line-height: 1.6; }
 .links { list-style: none; }
-.link, .contactDetails a { display: flex; align-items: center; width: fit-content; min-height: 38px; gap: 10px; font-size: 13px; line-height: 1.6; color: rgba(var(--foreground-rgb), .64); transition: color .25s ease; }
+.link, .contactDetails a { display: flex; align-items: center; width: fit-content; min-height: 38px; gap: 10px; font-size: 13px; line-height: 1.6; color: rgba(var(--foreground-rgb), .64); }
 .link:hover, .contactDetails a:hover { color: var(--main-active-color); }
 .link bdi, .contactDetails bdi { overflow-wrap: anywhere; }
 .socialIcon { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border: 1px solid #373737; border-radius: 9px; background: #202020; color: #fff; }
@@ -26,7 +26,7 @@
 .bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 24px 80px; border-top: 1px solid rgba(var(--foreground-rgb), .12); }
 .bottom p { font-size: 11px; line-height: 1.8; color: rgba(var(--foreground-rgb), .55); }
 .contactLink { display: inline-flex; align-items: center; gap: 16px; font-size: 12px; min-height: 44px; }
-.contactLink span { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 10px; font-size: 22px; transition: transform .5s cubic-bezier(.16,1,.3,1), border-color .3s; }
+.contactLink span { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 10px; font-size: 22px; }
 .contactLink:is(:hover,:focus-visible) span { transform: rotate(45deg); border-color: var(--main-active-color); }
 .footer a:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; border-radius: 6px; }
 .footer[dir="rtl"] :is(h2, h3, .brand) { letter-spacing: 0; }
@@ -48,4 +48,3 @@
   .contactLink span { width: 30px; height: 30px; }
 }
 @media (max-width: 400px) { .appPanel { padding: 24px 16px; } .grid { column-gap: 16px; } }
-@media (prefers-reduced-motion: reduce) { .footer *, .footer *::before, .footer *::after { transition: none !important; } }

@@ -72,7 +72,7 @@
 }
 .placeMedia { position: relative; aspect-ratio: 1.5; overflow: hidden; background: rgba(var(--foreground-rgb), .06); }
 .imageFrame { position: absolute; inset: 0; }
-.placeImg { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1000ms cubic-bezier(.16, 1, .3, 1); }
+.placeImg { display: block; width: 100%; height: 100%; object-fit: cover; }
 .weather {
   position: absolute;
   inset-block-start: 18px;
@@ -117,11 +117,8 @@
 .region::before { content: ''; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--main-active-color); }
 .placeContent h2 { font-size: 20px; font-weight: 600; line-height: 1.35; letter-spacing: -.02em; overflow-wrap: anywhere; text-wrap: balance; }
 .cardArrow { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 12px; }
-.cardArrow svg { width: 20px; height: 20px; transition: transform 650ms cubic-bezier(.16, 1, .3, 1); }
+.cardArrow svg { width: 20px; height: 20px; }
 .placeBox:focus-visible, .exploreLink:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; }
-.placeBox[data-place-detail-card] { transition: translate .24s cubic-bezier(.22,1,.36,1), border-color .24s ease, box-shadow .24s ease; }
-.placeBox[data-place-detail-card] .placeImg { transition: transform .42s cubic-bezier(.22,1,.36,1); }
-.placeBox[data-place-detail-card] .cardArrow svg { transition: transform .24s cubic-bezier(.22,1,.36,1); }
 .placeBox[data-place-detail-card]:focus-visible { outline-offset: 4px; }
 .featuredCard { border: 0; isolation: isolate; background: #263438; }
 .featuredCard .placeMedia { position: absolute; inset: 0; aspect-ratio: auto; }
@@ -130,60 +127,27 @@
 .featuredGrid > :first-child .placeContent { padding: 24px; }
 .featuredGrid > :first-child h2 { font-size: clamp(24px, 2.4vw, 32px); max-width: 24ch; }
 .cardNumber { position: absolute; inset-block-start: 22px; inset-inline-start: 28px; color: rgba(255,255,255,.9); font-size: 12px; letter-spacing: .1em; font-variant-numeric: tabular-nums; }
-@media(hover: hover) and (prefers-reduced-motion: no-preference) {
-  .placeBox:hover .placeImg { transform: scale(1.065); }
-  .placeBox:hover .cardArrow svg { transform: rotate(45deg); }
-}
-@media(prefers-reduced-motion: no-preference) {
-  .placeBox:focus-visible .cardArrow svg { transform: rotate(45deg); }
-}
 .placeBox:dir(rtl) h2 { letter-spacing: 0; line-height: 1.45; }
 .main[dir="rtl"] .pageIntro h1 { letter-spacing: 0; line-height: 1.2; }
 .main[dir="rtl"] .eyebrow { letter-spacing: 0; }
-.loadingSpinnerWrapper, .center, .listStatus { grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 88px; padding: 24px; color: rgba(var(--foreground-rgb), .6); font-size: 14px; line-height: 1.6; text-align: center; }
-.ring { width: 20px; height: 20px; border: 2px solid rgba(var(--foreground-rgb), .15); border-top-color: var(--main-active-color); border-radius: 50%; animation: ring 1s linear infinite; }
-@keyframes ring { to { transform: rotate(360deg); } }
-.loadingText { font-size: 14px; }
-.mustSee { padding-block: 32px; line-height: 1.8; }
-.mustSee h2 { font-size: 24px; }
-.mustSee h3 { font-size: 18px; }
-.notfound { padding: 100px 24px; text-align: center; }
+.loadingSpinnerWrapper, .listStatus { grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 88px; padding: 24px; color: rgba(var(--foreground-rgb), .6); font-size: 14px; line-height: 1.6; text-align: center; }
 .listingPage { position: relative; isolation: isolate; padding-top: 144px; }
 
 .listingPage .pageIntro { margin-bottom: 42px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
 .listingPage .description { max-width: 62ch; font-size: 15px; line-height: 1.9; text-wrap: pretty; }
-.listingPage .placeBox { transition: border-color .35s, box-shadow .35s; }
 .listingPage .placeBox:hover { border-color: rgba(var(--foreground-rgb), .24); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
 .listingPage .placeDetails { flex: 1; }
-.sleekMotion { --places-ease: cubic-bezier(.22, 1, .36, 1); }
-.sleekMotion .placeBox { transition: translate .65s var(--places-ease), border-color .45s ease, box-shadow .65s var(--places-ease); }
-.sleekMotion .placeImg { transition: transform 1.4s var(--places-ease); }
-.sleekMotion .cardArrow { transition: background .45s ease, border-color .45s ease, color .45s ease; }
-.sleekMotion .cardArrow svg { transition: transform .7s var(--places-ease); }
+.sleekMotion {}
 .sleekMotion .placeBox:focus-visible .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
 @media (hover: hover) {
   .sleekMotion .placeBox:hover { border-color: rgba(255,101,0,.3); box-shadow: 0 18px 40px rgba(0,0,0,.11); }
   .sleekMotion .placeBox:hover .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  /* Individual translate keeps hover motion independent of the reveal transform. */
-  .sleekMotion .placeBox:hover { translate: 0 -4px; }
-  .sleekMotion .placeBox:hover .placeImg { transform: scale(1.035); }
-  .sleekMotion .placeBox:active { translate: 0 -1px; }
-  .placeBox[data-place-detail-card]:hover { translate: 0 -3px; border-color: rgba(255,101,0,.3); box-shadow: 0 12px 30px rgba(0,0,0,.09); }
-  .placeBox[data-place-detail-card]:hover .placeImg { transform: scale(1.03); }
-  .placeBox[data-place-detail-card]:hover .cardArrow svg { transform: rotate(45deg) translateX(2px); }
-  .placeBox[data-place-detail-card]:active { translate: 0 -1px; }
-}
-@media(prefers-reduced-motion: reduce) {
-  .placeBox[data-place-detail-card], .placeBox[data-place-detail-card] .placeImg,
-  .placeBox[data-place-detail-card] .cardArrow svg { transition: none; }
-}
 .contactPanel { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 64px; padding: 36px 40px; border: 1px solid var(--line); border-radius: 24px; background: rgba(var(--callout-rgb), .45); }
 .contactPanel h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; text-wrap: balance; }
 .contactPanel p { max-width: 55ch; margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .contactPanel a { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; flex-shrink: 0; min-height: 50px; padding: 12px 18px; border-radius: 13px; background: var(--main-active-color); color: #141414; font-size: 13px; font-weight: 600; }
-.contactPanel a span { font-size: 24px; transition: transform .5s cubic-bezier(.16,1,.3,1); }
+.contactPanel a span { font-size: 24px; }
 .contactPanel a:hover span { transform: rotate(45deg); }
 .contactPanel a:focus-visible, .loadButton:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; }
 .contactPanel:dir(rtl) h2 { letter-spacing: 0; line-height: 1.4; }
@@ -223,10 +187,3 @@
 }
 @media(max-width: 760px) { .contactPanel { flex-direction: column; align-items: stretch; gap: 24px; padding: 28px 24px; margin-top: 40px; } .contactPanel a { align-self: flex-start; } }
 @media(max-width: 600px) { .listingPage { padding-top: 112px; } .listingPage .pageIntro { padding-bottom: 28px; gap: 22px; } .listingPage .description { font-size: 14px; line-height: 1.8; } }
-@media(prefers-reduced-motion: reduce) {
-  .sleekMotion .placeBox, .sleekMotion .placeImg, .sleekMotion .cardArrow, .sleekMotion .cardArrow svg { transition: none; }
-  .listingPage .placeBox, .contactPanel a span { transition: none; }
-  .placeImg { transition: none; }
-  .cardArrow svg { transition: none; }
-  .ring { animation: none; }
-}

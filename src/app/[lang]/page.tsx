@@ -1,4 +1,5 @@
-import { absoluteSiteUrl, localizedPageAlternates, hreflangByLocale } from "@/lib/seo";
+import { localeMetadata } from "@/lib/localeMetadata";
+import { absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
 import type { Metadata, Viewport } from "next";
 import Intro from "@/app/intro/Intro";
 import type { Locale } from "@/lib/i18n.config";
@@ -24,7 +25,7 @@ export async function generateMetadata(props: HomeProps): Promise<Metadata> {
     description: messages.metaDescription,
     alternates: { canonical: absoluteSiteUrl(params.lang), languages: localizedPageAlternates() },
     openGraph: { title: messages.metaTitle, description: messages.metaDescription,
-      url: absoluteSiteUrl(params.lang), type: "website", locale: hreflangByLocale[params.lang].replace("-", "_"),
+      url: absoluteSiteUrl(params.lang), type: "website", locale: localeMetadata[params.lang].og,
       images: [heroImage] },
     twitter: { card: "summary_large_image", title: messages.metaTitle, description: messages.metaDescription, images: [heroImage] },
   };

@@ -8,7 +8,6 @@ import getReviews from '@/lib/getReviews'
 import Image from 'next/image'
 import Link from 'next/link'
 import { aboutContent } from '../content'
-import { PlacesReveal } from '../../places/components/PlacesMotion'
 
 interface Review {
   _id: string;
@@ -50,7 +49,7 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
 
   return (
     <section className={styles.testimonials} id="clients" aria-labelledby="reviews-heading">
-      <PlacesReveal>
+      <div>
         <header className={styles.header}>
           <div><p className={styles.eyebrow}>03 / {copy.reviews}</p><h2 id="reviews-heading">{copy.reviews}</h2></div>
           {reviews.length > showItems && <div className={styles.controls}>
@@ -72,7 +71,7 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
           ))}
         </div>
         {reviews.length > showItems && <p className={styles.position} aria-live="polite" aria-atomic="true"><bdi>{currentIndex + 1} / {reviews.length}</bdi></p>}
-      </PlacesReveal>
+      </div>
     </section>
   )
 }

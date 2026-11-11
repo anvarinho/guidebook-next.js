@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      # Keep Next, React and their type packages moving together.
+      framework:
+        patterns: ["next", "eslint-config-next", "@next/*", "react", "react-dom", "@types/react", "@types/react-dom"]
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

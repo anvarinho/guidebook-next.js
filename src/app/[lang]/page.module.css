@@ -1,152 +1,18 @@
 .main {
-   margin: 0; padding: 0;
-   box-sizing: border-box;
-   /* background-color: white; */
-   min-height: 100vh;
-   outline: none; border: none;
-   text-decoration: none;
-   align-items: center;
-   justify-content: center;
-   margin-top: 2.5rem;
+  min-height: 100vh;
+  margin-top: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  text-decoration: none;
 }
 
 .main:has([data-service-state]) > footer { display: none; }
 .main:has([data-service-state]) > .section > [data-flag-sun] { display: none; }
 
-
-
 .section {
   width: 100%;
-  /* padding: 1rem; */
-  /* padding-top: 2rem; */
   min-height: 100vh;
   margin-top: -2.5rem;
-  /* display: flex; */
-  /* padding: 3rem 1rem 1rem 1rem; */
-}
-
-.mainDiv{
-  width: 100%;
-  text-align: center;
-  transition: all .3s ease-in;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-5px, -5px);
-  }
-}
-.buttons{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  max-width: 100%;
-  padding: 1rem;
-}
-
-.floatingButton {
-  /* animation: float 3s ease-in-out infinite; */
-  display: inline-block;
-  padding: 8px 15px;
-  /* background-color: #007bff; Choose your desired background color */
-  /* color: var(--main-active-color); */
-  background: rgba(255,255,255,.4); /* Change the background color on hover */
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter:blur(3px);
-  border-radius: 12px;
-  /* border:.2rem solid var(--main-active-color); */
-  text-decoration: none;
-  font-weight:bolder;
-  transition: all 0.3s ease-in;
-  margin: .3rem;
-}
-
-.floatingButton:hover {
-  /* color: rgba(0,0,0,1); */
-  background: rgba(0,0,0,.4); /* Change the background color on hover */
-}
-
-.home{  
-  background: url('../../../public/karakolcablelift.jpg') no-repeat rgba(0,0,0,0.4);
-   background-position: center;
-   /* background-attachment: fixed; */
-   background-size: cover;
-   background-blend-mode: multiply;
-   min-height: 100vh;
-   /* margin: -5.5rem -2rem 0 -2rem; */
-   /* padding: 3rem; */
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-flow: column;
-   position: relative;
-   text-align: center;
-}
-.home h1{
-  color: #fff;
-}
-
-.home p{
-  padding: 0 1rem 0 1rem;
-}
-
-.home h2{
-  max-width: 800px;
-  font-size: 1rem;
-  color: #fff;
-}
-
-.travel{
-  padding: 1rem;
-  /* text-align: center; */
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: pre-wrap;
-}
-
-.travel h2{
-  font-size: 1.5rem;
-  padding: .6rem;
-  text-align: center;
-}
-
-.travel time{
-  font-size: .7rem;
-}
-
-.travel div h3{
-  padding: 1rem;
-  text-align: center;
-}
-
-.travel div p{
-  line-height: 1.5rem;
-}
-
-
-.chooseLanguage{
-  position: absolute;
-  bottom: 4rem; left: 2rem;
-  text-align: left;
-}
-
-.chooseLanguage h5{
-  color: #fff;
-}
-.downloadApps{
-  position: absolute;
-  background:rgba(255,255,255,.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  right: 0rem;
-  bottom: 0rem;
-  text-align: center;
-  margin: .8rem;
-  border-radius: 1rem;
 }

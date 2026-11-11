@@ -2,7 +2,7 @@
 
 import { isRtlLocale } from '@/lib/localeMetadata';
 import { useEffect, useRef, type ReactNode } from "react";
-import { initializeManas } from "./motion";
+import { initializeManas } from "./interactions";
 import type { InteractiveMessages } from "./interactive-messages";
 
 export default function Manas({ children, messages, language, className = "" }: {

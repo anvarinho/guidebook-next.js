@@ -1,32 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { build } from 'esbuild';
-
-let sliderScript = '';
-let sliderStyles = '';
-test.beforeAll(async () => {
-  // ImageSlider has no public route caller. Mount the actual component without
-  // adding a test-only route to the production application.
-  const result = await build({
-    stdin: {
-      contents: `import React from 'react'; import { createRoot } from 'react-dom/client';
-        import ImageSlider from './src/app/[lang]/Components/image/ImageSlider';
-        createRoot(document.getElementById('root')).render(<ImageSlider items={['bozteri.jpg', 'karakolcablelift.jpg']} priority={false}/>);`,
-      loader: 'tsx', resolveDir: process.cwd(),
-    },
-    bundle: true, write: false, outdir: '/tmp/guidebook-slider-browser',
-    loader: { '.css': 'local-css' },
-    define: { 'process.env.NODE_ENV': '"production"', 'process.env.NEXT_PUBLIC_URL': '""' },
-    plugins: [{ name: 'next-image-browser-fixture', setup(builder) {
-      builder.onResolve({ filter: /^next\/image$/ }, () => ({ path: 'image', namespace: 'fixture' }));
-      builder.onLoad({ filter: /.*/, namespace: 'fixture' }, () => ({
-        contents: `import React from 'react'; export default function Image({fill,priority,placeholder,blurDataURL,...props}) { return React.createElement('img',props); }`,
-        loader: 'js', resolveDir: process.cwd(),
-      }));
-    } }],
-  });
-  sliderScript = result.outputFiles.find(file => file.path.endsWith('.js'))!.text;
-  sliderStyles = result.outputFiles.find(file => file.path.endsWith('.css'))!.text;
-});
 
 test.beforeEach(async ({ page }) => {
   // Browser smoke tests must never call external providers or production APIs.
@@ -232,39 +204,6 @@ test('shared control styles preserve keyboard language selection and the contact
   await expect(languages).toBeHidden();
   await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
   await expect(page.getByRole('link', { name: /^WhatsApp · / })).toBeInViewport();
-});
-
-test('carousel controls work by keyboard and interaction suspends autoplay', async ({ page }) => {
-  await page.clock.install();
-  await page.goto('/login');
-  await page.setContent('<main><div id="root"></div></main>');
-  await page.addStyleTag({ content: sliderStyles });
-  await page.addScriptTag({ content: sliderScript });
-  const carousel = page.locator('[aria-roledescription="carousel"]').first();
-  await expect(carousel).toBeVisible();
-  const next = carousel.getByRole('button', { name: 'Next slide', exact: true });
-  await next.focus();
-  await page.keyboard.press('Enter');
-  await expect(carousel.locator('[aria-current="true"]')).toHaveAccessibleName('Go to slide 2');
-  await page.clock.fastForward(6000);
-  await expect(carousel.locator('[aria-current="true"]')).toHaveAccessibleName('Go to slide 2');
-  await expect(carousel.locator('[aria-roledescription="slide"][aria-hidden="false"]')).toHaveCount(1);
-  await expect(carousel.locator('[aria-roledescription="slide"][inert]')).toHaveCount(1);
-  await expect(carousel.getByRole('button', { name: /Resume slideshow/ })).toBeVisible();
-});
-
-test('carousel respects reduced motion and exposes an explicit resume control', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.clock.install();
-  await page.goto('/login');
-  await page.setContent('<main><div id="root"></div></main>');
-  await page.addStyleTag({ content: sliderStyles });
-  await page.addScriptTag({ content: sliderScript });
-  const carousel = page.locator('[aria-roledescription="carousel"]').first();
-  await expect(carousel.locator('[aria-current="true"]')).toHaveAccessibleName('Go to slide 1');
-  await page.clock.fastForward(12000);
-  await expect(carousel.locator('[aria-current="true"]')).toHaveAccessibleName('Go to slide 1');
-  await expect(carousel.getByRole('button', { name: 'Resume slideshow', exact: true })).toBeVisible();
 });
 
 test('unconfigured contact never reports delivery success', async ({ page, request }) => {

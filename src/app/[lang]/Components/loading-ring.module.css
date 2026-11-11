@@ -6,7 +6,6 @@
   flex: 0 0 auto;
   border: 1px solid rgba(var(--foreground-rgb), .14);
   border-radius: 50%;
-  animation: loadingOrbit 1.4s cubic-bezier(.45, 0, .55, 1) infinite;
 }
 .ring::before, .ring::after { position: absolute; content: ''; border-radius: 50%; }
 .ring::before {
@@ -23,5 +22,3 @@
 .large { width: 58px; height: 58px; border-width: 2px; }
 .large::before { inset: 7px; }
 .large::after { inset: 22px; box-shadow: 0 0 0 7px rgba(var(--main-active-color-rgb, 255, 101, 0), .1); }
-@keyframes loadingOrbit { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .ring { animation: none; } }

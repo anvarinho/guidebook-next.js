@@ -65,9 +65,6 @@
   .aside { display: none; }
   .info { margin-top: 40px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .main :is(a, button) { transition: none; }
-}
 
 /* Rich article content uses the same sanitized renderer as other content pages. */
 .richContent { overflow-wrap: anywhere; }

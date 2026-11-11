@@ -37,7 +37,7 @@ Built with **Next.js App Router**, **React**, and **TypeScript**, with CSS Modul
 
 ## Quick start
 
-You’ll need **Node.js 22 or newer** and **npm** (CI uses Node 24). Content-driven pages also require access to the project’s content API. Rust and Playwright Chromium are needed only for the isolated browser/build checks.
+You’ll need **Node.js 22 or newer** and **npm** (CI uses Node 24, pinned in `.nvmrc`; run `nvm use`). Content-driven pages also require access to the project’s content API. Rust and Playwright Chromium are needed only for the isolated browser/build checks.
 
 ### 1. Install dependencies
 
@@ -81,6 +81,7 @@ Set environment-specific values in `.env.local`:
 | `NEXT_PUBLIC_PHONE_NUMBER` | Contact and WhatsApp number |
 | `NEXT_PUBLIC_EMAIL` | Contact email |
 | `GOOGLE_ANALYTICS_ID` | Google Analytics measurement ID |
+| `GOOGLE_SITE_VERIFICATION` | Optional Search Console meta-tag token |
 | `GOOGLE_MAPS_API_KEY` | Google Maps content on place pages |
 | `DB_HOST` | MongoDB host for the admin area |
 | `DB_PORT` | MongoDB port for the admin area |
@@ -94,6 +95,7 @@ Keep secrets out of version control. Variables prefixed with `NEXT_PUBLIC_` are 
 | :--- | :--- |
 | `npm run dev` | Start the local development server |
 | `npm run lint` | Run Next.js ESLint checks |
+| `npm run typecheck` | Type-check the application |
 | `npm test` | Run credential-free unit and regression tests |
 | `npm run test:e2e` | Build against a local Rust fixture API and run browser checks |
 | `npm run build` | Create a production build |

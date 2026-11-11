@@ -3,19 +3,10 @@ import { localeMetadata } from "./localeMetadata";
 
 export const siteUrl = (process.env.SITE_URL || "https://central-asia.live").replace(/\/+$/, "");
 
-export const hreflangByLocale: Record<Locale, string> = {
-  ...Object.fromEntries(Object.entries(localeMetadata).map(([code, info]) => [code, info.languageTag])) as Record<Locale, string>,
-  en: "en-US",
-  fr: "fr-FR",
-  de: "de-DE",
-  es: "es-ES",
-  ru: "ru-RU",
-  it: "it-IT",
-  jp: "ja-JP",
-  kr: "ko-KR",
-  ae: "ar-AE",
-  cn: "zh-CN",
-};
+// Bare language codes target every speaker; region codes would restrict each page to one country.
+export const hreflangByLocale = Object.fromEntries(
+  Object.entries(localeMetadata).map(([code, info]) => [code, info.tag]),
+) as Record<Locale, string>;
 
 export function absoluteSiteUrl(path: string): string {
   if (/^https?:\/\//i.test(path)) return path;

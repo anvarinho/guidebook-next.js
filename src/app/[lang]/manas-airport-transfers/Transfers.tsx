@@ -13,7 +13,6 @@ import styles from "./transfers.module.css";
 import { getTransferFaq } from "./content";
 import { ArrivalGuide, OnwardGuides } from "./JourneyGuide";
 import { ComparisonTable, ProviderPrice } from "./TransferComparison";
-import { PlacesReveal } from "../places/components/PlacesMotion";
 import { contactHref, destinations, type Destination, type Vehicle, type Sort, type ProviderId } from "./transfer-data";
 
 type ProviderCardProps = {
@@ -471,19 +470,19 @@ export default function Transfers({ lang }: { lang: Locale }) {
             <a href={`/${lang}`}>{t("Home")}</a><span>/</span><a href={`/${lang}/places`}>{t("Kyrgyzstan")}</a><span>/</span><span aria-current="page">{t("Airport transfers")}</span>
           </nav>
           <div className="hero-grid">
-            <PlacesReveal className="hero-copy">
+            <div className="hero-copy">
               <p className="eyebrow">{t("PRIVATE AIRPORT TRANSFERS · KYRGYZSTAN")}</p>
               <h1>{t("Manas Airport transfers to Bishkek & beyond")}</h1>
               <p className="hero-description">{t("s98")}</p>
               <div className="hero-actions"><a className="button button-orange" href="#providers">{t("Compare companies")}<svg className="icon" aria-hidden="true"><use href="#arrow" /></svg></a><a className="text-link" href="#route-search">{t("Book a transfer")}</a></div>
               <div className="hero-points"><span><svg className="icon" aria-hidden="true"><use href="#check" /></svg>{" "}{t("City & regional routes")}</span><span><svg className="icon" aria-hidden="true"><use href="#check" /></svg>{" "}{t("Contact directly")}</span></div>
-            </PlacesReveal>
-            <PlacesReveal className="hero-visual" order={1}>
+            </div>
+            <div className="hero-visual">
               <img src="/manas-airport-transfers/airport-pickup.webp" srcSet="                   /manas-airport-transfers/airport-pickup-640.webp  640w,                   /manas-airport-transfers/airport-pickup.webp     1280w                 " sizes="(max-width: 600px) calc(100vw - 36px), 580px" width="1280" height="853" alt={t("s99")} fetchPriority="high" />
               <div className="photo-shade"></div>
               <div className="hero-photo-caption"><span className="photo-icon"><svg className="icon" aria-hidden="true"><use href="#plane" /></svg></span><div><span>{t("Airport transfers")}</span><strong>{t("Manas Airport")}</strong></div><span className="photo-arrow" aria-hidden="true"><ArrowIcon direction="up-right"/></span></div>
               <span className="photo-credit">{t("AI-generated travel illustration")}</span>
-            </PlacesReveal>
+            </div>
           </div>
 
           
@@ -653,7 +652,7 @@ export default function Transfers({ lang }: { lang: Locale }) {
                   <option value="price">{t("Starting price: low to high")}</option>
                 </select></label>
             </div>
-            <div className="provider-list" id="provider-list">{ids.map((id, index) => <PlacesReveal key={id} order={index}><ProviderCard lang={lang} id={id} destination={destination} vehicle={vehicle} message={message} comparing={comparing} shortlist={shortlist} onToggle={toggleProvider} /></PlacesReveal>)}</div>
+            <div className="provider-list" id="provider-list">{ids.map((id, index) => <div key={id}><ProviderCard lang={lang} id={id} destination={destination} vehicle={vehicle} message={message} comparing={comparing} shortlist={shortlist} onToggle={toggleProvider} /></div>)}</div>
             <p className="results-note">{" "}{t("s180")}{" "}</p>
             <noscript><p className="noscript-note">{" "}{t("s181")}{" "}</p></noscript>
           </div>

@@ -303,3 +303,13 @@ rustc scripts/admin-workload-benchmark.rs -o /tmp/admin-workload-benchmark
 # Authenticate the synthetic admin and store only its Cookie header in a private file:
 /tmp/admin-workload-benchmark NODE_PID MONGO_PID COOKIE_FILE 3218
 ```
+
+## Motion removal outside the home page (2026-11-11)
+
+Only the home page (`src/app/intro`) animates. Every other page now renders what reduced-motion visitors saw before, for all visitors:
+
+- Removed CSS transitions, keyframes and `will-change` outside `src/app/intro`; rules that previously applied only under `prefers-reduced-motion: reduce` now apply unconditionally.
+- Removed the scroll-reveal hook (`useReveal`/`PlacesReveal`), the place reading-progress bar, the place gallery crossfade, the Manas parallax, entrance animations and motion toggle (`manas/interactions.js` keeps the dialogs, comic reader and chapter bar), the privacy-page scroll parallax and the unused `ImageSlider`.
+- Smooth anchor scrolling is limited to the home page. The place gallery still preloads the next photo before switching, so no blank frame appears.
+
+Earlier entries above that mention reveal effects, reading progress, gallery transitions or Manas parallax describe the previous behavior.

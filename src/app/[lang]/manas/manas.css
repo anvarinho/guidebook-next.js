@@ -27,13 +27,11 @@
 .manas-page .hero-kyrgyz { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .manas-page .hero-copy { margin-top: 24px; max-width: 44ch; font-size: 15px; line-height: 1.85; color: var(--muted); }
 .manas-page .primary-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 30px; padding: 15px 20px; min-height: 52px; border-radius: 14px; background: var(--accent); color: #141414; font-size: 13px; font-weight: 600; }
-.manas-page .primary-link .arrow { font-size: 24px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .primary-link .arrow { font-size: 24px; }
 .manas-page .primary-link:hover .arrow { transform: rotate(45deg); }
 .manas-page .hero-art { grid-column: 2; grid-row: 1; position: relative; height: clamp(560px,46vw,680px); overflow: hidden; isolation: isolate; border-radius: 28px; background: #d9d9ce; }
 .manas-page .hero-layer { position: absolute; inset: 0; }
 .manas-page .hero-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 77% center; }
-.manas-page .hero-layer img { will-change: auto; }
-.manas-page.motion-enabled .hero-layer img { will-change: transform; }
 .manas-page .hero-landscape { z-index: 0; }
 .manas-page .hero-army { z-index: 1; }
 .manas-page .hero-manas { z-index: 2; }
@@ -56,12 +54,12 @@
 .manas-page .prose { max-width: 58ch; margin-top: 26px; font-size: 16px; line-height: 1.9; color: var(--muted); }
 .manas-page .prose p + p { margin-top: 20px; }
 .manas-page .text-link { display: inline-flex; align-items: center; gap: 24px; margin-top: 28px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 500; }
-.manas-page .text-link span { font-size: 24px; color: var(--accent); transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .text-link span { font-size: 24px; color: var(--accent); }
 .manas-page .text-link:hover span { transform: rotate(45deg); }
 .manas-page .origin-layout, .manas-page .voice-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px,7vw,110px); align-items: center; }
 .manas-page .origin-art, .manas-page .voice-image { min-width: 0; }
 .manas-page .art-frame { overflow: hidden; border-radius: 24px; }
-.manas-page .origin-image { width: 100%; height: auto; aspect-ratio: 1.2; object-fit: cover; transition: transform 1.2s cubic-bezier(.16,1,.3,1); }
+.manas-page .origin-image { width: 100%; height: auto; aspect-ratio: 1.2; object-fit: cover; }
 .manas-page .art-frame:hover img { transform: scale(1.035); }
 .manas-page .art-caption { display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .manas-page .ornament-divider { display: flex; align-items: center; gap: 24px; width: min(1360px,calc(100% - 80px)); margin-inline: auto; color: var(--accent); }
@@ -74,12 +72,12 @@
 .manas-page .card-top { position: absolute; z-index: 1; inset: 14px 14px auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #fff; font-size: 10px; line-height: 1.5; text-shadow: 0 1px 8px #000b; }
 .manas-page .card-top > span { padding: 6px 10px; border: 1px solid #ffffff40; border-radius: 99px; background: #12181c88; backdrop-filter: blur(12px); }
 .manas-page .card-portrait { display: block; aspect-ratio: .75; overflow: hidden; }
-.manas-page .card-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.manas-page .card-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
 .manas-page .card-content { position: relative; z-index: 1; flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -72px 10px 10px; padding: 17px 15px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.82); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 .manas-page .card-details { min-width: 0; }
 .manas-page .card-name { display: block; font-size: 22px; font-weight: 500; line-height: 1.3; letter-spacing: -.025em; overflow-wrap: anywhere; }
 .manas-page .card-role { display: block; margin-top: 6px; font-size: 11px; line-height: 1.6; color: var(--muted); }
-.manas-page .card-arrow { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; font-size: 23px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .card-arrow { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; font-size: 23px; }
 .manas-page .comrade-card:hover .card-portrait img { transform: scale(1.065); }
 .manas-page .comrade-card:is(:hover,:focus-visible) .card-arrow { transform: rotate(45deg); }
 .manas-page .forty-label { display: flex; justify-content: space-between; gap: 16px; margin-block: 32px 16px; font-size: 11px; line-height: 1.7; color: var(--muted); }
@@ -91,7 +89,7 @@
 .manas-page .battle-panels { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
 .manas-page .battle-main { position: relative; overflow: hidden; min-height: 560px; border-radius: 24px; }
 .manas-page .battle-main > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 75% center; }
-.manas-page .panel-caption { position: absolute; inset: auto 16px 16px; padding: 20px; border: 1px solid #ffffff38; border-radius: 17px; background: #12181c99; color: white; font-size: 16px; line-height: 1.7; backdrop-filter: blur(18px); }
+.manas-page .panel-caption { position: absolute; inset: auto 16px 16px; padding: 20px; border: 1px solid #ffffff38; border-radius: 17px; background: #12181c99; color: white; backdrop-filter: blur(18px); }
 .manas-page .battle-note { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
 .manas-page .kanykey-portrait { width: 100%; height: 280px; object-fit: cover; object-position: center 15%; }
 .manas-page .kanykey-copy { padding: 28px; }
@@ -104,7 +102,7 @@
 .manas-page .comic-reading-hint { color: var(--muted); font-size: 12px; line-height: 1.8; margin-bottom: 24px; }
 .manas-page .comic-page { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
 .manas-page .comic-panel { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
-.manas-page .comic-panel > img { width: 100%; height: auto; aspect-ratio: 1.55; object-fit: cover; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.manas-page .comic-panel > img { width: 100%; height: auto; aspect-ratio: 1.55; object-fit: cover; }
 .manas-page .comic-panel:hover > img { transform: scale(1.035); }
 .manas-page .comic-panel figcaption { position: relative; flex: 1; z-index: 1; margin: -32px 12px 12px; padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.86); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); color: var(--muted); font-size: 14px; line-height: 1.85; }
 /* Route-scoped small-cap lettering for the illustrated epic. */
@@ -137,13 +135,13 @@
 .manas-page:lang(ar) .comic-panel figcaption strong { letter-spacing: normal; transform: none; }
 .manas-page .comic-expand { position: absolute; z-index: 2; inset: 0; border: 0; padding: 0; background: transparent; text-align: start; }
 .manas-page .comic-expand > span { position: absolute; top: 12px; inset-inline-end: 12px; display: flex; align-items: center; gap: 16px; max-width: calc(100% - 80px); padding: 10px 14px; border: 1px solid #ffffff38; border-radius: 12px; background: #12181ca6; color: #fff; font-size: 11px; line-height: 1.5; backdrop-filter: blur(14px); }
-.manas-page .comic-expand > span > span { font-size: 21px; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+.manas-page .comic-expand > span > span { font-size: 21px; }
 .manas-page .comic-expand:hover > span > span { transform: rotate(45deg); }
 .manas-page .comic-expand:focus-visible { outline-offset: -5px; border-radius: 24px; }
 .manas-page .episode-background { margin-top: 28px; padding-inline: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
 .manas-page .episode-background summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; list-style: none; padding-block: 22px; cursor: pointer; font-size: 14px; line-height: 1.6; }
 .manas-page summary::-webkit-details-marker { display: none; }
-.manas-page .episode-background summary span { font-size: 24px; color: var(--accent); transition: transform .4s; }
+.manas-page .episode-background summary span { font-size: 24px; color: var(--accent); }
 .manas-page .episode-background[open] summary span { transform: rotate(45deg); }
 .manas-page .episode-background-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; padding-block: 8px 28px; }
 .manas-page .episode-background h3 { font-size: 20px; margin-bottom: 12px; }
@@ -187,19 +185,13 @@
 .manas-page .credits summary { cursor: pointer; padding-block: 12px; }
 .manas-page .credits p { margin-top: 16px; }
 .manas-page .credits a { text-decoration: underline; text-underline-offset: 3px; }
-.manas-page .chapter-current { position: fixed; bottom: 20px; left: 50%; z-index: 40; display: flex; align-items: center; max-width: calc(100% - 112px); padding: 5px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 40px #0002; opacity: 0; visibility: hidden; transform: translate(-50%,12px); transition: transform .45s, opacity .45s, visibility .45s; }
+.manas-page .chapter-current { position: fixed; bottom: 20px; left: 50%; z-index: 40; display: flex; align-items: center; max-width: calc(100% - 112px); padding: 5px; border: 1px solid var(--line); border-radius: 17px; background: rgba(var(--callout-rgb),.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 40px #0002; opacity: 0; visibility: hidden; transform: translate(-50%,12px); }
 .manas-page .chapter-current.is-visible, .manas-page .chapter-current:focus-within { visibility: visible; opacity: 1; transform: translate(-50%,0); }
 .manas-page .chapter-current button, .manas-page .chapter-current a { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 42px; padding: 8px 12px; border: 0; border-radius: 12px; background: transparent; font-size: 12px; }
 .manas-page #chapter-open { min-width: 0; }
 .manas-page .chapter-current-number { color: var(--accent); font-size: 11px; }
 .manas-page .chapter-current-label { max-width: 24ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .manas-page .chapter-current .journey-next { font-size: 22px; border-inline: 1px solid var(--line); border-radius: 0; }
-.manas-page .motion-toggle svg { width: 13px; height: 13px; fill: currentColor; }
-.manas-page .motion-play { display: none; }
-.manas-page .motion-paused .motion-play { display: block; }
-.manas-page.motion-paused .motion-play { display: block; }
-.manas-page.motion-paused .motion-pause { display: none; }
-.manas-page .motion-toggle:disabled { opacity: .45; cursor: default; }
 .manas-page .dialog { position: fixed; inset: 0; width: min(640px,calc(100% - 40px)); max-width: none; max-height: calc(100dvh - 48px); overflow: auto; overscroll-behavior: contain; margin: auto; padding: 40px; border: 1px solid var(--line); border-radius: 26px; color: var(--ink); background: var(--paper); box-shadow: 0 32px 100px #0004; }
 .manas-page .dialog::backdrop { background: #0c10146b; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .manas-page .dialog-close { position: absolute; top: 14px; inset-inline-end: 14px; z-index: 5; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: rgb(var(--callout-rgb)); font-size: 25px; line-height: 1; }
@@ -243,10 +235,6 @@
 .manas-page .video-dialog p { margin-top: 20px; color: var(--muted); font-size: 13px; line-height: 1.8; }
 .manas-page .video-dialog a { text-decoration: underline; }
 .manas-page .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-.manas-page.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
-.manas-page.js .reveal.visible { opacity: 1; transform: none; }
-.manas-page.motion-paused .reveal { opacity: 1; transform: none; }
-.manas-page.motion-paused * { animation: none !important; transition: none !important; }
 .manas-page[dir="rtl"] :is(h1,h2,h3,.eyebrow,.card-name) { letter-spacing: 0; }
 .manas-page[dir="rtl"] #hero-title { direction: ltr; unicode-bidi: isolate; text-align: right; letter-spacing: -.075em; }
 .manas-page[dir="rtl"] :is(h2,h3) { line-height: 1.4; }
@@ -309,7 +297,6 @@
   .manas-page .chapter-current { max-width: calc(100% - 24px); bottom: 12px; }
   .manas-page .chapter-current button, .manas-page .chapter-current a { gap: 8px; padding: 8px 10px; }
   .manas-page .chapter-current-label { max-width: 15ch; }
-  .manas-page .motion-toggle-label { display: none; }
   .manas-page .dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); padding: 26px; border-radius: 22px; }
   .manas-page .dialog-portrait { width: calc(100% + 52px); margin: -26px -26px 24px; height: 250px; }
   .manas-page .chapter-map { padding-top: 60px; }
@@ -324,4 +311,3 @@
   .manas-page .comic-reader-pages button { min-width: 34px; padding-inline: 8px; }
   .manas-page .video-dialog { padding-top: 64px; }
 }
-@media(prefers-reduced-motion:reduce) { .manas-page *, .manas-page *::before, .manas-page *::after { animation: none !important; transition: none !important; } .manas-page.js .reveal { opacity: 1; transform: none; } .manas-page .hero-layer img { will-change: auto; transform: none !important; } }

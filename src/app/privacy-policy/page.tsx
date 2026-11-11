@@ -1,44 +1,8 @@
-"use client"
-import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function PrivacyPolicy() {
     const styles = getPrivacyPolicyStyles();
-    useEffect(() => {
-        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const handleScroll = () => {
-          if (motion.matches) return;
-          let value = window.scrollY;
-          let moon = document.getElementById('moon');
-          let stars = document.getElementById('stars');
-          let mountains_behind = document.getElementById('mountains_behind');
-          let mountains_front = document.getElementById('mountains_front');
-          let text = document.getElementById('text');
-          let btn = document.getElementById('btn');
-          let sec = document.getElementById('sec');
-          let header = document.querySelector('header');
-    
-          if (moon && stars && mountains_behind && mountains_front && text && btn && sec && header) {
-            stars.style.left = value * 0.25 + 'px';
-            moon.style.top = value * 1.05 + 'px';
-            mountains_behind.style.top = value * 0.5 + 'px';
-            mountains_front.style.top = value * 0 + 'px';
-            text.style.marginRight = value * 4 + 'px';
-            text.style.marginTop = value * 1.5 + 'px';
-            btn.style.marginTop = value * 3.5 + 'px';
-            header.style.top = value * 0.5 + 'px';
-          }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        // Clean up the event listener on unmount
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []); 
-    
     return (
         <div>
             <header>
@@ -188,7 +152,6 @@ const getPrivacyPolicyStyles = () => {
             padding: 0;
             box-sizing: border-box;
             font-family: "Bai Jamjuree", sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -234,7 +197,6 @@ const getPrivacyPolicyStyles = () => {
             padding: 6px 15px;
             color: #fff;
             border-radius: 20px;
-            transition: all 300ms;
         }
 
         header ul li a:hover, 
@@ -286,7 +248,6 @@ const getPrivacyPolicyStyles = () => {
         #text {
             position: absolute;
             color: #fff;
-            right: -350px;
             white-space: nowrap;
             font-size: 7.5vw;
             z-index: 9;
@@ -335,9 +296,5 @@ const getPrivacyPolicyStyles = () => {
             color: #fff;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            * { scroll-behavior: auto; transition: none; }
-            #text { right: auto; }
-        }
     `;
 };

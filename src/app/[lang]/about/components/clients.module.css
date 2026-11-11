@@ -3,7 +3,7 @@
 .eyebrow { margin-bottom: 20px; font-size: 11px; font-weight: 600; letter-spacing: .12em; line-height: 1.8; text-transform: uppercase; color: var(--main-active-color); }
 .header h2 { max-width: 18ch; }
 .controls { display: flex; gap: 8px; flex-shrink: 0; }
-.controls button { display: grid; place-items: center; width: 46px; height: 46px; font-size: 23px; font-family: inherit; color: inherit; border: 1px solid rgba(var(--foreground-rgb), .18); border-radius: 14px; background: rgba(var(--callout-rgb), .5); cursor: pointer; transition: border-color .3s, background .3s; }
+.controls button { display: grid; place-items: center; width: 46px; height: 46px; font-size: 23px; font-family: inherit; color: inherit; border: 1px solid rgba(var(--foreground-rgb), .18); border-radius: 14px; background: rgba(var(--callout-rgb), .5); cursor: pointer; }
 .controls button:hover { border-color: var(--main-active-color); background: rgba(var(--callout-rgb), .9); }
 .testimonials:dir(rtl) .controls span { transform: scaleX(-1); }
 .testimonials_container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; min-height: 330px; }
@@ -23,4 +23,3 @@
 @media (max-width: 991px) { .testimonials { padding: 68px 24px; } }
 @media (max-width: 900px) { .testimonials_container { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .testimonials { padding: 56px 16px; } .header { align-items: start; gap: 12px; } .header h2 { font-size: 30px; } .controls { gap: 6px; } .controls button { width: 40px; height: 40px; border-radius: 12px; } .testimonial_card { padding: 22px; height: 350px; } .testimonials_container { min-height: 350px; } .profile { gap: 8px; } .ratings { font-size: 11px; letter-spacing: 0; } }
-@media (prefers-reduced-motion: reduce) { .controls button { transition: none; } }

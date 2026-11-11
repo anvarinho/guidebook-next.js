@@ -7,7 +7,6 @@ import type { Translate } from "./translations";
 
 type Route = { destination: Destination; vehicle: Vehicle; sort: Sort };
 const defaultRoute: Route = { destination: "bishkek", vehicle: "all", sort: "featured" };
-const scrollBehavior = (): ScrollBehavior => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
 
 export function useTransferDirectory(t: Translate) {
   const [route, setRoute] = useState<Route>(defaultRoute);
@@ -75,7 +74,7 @@ export function useTransferDirectory(t: Translate) {
   useEffect(() => {
     if (comparisonOpen) {
       comparisonRef.current?.focus({ preventScroll: true });
-      comparisonRef.current?.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
+      comparisonRef.current?.scrollIntoView({ block: "start" });
     }
   }, [comparisonOpen]);
   useEffect(() => { if (copyFallback) { copyRef.current?.focus(); copyRef.current?.select(); } }, [copyFallback]);
@@ -149,7 +148,7 @@ export function useTransferDirectory(t: Translate) {
     event.preventDefault();
     changeRoute({ destination, vehicle: "all" });
     const target = booking ? formRef.current : document.getElementById("providers");
-    target?.scrollIntoView({ behavior: scrollBehavior() });
+    target?.scrollIntoView();
     const focus = document.getElementById(booking ? "trip-name" : "providers-title");
     if (focus) { if (!booking) focus.tabIndex = -1; focus.focus({ preventScroll: true }); }
   }

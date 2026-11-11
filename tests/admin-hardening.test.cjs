@@ -20,9 +20,9 @@ test('login limits persist across module reloads and reject concurrent excess at
       return {...record};
     },
   };
-  const mocks = {'./mongodb':{connectToDatabase:async () => ({collection:() => collection})}};
+  const mocks = {'./mongodb': { ensureIndex: async () => {}, connectToDatabase:async () => ({collection:() => collection})}};
   const env = {NEXTAUTH_SECRET:'isolated-test-secret-at-least-32-characters'};
-  const limiter = () => load('src/app/admin/lib/loginLimit.js',mocks,env);
+  const limiter = () => load('src/app/admin/lib/loginLimit.ts',mocks,env);
   const results = await Promise.all(Array.from({length:20},(_,index) => limiter().consumeLoginLimit(index%2?'ADMIN@example.test':'admin@example.test',{},1000)));
   assert.equal(results.filter(Boolean).length,10);
   assert.equal(await limiter().consumeLoginLimit('admin@example.test',{},2000),false);
@@ -32,19 +32,19 @@ test('login limits persist across module reloads and reject concurrent excess at
 });
 test('login limiter fails closed on database failure and never trusts default forwarding headers',async () => {
   let keys=[];
-  const mocks = {'./mongodb':{connectToDatabase:async () => ({collection:() => ({createIndex:async()=>{},findOneAndUpdate:async filter => { keys.push(filter._id); return {count:1}; }})})}};
+  const mocks = {'./mongodb': { ensureIndex: async () => {}, connectToDatabase:async () => ({collection:() => ({createIndex:async()=>{},findOneAndUpdate:async filter => { keys.push(filter._id); return {count:1}; }})})}};
   const env = {NEXTAUTH_SECRET:'isolated-test-secret-at-least-32-characters'};
-  const api = load('src/app/admin/lib/loginLimit.js',mocks,env);
+  const api = load('src/app/admin/lib/loginLimit.ts',mocks,env);
   await api.consumeLoginLimit('test@example.test',{'x-forwarded-for':'1.2.3.4'});
   assert.equal(keys.length,2);
-  keys=[]; await load('src/app/admin/lib/loginLimit.js',mocks,{...env,ADMIN_TRUSTED_IP_HEADER:'x-real-ip'}).consumeLoginLimit('test@example.test',{'x-real-ip':'1.2.3.4'});
+  keys=[]; await load('src/app/admin/lib/loginLimit.ts',mocks,{...env,ADMIN_TRUSTED_IP_HEADER:'x-real-ip'}).consumeLoginLimit('test@example.test',{'x-real-ip':'1.2.3.4'});
   assert.equal(keys.length,3); assert.match(keys[2],/^ip:/);
-  const failed = load('src/app/admin/lib/loginLimit.js',{'./mongodb':{connectToDatabase:async()=>{throw Error('Unavailable');}}},env);
+  const failed = load('src/app/admin/lib/loginLimit.ts',{'./mongodb': { ensureIndex: async () => {}, connectToDatabase:async()=>{throw Error('Unavailable');}}},env);
   await assert.rejects(failed.consumeLoginLimit('test@example.test'));
 });
 test('new user and content mutations reject unauthenticated direct invocation',async () => {
   let connected=false;
-  const actions=load('src/app/admin/lib/actions.js',{'@/lib/auth':{requireAdmin:async()=>{throw Error('Unauthorized');}},'./mongodb':{connectToDatabase:async()=>{connected=true;}},'next/cache':{},'next/navigation':{}});
+  const actions=load('src/app/admin/lib/actions.ts',{'@/lib/auth':{requireAdmin:async()=>{throw Error('Unauthorized');}},'./mongodb': { ensureIndex: async () => {}, connectToDatabase:async()=>{connected=true;}},'next/cache':{},'next/navigation':{}});
   await assert.rejects(actions.saveUser({},new FormData()),/Unauthorized/);
   await assert.rejects(actions.saveContent({},new FormData()),/Unauthorized/);
   await assert.rejects(actions.previewContent(new FormData()),/Unauthorized/);
@@ -52,7 +52,7 @@ test('new user and content mutations reject unauthenticated direct invocation',a
 });
 test('user editing rejects extra fields, password changes and self demotion before DB access',async () => {
   const id='66007a184451b615e3800635';
-  const actions=load('src/app/admin/lib/actions.js',{'@/lib/auth':{requireAdmin:async()=>({id})},'./mongodb':{connectToDatabase:async()=>{throw Error('Must not reach DB');}},'next/cache':{},'next/navigation':{}});
+  const actions=load('src/app/admin/lib/actions.ts',{'@/lib/auth':{requireAdmin:async()=>({id})},'./mongodb': { ensureIndex: async () => {}, connectToDatabase:async()=>{throw Error('Must not reach DB');}},'next/cache':{},'next/navigation':{}});
   function form(values) { const data = new FormData(); for (const [key,value] of Object.entries({id,username:'admin',email:'admin@example.test',isAdmin:'true',isActive:'true',...values})) data.set(key,value); return data; }
   assert.equal((await actions.saveUser({},form({isAdmin:'false'}))).ok,false);
   assert.match((await actions.saveUser({},form({isAdmin:'false'}))).message,/own account/);
@@ -86,4 +86,14 @@ test('operator password prompt hides input and restores terminal state on comple
   input.emit('data','partial\u0003');
   await assert.rejects(cancelled,/Cancelled/);
   assert.equal(input.listenerCount('data'),0); assert.equal(raw.at(-1),false);
+});
+test('indexes are created once per process and retried after a failure',async () => {
+  let calls=0, fail=true;
+  const {ensureIndex}=load('src/app/admin/lib/mongodb.ts',{mongodb:{MongoClient:{}}});
+  const collection={collectionName:'admin_sessions',createIndex:async()=>{ calls++; if (fail) throw Error('Unavailable'); return 'expiresAt_1'; }};
+  await assert.rejects(ensureIndex(collection,{expiresAt:1},{expireAfterSeconds:0}));
+  fail=false;
+  await Promise.all([ensureIndex(collection,{expiresAt:1},{expireAfterSeconds:0}),ensureIndex(collection,{expiresAt:1},{expireAfterSeconds:0})]);
+  await ensureIndex(collection,{expiresAt:1},{expireAfterSeconds:0});
+  assert.equal(calls,2);
 });

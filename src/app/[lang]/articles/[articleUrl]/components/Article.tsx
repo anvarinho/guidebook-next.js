@@ -10,7 +10,6 @@ import Paragraph from './Paragraph'
 import { getDictionary } from '@/lib/dictionary'
 
 import Image from "next/image";
-import { PlacesReveal } from '../../../places/components/PlacesMotion';
 
 type Props = {
   article: Article,
@@ -25,7 +24,7 @@ export default async function Article({ article, lang }: Props) {
   return (
     <article className={styles.article}>
         {article.image && (
-          <PlacesReveal className={styles.heroImage}>
+          <div className={styles.heroImage}>
               <picture className={styles.image} style={article.url === 'what-is-kyrgyzstan-known-for' ? { aspectRatio: '1600 / 900' } : undefined}>
                 <Image
                 {...imagePlaceholder(getBase64(article.image))}
@@ -37,7 +36,7 @@ export default async function Article({ article, lang }: Props) {
                 priority
                 />
               </picture>
-          </PlacesReveal>
+          </div>
         )}
         <div className={styles.articleLayout}>
           <div className={styles.body}>
@@ -46,11 +45,11 @@ export default async function Article({ article, lang }: Props) {
             ))}
           </div>
           <aside className={styles.aside}>
-            <PlacesReveal className={styles.asideInner}>
+            <div className={styles.asideInner}>
               <p className={styles.asideLabel}>{page.articles.name}</p>
               <p className={styles.asideText}>{article.title}</p>
               <a href="#article-end" className={styles.asideLink}><ArrowIcon direction="down"/> <span>{page.info.seen}{article.viewCount}</span></a>
-            </PlacesReveal>
+            </div>
           </aside>
         </div>
         <div id="article-end" className={styles.info}>

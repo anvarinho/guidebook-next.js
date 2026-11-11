@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import styles from "../page.module.css";
 import FlagSun from "./FlagSun";
 import sunStyles from "./FlagSun.module.css";
-import { PlaceScrollReset } from "../places/components/PlacesMotion";
+import PlaceScrollReset from "./PlaceScrollReset";
 
 export default function LanguageShell({ children, navbar, footer, controls }: {
   children: ReactNode; navbar: ReactNode; footer: ReactNode; controls: ReactNode;
@@ -16,7 +16,7 @@ export default function LanguageShell({ children, navbar, footer, controls }: {
   return <main className={styles.main} data-page={segment === "manas" ? "manas" : undefined}>
     <PlaceScrollReset />
     {navbar}
-    <section data-page-motion={showSun ? '' : undefined} className={[styles.section, showSun && sunStyles.page, segment === "about" && sunStyles.aboutPage].filter(Boolean).join(" ")}>
+    <section className={[styles.section, showSun && sunStyles.page, segment === "about" && sunStyles.aboutPage].filter(Boolean).join(" ")}>
       {showSun && <FlagSun />}
       {children}
     </section>

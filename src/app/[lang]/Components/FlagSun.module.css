@@ -33,7 +33,6 @@
   -webkit-mask-size: contain, 100% 100%;
   mask-size: contain, 100% 100%;
   opacity: .55;
-  animation: sunRaysRotate 60s linear infinite;
 }
 .sun::after {
   content: '';
@@ -56,12 +55,8 @@
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
-@keyframes sunRaysRotate { to { transform: rotate(360deg); } }
 
 @media (max-width: 600px) {
   .sun { width: 260px; top: -65px; right: -70px; }
   .sunDecoration { height: 320px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .sun::before { animation: none; }
 }

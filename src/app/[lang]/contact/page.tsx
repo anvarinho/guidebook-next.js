@@ -1,9 +1,10 @@
-import { isRtlLocale } from '@/lib/localeMetadata';
+import { isRtlLocale, localeMetadata } from '@/lib/localeMetadata';
 import { localizedPageAlternates } from "@/lib/seo";
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
+import { contactInfo } from '@/lib/contactInfo'
 import { contactCopy } from './content'
 import styles from './components/contact-dialog.module.css'
 
@@ -15,9 +16,7 @@ export default async function ContactPage(props: { params: Promise<{ lang: Local
   } = params;
 
   const { page } = await getDictionary(lang)
-  const contact = page.footer.sections.find(section => section.info)?.info
-  const email = process.env.NEXT_PUBLIC_EMAIL || contact?.email || 'anvarinho@gmail.com'
-  const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || contact?.phone || '+996 500 490 806'
+  const { email, phone } = contactInfo(page)
   return (
     <main className={styles.landing} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <h1>{page.about.buttons.contact_us}</h1>
@@ -37,5 +36,11 @@ export async function generateMetadata(props: { params: Promise<{ lang: Locale }
   } = params;
 
   const { page } = await getDictionary(lang)
-  return { title: page.about.buttons.contact_us, description: contactCopy[lang].intro, alternates: { canonical: `/${lang}/contact`, languages: localizedPageAlternates("contact") } }
+  const title = page.about.buttons.contact_us
+  const description = contactCopy[lang].intro
+  return {
+    title, description,
+    alternates: { canonical: `/${lang}/contact`, languages: localizedPageAlternates("contact") },
+    openGraph: { title, description, url: `/${lang}/contact`, locale: localeMetadata[lang].og, type: 'website' },
+  }
 }

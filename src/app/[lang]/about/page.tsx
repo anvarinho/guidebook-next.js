@@ -7,7 +7,6 @@ import { getDictionary } from '@/lib/dictionary'
 import Team from './components/team'
 import Clients from './components/clients'
 import Meta from './meta'
-import { PlacesReveal } from '../places/components/PlacesMotion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { aboutContent } from './content'
@@ -34,7 +33,7 @@ export default async function Home(
       <Meta lang={lang} page={page}/>
       <div className={styles.container}>
         <header className={styles.hero}>
-          <PlacesReveal className={styles.heroCopy}>
+          <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>{page.about.subtitle}</p>
             <h1 className={styles.heading} id="about-title">{page.about.title}</h1>
             <p className={styles.lead}>{copy.intro}</p>
@@ -42,10 +41,10 @@ export default async function Home(
               <a href="#team" className={styles.primaryButton}>{page.about.buttons.our_team}<span aria-hidden="true"><ArrowIcon direction="down-right"/></span></a>
               <Link href={`/${lang}/contact`} className={styles.secondaryButton}>{page.about.buttons.contact_us}</Link>
             </div>
-          </PlacesReveal>
-          <PlacesReveal className={styles.visualComposition} order={1}>
+          </div>
+          <div className={styles.visualComposition}>
             <figure className={styles.visualCard}>
-              <div className={styles.imageFrame} data-reveal-image>
+              <div className={styles.imageFrame}>
                 <Image src={lake} alt={copy.landscape} fill priority placeholder="blur" sizes="(max-width: 760px) 92vw, 52vw" className={styles.visualImage}/>
               </div>
               <figcaption className={styles.visualCaption}><span className={styles.locationDot}/>{copy.landscape}</figcaption>
@@ -54,21 +53,21 @@ export default async function Home(
               <Image src={yurt} alt={copy.yurt} placeholder="blur" sizes="(max-width: 760px) 40vw, 220px"/>
               <figcaption>{copy.yurt}</figcaption>
             </figure>
-          </PlacesReveal>
+          </div>
         </header>
         <section className={styles.story} aria-labelledby="story-heading">
-          <PlacesReveal><p className={styles.eyebrow}>01 / {page.about.subtitle}</p><h2 id="story-heading">{copy.story}</h2></PlacesReveal>
-          <PlacesReveal order={1}><p className={styles.storyText}>{page.about.description}</p><a href="#clients" className={styles.textLink}>{page.about.buttons.our_clients}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a></PlacesReveal>
+          <div><p className={styles.eyebrow}>01 / {page.about.subtitle}</p><h2 id="story-heading">{copy.story}</h2></div>
+          <div><p className={styles.storyText}>{page.about.description}</p><a href="#clients" className={styles.textLink}>{page.about.buttons.our_clients}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></a></div>
         </section>
         <section className={styles.explore} aria-labelledby="explore-heading">
-          <PlacesReveal><h2 id="explore-heading">{copy.explore}</h2></PlacesReveal>
+          <div><h2 id="explore-heading">{copy.explore}</h2></div>
           <div className={styles.exploreGrid}>
-            {copy.cards.map(([title, body], index) => <PlacesReveal key={destinations[index]} order={index} className={styles.exploreReveal}>
+            {copy.cards.map(([title, body], index) => <div key={destinations[index]} className={styles.exploreReveal}>
               <Link href={`/${lang}/${destinations[index]}`} className={styles.exploreCard}>
                 <span className={styles.cardTop}><span className={styles.cardNumber} aria-hidden="true">0{index + 1}</span><span className={styles.arrow} aria-hidden="true"><ArrowIcon direction="up-right"/></span></span>
                 <h3>{title}</h3><p>{body}</p>
               </Link>
-            </PlacesReveal>)}
+            </div>)}
           </div>
         </section>
       </div>
@@ -76,13 +75,13 @@ export default async function Home(
       <Clients params={{lang}}/>
       <div className={styles.container}>
         <section className={styles.journey} aria-labelledby="journey-heading">
-          <PlacesReveal><p className={styles.eyebrow}>04 / {page.about.buttons.contact_us}</p><h2 id="journey-heading">{copy.journey}</h2></PlacesReveal>
-          <ol className={styles.steps}>{copy.steps.map(([title, body], index) => <li key={title}><PlacesReveal order={index}><span className={styles.stepNumber} aria-hidden="true">0{index + 1}</span><h3>{title}</h3><p>{body}</p></PlacesReveal></li>)}</ol>
+          <div><p className={styles.eyebrow}>04 / {page.about.buttons.contact_us}</p><h2 id="journey-heading">{copy.journey}</h2></div>
+          <ol className={styles.steps}>{copy.steps.map(([title, body], index) => <li key={title}><div><span className={styles.stepNumber} aria-hidden="true">0{index + 1}</span><h3>{title}</h3><p>{body}</p></div></li>)}</ol>
         </section>
-        <PlacesReveal className={styles.invitation}>
+        <div className={styles.invitation}>
           <div className={styles.invitationCopy}><h2>{copy.invitation}</h2><p>{copy.invitationBody}</p><Link href={`/${lang}/contact`} className={styles.primaryButton}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link></div>
           <div className={styles.invitationArt} aria-hidden="true"><span/><span/><span/></div>
-        </PlacesReveal>
+        </div>
       </div>
     </article>
     

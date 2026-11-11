@@ -20,7 +20,7 @@ function load(file, mocks = {}, env = {}) {
 }
 
 function options(overrides = {}, env = {}) {
-  return load('src/app/admin/lib/auth.js', {
+  return load('src/app/admin/lib/auth.ts', {
     '../../../../next.config': { authConfig: {} },
     './utils': {}, './models': {}, 'next-auth': () => ({}),
     './sessions': { createAdminSession: async () => null, validateAdminSession: async () => null, revokeAdminSession: async () => {}, ...overrides },
@@ -49,9 +49,9 @@ function sessionStore() {
     deleteOne: async (filter) => { records.delete(filter._id); return { acknowledged: true }; },
   };
   const users = { findOne: async () => user };
-  const filename = 'src/app/admin/lib/sessions.js';
+  const filename = 'src/app/admin/lib/sessions.ts';
   assert.ok(fs.existsSync(path.resolve(__dirname, '..', filename)), 'Persisted revocable sessions must exist');
-  const api = load(filename, { './mongodb': { connectToDatabase: async () => { connections++; return { collection: (name) => name === 'users' ? users : sessions }; } }, bcrypt: { compare: async (value) => value === 'correct-password' } });
+  const api = load(filename, { './mongodb': { ensureIndex: async () => {}, connectToDatabase: async () => { connections++; return { collection: (name) => name === 'users' ? users : sessions }; } }, bcrypt: { compare: async (value) => value === 'correct-password' } });
   return { api, records, user, sessions, get connections() { return connections; } };
 }
 
@@ -89,7 +89,7 @@ test('session creation and logout require acknowledged durable writes', async ()
 test('admin database supports a server-only authenticated/TLS connection URI', async () => {
   let requested;
   const expectedDatabase = {};
-  const connector = load('src/app/admin/lib/mongodb.js', {
+  const connector = load('src/app/admin/lib/mongodb.ts', {
     mongodb: { MongoClient: { connect: async (uri) => {
       requested = uri;
       return { db: name => { assert.equal(name, 'isolated'); return expectedDatabase; } };
@@ -101,7 +101,7 @@ test('admin database supports a server-only authenticated/TLS connection URI', a
 
 test('privileged guards await the verified session and fail closed', async () => {
   let session = null;
-  const guard = load('src/lib/auth.js', {
+  const guard = load('src/lib/auth.ts', {
     'next-auth': { getServerSession: async () => session },
     'next-auth/jwt': { getToken: async () => null },
     'next/headers': { cookies: async () => ({ getAll: () => [], get: () => undefined }) },
@@ -122,9 +122,9 @@ test('privileged guards await the verified session and fail closed', async () =>
 test('every admin data function authorizes before touching the database', async () => {
   let connections = 0;
   let checks = 0;
-  const data = load('src/app/admin/lib/data.js', {
+  const data = load('src/app/admin/lib/data.ts', {
     '@/lib/auth': { requireAdmin: async () => { checks++; throw Error('Unauthorized'); } },
-    './mongodb': { connectToDatabase: async () => { connections++; throw Error('Database must not be reached'); } },
+    './mongodb': { ensureIndex: async () => {}, connectToDatabase: async () => { connections++; throw Error('Database must not be reached'); } },
   });
   for (const [name, fn] of Object.entries(data)) {
     if (typeof fn !== 'function') continue;
@@ -135,12 +135,11 @@ test('every admin data function authorizes before touching the database', async 
 });
 
 test('creating users requires an active admin before processing attacker input', async () => {
-  const actions = load('src/app/admin/lib/actions.js', {
+  const actions = load('src/app/admin/lib/actions.ts', {
     '@/lib/auth': { requireAdmin: async () => { throw Error('Unauthorized'); } },
-    './auth': {}, './models': {}, './utils': {}, './mongodb': {},
-    'next/cache': {}, 'next/navigation': {},
+    './mongodb': {}, 'next/cache': {}, 'next/navigation': {},
   });
-  await assert.rejects(actions.addUser(new FormData()), /Unauthorized/);
+  await assert.rejects(actions.saveUser({}, new FormData()), /Unauthorized/);
 });
 
 test('admin user creation validates fields and assigns roles only after authorization', async () => {
@@ -148,41 +147,40 @@ test('admin user creation validates fields and assigns roles only after authoriz
   let acknowledged = true;
   let authorized = false;
   let connected = false;
-  const actions = load('src/app/admin/lib/actions.js', {
-    '@/lib/auth': { requireAdmin: async () => { authorized = true; return { isAdmin: true, isActive: true }; } },
-    './auth': {}, './models': {}, './utils': {},
-    './mongodb': { connectToDatabase: async () => { assert.equal(authorized, true); connected = true; return { collection: () => ({ createIndex: async () => {}, insertOne: async (doc, options) => { inserted = doc; assert.equal(options?.writeConcern?.w, 'majority'); return { acknowledged }; } }) }; } },
-    bcrypt: { genSalt: async () => 'salt', hash: async () => 'hashed-password' },
+  const actions = load('src/app/admin/lib/actions.ts', {
+    '@/lib/auth': { requireAdmin: async () => { authorized = true; return { id: 'actor', isAdmin: true, isActive: true }; } },
+    './mongodb': { ensureIndex: async () => {}, connectToDatabase: async () => { assert.equal(authorized, true); connected = true; return { collection: () => ({ createIndex: async () => {}, insertOne: async (doc, options) => { inserted = doc; assert.equal(options?.writeConcern?.w, 'majority'); return { acknowledged }; } }) }; } },
+    bcrypt: { hash: async () => 'hashed-password' },
     'next/cache': { revalidatePath() {} }, 'next/navigation': { redirect() {} },
   });
   const form = () => { const data = new FormData(); for (const [k, v] of Object.entries({ username: 'tester', email: 'USER@example.test', password: 'a-good-password', isAdmin: 'false', isActive: 'true' })) data.set(k, v); return data; };
   const bad = form(); bad.set('isAdmin', 'yes');
-  await assert.rejects(actions.addUser(bad), /Invalid/);
+  assert.equal((await actions.saveUser({}, bad)).ok, false);
   assert.equal(connected, false);
   const operator = form(); operator.set('email', '{"$ne":null}');
-  await assert.rejects(actions.addUser(operator), /Invalid/);
+  assert.equal((await actions.saveUser({}, operator)).ok, false);
   const long = form(); long.set('password', 'é'.repeat(37));
-  await assert.rejects(actions.addUser(long), /Invalid/);
-  await actions.addUser(form());
+  assert.equal((await actions.saveUser({}, long)).ok, false);
+  assert.equal(connected, false);
+  assert.equal((await actions.saveUser({}, form())).ok, true);
   assert.equal(inserted.isAdmin, false);
   assert.equal(inserted.isActive, true);
   assert.equal(inserted.email, 'user@example.test');
   assert.equal(inserted.password, 'hashed-password');
   const frameworkForm = form(); frameworkForm.set('$ACTION_ID_test', '');
-  await actions.addUser(frameworkForm);
-  assert.equal(inserted.isAdmin, false);
+  assert.equal((await actions.saveUser({}, frameworkForm)).ok, true);
   const admin = form(); admin.set('isAdmin', 'true');
-  await actions.addUser(admin);
+  await actions.saveUser({}, admin);
   assert.equal(inserted.isAdmin, true);
   acknowledged = false;
-  await assert.rejects(actions.addUser(form()), /Failed to create user/);
+  assert.equal((await actions.saveUser({}, form())).ok, false);
 });
 
 test('user reads return allowlisted DTOs, never passwords or session material', async () => {
   const doc = { _id: new (require('mongodb').ObjectId)(), username: 'admin', password: 'hash', sessionSecret: 'secret', email: 'admin@example.test', isActive: true, isAdmin: true };
-  const data = load('src/app/admin/lib/data.js', {
+  const data = load('src/app/admin/lib/data.ts', {
     '@/lib/auth': { requireAdmin: async () => ({ isAdmin: true }) },
-    './mongodb': { connectToDatabase: async () => ({ collection: () => ({ countDocuments: async () => 1, findOne: async () => doc, find: () => ({ sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [doc] }) }) }) },
+    './mongodb': { ensureIndex: async () => {}, connectToDatabase: async () => ({ collection: () => ({ countDocuments: async () => 1, findOne: async () => doc, find: () => ({ sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [doc] }) }) }) },
   });
   const single = await data.readUser(String(doc._id));
   const list = await data.readUsers();
@@ -194,18 +192,18 @@ test('user reads return allowlisted DTOs, never passwords or session material', 
 });
 
 test('login uses NextAuth CSRF-protected credentials flow, with no client-owned cookies', () => {
-  const source = fs.readFileSync(path.resolve(__dirname, '../src/app/admin/ui/loginForm/loginForm.jsx'), 'utf8');
+  const source = fs.readFileSync(path.resolve(__dirname, '../src/app/admin/ui/loginForm/loginForm.tsx'), 'utf8');
   assert.match(source, /next-auth\/react/);
   assert.doesNotMatch(source, /js-cookie|Cookies\.set|userID|user\[0\]/);
-  assert.ok(fs.existsSync(path.resolve(__dirname, '../src/app/api/auth/[...nextauth]/route.js')));
+  assert.ok(fs.existsSync(path.resolve(__dirname, '../src/app/api/auth/[...nextauth]/route.ts')));
 });
 
 test('all admin lookup input is bounded and literal, not Mongo or regex operators', async () => {
   let filter;
   let connected = 0;
-  const data = load('src/app/admin/lib/data.js', {
+  const data = load('src/app/admin/lib/data.ts', {
     '@/lib/auth': { requireAdmin: async () => ({ isAdmin: true }) },
-    './mongodb': { connectToDatabase: async () => { connected++; return { collection: () => ({ countDocuments: async () => 0, find: (value) => { filter = value; return { count: async () => 0, sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [] }; } }) }; } },
+    './mongodb': { ensureIndex: async () => {}, connectToDatabase: async () => { connected++; return { collection: () => ({ countDocuments: async () => 0, find: (value) => { filter = value; return { count: async () => 0, sort() { return this; }, skip() { return this; }, limit() { return this; }, toArray: async () => [] }; } }) }; } },
   });
   await assert.rejects(data.readUser({ $ne: null }), /Invalid/);
   await assert.rejects(data.readPlace({ $ne: null }), /Invalid/);
@@ -263,7 +261,7 @@ test('sessions reject expired records, changed passwords and changed current rol
 test('admin database connector uses supported options and never logs connection details', async () => {
   let count = 0;
   const db = {};
-  const api = load('src/app/admin/lib/mongodb.js', {
+  const api = load('src/app/admin/lib/mongodb.ts', {
     mongodb: { MongoClient: { connect: async (url, config) => { count++; assert.equal(config?.useNewUrlParser, undefined); assert.equal(config?.useUnifiedTopology, undefined); return { db: () => db }; } } },
   }, { DB_HOST: 'localhost', DB_PORT: '27017', DB_NAME: 'test-only' });
   const [one, two] = await Promise.all([api.connectToDatabase(), api.connectToDatabase()]);
@@ -311,7 +309,7 @@ test('server logout awaits persisted revocation before clearing all cookie chunk
   const events = [];
   let fail = false;
   const token = { sid: 'a'.repeat(64) };
-  const api = load('src/lib/auth.js', {
+  const api = load('src/lib/auth.ts', {
     'next-auth': {},
     'next-auth/jwt': { getToken: async ({ req, cookieName }) => { assert.equal(cookieName, 'test-session'); assert.equal(req.cookies['test-session.0'], 'encrypted'); return token; } },
     'next/headers': { cookies: async () => ({ getAll: () => [{ name: 'test-session.0', value: 'encrypted' }, { name: 'test-session.1', value: 'chunk' }, { name: 'token', value: 'legacy' }, { name: 'theme', value: 'dark' }], delete: name => events.push(name) }) },
@@ -327,7 +325,7 @@ test('server logout awaits persisted revocation before clearing all cookie chunk
 });
 
 test('authentication fails closed without secrets and does not require them at import/build time', () => {
-  const config = (env) => load('src/app/admin/lib/auth.js', { './sessions': {} }, env);
+  const config = (env) => load('src/app/admin/lib/auth.ts', { './sessions': {} }, env);
   assert.throws(() => config({}).requireAuthConfiguration(), /not configured/);
   assert.throws(() => config({ NEXTAUTH_SECRET: 'short' }).requireAuthConfiguration(), /not configured/);
   assert.throws(() => config({ NEXTAUTH_SECRET: 'x'.repeat(32), NODE_ENV: 'production', NEXTAUTH_URL: 'http://localhost' }).requireAuthConfiguration(), /HTTPS/);

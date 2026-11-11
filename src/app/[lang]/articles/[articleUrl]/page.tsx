@@ -12,7 +12,6 @@ import Meta from './meta';
 import { getDictionary } from '@/lib/dictionary'
 import { notFound } from 'next/navigation'
 import shared from '../../places/page.module.css';
-import { PlacesReveal } from '../../places/components/PlacesMotion';
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
 
 export const revalidate = 60;
@@ -43,7 +42,7 @@ export default async function Home(props: Params) {
       <Meta lang={lang} article={article} page={page}/>
       <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
         <header className={styles.articleHeader}>
-          <PlacesReveal className={styles.headerCopy}>
+          <div className={styles.headerCopy}>
             <a href={`/${lang}/articles`} className={styles.breadcrumb}>
               <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.articles.name}
             </a>
@@ -55,8 +54,8 @@ export default async function Home(props: Params) {
               <span aria-hidden="true">·</span>
               <span>{page.info.seen}{new Intl.NumberFormat(page.langCode).format(article.viewCount)}</span>
             </div>
-          </PlacesReveal>
-          <PlacesReveal className={styles.headerRule} order={1} aria-hidden="true"><span/></PlacesReveal>
+          </div>
+          <div className={styles.headerRule} aria-hidden="true"><span/></div>
         </header>
         <Article article={article} lang={lang}/>
       </Suspense>

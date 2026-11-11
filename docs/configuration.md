@@ -23,11 +23,15 @@ Copy the non-secret `.env.example` to an ignored local file, or set variables in
 - `SITE_URL`: canonical public origin. Defaults to `https://central-asia.live`, preserving existing production canonical/hreflang output. Use your staging origin for a separate staging site. Never set it to a private API host.
 - `CONTENT_API_URL`: **required, server-only** content backend origin without `/api`; an optional base path is supported. No embedded credentials, query, or fragment. There is no implicit production fallback. Supply a reachable backend for normal builds and content pages.
 - `CONTENT_API_TIMEOUT_MS`: positive integer up to 60000; default 10000. Covers headers and JSON body consumption. Transport/validation failures are errors, not missing pages; only detail HTTP 404 becomes a not-found page.
-- `NEXT_PUBLIC_URL`: retained for compatibility as the public **image/asset** origin only. Empty means same-origin asset paths. Set to `https://central-asia.live` for existing production uploads. If you change image hosts, explicitly review Next's `images.remotePatterns`; do not enable unrestricted/private-IP image fetching.
+- `NEXT_PUBLIC_URL`: retained for compatibility as the public **image/asset** origin only. Empty means same-origin asset paths. Set to `https://central-asia.live` for existing production uploads. Optimized remote images are limited to `https://central-asia.live/uploads/**` by `images.remotePatterns`; if you change image hosts or paths, update that pattern explicitly and do not enable unrestricted/private-IP image fetching.
 
 Content payloads are validated against `src/lib/contentSchemas.ts`, based on observed public API shapes. List/detail schemas differ where the actual backend differs. Unknown transport fields are stripped. Types derive from those schemas. Public content retains 60-second revalidation; sitemap retains its existing behavior. An abort signal supplies a timeout; React request caching restores render-pass deduplication for metadata and page loaders.
 
 Local: `SITE_URL=http://localhost:3000`, `CONTENT_API_URL=http://localhost:4000`, empty `NEXT_PUBLIC_URL`, and your own local backend. Staging: isolated staging backend/database, staging canonical and asset origins, never production database credentials. Production: `SITE_URL=https://central-asia.live`, the actual backend origin in `CONTENT_API_URL`, and the existing public asset origin. Configure public build-time settings **before** building.
+
+SEO: `GOOGLE_SITE_VERIFICATION` (optional) is the Search Console HTML-tag token, only the `content` value. Hreflang alternates use bare language codes (`en`, `ja`, `zh-CN`) so each locale targets all speakers, not one country.
+
+Legacy URL redirects live in `legacy-redirects.json` (exact old path → new path, no trailing slashes); pattern redirects stay in `next.config.js`. Unchanged old `/place/<slug>` URLs are handled by one `/place/:slug` rule.
 
 The existing image placeholder generator remains opt-in. Its `--remote` mode reads the existing public asset/content origin; do not run it against a private backend or change generated artwork as part of a deployment check.
 

@@ -1,13 +1,9 @@
-'use client';
-
-import { useRef } from 'react';
 import Image from 'next/image';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import WeatherIcon from '../../Components/weather/WeatherIcon';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
-import { useReveal } from './useReveal';
 
 export default function PlaceCard({ place, lang, blurDataURL, priority = false, featured = false, order = 0, detailPage = false }: {
   place: Pick<PlaceAlias, 'url' | 'images' | 'name' | 'title' | 'region'> & { weather?: Weather | null };
@@ -18,14 +14,11 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
   order?: number;
   detailPage?: boolean;
 }) {
-  const cardRef = useRef<HTMLAnchorElement>(null);
-  useReveal(cardRef, order);
-
   return (
-    <Link ref={cardRef} data-reveal-group data-place-detail-card={detailPage || undefined}
+    <Link data-place-detail-card={detailPage || undefined}
       href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
-        <div className={styles.imageFrame} data-reveal-image>
+        <div className={styles.imageFrame}>
         <Image
           src={`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`}
           alt={place.name}
@@ -49,8 +42,8 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
       </div>
       <div className={styles.placeContent}>
         <div className={styles.placeDetails}>
-          <p className={styles.region} data-reveal-copy>{place.region}</p>
-          <h2 data-reveal-copy>{place.title}</h2>
+          <p className={styles.region}>{place.region}</p>
+          <h2>{place.title}</h2>
         </div>
         <span className={styles.cardArrow} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
       </div>

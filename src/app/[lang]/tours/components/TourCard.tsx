@@ -1,11 +1,7 @@
-'use client';
-
-import { useRef } from 'react';
 import Image from 'next/image';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n.config';
-import { useReveal } from '../../places/components/useReveal';
 import shared from '../../places/page.module.css';
 import styles from '../page.module.css';
 
@@ -18,14 +14,11 @@ export default function TourCard({ tour, lang, blurDataURL, duration, fromLabel,
   featured?: boolean;
   order?: number;
 }) {
-  const ref = useRef<HTMLAnchorElement>(null);
-  useReveal(ref, order);
-
   return (
-    <Link ref={ref} data-reveal-group href={`/${lang}/tours/${tour.url}`}
+    <Link href={`/${lang}/tours/${tour.url}`}
       className={`${shared.placeBox} ${styles.tourCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
-        <div className={shared.imageFrame} data-reveal-image>
+        <div className={shared.imageFrame}>
           <Image src={`${process.env.NEXT_PUBLIC_URL}/${tour.images[0]}`} alt={tour.title}
             className={shared.placeImg} width={640} height={420}
             sizes={featured ? `(max-width: 600px) calc(100vw - 32px), (max-width: 850px) ${order === 0 ? '94vw' : '46vw'}, (max-width: 1440px) ${order === 0 ? '60vw' : '38vw'}, ${order === 0 ? '835px' : '505px'}` : '(max-width: 600px) calc(100vw - 32px), (max-width: 991px) 46vw, (max-width: 1440px) 31vw, 440px'}
