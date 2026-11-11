@@ -1,15 +1,14 @@
-/* Covers the content below the navbar, which stays readable and usable while a page loads. */
+/* Full screen above the navbar, like the home page loader; "done" plays the same exit. */
 .overlay {
   position: fixed;
-  inset: 76px 0 0;
-  z-index: 1100;
-  opacity: 0;
+  inset: 0;
+  z-index: 2000;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .35s cubic-bezier(.22, 1, .36, 1), visibility 0s .35s;
 }
-@media (max-width: 991px) { .overlay { top: 72px; } }
-.overlay[data-visible="true"] { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.overlay[data-state="shown"], .overlay[data-state="done"] { visibility: visible; }
+.overlay[data-state="shown"] { pointer-events: auto; }
+.overlay[data-state="done"] { opacity: 0; transition: opacity .45s cubic-bezier(.22, .61, .36, 1); }
 @media (prefers-reduced-motion: reduce) {
-  .overlay { transition: none; }
+  .overlay[data-state="done"] { transition: none; }
 }

@@ -131,6 +131,8 @@ html:has(.kyrgyz-intro), html:has(.kyrgyz-intro) body {
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
+/* Arriving from the site's route loader (same artwork): continue it instead of replaying the arrival. */
+html[data-loader-handoff] .kyrgyz-intro .page-loader-emblem { animation: none; }
 @keyframes intro-flag-arrival {
   from { opacity: 0; transform: translateY(12px) scale(0.9); }
   to { opacity: 1; transform: translateY(0) scale(1); }

@@ -1,48 +1,38 @@
-/* Same emblem, easing and rhythm as the home page loader (src/app/intro), shared by both sizes. */
+/*
+ * Mirrors the home page loader (.page-loader in src/app/intro/intro.css): same background,
+ * artwork, arrival and exit, so a route change and the home page hand over seamlessly.
+ */
 .loader {
-  --loader-ease: cubic-bezier(.22, 1, .36, 1);
-  --emblem-size: 44px;
-  display: inline-flex;
+  --loader-ease: cubic-bezier(.22, .61, .36, 1);
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 8px;
   color: rgba(var(--foreground-rgb), .62);
+  text-align: center;
 }
-.inline { display: flex; justify-content: center; padding-block: 32px; text-align: center; }
 .page {
-  --emblem-size: 76px;
   position: absolute;
   inset: 0;
-  justify-content: center;
-  gap: 22px;
   background: radial-gradient(ellipse at 50% 44%, #284b43 0%, #102a26 72%);
-  color: rgba(255, 255, 255, .78);
 }
-.emblem {
+.inline { padding-block: 24px; }
+.mark {
   position: relative;
-  display: grid;
-  place-items: center;
-  width: var(--emblem-size);
-  height: var(--emblem-size);
-  animation: emblem-breathe 2.4s var(--loader-ease) infinite;
+  width: min(62vw, 260px);
+  aspect-ratio: 1.5;
+  filter: drop-shadow(0 8px 24px #d9964820);
+  transition: transform .45s var(--loader-ease), opacity .45s var(--loader-ease);
 }
-.rays, .center {
-  grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
-  background: var(--main-active-color);
-  -webkit-mask: url('../../../../public/intro/flag.png') center / contain no-repeat;
-  mask: url('../../../../public/intro/flag.png') center / contain no-repeat;
-}
-/* Only the outer rays turn; the central tunduk stays upright. */
-.rays {
-  -webkit-mask-image: url('../../../../public/intro/flag.png'), radial-gradient(circle closest-side, transparent 59%, #000 60%);
-  mask-image: url('../../../../public/intro/flag.png'), radial-gradient(circle closest-side, transparent 59%, #000 60%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-  animation: rays-turn 9s linear infinite;
-}
-.center { clip-path: circle(29.5% at 50% 50%); }
+.inline .mark { width: 120px; }
+/* The route loader marks its exit with data-state="done", like the home loader's .done. */
+:global([data-state="done"]) .mark { transform: translateY(-6px) scale(1.06); opacity: 0; }
+.emblem { position: absolute; inset: 0; animation: flag-arrival 1.5s var(--loader-ease) both; }
+.brush { position: absolute; inset: -55% -50%; width: 200%; height: 210%; object-fit: contain; }
+.flag { position: absolute; top: 50%; left: 50%; width: 34%; height: 51%; object-fit: contain; transform: translate(-50%, -50%); }
+/* Inline loaders can wait long: the mark keeps a slow breath after arriving. */
+.inline .emblem { animation: flag-arrival 1.5s var(--loader-ease) both, flag-breathe 2.8s 1.5s ease-in-out infinite; }
 .caption {
   max-width: 28ch;
   font-size: 11px;
@@ -50,12 +40,14 @@
   letter-spacing: .16em;
   line-height: 1.5;
   text-transform: uppercase;
-  animation: caption-pulse 2.4s ease-in-out infinite;
 }
-.page .caption { font-size: 12px; }
-@keyframes rays-turn { to { transform: rotate(360deg); } }
-@keyframes emblem-breathe { 50% { transform: scale(.94); } }
-@keyframes caption-pulse { 50% { opacity: .55; } }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes flag-arrival {
+  from { opacity: 0; transform: translateY(12px) scale(.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes flag-breathe { 50% { transform: scale(.95); opacity: .8; } }
 @media (prefers-reduced-motion: reduce) {
-  .emblem, .rays, .caption { animation: none; }
+  .emblem, .inline .emblem { animation: none; }
+  .mark { transition: none; }
 }

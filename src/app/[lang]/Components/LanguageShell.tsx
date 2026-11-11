@@ -14,15 +14,17 @@ export default function LanguageShell({ children, navbar, footer, controls, load
 }) {
   const segment = useSelectedLayoutSegment();
   const showSun = segment === "places" || segment === "tours" || segment === "articles" || segment === "about";
-  if (segment === "manas-airport-transfers" || segment === "contact") return <>{children}</>;
+  const loader = <RouteLoader label={loadingLabel} />;
+  if (segment === "manas-airport-transfers" || segment === "contact") return <>{children}{loader}</>;
   return <main className={styles.main} data-page={segment === "manas" ? "manas" : undefined}>
     <PlaceScrollReset />
     {navbar}
     <section className={[styles.section, showSun && sunStyles.page, segment === "about" && sunStyles.aboutPage].filter(Boolean).join(" ")}>
-      {showSun && <><FlagSun /><MotionController /><RouteLoader label={loadingLabel} /></>}
+      {showSun && <><FlagSun /><MotionController /></>}
       {children}
     </section>
     {footer}
     {controls}
+    {loader}
   </main>;
 }
