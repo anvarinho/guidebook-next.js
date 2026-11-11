@@ -1,0 +1,206 @@
+{
+  "ae": {
+    "sections": "أقسام الصفحة",
+    "goTo": "انتقل إلى {section}"
+  },
+  "az": {
+    "sections": "Səhifə bölmələri",
+    "goTo": "{section} ünvanına keçin"
+  },
+  "be": {
+    "sections": "Раздзелы старонкі",
+    "goTo": "Перайсці да {section}"
+  },
+  "bg": {
+    "sections": "Раздели на страницата",
+    "goTo": "Отидете на {section}"
+  },
+  "bn": {
+    "sections": "পৃষ্ঠা বিভাগ",
+    "goTo": "{section}-এ যান"
+  },
+  "bs": {
+    "sections": "Odjeljci stranice",
+    "goTo": "Idi na {section}"
+  },
+  "cn": {
+    "sections": "页面章节",
+    "goTo": "前往{section}"
+  },
+  "cs": {
+    "sections": "Části stránky",
+    "goTo": "Přejít na {section}"
+  },
+  "da": {
+    "sections": "Sideafsnit",
+    "goTo": "Gå til {section}"
+  },
+  "de": {
+    "sections": "Seitenabschnitte",
+    "goTo": "Zu {section} springen"
+  },
+  "el": {
+    "sections": "Ενότητες σελίδας",
+    "goTo": "Μεταβείτε στο {section}"
+  },
+  "en": {
+    "sections": "Page sections",
+    "goTo": "Go to {section}"
+  },
+  "es": {
+    "sections": "Secciones de la página",
+    "goTo": "Ir a {section}"
+  },
+  "fa": {
+    "sections": "بخش های صفحه",
+    "goTo": "برو به {section}"
+  },
+  "fi": {
+    "sections": "Sivun osiot",
+    "goTo": "Siirry numeroon {section}"
+  },
+  "fil": {
+    "sections": "Mga seksiyon ng pahina",
+    "goTo": "Pumunta sa {section}"
+  },
+  "fr": {
+    "sections": "Sections de la page",
+    "goTo": "Aller à {section}"
+  },
+  "he": {
+    "sections": "קטעי עמודים",
+    "goTo": "עבור אל {section}"
+  },
+  "hi": {
+    "sections": "पृष्ठ अनुभाग",
+    "goTo": "{section} पर जाएँ"
+  },
+  "hr": {
+    "sections": "Odjeljci stranice",
+    "goTo": "Idi na {section}"
+  },
+  "hy": {
+    "sections": "Էջի բաժիններ",
+    "goTo": "Գնալ դեպի {section}"
+  },
+  "id": {
+    "sections": "Bagian halaman",
+    "goTo": "Kunjungi {section}"
+  },
+  "it": {
+    "sections": "Sezioni della pagina",
+    "goTo": "Vai a {section}"
+  },
+  "jp": {
+    "sections": "ページ内のセクション",
+    "goTo": "「{section}」へ移動"
+  },
+  "ka": {
+    "sections": "გვერდის სექციები",
+    "goTo": "გადადით {section}-ზე"
+  },
+  "kg": {
+    "sections": "Барак бөлүмдөрү",
+    "goTo": "{section} бөлүмүнө өтүү"
+  },
+  "kr": {
+    "sections": "페이지 섹션",
+    "goTo": "{section}(으)로 이동"
+  },
+  "kz": {
+    "sections": "Бет бөлімдері",
+    "goTo": "{section} өтіңіз"
+  },
+  "lt": {
+    "sections": "Puslapio skyriai",
+    "goTo": "Eikite į {section}"
+  },
+  "mk": {
+    "sections": "Секции на страници",
+    "goTo": "Одете на {section}"
+  },
+  "mn": {
+    "sections": "Хуудасны хэсгүүд",
+    "goTo": "{section} руу очих"
+  },
+  "ms": {
+    "sections": "Bahagian halaman",
+    "goTo": "Pergi ke {section}"
+  },
+  "nb": {
+    "sections": "Sideseksjoner",
+    "goTo": "Gå til {section}"
+  },
+  "ne": {
+    "sections": "पृष्ठ खण्डहरू",
+    "goTo": "{section} मा जानुहोस्"
+  },
+  "nl": {
+    "sections": "Paginasecties",
+    "goTo": "Ga naar {section}"
+  },
+  "pl": {
+    "sections": "Sekcje strony",
+    "goTo": "Przejdź do {section}"
+  },
+  "pt": {
+    "sections": "Seções da página",
+    "goTo": "Vá para {section}"
+  },
+  "ro": {
+    "sections": "Secțiuni de pagină",
+    "goTo": "Accesați {section}"
+  },
+  "ru": {
+    "sections": "Разделы страницы",
+    "goTo": "Перейти к разделу «{section}»"
+  },
+  "sk": {
+    "sections": "Časti stránky",
+    "goTo": "Prejsť na {section}"
+  },
+  "sl": {
+    "sections": "Razdelki strani",
+    "goTo": "Pojdi na {section}"
+  },
+  "sq": {
+    "sections": "Seksionet e faqeve",
+    "goTo": "Shko te {section}"
+  },
+  "sr": {
+    "sections": "Секције страница",
+    "goTo": "Иди на {section}"
+  },
+  "sv": {
+    "sections": "Sidavsnitt",
+    "goTo": "Gå till {section}"
+  },
+  "tg": {
+    "sections": "Қисмҳои саҳифа",
+    "goTo": "Ба {section} равед"
+  },
+  "th": {
+    "sections": "ส่วนของหน้า",
+    "goTo": "ไปที่ {section}"
+  },
+  "tr": {
+    "sections": "Sayfa bölümleri",
+    "goTo": "{section}'ye git"
+  },
+  "uk": {
+    "sections": "Розділи сторінки",
+    "goTo": "Перейти до {section}"
+  },
+  "ur": {
+    "sections": "صفحہ کے حصے",
+    "goTo": "{section} پر جائیں"
+  },
+  "uz": {
+    "sections": "Sahifa bo'limlari",
+    "goTo": "{section} ga o‘tish"
+  },
+  "vi": {
+    "sections": "Phần trang",
+    "goTo": "Đi tới {section}"
+  }
+}

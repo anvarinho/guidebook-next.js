@@ -1,0 +1,165 @@
+/*
+ * Motion for the content pages (places, tours, articles, about). The home page owns its own.
+ * Nothing here hides content unless the head script set html[data-motion] (JavaScript on and
+ * motion allowed). "pending" means hydration has not run yet: a fail-safe reveals everything
+ * after a few seconds, so content can never stay hidden.
+ */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Entrance reveals. Elements opt in with data-reveal; the controller adds data-shown. */
+html[data-motion] [data-reveal]:not([data-shown]) {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+html[data-motion] [data-reveal="fade"]:not([data-shown]) { transform: none; }
+html[data-motion] [data-reveal="scale"]:not([data-shown]) { transform: translate3d(0, 18px, 0) scale(.97); }
+html[data-motion] [data-reveal] {
+  /* Hover feedback on revealed cards keeps working: those properties transition without delay. */
+  transition:
+    opacity .8s var(--motion-ease) var(--reveal-delay, 0ms),
+    transform .95s var(--motion-ease) var(--reveal-delay, 0ms),
+    box-shadow .45s ease, border-color .45s ease, background-color .45s ease;
+}
+/* Card and hero photos settle inside their frames as the card appears. */
+html[data-motion] [data-reveal] [data-reveal-media] {
+  transition: transform 1.4s var(--motion-ease) var(--reveal-delay, 0ms);
+}
+html[data-motion] [data-reveal]:not([data-shown]) [data-reveal-media] { transform: scale(1.08); }
+
+/* Blur-up: photos paint over their blur placeholder slightly out of focus, then sharpen. */
+html[data-motion] img[data-blur-up]:not([data-loaded]) { filter: blur(14px); transform: scale(1.03); }
+html[data-motion] img[data-blur-up] { transition: filter .7s var(--motion-ease), transform .9s var(--motion-ease); }
+
+/* Fail-safe for a page whose JavaScript never hydrates. */
+html[data-motion="pending"] :is([data-reveal]:not([data-shown]), img[data-blur-up]:not([data-loaded])) {
+  animation: motion-failsafe 0s 3s forwards;
+}
+@keyframes motion-failsafe {
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes hero-failsafe {
+  to { height: 0; }
+}
+
+/*
+ * Detail-page hero: the title merges onto the photo, then the cards slide up while the photo is
+ * pinned. --hero-merge and --hero-cards (0–1) are written by the controller from scroll position.
+ */
+[data-hero-overlay] {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 18px;
+  padding: clamp(20px, 3.4vw, 44px);
+  color: #fff;
+  pointer-events: none;
+  visibility: hidden;
+}
+[data-hero-overlay]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(8, 14, 18, 0) 30%, rgba(8, 14, 18, .28) 55%, rgba(8, 14, 18, .78) 100%);
+  opacity: var(--hero-merge, 0);
+}
+[data-hero-overlay] [data-hero-eyebrow] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: var(--hero-merge, 0);
+}
+[data-hero-overlay] [data-hero-eyebrow]::before { content: ''; width: 28px; height: 2px; background: var(--main-active-color); }
+[data-hero-overlay] [data-hero-title] {
+  max-width: 20ch;
+  font-size: clamp(30px, 4.6vw, 64px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .25);
+  opacity: var(--hero-merge, 0);
+  transform: translate3d(0, calc((1 - var(--hero-merge, 0)) * 56px), 0);
+}
+[data-hero-overlay] [data-hero-cards] { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+[data-hero-overlay] [data-hero-card] {
+  --card-progress: clamp(0, calc(var(--hero-cards, 0) * var(--hero-card-count, 3) - var(--hero-card-index, 0)), 1);
+  max-width: min(46ch, 100%);
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 16px;
+  background: rgba(14, 22, 26, .42);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: var(--card-progress);
+  transform: translate3d(0, calc((1 - var(--card-progress)) * 40px), 0);
+}
+[data-hero-overlay] [data-hero-card] strong { display: block; margin-bottom: 2px; font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+[data-hero-overlay] [data-hero-card] span { color: rgba(255, 255, 255, .76); }
+[data-hero-overlay][dir="rtl"] [data-hero-title] { letter-spacing: 0; line-height: 1.3; }
+
+/* overflow-x: hidden (globals.css) makes body a scroll container, which breaks sticky pinning. */
+html:has([data-hero-track]), html:has([data-hero-track]) body { overflow-x: clip; overflow-y: visible; }
+
+/*
+ * Only with JavaScript and motion: show the overlay, pin the photo and fade the in-flow title.
+ * The pinned distance is reserved from first paint so hydration causes no layout shift.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  /* The pinned distance must be content (not padding) for sticky positioning to use it. */
+  html[data-motion] [data-hero-track]::after { content: ''; display: block; height: min(52vh, 460px); }
+  html[data-motion="pending"] [data-hero-track]::after { animation: hero-failsafe 0s 3s forwards; }
+  html[data-motion="live"] [data-hero-overlay] { visibility: visible; }
+  html[data-motion="live"] [data-hero-sticky] { position: sticky; top: var(--hero-sticky-top, 92px); z-index: 1; }
+  html[data-motion="live"] [data-hero-header] {
+    opacity: calc(1 - var(--hero-merge, 0) * 1.8);
+    transform: translate3d(0, calc(var(--hero-merge, 0) * 36px), 0);
+  }
+}
+@media (max-width: 600px) and (prefers-reduced-motion: no-preference) {
+  html[data-motion] [data-hero-track]::after { height: min(38vh, 300px); }
+}
+/* Phone photos are short: title plus the first card only, each clamped to two lines. */
+@media (max-width: 600px) {
+  [data-hero-overlay] { gap: 10px; padding: 16px; }
+  [data-hero-overlay] [data-hero-eyebrow] { display: none; }
+  [data-hero-overlay] [data-hero-title] { font-size: clamp(22px, 6.6vw, 28px); }
+  [data-hero-overlay] :is([data-hero-title], [data-hero-card] span) {
+    display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+  }
+  [data-hero-overlay] [data-hero-card] { --hero-card-count: 1; padding: 9px 12px; border-radius: 12px; font-size: 12px; line-height: 1.5; }
+  [data-hero-overlay] [data-hero-card] strong { font-size: 14px; }
+  [data-hero-overlay] [data-hero-card]:nth-child(n + 2) { display: none; }
+}
+
+/* The head script skips data-motion under reduced motion; this covers a preference change mid-visit. */
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion] :is([data-reveal], [data-reveal-media], img[data-blur-up]) {
+    opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important;
+  }
+}
+
+/*
+ * Above-the-fold entrances run in CSS from the first paint, independent of hydration, so they
+ * never hold back the largest paint. data-intro="n" orders them.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html[data-motion] [data-intro] { animation: intro-rise 1s var(--motion-ease) both; }
+  html[data-motion] [data-intro="1"] { animation-delay: .12s; }
+  html[data-motion] [data-intro="2"] { animation-delay: .24s; }
+  html[data-motion] [data-intro="3"] { animation-delay: .36s; }
+}
+@keyframes intro-rise {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+}

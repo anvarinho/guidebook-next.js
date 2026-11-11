@@ -17,7 +17,7 @@ export default async function DayView({ params: {day, index, lang}}: Params) {
     const [sights, { page }] = await Promise.all([getPlacesByURLs(lang, day.places), getDictionary(lang)])
     return (
         <section id={`day${index + 1}`} className={styles.daySection} aria-labelledby={`day-title-${index + 1}`}>
-          <div className={`${styles.day} ${!day.images.length ? styles.dayWithoutImages : ''}`}>
+          <div className={`${styles.day} ${!day.images.length ? styles.dayWithoutImages : ''}`} data-reveal>
             {day.images.length > 0 && <div className={styles.dayImages}>
               <TourGallery images={day.images} name={`${page.tours.tourPage.day} ${index + 1}`} lang={lang}/>
             </div>}

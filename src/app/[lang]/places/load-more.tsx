@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer'
 import type { Locale } from '@/lib/i18n.config'
 import styles from './page.module.css'
 import PlaceCard from './components/PlaceCard'
+import BrandLoader from '../Components/BrandLoader'
 
 const labels: Record<Locale, { loading: string; more: string; retry: string; end: string }> = {
     ...additionalLabels as Record<Locale, { loading: string; more: string; retry: string; end: string }>,
@@ -73,7 +74,7 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
   return <>
     {places.map((place, index) => <PlaceCard key={place._id} place={place} lang={lang} order={index} blurDataURL={place.blurDataURL}/>)}
     <div className={styles.listStatus} ref={ref} aria-busy={loading}>
-      {loading ? <span role="status">{copy.loading}</span> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
+      {loading ? <BrandLoader label={copy.loading}/> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
     </div>
   </>
 }

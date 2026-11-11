@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import BlurImage from '@/components/BlurImage';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import WeatherIcon from '../../Components/weather/WeatherIcon';
 import Link from 'next/link';
@@ -15,11 +15,12 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
   detailPage?: boolean;
 }) {
   return (
-    <Link data-place-detail-card={detailPage || undefined}
+    // The priority photo is the LCP image: never hide it behind an entrance animation.
+    <Link data-place-detail-card={detailPage || undefined} data-reveal={priority ? undefined : 'scale'}
       href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
-        <div className={styles.imageFrame}>
-        <Image
+        <div className={styles.imageFrame} data-reveal-media>
+        <BlurImage
           src={`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`}
           alt={place.name}
           className={styles.placeImg}

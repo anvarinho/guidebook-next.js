@@ -69,10 +69,11 @@
   overflow: hidden;
   text-align: start;
   color: rgb(var(--foreground-rgb));
+  transition: box-shadow .45s ease, border-color .45s ease;
 }
 .placeMedia { position: relative; aspect-ratio: 1.5; overflow: hidden; background: rgba(var(--foreground-rgb), .06); }
 .imageFrame { position: absolute; inset: 0; }
-.placeImg { display: block; width: 100%; height: 100%; object-fit: cover; }
+.placeImg { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s cubic-bezier(.22, 1, .36, 1); }
 .weather {
   position: absolute;
   inset-block-start: 18px;
@@ -117,7 +118,8 @@
 .region::before { content: ''; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--main-active-color); }
 .placeContent h2 { font-size: 20px; font-weight: 600; line-height: 1.35; letter-spacing: -.02em; overflow-wrap: anywhere; text-wrap: balance; }
 .cardArrow { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 12px; }
-.cardArrow svg { width: 20px; height: 20px; }
+.cardArrow { transition: background-color .35s ease, border-color .35s ease, color .35s ease; }
+.cardArrow svg { width: 20px; height: 20px; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
 .placeBox:focus-visible, .exploreLink:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; }
 .placeBox[data-place-detail-card]:focus-visible { outline-offset: 4px; }
 .featuredCard { border: 0; isolation: isolate; background: #263438; }
@@ -135,19 +137,20 @@
 
 .listingPage .pageIntro { margin-bottom: 42px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
 .listingPage .description { max-width: 62ch; font-size: 15px; line-height: 1.9; text-wrap: pretty; }
-.listingPage .placeBox:hover { border-color: rgba(var(--foreground-rgb), .24); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
-.listingPage .placeDetails { flex: 1; }
-.sleekMotion {}
-.sleekMotion .placeBox:focus-visible .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+/* Hover: the photo drifts closer inside its frame, the card lifts on its shadow and the arrow leans in. */
 @media (hover: hover) {
-  .sleekMotion .placeBox:hover { border-color: rgba(255,101,0,.3); box-shadow: 0 18px 40px rgba(0,0,0,.11); }
-  .sleekMotion .placeBox:hover .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+  .placeBox:hover { border-color: rgba(255,101,0,.3); box-shadow: 0 22px 48px -12px rgba(0,0,0,.22); }
+  .placeBox:hover .placeImg { transform: scale(1.05); }
+  .placeBox:hover .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+  .placeBox:hover .cardArrow svg { transform: translate(2px, -2px); }
 }
+.listingPage .placeDetails { flex: 1; }
+.placeBox:focus-visible .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
 .contactPanel { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 64px; padding: 36px 40px; border: 1px solid var(--line); border-radius: 24px; background: rgba(var(--callout-rgb), .45); }
 .contactPanel h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; text-wrap: balance; }
 .contactPanel p { max-width: 55ch; margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .contactPanel a { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; flex-shrink: 0; min-height: 50px; padding: 12px 18px; border-radius: 13px; background: var(--main-active-color); color: #141414; font-size: 13px; font-weight: 600; }
-.contactPanel a span { font-size: 24px; }
+.contactPanel a span { font-size: 24px; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
 .contactPanel a:hover span { transform: rotate(45deg); }
 .contactPanel a:focus-visible, .loadButton:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; }
 .contactPanel:dir(rtl) h2 { letter-spacing: 0; line-height: 1.4; }

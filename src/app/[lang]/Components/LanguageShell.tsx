@@ -6,9 +6,11 @@ import styles from "../page.module.css";
 import FlagSun from "./FlagSun";
 import sunStyles from "./FlagSun.module.css";
 import PlaceScrollReset from "./PlaceScrollReset";
+import MotionController from "./motion/MotionController";
+import RouteLoader from "./RouteLoader";
 
-export default function LanguageShell({ children, navbar, footer, controls }: {
-  children: ReactNode; navbar: ReactNode; footer: ReactNode; controls: ReactNode;
+export default function LanguageShell({ children, navbar, footer, controls, loadingLabel }: {
+  children: ReactNode; navbar: ReactNode; footer: ReactNode; controls: ReactNode; loadingLabel: string;
 }) {
   const segment = useSelectedLayoutSegment();
   const showSun = segment === "places" || segment === "tours" || segment === "articles" || segment === "about";
@@ -17,7 +19,7 @@ export default function LanguageShell({ children, navbar, footer, controls }: {
     <PlaceScrollReset />
     {navbar}
     <section className={[styles.section, showSun && sunStyles.page, segment === "about" && sunStyles.aboutPage].filter(Boolean).join(" ")}>
-      {showSun && <FlagSun />}
+      {showSun && <><FlagSun /><MotionController /><RouteLoader label={loadingLabel} /></>}
       {children}
     </section>
     {footer}

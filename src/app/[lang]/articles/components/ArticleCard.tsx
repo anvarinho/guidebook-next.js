@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import BlurImage from '@/components/BlurImage';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
 import shared from '../../places/page.module.css';
@@ -13,13 +13,15 @@ type Props = {
 };
 
 export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataURL, dateLabel, dateTime, views, viewsLabel, featured = false, order = 0 }: Props) {
+  // The first featured photo is the LCP image: never hide it behind an entrance animation.
+  const lead = featured && order === 0;
   return (
-    <Link href={href} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
+    <Link href={href} data-reveal={lead ? undefined : 'scale'} className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
-        <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`}>
-          {imageUrl && <Image src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}
+        <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`} data-reveal-media>
+          {imageUrl && <BlurImage src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}
             sizes={featured ? '(max-width: 600px) 100vw, (max-width: 991px) 60vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw'}
-            {...imagePlaceholder(blurDataURL)} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>}
+            {...imagePlaceholder(blurDataURL)} priority={lead} loading={lead ? "eager" : "lazy"}/>}
         </div>
         {featured && <span className={shared.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
       </div>

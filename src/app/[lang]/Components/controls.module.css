@@ -35,30 +35,3 @@
     content: "";
     pointer-events: none;
   }
-  .center {
-    display: flex;
-    min-height: 220px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    color: rgba(var(--foreground-rgb), .62);
-    text-align: center;
-  }
-  .loadingText {
-    max-width: 26ch;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .12em;
-    line-height: 1.5;
-    text-transform: uppercase;
-  }
-  .detailCenter {
-    position: fixed;
-    inset: 76px 0 0;
-    z-index: 900;
-    min-height: 0;
-    padding: 24px;
-    gap: 22px;
-  }
-  .detailCenter .loadingText { font-size: 13px; }

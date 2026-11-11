@@ -1,5 +1,6 @@
 import { siteUrl } from "@/lib/seo";
 import './globals.css'
+import './Components/motion/motion.css'
 import type { Metadata } from 'next'
 import '../bai-jamjuree.css'
 import '../exo-2.css'
@@ -18,6 +19,8 @@ import Meta from './metalayout';
 import { getDictionary } from '@/lib/dictionary'
 import { contactInfo } from '@/lib/contactInfo'
 import ContactDialog from './contact/components/ContactDialog'
+
+const motionScript = "if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.dataset.motion='pending'"
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
@@ -39,8 +42,10 @@ export default async function RootLayout(
   const { page } = await getDictionary(lang)
   const contact = contactInfo(page)
   return (
-    <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
+    <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        {/* Before first paint: allow entrance motion only with JavaScript and no reduced-motion request. */}
+        <script dangerouslySetInnerHTML={{ __html: motionScript }}/>
         <FontPreloads lang={lang}/>
         <Meta lang={lang}/>
       </head>
@@ -48,6 +53,7 @@ export default async function RootLayout(
       <body className={['ru', 'kz', 'kg', 'tg', 'uk', 'mn', 'be', 'sr', 'bg', 'mk'].includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>}
         <LanguageShell
+          loadingLabel={page.loading}
           navbar={<Navbar lang={lang}/>}
           footer={<FooterVisibility><Footer lang={lang}/></FooterVisibility>}
           controls={<><ContactButton lang={lang}/><Flags lang={lang}/></>}

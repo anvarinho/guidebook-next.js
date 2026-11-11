@@ -25,7 +25,7 @@ export default async function PlaceWeather({ url, lang, language, weather }: {
     .format(Math.round(temperature) || 0);
 
   return (
-    <div className={styles.weatherMotion}>
+    <div className={styles.weatherMotion} data-reveal>
     <section className={styles.weatherPanel} aria-label={labels[lang]} data-night={icon.endsWith('n')}
       data-condition={icon.slice(0, 2)} style={{ '--weather-art': `url("${weatherAssetSource(icon)}")` } as CSSProperties}>
       <div className={styles.weatherHeading}>

@@ -313,3 +313,15 @@ Only the home page (`src/app/intro`) animates. Every other page now renders what
 - Smooth anchor scrolling is limited to the home page. The place gallery still preloads the next photo before switching, so no blank frame appears.
 
 Earlier entries above that mention reveal effects, reading progress, gallery transitions or Manas parallax describe the previous behavior.
+
+## Content-page motion system (2026-11-11)
+
+Motion returned to places, tours, articles and about as one small system (`src/app/[lang]/Components/motion/`):
+
+- A head script sets `html[data-motion="pending"]` before first paint unless reduced motion is requested; `MotionController` switches it to `live`. Only then can content start hidden. Without JavaScript nothing is hidden, and a 3-second CSS fail-safe reveals content if hydration never happens.
+- Entrance reveals use one IntersectionObserver for every `[data-reveal]` element. Its root extends far above the viewport, so content skipped by a fast jump, back/forward restore or anchor link reveals immediately; focus reveals at once; streamed and "load more" content is picked up by a MutationObserver. Only opacity and transform animate.
+- Above-the-fold copy uses CSS-only `[data-intro]` entrances that start at first paint, independent of hydration. LCP photos (priority cards, detail heroes) never have an entrance animation.
+- Detail heroes pin the photo for `min(52vh, 460px)` (`min(38vh, 300px)` on phones) using a spacer reserved from first paint, so hydration causes no layout shift. One rAF-throttled scroll listener writes `--hero-merge` and `--hero-cards`; the title and cards on the photo are an `aria-hidden` overlay that repeats visible content. Pages with a hero use `overflow-x: clip` on html/body, because `overflow-x: hidden` made body a scroll container and broke sticky pinning. CSS scroll timelines were not used for the hero because Safari support is too recent; the sun decoration's parallax uses them as a progressive enhancement.
+- `BlurImage` sharpens photos from their blur placeholder (filter + transform) once `next/image` reports them decoded, including cached images. The detail gallery's first photo has its blur placeholder again; later gallery photos skip the effect because they are preloaded.
+- `SectionDots` replaces the removed reading-progress bar on detail pages: one observer for the active section and one sliding pill (transform only).
+- `BrandLoader` shares the home page loader's emblem in two sizes. The full-page size is a client-navigation loader below the navbar that appears only after 200 ms and never covers server-rendered HTML; there is still no route-level `loading.tsx` (see "Hero render-delay follow-up").

@@ -1,0 +1,61 @@
+/* Same emblem, easing and rhythm as the home page loader (src/app/intro), shared by both sizes. */
+.loader {
+  --loader-ease: cubic-bezier(.22, 1, .36, 1);
+  --emblem-size: 44px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: rgba(var(--foreground-rgb), .62);
+}
+.inline { display: flex; justify-content: center; padding-block: 32px; text-align: center; }
+.page {
+  --emblem-size: 76px;
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  gap: 22px;
+  background: radial-gradient(ellipse at 50% 44%, #284b43 0%, #102a26 72%);
+  color: rgba(255, 255, 255, .78);
+}
+.emblem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--emblem-size);
+  height: var(--emblem-size);
+  animation: emblem-breathe 2.4s var(--loader-ease) infinite;
+}
+.rays, .center {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  background: var(--main-active-color);
+  -webkit-mask: url('../../../../public/intro/flag.png') center / contain no-repeat;
+  mask: url('../../../../public/intro/flag.png') center / contain no-repeat;
+}
+/* Only the outer rays turn; the central tunduk stays upright. */
+.rays {
+  -webkit-mask-image: url('../../../../public/intro/flag.png'), radial-gradient(circle closest-side, transparent 59%, #000 60%);
+  mask-image: url('../../../../public/intro/flag.png'), radial-gradient(circle closest-side, transparent 59%, #000 60%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: rays-turn 9s linear infinite;
+}
+.center { clip-path: circle(29.5% at 50% 50%); }
+.caption {
+  max-width: 28ch;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  animation: caption-pulse 2.4s ease-in-out infinite;
+}
+.page .caption { font-size: 12px; }
+@keyframes rays-turn { to { transform: rotate(360deg); } }
+@keyframes emblem-breathe { 50% { transform: scale(.94); } }
+@keyframes caption-pulse { 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) {
+  .emblem, .rays, .caption { animation: none; }
+}

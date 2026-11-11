@@ -9,7 +9,6 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { i18n, type Locale } from '@/lib/i18n.config'
 import FlagSun from './Components/FlagSun'
-import LoadingRing from './Components/LoadingRing'
 import styles from './service-page.module.css'
 
 type Copy = {
@@ -35,22 +34,13 @@ const copy: Record<Locale, Copy> = {
   kr: { notFound: { eyebrow: '다른 경로', title: '이 페이지는 하이킹을 떠났나 봐요.', description: '흔적을 남기는 걸 깜빡했네요. 다른 곳을 둘러볼까요?' }, error: { eyebrow: '잠시 쉬어가기', title: '가는 길에 문제가 생겼어요.', description: '페이지를 불러오지 못했어요. 다시 시도하거나 계속 둘러보세요.' }, loading: { eyebrow: '길을 찾는 중', title: '여행을 준비하고 있어요.', description: '여행 안내를 준비 중입니다.' }, home: '가이드로 돌아가기', places: '장소 둘러보기', retry: '다시 시도' },
 }
 
-export default function ServicePage({ state, reset }: { state: 'notFound' | 'error' | 'loading'; reset?: () => void }) {
+export default function ServicePage({ state, reset }: { state: 'notFound' | 'error'; reset?: () => void }) {
   const router = useRouter()
   const pathname = usePathname() || ''
   const segment = pathname.split('/')[1]
   const lang: Locale = i18n.locales.includes(segment as Locale) ? segment as Locale : i18n.defaultLocale
   const content = copy[lang]
   const message = content[state]
-
-  if (state === 'loading') {
-    return (
-      <section className={styles.loadingPage} data-service-state="loading" role="status" aria-live="polite" dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
-        <FlagSun />
-        <LoadingRing large />
-      </section>
-    )
-  }
 
   const isNotFound = state === 'notFound'
   return (
