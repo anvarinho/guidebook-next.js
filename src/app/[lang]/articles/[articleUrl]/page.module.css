@@ -18,7 +18,7 @@
 .headerRule { display: flex; align-items: end; height: 100%; padding-bottom: 10px; }
 .headerRule span { width: 100%; height: 1px; background: var(--line); }
 .article { min-width: 0; }
-.heroImage { position: relative; margin-bottom: 56px; overflow: hidden; border-radius: 24px; }
+.heroImage { margin-bottom: 56px; }
 .image { position: relative; display: block; aspect-ratio: 2 / 1; overflow: hidden; border-radius: 24px; background: rgba(var(--foreground-rgb), .06); }
 .image img { object-fit: cover; }
 .articleLayout { display: grid; grid-template-columns: minmax(0, 1fr) 245px; gap: clamp(32px, 7vw, 110px); align-items: start; }
@@ -31,7 +31,8 @@
 .paragraphCopy h2 a { text-decoration: underline; text-decoration-color: var(--main-active-color); text-underline-offset: 6px; }
 .paragraphCopy h2 a:hover { text-decoration-thickness: 3px; }
 .paragraphCopy p { color: rgba(var(--foreground-rgb), .8); font-size: 17px; line-height: 1.9; white-space: pre-line; overflow-wrap: anywhere; }
-.aside { position: sticky; top: 88px; }
+/* Not sticky: it never stuck while body was a scroll container, and motion.css now lifts that. */
+.aside { align-self: start; }
 .asideInner { padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 .asideLabel { margin-bottom: 14px; color: var(--main-active-color); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .asideText { font-size: 16px; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
@@ -56,7 +57,7 @@
   .headerCopy h1 { margin-top: 16px; font-size: clamp(34px, 9vw, 50px); }
   .subtitle { margin-top: 18px; font-size: 15px; line-height: 1.75; }
   .articleLayout { display: block; }
-  .heroImage { margin-bottom: 36px; border-radius: 17px; }
+  .heroImage { margin-bottom: 36px; }
   .image { aspect-ratio: 1.25; border-radius: 17px; }
   .paragraph { margin-bottom: 44px; }
   .paragraph .image { aspect-ratio: 1.35; margin-bottom: 22px; border-radius: 16px; }

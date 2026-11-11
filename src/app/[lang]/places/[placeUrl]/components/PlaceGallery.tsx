@@ -1,9 +1,8 @@
 'use client';
 import additionalLabels from '@/translations/ui/app-lang-places-placeUrl-components-PlaceGallery-tsx-labels.json';
 import ArrowIcon from '@/components/ArrowIcon';
-import { useCallback, useEffect, useRef, useState, type PointerEvent, type ReactNode, type SyntheticEvent } from 'react';
+import { useCallback, useEffect, useRef, useState, type PointerEvent, type SyntheticEvent } from 'react';
 import Image from 'next/image';
-import BlurImage from '@/components/BlurImage';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
@@ -24,15 +23,11 @@ const labels = {
 
 type PendingPhoto = { index: number; token: number };
 
-export default function PlaceGallery({ images, name, lang, priority = true, blurDataURLs = [], detail = false, children }: {
+export default function PlaceGallery({ images, name, lang, priority = true, blurDataURLs = [], detail = false }: {
   images: string[]; name: string; lang: Locale; priority?: boolean; blurDataURLs?: string[]; detail?: boolean;
-  /** Decorative layer over the photo, e.g. the hero overlay. */
-  children?: ReactNode;
 }) {
   const [index, setIndex] = useState(0);
   const [pending, setPending] = useState<PendingPhoto | null>(null);
-  // Only the first photo sharpens from its blur; later photos are already loaded when shown.
-  const [browsed, setBrowsed] = useState(false);
   const thumbnails = useRef<HTMLDivElement>(null);
   const thumbnailsMounted = useRef(false);
   const activeIndex = useRef(0);
@@ -53,7 +48,6 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
     const token = ++requestToken.current;
     if (!detail) {
       activeIndex.current = target;
-      setBrowsed(true);
       setIndex(target);
       return;
     }
@@ -69,7 +63,6 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
     requestedIndex.current = null;
     setPending(null);
     activeIndex.current = next.index;
-    setBrowsed(true);
     setIndex(next.index);
   }, []);
 
@@ -115,11 +108,11 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
 
   if (!images.length) return null;
 
-  const Photo = browsed ? Image : BlurImage;
   const sizes = "(max-width: 600px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 48px), (max-width: 1280px) calc(100vw - 80px), 1200px";
 
   return (
     <section className={styles.gallery} data-detail={detail || undefined}
+      data-section={priority || undefined} data-section-label={t[0]} data-motion-frame
       aria-label={`${name} — ${t[0]}`} dir="ltr"
       onKeyDown={event => {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -132,12 +125,12 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
         aria-busy={detail ? pending !== null : undefined}
         tabIndex={detail && images.length > 1 ? 0 : undefined}
         onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => { pointerStart.current = null; }}>
-        <div className={styles.galleryPhotoViewport}>
+        <div className={styles.galleryPhotoViewport} data-motion={priority ? undefined : 'settle'}>
           <div className={styles.galleryPhoto} key={`photo-${index}`}>
-            <Photo src={imageUrl(images[index])} alt={`${name} — ${t[3]} ${index + 1}`}
+            <Image src={imageUrl(images[index])} alt={`${name} — ${t[3]} ${index + 1}`}
               fill sizes={sizes} fetchPriority={priority && index === 0 ? 'high' : undefined}
               loading={detail || (priority && index === 0) ? 'eager' : 'lazy'}
-              {...imagePlaceholder(blurDataURLs[index])} />
+              {...(detail && priority && index === 0 ? { placeholder: 'empty' as const } : imagePlaceholder(blurDataURLs[index]))} />
           </div>
           {pending && <div className={`${styles.galleryPhoto} ${styles.galleryPhotoPreload}`} key={`photo-${pending.index}`}>
             <Image src={imageUrl(images[pending.index])} alt="" aria-hidden
@@ -146,7 +139,6 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
               onError={() => failPendingPhoto(pending)} />
           </div>}
         </div>
-        {children}
         {images.length > 1 && <>
           <button type="button" className={`${styles.galleryControl} ${styles.previous}`}
             onClick={() => move(-1)} aria-label={t[1]}>
@@ -162,7 +154,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
       {images.length > 1 && <div ref={thumbnails} className={styles.thumbnails}>
         {images.map((image, i) => <button type="button" key={`${image}-${i}`}
           aria-label={`${t[3]} ${i + 1}`} aria-pressed={index === i} onClick={() => selectPhoto(i)}>
-          <BlurImage {...imagePlaceholder(blurDataURLs[i])} src={imageUrl(image)} alt="" fill sizes="(max-width: 600px) 72px, 88px" />
+          <Image {...imagePlaceholder(blurDataURLs[i])} src={imageUrl(image)} alt="" fill sizes="(max-width: 600px) 72px, 88px" />
         </button>)}
       </div>}
     </section>

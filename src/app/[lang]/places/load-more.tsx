@@ -7,7 +7,8 @@ import { useInView } from 'react-intersection-observer'
 import type { Locale } from '@/lib/i18n.config'
 import styles from './page.module.css'
 import PlaceCard from './components/PlaceCard'
-import BrandLoader from '../Components/BrandLoader'
+import LoadingSpinner from '../Components/LoadingSpinner'
+import { usePresence } from '../Components/usePresence'
 
 const labels: Record<Locale, { loading: string; more: string; retry: string; end: string }> = {
     ...additionalLabels as Record<Locale, { loading: string; more: string; retry: string; end: string }>,
@@ -34,6 +35,7 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
   const controller = useRef<AbortController | null>(null)
   const { ref, inView } = useInView({ rootMargin: '300px' })
   const copy = labels[lang]
+  const spinner = usePresence(loading)
 
   const load = useCallback(async () => {
     if (busy.current || !hasMore) return
@@ -74,7 +76,7 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
   return <>
     {places.map((place, index) => <PlaceCard key={place._id} place={place} lang={lang} order={index} blurDataURL={place.blurDataURL}/>)}
     <div className={styles.listStatus} ref={ref} aria-busy={loading}>
-      {loading ? <BrandLoader label={copy.loading}/> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
+      {spinner !== 'hidden' ? <LoadingSpinner text={copy.loading} inline leaving={spinner === 'leaving'}/> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
     </div>
   </>
 }

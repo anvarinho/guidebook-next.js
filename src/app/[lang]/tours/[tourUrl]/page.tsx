@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import shared from "../../places/page.module.css";
 import { Metadata } from "next";
 import { Suspense } from "react";
-import BrandLoader from "../../Components/BrandLoader";
+import LoadingSpinner from "../../Components/LoadingSpinner";
 import DayView from "./DayView";
 import { getDictionary } from "@/lib/dictionary";
 import { formatTourDuration } from '@/lib/formatTourDuration';
@@ -15,8 +15,7 @@ import Meta from "./meta";
 import { notFound } from "next/navigation";
 import TourGallery from "./TourGallery";
 import TourDescription from "./TourDescription";
-import HeroOverlay from "../../Components/motion/HeroOverlay";
-import SectionDots from "../../Components/SectionDots";
+import SectionProgress from "../../Components/SectionProgress";
 import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
 import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
@@ -41,31 +40,23 @@ export default async function Tour(props: Params) {
   const t = page.tours.tourPage;
   const preparation = page.tours.TourPreparation;
   const transferMessages = tourUrl === "manas-airport-transfers" ? await getTransferMessages(lang) : null;
-  const dir = isRtlLocale(lang) ? 'rtl' : 'ltr';
-  const duration = formatTourDuration(data.days.length, lang);
-  const sections = [
-    { id: 'tour-overview', label: data.title },
-    { id: 'itinerary', label: t.details },
-    { id: 'note', label: t.addInfo },
-    { id: 'essentials', label: preparation.title },
-  ];
 
   return (
-    <div className={styles.main} dir={dir}>
+    <div className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} tour={data} page={page} />
       <article>
-        <header className={styles.header} data-hero-header>
-          <div className={styles.heading} data-intro="0">
+        <header className={styles.header} data-motion="float">
+          <div className={styles.heading}>
             <Link href={`/${lang}/tours`} className={styles.breadcrumb}>
               <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.tours.name}
             </Link>
-            <h1>{data.title}</h1>
+            <h1 data-motion="swell">{data.title}</h1>
           </div>
-          <div className={styles.summaryCard} data-intro="1">
+          <div className={styles.summaryCard}>
             <p className={styles.priceLabel}>{t.from}</p>
             <p className={styles.heroPrice}><bdi>${data.price[data.price.length - 1]}</bdi></p>
             <dl className={styles.facts}>
-              <div><dt>{t.duration}</dt><dd>{duration}</dd></div>
+              <div><dt>{t.duration}</dt><dd>{formatTourDuration(data.days.length, lang)}</dd></div>
               <div><dt>{t.level}</dt><dd>{data.level}</dd></div>
             </dl>
             <a href="#itinerary" className={styles.detailsLink}>
@@ -73,29 +64,21 @@ export default async function Tour(props: Params) {
             </a>
           </div>
         </header>
-        <Suspense fallback={<BrandLoader label={page.loading}/>}>
-          <div id="tour-overview" className={styles.heroGallery} data-hero-track>
-            <div data-hero-sticky>
-              <TourGallery images={data.images} name={data.title} lang={lang} priority>
-                <HeroOverlay dir={dir} eyebrow={page.tours.name} title={data.title} cards={[
-                  { value: `$${data.price[data.price.length - 1]}`, text: t.from },
-                  { value: duration, text: t.duration },
-                  { value: data.level, text: t.level },
-                ]}/>
-              </TourGallery>
-            </div>
+        <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
+          <div className={styles.heroGallery} data-motion="leave">
+            <TourGallery images={data.images} name={data.title} lang={lang} priority/>
           </div>
-          <div className={styles.overview} data-reveal>
-            {transferMessages && <p className={styles.transferComparison}>
+          <div className={styles.overview} data-motion="takeover" data-section data-section-label={data.title}>
+            {transferMessages && <p className={styles.transferComparison} data-motion="rise">
               <Link href={`/${lang}/manas-airport-transfers`}>{transferMessages.s216} <span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
             </p>}
             <TourDescription description={data.description} lang={lang} />
           </div>
-          <section id="itinerary" className={styles.itinerary} aria-labelledby="itinerary-title">
-            <div className={styles.sectionHeading} data-reveal>
+          <section id="itinerary" className={styles.itinerary} aria-labelledby="itinerary-title" data-section>
+            <div className={styles.sectionHeading} data-motion="rise">
               <h2 id="itinerary-title">{t.details}</h2><span aria-hidden="true"/>
             </div>
-            <nav className={styles.daysNavigation} aria-label={t.details} data-reveal="fade">
+            <nav className={styles.daysNavigation} aria-label={t.details} data-motion="rise">
               {data.days.map((_, index) => <a href={`#day${index + 1}`} key={index}>{t.day} {index + 1}</a>)}
               <a href="#note">{t.note}</a>
             </nav>
@@ -103,12 +86,12 @@ export default async function Tour(props: Params) {
               {data.days.map((day, index) => <DayView key={index} params={{ day, index, lang }}/>) }
             </div>
           </section>
-          <section className={styles.extra} id="note" aria-labelledby="info-title">
-            <div className={styles.sectionHeading} data-reveal>
+          <section className={styles.extra} id="note" aria-labelledby="info-title" data-section>
+            <div className={styles.sectionHeading} data-motion="rise">
               <h2 id="info-title">{t.addInfo}</h2><span aria-hidden="true"/>
             </div>
             <div className={styles.infoList}>
-              {data.price.length > 1 && <div className={styles.infoCard} data-reveal>
+              {data.price.length > 1 && <div className={styles.infoCard} data-motion="rise">
                 <h3>{t.price}</h3>
                 <table className={styles.pricingTable}>
                   <tbody>{data.price.map((fee, index) => <tr key={index}>
@@ -117,31 +100,31 @@ export default async function Tour(props: Params) {
                   </tr>)}</tbody>
                 </table>
               </div>}
-              <div className={styles.infoCard} data-reveal>
+              <div className={styles.infoCard} data-motion="rise">
                 <h3>{t.includings}</h3>
                 <ul className={styles.included}>{data.includings.map((text, index) => <li key={index}>{text}</li>)}</ul>
               </div>
-              <div className={styles.infoCard} data-reveal>
+              <div className={styles.infoCard} data-motion="rise">
                 <h3>{t.excludings}</h3>
                 <ul className={styles.excluded}>{data.excludings.map((text, index) => <li key={index}>{text}</li>)}</ul>
               </div>
             </div>
           </section>
-          <section id="essentials" className={styles.essentials} aria-labelledby="essentials-title">
-            <div className={styles.essentialsIntro} data-reveal>
+          <section className={styles.essentials} aria-labelledby="essentials-title" data-section>
+            <div className={styles.essentialsIntro} data-motion="rise">
               <p className={shared.eyebrow}>{t.note}</p>
               <h2 id="essentials-title">{preparation.title}</h2>
               <p>{preparation.Description}</p>
             </div>
             <div className={styles.packingList}>
-              {Object.entries(preparation.Options).map(([key, value]) => <div key={key} data-reveal>
+              {Object.entries(preparation.Options).map(([key, value]) => <div key={key} data-motion="rise">
                 <div className={styles.packingItem}><h3>{key}</h3><p>{value}</p></div>
               </div>)}
-              <p className={styles.preparationNote}>{preparation.overview}</p>
+              <p className={styles.preparationNote} data-motion="rise">{preparation.overview}</p>
             </div>
           </section>
         </Suspense>
-        <SectionDots sections={sections} lang={lang} dir={dir}/>
+        <SectionProgress lang={lang} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}/>
       </article>
     </div>
   );

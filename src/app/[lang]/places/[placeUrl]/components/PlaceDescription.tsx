@@ -10,5 +10,5 @@ interface Props {
 
 export default function PlaceDescription({ text, highlights = [], lang = 'en' }: Props) {
   const content = typeof text === 'string' ? text : text[lang] || text.en || Object.values(text)[0] || '';
-  return <div className={styles.container} dangerouslySetInnerHTML={{ __html: renderContentHtml(content, { lang, highlights, classes: styles }) }} />;
+  return <div className={styles.container} data-motion-children dangerouslySetInnerHTML={{ __html: renderContentHtml(content, { lang, highlights, classes: styles }) }} />;
 }

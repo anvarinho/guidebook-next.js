@@ -1,3 +1,4 @@
+.loadingPage { position: fixed; inset: 0; z-index: 1100; isolation: isolate; display: grid; place-items: center; min-height: 100svh; padding: 24px; background: rgb(var(--background-end-rgb, 255, 255, 255)); color: rgb(var(--foreground-rgb, 20, 20, 20)); }
 
 .statusPage {
   position: relative;

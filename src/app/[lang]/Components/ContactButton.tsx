@@ -8,8 +8,8 @@ import styles from "./controls.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
-import { sendAnalyticsEvent } from "@/lib/analytics";
 import Image from "next/image";
+import { onScrollFrame } from "./motion/scroll";
 
 const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,27 +31,8 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
 
   useEffect(() => {
     if (isManas) return;
-    // Function to handle the scroll event
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // Set a threshold value for when to toggle the class
-      const scrollThreshold = 100;
-
-      // Check if the user has scrolled beyond the threshold
-      if (scrollY > scrollThreshold) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    // Add the scroll event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the scroll event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Show the button once the visitor has scrolled past the top of the page.
+    return onScrollFrame(scrollY => setIsScrolled(scrollY > 100));
   }, [isManas]);
 
   if (isManas) return null;
@@ -69,12 +50,6 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
             href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${encodeURIComponent(`https://central-asia.live${pathname} ${reviewedLabels[lang].book}`)}`}
             title={`WhatsApp · ${reviewedLabels[lang].book}`}
             target="_blank"
-            onClick={() =>
-              sendAnalyticsEvent({
-                event: "buttonClicked",
-                value: "4FJFCJuVic8YELL_7YUq",
-              })
-            }
           >
             {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}
             <Image src={"/whatsapp.png"} width={50} height={50} alt="" />

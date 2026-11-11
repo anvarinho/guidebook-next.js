@@ -9,7 +9,7 @@ import PlaceListItem from "./components/PlaceListItem";
 import { getDictionary } from '@/lib/dictionary'
 import { Locale } from '@/lib/i18n.config'
 import { LoadMore } from "./load-more";
-import BrandLoader from "../Components/BrandLoader";
+import LoadingSpinner from "../Components/LoadingSpinner";
 import Meta from "./meta";
 import Link from 'next/link';
 import { aboutContent } from '../about/content';
@@ -27,14 +27,14 @@ export default async function Places(
 
   const [{ page }, places] = await Promise.all([getDictionary(lang), getPlacesWithWeather(lang)]);
   return (
-      <div className={`${styles.main} ${styles.listingPage}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
+      <div className={`${styles.main} ${styles.listingPage} ${styles.sleekMotion}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
         <Meta lang={lang} places={places} page={page}/>
           <header className={styles.pageIntro}>
-            <div className={styles.introTitle} data-intro="0">
+            <div className={styles.introTitle}>
               <p className={styles.eyebrow}>{page.sights.name}</p>
               <h1>{page.sights.title}</h1>
             </div>
-            <div className={styles.introAside} data-intro="1">
+            <div className={styles.introAside}>
               <p className={styles.description}>{page.sights.description}</p>
               <a href="#destinations" className={styles.exploreLink}>{page.sights.sights}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
             </div>
@@ -44,7 +44,7 @@ export default async function Places(
               {places.slice(0, 3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} priority={i === 0} featured order={i}/>)}
             </div>
           </section>
-          <div className={styles.collectionHeading} data-reveal>
+          <div className={styles.collectionHeading} data-motion="rise">
             <h2>{page.sights.sights}</h2>
             <span className={styles.collectionLine} aria-hidden="true"/>
             <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
@@ -53,14 +53,14 @@ export default async function Places(
             <div className={styles.placesList}>
                 <Suspense fallback={
                   <div className={styles.loadingSpinnerWrapper}>
-                    <BrandLoader label={page.loading}/>
+                    <LoadingSpinner text={page.loading} />
                   </div>}>
                   {places.slice(3).map((place, i) => <PlaceListItem key={place._id} place={place} lang={lang} order={i}/>)}
                   <LoadMore key={lang} lang={lang} initialIds={places.map(place => place._id)}/>
                 </Suspense>
             </div>
           </div>
-          <div className={styles.contactPanel} data-reveal>
+          <div className={styles.contactPanel} data-motion="rise">
             <div><h2>{aboutContent[lang].invitation}</h2><p>{aboutContent[lang].invitationBody}</p></div>
             <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
           </div>

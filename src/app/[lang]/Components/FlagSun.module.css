@@ -60,13 +60,3 @@
   .sun { width: 260px; top: -65px; right: -70px; }
   .sunDecoration { height: 320px; }
 }
-
-/* Subtle parallax: the sun sinks and turns slightly as the page scrolls (scroll timelines only). */
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .sun { animation: sun-drift linear both; animation-timeline: scroll(root); animation-range: 0 900px; }
-  }
-}
-@keyframes sun-drift {
-  to { transform: translate3d(0, 120px, 0) rotate(18deg); opacity: .55; }
-}

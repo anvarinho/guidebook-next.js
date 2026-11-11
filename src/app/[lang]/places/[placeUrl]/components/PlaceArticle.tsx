@@ -1,7 +1,4 @@
 import { isRtlLocale } from '@/lib/localeMetadata';
-import { metaDescription } from '@/lib/seo';
-import HeroOverlay from '../../../Components/motion/HeroOverlay';
-import SectionDots from '../../../Components/SectionDots';
 import getBase64 from '@/lib/getLocalBase64';
 import getBlurredDataUrls from '@/lib/getBlurredDataUrls';
 import ArrowIcon from '@/components/ArrowIcon';
@@ -17,6 +14,7 @@ import PlaceGallery from './PlaceGallery';
 import PlaceWeather from './PlaceWeather';
 import PlaceCard from '../../components/PlaceCard';
 import ViewportMap from './ViewportMap';
+import SectionProgress from '../../../Components/SectionProgress';
 import { destinationGuides } from '../../../manas-airport-transfers/content';
 import { getTransferMessages } from '../../../manas-airport-transfers/translations/load';
 
@@ -37,65 +35,49 @@ export default async function PlaceArticle({ promise, lang }: {
   const transferMessages = transferGuide ? await getTransferMessages(lang) : null;
   const coordinates = `${place.location.latitude},${place.location.longitude}`;
   const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
-  const dir = isRtlLocale(lang) ? 'rtl' : 'ltr';
-  const visits = Math.floor(place.viewCount).toLocaleString(page.langCode);
-  const sections = [
-    { id: 'place-overview', label: place.title },
-    { id: 'place-article-body', label: place.name },
-    ...(sights.length ? [{ id: 'local-sights', label: `${place.name}: ${page.sights.sights}` }] : []),
-    ...(places.length ? [{ id: 'region-sights', label: `${place.region}: ${page.sights.sights}` }] : []),
-  ];
 
   return (
-    <article data-place-page className={styles.main} dir={dir}>
-      <div className={styles.breadcrumbMotion} data-intro="0">
+    <article data-place-page className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
+      <div className={styles.breadcrumbMotion}>
         <nav className={styles.breadcrumb} aria-label={page.sights.name}>
           <Link href={`/${lang}/places`}><span aria-hidden="true"><ArrowIcon direction="left"/></span> {page.sights.name}</Link>
           <span aria-hidden="true">/</span>
           <span>{place.region}</span>
         </nav>
       </div>
-      <header className={styles.articleHeader} data-hero-header>
-        <div data-intro="1">
-        <h1>{place.title}</h1>
+      <header className={styles.articleHeader} data-motion="float">
+        <div>
+        <h1 data-motion="swell">{place.title}</h1>
         <div className={styles.info}>
           {createdDate && <time dateTime={createdDate.toISOString()}>
             {page.info.created}{createdDate.toLocaleDateString(page.langCode, { day: 'numeric', month: 'long', year: 'numeric' })}
           </time>}
-          <span>{page.info.seen}{visits}</span>
+          <span>{page.info.seen}{Math.floor(place.viewCount).toLocaleString(page.langCode)}</span>
         </div>
         </div>
       </header>
-      <div id="place-overview" data-hero-track>
-        <div data-hero-sticky>
-          <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detail>
-            <HeroOverlay dir={dir} eyebrow={place.region} title={place.title} cards={[
-              { value: place.name, text: metaDescription(place.description) },
-              ...(place.weather?.temp ? [{ value: `${parseInt(place.weather.temp)}°C`, text: place.weather.description }] : []),
-              { value: visits, text: page.info.seen.replace(/[:：]\s*$/, '') },
-            ]}/>
-          </PlaceGallery>
-        </div>
+      <div data-motion="leave">
+        <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detail/>
       </div>
 
-      <div className={styles.articleLayout}>
-        <div className={styles.articleBody} id="place-article-body" data-reveal>
+      <div className={styles.articleLayout} data-motion="takeover">
+        <div className={styles.articleBody} id="place-article-body" data-section data-section-label={place.name}>
           <PlaceDescription text={place.description} highlights={page.sights.highlights} name={place.name} lang={lang}/>
-          {transferGuide && transferMessages && <p className={styles.airportTransferLink}>
+          {transferGuide && transferMessages && <p className={styles.airportTransferLink} data-motion="rise">
             <Link href={`/${lang}/manas-airport-transfers?destination=${transferGuide.city}&vehicle=all&sort=featured#providers`}>
               {transferMessages.s217.replace('{destination}', transferMessages[transferGuide.labelKey])}
               <span aria-hidden="true"><ArrowIcon direction="up-right"/></span>
             </Link>
           </p>}
-          {place.videoID && <div className={styles.video}>
+          {place.videoID && <div className={styles.video} data-motion="rise">
             <YouTubeEmbed videoid={place.videoID} width={800}/>
           </div>}
         </div>
-        <aside className={styles.locationSidebar} aria-label={`Google Maps — ${place.name}`}>
+        <aside className={styles.locationSidebar} aria-label={`Google Maps — ${place.name}`} data-section data-section-label="Google Maps">
           <Suspense fallback={null}>
             <PlaceWeather url={place.url} lang={lang} language={page.langCode} weather={place.weather}/>
           </Suspense>
-          <div className={styles.locationCardMotion} data-reveal>
+          <div className={styles.locationCardMotion} data-motion="rise">
           <section className={styles.locationCard}>
             <div className={styles.locationHeading}>
               <p>{place.region}</p>
@@ -128,22 +110,22 @@ export default async function PlaceArticle({ promise, lang }: {
         </aside>
       </div>
 
-      {sights.length > 0 && <section id="local-sights" className={styles.related} aria-labelledby="local-sights-title">
-        <div className={styles.relatedHeading} data-reveal><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></div>
+      {sights.length > 0 && <section className={styles.related} aria-labelledby="local-sights-title" data-section>
+        <div className={styles.relatedHeading} data-motion="rise"><h2 id="local-sights-title">{place.name}: {page.sights.sights}</h2></div>
         <div className={styles.relatedGrid}>
           {sights.map((sight, index) => <div className={styles.relatedItem} key={sight._id}>
             <PlaceCard blurDataURL={getBase64(sight.images[0])} place={sight} lang={lang} detailPage order={index}/>
-            {sight.description && <div data-reveal="fade"><p className={styles.relatedSummary}>{sight.description}</p></div>}
+            {sight.description && <div data-motion="rise"><p className={styles.relatedSummary}>{sight.description}</p></div>}
           </div>)}
         </div>
       </section>}
-      {places.length > 0 && <section id="region-sights" className={styles.related} aria-labelledby="region-sights-title">
-        <div className={styles.relatedHeading} data-reveal><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></div>
+      {places.length > 0 && <section className={styles.related} aria-labelledby="region-sights-title" data-section>
+        <div className={styles.relatedHeading} data-motion="rise"><h2 id="region-sights-title">{place.region}: {page.sights.sights}</h2></div>
         <div className={styles.relatedGrid}>
           {places.map((sight, index) => <PlaceCard blurDataURL={getBase64(sight.images[0])} key={sight.url} place={sight} lang={lang} detailPage order={index}/>)}
         </div>
       </section>}
-      <SectionDots sections={sections} lang={lang} dir={dir}/>
+      <SectionProgress lang={lang} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}/>
     </article>
   );
 }

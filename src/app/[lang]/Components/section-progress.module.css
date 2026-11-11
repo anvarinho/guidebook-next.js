@@ -1,0 +1,85 @@
+/* A column of lines in the page gutter, clear of the text column and the contact button. */
+.rail {
+  position: fixed;
+  z-index: 90;
+  inset-block: 0;
+  inset-inline-end: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 28px;
+  height: clamp(180px, 46vh, 380px);
+  margin-block: auto;
+  animation: railIn .45s cubic-bezier(.22, 1, .36, 1) both;
+}
+@keyframes railIn { from { opacity: 0; transform: translate3d(0, 12px, 0); } }
+/* flex-grow is the section's measured height, so line lengths share the rail in proportion. */
+.rail button {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.line {
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 1px);
+  width: 2px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: rgba(var(--foreground-rgb), .14);
+}
+.rail button:hover .line { background: rgba(var(--foreground-rgb), .3); }
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--main-active-color);
+  transform: scaleY(var(--p, 0));
+  transform-origin: top;
+}
+/* The fill follows scroll position itself; the fallback writes --p from the shared scroll listener. */
+@supports (animation-timeline: scroll()) {
+  .fill {
+    transform: none;
+    animation: railFill linear both;
+    animation-timeline: scroll(root block);
+    animation-range: var(--from) var(--to);
+  }
+}
+@keyframes railFill { from { transform: scaleY(0); } }
+.rail button:focus-visible { outline: 2px solid var(--main-active-color); outline-offset: -2px; border-radius: 6px; }
+/* Section name on hover and keyboard focus, styled like the chips on card photos. */
+.label {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: calc(100% + 4px);
+  max-width: min(32ch, 70vw);
+  overflow: hidden;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 999px;
+  background: rgba(12, 18, 22, .58);
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate3d(6px, -50%, 0);
+  transition: opacity .2s ease, transform .22s cubic-bezier(.22, 1, .36, 1);
+  pointer-events: none;
+}
+.rail[dir="rtl"] .label { transform: translate3d(-6px, -50%, 0); }
+.rail button:is(:hover, :focus-visible) .label { opacity: 1; transform: translate3d(0, -50%, 0); }
+@media (max-width: 991px) { .rail { inset-inline-end: 0; width: 24px; } }
+@media (max-width: 600px) { .rail { width: 16px; gap: 5px; height: clamp(160px, 40vh, 300px); } }
+@media (prefers-reduced-motion: reduce) {
+  .rail { animation: none; }
+  .label { transition: none; }
+}

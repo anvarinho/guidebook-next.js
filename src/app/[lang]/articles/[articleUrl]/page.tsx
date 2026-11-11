@@ -7,7 +7,8 @@ import { Locale } from '@/lib/i18n.config'
 import getArticle from '@/lib/getArticle';
 import Article from './components/Article'
 import { Suspense } from "react"
-import BrandLoader from '../../Components/BrandLoader';
+import LoadingSpinner from '../../Components/LoadingSpinner';
+import SectionProgress from '../../Components/SectionProgress';
 import Meta from './meta';
 import { getDictionary } from '@/lib/dictionary'
 import { notFound } from 'next/navigation'
@@ -40,14 +41,14 @@ export default async function Home(props: Params) {
   return (
     <div className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} article={article} page={page}/>
-      <Suspense fallback={<BrandLoader label={page.loading}/>}>
-        <header className={styles.articleHeader} data-hero-header>
-          <div className={styles.headerCopy} data-intro="0">
+      <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
+        <header className={styles.articleHeader} data-motion="float">
+          <div className={styles.headerCopy}>
             <a href={`/${lang}/articles`} className={styles.breadcrumb}>
               <span aria-hidden="true"><ArrowIcon direction={isRtlLocale(lang) ? 'right' : 'left'}/></span>{page.articles.name}
             </a>
             <p className={shared.eyebrow}>{page.articles.name}</p>
-            <h1>{article.title}</h1>
+            <h1 data-motion="swell">{article.title}</h1>
             <p className={styles.subtitle}>{article.subtitle}</p>
             <div className={styles.articleMeta}>
               <time dateTime={new Date(article.createdAt).toISOString()}>{new Date(article.createdAt).toLocaleDateString(page.langCode, { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
@@ -55,10 +56,11 @@ export default async function Home(props: Params) {
               <span>{page.info.seen}{new Intl.NumberFormat(page.langCode).format(article.viewCount)}</span>
             </div>
           </div>
-          <div className={styles.headerRule} aria-hidden="true" data-intro="1"><span/></div>
+          <div className={styles.headerRule} aria-hidden="true"><span/></div>
         </header>
         <Article article={article} lang={lang}/>
       </Suspense>
+      <SectionProgress lang={lang} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}/>
     </div>
   )
 }

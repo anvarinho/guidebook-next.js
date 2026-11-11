@@ -9,7 +9,7 @@ import { getDictionary } from '@/lib/dictionary';
 import getAllArticles from '@/lib/getAllArticles';
 import ArticleListItem from './components/ArticleListItem';
 import { Suspense } from 'react';
-import BrandLoader from '../Components/BrandLoader';
+import LoadingSpinner from '../Components/LoadingSpinner';
 import Meta from './meta';
 
 export default async function Articles(props: { params: Promise<{ lang: Locale }> }) {
@@ -26,21 +26,21 @@ export default async function Articles(props: { params: Promise<{ lang: Locale }
     <div className={shared.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta articles={articles} lang={lang} page={page}/>
       <header className={`${shared.pageIntro} ${styles.intro}`}>
-        <div className={shared.introTitle} data-intro="0">
+        <div className={shared.introTitle}>
           <p className={shared.eyebrow}>{page.articles.name}</p>
           <h1>{page.articles.title}</h1>
         </div>
-        <div className={shared.introAside} data-intro="1">
+        <div className={shared.introAside}>
           <p className={shared.description}>{page.articles.description}</p>
           <a href="#articles" className={shared.exploreLink}>{page.articles.name}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
         </div>
       </header>
-      <Suspense fallback={<BrandLoader label={page.loading}/>}>
+      <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
         <section id="articles" className={shared.featuredSection} aria-label={page.articles.name}>
           {featured && <div className={`${shared.featuredGrid} ${styles.featuredGrid}`}>
             {articles.slice(0, 3).map((article, i) => <ArticleListItem key={article._id} article={article} lang={lang} featured order={i}/>)}
           </div>}
-          {articles.length > 3 && <div className={shared.collectionHeading} data-reveal>
+          {articles.length > 3 && <div className={shared.collectionHeading} data-motion="rise">
             <h2>{page.articles.name}</h2>
             <span className={shared.collectionLine} aria-hidden="true"/>
             <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>

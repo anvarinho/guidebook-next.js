@@ -32,6 +32,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hidden, setHidden] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [portalReady, setPortalReady] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
@@ -44,12 +45,18 @@ export default function Navigation({ lang, name, links, contactLabel }: {
   useEffect(() => { setPortalReady(true) }, [])
 
   useEffect(() => {
+    let previousY = Math.max(0, window.scrollY)
     let frame = 0
+    setScrolled(previousY > 24)
+    setHidden(false)
     const update = () => {
-      setScrolled(window.scrollY > 24)
+      const y = Math.max(0, window.scrollY)
+      setScrolled(y > 24)
+      if (y < 90) setHidden(false)
+      else if (Math.abs(y - previousY) > 6) setHidden(y > previousY)
+      if (Math.abs(y - previousY) > 6 || y < 90) previousY = y
       frame = 0
     }
-    update()
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(update) }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => { window.removeEventListener('scroll', onScroll); cancelAnimationFrame(frame) }
@@ -103,7 +110,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
 
   return (
     <>
-      <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-open={open} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} onBlur={event => {
+      <header ref={headerRef} className={styles.header} data-scrolled={scrolled} data-hidden={hidden && !open} data-open={open} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'} onFocus={() => setHidden(false)} onBlur={event => {
         const next = event.relatedTarget as Node | null
         if (!event.currentTarget.contains(next) && !navigationRef.current?.contains(next)) setOpen(false)
       }}>
@@ -119,8 +126,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
           {!isMobile && navigation}
         </div>
       </header>
-      {/* Stays mounted on mobile so it can animate closed; hidden menus are not focusable. */}
-      {portalReady && isMobile && createPortal(navigation, document.body)}
+      {portalReady && isMobile && open && createPortal(navigation, document.body)}
     </>
   )
 }

@@ -5,8 +5,8 @@
 .team h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 600; line-height: 1.1; letter-spacing: -.045em; }
 .team__container { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .team__member { position: relative; min-width: 0; overflow: hidden; border: 1px solid rgba(var(--foreground-rgb), .14); border-radius: 22px; background: rgba(var(--callout-rgb), .56); }
-.team__member_image { aspect-ratio: .86; overflow: hidden; background: rgba(var(--foreground-rgb), .06); filter: saturate(.82); }
-.team__member_image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.team__member_image { aspect-ratio: .86; overflow: hidden; background: rgba(var(--foreground-rgb), .06); }
+.team__member_image img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.82); }
 .team__member:hover img { transform: scale(1.04); filter: saturate(1); }
 .team__member_info { position: absolute; inset: auto 10px 10px; padding: 15px 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(14, 18, 20, .65); color: #fff; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
 .team .team__member_info h3 { font-size: 17px; font-weight: 500; }

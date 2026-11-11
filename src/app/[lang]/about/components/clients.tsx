@@ -8,6 +8,8 @@ import getReviews from '@/lib/getReviews'
 import Image from 'next/image'
 import Link from 'next/link'
 import { aboutContent } from '../content'
+import LoadingRing from '../../Components/LoadingRing'
+import { usePresence } from '../../Components/usePresence'
 
 interface Review {
   _id: string;
@@ -25,6 +27,7 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
   const [loading, setLoading] = useState(true)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showItems, setShowItems] = useState(2)
+  const spinner = usePresence(loading)
 
   useEffect(() => {
     let active = true
@@ -50,16 +53,16 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
   return (
     <section className={styles.testimonials} id="clients" aria-labelledby="reviews-heading">
       <div>
-        <header className={styles.header} data-reveal>
+        <header className={styles.header} data-motion="rise">
           <div><p className={styles.eyebrow}>03 / {copy.reviews}</p><h2 id="reviews-heading">{copy.reviews}</h2></div>
           {reviews.length > showItems && <div className={styles.controls}>
             <button type="button" aria-label={copy.previous} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index - showItems + reviews.length) % reviews.length)}><span aria-hidden="true"><ArrowIcon direction="left"/></span></button>
             <button type="button" aria-label={copy.next} aria-controls="review-cards" onClick={() => setCurrentIndex(index => (index + showItems) % reviews.length)}><span aria-hidden="true"><ArrowIcon direction="right"/></span></button>
           </div>}
         </header>
-        <div className={styles.testimonials_container} id="review-cards" aria-busy={loading} data-reveal>
-          {loading ? <p className={styles.status} role="status">{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> <ArrowIcon direction="up-right"/></span></Link> : visibleReviews.map((review, slot) => (
-            <figure className={styles.testimonial_card} key={`${review._id}-${slot}`}>
+        <div className={styles.testimonials_container} id="review-cards" aria-busy={loading}>
+          {spinner !== 'hidden' ? <p className={styles.status} role="status"><LoadingRing leaving={spinner === 'leaving'}/>{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> <ArrowIcon direction="up-right"/></span></Link> : visibleReviews.map((review, slot) => (
+            <figure className={styles.testimonial_card} key={`${review._id}-${slot}`} data-motion="rise">
               <span className={styles.quote} aria-hidden="true">“</span>
               <blockquote tabIndex={0} className={styles.reviewText} dir="auto"><p>{review.review}</p></blockquote>
               <figcaption className={styles.profile}>

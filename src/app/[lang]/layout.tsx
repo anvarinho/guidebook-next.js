@@ -20,8 +20,6 @@ import { getDictionary } from '@/lib/dictionary'
 import { contactInfo } from '@/lib/contactInfo'
 import ContactDialog from './contact/components/ContactDialog'
 
-const motionScript = "if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.dataset.motion='pending'"
-
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
 }
@@ -42,10 +40,8 @@ export default async function RootLayout(
   const { page } = await getDictionary(lang)
   const contact = contactInfo(page)
   return (
-    <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
       <head>
-        {/* Before first paint: allow entrance motion only with JavaScript and no reduced-motion request. */}
-        <script dangerouslySetInnerHTML={{ __html: motionScript }}/>
         <FontPreloads lang={lang}/>
         <Meta lang={lang}/>
       </head>

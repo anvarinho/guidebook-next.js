@@ -8,7 +8,7 @@ import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import getAllTours from '@/lib/getAllTours'
 import TourListItem from './components/TourListItem'
-import BrandLoader from '../Components/BrandLoader'
+import LoadingSpinner from '../Components/LoadingSpinner'
 import Meta from "./meta";
 import shared from '../places/page.module.css';
 import Link from 'next/link';
@@ -31,22 +31,22 @@ export default async function Tours(
     <div className={`${shared.main} ${shared.listingPage}`} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} tours={toursData} page={page} />
       <header className={shared.pageIntro}>
-        <div className={shared.introTitle} data-intro="0">
+        <div className={shared.introTitle}>
           <p className={shared.eyebrow}>{page.tours.name}</p>
           <h1>{page.tours.title}</h1>
         </div>
-        <div className={shared.introAside} data-intro="1">
+        <div className={shared.introAside}>
           <p className={shared.description}>{page.tours.description}</p>
           <a href="#tours" className={shared.exploreLink}>{page.tours.name}<span aria-hidden="true"><ArrowIcon direction="down"/></span></a>
         </div>
       </header>
-      <Suspense fallback={<BrandLoader label={page.loading}/>}>
+      <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
         <section id="tours" className={shared.featuredSection} aria-label={page.tours.name}>
           <div className={`${shared.featuredGrid} ${styles.featuredGrid}`}>
             {toursData.slice(0, 3).map((tour, i) => <TourListItem key={tour._id} tour={tour} lang={lang} featured order={i}/>)}
           </div>
           {toursData.length > 3 && <>
-            <div className={shared.collectionHeading} data-reveal>
+            <div className={shared.collectionHeading} data-motion="rise">
               <h2>{page.tours.name}</h2>
               <span className={shared.collectionLine} aria-hidden="true"/>
               <span aria-hidden="true"><ArrowIcon direction="down-left"/></span>
@@ -58,14 +58,14 @@ export default async function Tours(
         </section>
       </Suspense>
       <section className={styles.story} aria-labelledby="tour-story-title">
-        <div data-reveal><h2 id="tour-story-title">{page.tours.subtitle}</h2></div>
+        <div data-motion="rise"><h2 id="tour-story-title">{page.tours.subtitle}</h2></div>
         <div className={styles.storyCopy}>
           {page.tours.description1.split(/\r?\n\s*\r?\n/).filter(Boolean).map((paragraph, i) => (
-            <div key={i} data-reveal><p>{paragraph}</p></div>
+            <div key={i} data-motion="rise"><p>{paragraph}</p></div>
           ))}
         </div>
       </section>
-      <div className={shared.contactPanel} data-reveal>
+      <div className={shared.contactPanel} data-motion="rise">
         <div><h2>{aboutContent[lang].invitation}</h2><p>{aboutContent[lang].invitationBody}</p></div>
         <Link href={`/${lang}/contact`}>{page.about.buttons.contact_us}<span aria-hidden="true"><ArrowIcon direction="up-right"/></span></Link>
       </div>
