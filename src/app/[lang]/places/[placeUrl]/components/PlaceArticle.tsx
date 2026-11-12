@@ -57,7 +57,7 @@ export default async function PlaceArticle({ promise, lang }: {
         </div>
       </header>
       <div data-motion="leave">
-        <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detail/>
+        <PlaceGallery key={`${place.url}:${lang}`} blurDataURLs={getBlurredDataUrls(place.images)} images={place.images} name={place.name} lang={lang} detail transitionName={`place-${place.url}`}/>
       </div>
 
       <div className={styles.articleLayout} data-motion="takeover">

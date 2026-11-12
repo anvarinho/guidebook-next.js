@@ -33,13 +33,29 @@ async function main() {
     return response.json();
   }
   if (process.argv.includes('--remote')) {
-    for (const route of ['places/more?lang=en&offset=0&limit=200', 'tours/?lang=en', 'articles/?lang=en']) {
-      const data = await json(route);
-      collect(data);
+    // The content API caps places/more at 100 per page, so walk the offsets.
+    const pages = async () => {
+      const places = [];
+      for (let offset = 0; ; offset += 100) {
+        const data = await json(`places/more?lang=en&offset=${offset}&limit=100`);
+        collect(data);
+        const batch = data.places || [];
+        places.push(...batch);
+        if (batch.length < 100 || (data.count && places.length >= data.count)) return places;
+      }
+    };
+    const lists = [
+      ['places', await pages()],
+      ...await Promise.all(['tours', 'articles'].map(async name => {
+        const data = await json(`${name}/?lang=en`);
+        collect(data);
+        return [name, Array.isArray(data) ? data : data[name] || []];
+      })),
+    ];
+    for (const [name, items] of lists) {
       // These listing responses omit day/paragraph images.
-      const items = Array.isArray(data) ? data : data.places || data.tours || data.articles || [];
       for (const item of items) {
-        try { collect(await json(`${route.split('/')[0]}/${encodeURIComponent(item.url)}?lang=en`)); }
+        try { collect(await json(`${name}/${encodeURIComponent(item.url)}?lang=en`)); }
         catch { failed++; console.warn(`Could not read detail: ${item.url}`); }
       }
     }

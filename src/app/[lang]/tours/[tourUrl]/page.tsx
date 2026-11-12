@@ -152,10 +152,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     startingPrice === null ? "" : `${tourPage.from} $${startingPrice}`,
   );
   const pageUrl = absoluteSiteUrl(`${lang}/tours/${encodeURIComponent(tour.url)}`);
-  const images = tour.images.slice(0, 4).map(image => ({
-    url: absoluteSiteUrl(image),
-    alt: `${tour.title} in Kyrgyzstan`,
-  }));
+  // Share images come from ./opengraph-image.tsx.
   return {
     metadataBase: new URL(`${siteUrl}/`),
     title: tour.title,
@@ -168,7 +165,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       description: description,
       url: pageUrl,
       siteName: "GuideBook of Kyrgyzstan",
-      images,
       locale: page.langCode.replace("-", "_"),
       type: "website",
     },
@@ -181,7 +177,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       title: tour.title,
       description: description,
       creator: "@anvarinho",
-      images: images.map(image => image.url),
     },
     robots: {
       index: true,

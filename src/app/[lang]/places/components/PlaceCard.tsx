@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ViewTransition } from 'react';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import WeatherIcon from '../../Components/weather/WeatherIcon';
 import Link from 'next/link';
@@ -18,6 +19,8 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
     <Link data-place-detail-card={detailPage || undefined} data-motion={priority ? undefined : 'rise'} data-motion-frame
       href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
+        {/* Related cards on a detail page may repeat a place, and names must be unique, so only list cards morph. */}
+        <ViewTransition name={detailPage ? undefined : `place-${place.url}`} share="morph" default="none">
         <div className={styles.imageFrame} data-motion={priority ? undefined : 'settle'}>
         <Image
           src={`${process.env.NEXT_PUBLIC_URL}/${place.images[0]}`}
@@ -32,6 +35,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
           unoptimized={process.env.NODE_ENV === 'development'}
         />
         </div>
+        </ViewTransition>
         {featured && <span className={styles.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
         {place.weather?.temp && (
           <span className={styles.weather}>

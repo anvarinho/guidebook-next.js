@@ -3,6 +3,7 @@ import additionalLabels from '@/translations/ui/app-lang-places-placeUrl-compone
 import ArrowIcon from '@/components/ArrowIcon';
 import { useCallback, useEffect, useRef, useState, type PointerEvent, type SyntheticEvent } from 'react';
 import Image from 'next/image';
+import { ViewTransition } from 'react';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import type { Locale } from '@/lib/i18n.config';
 import styles from '../page.module.css';
@@ -23,8 +24,8 @@ const labels = {
 
 type PendingPhoto = { index: number; token: number };
 
-export default function PlaceGallery({ images, name, lang, priority = true, blurDataURLs = [], detail = false }: {
-  images: string[]; name: string; lang: Locale; priority?: boolean; blurDataURLs?: string[]; detail?: boolean;
+export default function PlaceGallery({ images, name, lang, priority = true, blurDataURLs = [], detail = false, transitionName }: {
+  images: string[]; name: string; lang: Locale; priority?: boolean; blurDataURLs?: string[]; detail?: boolean; transitionName?: string;
 }) {
   const [index, setIndex] = useState(0);
   const [pending, setPending] = useState<PendingPhoto | null>(null);
@@ -125,6 +126,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
         aria-busy={detail ? pending !== null : undefined}
         tabIndex={detail && images.length > 1 ? 0 : undefined}
         onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => { pointerStart.current = null; }}>
+        <ViewTransition name={transitionName} share="morph" default="none">
         <div className={styles.galleryPhotoViewport} data-motion={priority ? undefined : 'settle'}>
           <div className={styles.galleryPhoto} key={`photo-${index}`}>
             <Image src={imageUrl(images[index])} alt={`${name} — ${t[3]} ${index + 1}`}
@@ -139,6 +141,7 @@ export default function PlaceGallery({ images, name, lang, priority = true, blur
               onError={() => failPendingPhoto(pending)} />
           </div>}
         </div>
+        </ViewTransition>
         {images.length > 1 && <>
           <button type="button" className={`${styles.galleryControl} ${styles.previous}`}
             onClick={() => move(-1)} aria-label={t[1]}>

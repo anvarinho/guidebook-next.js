@@ -58,10 +58,7 @@ export async function generateMetadata(
     if (!place) notFound()
     const pageUrl = absoluteSiteUrl(`${lang}/places/${encodeURIComponent(place.url)}`)
     const description = metaDescription(place.description)
-    const images = place.images.slice(0, 4).map(image => ({
-        url: absoluteSiteUrl(image),
-        alt: `${place.name} in ${place.region}, Kyrgyzstan`,
-    }))
+    // Share images come from ./opengraph-image.tsx.
     return {
         metadataBase: new URL(`${siteUrl}/`),
         title: place.title || `${place.name} in ${place.region}, Kyrgyzstan`,
@@ -74,7 +71,6 @@ export async function generateMetadata(
             description: description,
             url: pageUrl,
             siteName: 'GuideBook of Kyrgyzstan',
-            images: images,
             locale: page.langCode.replace("-", "_"),
             type: 'website',
         },
@@ -87,7 +83,6 @@ export async function generateMetadata(
             title: place.title,
             description: description,
             creator: "@anvarinho",
-            images: images.map(image => image.url),
         },
         robots: {
             index: true,

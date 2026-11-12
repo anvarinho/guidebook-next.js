@@ -1,4 +1,3 @@
-import { articleImageAlt } from '@/lib/articleImageAlt';
 import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
@@ -76,10 +75,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const article = await getArticle(articleUrl, lang)
   if (!article) notFound()
   const { page } = await getDictionary(lang)
-  const imagePath = article.image || article.paragraphs.find((paragraph: Paragraph) => paragraph.image)?.image
   const description = metaDescription(article.subtitle.trim() || article.paragraphs[0]?.text)
   const pageUrl = absoluteSiteUrl(`${lang}/articles/${encodeURIComponent(article.url)}`)
-  const images = imagePath ? [{ url: absoluteSiteUrl(imagePath), alt: articleImageAlt(imagePath, lang, article.title) }] : []
+  // Share images come from ./opengraph-image.tsx.
   const publishedTime = new Date(article.createdAt).toISOString()
   return {
     metadataBase: new URL(`${siteUrl}/`),
@@ -94,7 +92,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       description,
       url: pageUrl,
       siteName: 'GuideBook of Kyrgyzstan',
-      images,
       locale: page.langCode.replace('-', '_'),
       type: 'article',
       publishedTime,
@@ -105,11 +102,10 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       languages: localizedAlternates('articles', article.url),
     },
     twitter: {
-      card: images.length ? 'summary_large_image' : 'summary',
+      card: 'summary_large_image',
       title: article.title,
       description,
       creator: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : '@anvarinho',
-      images: images.map(image => image.url),
     },
     robots: {
       index: true,
