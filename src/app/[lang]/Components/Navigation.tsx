@@ -126,7 +126,7 @@ export default function Navigation({ lang, name, links, contactLabel }: {
           {!isMobile && navigation}
         </div>
       </header>
-      {portalReady && isMobile && open && createPortal(navigation, document.body)}
+      {portalReady && isMobile && createPortal(navigation, document.body)}
     </>
   )
 }

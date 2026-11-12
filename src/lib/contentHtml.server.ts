@@ -29,6 +29,8 @@ export function renderContentHtml(content: string, { lang = 'en', classes = {}, 
     allowedSchemes: ['http', 'https', 'mailto', 'tel'],
     allowedSchemesByTag: { img: ['http', 'https'] },
     allowProtocolRelative: false,
+    // A link with no text and no image has no accessible name (empty translation/content gap).
+    exclusiveFilter: frame => frame.tag === 'a' && !frame.text.trim() && !frame.mediaChildren.length,
     transformTags: {
       h1: 'h2',
       a: (tagName, attributes) => {

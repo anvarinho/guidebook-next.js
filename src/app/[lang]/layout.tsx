@@ -8,7 +8,7 @@ import { Locale, i18n } from '@/lib/i18n.config'
 import { localeMetadata } from '@/lib/localeMetadata'
 import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
-import Analytics from './Components/Analytics'
+// import Analytics from './Components/Analytics'
 import FontPreloads from './Components/FontPreloads'
 
 import Navbar from './Components/Navbar'
@@ -47,7 +47,8 @@ export default async function RootLayout(
       </head>
 
       <body className={['ru', 'kz', 'kg', 'tg', 'uk', 'mn', 'be', 'sr', 'bg', 'mk'].includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
-        {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>}
+        {/* Google Analytics disabled (PageSpeed: unused JS). Re-enable:
+        {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>} */}
         <LanguageShell
           loadingLabel={page.loading}
           navbar={<Navbar lang={lang}/>}

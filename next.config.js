@@ -18,6 +18,12 @@ const contentSecurityPolicy = [
 ].join('; ');
 
 const nextConfig = {
+  turbopack: {
+    resolveAlias: {
+      // Next's polyfill-module ships Array.at/flat, Object.hasOwn, etc. that every supported browser already has.
+      '../build/polyfills/polyfill-module': './src/lib/polyfill-module-lite.js',
+    },
+  },
   // Keep hot public pages in RAM without consuming the default 50 MiB cache.
   cacheMaxMemorySize: 16 * 1024 * 1024,
   compress: true,
@@ -84,6 +90,8 @@ const nextConfig = {
   experimental: {
     // Prerendering every locale must fit the content API's request limit.
     cpus: 2,
+    // Only ~22 KiB of CSS per page: inline it so it stops blocking first render.
+    inlineCss: true,
     staticGenerationMaxConcurrency: 1,
   },
 };
