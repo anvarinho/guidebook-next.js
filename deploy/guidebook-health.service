@@ -1,6 +1,6 @@
 [Unit]
 Description=Sample GuideBook VPS health metrics and emit threshold alerts
-After=network.target mongod.service nginx.service pm2-root.service
+After=network.target mongod.service nginx.service
 
 [Service]
 Type=oneshot

@@ -1,0 +1,33 @@
+[Unit]
+Description=GuideBook Next.js frontend (port %i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=guidebook-web
+Group=guidebook-web
+WorkingDirectory=/var/www/frontend
+Environment=NODE_ENV=production
+Environment=HOME=/var/lib/guidebook-web
+# Builds run as root; hand the output back to the runtime user (was a manual step under pm2).
+ExecStartPre=+/bin/chown -R guidebook-web:guidebook-web /var/www/frontend/.next-build
+ExecStart=/usr/local/lib/guidebook-node/bin/node --max-old-space-size=256 node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port %i
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+KillSignal=SIGTERM
+LimitCORE=0
+# pm2 restarted at 320M; systemd kills at the hard limit instead.
+MemoryHigh=320M
+MemoryMax=400M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/www/frontend/.next-build /var/lib/guidebook-web
+RestrictSUIDSGID=true
+ProtectKernelTunables=true
+
+[Install]
+WantedBy=multi-user.target

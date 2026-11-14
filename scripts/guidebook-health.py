@@ -84,48 +84,34 @@ def read_meminfo() -> dict[str, int]:
     return values
 
 
-def pm2_binary() -> str | None:
-    result = run(['/bin/bash', '-lc', 'command -v pm2'], 10)
-    return result.stdout.strip() if result.returncode == 0 and result.stdout.strip() else shutil.which('pm2')
-
-
-def sample_pm2(state: dict, now: int) -> None:
-    binary = pm2_binary()
-    if not binary:
-        emit_alert('pm2_metrics_unavailable', True, {'errorCode': 'pm2_not_found'})
-        return
-    result = run([binary, 'jlist'], 15)
+def sample_frontend_service(state: dict, now: int) -> None:
+    unit = 'guidebook-frontend@3000.service'
+    result = run(['systemctl', 'show', unit, '-p', 'ActiveState', '-p', 'NRestarts'], 10)
     if result.returncode != 0:
-        emit_alert('pm2_metrics_unavailable', True, {'errorCode': 'pm2_query_failed'})
+        emit_alert('frontend_service_unavailable', True, {'errorCode': 'systemctl_failed'})
         return
+    emit_alert('frontend_service_unavailable', False, {})
+    props = dict(line.split('=', 1) for line in result.stdout.splitlines() if '=' in line)
+    emit_alert('frontend_down', props.get('ActiveState') != 'active', {
+        'unit': unit,
+        'state': props.get('ActiveState'),
+    })
     try:
-        processes = json.loads(result.stdout)
-    except json.JSONDecodeError:
-        emit_alert('pm2_metrics_unavailable', True, {'errorCode': 'pm2_json_invalid'})
-        return
-    emit_alert('pm2_metrics_unavailable', False, {})
-    previous = state.get('pm2RestartCounts', {})
-    events = state.get('pm2RestartEvents', {})
-    current: dict[str, int] = {}
-    for process in processes:
-        env = process.get('pm2_env') or {}
-        name = str(env.get('name') or '')
-        if not name or name.startswith('pm2-'):
-            continue
-        count = int(env.get('restart_time') or 0)
-        current[name] = count
-        old = previous.get(name)
-        if isinstance(old, int) and count > old:
-            events.setdefault(name, []).extend([now] * min(count - old, 20))
-        events[name] = [stamp for stamp in events.get(name, []) if now - stamp <= 900]
-        restarted = len(events[name]) >= 3
-        emit_alert(f'pm2_restarts_{name}', restarted, {
-            'process': name,
-            'restartCount15m': len(events[name]),
-            'threshold': 3,
-        })
-    state['pm2RestartCounts'] = current
-    state['pm2RestartEvents'] = events
+        count = int(props.get('NRestarts') or 0)
+    except ValueError:
+        count = 0
+    old = state.get('frontendRestartCount')
+    events = state.get('frontendRestartEvents', [])
+    if isinstance(old, int) and count > old:
+        events.extend([now] * min(count - old, 20))
+    events = [stamp for stamp in events if now - stamp <= 900]
+    emit_alert('frontend_restarts', len(events) >= 3, {
+        'unit': unit,
+        'restartCount15m': len(events),
+        'threshold': 3,
+    })
+    state['frontendRestartCount'] = count
+    state['frontendRestartEvents'] = events
 
 
 def sample_nginx(now: dt.datetime) -> None:
@@ -218,7 +204,7 @@ def check() -> None:
         'usedPercent': swap_percent,
         'thresholdPercent': 85,
     })
-    sample_pm2(state, now)
+    sample_frontend_service(state, now)
     sample_nginx(dt.datetime.now(dt.timezone.utc))
     sample_mongo(state, now)
     save_state(state)

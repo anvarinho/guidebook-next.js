@@ -1,6 +1,6 @@
 [Unit]
 Description=Bound Guidebook regenerable runtime caches
-After=pm2-root.service
+After=guidebook-frontend@3000.service
 
 [Service]
 Type=oneshot
