@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { trafficSourceQuery } from '@/lib/trafficSource';
+import { beaconUrl, trafficSourceQuery } from '@/lib/trafficSource';
 
 /** Counts a page view once the page has been visible for a moment (bots rarely get that far). */
 export default function RealUserBeacon() {
@@ -24,7 +24,7 @@ export default function RealUserBeacon() {
             query = trafficSourceQuery(document.referrer, location.hostname, location.search);
           }
         } catch { /* storage blocked: skip the source rather than repeat it */ }
-        const url = '/rum' + query;
+        const url = beaconUrl(location.pathname, query);
         if (!navigator.sendBeacon?.(url)) fetch(url, { method: 'POST', keepalive: true }).catch(() => {});
       } catch { /* counting must never break the page */ }
     };

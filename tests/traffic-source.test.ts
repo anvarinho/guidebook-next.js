@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { trafficSourceQuery } from '../src/lib/trafficSource';
+import { beaconUrl, trafficSourceQuery } from '../src/lib/trafficSource';
 
 const OWN = 'central-asia.live';
 
@@ -31,4 +31,18 @@ test('referrer and campaign combine; paths and search terms never leak', () => {
   const q = trafficSourceQuery('https://duckduckgo.com/?q=private+search', OWN, '?utm_source=ad');
   assert.equal(q, '?ref=duckduckgo.com&utm_source=ad');
   assert.ok(!q.includes('private'));
+});
+
+test('every beacon names its page; the source is appended only when present', () => {
+  assert.equal(beaconUrl('/he/articles/best-time-to-visit-kyrgyzstan'), '/rum?p=/he/articles/best-time-to-visit-kyrgyzstan');
+  assert.equal(beaconUrl('/en', '?ref=google.com&utm_source=ad'), '/rum?p=/en&ref=google.com&utm_source=ad');
+  assert.equal(beaconUrl('/'), '/rum?p=/');
+});
+
+test('unsafe or oversized paths are left out instead of being logged', () => {
+  assert.equal(beaconUrl('/en/places/x?token=secret'), '/rum');
+  assert.equal(beaconUrl('/en/places/a b'), '/rum');
+  assert.equal(beaconUrl('/en/"},{"x":"1'), '/rum');
+  assert.equal(beaconUrl('/' + 'a'.repeat(300)), '/rum');
+  assert.equal(beaconUrl('/en/x&ref=evil.com', '?ref=google.com'), '/rum?ref=google.com');
 });
