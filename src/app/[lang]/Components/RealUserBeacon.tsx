@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { trafficSourceQuery } from '@/lib/trafficSource';
 
 /** Counts a page view once the page has been visible for a moment (bots rarely get that far). */
 export default function RealUserBeacon() {
@@ -14,7 +15,17 @@ export default function RealUserBeacon() {
       if (sentFor.current === pathname) return;
       sentFor.current = pathname;
       try {
-        if (!navigator.sendBeacon?.('/rum')) fetch('/rum', { method: 'POST', keepalive: true }).catch(() => {});
+        // The traffic source is sent once per visit: the browser keeps reporting the
+        // original referrer during in-site navigation, which would repeat it.
+        let query = '';
+        try {
+          if (!sessionStorage.getItem('gb_src')) {
+            sessionStorage.setItem('gb_src', '1');
+            query = trafficSourceQuery(document.referrer, location.hostname, location.search);
+          }
+        } catch { /* storage blocked: skip the source rather than repeat it */ }
+        const url = '/rum' + query;
+        if (!navigator.sendBeacon?.(url)) fetch(url, { method: 'POST', keepalive: true }).catch(() => {});
       } catch { /* counting must never break the page */ }
     };
     const whenVisible = () => { if (document.visibilityState === 'visible') send(); };
