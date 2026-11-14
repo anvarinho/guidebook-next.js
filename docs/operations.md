@@ -15,8 +15,9 @@ response body of 1,179,799 bytes. Sitemap fetches and responses revalidate hourl
 Visible content pages retain their existing 60-second revalidation.
 
 The image optimizer has a native 256 MiB disk budget. Node retains its 384 MiB
-old-space limit and PM2's 512 MiB RSS restart threshold, and listens on
-127.0.0.1:3000 so requests pass through Nginx.
+old-space limit (the systemd unit sets 256 MiB; MemoryHigh 320 MiB and MemoryMax
+400 MiB bound the whole process) and listens on 127.0.0.1:3000 so requests pass
+through Nginx.
 
 ## Scheduled runtime-cache budgets
 
@@ -135,7 +136,7 @@ copies have since been removed during storage cleanup.
 ## Production layout and deployment
 
 The application runs directly from `/var/www/frontend`. Its production output
-is the real directory `.next-build/`, with one PM2 process named `frontend`.
+is the real directory `.next-build/`, served by the systemd template unit `guidebook-frontend@3000` (`deploy/guidebook-frontend@.service`).
 There is no `current` link or `releases/` directory. Cache maintenance targets
 the project root. Runtime state, logs and database backups live outside Git.
 
@@ -143,8 +144,9 @@ Use the Node version required by package.json for installation and builds. Stop
 the frontend and cache timer before replacing the production build in this flat
 layout; installing or building over the running directory can remove active
 files. Build and dependencies must use the same package-lock.json. Start the
-application with ecosystem.config.js, save PM2's process list, verify the public
-site and authentication, then resume cache maintenance.
+application with `systemctl start guidebook-frontend@3000` (the unit re-owns
+`.next-build` on start), verify the public site and authentication, then resume
+cache maintenance. Logs: `journalctl -u guidebook-frontend@3000`.
 
 The November 1 build.before copies described by the historical incident were
 removed during storage cleanup and cannot be used for rollback. Preserve
@@ -157,7 +159,7 @@ The health timer records deduplicated threshold events in
 `/var/log/guidebook-health/alerts.jsonl` and the system journal. Directory size
 snapshots are recorded daily in `directory-sizes.jsonl`; MongoDB size is sampled
 hourly and compared with a 24-hour baseline. Local warning thresholds are 85%
-root-disk use, less than 10% available memory, 85% swap use, three PM2 restarts
+root-disk use, less than 10% available memory, 85% swap use, three frontend restarts
 within 15 minutes, and at least five or 5% HTTP 5xx responses in five minutes.
 MongoDB growth alerts at the larger of 100 MiB or 25% per day.
 

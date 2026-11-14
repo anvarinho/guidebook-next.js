@@ -184,7 +184,7 @@ The flagged compatibility polyfills are supplied by Next.js. They have not been 
 
 Public place, tour, and article detail pages now generate on demand and cache their complete HTML/RSC output for 60 seconds. Previously only fetched data was cached, so React rendering, content validation, and Markdown sanitization repeated on every visit. Admin/auth/contact remain dynamic. The server-only content API uses the verified loopback endpoint on port 4001 instead of public HTTPS. The active working directory remains `/var/www/frontend`.
 
-The Next.js RAM cache is bounded at 16 MiB, the single PM2 frontend uses a 256 MiB V8 old-space limit, and PM2 checks for a 512 MiB RSS restart threshold. The existing image cache was carried forward to avoid re-encoding all images after deployment. Appearance, image quality, localization, SEO, and the one-minute revalidation target are preserved.
+The Next.js RAM cache is bounded at 16 MiB, the single systemd-managed frontend uses a 256 MiB V8 old-space limit, with systemd limits of 320 MiB (MemoryHigh) and 400 MiB (MemoryMax). The existing image cache was carried forward to avoid re-encoding all images after deployment. Appearance, image quality, localization, SEO, and the one-minute revalidation target are preserved.
 
 Measurements used 30 sequential requests directly to `http://127.0.0.1:3000/en/places/bishkek-city`, after warming the route. CPU is the frontend process's Linux user/system CPU ticks converted using `CLK_TCK`; RSS is read from `/proc/PID/status`. These are small production samples, not a saturation load test.
 

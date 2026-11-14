@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { i18n } from '@/lib/i18n.config'
 
-const rootRoutes = new Set(['admin', 'login', 'privacy-policy', 'website-creation-bishkek'])
+const rootRoutes = new Set(['admin', 'login', 'privacy-policy', 'website-creation-bishkek', 'rum'])
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl

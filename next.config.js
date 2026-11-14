@@ -79,7 +79,8 @@ const nextConfig = {
     maximumDiskCacheSize: 256 * 1024 * 1024,
     // WebP costs less CPU to encode on a cold image cache than AVIF.
     formats: ["image/webp"],
-    minimumCacheTTL: 86400,
+    // /uploads files are replaced by new names, not edited in place; keep optimized copies a week.
+    minimumCacheTTL: 604800,
     deviceSizes: [384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     // Keep thumbnail widths and a compact 384px source available to content images.
     imageSizes: [32, 48, 64, 72, 88, 96, 128, 144, 176, 216, 256, 264, 384],

@@ -10,6 +10,7 @@ import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
 // import Analytics from './Components/Analytics'
 import FontPreloads from './Components/FontPreloads'
+import RealUserBeacon from './Components/RealUserBeacon'
 
 import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
@@ -43,6 +44,7 @@ export default async function RootLayout(
     <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
       <head>
         <FontPreloads lang={lang}/>
+        <RealUserBeacon/>
         <Meta lang={lang}/>
       </head>
 
@@ -66,13 +68,6 @@ export default async function RootLayout(
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
-      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
-    ],
-    apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-  },
   title: {
     default: "GuideBook of Kyrgyzstan",
     template: `%s | GuideBook of Kyrgyzstan`
@@ -89,14 +84,6 @@ export const metadata: Metadata = {
     description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
     url: `${siteUrl}/en/`,
     type: "website",
-    images:{
-      url: `${siteUrl}/karakolcablelift.jpg`,
-      secureUrl: `${siteUrl}/karakolcablelift.jpg`,
-      width: 800,
-      height: 600,
-      alt: "Karakol Cable Lift",
-      type:"image/jpeg"
-    },
     locale: 'en_US',
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
@@ -116,15 +103,6 @@ export const metadata: Metadata = {
       should_fallback: true,
     }
   },
-  twitter:{
-    card:"summary_large_image",
-    title: "Welcome to Kyrgyzstan!",
-    description: 'Discover the unexplored beauty of Kyrgyzstan with our comprehensive Guidebook, your passport to an enchanting land of natural wonders, vibrant culture, and timeless traditions. This meticulously crafted guide is your trusted companion for an unforgettable expedition through this Central Asian gem.',
-    images:{
-      url: `${siteUrl}/uploads/bozteri.jpg`,
-      width: 800,
-      height: 600,
-      alt: "Boz-Teri valley in Kyrgyzstan"
-    }
-  }
+  // Title, description and image come from each page (or the generated default card).
+  twitter: { card: "summary_large_image" },
 }

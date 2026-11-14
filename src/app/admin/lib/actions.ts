@@ -100,6 +100,7 @@ export async function saveContent(_state: ActionResult, formData: FormData): Pro
   revalidatePath(`/admin/${kind}`);
   for (const language of i18n.locales) {
     revalidatePath(`/${language}/${kind}/${url}`);
+    revalidatePath(`/${language}/${kind}/${url}/opengraph-image`);
     revalidatePath(`/${language}/${kind}`);
   }
   return { ok:true,message:'Content saved. Changes may take a moment to appear on the website.' };

@@ -4,6 +4,8 @@ import { ogContentType, ogSize, renderFallbackCard, renderOgCard } from '@/lib/o
 export const alt = 'Article about Kyrgyzstan';
 export const size = ogSize;
 export const contentType = ogContentType;
+// Cards are rendered from CMS content; refresh hourly (admin saves revalidate sooner).
+export const revalidate = 3600;
 
 export default async function Image(props: { params: Promise<{ articleUrl: string }> }) {
   const { articleUrl } = await props.params;

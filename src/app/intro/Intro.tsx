@@ -10,6 +10,7 @@ import HeroEagle from "./HeroEagle";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n.config";
 import type { IntroMessages } from "./translations";
+import "./intro-fonts.css";
 import "./intro.css";
 import "./intro-content.css";
 

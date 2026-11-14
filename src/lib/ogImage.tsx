@@ -63,5 +63,5 @@ export async function renderOgCard({ eyebrow, title, detail, image }: CardOption
 }
 
 export function renderFallbackCard() {
-  return renderOgCard({ eyebrow: 'Kyrgyzstan travel guide', title: 'GuideBook of Kyrgyzstan' });
+  return renderOgCard({ eyebrow: 'Kyrgyzstan travel guide', title: 'GuideBook of Kyrgyzstan', detail: 'Places, tours and culture of Central Asia' });
 }

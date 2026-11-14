@@ -165,7 +165,7 @@ npm start
 - Configure NextAuth and the admin database as described in [docs/configuration.md](docs/configuration.md). Configure the separate contact inbox using [docs/contact.md](docs/contact.md).
 - Add contact, analytics, and map settings as needed.
 
-Development output lives in `.next`; production output lives in the real `.next-build/` directory in the project root. Production uses one PM2 process, `frontend`; see [operations](docs/operations.md) for cache budgets, monitoring, backups, and deployment.
+Development output lives in `.next`; production output lives in the real `.next-build/` directory in the project root. Production runs one systemd service, `guidebook-frontend@3000`; see [operations](docs/operations.md) for cache budgets, monitoring, backups, and deployment.
 
 ---
 

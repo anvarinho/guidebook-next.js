@@ -9,7 +9,7 @@ fixes; see the [maintainer security update](https://better-auth.com/blog/securit
 
 ## Configure production
 
-Run commands from `/var/www/frontend` with the same Node 22+ runtime used by PM2.
+Run commands from `/var/www/frontend` with the same Node 22+ runtime used by the `guidebook-frontend@3000` service.
 Keep these values in the ignored `.env.local` or the deployment secret manager:
 
 ```dotenv
@@ -44,7 +44,7 @@ Before unique user indexes are created, resolve existing duplicates through a
 separate reviewed operation; these tools never delete duplicate records.
 
 After review, run lint, tests and build with the real production environment,
-then `pm2 restart frontend --update-env` using the installed PM2 Node runtime.
+then `systemctl restart guidebook-frontend@3000` so the new environment is read.
 Keep the working directory `/var/www/frontend`. Test login, logout, and an
 authorized edit on staging before applying production account/data changes.
 
