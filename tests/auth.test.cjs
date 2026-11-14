@@ -130,7 +130,7 @@ test('every admin data function authorizes before touching the database', async 
     if (typeof fn !== 'function') continue;
     await assert.rejects(fn(), /Unauthorized/, name);
   }
-  assert.equal(checks, 10);
+  assert.equal(checks, 9);
   assert.equal(connections, 0);
 });
 

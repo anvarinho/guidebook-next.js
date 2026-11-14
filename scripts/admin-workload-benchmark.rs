@@ -22,7 +22,7 @@ fn main(){
     let cookie=fs::read_to_string(&args[3]).unwrap();let port=args.get(4).map(String::as_str).unwrap_or("3218");
     let ticks=std::process::Command::new("getconf").arg("CLK_TCK").output().unwrap();
     let hz:f64=String::from_utf8(ticks.stdout).unwrap().trim().parse().unwrap();
-    for path in ["/admin","/admin/places?sort=views","/admin/reports"]{
+    for path in ["/admin","/admin/places?sort=views"]{
         for _ in 0..5{request(port,path,&cookie)}
         let n=cpu(node);let m=cpu(mongo);let start=Instant::now();
         for _ in 0..20{request(port,path,&cookie)}

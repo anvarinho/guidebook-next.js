@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef } from 'react';
 import Icon from './Icon';
-const links = [['/admin','Overview','overview'],['/admin/places','Places','places'],['/admin/tours','Tours','tours'],['/admin/articles','Articles','articles'],['/admin/users','Team & users','users'],['/admin/reports','Reports','reports']];
+const links = [['/admin','Overview','overview'],['/admin/places','Places','places'],['/admin/tours','Tours','tours'],['/admin/articles','Articles','articles'],['/admin/users','Team & users','users']];
 export default function AdminShell({ children, user, logoutAction }: { children: React.ReactNode; user: { username: string }; logoutAction: () => Promise<void> }) {
   const pathname = usePathname();
   const drawer = useRef<HTMLDialogElement>(null);

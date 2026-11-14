@@ -38,7 +38,7 @@ Run `nginx -t` before reloading Nginx. No live configuration has been changed.
 
 MongoDB permissions: find/insert/update/createIndex on users; find/insert/remove/
 createIndex on admin_sessions; find/insert/update/createIndex on admin_login_limits;
-find/update on places, tours, articles; and find on statistics. Counts use find
+find/update on places, tours, articles. Counts use find
 permission. Provision authenticated access and acknowledged journaled majority writes.
 Before unique user indexes are created, resolve existing duplicates through a
 separate reviewed operation; these tools never delete duplicate records.
@@ -88,8 +88,7 @@ exists. Missing configuration and storage failures also fail closed.
   direct access to Next.js is blocked. Never trust arbitrary X-Forwarded-For.
   When using the reviewed Nginx fragment and restricted ingress, set it to
   `x-admin-client-ip`; configure any CDN real-IP trust separately.
-- Lists load 20 projected records per page; reports omit stored IP/user-agent
-  details. Overview cards show actual collection counts. Content editing preserves
+- Lists load 20 projected records per page. Overview cards show actual collection counts. Content editing preserves
   untranslated values, paragraph images/links, URLs and unrelated fields.
 - Native modal navigation supports Escape, focus trapping/restoration and active
   links. Forms have labels, pending feedback and visible errors. Reduced motion
@@ -97,7 +96,7 @@ exists. Missing configuration and storage failures also fail closed.
 
 ## Editorial overview
 
-See [admin.md#overview-metrics-and-reports](admin.md#overview-metrics-and-reports) for metric definitions, query budgets,
+See [admin.md#overview-metrics](admin.md#overview-metrics) for metric definitions, query budgets,
 server filters, editor previews, index review and verification of the editorial
 workspace redesign. It requires no new environment variables or permissions.
 
@@ -126,7 +125,7 @@ time and process RSS, not browser rendering, bcrypt throughput, database memory 
 production load. See performance.md for the measured before/after results.
 
 
-## Overview metrics and reports
+## Overview metrics
 
 Implemented locally; not deployed. No production reads, data writes, account
 changes, indexes, or migrations were performed for this redesign. Authentication,
@@ -135,52 +134,26 @@ No new packages or environment variables are required.
 
 ## Metrics and source records
 
-The statistics reader was designed after inspecting the sibling Rust backend's
-`src/statistics.rs`, `src/content.rs` and `src/db.rs`. It supports these persisted
-schemas without assuming that every deployed backend is on the same version:
+The overview reads the content collections directly. The admin no longer shows
+traffic or response statistics: the Rust backend's `statistics` collection and its
+`stats-ingest` job were removed, and traffic figures now come from the nginx access
+log (including the `POST /rum` real-user beacon).
 
 | Display | Calculation and scope |
 | --- | --- |
 | Collection cards | Current document counts for places, tours, articles and users. Not publication counts: the data has no verified publication-status field. |
 | English checklist | Required nonblank English text plus a nonblank image path. Places: name/title/description. Tours: title/description. Articles: title and text in every paragraph, at least one paragraph. Not editorial approval or image URL availability. |
 | Translation matrix | Same editorial text checks per locale, without the image requirement. Plain strings count only for English. No fallback English is counted as a translation. |
-| Recorded API responses | Schema v2: sum the eight response counters in each valid route row. The responseClasses array must match the Rust schema. Legacy records: one response per valid integer statusCode, 100–599. Unknown versions/malformed counters are excluded, with a warning for matching dated windows. |
-| Error rate | Recorded 4xx and 5xx responses divided by all recorded responses. Includes explicit 429/503/504 buckets. No denominator means no rate. |
-| Response comparison | Percentage difference in recorded totals against an equal preceding period. Hidden for incomplete current UTC days, zero baseline, insufficient retained history or unsupported records. Earliest retained timestamp is only an availability check, not proof that no windows are missing. |
-| Daily chart and route ranking | Stored response counts, not the number of window documents. Windows belong to their completion timestamp's UTC date. Only known backend route templates are returned; unknown paths become “Other API routes.” |
 | Stored view leaders | Existing cumulative nonnegative integer viewCount counters, independent of date filters. Not unique visitors or business conversions. |
 | Recently updated | Existing BSON Date updatedAt values, newest first; no inferred edits from creation dates/ObjectIds. No editor names or audit events are invented. |
 | Team access | Boolean isActive/isAdmin flags. “Active administrators” requires both flags true. |
-
-The backend does not provide reliable visitor/session analytics, bot identifiers,
-revenue, conversion rates, or historical publication counts. Bots and internal
-requests remain included. Next.js/CDN cache hits do not necessarily reach the
-backend. Counter retention, outages, retries and incomplete windows can affect
-comparisons; the UI explains these limits.
-
-## Dates and correctness
-
-Reporting uses UTC throughout. From/through dates are inclusive calendar dates;
-the database uses [from 00:00 UTC, day-after-through 00:00 UTC). A period can span
-1–31 days, with no future dates. The default is the last seven complete UTC days.
-Invalid dates (including nonexistent leap days), arrays, inverted ranges and
-oversized ranges fall back with a visible explanation. BSON Date timestamps are
-required for date-range reporting: missing/invalid/string timestamps cannot be
-assigned to a reporting period. Gaps are shown as zero *recorded* responses, not
-proof of zero traffic. An empty denominator never produces a made-up percentage.
-
-Open “Explore daily values” for the accessible table equivalent of the SVG chart.
-Dates, route links, readiness counts and translation cells drill down into real
-filtered lists. Report state filters select windows containing the chosen class;
-rows retain all counts for matching known route templates within each window.
-Unsupported stored records remain visible when browsing an unfiltered period.
 
 ## Functional changes
 
 Search, state/language filters, allowlisted sorting and 20-record pagination run
 on the server and persist in URL parameters. Pagination keeps all active filters.
-Content sorts support newest/oldest, name, stored views and updatedAt; reports
-sort by timestamp, users by ID/name. Every sort has a deterministic ID tie-breaker.
+Content sorts support newest/oldest, name, stored views and updatedAt; users
+sort by ID/name. Every sort has a deterministic ID tie-breaker.
 
 Editors show saved translation coverage, English field checks and saved public
 page links. Body previews call an authorized Server Action and use the same
@@ -202,14 +175,12 @@ would need its own permissions, retention and reviewed migration.
 The overview is server-rendered, does not poll, and does not put private results
 in a shared/public cache. Every DAL entry point authorizes before DB access.
 Aggregations have maxTimeMS 5000 and allowDiskUse false. Lists return 20 projected
-records. No passwords, session handles, IPs, raw unknown routes or user agents
-are sent to overview/report components.
+records. No passwords, session handles, IPs or user agents are sent to
+overview components.
 
 Content checks inspect at most 10,001 records per collection. Above 10,000, exact
 counts use the ID index while partial coverage/rankings/update samples are hidden.
-Response queries match the indexed date range first and inspect at most 100,001
-windows across current/prior periods. Exceeding 100,000 windows or a query failure
-shows “unavailable,” never partial totals presented as complete results. Large
+Large
 content/checklist queries should be redesigned around reviewed materialized
 metadata before increasing these budgets.
 
@@ -218,10 +189,6 @@ metadata before increasing these budgets.
 No production index changes are required or applied by this implementation.
 Review query plans and write overhead on staging before considering:
 
-- statistics `{timestamp:-1}`: already managed by the Rust backend, including its
-  TTL. Preserve its existing retention settings; do not replace it blindly.
-- statistics `{route:1,timestamp:-1}` for legacy route filters and
-  `{'routes.route':1,timestamp:-1}` for v2 route filters (multikey).
 - places/tours/articles `{viewCount:-1,_id:-1}` and `{updatedAt:-1,_id:-1}` for
   corresponding list sorts. These do not eliminate editorial coverage scans.
 - users `{isActive:1,isAdmin:1,_id:-1}` if access-filter queries warrant it.

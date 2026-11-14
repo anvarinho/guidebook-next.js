@@ -32,34 +32,7 @@ try {
   await db.collection('places').insertOne({ url:'admin-fixture-lake',name:{en:'Admin fixture lake',ru:'Тестовое озеро'},title:{en:'Lake title',ru:'Озеро'},region:{en:'Chuy'},keywords:{en:'lake'},description:{en:'A fixture description',ru:'Описание озера'},images:['bozteri.jpg'],updatedAt:new Date(Date.now()-3600000),viewCount:4 });
   await db.collection('tours').insertOne({ url:'admin-fixture-tour',title:'Admin fixture tour',description:'A fixture tour',updatedAt:new Date(Date.now()-7200000),viewCount:2 });
   await db.collection('articles').insertOne({ url:'admin-fixture-story',title:{en:'Admin fixture story'},subtitle:{en:'Subtitle'},keywords:{en:'fixture'},paragraphs:[{title:{en:'Introduction'},text:{en:'Fixture paragraph'},image:'keep-this-image.jpg'}],updatedAt:new Date(Date.now()-10800000) });
-  const now = Date.now();
-  const midnight = Math.floor(now / 86400000) * 86400000;
-  const windows = process.env.ADMIN_BENCHMARK === '1' ? 4000 : 1100;
-  await db.collection('statistics').insertMany(Array.from({length:windows},(_,index) => ({
-    schemaVersion:2, windowStart:new Date(midnight - (index+1)*3600000),
-    timestamp:new Date(midnight - index*3600000 - 1),
-    responseClasses:['1xx','2xx','3xx','4xx_other','5xx_other','429','503','504'],
-    routes:[
-      {route:'/api/places',responses:[0,45+(index%27),2,index%4,0,0,0,0]},
-      {route:'/api/places/:id',responses:[0,70+(index%40),1,0,1,0,0,0]},
-      {route:'/api/tours',responses:[0,20+(index%13),0,1,0,0,0,0]},
-      {route:'/api/articles',responses:[0,12+(index%7),0,0,0,0,0,0]},
-    ],
-  })));
-  if(process.env.ADMIN_BENCHMARK !== '1') {
-    const classes=['1xx','2xx','3xx','4xx_other','5xx_other','429','503','504'];
-    await db.collection('statistics').insertMany([
-      {timestamp:new Date('2024-02-27T12:00:00Z'),route:'/api/places',statusCode:200},
-      {timestamp:new Date('2024-02-28T23:59:59.999Z'),route:'/api/places',statusCode:200},
-      {timestamp:new Date('2024-02-29T00:00:00Z'),schemaVersion:2,responseClasses:classes,routes:[{route:'/api/places',responses:[0,10,0,2,0,1,0,0]}]},
-      {timestamp:new Date('2024-02-29T12:00:00Z'),route:'/api/articles',statusCode:503},
-      {timestamp:new Date('2024-02-29T13:00:00Z'),route:'/private?token=never-expose-fixture-token',remoteAddress:'192.0.2.99',sessionID:'never-expose-session',statusCode:200},
-      {timestamp:new Date('2024-02-29T14:00:00Z'),schemaVersion:99,statusCode:200},
-      {timestamp:new Date('2024-02-29T23:59:59.999Z'),schemaVersion:2,responseClasses:classes,routes:[{route:'/api/places',responses:[0,20,0,0,0,0,0,0]}]},
-      {timestamp:new Date('2024-03-01T00:00:00Z'),route:'/api/places',statusCode:200},
-    ]);
-  }
-  await db.collection('statistics').createIndex({timestamp:-1});
+  const midnight = Math.floor(Date.now() / 86400000) * 86400000;
   if(process.env.ADMIN_BENCHMARK === '1') {
     // Preserve the exact initial benchmark seed while enriching normal browser fixtures.
     await db.collection('places').updateOne({url:'admin-fixture-lake'},{$unset:{images:'',updatedAt:'','name.ru':'','title.ru':'','description.ru':''}});

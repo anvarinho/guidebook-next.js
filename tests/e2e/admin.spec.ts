@@ -99,33 +99,12 @@ test('user creation and tour/article editors save real records',async ({ page })
     expect(member!.isAdmin).toBe(false); expect(member!.password).not.toBe('fixture-new-member-password');
   } finally { await client.close(); }
 });
-test('overview sums counter windows and legacy requests across exact UTC date boundaries',async ({page})=>{
-  await login(page);
-  await page.goto('/admin?from=2024-02-29&to=2024-02-29');
-  await expect(page.locator('.response-summary > div').first().locator('strong')).toHaveText('35');
-  await expect(page.locator('.response-summary > div').nth(1).locator('strong')).toHaveText('11.43%');
-  await expect(page.getByRole('img',{name:/Daily recorded API responses/})).toBeVisible();
-  await expect(page.getByText('1 stored record has an unsupported shape')).toBeVisible();
-  await page.getByText('Explore daily values',{exact:false}).click();
-  await expect(page.getByRole('table',{name:'Recorded responses by UTC day'})).toBeVisible();
-  await page.getByRole('link',{name:'2024-02-29',exact:true}).click();
-  await expect(page).toHaveURL(/\/admin\/reports\?.*from=2024-02-29/);
-  await expect(page.locator('tbody tr')).toHaveCount(5);
-  await expect(page.getByText('Unsupported record',{exact:true})).toBeVisible();
-  const html=await page.content();
-  expect(html).not.toContain('never-expose-fixture-token');expect(html).not.toContain('192.0.2.99');expect(html).not.toContain('never-expose-session');
-});
-test('empty and invalid overview periods give honest states and accessible mobile data',async ({page})=>{
+test('overview stays usable on a narrow mobile viewport',async ({page})=>{
   await login(page);
   await page.setViewportSize({width:390,height:844});
   await expect(page.getByRole('heading',{name:/Your guidebook/})).toBeVisible();
   await page.screenshot({path:'test-results/admin-overview-mobile.png',fullPage:true});
-  await page.goto('/admin?from=2024-01-01&to=2024-01-01');
-  await expect(page.getByText('No responses recorded in this date range.',{exact:false})).toBeVisible();
-  await expect(page.locator('.response-summary > div').nth(1).locator('strong')).toHaveText('—');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  await page.goto('/admin?from=2024-02-30&to=2024-03-01');
-  await expect(page.getByRole('alert').filter({hasText:'Choose valid dates'})).toBeVisible();
 });
 test('translation drilldowns, server sorting, state filters and pagination retain URL choices',async ({page})=>{
   await login(page);

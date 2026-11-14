@@ -1,49 +1,19 @@
 import Link from 'next/link';
 import type { CSSProperties, ReactNode } from 'react';
-import { DAY, LOCALES, dayKey, type Period } from '../lib/metrics';
+import { LOCALES } from '../lib/metrics';
 import type { readOverview } from '../lib/data';
 import Icon from './Icon';
 
 type Overview = Awaited<ReturnType<typeof readOverview>>;
-type Traffic = Overview['traffic'];
 
 const number = (value: unknown) => Number(value).toLocaleString('en');
 const labels: Record<string, string> = {places:'Places',tours:'Tours',articles:'Articles',users:'Users'};
 const languages: Record<string, string> = {en:'English',it:'Italian',fr:'French',de:'German',es:'Spanish',jp:'Japanese',kr:'Korean',ae:'Arabic',cn:'Chinese',ru:'Russian'};
 const date = (value: Date | string) => new Date(value).toLocaleDateString('en-GB',{day:'2-digit',month:'short',timeZone:'UTC'});
-const reportLink = (period: { fromKey: string; toKey: string },extra: Record<string, string>={}) => '/admin/reports?'+new URLSearchParams({from:period.fromKey,to:period.toKey,...extra});
 function PanelTitle({eyebrow,title,children}: { eyebrow: string; title: string; children?: ReactNode }) {
   return <div className="panel-title"><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{children}</div>;
 }
-function TrafficChart({traffic,period}: { traffic: Traffic; period: Period }) {
-  const width=760,height=205,padding=12;
-  const previous = new Map(traffic.previousDays.map(row=>[row.day,row.responses]));
-  const comparison = traffic.days.map((_,index)=>previous.get(dayKey(new Date(period.previousStart.getTime()+index*DAY))) || 0);
-  const maximum=Math.max(1,...traffic.days.map(row=>row.responses),...(traffic.comparable?comparison:[]));
-  const points = (values: number[]): [number, number][] => values.map((value,index)=>[padding+index*(width-padding*2)/Math.max(1,values.length-1),height-padding-value/maximum*(height-padding*2)]);
-  const current=points(traffic.days.map(row=>row.responses));
-  const path = (coordinates: [number, number][]) => coordinates.map(([x,y],index)=>`${index?'L':'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
-  return <>
-    <div className="chart-legend"><span><i/>Selected period</span>{traffic.comparable && <span><i className="previous-dot"/>Previous period</span>}<span className="muted">Responses / UTC day</span></div>
-    <div className="traffic-plot">
-      <div className="chart-axis"><span>{number(maximum)}</span><span>{number(Math.round(maximum/2))}</span><span>0</span></div>
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="traffic-chart-title traffic-chart-description">
-        <title id="traffic-chart-title">Daily recorded API responses</title>
-        <desc id="traffic-chart-description">{number(traffic.total)} responses across {period.days} UTC days, including {number(traffic.errors)} errors. Exact daily values are in the table below.</desc>
-        <defs><linearGradient id="traffic-fill" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#1a7259" stopOpacity=".23"/><stop offset="1" stopColor="#1a7259" stopOpacity=".015"/></linearGradient></defs>
-        {[padding,height/2,height-padding].map(y=><line key={y} x1="0" x2={width} y1={y} y2={y} stroke="#e4e6dd" strokeDasharray="4 5"/>)}
-        <path d={`${path(current)} L${current.at(-1)![0]},${height} L${padding},${height} Z`} fill="url(#traffic-fill)"/>
-        {traffic.comparable && <path d={path(points(comparison))} fill="none" stroke="#ad8b4b" strokeWidth="2" strokeDasharray="6 5"/>}
-        <path d={path(current)} fill="none" stroke="#1a7259" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round"/>
-        {current.length===1 && <circle cx={current[0][0]} cy={current[0][1]} r="4" fill="#1a7259"/>}
-      </svg>
-    </div>
-    <div className="chart-dates"><span>{date(period.from)}</span><span>{date(new Date(period.from.getTime()+Math.floor((period.days-1)/2)*DAY))}</span><span>{date(new Date(period.end.getTime()-DAY))}</span></div>
-    <details className="data-details"><summary>Explore daily values <span aria-hidden="true">↗</span></summary><div className="table-scroll" role="region" aria-label="Daily response data" tabIndex={0}><table><caption className="sr-only">Recorded responses by UTC day</caption><thead><tr><th scope="col">UTC date</th><th scope="col">Responses</th><th scope="col">Errors (4xx–5xx)</th>{traffic.comparable && <th scope="col">Previous period day</th>}</tr></thead><tbody>{traffic.days.map((row,index)=><tr key={row.day}><th scope="row"><Link href={reportLink({fromKey:row.day,toKey:row.day})}>{row.day}</Link></th><td>{number(row.responses)}</td><td>{number(row.errors)}</td>{traffic.comparable && <td>{number(comparison[index])}</td>}</tr>)}</tbody></table></div></details>
-  </>;
-}
 export default function OverviewDashboard({data}: { data: Overview }) {
-  const {period,traffic}=data;
   const readyPercent=data.total?Math.round(data.ready/data.total*100):null;
   const cards=[...data.collections.map(row=>({key:row.kind,count:row.total,sub:row.ready===null?'Field checks unavailable':`${row.ready} pass the English checklist`})),{key:'users',count:data.users.total,sub:`${data.users.admins} active administrators`}];
   return <div className="overview">
@@ -53,20 +23,8 @@ export default function OverviewDashboard({data}: { data: Overview }) {
       <div className="hero-checklist"><p className="eyebrow">The next chapter</p><strong>{data.qualityAvailable?number(data.total-data.ready):'—'}</strong><h3>guides need a closer look</h3><p>English text and image checks help you find the next useful edit.</p><div className="attention-links">{data.collections.map(row=><Link key={row.kind} href={`/admin/${row.kind}?state=attention`}>{labels[row.kind]}<span>{row.ready===null?'—':row.total-row.ready} <span aria-hidden="true">↗</span></span></Link>)}</div></div>
     </section>
     <div className="stats-grid collection-stats">{cards.map(card=><Link prefetch={false} key={card.key} href={'/admin/'+card.key} className="stat-card"><div className="stat-top"><span>{labels[card.key]}</span><Icon name={card.key}/></div><strong>{number(card.count)}</strong><div className="stat-bottom"><span>{card.sub}</span><Icon name="arrow"/></div></Link>)}</div>
-    <section className="panel response-panel" aria-labelledby="responses-heading">
-      <div className="response-heading"><div><p className="eyebrow">Behind the journeys</p><h2 id="responses-heading">Recorded API responses</h2><p className="muted small">{date(period.from)} – {date(new Date(period.end.getTime()-DAY))} · {period.days} days · UTC{!period.complete?' · Current day is incomplete':''}</p></div><form method="get" action="/admin" className="date-filter"><label>From<input type="date" name="from" defaultValue={period.fromKey} required/></label><label>Through<input type="date" name="to" defaultValue={period.toKey} required/></label><button type="submit" aria-label="Apply reporting dates"><Icon name="filter"/>Apply</button></form></div>
-      {period.invalid && <p className="notice error" role="alert">Choose valid dates covering up to 31 days, ending no later than today. Showing the last seven complete UTC days.</p>}
-      {traffic.available ? <>
-        <div className="response-summary"><div><strong>{number(traffic.total)}</strong><span>responses recorded</span></div><div><strong>{traffic.errorRate===null?'—':traffic.errorRate+'%'}</strong><Link href={reportLink(period,{state:'errors'})}>error responses (4xx–5xx) ↗</Link></div><div className="comparison"><strong>{traffic.change===null?'—':`${traffic.change>0?'+':''}${traffic.change}%`}</strong><span>{traffic.change===null?'No comparable baseline':'vs. previous '+period.days+' days'}</span></div></div>
-        {traffic.total===0 && <p className="empty-chart-note">No responses recorded in this date range. A zero does not establish that there was no traffic.</p>}
-        <TrafficChart traffic={traffic} period={period}/>
-        {!!traffic.unsupported && <p className="notice">{number(traffic.unsupported)} stored {traffic.unsupported===1?'record has':'records have'} an unsupported shape and are excluded. Comparisons are disabled.</p>}
-      </> : <div className="empty"><Icon name="reports"/><h3>Response report unavailable</h3><p className="muted">Try a shorter date range or return later. No partial totals are shown.</p></div>}
-      <p className="metric-note">Stored backend response counters, including bots and internal requests. These are not page views, sessions, or unique visitors. Windows are assigned to their completion date; retention and missing windows can affect totals and comparisons.</p>
-    </section>
     <div className="dashboard-grid">
       <section className="panel readiness-panel"><PanelTitle eyebrow="Editorial health" title="A strong foundation"/><div className="readiness-summary"><div className="readiness-ring" style={{'--coverage':`${data.qualityAvailable && readyPercent!==null?readyPercent:0}%`} as CSSProperties} role="img" aria-label={data.qualityAvailable?`${data.ready} of ${data.total} guides pass the English field checklist`:'Field checklist unavailable'}><span><strong>{data.qualityAvailable && readyPercent!==null?readyPercent+'%':'—'}</strong><small>English checklist</small></span></div><div><strong className="serif-number">{data.qualityAvailable?number(data.ready):'—'}</strong><p className="muted">of {number(data.total)} guides have<br/>English text and an image path.</p></div></div><div className="quality-bars">{data.collections.map(row=><div key={row.kind}><div><Link href={`/admin/${row.kind}?state=ready`}>{labels[row.kind]}</Link><span>{row.ready===null?'Unavailable':`${row.ready} / ${row.total}`}</span></div><div className="quality-track"><span style={{width:`${row.total && row.ready!==null?row.ready/row.total*100:0}%`}}/></div></div>)}</div><details className="data-details"><summary>What does this check?</summary><p className="muted small">Places: English name, title, description. Tours: English title and description. Articles: English title and text in every paragraph, with at least one paragraph. Every guide also needs an image path. These are field-presence checks, not publication approval.</p></details></section>
-      <section className="panel"><PanelTitle eyebrow="Operational pulse" title="Where responses happen"><Link className="small" href={reportLink(period)}>View reports ↗</Link></PanelTitle>{traffic.available && traffic.routes.length ? <ol className="route-ranking">{traffic.routes.map((row: { route: string; responses: number; errors: number },index: number)=><li key={row.route}><span className="rank">{String(index+1).padStart(2,'0')}</span><div><div className="rank-label">{row.route==='Other API routes'?<span>{row.route}</span>:<Link href={reportLink(period,{q:row.route})}>{row.route}</Link>}<strong>{number(row.responses)}</strong></div><div className="rank-track"><span style={{width:`${row.responses/Math.max(1,traffic.routes[0].responses)*100}%`}}/></div><span className="muted small">{number(row.errors)} error responses</span></div></li>)}</ol>:<div className="empty"><p className="muted">No route rankings available for this period.</p></div>}<p className="metric-note">Ranks use recorded response counts in the selected period. Route names are restricted to known backend templates.</p></section>
     </div>
     <section className="panel translation-panel"><PanelTitle eyebrow="Across borders" title="Stories in every language"><span className="badge neutral">Text coverage · Current snapshot</span></PanelTitle><p className="muted small">Complete editorial text / total records. Select a cell to review missing translations. Plain-text fields count toward English only.</p><div className="table-scroll" role="region" aria-label="Translation coverage" tabIndex={0}><table><caption className="sr-only">Editorial text coverage by language and collection</caption><thead><tr><th scope="col">Language</th>{data.collections.map(row=><th scope="col" key={row.kind}>{labels[row.kind]}</th>)}</tr></thead><tbody>{LOCALES.map(code=><tr key={code}><th scope="row"><span className="locale-code">{code.toUpperCase()}</span>{languages[code]}</th>{data.collections.map(row=>{const complete=row.translations?.[code];return <td key={row.kind}><Link className="coverage-cell" href={`/admin/${row.kind}?state=missing&lang=${code}`} aria-label={`Review missing ${languages[code]} text in ${row.kind}: ${complete??'unavailable'} of ${row.total} complete`}><span>{complete===undefined?'—':`${complete} / ${row.total}`}</span><span className="coverage-track"><i style={{width:`${row.total && complete!==undefined?complete/row.total*100:0}%`}}/></span><Icon name="arrow"/></Link></td>;})}</tr>)}</tbody></table></div></section>
     <div className="dashboard-grid">

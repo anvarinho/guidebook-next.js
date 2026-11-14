@@ -3,7 +3,7 @@ import { requireAdmin } from '@/lib/auth';
 import { notFound } from 'next/navigation';
 import { ObjectId, type Document, type Filter, type Sort, type WithId } from 'mongodb';
 import { connectToDatabase } from './mongodb';
-import { type ContentKind, type Query, collectionQuery, periodRange, readyExpr, textCompleteExpr, localizedExpr, responseRows, supportedResponseRecord } from './metrics';
+import { type ContentKind, type Query, collectionQuery, readyExpr, textCompleteExpr, localizedExpr } from './metrics';
 
 const userProjection = { _id: 1, username: 1, email: 1, phone: 1, address: 1, isAdmin: 1, isActive: 1 };
 export type UserDTO = ReturnType<typeof userDTO>;
@@ -26,9 +26,8 @@ async function list(collectionName: string, filter: Filter<Document>, page: unkn
   const offset = pageNumber(page);
   const db = await connectToDatabase();
   const collection = db.collection(collectionName);
-  const settings = collectionQuery(options, collectionName === 'statistics' ? 'reports' : collectionName);
+  const settings = collectionQuery(options, collectionName);
   const sort: Record<string, 1 | -1> = settings.sort === 'oldest' ? { _id:1 } : settings.sort === 'views' ? { viewCount:-1,_id:-1 } : settings.sort === 'updated' ? { updatedAt:-1,_id:-1 } : { _id:-1 };
-  if (collectionName === 'statistics') { delete sort._id; sort.timestamp = settings.sort === 'oldest' ? 1 : -1; sort._id = -1; }
   const rows = settings.sort === 'name' ? collection.aggregate([
     { $match:filter }, { $set:{ __name:collectionName === 'users' ? '$username' : localizedExpr(collectionName === 'places' ? '$name' : '$title') } },
     { $sort:{ __name:1,_id:-1 } as Sort }, { $skip:(offset-1)*PAGE_SIZE }, { $limit:PAGE_SIZE }, { $project:projection },
@@ -57,26 +56,6 @@ export async function readArticles(query = '', page: unknown = 1, options: Query
   await requireAdmin();
   return list('articles', contentFilter('articles',query,options), page, { title:1,url:1,viewCount:1,ready:readyExpr('articles'),translated:textCompleteExpr('articles',collectionQuery(options,'articles').lang) },options);
 }
-export async function readStats(query = '', page: unknown = 1, options: Query = {}) {
-  await requireAdmin();
-  const pattern = searchRegex(query);
-  const period = periodRange(options);
-  const settings = collectionQuery(options,'reports');
-  const filter: Filter<Document> = { timestamp:{ $gte:period.from,$lt:period.end } };
-  if (query) filter.$or = [{ route:pattern },{ 'routes.route':pattern }];
-  if (settings.state !== 'all') {
-    filter.$and = [{ $or:settings.state === 'errors' ? [
-      { statusCode:{ $gte:400,$lte:599 } },
-      ...[3,4,5,6,7].map(index=>({ ['routes.responses.'+index]:{ $gt:0 } })),
-    ] : [{ statusCode:{ $gte:100,$lt:400 } },...[0,1,2].map(index=>({ ['routes.responses.'+index]:{ $gt:0 } }))] }];
-  }
-  const result = await list('statistics',filter,page,{timestamp:1,windowStart:1,schemaVersion:1,responseClasses:1,routes:1,route:1,statusCode:1},options);
-  return { ...result,places:result.places.map(record=>{
-    const rows=responseRows(record).filter(row=>pattern.test(row.route));
-    return { _id:String(record._id),timestamp:record.timestamp,kind:!supportedResponseRecord(record)?'Unsupported record':record.schemaVersion===2?'Response window':'Legacy request',
-      routes:rows.map(row=>row.route).join(', '),responses:rows.reduce((n,row)=>n+row.responses,0),errors:rows.reduce((n,row)=>n+row.errors,0),supported:supportedResponseRecord(record) };
-  }),period };
-}
 export async function readUsers(query = '', page: unknown = 1, options: Query = {}) {
   await requireAdmin();
   const pattern = searchRegex(query);
@@ -89,12 +68,11 @@ export async function readUsers(query = '', page: unknown = 1, options: Query = 
   const result = await list('users',filter,page,userProjection,options);
   return { ...result, places:result.places.map(userDTO) };
 }
-export async function readOverview(query: Query = {}) {
+export async function readOverview() {
   await requireAdmin();
   const db = await connectToDatabase();
-  const period = periodRange(query);
   const { queryOverview } = await import('./overview');
-  return { ...await queryOverview(db,period), period };
+  return queryOverview(db);
 }
 
 async function readContent(collectionName: ContentKind, url: unknown) {
