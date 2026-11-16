@@ -11,6 +11,36 @@ interface ContentOptions {
 
 const escapeHtml = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
+/** Editors sometimes paste paragraphs that keep their indentation. Markdown reads four or more leading
+ * spaces after a blank line as a code block, which renders in monospace on one overflowing line.
+ * Un-indent such blocks unless they continue a list or sit inside a fenced code block.
+ */
+export function dedentAccidentalCodeBlocks(content: string): string {
+  const lines = content.split('\n');
+  const out: string[] = [];
+  let fenced = false;
+  let previousBlockIsList = false;
+  let blockStart = 0;
+  const flush = (end: number) => {
+    const block = lines.slice(blockStart, end);
+    const first = block.find(line => line.trim());
+    if (first === undefined) { out.push(...block); return; }
+    const indented = /^(?: {4,}|\t)/.test(first);
+    out.push(...(indented && !previousBlockIsList ? block.map(line => line.trimStart()) : block));
+    previousBlockIsList = /^\s*(?:[-*+]|\d+[.)])\s/.test(first);
+  };
+  for (let i = 0; i <= lines.length; i++) {
+    const line = lines[i];
+    if (line !== undefined && /^\s*(?:```|~~~)/.test(line)) fenced = !fenced;
+    if (line === undefined || (!fenced && !line.trim())) {
+      flush(i);
+      if (line !== undefined) out.push(line);
+      blockStart = i + 1;
+    }
+  }
+  return out.join('\n');
+}
+
 /** Parse Markdown (including legacy HTML), then enforce the content HTML allowlist.
  * Attribute values are serialized by sanitize-html, never interpolated from content.
  */
@@ -68,7 +98,7 @@ export function renderContentHtml(content: string, { lang = 'en', classes = {}, 
       return `<${tag}${className}${startAttribute}>${content}</${tag}>\n`;
     },
   } });
-  let html = sanitizeHtml(parser.parse(content, { async: false }), options);
+  let html = sanitizeHtml(parser.parse(dedentAccidentalCodeBlocks(content), { async: false }), options);
   // These decorations operate only on already sanitized text/tags. Escape trusted
   // class values too; run the allowlist once more after decorating as defense in depth.
   if (classes.tableScroll) html = html.replace(/<table\b[\s\S]*?<\/table>/g, table => `<div class="${escapeHtml(classes.tableScroll)}">${table}</div>`);

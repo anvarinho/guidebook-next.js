@@ -45,3 +45,24 @@ test('Markdown bullets retain custom styling without decorating ordered or raw H
   assert.match(html, /<ol>\s*<li>Ordered/);
   assert.match(html, /<ul><li>Raw list<\/li><\/ul>/);
 });
+
+test('pasted, indented paragraphs render as paragraphs, not as a monospace code block', () => {
+  // The shape stored for ata-beyit-memorial-complex: later paragraphs carry 12 leading spaces and a whitespace-only line between them.
+  const stored = 'First paragraph.\n\n            Second paragraph with a long sentence.\n            \n            Third paragraph.';
+  const html = renderContentHtml(stored);
+  assert.equal(html.includes('<pre>'), false);
+  assert.equal(html.includes('<code>'), false);
+  assert.equal((html.match(/<p>/g) ?? []).length, 3);
+});
+
+test('indentation that means something is left alone: list continuations and fenced code', () => {
+  const list = renderContentHtml('- one\n\n    continued under one\n- two');
+  assert.match(list, /<li>[\s\S]*continued under one/);
+  const fenced = renderContentHtml('Intro.\n\n```\nconst a = 1;\n\n    indented inside the fence\n```\n');
+  assert.match(fenced, /<pre><code>[\s\S]*indented inside the fence/);
+});
+
+test('an ordinary indented paragraph after a list becomes a paragraph, and plain text is untouched', () => {
+  assert.equal(renderContentHtml('Plain text.'), '<p>Plain text.</p>\n');
+  assert.equal(renderContentHtml('One.\n\n    Two.').includes('<pre>'), false);
+});
