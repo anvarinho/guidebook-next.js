@@ -7,6 +7,8 @@ import { usePresence } from './usePresence';
 import styles from './loading-ring.module.css';
 
 const SHOW_AFTER_MS = 200;
+// Keeps the veil mounted while it fades out; matches the .4s transition in loading-ring.module.css.
+const FADE_OUT_MS = 420;
 const GIVE_UP_AFTER_MS = 10000;
 
 /**
@@ -17,7 +19,7 @@ export default function RouteLoader({ label }: { label: string }) {
   const pathname = usePathname();
   const [pending, setPending] = useState(false);
   const timers = useRef({ show: 0, giveUp: 0 });
-  const presence = usePresence(pending);
+  const presence = usePresence(pending, FADE_OUT_MS);
 
   useEffect(() => {
     const current = timers.current;

@@ -6,7 +6,7 @@
   flex: 0 0 auto;
   width: 84px;
   height: 84px;
-  animation: ringIn .4s cubic-bezier(.22, 1, .36, 1) both;
+  animation: ringIn .5s cubic-bezier(.22, 1, .36, 1) .16s backwards;
 }
 .ring > span {
   display: block;
@@ -26,7 +26,7 @@
 }
 .ring > .center { clip-path: circle(29.5% at 50% 50%); }
 .small { width: 34px; height: 34px; }
-.leaving { opacity: 0; transform: scale(.9); transition: opacity .3s ease, transform .32s cubic-bezier(.22, 1, .36, 1); }
+.leaving { opacity: 0; transform: scale(.94); transition: opacity .4s ease, transform .4s cubic-bezier(.22, 1, .36, 1); }
 
 /* Floating above the page, which is dimmed and blurred like the contact dialog's backdrop, only lighter. */
 .veil {
@@ -44,9 +44,11 @@
   color: rgba(255, 255, 255, .86);
   text-align: center;
   pointer-events: none;
-  animation: veilIn .3s ease both;
+  /* The short delay keeps fast loads from flashing the veil; it then eases in. */
+  animation: veilIn .45s ease .12s backwards;
 }
-.veil[data-leaving] { opacity: 0; transition: opacity .3s ease; }
+.veil[data-leaving] { opacity: 0; transition: opacity .4s ease; }
+.veil[data-leaving] .ring { opacity: 0; transform: scale(.94); transition: opacity .35s ease, transform .4s cubic-bezier(.22, 1, .36, 1); }
 .veil .ring { filter: drop-shadow(0 8px 28px rgba(0, 0, 0, .35)); }
 .text {
   max-width: 26ch;
@@ -58,13 +60,14 @@
 }
 /* "Load more" under a list: the same emblem, small, without dimming the page. */
 .inline { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 0; color: rgba(var(--foreground-rgb), .62); }
-.inline[data-leaving] { opacity: 0; transition: opacity .3s ease; }
+.inline { animation: veilIn .4s ease backwards; }
+.inline[data-leaving] { opacity: 0; transition: opacity .4s ease; }
 
-@keyframes ringIn { from { opacity: 0; transform: scale(.9); } }
+@keyframes ringIn { from { opacity: 0; transform: scale(.92); } }
 @keyframes veilIn { from { opacity: 0; } }
 @keyframes emblemTurn { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) {
-  .ring, .veil { animation: none; }
+  .ring, .veil, .inline { animation: none; }
   .ring > .rays { animation-duration: 24s; }
-  .leaving, .veil[data-leaving], .inline[data-leaving] { transition: none; }
+  .leaving, .veil[data-leaving], .veil[data-leaving] .ring, .inline[data-leaving] { transition: none; }
 }
