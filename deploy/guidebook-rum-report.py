@@ -15,6 +15,8 @@ import argparse, collections as C, datetime as dt, glob, gzip, json, os, statist
 LOGS = ["/var/log/nginx/access.log", "/var/log/nginx/access.log.1"] + sorted(glob.glob("/var/log/nginx/access.log.*.gz"), reverse=True)
 OUT_DIR = "/var/backups/guidebook/rum"
 GOALS = {"wa", "tel", "mail", "contact", "form"}
+READ_SCROLL = 70
+READ_SECONDS = 20
 
 
 def read_rows(start, end):
@@ -93,6 +95,29 @@ def build(start, end):
         for k in ("lcp", "cls", "inp"):
             if num(k) is not None:
                 cur[k] = num(k)
+    # A "read" is a view that reached 70% of the page and stayed visible for 20 seconds.
+    for key, v in best.items():
+        v["read"] = v["scroll"] >= READ_SCROLL and v["dwell"] >= READ_SECONDS
+    leave_page = {}
+    for r in leaves:
+        leave_page[(vid(r), r.get("vi") or r["request_id"])] = page(r)
+    reads = C.Counter(leave_page[k] for k, v in best.items() if v["read"])
+    opened = C.Counter(leave_page[k] for k in best)
+    stats["reads"] = {
+        "views_read": sum(1 for v in best.values() if v["read"]),
+        "of_views_with_leave": len(best),
+        "rule": f"scroll >= {READ_SCROLL}% and >= {READ_SECONDS}s visible",
+        "top_read_pages": [[k, n, opened[k]] for k, n in reads.most_common(10)],
+    }
+    wa = [r for r in events if r["ev"] == "wa"]
+    stats["whatsapp"] = {
+        "clicks": len(wa),
+        "visitors": len({vid(r) for r in wa}),
+        "visitor_share": round(len({vid(r) for r in wa}) / len(per_visitor), 3) if per_visitor else 0,
+        "by_page": top(C.Counter(page(r) for r in wa)),
+        "by_section": top(C.Counter(parts(r)[2] or "home" for r in wa)),
+        "by_language": top(C.Counter(parts(r)[1] or "?" for r in wa)),
+    }
     dwell = [v["dwell"] for v in best.values()]
     scroll = [v["scroll"] for v in best.values()]
     stats["engagement"] = {
@@ -122,6 +147,10 @@ def render(s):
         out.append(f'{key}: ' + (", ".join(f"{k} {v}" for k, v in s[key]) or "-"))
     out.append(f'events: {s["events"] or "-"}')
     out.append(f'engagement: {s["engagement"]}')
+    r = s["reads"]
+    out.append(f'reads ({r["rule"]}): {r["views_read"]} of {r["of_views_with_leave"]} views | top: ' + (", ".join(f"{p} {n}/{o}" for p, n, o in r["top_read_pages"]) or "-"))
+    w = s["whatsapp"]
+    out.append(f'whatsapp: {w["clicks"]} clicks, {w["visitors"]} visitors ({w["visitor_share"]:.1%} of visitors) | by section: ' + (", ".join(f"{k} {v}" for k, v in w["by_section"]) or "-") + " | by page: " + (", ".join(f"{k} {v}" for k, v in w["by_page"]) or "-"))
     out.append(f'web vitals: {s["web_vitals"]}')
     return "\n".join(out)
 
@@ -131,8 +160,11 @@ def main():
     ap.add_argument("--hours", type=float, default=24)
     ap.add_argument("--date", help="one UTC day, YYYY-MM-DD")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--log", help="read this log file instead of the nginx logs (for testing)")
     ap.add_argument("--rollup", action="store_true", help="write the JSON for --date (default yesterday) to " + OUT_DIR)
     args = ap.parse_args()
+    if args.log:
+        LOGS[:] = [args.log]
     now = dt.datetime.now(dt.timezone.utc)
     if args.date or args.rollup:
         day = dt.date.fromisoformat(args.date) if args.date else (now - dt.timedelta(days=1)).date()
