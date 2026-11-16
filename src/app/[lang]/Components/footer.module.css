@@ -1,4 +1,8 @@
 .footer { width: 100%; border-top: 1px solid rgba(var(--foreground-rgb), .12); background: rgb(var(--background-end-rgb)); color: rgb(var(--foreground-rgb)); }
+/* Always below the fold: render it only when it nears the viewport. Sizes are the measured heights. */
+.footer { content-visibility: auto; contain-intrinsic-size: auto 650px; }
+@media (max-width: 1150px) { .footer { contain-intrinsic-size: auto 790px; } }
+@media (max-width: 760px) { .footer { contain-intrinsic-size: auto 1180px; } }
 .inner { width: min(1360px, calc(100% - 80px)); margin-inline: auto; padding-top: 48px; }
 .appPanel { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 36px 40px; border: 1px solid rgba(var(--foreground-rgb), .12); border-radius: 24px; background: rgba(var(--callout-rgb), .45); }
 .appCopy { max-width: 610px; min-width: 0; }

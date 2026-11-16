@@ -181,6 +181,10 @@
 .relatedHeading h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 600; line-height: 1.3; margin-bottom: 28px; text-wrap: balance; }
 .relatedGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .relatedItem { min-width: 0; }
+/* The related lists are far below the first screen (the page is ~25,000px tall on a phone):
+   skip their style/layout/paint until they near the viewport. 560px is the measured average
+   card height, so the page height barely changes as they render. */
+.relatedGrid > * { content-visibility: auto; contain-intrinsic-size: auto 560px; }
 .relatedSummary { margin: 16px 4px 0; color: rgba(var(--foreground-rgb), .7); font-size: 14px; line-height: 1.8; white-space: pre-line; }
 .main[dir="rtl"] .articleHeader h1 { letter-spacing: 0; line-height: 1.4; }
 .main[dir="rtl"] .breadcrumb a span { transform: rotate(180deg); }
