@@ -6,17 +6,16 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import type { Locale } from '@/lib/i18n.config'
 import ContactForm from './ContactForm'
-import { contactCopy } from '../content'
+import type { ContactText } from '../content'
 import styles from './contact-dialog.module.css'
 
-export default function ContactDialog({ lang, title, phone, email, address }: { lang: Locale; title: string; phone: string; email: string; address: string }) {
+export default function ContactDialog({ lang, title, phone, email, address, copy }: { lang: Locale; title: string; phone: string; email: string; address: string; copy: ContactText }) {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
   const dialogRef = useRef<HTMLDialogElement>(null)
   const triggerRef = useRef<HTMLElement | null>(null)
   const direct = pathname.replace(/\/$/, '') === `/${lang}/contact`
-  const copy = contactCopy[lang]
   const close = useCallback(() => {
     setOpen(false)
     if (direct) router.replace(`/${lang}`)
@@ -81,7 +80,7 @@ export default function ContactDialog({ lang, title, phone, email, address }: { 
           </div>
           <p className={styles.address}>{address}</p>
         </div>
-        <ContactForm lang={lang}/>
+        <ContactForm lang={lang} copy={copy}/>
       </div>
     </dialog>
   )

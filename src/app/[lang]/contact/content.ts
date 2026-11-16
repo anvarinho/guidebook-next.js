@@ -7,6 +7,7 @@ function withSubmissionCopy(base: Record<Locale, ContactCopy>): Record<Locale, C
   return Object.fromEntries(Object.entries(base).map(([lang, copy]) => [lang, { ...copy, ...submissionCopy[lang as Locale] }])) as Record<Locale, ContactCopy & SubmissionCopy>
 }
 
+export type ContactText = ContactCopy & SubmissionCopy
 type ContactCopy = { intro: string; close: string; name: string; email: string; phone: string; subject: string; message: string; send: string; hint: string; optional: string }
 export const contactCopy = withSubmissionCopy({
     ...additionalContactCopy as Record<Locale, ContactCopy>,

@@ -22,6 +22,7 @@ import Meta from './metalayout';
 import { getDictionary } from '@/lib/dictionary'
 import { contactInfo } from '@/lib/contactInfo'
 import ContactDialog from './contact/components/ContactDialog'
+import { contactCopy } from './contact/content'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))
@@ -62,7 +63,7 @@ export default async function RootLayout(
           {children}
         </LanguageShell>
         <ContactDialog lang={lang} title={page.about.buttons.contact_us}
-          phone={contact.phone} email={contact.email} address={contact.address}/>
+          phone={contact.phone} email={contact.email} address={contact.address} copy={contactCopy[lang]}/>
       </body>
     </html>
   )

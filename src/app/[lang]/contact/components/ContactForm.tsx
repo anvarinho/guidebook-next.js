@@ -4,11 +4,10 @@ import ArrowIcon from '@/components/ArrowIcon';
 import { useId, useRef, useState, type FormEvent } from 'react'
 import { sendContact, type SubmissionResult } from '@/lib/contact/client'
 import type { Locale } from '@/lib/i18n.config'
-import { contactCopy } from '../content'
+import type { ContactText } from '../content'
 import styles from './contact-dialog.module.css'
 
-export default function ContactForm({ lang }: { lang: Locale }) {
-  const copy = contactCopy[lang]
+export default function ContactForm({ lang, copy }: { lang: Locale; copy: ContactText }) {
   const id = useId()
   const sending = useRef(false)
   const [state, setState] = useState<'idle' | 'pending' | SubmissionResult>('idle')
