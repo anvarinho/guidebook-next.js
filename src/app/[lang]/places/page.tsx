@@ -112,8 +112,6 @@ export async function generateMetadata(
         title: page.sights.title,
         description: page.sights.description,
         siteId: "",
-        creator: "@anvarinho",
-        creatorId: "@anvarinho",
         images: {
             url: imageUrl,
             width: 800,

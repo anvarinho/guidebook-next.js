@@ -115,8 +115,6 @@ export async function generateMetadata(
         title: page.tours.title,
         description: description,
         siteId: "",
-        creator: "@anvarinho",
-        creatorId: "@anvarinho",
         images: {
             url: `${siteUrl}/uploads/kel-suu1.jpg`,
             width: 800,

@@ -95,8 +95,6 @@ export async function generateMetadata(
         title: page.articles.title,
         description: page.articles.description,
         siteId: "",
-        creator: "@anvarinho",
-        creatorId: "@anvarinho",
         images: {
             url: `${siteUrl}/uploads/alakul.jpg`,
             width: 800,

@@ -1,6 +1,10 @@
 import type { Locale } from "@/lib/i18n.config";
 import { localeMetadata } from "./localeMetadata";
 
+// The person credited with the guide's content: <meta name="author">, <link rel="author">, <meta name="creator">,
+// Open Graph article authors and the structured data of articles.
+export const author = { name: "Anvar Jumabaev", url: "https://anvarinho.github.io" } as const;
+
 export const siteUrl = (process.env.SITE_URL || "https://central-asia.live").replace(/\/+$/, "");
 
 // Bare language codes target every speaker; region codes would restrict each page to one country.

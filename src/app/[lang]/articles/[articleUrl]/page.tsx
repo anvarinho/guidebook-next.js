@@ -12,7 +12,7 @@ import Meta from './meta';
 import { getDictionary } from '@/lib/dictionary'
 import { notFound } from 'next/navigation'
 import shared from '../../places/page.module.css';
-import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
+import { absoluteSiteUrl, author, localizedAlternates, metaDescription, siteUrl } from '@/lib/seo';
 
 export const revalidate = 60;
 export async function generateStaticParams() { return []; }
@@ -84,7 +84,8 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     title: article.title,
     description,
     keywords: article.keywords,
-    authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : undefined,
+    authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : [author],
+    creator: article.url === 'what-is-kyrgyzstan-known-for' ? null : author.url,
     applicationName: 'GuideBook of Kyrgyzstan',
     category: 'Travel',
     openGraph: {
@@ -95,7 +96,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       locale: page.langCode.replace('-', '_'),
       type: 'article',
       publishedTime,
-      authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : ['Anvar Jumabaev'],
+      authors: article.url === 'what-is-kyrgyzstan-known-for' ? [] : [author.url],
     },
     alternates: {
       canonical: pageUrl,
@@ -105,7 +106,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       card: 'summary_large_image',
       title: article.title,
       description,
-      creator: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : '@anvarinho',
     },
     robots: {
       index: true,

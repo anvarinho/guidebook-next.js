@@ -1,5 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
-import { safeJsonLd, siteUrl } from '@/lib/seo';
+import { author, safeJsonLd, siteUrl } from '@/lib/seo';
 
 interface Props {
     articles: Article[];
@@ -21,8 +21,9 @@ const Meta: React.FC<Props> = ({ lang, articles, page }) => {
         "dateModified": dateModifiedISO,
         "author": {
           "@type": "Person",
-          "url": "https://fb.com/anvarinho",
-          "name": "Anvar Jumabaev"
+          "url": author.url,
+          "name": author.name,
+          "sameAs": ["https://fb.com/anvarinho"]
         },
         "publisher": {
           "@type": "Organization",

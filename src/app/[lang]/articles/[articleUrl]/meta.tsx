@@ -1,5 +1,5 @@
 import { Locale } from "@/lib/i18n.config";
-import { absoluteSiteUrl, metaDescription, safeJsonLd } from "@/lib/seo";
+import { absoluteSiteUrl, author, metaDescription, safeJsonLd } from "@/lib/seo";
 
 interface Props {
   article: Article;
@@ -27,7 +27,8 @@ export default function Meta({ lang, article, page }: Props) {
         inLanguage: page.langCode,
         author: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : {
           "@type": "Person",
-          name: "Anvar Jumabaev",
+          name: author.name,
+          url: author.url,
         },
         publisher: {
           "@type": "Organization",

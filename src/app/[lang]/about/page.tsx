@@ -134,7 +134,6 @@ export async function generateMetadata(
         card: "summary_large_image",
         title: `${page.about.title} | GuideBook of Kyrgyzstan`,
         description: page.about.description,
-        creator: "@anvarinho",
         images: [{
             url: imageUrl,
             width: 800,
