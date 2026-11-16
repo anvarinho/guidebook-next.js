@@ -16,6 +16,8 @@ import Navbar from './Components/Navbar'
 import ContactButton from './Components/ContactButton'
 import LanguageShell from './Components/LanguageShell'
 import Flags from './Components/Flags'
+import commonCopy from '@/translations/ui/common.json'
+import { flagAssets } from '@/lib/flagAssets'
 import Meta from './metalayout';
 import { getDictionary } from '@/lib/dictionary'
 import { contactInfo } from '@/lib/contactInfo'
@@ -55,7 +57,7 @@ export default async function RootLayout(
           loadingLabel={page.loading}
           navbar={<Navbar lang={lang}/>}
           footer={<FooterVisibility><Footer lang={lang}/></FooterVisibility>}
-          controls={<><ContactButton lang={lang}/><Flags lang={lang}/></>}
+          controls={<><ContactButton lang={lang}/><Flags lang={lang} flag={flagAssets[lang]} label={commonCopy[lang].languageMenu} nativeName={localeMetadata[lang].nativeName}/></>}
         >
           {children}
         </LanguageShell>

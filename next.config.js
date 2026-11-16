@@ -50,6 +50,8 @@ const nextConfig = {
         source,
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       })),
+      // Self-hosted fonts have content-hashed file names, so they can be cached for a year.
+      { source: "/fonts/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
       // Static artwork folders in public/. Localized HTML keeps Next's own caching so
       // browsers never hold pages that reference chunks removed by a later deploy.
       ...["/manas/:path*", "/intro/:path*", "/manas-airport-transfers/:path*"].map(source => ({
