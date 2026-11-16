@@ -3,9 +3,7 @@ import getBase64 from '@/lib/getLocalBase64';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from '../page.module.css'
-// import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
-// import { getDictionary } from "@/lib/dictionary";
 import Paragraph from './Paragraph'
 import { getDictionary } from '@/lib/dictionary'
 

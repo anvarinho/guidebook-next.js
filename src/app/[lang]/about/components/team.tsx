@@ -21,7 +21,6 @@ export default async function Team({
             </div>
             <div className={styles.team__member_info}>
                 <h3>Erkin</h3>
-                {/* <p>Expert</p> */}
             </div>
         </div>
         <div className={styles.team__member} data-motion="rise" data-motion-frame>
@@ -30,7 +29,6 @@ export default async function Team({
             </div>
             <div className={styles.team__member_info}>
                 <h3>Evgeniy</h3>
-                {/* <p>Expert</p> */}
             </div>
         </div>
         <div className={styles.team__member} data-motion="rise" data-motion-frame>
@@ -39,7 +37,6 @@ export default async function Team({
             </div>
             <div className={styles.team__member_info}>
                 <h3>Narynbek</h3>
-                {/* <p>Expert</p> */}
             </div>
         </div>
         <div className={styles.team__member} data-motion="rise" data-motion-frame>
@@ -48,13 +45,11 @@ export default async function Team({
             </div>
             <div className={styles.team__member_info}>
                 <h3>Anvar</h3>
-                {/* <p>Expert</p> */}
             </div>
         </div>
       </div>
         <div>
             <Link href={`/${lang}/contact`} className={styles.floatingButton}>{page.about.buttons.contact_us}</Link>
-            {/* <a href="{% url 'contact' %}" className={styles.floatingButton}>contact us</a> */}
             <Link href="#clients" className={styles.floatingButton}>{page.about.buttons.our_clients}</Link>
         </div>
     </section>

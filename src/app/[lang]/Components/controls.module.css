@@ -1,46 +1,45 @@
-/* Shared floating controls and loaders. Legacy page styles stay in page.module.css. */
+/* The floating contact button. Loaders live in loading-ring.module.css. */
 
-  .contactBtn{
-    position: fixed;
-    bottom: 1rem;
-    right: 2rem;
-    z-index: 100;
-    transition: transform .45s cubic-bezier(.22, 1, .36, 1), opacity .3s ease, visibility 0s;
-  }
+.contactBtn{
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 100;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1), opacity .3s ease, visibility 0s;
+}
 
-  /* "active" is the resting state at the top of the page: the button waits just below its place. */
-  .contactBtn.active{
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-    visibility: hidden;
-    transition: transform .45s cubic-bezier(.22, 1, .36, 1), opacity .3s ease, visibility 0s .45s;
-  }
+/* "active" is the resting state at the top of the page: the button waits just below its place. */
+.contactBtn.active{
+  transform: translate3d(0, 20px, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1), opacity .3s ease, visibility 0s .45s;
+}
 
-  .contactBox{
-    display: flex;
-    align-items: center;
-  }
+.contactBox{
+  display: flex;
+  align-items: center;
+}
 
-  .contactBox h4 {
-    position: relative;
-    isolation: isolate;
-    padding: .5rem;
-    margin: .5rem;
-    border-radius: .5rem;
-  }
+.contactBox h4 {
+  position: relative;
+  isolation: isolate;
+  padding: .5rem;
+  margin: .5rem;
+  border-radius: .5rem;
+}
 
-  .contactBox h4::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    border-radius: inherit;
-    background: rgba(var(--callout-rgb), .5);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    content: "";
-    pointer-events: none;
-  }
-  .srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
-  @media (prefers-reduced-motion: reduce) {
-    .contactBtn, .contactBtn.active { transition: none; }
-  }
+.contactBox h4::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(var(--callout-rgb), .5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  content: "";
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .contactBtn, .contactBtn.active { transition: none; }
+}

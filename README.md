@@ -143,8 +143,9 @@ src/
 ├── dictionaries/               Main site translations
 └── lib/                        Content fetching, locales, imagery, and SEO
 public/                         Images, icons, fonts, and static assets
-scripts/                        Image/admin tools, cache control, and diagnostics
-deploy/                         Nginx, systemd, backup, and log-retention templates
+assets/intro/                   Source artwork for the home page (optimized into public/intro)
+scripts/                        Image/admin tools, cache control, beacon report, and diagnostics
+deploy/                         Nginx, systemd, backup, monitoring, and log-retention files
 docs/                           Configuration, admin, contact, operations, performance
 tests/                          Regression tests and isolated browser fixtures
 ```

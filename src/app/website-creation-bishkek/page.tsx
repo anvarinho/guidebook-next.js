@@ -1,7 +1,4 @@
 'use client'
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false; 
 import styles from './page.module.css'
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
@@ -46,10 +43,6 @@ export default function Home() {
                         </li>
                     </ul>
                     </div>
-                    {/* <div className={styles.nav__toggle}>
-                    <Image src={`/menu.svg`} alt={`google-logo.png`} width="30" height="30" title="Недорого"/>
-                    <i id="nav-toggle" className="ri-menu-3-line"></i>
-                    </div> */}
                 </nav>
                 </div>
             </header>
@@ -62,19 +55,16 @@ export default function Home() {
                                 <p className={styles.hero__description}>Наша команда предоставляет полный комплекс профессиональных услуг в области создания и разработки цифровых продуктов. Мы специализируемся на проектировании и разработке веб-сайтов, обеспечивая их уникальность и функциональность. Наши специалисты также занимаются публикацией и продвижением веб-ресурсов, а также разработкой мобильных приложений для платформ iOS и Android. Мы нацелены на то, чтобы помочь вашему бизнесу достичь выдающихся результатов в цифровом пространстве, предлагая индивидуальные решения, которые способствуют вашему успеху и росту.</p>
                                 <div className={styles.hero__info}>
                                     <div className={styles.hero__infowrapper} >
-                                        {/* <FontAwesomeIcon icon={faMoneyBill} /> */}
                                         <Image src={`/money.png`} alt={`google-logo.png`} width="50" height="50" title="Недорого"/>
                                         <h2 className={styles.hero__infotitle}>Недорого</h2>
                                         <p>Мы предлагаем услуги по конкурентоспособным ценам, обеспечивая отличное качество без лишних затрат. Наши решения подойдут для любого бюджета, сохраняя при этом высокие стандарты выполнения.</p>
                                     </div>
                                     <div className={styles.hero__infowrapper}>
-                                        {/* <FontAwesomeIcon icon={faStarOfLife} /> */}
                                         <Image src={`/quality.png`} alt={`google-logo.png`} width="50" height="50" title="Качественно"/>
                                         <h2 className={styles.hero__infotitle}>Качественно</h2>
                                         <p>Наши работы выполнены с высокой точностью и вниманием к деталям. Мы применяем только современные технологии и лучшие практики для обеспечения надежности и эффективности всех наших решений.</p>
                                     </div>
                                     <div className={styles.hero__infowrapper}>
-                                        {/* <FontAwesomeIcon icon={faClock} /> */}
                                         <Image src={`/clock.png`} alt={`google-logo.png`} width="50" height="50" title="В срок"/>
                                         <h2 className={styles.hero__infotitle}>В срок</h2>
                                         <p>Мы гарантируем выполнение всех проектов в установленные сроки. Наша команда тщательно планирует и контролирует процесс, чтобы обеспечить своевременное завершение каждого задания.</p>

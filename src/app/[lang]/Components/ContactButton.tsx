@@ -51,7 +51,6 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
             title={`WhatsApp · ${reviewedLabels[lang].book}`}
             target="_blank"
           >
-            {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}
             <Image src={"/whatsapp.png"} width={50} height={50} alt="" />
           </Link>
         ) : (
@@ -60,7 +59,6 @@ const ContactButton: React.FC<{ lang: Locale }> = ({ lang }) => {
             title={`WhatsApp · ${contactMe[lang]}`}
             target="_blank"
           >
-            {/* <FontAwesomeIcon className={styles.phoneIcon} icon={faPhone} /> */}
             <Image src={"/whatsapp.png"} width={50} height={50} alt="" />
           </Link>
         )}
