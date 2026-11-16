@@ -150,12 +150,11 @@ A leave can repeat for one view (tab hidden twice), so reports keep the largest 
 `vi`. Crawlers that run JavaScript (Meta's, for one) also send beacons; they are rate limited
 by the crawler zone and are separated by `traffic_class`, so they are not counted as visitors.
 
-`deploy/guidebook-rum-report.py` (installed as `/usr/local/bin/guidebook-rum-report.py`)
-summarises the nginx log: `--hours 24`, `--date YYYY-MM-DD`, `--json`. It also reports which
-pages get *read* (scroll of at least 70% and 20 seconds visible) and WhatsApp clicks by page,
-section and language. The
-`guidebook-rum-rollup.timer` writes each UTC day to `/var/backups/guidebook/rum/YYYY-MM-DD.json`
-at 00:25, so the figures outlive the log rotation.
+`scripts/rum-report.mjs` (plain Node, no dependencies; run it from the frontend directory with
+the server's Node) summarises the nginx log: `--hours 24`, `--date YYYY-MM-DD`, `--json`. It also
+reports which pages get *read* (scroll of at least 70% and 20 seconds visible) and WhatsApp
+clicks by page, section and language. The `guidebook-rum-rollup.timer` runs it with `--rollup`
+and writes each UTC day to `/var/backups/guidebook/rum/YYYY-MM-DD.json` at 00:25, so the figures outlive the log rotation.
 
 ## Production layout and deployment
 

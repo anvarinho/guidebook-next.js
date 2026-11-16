@@ -3,6 +3,6 @@ Description=GuideBook real-user beacon daily rollup (nginx access log -> JSON)
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/guidebook-rum-report.py --rollup
+ExecStart=/usr/local/lib/guidebook-node/bin/node /var/www/frontend/scripts/rum-report.mjs --rollup
 Nice=15
 IOSchedulingClass=idle
