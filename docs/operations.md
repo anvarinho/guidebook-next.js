@@ -133,6 +133,28 @@ WebP optimization returned 200; the temporary server and inspector ports closed.
 Final disk usage was 65%, with 8.3 GiB available. The earlier deployment also retained diagnostic artifacts; compiled rollback
 copies have since been removed during storage cleanup.
 
+## Real-user beacons
+
+`RealUserBeacon` posts small beacons to `/rum` (the route returns 204 and stores nothing).
+nginx logs their query fields after validating each one by pattern, so unknown values are
+logged as empty. The field list lives in `src/lib/rum.ts` and in the `guidebook_rum_*` maps
+of `/etc/nginx/conf.d/guidebook-observability.conf`; keep the two in step.
+
+| Beacon | When | Fields |
+| --- | --- | --- |
+| view (`e=v`) | Page visible for one second, once per page view | `p` page, `vi` view id, `d` device (m/t/d), `c` connection, `n=1` first ever visit, `s=1` session start (with `ref`/`utm_*`) |
+| leave (`e=l`) | Tab hidden or page navigated away | `vi`, `t` seconds visible, `sd` deepest scroll %, and for full page loads `lcp` ms, `cls` x1000, `inp` ms |
+| interaction | Click | `e=wa`, `tel`, `mail`, `contact`, `lang`, `more` or `form` (contact form sent) |
+
+A leave can repeat for one view (tab hidden twice), so reports keep the largest values per
+`vi`. Crawlers that run JavaScript (Meta's, for one) also send beacons; they are rate limited
+by the crawler zone and are separated by `traffic_class`, so they are not counted as visitors.
+
+`deploy/guidebook-rum-report.py` (installed as `/usr/local/bin/guidebook-rum-report.py`)
+summarises the nginx log: `--hours 24`, `--date YYYY-MM-DD`, `--json`. The
+`guidebook-rum-rollup.timer` writes each UTC day to `/var/backups/guidebook/rum/YYYY-MM-DD.json`
+at 00:25, so the figures outlive the log rotation.
+
 ## Production layout and deployment
 
 The application runs directly from `/var/www/frontend`. Its production output

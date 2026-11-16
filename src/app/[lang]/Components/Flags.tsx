@@ -22,7 +22,7 @@ export default function Flags({ lang, flag, label, nativeName }: {
 
     return (
         <div className={styles.flags} data-language-switcher>
-            <button ref={triggerRef} type="button" className={styles.trigger}
+            <button ref={triggerRef} type="button" className={styles.trigger} data-track="lang"
                 aria-label={label} aria-haspopup="dialog"
                 aria-expanded={open} aria-controls={open ? "site-languages" : undefined}
                 onPointerEnter={() => { void loadDialog(); }}

@@ -76,7 +76,7 @@ export function LoadMore({ lang, initialIds }: { lang: Locale; initialIds: strin
   return <>
     {places.map((place, index) => <PlaceCard key={place._id} place={place} lang={lang} order={index} blurDataURL={place.blurDataURL}/>)}
     <div className={styles.listStatus} ref={ref} aria-busy={loading}>
-      {spinner !== 'hidden' ? <LoadingSpinner text={copy.loading} inline leaving={spinner === 'leaving'}/> : hasMore ? <button type="button" className={styles.loadButton} onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
+      {spinner !== 'hidden' ? <LoadingSpinner text={copy.loading} inline leaving={spinner === 'leaving'}/> : hasMore ? <button type="button" className={styles.loadButton} data-track="more" onClick={() => void load()}>{failed ? copy.retry : copy.more}</button> : <p role="status">{copy.end}</p>}
     </div>
   </>
 }

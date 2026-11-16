@@ -3,6 +3,7 @@ import ArrowIcon from '@/components/ArrowIcon';
 
 import { useId, useRef, useState, type FormEvent } from 'react'
 import { sendContact, type SubmissionResult } from '@/lib/contact/client'
+import { trackEvent } from '@/lib/rum'
 import type { Locale } from '@/lib/i18n.config'
 import type { ContactText } from '../content'
 import styles from './contact-dialog.module.css'
@@ -18,7 +19,7 @@ export default function ContactForm({ lang, copy }: { lang: Locale; copy: Contac
     sending.current = true
     setState('pending')
     const result = await sendContact(new FormData(form), lang)
-    if (result === 'success') form.reset()
+    if (result === 'success') { form.reset(); trackEvent('form') }
     setState(result)
     sending.current = false
   }

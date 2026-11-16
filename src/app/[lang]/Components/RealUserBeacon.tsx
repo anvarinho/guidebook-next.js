@@ -2,42 +2,102 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { beaconUrl, trafficSourceQuery } from '@/lib/trafficSource';
+import { trafficSourceQuery } from '@/lib/trafficSource';
+import { classifyClick, connectionBucket, deviceBucket, scrollPercent, sendRum, startVitals, trackEvent, type Vitals } from '@/lib/rum';
 
-/** Counts a page view once the page has been visible for a moment (bots rarely get that far). */
+const VISIBLE_MS = 1000;
+
+/**
+ * Real-user beacons, all POSTs to /rum that nginx logs (nothing is stored by the app):
+ *  - view (e=v): once per page view, after the page has been visible for a second, so bots
+ *    that never render rarely get counted. Carries device class, connection, whether this is
+ *    the visitor's first ever visit (n) and the start of a session (s, with the traffic source).
+ *  - leave (e=l): when the page is hidden or navigated away from: seconds visible (t), deepest
+ *    scroll (sd) and, for full page loads, LCP / CLS / INP. `vi` ties a view to its leave beacons.
+ *  - interactions (e=wa|tel|mail|contact|lang|more|form): one beacon per click.
+ */
 export default function RealUserBeacon() {
   const pathname = usePathname();
-  const sentFor = useRef<string | null>(null);
+  const firstPage = useRef(true);
+  const vitals = useRef<Vitals | null>(null);
 
   useEffect(() => {
-    let timer: number | undefined;
-    const send = () => {
-      if (sentFor.current === pathname) return;
-      sentFor.current = pathname;
-      try {
-        // The traffic source is sent once per visit: the browser keeps reporting the
-        // original referrer during in-site navigation, which would repeat it.
-        let query = '';
-        try {
-          if (!sessionStorage.getItem('gb_src')) {
-            sessionStorage.setItem('gb_src', '1');
-            query = trafficSourceQuery(document.referrer, location.hostname, location.search);
-          }
-        } catch { /* storage blocked: skip the source rather than repeat it */ }
-        const url = beaconUrl(location.pathname, query);
-        if (!navigator.sendBeacon?.(url)) fetch(url, { method: 'POST', keepalive: true }).catch(() => {});
-      } catch { /* counting must never break the page */ }
+    const onClick = (event: MouseEvent) => {
+      const element = (event.target as Element | null)?.closest?.('a[href], button, [data-track]');
+      const kind = classifyClick(element?.getAttribute('href') ?? null, element?.closest('[data-track]')?.getAttribute('data-track') ?? null);
+      if (kind) trackEvent(kind);
     };
-    const whenVisible = () => { if (document.visibilityState === 'visible') send(); };
-    if (sentFor.current !== pathname) {
-      timer = window.setTimeout(() => {
-        if (document.visibilityState === 'visible') send();
-        else document.addEventListener('visibilitychange', whenVisible, { once: true });
-      }, 1000);
-    }
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, []);
+
+  useEffect(() => {
+    const fullLoad = firstPage.current;
+    firstPage.current = false;
+    if (fullLoad && !vitals.current) vitals.current = startVitals();
+
+    const viewId = Math.random().toString(36).slice(2, 8);
+    const path = location.pathname;
+    let visibleMs = 0;
+    let since: number | null = document.visibilityState === 'visible' ? performance.now() : null;
+    let counted = false;
+    let scrolled = 0;
+    let timer: number | undefined;
+
+    const pause = () => { if (since !== null) { visibleMs += performance.now() - since; since = null; } };
+    const seconds = () => Math.min(3600, Math.round((visibleMs + (since === null ? 0 : performance.now() - since)) / 1000));
+    const onScroll = () => { scrolled = Math.max(scrolled, scrollPercent(window.scrollY, window.innerHeight, document.documentElement.scrollHeight)); };
+
+    const sendView = () => {
+      counted = true;
+      let source = '';
+      let sessionStart: number | undefined;
+      let firstVisit: number | undefined;
+      // The traffic source is sent once per visit: the browser keeps reporting the original
+      // referrer during in-site navigation, which would repeat it.
+      try {
+        if (!sessionStorage.getItem('gb_src')) {
+          sessionStorage.setItem('gb_src', '1');
+          sessionStart = 1;
+          source = trafficSourceQuery(document.referrer, location.hostname, location.search);
+        }
+      } catch { /* storage blocked: skip the source rather than repeat it */ }
+      try {
+        if (!localStorage.getItem('gb_seen')) { localStorage.setItem('gb_seen', '1'); firstVisit = 1; }
+      } catch { /* storage blocked: new vs returning stays unknown */ }
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+      sendRum(path, {
+        e: 'v', vi: viewId, d: deviceBucket(window.innerWidth), c: connectionBucket(connection?.effectiveType), n: firstVisit, s: sessionStart,
+      }, source);
+    };
+    const sendLeave = () => {
+      if (!counted) return;
+      onScroll();
+      sendRum(path, { e: 'l', vi: viewId, t: seconds(), sd: scrolled, ...(fullLoad ? vitals.current?.read() : undefined) });
+    };
+    const arm = () => {
+      window.clearTimeout(timer);
+      if (counted || since === null) return;
+      timer = window.setTimeout(() => { if (document.visibilityState === 'visible') sendView(); }, Math.max(0, VISIBLE_MS - visibleMs - (performance.now() - since)));
+    };
+    const onVisibility = () => {
+      if (document.visibilityState === 'hidden') { window.clearTimeout(timer); pause(); sendLeave(); }
+      else { since = performance.now(); arm(); }
+    };
+    const onPageHide = () => { if (since !== null) { pause(); sendLeave(); } };
+
+    onScroll();
+    arm();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('visibilitychange', onVisibility);
+    window.addEventListener('pagehide', onPageHide);
     return () => {
       window.clearTimeout(timer);
-      document.removeEventListener('visibilitychange', whenVisible);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('visibilitychange', onVisibility);
+      window.removeEventListener('pagehide', onPageHide);
+      pause();
+      sendLeave();
     };
   }, [pathname]);
 
