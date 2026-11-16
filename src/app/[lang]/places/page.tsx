@@ -1,6 +1,6 @@
 import { isRtlLocale } from '@/lib/localeMetadata';
 import ArrowIcon from '@/components/ArrowIcon';
-import { siteUrl, absoluteSiteUrl, localizedPageAlternates } from "@/lib/seo";
+import { siteUrl, absoluteSiteUrl, author, localizedPageAlternates } from "@/lib/seo";
 import { Suspense } from "react";
 import getPlacesWithWeather from "@/lib/getPlacesWithWeather";
 import styles from './page.module.css'
@@ -109,6 +109,7 @@ export async function generateMetadata(
       },
       twitter: {
         card: "summary_large_image",
+        creator: author.twitter,
         title: page.sights.title,
         description: page.sights.description,
         siteId: "",

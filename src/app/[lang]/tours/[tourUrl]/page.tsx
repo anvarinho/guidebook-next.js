@@ -17,7 +17,7 @@ import TourGallery from "./TourGallery";
 import TourDescription from "./TourDescription";
 import SectionProgress from "../../Components/SectionProgress";
 import { getTransferMessages } from "../../manas-airport-transfers/translations/load";
-import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
+import { absoluteSiteUrl, author, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo";
 
 export const revalidate = 60;
 export async function generateStaticParams() { return []; }
@@ -174,6 +174,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
+      creator: author.twitter,
       title: tour.title,
       description: description,
     },

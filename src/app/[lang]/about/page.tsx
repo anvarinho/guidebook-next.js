@@ -1,4 +1,5 @@
 import { isRtlLocale } from '@/lib/localeMetadata';
+import { author } from "@/lib/seo";
 import ArrowIcon from '@/components/ArrowIcon';
 import styles from './page.module.css'
 import { Metadata } from 'next'
@@ -132,6 +133,7 @@ export async function generateMetadata(
       },
       twitter: {
         card: "summary_large_image",
+        creator: author.twitter,
         title: `${page.about.title} | GuideBook of Kyrgyzstan`,
         description: page.about.description,
         images: [{

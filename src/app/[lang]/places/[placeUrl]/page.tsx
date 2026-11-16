@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { Locale } from '@/lib/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
 import Meta from "./meta"
-import { absoluteSiteUrl, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
+import { absoluteSiteUrl, author, localizedAlternates, metaDescription, siteUrl } from "@/lib/seo"
 
 // Public content is shared by visitors; render once per locale/slug per minute.
 export const revalidate = 60;
@@ -80,6 +80,7 @@ export async function generateMetadata(
         },
         twitter: {
             card: "summary_large_image",
+            creator: author.twitter,
             title: place.title,
             description: description,
         },

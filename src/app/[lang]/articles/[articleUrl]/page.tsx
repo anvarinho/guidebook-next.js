@@ -104,6 +104,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
+      creator: article.url === 'what-is-kyrgyzstan-known-for' ? undefined : author.twitter,
       title: article.title,
       description,
     },
