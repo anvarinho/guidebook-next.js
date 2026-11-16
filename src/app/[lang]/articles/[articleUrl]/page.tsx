@@ -40,7 +40,7 @@ export default async function Home(props: Params) {
   return (
     <div className={styles.main} dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
       <Meta lang={lang} article={article} page={page}/>
-      <Suspense fallback={<LoadingSpinner text={page.loading} detail/>}>
+      <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
         <header className={styles.articleHeader} data-motion="float">
           <div className={styles.headerCopy}>
             <a href={`/${lang}/articles`} className={styles.breadcrumb}>

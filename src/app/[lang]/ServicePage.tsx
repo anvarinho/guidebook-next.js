@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { i18n, type Locale } from '@/lib/i18n.config'
 import FlagSun from './Components/FlagSun'
-import LoadingRing from './Components/LoadingRing'
+import LoadingSpinner from './Components/LoadingSpinner'
 import styles from './service-page.module.css'
 
 type Copy = {
@@ -43,14 +43,7 @@ export default function ServicePage({ state, reset }: { state: 'notFound' | 'err
   const content = copy[lang]
   const message = content[state]
 
-  if (state === 'loading') {
-    return (
-      <section className={styles.loadingPage} data-service-state="loading" role="status" aria-live="polite" dir={isRtlLocale(lang) ? 'rtl' : 'ltr'}>
-        <FlagSun />
-        <LoadingRing large />
-      </section>
-    )
-  }
+  if (state === 'loading') return <LoadingSpinner text={message.title}/>
 
   const isNotFound = state === 'notFound'
   return (

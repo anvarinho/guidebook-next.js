@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import LoadingRing from './LoadingRing';
 import { usePresence } from './usePresence';
-import styles from './controls.module.css';
+import styles from './loading-ring.module.css';
 
 const SHOW_AFTER_MS = 200;
 const GIVE_UP_AFTER_MS = 10000;
 
 /**
- * Ring loader for client-side route changes. It never covers server-rendered HTML: it appears
+ * Emblem loader for client-side route changes. It never covers server-rendered HTML: it appears
  * only when a link click has not finished within SHOW_AFTER_MS and leaves when the route commits.
  */
 export default function RouteLoader({ label }: { label: string }) {
@@ -48,11 +48,11 @@ export default function RouteLoader({ label }: { label: string }) {
   }, [pathname]);
 
   return (
-    <div className={styles.routeLoader} role="status" aria-live="polite">
-      {presence !== 'hidden' && <span className={styles.routeLoaderDisc} data-leaving={presence === 'leaving' || undefined}>
-        <LoadingRing large/>
-        <span className={styles.srOnly}>{label}</span>
-      </span>}
+    <div role="status" aria-live="polite">
+      {presence !== 'hidden' && <div className={styles.veil} data-leaving={presence === 'leaving' || undefined}>
+        <LoadingRing/>
+        <span className={styles.text}>{label}</span>
+      </div>}
     </div>
   );
 }

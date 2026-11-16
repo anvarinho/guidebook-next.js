@@ -61,7 +61,7 @@ export default function Clients({ params: { lang } }: { params: { lang: Locale }
           </div>}
         </header>
         <div className={styles.testimonials_container} id="review-cards" aria-busy={loading}>
-          {spinner !== 'hidden' ? <p className={styles.status} role="status"><LoadingRing leaving={spinner === 'leaving'}/>{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> <ArrowIcon direction="up-right"/></span></Link> : visibleReviews.map((review, slot) => (
+          {spinner !== 'hidden' ? <p className={styles.status} role="status"><LoadingRing small leaving={spinner === 'leaving'}/>{copy.loading}</p> : reviews.length === 0 ? <Link href={`/${lang}/contact`} className={styles.status}>{copy.empty}<span aria-hidden="true"> <ArrowIcon direction="up-right"/></span></Link> : visibleReviews.map((review, slot) => (
             <figure className={styles.testimonial_card} key={`${review._id}-${slot}`} data-motion="rise">
               <span className={styles.quote} aria-hidden="true">“</span>
               <blockquote tabIndex={0} className={styles.reviewText} dir="auto"><p>{review.review}</p></blockquote>

@@ -1,14 +1,22 @@
-import styles from './controls.module.css'
+import styles from './loading-ring.module.css'
 import LoadingRing from './LoadingRing'
 
-export default function LoadingSpinner({ text, detail = false, inline = false, leaving = false }: {
-    text: string; detail?: boolean; inline?: boolean; leaving?: boolean;
+/** Loading state for content. Full size floats over the dimmed, blurred page; `inline` sits under a list. */
+export default function LoadingSpinner({ text, inline = false, leaving = false }: {
+    text: string; inline?: boolean; leaving?: boolean;
 }) {
+    if (inline) {
+        return (
+            <div className={styles.inline} data-leaving={leaving || undefined} role="status" aria-live="polite">
+                <LoadingRing small/>
+                <span className={styles.text}>{text}</span>
+            </div>
+        );
+    }
     return (
-        <div className={`${styles.center} ${detail ? styles.detailCenter : ''} ${inline ? styles.inlineCenter : ''}`}
-            data-leaving={leaving || undefined} role="status" aria-live="polite">
-            <LoadingRing large={detail} leaving={leaving}/>
-            <span className={styles.loadingText}>{text}</span>
+        <div className={styles.veil} role="status" aria-live="polite">
+            <LoadingRing/>
+            <span className={styles.text}>{text}</span>
         </div>
     );
 };
