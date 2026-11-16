@@ -81,7 +81,13 @@ export default function RealUserBeacon() {
       timer = window.setTimeout(() => { if (document.visibilityState === 'visible') sendView(); }, Math.max(0, VISIBLE_MS - visibleMs - (performance.now() - since)));
     };
     const onVisibility = () => {
-      if (document.visibilityState === 'hidden') { window.clearTimeout(timer); pause(); sendLeave(); }
+      if (document.visibilityState === 'hidden') {
+        window.clearTimeout(timer);
+        // pagehide can already have reported this stretch of visibility.
+        const wasVisible = since !== null;
+        pause();
+        if (wasVisible) sendLeave();
+      }
       else { since = performance.now(); arm(); }
     };
     const onPageHide = () => { if (since !== null) { pause(); sendLeave(); } };
