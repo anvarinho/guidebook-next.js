@@ -1,0 +1,3 @@
+# Install as /etc/cron.d/guidebook-traffic-stats (replaces guidebook-daily-stats).
+# Nightly: nginx access logs -> /var/lib/guidebook-stats/stats.sqlite (see docs/operations.md).
+10 2 * * * root /usr/local/lib/guidebook-node/bin/node --disable-warning=ExperimentalWarning /var/www/frontend/scripts/traffic-stats.mjs >> /var/log/guidebook-traffic-stats.log 2>&1

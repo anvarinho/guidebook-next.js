@@ -5,7 +5,6 @@
  *   rum-report.mjs                      last 24 hours, printed
  *   rum-report.mjs --hours 72           a different window
  *   rum-report.mjs --date 2026-11-16 --json    one UTC day as JSON
- *   rum-report.mjs --rollup             write yesterday's JSON to /var/backups/guidebook/rum/
  *   rum-report.mjs --log FILE           read FILE instead of the nginx logs (testing)
  *
  * A view is a POST /rum from a browser (not a crawler, not internal) whose Referer is the site
@@ -13,13 +12,12 @@
  * (ev=l) are deduplicated per (visitor, view id): the largest dwell/scroll wins.
  * The beacon fields are defined in src/lib/rum.ts and the guidebook_rum_* nginx maps.
  */
-import { createReadStream, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { createReadStream, existsSync, readdirSync } from 'node:fs';
 import { createGunzip } from 'node:zlib';
 import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 
 const NGINX_LOGS = '/var/log/nginx';
-const OUT_DIR = '/var/backups/guidebook/rum';
 const OWN_HOSTS = ['central-asia.live'];
 const GOALS = new Set(['wa', 'tel', 'mail', 'contact', 'form']);
 const EVENTS = ['wa', 'tel', 'mail', 'contact', 'lang', 'more', 'form'];
@@ -67,18 +65,29 @@ const percentile = (values, q) => {
 };
 const share = (part, whole, digits = 3) => (whole ? Number((part / whole).toFixed(digits)) : null);
 
-export function buildReport(beacons, start, end) {
+const fromSite = r => OWN_HOSTS.some(host => (r.referer ?? '').includes(host));
+const fromBrowser = r => (r.status === 204 || r.status === 499) && r.traffic_class === 'browser_or_other';
+/** A beacon from a real visitor's browser: not a crawler, not internal, sent from a page of this site. */
+export const isRealBeacon = r => fromBrowser(r) && !r.internal && fromSite(r);
+/** Beacons without an `ev` field predate the extra fields and are page views. */
+export const isView = r => !r.ev || r.ev === 'v';
+
+/**
+ * `options.pages` and `options.breakdown` set how many rows the page lists and the other
+ * breakdowns keep (defaults suit the printed report; the stats database asks for more).
+ */
+export function buildReport(beacons, start, end, options = {}) {
+  const pagesLimit = options.pages ?? 15;
+  const breakdownLimit = options.breakdown ?? 10;
   const stats = { window: { from: new Date(start).toISOString(), to: new Date(end).toISOString() }, beacons: beacons.length };
   stats.rejected = Object.fromEntries(count(beacons.filter(r => r.status !== 204 && r.status !== 499).map(r => `${r.status}:${r.traffic_class}`)));
-  const browser = beacons.filter(r => (r.status === 204 || r.status === 499) && r.traffic_class === 'browser_or_other');
-  const fromSite = r => OWN_HOSTS.some(host => (r.referer ?? '').includes(host));
-  stats.spoofed_or_foreign_referer = browser.filter(r => !fromSite(r)).length;
-  const real = browser.filter(r => !r.internal && fromSite(r));
+  stats.spoofed_or_foreign_referer = beacons.filter(r => fromBrowser(r) && !fromSite(r)).length;
+  const real = beacons.filter(isRealBeacon);
 
   const visitor = r => (r.vid_got || r.vid_set || r.client_ip).replace('gb_vid=', '');
   const page = r => r.page || '';
   const parts = r => [...page(r).split('/'), '', '', ''];
-  const views = real.filter(r => !r.ev || r.ev === 'v');
+  const views = real.filter(isView);
   const leaves = real.filter(r => r.ev === 'l');
   const events = real.filter(r => EVENTS.includes(r.ev));
 
@@ -89,15 +98,16 @@ export function buildReport(beacons, start, end) {
   stats.single_view_visitors = [...perVisitor.values()].filter(n => n === 1).length;
   stats.new_visitors = new Set(views.filter(r => r.new === '1').map(visitor)).size;
   stats.sessions_started = views.filter(r => r.sess === '1').length;
-  stats.devices = top(count(views.map(r => r.dev || '?')));
-  stats.connections = top(count(views.filter(r => r.conn).map(r => r.conn)));
-  stats.countries = top(count(views.map(r => r.country)));
-  stats.languages = top(count(views.map(r => parts(r)[1] || '?')));
-  stats.sections = top(count(views.map(r => parts(r)[2] || 'home')));
-  stats.top_pages = top(count(views.map(page)), 15);
-  stats.referrers = top(count(views.filter(r => r.ref).map(r => r.ref)));
-  stats.utm_source = top(count(views.filter(r => r.utm_source).map(r => r.utm_source)));
+  stats.devices = top(count(views.map(r => r.dev || '?')), breakdownLimit);
+  stats.connections = top(count(views.filter(r => r.conn).map(r => r.conn)), breakdownLimit);
+  stats.countries = top(count(views.map(r => r.country)), breakdownLimit);
+  stats.languages = top(count(views.map(r => parts(r)[1] || '?')), breakdownLimit);
+  stats.sections = top(count(views.map(r => parts(r)[2] || 'home')), breakdownLimit);
+  stats.top_pages = top(count(views.map(page)), pagesLimit);
+  stats.referrers = top(count(views.filter(r => r.ref).map(r => r.ref)), breakdownLimit);
+  stats.utm_source = top(count(views.filter(r => r.utm_source).map(r => r.utm_source)), breakdownLimit);
   stats.events = Object.fromEntries(count(events.map(r => r.ev)));
+  stats.event_visitors = Object.fromEntries(EVENTS.filter(name => stats.events[name]).map(name => [name, new Set(events.filter(r => r.ev === name).map(visitor)).size]));
   stats.visitors_with_contact_action = new Set(events.filter(r => GOALS.has(r.ev)).map(visitor)).size;
 
   // One entry per view: the largest dwell and scroll reported by any of its leave beacons.
@@ -120,7 +130,7 @@ export function buildReport(beacons, start, end) {
     views_read: entries.filter(isRead).length,
     of_views_with_leave: entries.length,
     rule: `scroll >= ${READ_SCROLL}% and >= ${READ_SECONDS}s visible`,
-    top_read_pages: top(reads).map(([name, n]) => [name, n, opened.get(name)]),
+    top_read_pages: top(reads, options.pages ?? 10).map(([name, n]) => [name, n, opened.get(name)]),
   };
   const whatsapp = events.filter(r => r.ev === 'wa');
   const whatsappVisitors = new Set(whatsapp.map(visitor)).size;
@@ -128,7 +138,7 @@ export function buildReport(beacons, start, end) {
     clicks: whatsapp.length,
     visitors: whatsappVisitors,
     visitor_share: perVisitor.size ? Number((whatsappVisitors / perVisitor.size).toFixed(3)) : 0,
-    by_page: top(count(whatsapp.map(page))),
+    by_page: top(count(whatsapp.map(page)), options.pages ?? 10),
     by_section: top(count(whatsapp.map(r => parts(r)[2] || 'home'))),
     by_language: top(count(whatsapp.map(r => parts(r)[1] || '?'))),
   };
@@ -172,11 +182,10 @@ export function renderReport(s) {
 }
 
 function parseArgs(argv) {
-  const args = { hours: 24, date: null, json: false, rollup: false, log: null };
+  const args = { hours: 24, date: null, json: false, log: null };
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     if (flag === '--json') args.json = true;
-    else if (flag === '--rollup') args.rollup = true;
     else if (flag === '--hours') args.hours = Number(argv[++i]);
     else if (flag === '--date') args.date = argv[++i];
     else if (flag === '--log') args.log = argv[++i];
@@ -192,17 +201,12 @@ async function main() {
   const now = Date.now();
   let start = now - args.hours * 3600_000;
   let end = now;
-  if (args.date || args.rollup) {
-    const day = args.date ? Date.parse(`${args.date}T00:00:00Z`) : Math.floor(now / 86_400_000) * 86_400_000 - 86_400_000;
+  if (args.date) {
+    const day = Date.parse(`${args.date}T00:00:00Z`);
     [start, end] = [day, day + 86_400_000];
   }
   const stats = buildReport(await readBeacons(args.log ? [args.log] : logFiles(), start, end), start, end);
-  if (args.rollup) {
-    mkdirSync(OUT_DIR, { recursive: true });
-    const path = `${OUT_DIR}/${new Date(start).toISOString().slice(0, 10)}.json`;
-    writeFileSync(path, JSON.stringify(stats, null, 1) + '\n');
-    console.log('wrote', path);
-  } else console.log(args.json ? JSON.stringify(stats, null, 1) : renderReport(stats));
+  console.log(args.json ? JSON.stringify(stats, null, 1) : renderReport(stats));
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

@@ -151,10 +151,42 @@ A leave can repeat for one view (tab hidden twice), so reports keep the largest 
 by the crawler zone and are separated by `traffic_class`, so they are not counted as visitors.
 
 `scripts/rum-report.mjs` (plain Node, no dependencies; run it from the frontend directory with
-the server's Node) summarises the nginx log: `--hours 24`, `--date YYYY-MM-DD`, `--json`. It also
-reports which pages get *read* (scroll of at least 70% and 20 seconds visible) and WhatsApp
-clicks by page, section and language. The `guidebook-rum-rollup.timer` runs it with `--rollup`
-and writes each UTC day to `/var/backups/guidebook/rum/YYYY-MM-DD.json` at 00:25, so the figures outlive the log rotation.
+the server's Node) prints a report for a window of the nginx log: `--hours 24`,
+`--date YYYY-MM-DD`, `--json`. It shows views, visitors, devices, which pages get *read* (scroll of
+at least 70% and 20 seconds visible), WhatsApp clicks by page, section and language, and web vitals.
+
+## Traffic statistics database
+
+`scripts/traffic-stats.mjs` turns the nginx access logs into one SQLite file,
+`/var/lib/guidebook-stats/stats.sqlite`, with a set of rows per UTC day. It uses Node's built-in
+`node:sqlite`, so it needs no packages. `deploy/guidebook-traffic-stats.cron` runs it nightly at
+02:10 UTC. Re-running replaces the days it reads and leaves older days alone, so history survives
+the log rotation (90 files, about 90 days) indefinitely. Only complete days are stored.
+Requests come from the log; real-user numbers use the same code as `rum-report.mjs`.
+
+| Table | One row per | Holds |
+| --- | --- | --- |
+| `days` | day | requests, bytes, p50/p95/p99 latency, browser vs crawler vs unclassified, pages / assets / images / API / beacons, status groups (ok, redirects, 404, 429, other 4xx, 5xx), views, visitors, new visitors, sessions, single-view visitors, reads, median dwell and scroll, contact and WhatsApp numbers |
+| `hourly` | day and hour | requests, crawler requests, 429s, 5xx and real views: shows spikes and deploy errors |
+| `breakdown` | day, `dim`, `key` | `requests` (from the log) and `views` (beacons) by `country`, `status`, `language`, `section`, `device`, `connection`, `referrer`, `utm_source` |
+| `pages` | day and page | views, reads and WhatsApp clicks per page |
+| `events` | day and event | clicks and distinct visitors for `wa`, `tel`, `mail`, `contact`, `lang`, `more`, `form` |
+| `vitals` | day, device, metric | LCP, CLS (x1000) and INP: sample size, median and 75th percentile |
+| `bots` | day and IP | the heaviest clients (300+ requests a day, at most 15) with country and user agent, kept 180 days. Ordinary visitors never reach this table |
+
+Ready-made views: `v_overview` (one line per day with ratios), `v_weekly` and `v_top_pages_7d`.
+Print the latest days with `node scripts/traffic-stats.mjs --show 14`, or query directly:
+
+```sh
+sqlite3 -header -column /var/lib/guidebook-stats/stats.sqlite "SELECT * FROM v_overview ORDER BY date DESC LIMIT 7"
+sqlite3 -header -column /var/lib/guidebook-stats/stats.sqlite "SELECT hour, requests, server_errors FROM hourly WHERE date = '2026-11-15'"
+```
+
+Notes: days before about Nov 4 come from the old log format (`source = legacy`) and have no crawler
+split or beacon data (those columns are NULL). `browser_pages` is the old "human page view" count
+and includes bots that pose as browsers; use `views` and `visitors` for real people. A version 1
+database (table `daily`) is refused with instructions: move it aside and run the script again to
+rebuild it from the logs that still exist.
 
 ## Production layout and deployment
 
