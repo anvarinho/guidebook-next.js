@@ -102,10 +102,12 @@ export function buildReport(beacons, start, end) {
 
   // One entry per view: the largest dwell and scroll reported by any of its leave beacons.
   const best = new Map();
+  // Only the view beacon names the device, so leave beacons borrow it from their view.
+  const deviceByView = new Map(views.filter(r => r.vi && r.dev).map(r => [`${visitor(r)}|${r.vi}`, r.dev]));
   const whole = value => (value === undefined || value === '' ? null : Number.parseInt(value, 10));
   for (const r of leaves) {
     const key = `${visitor(r)}|${r.vi || r.request_id}`;
-    const entry = best.get(key) ?? { dwell: 0, scroll: 0, dev: r.dev, page: page(r), lcp: null, cls: null, inp: null };
+    const entry = best.get(key) ?? { dwell: 0, scroll: 0, dev: r.dev || deviceByView.get(key), page: page(r), lcp: null, cls: null, inp: null };
     best.set(key, entry);
     for (const field of ['dwell', 'scroll']) if (whole(r[field]) !== null) entry[field] = Math.max(entry[field], whole(r[field]));
     for (const field of ['lcp', 'cls', 'inp']) if (whole(r[field]) !== null) entry[field] = whole(r[field]);

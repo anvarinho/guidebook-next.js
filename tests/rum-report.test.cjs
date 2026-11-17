@@ -71,3 +71,12 @@ test('beacons sent before the extra fields existed still count as views', async 
   const s = await report([row('A', '/en/places', undefined), { ...row('B', '/en/places', ''), ev: undefined }]);
   assert.equal(s.views, 2);
 });
+
+test('LCP by device uses the device named by the matching view beacon', async () => {
+  const s = await report([
+    row('A', '/en/places/x', 'v', { vi: 'a1', dev: 'm' }), row('A', '/en/places/x', 'l', { vi: 'a1', dev: '', dwell: '5', scroll: '10', lcp: '3000' }),
+    row('B', '/en/places/x', 'v', { vi: 'b1', dev: 'd' }), row('B', '/en/places/x', 'l', { vi: 'b1', dev: '', dwell: '5', scroll: '10', lcp: '900' }),
+  ]);
+  assert.deepEqual(s.web_vitals.lcp_by_device.m, { n: 1, lcp_p75: 3000 });
+  assert.deepEqual(s.web_vitals.lcp_by_device.d, { n: 1, lcp_p75: 900 });
+});
