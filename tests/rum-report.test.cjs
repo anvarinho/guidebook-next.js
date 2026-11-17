@@ -80,3 +80,56 @@ test('LCP by device uses the device named by the matching view beacon', async ()
   assert.deepEqual(s.web_vitals.lcp_by_device.m, { n: 1, lcp_p75: 3000 });
   assert.deepEqual(s.web_vitals.lcp_by_device.d, { n: 1, lcp_p75: 900 });
 });
+
+test('a retried beacon is counted once; repeated leave beacons still merge', async () => {
+  const s = await report([
+    row('A', '/en/places/x', 'v', { vi: 'a1', q: '1' }), row('A', '/en/places/x', 'v', { vi: 'a1', q: '1' }),
+    row('A', '/en/places/x', 'wa', { vi: 'a1', q: '2' }), row('A', '/en/places/x', 'wa', { vi: 'a1', q: '2' }), row('A', '/en/places/x', 'wa', { vi: 'a1', q: '3' }),
+    row('A', '/en/places/x', 'l', { vi: 'a1', q: '4', dwell: '4', scroll: '10' }), row('A', '/en/places/x', 'l', { vi: 'a1', q: '4', dwell: '40', scroll: '80' }),
+  ]);
+  assert.equal(s.views, 1);
+  assert.equal(s.whatsapp.clicks, 2);
+  assert.equal(s.beacons_deduped, 2);
+  assert.equal(s.reads.views_read, 1);
+});
+
+test('likely human, uncertain and bot views are kept apart', async () => {
+  const s = await report([
+    row('A', '/en', 'v', { fetch_site: 'same-origin' }),
+    row('B', '/en', 'v', { fetch_site: '' }),                                  // header missing
+    row('C', '/en', 'v', { fetch_site: 'cross-site' }),
+    row('D', '/en', 'v', { fetch_site: 'same-origin', traffic_class: 'claimed_crawler' }),
+    row('E', '/en', 'v', { fetch_site: 'same-origin', traffic_class: 'claimed_crawler' }),
+    row('F', '/en', 'v', { fetch_site: 'same-origin', internal: true }),
+    row('G', '/en', 'v'),                                                      // older log line: no fetch metadata field at all
+  ]);
+  assert.deepEqual(s.traffic, { views_likely_human: 2, views_uncertain: 2, views_bot: 2, bot_share: 0.333 });
+  assert.equal(s.views, 2);
+  assert.equal(s.visitors, 2);
+});
+
+test('engagement, the funnel by source and landing page, and script errors', async () => {
+  const s = await report([
+    row('A', '/en/tours/x', 'v', { vi: 'a1', q: '1', sess: '1', ref: 'google.com' }), row('A', '/en/tours/x', 'g', { vi: 'a1', q: '2' }), row('A', '/en/tours/x', 'wa', { vi: 'a1', q: '3' }),
+    row('B', '/en/tours/x', 'v', { vi: 'b1', q: '1', sess: '1', ref: 'google.com' }), row('B', '/en/tours/x', 'g', { vi: 'b1', q: '2' }),
+    row('C', '/en/places/y', 'v', { vi: 'c1', q: '1', sess: '1' }),
+    row('D', '/en/places/y', 'v', { vi: 'd1', q: '1', sess: '1', utm_source: 'newsletter' }), row('D', '/en/places/y', 'x', { vi: 'd1', q: '2', eh: 'deadbeef' }),
+    row('A', '/en/places/z', 'v', { vi: 'a2', q: '1' }),
+  ]);
+  assert.deepEqual(s.engaged, { views: 2, visitors: 2, rate: 0.4 });
+  assert.deepEqual(s.funnel, { visitors: 4, engaged_visitors: 2, whatsapp_visitors: 1, contact_visitors: 1 });
+  assert.deepEqual(s.funnel_by_source, [['google.com', 2, 2, 1], ['direct', 1, 0, 0], ['newsletter', 1, 0, 0]]);
+  assert.deepEqual(s.funnel_by_page, [['/en/tours/x', 2, 2, 1], ['/en/places/y', 2, 0, 0]]);
+  assert.deepEqual(s.js_errors, { count: 1, views_affected: 1, rate: 0.2, top: [['deadbeef /en/places/y', 1]] });
+});
+
+test('TTFB and LCP are broken down by connection, page type and element', async () => {
+  const s = await report([
+    row('A', '/en/tours/x', 'v', { vi: 'a1', conn: '4g' }), row('A', '/en/tours/x', 'l', { vi: 'a1', dwell: '5', scroll: '5', lcp: '2000', ttfb: '200', lt: 'i' }),
+    row('B', '/en/tours/x', 'v', { vi: 'b1', conn: '3g' }), row('B', '/en/tours/x', 'l', { vi: 'b1', dwell: '5', scroll: '5', lcp: '4000', ttfb: '600', lt: 't' }),
+  ]);
+  assert.deepEqual(s.web_vitals.ttfb_ms, { n: 2, p50: 600, p75: 600 });
+  assert.deepEqual(s.web_vitals_segments.connection, { '4g': { n: 1, lcp_p75: 2000 }, '3g': { n: 1, lcp_p75: 4000 } });
+  assert.deepEqual(s.web_vitals_segments.section, { tours: { n: 2, lcp_p75: 4000 } });
+  assert.deepEqual(s.web_vitals_segments.element, { i: { n: 1, lcp_p75: 2000 }, t: { n: 1, lcp_p75: 4000 } });
+});

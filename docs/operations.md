@@ -138,22 +138,50 @@ copies have since been removed during storage cleanup.
 `RealUserBeacon` posts small beacons to `/rum` (the route returns 204 and stores nothing).
 nginx logs their query fields after validating each one by pattern, so unknown values are
 logged as empty. The field list lives in `src/lib/rum.ts` and in the `guidebook_rum_*` maps
-of `/etc/nginx/conf.d/guidebook-observability.conf`; keep the two in step.
+of `deploy/nginx-observability.conf` (installed as `/etc/nginx/conf.d/guidebook-observability.conf`);
+keep the two in step.
+
+Every beacon carries `vi` (the view, 8 random characters) and `q` (a counter within the view).
+A retry repeats both, so reports count a beacon once per (visitor, `vi`, event, `q`).
 
 | Beacon | When | Fields |
 | --- | --- | --- |
-| view (`e=v`) | Page visible for one second, once per page view | `p` page, `vi` view id, `d` device (m/t/d), `c` connection, `n=1` first ever visit, `s=1` session start (with `ref`/`utm_*`) |
-| leave (`e=l`) | Tab hidden or page navigated away | `vi`, `t` seconds visible, `sd` deepest scroll %, and for full page loads `lcp` ms, `cls` x1000, `inp` ms |
+| view (`e=v`) | Page visible for one second, once per page view | `p` page, `vi`, `q`, `d` device (m/t/d), `c` connection, `nt` how the page was reached (n navigate, r reload, b back/forward, p prerender, s in-site navigation, c restored from the back/forward cache), `n=1` first ever visit, `s=1` session start (with `ref`/`utm_*`) |
+| engaged (`e=g`) | Once per view: 10 seconds of *visible* time, or a trusted click, key press or touch | `vi`, `q`, `t` seconds visible |
+| leave (`e=l`) | Tab hidden or page navigated away | `vi`, `t` seconds visible, `sd` deepest scroll %, and for full page loads `lcp` ms, `lt` LCP element (i image, t text), `cls` x1000, `inp` ms, `ttfb` ms |
 | interaction | Click | `e=wa`, `tel`, `mail`, `contact`, `lang`, `more` or `form` (contact form sent) |
+| error (`e=x`) | First script error of a view (same-origin scripts only) | `eh`: 8 hex digits hashing the message and file; the message itself is never sent |
 
-A leave can repeat for one view (tab hidden twice), so reports keep the largest values per
-`vi`. Crawlers that run JavaScript (Meta's, for one) also send beacons; they are rate limited
-by the crawler zone and are separated by `traffic_class`, so they are not counted as visitors.
+While the page is open, beacons go out with `fetch`, so a 429 or 5xx is seen and retried once
+(after the `Retry-After`, 1 to 5 seconds) with the same ids. Beacons sent as the page goes away use
+`sendBeacon`, which can only queue the request. A page restored from the back/forward cache starts a
+new view (`nt=c`). A leave can repeat for one view (tab hidden twice), so reports keep the largest
+values per `vi`.
+
+nginx treats `/rum` as its own location (`deploy/nginx-public-proxy.conf`): POST only, cross-site and
+same-site requests answered 403, bodies over 1 kB 413, and its own rate limits
+(`deploy/nginx-resource-limits.conf`): 3 requests a second per IP, with room for bursts, for
+browsers, and 6 a minute per IP for clients that call themselves crawlers. Beacons therefore no
+longer spend the page budget, and a crawler burst cannot starve real visitors. Rejections are in the
+log (status 403/405/413/429) and are counted per day as `beacons_rejected` and `beacons_limited`.
+
+Views are reported in three classes, never mixed: *likely human* (a browser, same-origin fetch
+metadata, a referer from the site, not internal), *bot* (the user agent calls itself a crawler) and
+*uncertain* (everything else that was accepted, for example a missing `Sec-Fetch-Site`). Only the
+first counts as `views` and visitors. The label is "likely": no signal proves a person.
 
 `scripts/rum-report.mjs` (plain Node, no dependencies; run it from the frontend directory with
 the server's Node) prints a report for a window of the nginx log: `--hours 24`,
-`--date YYYY-MM-DD`, `--json`. It shows views, visitors, devices, which pages get *read* (scroll of
-at least 70% and 20 seconds visible), WhatsApp clicks by page, section and language, and web vitals.
+`--date YYYY-MM-DD`, `--json`. It shows views by class, engagement, the funnel (visitors, engaged,
+contact action) by source and landing page, which pages get *read* (scroll of at least 70% and 20
+seconds visible), WhatsApp clicks by page, section and language, script errors, and web vitals
+(including TTFB and LCP by connection, page type and element).
+
+Rolling it out: install `deploy/nginx-observability.conf`, `deploy/nginx-resource-limits.conf` and
+`deploy/nginx-public-proxy.conf` (they are the live files plus the beacon changes), run
+`nginx -t && systemctl reload nginx`, then deploy the frontend and `deploy/guidebook-health.py`
+(restart `guidebook-health.timer`). Install the nginx files first: until the new fields are in the
+log format, the extra beacon fields are logged as empty and deduplication has nothing to work on.
 
 ## Traffic statistics database
 
@@ -166,21 +194,38 @@ Requests come from the log; real-user numbers use the same code as `rum-report.m
 
 | Table | One row per | Holds |
 | --- | --- | --- |
-| `days` | day | requests, bytes, p50/p95/p99 latency, browser vs crawler vs unclassified, pages / assets / images / API / beacons, status groups (ok, redirects, 404, 429, other 4xx, 5xx), views, visitors, new visitors, sessions, single-view visitors, reads, median dwell and scroll, contact and WhatsApp numbers |
+| `days` | day | requests, bytes, p50/p95/p99 latency, browser vs crawler vs unclassified, pages / assets / images / API / beacons, status groups (ok, redirects, 404, 429, other 4xx, 5xx), views, visitors, new visitors, sessions, single-view visitors, reads, median dwell and scroll, contact and WhatsApp numbers; since schema 3 also `views_uncertain`, `views_bot`, `engaged_views`, `engaged_visitors`, `js_errors`, `beacons_limited`, `beacons_rejected`, `beacons_repeated`, `view_coverage` (likely-human views divided by browser page loads: how much the beacon sees) and `ttfb_p75` |
 | `hourly` | day and hour | requests, crawler requests, 429s, 5xx and real views: shows spikes and deploy errors |
-| `breakdown` | day, `dim`, `key` | `requests` (from the log) and `views` (beacons) by `country`, `status`, `language`, `section`, `device`, `connection`, `referrer`, `utm_source` |
+| `breakdown` | day, `dim`, `key` | `requests` (from the log) and `views` (beacons) by `country`, `status`, `language`, `section`, `device`, `connection`, `referrer`, `utm_source`, `browser`, `navigation`; for `browser`, `requests` are page loads and `views` are beacons, so a lopsided ratio shows where beacons are lost |
 | `pages` | day and page | views, reads and WhatsApp clicks per page |
 | `events` | day and event | clicks and distinct visitors for `wa`, `tel`, `mail`, `contact`, `lang`, `more`, `form` |
 | `vitals` | day, device, metric | LCP, CLS (x1000) and INP: sample size, median and 75th percentile |
+| `vitals_segments` | day, `dim`, `key` | LCP 75th percentile by `connection`, `section` (page type) and `element` (i image, t text) |
+| `funnel` | day, `dim`, `key` | visitors, engaged visitors and visitors with a contact action, by landing `source` and landing `page` |
+| `deploys` | deploy | time and note, written by `traffic-stats.mjs --mark-deploy "note"` |
 | `bots` | day and IP | the heaviest clients (300+ requests a day, at most 15) with country and user agent, kept 180 days. Ordinary visitors never reach this table |
 
-Ready-made views: `v_overview` (one line per day with ratios), `v_weekly` and `v_top_pages_7d`.
+Ready-made views: `v_overview` (one line per day with ratios, including `engaged_pct` and `coverage_pct`), `v_weekly`, `v_top_pages_7d` and `v_deploys` (each deploy next to the day before and the day of it).
 Print the latest days with `node scripts/traffic-stats.mjs --show 14`, or query directly:
 
 ```sh
 sqlite3 -header -column /var/lib/guidebook-stats/stats.sqlite "SELECT * FROM v_overview ORDER BY date DESC LIMIT 7"
 sqlite3 -header -column /var/lib/guidebook-stats/stats.sqlite "SELECT hour, requests, server_errors FROM hourly WHERE date = '2026-11-15'"
+sqlite3 -header -column /var/lib/guidebook-stats/stats.sqlite "SELECT key, requests AS page_loads, views FROM breakdown WHERE dim = 'browser' AND date = '2026-11-16'"
 ```
+
+Record a deploy right after releasing, so vitals and conversion can be read against it:
+`node scripts/traffic-stats.mjs --mark-deploy "rum v3"`. An existing version 2 database is upgraded in
+place (new columns, tables and views); days written before the upgrade fill in the new columns the
+next time the script reads their logs.
+
+Alerts: `deploy/guidebook-health.py` raises `rum_beacons_rate_limited` (20 or more beacons answered 429, at
+least 20% of them, in five minutes) from the live log. From the newest complete day in this database it also
+raises `rum_coverage_dropped` (coverage under 60% of the previous median), `rum_beacons_limited_daily`
+(5% or more of the day's beacons got a 429), `rum_lcp_slow` (LCP p75 over 2.5 s with 50 or more samples),
+`rum_conversions_zero` (100 or more views and no WhatsApp click or contact) and `rum_stats_stale`
+(no new day for two days). The sampler used to read only the old combined log format, so its 5xx check
+saw no requests once the log became JSON; it now reads both.
 
 Notes: days before about Nov 4 come from the old log format (`source = legacy`) and have no crawler
 split or beacon data (those columns are NULL). `browser_pages` is the old "human page view" count

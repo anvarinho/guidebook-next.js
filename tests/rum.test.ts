@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { classifyClick, connectionBucket, deviceBucket, rumUrl, scrollPercent } from '../src/lib/rum';
+import { ENGAGED_MS, classifyClick, connectionBucket, deviceBucket, errorHash, isEngaged, navigationBucket, randomId, retryDelay, rumUrl, scrollPercent } from '../src/lib/rum';
 
 test('viewport width maps to mobile, tablet or desktop', () => {
   assert.deepEqual([320, 767, 768, 1099, 1100, 2560].map(deviceBucket), ['m', 'm', 't', 't', 'd', 'd']);
@@ -39,4 +39,39 @@ test('beacon URLs carry the page, whole-number fields and the source, and drop e
   assert.equal(rumUrl('/en', { e: 'v' }, '?ref=google.com'), '/rum?p=/en&e=v&ref=google.com');
   assert.equal(rumUrl('/en', {}), '/rum?p=/en');
   assert.equal(rumUrl('/bad path?x', { e: 'wa' }), '/rum?e=wa');
+});
+
+test('a view is engaged after ten visible seconds or on a real interaction', () => {
+  assert.equal(isEngaged(0, false), false);
+  assert.equal(isEngaged(ENGAGED_MS - 1, false), false);
+  assert.equal(isEngaged(ENGAGED_MS, false), true);
+  assert.equal(isEngaged(1200, true), true);
+});
+
+test('navigation types map to one letter and unknown ones to nothing', () => {
+  assert.deepEqual(['navigate', 'reload', 'back_forward', 'prerender', 'x', undefined].map(navigationBucket), ['n', 'r', 'b', 'p', undefined, undefined]);
+});
+
+test('only rate limits and server errors are retried, after a bounded wait', () => {
+  assert.equal(retryDelay(204, null), null);
+  assert.equal(retryDelay(403, null), null);
+  assert.equal(retryDelay(413, '3'), null);
+  assert.equal(retryDelay(429, null), 2000);
+  assert.equal(retryDelay(429, '3'), 3000);
+  assert.equal(retryDelay(429, '0'), 2000);
+  assert.equal(retryDelay(429, '120'), 5000);
+  assert.equal(retryDelay(503, 'soon'), 2000);
+});
+
+test('view ids are eight lowercase alphanumerics and error hashes are stable eight hex digits', () => {
+  assert.match(randomId(), /^[a-z0-9]{8}$/);
+  assert.notEqual(randomId(), randomId());
+  assert.match(errorHash('x is not a function', 'https://a.example/_next/app.js?v=1'), /^[0-9a-f]{8}$/);
+  assert.equal(errorHash('boom', '/a.js?x=1'), errorHash('boom', '/a.js?x=2'));
+  assert.notEqual(errorHash('boom', '/a.js'), errorHash('bang', '/a.js'));
+});
+
+test('beacon URLs carry the new fields', () => {
+  assert.equal(rumUrl('/en', { e: 'g', vi: 'abcd1234', q: 3, t: 11 }), '/rum?p=/en&e=g&vi=abcd1234&q=3&t=11');
+  assert.equal(rumUrl('/en', { e: 'l', lt: 'i', ttfb: 212.4, nt: undefined }), '/rum?p=/en&e=l&lt=i&ttfb=212');
 });

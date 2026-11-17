@@ -128,7 +128,7 @@ test('re-running replaces a day, keeps other days, and only complete days are st
     assert.equal(db.prepare('SELECT requests FROM days WHERE date = ?').get('2026-11-10').requests, 2);
     assert.equal(db.prepare('SELECT requests FROM days WHERE date = ?').get('2026-11-11').requests, 3);
     assert.equal(result.total, 2);
-    assert.equal(db.prepare("SELECT value FROM meta WHERE key = 'schema_version'").get().value, '2');
+    assert.equal(db.prepare("SELECT value FROM meta WHERE key = 'schema_version'").get().value, '3');
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
@@ -158,5 +158,83 @@ test('a version 1 database is refused with instructions instead of being damaged
     old.exec('CREATE TABLE daily(date TEXT PRIMARY KEY, requests INTEGER)');
     old.close();
     assert.throws(() => openDatabase(`${dir}/stats.sqlite`), /version 1 database/);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('retried beacons count once, in the report totals and in the hours', async () => {
+  const day = '2026-11-12';
+  const view = { vi: 'abcd1234', q: '1' };
+  const db = await build([
+    beacon(day, 9, 'A', 'v', view), beacon(day, 9, 'A', 'v', view),               // one view, sent twice
+    beacon(day, 9, 'A', 'wa', { vi: 'abcd1234', q: '2' }), beacon(day, 9, 'A', 'wa', { vi: 'abcd1234', q: '2' }),
+    beacon(day, 9, 'A', 'wa', { vi: 'abcd1234', q: '3' }),                         // a second, real click
+  ]);
+  const d = db.prepare('SELECT * FROM days WHERE date = ?').get(day);
+  assert.equal(d.views, 1);
+  assert.equal(d.wa_clicks, 2);
+  assert.equal(d.beacons, 5);
+  assert.equal(d.beacons_repeated, 2);
+  assert.equal(db.prepare('SELECT views FROM hourly WHERE date = ? AND hour = 9').get(day).views, 1);
+});
+
+test('traffic classes, engagement, errors, rejected beacons and coverage are stored per day', async () => {
+  const day = '2026-11-12';
+  const human = { fetch_site: 'same-origin' };
+  const lines = [
+    json(day, 8, { user_agent: 'Mozilla/5.0 Chrome/120 Safari/537', fetch_dest: 'document' }),
+    json(day, 8, { user_agent: 'Mozilla/5.0 Version/17 Safari/605', fetch_dest: 'document' }),
+    json(day, 8, { user_agent: 'Mozilla/5.0 Version/17 Safari/605', fetch_dest: 'document', client_ip: '1.1.1.2' }),
+    json(day, 8, { user_agent: 'Mozilla/5.0 Chrome/120 Safari/537', fetch_dest: 'document', client_ip: '1.1.1.3' }),
+    beacon(day, 9, 'A', 'v', { ...human, nt: 'n', user_agent: 'Mozilla/5.0 Chrome/120 Safari/537' }),
+    beacon(day, 9, 'A', 'g', human), beacon(day, 9, 'A', 'x', { ...human, eh: 'deadbeef' }),
+    beacon(day, 9, 'A', 'l', { ...human, dwell: '30', scroll: '60', lcp: '2000', ttfb: '300', lt: 'i', conn: '4g' }),
+    beacon(day, 9, 'B', 'v', { fetch_site: 'cross-site' }),                                   // browser, but not same-origin: uncertain
+    beacon(day, 9, 'C', 'v', { ...human, traffic_class: 'claimed_crawler' }),                  // bot
+    beacon(day, 9, 'D', 'v', { ...human, status: 429 }),
+    beacon(day, 9, 'E', 'v', { ...human, status: 403 }), beacon(day, 9, 'E', 'v', { ...human, status: 405, method: 'GET' }),
+  ];
+  const db = await build(lines);
+  const d = db.prepare('SELECT * FROM days WHERE date = ?').get(day);
+  assert.equal(d.views, 1);
+  assert.equal(d.views_uncertain, 1);
+  assert.equal(d.views_bot, 1);
+  assert.equal(d.engaged_views, 1);
+  assert.equal(d.engaged_visitors, 1);
+  assert.equal(d.js_errors, 1);
+  assert.equal(d.beacons_limited, 1);
+  assert.equal(d.beacons_rejected, 2);
+  assert.equal(d.ttfb_p75, 300);
+  assert.equal(d.view_coverage, 0.25);                                                        // 1 view for 4 browser page loads
+  assert.deepEqual(db.prepare("SELECT key, requests, views FROM breakdown WHERE dim = 'browser' ORDER BY key").all().map(r => ({ ...r })), [
+    { key: 'chrome', requests: 2, views: 1 }, { key: 'safari', requests: 2, views: null },
+  ]);
+  assert.equal(db.prepare("SELECT lcp_p75 FROM vitals_segments WHERE dim = 'connection' AND key = '4g'").get().lcp_p75, 2000);
+  assert.equal(db.prepare("SELECT lcp_p75 FROM vitals_segments WHERE dim = 'element' AND key = 'i'").get().lcp_p75, 2000);
+  assert.deepEqual({ ...db.prepare("SELECT visitors, engaged, acted FROM funnel WHERE dim = 'page'").get() }, { visitors: 1, engaged: 1, acted: 0 });
+  assert.equal(db.prepare("SELECT engaged_pct FROM v_overview WHERE date = ?").get(day).engaged_pct, 100);
+});
+
+test('a version 2 database is upgraded in place and keeps its days', async () => {
+  const { openDatabase, markDeploy, showOverview } = await load();
+  const { mkdtempSync, rmSync } = require('node:fs');
+  const { tmpdir } = require('node:os');
+  const { DatabaseSync } = require('node:sqlite');
+  const dir = mkdtempSync(`${tmpdir()}/stats-`);
+  try {
+    const path = `${dir}/stats.sqlite`;
+    let db = openDatabase(path);
+    db.prepare("INSERT INTO days(date, requests, views) VALUES('2026-11-01', 10, 4)").run();
+    db.exec('DROP VIEW v_overview; DROP VIEW v_deploys; DROP TABLE funnel; DROP TABLE vitals_segments; DROP TABLE deploys');
+    for (const column of ['views_uncertain', 'views_bot', 'engaged_views', 'engaged_visitors', 'js_errors', 'beacons_limited', 'beacons_rejected', 'beacons_repeated', 'view_coverage', 'ttfb_p75']) db.exec(`ALTER TABLE days DROP COLUMN ${column}`);
+    db.prepare("INSERT OR REPLACE INTO meta VALUES('schema_version', '2')").run();
+    db.close();
+    db = openDatabase(path);
+    assert.equal(db.prepare('SELECT views FROM days WHERE date = ?').get('2026-11-01').views, 4);
+    assert.equal(db.prepare("SELECT value FROM meta WHERE key = 'schema_version'").get().value, '3');
+    markDeploy(db, 'rum v3', '2026-11-17T10:00:00Z');
+    assert.match(showOverview(db, 7), /deploys:\n {2}2026-11-17T10:00:00Z {2}rum v3/);
+    assert.equal(db.prepare('SELECT note FROM v_deploys').get().note, 'rum v3');
+    db.close();
+    assert.ok(new DatabaseSync(path));
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });

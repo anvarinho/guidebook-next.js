@@ -4,7 +4,8 @@
  *
  *   traffic-stats.mjs                  store every complete day found in the logs (idempotent)
  *   traffic-stats.mjs --date 2026-11-16        only that day
- *   traffic-stats.mjs --show 14        print the last 14 days from the database
+ *   traffic-stats.mjs --show 14        print the last 14 days (and recent deploys) from the database
+ *   traffic-stats.mjs --mark-deploy "note"     record a deploy now, to read vitals against releases
  *   traffic-stats.mjs --db FILE --log FILE...  other database / log files (testing)
  *
  * Requests come from the log itself; real-user numbers come from the browser beacons in the
@@ -12,8 +13,8 @@
  * Re-running replaces the rows of the days it reads, so history that has aged out of the
  * log rotation stays in the database untouched.
  *
- * Tables (all keyed by UTC `date`): days, hourly, breakdown, pages, events, vitals, bots, meta.
- * Views for reading: v_overview, v_weekly, v_top_pages_7d. See docs/operations.md.
+ * Tables (keyed by UTC `date`): days, hourly, breakdown, pages, events, vitals, vitals_segments,
+ * funnel, bots; also meta and deploys. Views for reading: v_overview, v_weekly, v_top_pages_7d, v_deploys. See docs/operations.md.
  */
 import { createReadStream, existsSync, mkdirSync } from 'node:fs';
 import { createGunzip } from 'node:zlib';
@@ -21,9 +22,9 @@ import { createInterface } from 'node:readline';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
-import { buildReport, isRealBeacon, isView, logFiles } from './rum-report.mjs';
+import { beaconKey, browserFamily, buildReport, isRealBeacon, isView, logFiles } from './rum-report.mjs';
 
-export const SCHEMA_VERSION = 2;
+export const SCHEMA_VERSION = 3;
 const DEFAULT_DB = '/var/lib/guidebook-stats/stats.sqlite';
 const BOT_MIN_REQUESTS = 300;   // only heavy clients are stored (never ordinary visitors)
 const BOT_KEEP_DAYS = 180;
@@ -31,7 +32,7 @@ const MONTHS = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8,
 // The request text is kept loose on purpose: scanners send garbage that must still be counted.
 const LEGACY = /^(\S+) \S+ \S+ \[(\d\d)\/(\w{3})\/(\d{4}):(\d\d)[^\]]*\] "([^"]*)" (\d{3}) (\d+|-)(?: "[^"]*" "([^"]*)")?/;
 
-const SCHEMA = `
+const TABLES_SQL = `
 CREATE TABLE IF NOT EXISTS meta(key TEXT PRIMARY KEY, value TEXT);
 
 -- One row per UTC day: what the server did, then what real visitors did.
@@ -51,6 +52,7 @@ CREATE TABLE IF NOT EXISTS days(
   median_dwell_s REAL, median_scroll_pct REAL,
   contact_visitors INTEGER, wa_clicks INTEGER, wa_visitors INTEGER,
   updated TEXT
+  -- columns added in schema 3 are in DAYS_V3 below (existing databases get them by ALTER TABLE)
 );
 
 -- Requests and real views per hour (UTC): shows spikes and deploy errors.
@@ -83,6 +85,22 @@ CREATE TABLE IF NOT EXISTS vitals(
   PRIMARY KEY(date, device, metric)
 );
 
+-- LCP by segment. dim: connection | section (page type) | element (i = image, t = text).
+CREATE TABLE IF NOT EXISTS vitals_segments(
+  date TEXT, dim TEXT, key TEXT, n INTEGER, lcp_p75 INTEGER,
+  PRIMARY KEY(date, dim, key)
+);
+
+-- From landing source / landing page to engaged to a contact action, in visitors.
+-- dim: source | page
+CREATE TABLE IF NOT EXISTS funnel(
+  date TEXT, dim TEXT, key TEXT, visitors INTEGER, engaged INTEGER, acted INTEGER,
+  PRIMARY KEY(date, dim, key)
+);
+
+-- Releases, so a change in vitals or conversion can be read against them (--mark-deploy).
+CREATE TABLE IF NOT EXISTS deploys(ts TEXT, note TEXT);
+
 -- Heaviest clients of the day (>= ${BOT_MIN_REQUESTS} requests). Ordinary visitors never reach this.
 CREATE TABLE IF NOT EXISTS bots(
   date TEXT, client_ip TEXT, requests INTEGER, crawler_pct INTEGER, rate_limited INTEGER,
@@ -90,7 +108,25 @@ CREATE TABLE IF NOT EXISTS bots(
   PRIMARY KEY(date, client_ip)
 );
 
-CREATE VIEW IF NOT EXISTS v_overview AS
+`;
+
+// Columns added in schema 3. Older databases receive them with ALTER TABLE, then the views are rebuilt.
+const DAYS_V3 = {
+  views_uncertain: 'INTEGER',   // beacons from browsers that fail the human checks (fetch metadata, referer)
+  views_bot: 'INTEGER',         // beacons from clients that call themselves crawlers
+  engaged_views: 'INTEGER',     // views with 10 s visible or a real interaction
+  engaged_visitors: 'INTEGER',
+  js_errors: 'INTEGER',         // views that reported a script error
+  beacons_limited: 'INTEGER',   // /rum answered 429
+  beacons_rejected: 'INTEGER',  // /rum answered another 4xx (wrong method, origin or size)
+  beacons_repeated: 'INTEGER',  // repeats of one beacon (retries) that were ignored
+  view_coverage: 'REAL',        // likely-human views / browser page loads: how much the beacon sees
+  ttfb_p75: 'INTEGER',
+};
+
+const VIEWS_SQL = `
+DROP VIEW IF EXISTS v_overview;
+CREATE VIEW v_overview AS
 SELECT date, requests, ROUND(bytes / 1e9, 2) AS gb,
   ROUND(100.0 * crawler_requests / NULLIF(requests, 0), 1) AS crawler_pct,
   server_errors, rate_limited, redirects, p95_ms,
@@ -98,10 +134,15 @@ SELECT date, requests, ROUND(bytes / 1e9, 2) AS gb,
   ROUND(1.0 * views / NULLIF(visitors, 0), 2) AS views_per_visitor,
   ROUND(100.0 * single_view_visitors / NULLIF(visitors, 0), 1) AS bounce_pct,
   reads, ROUND(100.0 * reads / NULLIF(views_measured, 0), 1) AS read_pct,
-  median_dwell_s, median_scroll_pct, wa_clicks, contact_visitors
+  median_dwell_s, median_scroll_pct, wa_clicks, contact_visitors,
+  views_uncertain, views_bot,
+  ROUND(100.0 * engaged_views / NULLIF(views, 0), 1) AS engaged_pct,
+  ROUND(100.0 * view_coverage, 1) AS coverage_pct,
+  js_errors, beacons_limited, ttfb_p75
 FROM days ORDER BY date;
 
-CREATE VIEW IF NOT EXISTS v_weekly AS
+DROP VIEW IF EXISTS v_weekly;
+CREATE VIEW v_weekly AS
 SELECT strftime('%Y-W%W', date) AS week, MIN(date) AS from_date, MAX(date) AS to_date, COUNT(*) AS days,
   SUM(requests) AS requests, ROUND(SUM(bytes) / 1e9, 2) AS gb,
   ROUND(100.0 * SUM(crawler_requests) / NULLIF(SUM(requests), 0), 1) AS crawler_pct,
@@ -109,9 +150,16 @@ SELECT strftime('%Y-W%W', date) AS week, MIN(date) AS from_date, MAX(date) AS to
   SUM(reads) AS reads, SUM(wa_clicks) AS wa_clicks
 FROM days GROUP BY week ORDER BY week;
 
-CREATE VIEW IF NOT EXISTS v_top_pages_7d AS
+DROP VIEW IF EXISTS v_top_pages_7d;
+CREATE VIEW v_top_pages_7d AS
 SELECT page, SUM(views) AS views, SUM(reads) AS reads, SUM(wa_clicks) AS wa_clicks
 FROM pages WHERE date >= date('now', '-7 days') GROUP BY page ORDER BY views DESC LIMIT 50;
+
+-- Each deploy next to the day before and the day of it: did vitals or conversion move?
+DROP VIEW IF EXISTS v_deploys;
+CREATE VIEW v_deploys AS
+SELECT d.ts, d.note, o.date AS day, o.views, o.engaged_pct, o.coverage_pct, o.js_errors, o.ttfb_p75, o.wa_clicks
+FROM deploys d LEFT JOIN v_overview o ON o.date IN (date(d.ts), date(d.ts, '-1 day')) ORDER BY d.ts DESC, o.date;
 `;
 
 // ---------------------------------------------------------------- reading the log
@@ -123,12 +171,13 @@ function newDay(date) {
     date, jsonLines: 0, legacyLines: 0, requests: 0, bytes: 0, times: [], browser: 0, crawler: 0,
     pages: 0, assets: 0, images: 0, api: 0, beacons: 0, ok: 0, redirects: 0, notFound: 0, rateLimited: 0,
     clientErrors: 0, serverErrors: 0, browserPages: 0, hasInternal: false,
+    beaconLimited: 0, beaconRejected: 0, seen: new Set(), pageBrowsers: new Map(),
     hours: new Map(), countries: new Map(), statuses: new Map(), clients: new Map(), beaconRows: [],
   };
 }
 
 function kindOf(method, uri) {
-  if (method === 'POST' && uri === '/rum') return 'beacons';
+  if (uri === '/rum') return 'beacons';
   if (uri.startsWith('/_next/image')) return 'images';
   if (uri.startsWith('/_next/') || /\.[A-Za-z0-9]{1,8}$/.test(uri)) return 'assets';
   if (uri === '/api' || uri.startsWith('/api/')) return 'api';
@@ -175,7 +224,10 @@ export function addLine(days, line) {
   if (r.country) count(day.countries, r.country);
   if ('internal' in r.json) {
     day.hasInternal = true;
-    if (r.cls === 'browser_or_other' && r.json.fetch_dest === 'document' && !r.json.internal && (s === 200 || s === 304)) day.browserPages++;
+    if (r.cls === 'browser_or_other' && r.json.fetch_dest === 'document' && !r.json.internal && (s === 200 || s === 304)) {
+      day.browserPages++;
+      count(day.pageBrowsers, browserFamily(r.ua));
+    }
   }
   const client = day.clients.get(r.ip) ?? day.clients.set(r.ip, { requests: 0, crawler: 0, limited: 0, country: r.country, ua: r.ua }).get(r.ip);
   client.requests++;
@@ -183,7 +235,13 @@ export function addLine(days, line) {
   if (s === 429) client.limited++;
   if (kind === 'beacons') {
     day.beaconRows.push(r.json);
-    if (isRealBeacon(r.json) && isView(r.json)) hour.views++;
+    if (s === 429) day.beaconLimited++;
+    else if (s >= 400 && s < 500) day.beaconRejected++;
+    // A retried beacon is in the log twice; it counts once.
+    const key = beaconKey(r.json);
+    const repeat = key !== null && day.seen.has(key);
+    if (key !== null) day.seen.add(key);
+    if (!repeat && isRealBeacon(r.json) && isView(r.json)) hour.views++;
   }
 }
 
@@ -218,6 +276,11 @@ export function dayRows(day) {
     views_measured: rep?.reads.of_views_with_leave ?? null, reads: rep?.reads.views_read ?? null,
     median_dwell_s: rep?.engagement.median_seconds_visible ?? null, median_scroll_pct: rep?.engagement.median_scroll_percent ?? null,
     contact_visitors: rep?.visitors_with_contact_action ?? null, wa_clicks: rep?.whatsapp.clicks ?? null, wa_visitors: rep?.whatsapp.visitors ?? null,
+    views_uncertain: rep?.traffic.views_uncertain ?? null, views_bot: rep?.traffic.views_bot ?? null,
+    engaged_views: rep?.engaged.views ?? null, engaged_visitors: rep?.engaged.visitors ?? null, js_errors: rep?.js_errors.views_affected ?? null,
+    beacons_limited: json ? day.beaconLimited : null, beacons_rejected: json ? day.beaconRejected : null, beacons_repeated: rep?.beacons_deduped ?? null,
+    view_coverage: rep && day.browserPages > 0 ? Number((rep.views / day.browserPages).toFixed(3)) : null,
+    ttfb_p75: rep?.web_vitals.ttfb_ms.p75 ?? null,
   };
 
   const hourly = [...day.hours].sort((a, b) => a[0] - b[0]).map(([hour, h]) => ({ date: day.date, hour, requests: h.requests, crawler_requests: h.crawler, rate_limited: h.rateLimited, server_errors: h.errors, views: h.views }));
@@ -233,7 +296,11 @@ export function dayRows(day) {
     for (const [dim, list] of [['country', rep.countries], ['language', rep.languages], ['section', rep.sections], ['device', rep.devices], ['connection', rep.connections], ['referrer', rep.referrers], ['utm_source', rep.utm_source]]) {
       for (const [key, n] of list) put(dim, key, 'views', n);
     }
+    for (const [key, n] of rep.browsers) put('browser', key, 'views', n);
+    for (const [key, n] of rep.navigation) put('navigation', key, 'views', n);
   }
+  // Page loads and beacons per browser: where the beacon sees few of the page loads, it is losing them.
+  for (const [key, n] of day.pageBrowsers) put('browser', key, 'requests', n);
 
   const pages = new Map();
   const page = name => pages.get(name) ?? pages.set(name, { date: day.date, page: name, views: 0, reads: 0, wa_clicks: 0 }).get(name);
@@ -254,7 +321,14 @@ export function dayRows(day) {
   const bots = [...day.clients].filter(([, c]) => c.requests >= BOT_MIN_REQUESTS).sort((a, b) => b[1].requests - a[1].requests).slice(0, 15)
     .map(([ip, c]) => ({ date: day.date, client_ip: ip, requests: c.requests, crawler_pct: Math.round(100 * c.crawler / c.requests), rate_limited: c.limited, country: c.country ?? null, user_agent: (c.ua ?? '').slice(0, 120) }));
 
-  return { row, hourly, breakdown: [...breakdown.values()], pages: [...pages.values()], events, vitals, bots };
+  const segments = [];
+  const funnel = [];
+  if (rep) {
+    for (const [dim, group] of Object.entries(rep.web_vitals_segments)) for (const [key, v] of Object.entries(group)) segments.push({ date: day.date, dim, key, n: v.n, lcp_p75: v.lcp_p75 });
+    for (const [dim, list] of [['source', rep.funnel_by_source], ['page', rep.funnel_by_page]]) for (const [key, visitors, engaged, acted] of list) funnel.push({ date: day.date, dim, key, visitors, engaged, acted });
+  }
+
+  return { row, hourly, breakdown: [...breakdown.values()], pages: [...pages.values()], events, vitals, vitals_segments: segments, funnel, bots };
 }
 
 // ---------------------------------------------------------------- the database
@@ -268,12 +342,15 @@ export function openDatabase(path) {
     db.close();
     throw new Error(`${path} is a version 1 database (table "daily"). Move it aside, e.g. mv ${path} ${path}.v1, and run again to rebuild it from the logs.`);
   }
-  db.exec(SCHEMA);
+  db.exec(TABLES_SQL);
+  const have = new Set(db.prepare('PRAGMA table_info(days)').all().map(column => column.name));
+  for (const [name, type] of Object.entries(DAYS_V3)) if (!have.has(name)) db.exec(`ALTER TABLE days ADD COLUMN ${name} ${type}`);
+  db.exec(VIEWS_SQL);
   db.prepare("INSERT OR REPLACE INTO meta VALUES('schema_version', ?)").run(String(SCHEMA_VERSION));
   return db;
 }
 
-const TABLES = ['days', 'hourly', 'breakdown', 'pages', 'events', 'vitals', 'bots'];
+const TABLES = ['days', 'hourly', 'breakdown', 'pages', 'events', 'vitals', 'vitals_segments', 'funnel', 'bots'];
 
 export function storeDay(db, rows, now = new Date().toISOString().slice(0, 19) + 'Z') {
   const insert = (table, record) => {
@@ -284,7 +361,7 @@ export function storeDay(db, rows, now = new Date().toISOString().slice(0, 19) +
   try {
     for (const table of TABLES) db.prepare(`DELETE FROM ${table} WHERE date = ?`).run(rows.row.date);
     insert('days', { ...rows.row, updated: now });
-    for (const table of ['hourly', 'breakdown', 'pages', 'events', 'vitals', 'bots']) for (const record of rows[table]) insert(table, record);
+    for (const table of TABLES.slice(1)) for (const record of rows[table]) insert(table, record);
     db.exec('COMMIT');
   } catch (error) { db.exec('ROLLBACK'); throw error; }
 }
@@ -307,21 +384,27 @@ export async function buildStats({ db, files, date = null, today = new Date().to
 
 export function showOverview(db, limit) {
   const rows = db.prepare('SELECT * FROM (SELECT * FROM v_overview ORDER BY date DESC LIMIT ?) ORDER BY date').all(limit);
-  const columns = ['date', 'requests', 'gb', 'crawler_pct', 'server_errors', 'rate_limited', 'p95_ms', 'views', 'visitors', 'views_per_visitor', 'reads', 'read_pct', 'wa_clicks'];
+  const columns = ['date', 'requests', 'gb', 'crawler_pct', 'server_errors', 'rate_limited', 'p95_ms', 'views', 'views_bot', 'visitors', 'engaged_pct', 'coverage_pct', 'reads', 'read_pct', 'wa_clicks', 'js_errors'];
   const cell = v => (v === null || v === undefined ? '-' : String(v));
   const widths = columns.map(c => Math.max(c.length, ...rows.map(r => cell(r[c]).length)));
   const line = values => values.map((v, i) => (i === 0 ? v.padEnd(widths[i]) : v.padStart(widths[i]))).join('  ');
-  return [line(columns), ...rows.map(r => line(columns.map(c => cell(r[c]))))].join('\n');
+  const deploys = db.prepare('SELECT ts, note FROM deploys ORDER BY ts DESC LIMIT 5').all();
+  return [line(columns), ...rows.map(r => line(columns.map(c => cell(r[c])))), ...(deploys.length ? ['', 'deploys:', ...deploys.map(d => `  ${d.ts}  ${d.note}`)] : [])].join('\n');
+}
+
+export function markDeploy(db, note, now = new Date().toISOString().slice(0, 19) + 'Z') {
+  db.prepare('INSERT INTO deploys VALUES(?, ?)').run(now, note.slice(0, 200));
 }
 
 function parseArgs(argv) {
-  const args = { db: DEFAULT_DB, logs: [], date: null, show: null };
+  const args = { db: DEFAULT_DB, logs: [], date: null, show: null, deploy: null };
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     if (flag === '--db') args.db = argv[++i];
     else if (flag === '--log') args.logs.push(argv[++i]);
     else if (flag === '--date') args.date = argv[++i];
     else if (flag === '--show') args.show = Number(argv[++i]);
+    else if (flag === '--mark-deploy') args.deploy = argv[++i];
     else throw new Error(`Unknown option ${flag}`);
   }
   if (args.date && !/^\d{4}-\d{2}-\d{2}$/.test(args.date)) throw new Error('--date needs YYYY-MM-DD');
@@ -337,6 +420,12 @@ async function main() {
     return;
   }
   const db = openDatabase(args.db);
+  if (args.deploy !== null) {
+    if (!args.deploy.trim()) throw new Error('--mark-deploy needs a short note');
+    markDeploy(db, args.deploy.trim());
+    console.log('deploy recorded');
+    return;
+  }
   const result = await buildStats({ db, files: args.logs.length ? args.logs : logFiles(), date: args.date });
   console.log(`stored ${result.stored} day(s); database has ${result.total} day(s) up to ${result.last}`);
 }

@@ -3,18 +3,25 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { trafficSourceQuery } from '@/lib/trafficSource';
-import { classifyClick, connectionBucket, deviceBucket, scrollPercent, sendRum, startVitals, trackEvent, type Vitals } from '@/lib/rum';
-
-const VISIBLE_MS = 1000;
+import {
+  ENGAGED_MS, VIEW_MS, beginView, classifyClick, connectionBucket, currentView, deviceBucket, errorHash, isEngaged,
+  navigationBucket, scrollPercent, sendRum, startVitals, trackEvent, type Vitals,
+} from '@/lib/rum';
 
 /**
- * Real-user beacons, all POSTs to /rum that nginx logs (nothing is stored by the app):
+ * Real-user beacons, all POSTs to /rum that nginx logs (nothing is stored by the app).
+ * Every beacon carries `vi` (the view) and `q` (a counter within it), so a retry is counted once.
  *  - view (e=v): once per page view, after the page has been visible for a second, so bots
- *    that never render rarely get counted. Carries device class, connection, whether this is
- *    the visitor's first ever visit (n) and the start of a session (s, with the traffic source).
+ *    that never render rarely get counted. Carries device class, connection, how the page was
+ *    reached (nt), whether this is the visitor's first ever visit (n) and the start of a session
+ *    (s, with the traffic source).
+ *  - engaged (e=g): once per view, after 10 seconds of visible time or a real interaction
+ *    (a trusted click, key press or touch).
  *  - leave (e=l): when the page is hidden or navigated away from: seconds visible (t), deepest
- *    scroll (sd) and, for full page loads, LCP / CLS / INP. `vi` ties a view to its leave beacons.
+ *    scroll (sd) and, for full page loads, LCP (and its element type) / CLS / INP / TTFB.
  *  - interactions (e=wa|tel|mail|contact|lang|more|form): one beacon per click.
+ *  - error (e=x): the first script error of a view, as a hash (eh); the message is never sent.
+ * A page restored from the back/forward cache starts a new view (nt=c).
  */
 export default function RealUserBeacon() {
   const pathname = usePathname();
@@ -32,20 +39,51 @@ export default function RealUserBeacon() {
   }, []);
 
   useEffect(() => {
+    let reportedView = '';
+    const report = (message: string, source: string) => {
+      const view = currentView();
+      if (!view || reportedView === view) return;
+      reportedView = view;
+      sendRum(location.pathname, { e: 'x', eh: errorHash(message, source) });
+    };
+    const onError = (event: ErrorEvent) => {
+      // Scripts from other origins (extensions, injected widgets) are not ours to report.
+      if (event.filename && !event.filename.startsWith(location.origin)) return;
+      report(event.message || '', event.filename || '');
+    };
+    const onRejection = (event: PromiseRejectionEvent) => {
+      const reason = event.reason as { message?: unknown } | undefined;
+      report(String(reason?.message ?? reason ?? ''), 'promise');
+    };
+    window.addEventListener('error', onError);
+    window.addEventListener('unhandledrejection', onRejection);
+    return () => {
+      window.removeEventListener('error', onError);
+      window.removeEventListener('unhandledrejection', onRejection);
+    };
+  }, []);
+
+  useEffect(() => {
     const fullLoad = firstPage.current;
     firstPage.current = false;
     if (fullLoad && !vitals.current) vitals.current = startVitals();
 
-    const viewId = Math.random().toString(36).slice(2, 8);
+    let viewId = beginView();
     const path = location.pathname;
+    const [navigation] = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+    let how: string | undefined = fullLoad ? navigationBucket(navigation?.type) : 's';
+    let vitalsDue = fullLoad;
     let visibleMs = 0;
     let since: number | null = document.visibilityState === 'visible' ? performance.now() : null;
     let counted = false;
+    let engaged = false;
+    let interacted = false;
     let scrolled = 0;
     let timer: number | undefined;
 
     const pause = () => { if (since !== null) { visibleMs += performance.now() - since; since = null; } };
-    const seconds = () => Math.min(3600, Math.round((visibleMs + (since === null ? 0 : performance.now() - since)) / 1000));
+    const visibleNow = () => visibleMs + (since === null ? 0 : performance.now() - since);
+    const seconds = () => Math.min(3600, Math.round(visibleNow() / 1000));
     const onScroll = () => { scrolled = Math.max(scrolled, scrollPercent(window.scrollY, window.innerHeight, document.documentElement.scrollHeight)); };
 
     const sendView = () => {
@@ -67,18 +105,29 @@ export default function RealUserBeacon() {
       } catch { /* storage blocked: new vs returning stays unknown */ }
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
       sendRum(path, {
-        e: 'v', vi: viewId, d: deviceBucket(window.innerWidth), c: connectionBucket(connection?.effectiveType), n: firstVisit, s: sessionStart,
+        e: 'v', vi: viewId, d: deviceBucket(window.innerWidth), c: connectionBucket(connection?.effectiveType), nt: how, n: firstVisit, s: sessionStart,
       }, source);
+    };
+    const sendEngaged = () => {
+      engaged = true;
+      sendRum(path, { e: 'g', vi: viewId, t: seconds() });
     };
     const sendLeave = () => {
       if (!counted) return;
       onScroll();
-      sendRum(path, { e: 'l', vi: viewId, t: seconds(), sd: scrolled, ...(fullLoad ? vitals.current?.read() : undefined) });
+      sendRum(path, { e: 'l', vi: viewId, t: seconds(), sd: scrolled, ...(vitalsDue ? vitals.current?.read() : undefined) }, '', true);
     };
-    const arm = () => {
+
+    // One timer drives both thresholds. It only runs while the page is visible, so time spent in
+    // a background tab never counts, and it stays armed across hide/show until both have fired.
+    const check = () => {
       window.clearTimeout(timer);
-      if (counted || since === null) return;
-      timer = window.setTimeout(() => { if (document.visibilityState === 'visible') sendView(); }, Math.max(0, VISIBLE_MS - visibleMs - (performance.now() - since)));
+      if (since === null) return;
+      const slack = 50;
+      if (!counted && visibleNow() >= VIEW_MS - slack) sendView();
+      if (counted && !engaged && isEngaged(visibleNow() + slack, interacted)) sendEngaged();
+      const next = !counted ? VIEW_MS : !engaged ? ENGAGED_MS : null;
+      if (next !== null) timer = window.setTimeout(check, Math.max(0, next - visibleNow()));
     };
     const onVisibility = () => {
       if (document.visibilityState === 'hidden') {
@@ -87,21 +136,43 @@ export default function RealUserBeacon() {
         const wasVisible = since !== null;
         pause();
         if (wasVisible) sendLeave();
-      }
-      else { since = performance.now(); arm(); }
+      } else { since = performance.now(); check(); }
     };
     const onPageHide = () => { if (since !== null) { pause(); sendLeave(); } };
+    // A page restored from the back/forward cache never runs this effect again: it is a new view.
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (!event.persisted) return;
+      viewId = beginView();
+      how = 'c';
+      vitalsDue = false;
+      visibleMs = 0;
+      counted = engaged = interacted = false;
+      scrolled = 0;
+      since = document.visibilityState === 'visible' ? performance.now() : null;
+      onScroll();
+      check();
+    };
+    // Only events the visitor really produced count; scripts cannot fake a trusted event.
+    const onInteract = (event: Event) => {
+      if (!event.isTrusted || interacted) return;
+      interacted = true;
+      if (counted) check();
+    };
 
     onScroll();
-    arm();
+    check();
     window.addEventListener('scroll', onScroll, { passive: true });
     document.addEventListener('visibilitychange', onVisibility);
     window.addEventListener('pagehide', onPageHide);
+    window.addEventListener('pageshow', onPageShow);
+    for (const type of ['pointerdown', 'keydown', 'touchstart']) window.addEventListener(type, onInteract, { passive: true, capture: true });
     return () => {
       window.clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
       document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('pagehide', onPageHide);
+      window.removeEventListener('pageshow', onPageShow);
+      for (const type of ['pointerdown', 'keydown', 'touchstart']) window.removeEventListener(type, onInteract, true);
       pause();
       sendLeave();
     };

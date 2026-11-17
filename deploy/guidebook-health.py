@@ -8,6 +8,8 @@ import json
 import os
 import re
 import shutil
+import sqlite3
+import statistics
 import subprocess
 import sys
 import time
@@ -20,9 +22,11 @@ ALERT_FILE = LOG_DIR / 'alerts.jsonl'
 SIZE_FILE = LOG_DIR / 'directory-sizes.jsonl'
 MONGO_DIR = Path('/var/lib/mongodb')
 NGINX_ACCESS = Path('/var/log/nginx/access.log')
+STATS_DB = Path('/var/lib/guidebook-stats/stats.sqlite')
+TAIL_BYTES = 16 * 1024 * 1024
 MIB = 1024 * 1024
 GIB = 1024 * MIB
-ACCESS_RE = re.compile(r'\[([^]]+)\]\s+"[A-Z]+\s[^\"]*"\s+(\d{3})\s')
+ACCESS_RE = re.compile(r'\[([^]]+)\]\s+"([A-Z]+)\s([^\"]*)"\s+(\d{3})\s')
 CURRENT_STATE: dict | None = None
 
 
@@ -114,27 +118,50 @@ def sample_frontend_service(state: dict, now: int) -> None:
     state['frontendRestartEvents'] = events
 
 
+def parse_access(line: str) -> tuple[dt.datetime, str, str, int] | None:
+    """(time, method, path, status) of one access-log line: JSON (current) or combined (historical)."""
+    try:
+        if line.startswith('{'):
+            record = json.loads(line)
+            stamp = dt.datetime.fromisoformat(record['timestamp']).astimezone(dt.timezone.utc)
+            return stamp, str(record.get('method', '')), str(record.get('uri', '')), int(record['status'])
+        match = ACCESS_RE.search(line)
+        if not match:
+            return None
+        stamp = dt.datetime.strptime(match.group(1), '%d/%b/%Y:%H:%M:%S %z').astimezone(dt.timezone.utc)
+        return stamp, match.group(2), match.group(3).split('?')[0], int(match.group(4))
+    except (ValueError, KeyError, TypeError):
+        return None
+
+
+def recent_lines(path: Path) -> list[str]:
+    """The last TAIL_BYTES of the log (the 5-minute window is far smaller), without reading all of it."""
+    with path.open('rb') as stream:
+        size = stream.seek(0, os.SEEK_END)
+        stream.seek(max(0, size - TAIL_BYTES))
+        data = stream.read()
+    lines = data.decode(errors='replace').splitlines()
+    return lines[1:] if size > TAIL_BYTES else lines
+
+
 def sample_nginx(now: dt.datetime) -> None:
     if not NGINX_ACCESS.exists():
         emit_alert('nginx_access_unavailable', True, {'errorCode': 'access_log_missing'})
         return
     emit_alert('nginx_access_unavailable', False, {})
     cutoff = now - dt.timedelta(minutes=5)
-    requests = errors = 0
+    requests = errors = beacons = beacons_limited = 0
     try:
-        with NGINX_ACCESS.open(errors='replace') as stream:
-            for line in stream:
-                match = ACCESS_RE.search(line)
-                if not match:
-                    continue
-                try:
-                    stamp = dt.datetime.strptime(match.group(1), '%d/%b/%Y:%H:%M:%S %z').astimezone(dt.timezone.utc)
-                except ValueError:
-                    continue
-                if stamp < cutoff:
-                    continue
-                requests += 1
-                errors += int(match.group(2).startswith('5'))
+        for line in recent_lines(NGINX_ACCESS):
+            parsed = parse_access(line)
+            if parsed is None or parsed[0] < cutoff:
+                continue
+            _, method, path, status = parsed
+            if path == '/rum':
+                beacons += 1
+                beacons_limited += status == 429
+            requests += 1
+            errors += status >= 500
     except OSError:
         emit_alert('nginx_access_unavailable', True, {'errorCode': 'access_log_unreadable'})
         return
@@ -145,6 +172,57 @@ def sample_nginx(now: dt.datetime) -> None:
         'responses5xx': errors,
         'thresholdCount': 5,
         'thresholdRate': 0.05,
+    })
+    # Real-user beacons rejected with 429 are analytics that never arrive.
+    emit_alert('rum_beacons_rate_limited', beacons_limited >= 20 and beacons_limited / max(beacons, 1) >= 0.2, {
+        'windowSeconds': 300,
+        'beacons': beacons,
+        'beacons429': beacons_limited,
+        'thresholdCount': 20,
+        'thresholdRate': 0.2,
+    })
+
+
+def sample_rum_stats(now: dt.datetime) -> None:
+    """Daily real-user checks on the newest complete day in the traffic statistics database."""
+    if not STATS_DB.exists():
+        return
+    try:
+        db = sqlite3.connect(f'file:{STATS_DB}?mode=ro', uri=True, timeout=5)
+        db.row_factory = sqlite3.Row
+        days = db.execute(
+            'SELECT date, views, beacons, beacons_limited, view_coverage, browser_pages, wa_clicks, contact_visitors '
+            'FROM days ORDER BY date DESC LIMIT 8').fetchall()
+        if not days:
+            return
+        latest = days[0]
+        lcp = db.execute("SELECT n, p75 FROM vitals WHERE date = ? AND device = 'all' AND metric = 'lcp_ms'", (latest['date'],)).fetchone()
+        db.close()
+    except sqlite3.Error:
+        return  # an older database without the newer columns: nothing to judge yet
+    age = (now.date() - dt.date.fromisoformat(latest['date'])).days
+    emit_alert('rum_stats_stale', age > 2, {'lastDay': latest['date'], 'ageDays': age, 'thresholdDays': 2})
+    if age > 2:
+        return
+    # The beacon should see a steady share of page loads; a drop means beacons are being lost
+    # (a broken script, a rate limit, a blocked route), not that visitors vanished.
+    earlier = [row['view_coverage'] for row in days[1:] if row['view_coverage'] is not None]
+    baseline = statistics.median(earlier) if len(earlier) >= 3 else None
+    coverage = latest['view_coverage']
+    emit_alert('rum_coverage_dropped', bool(
+        baseline and coverage is not None and (latest['browser_pages'] or 0) >= 200 and coverage < 0.6 * baseline), {
+        'day': latest['date'], 'coverage': coverage, 'baselineMedian': baseline, 'thresholdFactor': 0.6,
+    })
+    beacons = latest['beacons'] or 0
+    limited = latest['beacons_limited'] or 0
+    emit_alert('rum_beacons_limited_daily', beacons >= 200 and limited / beacons >= 0.05, {
+        'day': latest['date'], 'beacons': beacons, 'beacons429': limited, 'thresholdRate': 0.05,
+    })
+    emit_alert('rum_lcp_slow', bool(lcp and lcp['n'] >= 50 and lcp['p75'] and lcp['p75'] > 2500), {
+        'day': latest['date'], 'lcpP75Ms': lcp['p75'] if lcp else None, 'samples': lcp['n'] if lcp else 0, 'thresholdMs': 2500,
+    })
+    emit_alert('rum_conversions_zero', (latest['views'] or 0) >= 100 and not (latest['wa_clicks'] or 0) and not (latest['contact_visitors'] or 0), {
+        'day': latest['date'], 'views': latest['views'],
     })
 
 
@@ -206,6 +284,7 @@ def check() -> None:
     })
     sample_frontend_service(state, now)
     sample_nginx(dt.datetime.now(dt.timezone.utc))
+    sample_rum_stats(dt.datetime.now(dt.timezone.utc))
     sample_mongo(state, now)
     save_state(state)
     CURRENT_STATE = None
