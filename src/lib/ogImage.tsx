@@ -1,19 +1,40 @@
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { ImageResponse } from 'next/og';
 import { absoluteSiteUrl } from '@/lib/seo';
 
 export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = 'image/png';
 
+function sniffImageType(bytes: Buffer): 'image/jpeg' | 'image/png' | undefined {
+  if (bytes.length > 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return 'image/jpeg';
+  if (bytes.length > 4 && bytes.subarray(0, 4).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47]))) return 'image/png';
+  return undefined;
+}
+
 // Satori only decodes JPEG/PNG/GIF, so other formats fall back to the gradient.
 async function backgroundDataUrl(path?: string): Promise<string | undefined> {
   if (!path) return undefined;
   try {
     const response = await fetch(absoluteSiteUrl(path), { signal: AbortSignal.timeout(4000) });
-    const type = response.headers.get('content-type')?.split(';')[0] ?? '';
-    if (!response.ok || !['image/jpeg', 'image/png'].includes(type)) return undefined;
+    if (!response.ok) return undefined;
     const bytes = Buffer.from(await response.arrayBuffer());
     if (bytes.length > 4 * 1024 * 1024) return undefined;
+    // Trust the file's magic bytes, not Content-Type or the extension: a PNG saved as
+    // .jpg (served as image/jpeg) makes satori pick the wrong decoder and crash the render.
+    const type = sniffImageType(bytes);
+    if (!type) return undefined;
     return `data:${type};base64,${bytes.toString('base64')}`;
+  } catch {
+    return undefined;
+  }
+}
+
+// The site emblem, drawn in the card's corner so a shared link shows who it is from.
+async function emblemDataUrl(): Promise<string | undefined> {
+  try {
+    const bytes = await readFile(path.join(process.cwd(), 'src/app/icon.png'));
+    return `data:image/png;base64,${bytes.toString('base64')}`;
   } catch {
     return undefined;
   }
@@ -27,7 +48,7 @@ type CardOptions = { eyebrow: string; title: string; detail?: string; image?: st
 
 // The default OG font is Latin-only, so cards are rendered from the English record.
 export async function renderOgCard({ eyebrow, title, detail, image }: CardOptions) {
-  const background = await backgroundDataUrl(image);
+  const [background, emblem] = await Promise.all([backgroundDataUrl(image), emblemDataUrl()]);
   return new ImageResponse(
     (
       <div style={{
@@ -47,8 +68,14 @@ export async function renderOgCard({ eyebrow, title, detail, image }: CardOption
           position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
           width: '100%', height: '100%', padding: '56px 64px',
         }}>
-          <div style={{ display: 'flex', fontSize: 30, letterSpacing: 4, textTransform: 'uppercase', opacity: 0.92 }}>
-            {eyebrow}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', fontSize: 30, letterSpacing: 4, textTransform: 'uppercase', opacity: 0.92 }}>
+              {eyebrow}
+            </div>
+            {emblem && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={emblem} alt="" width={96} height={96} style={{ width: 96, height: 96 }} />
+            )}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', fontSize: 76, fontWeight: 700, lineHeight: 1.08 }}>{fitTitle(title)}</div>
