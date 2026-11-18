@@ -201,6 +201,9 @@ test('traffic classes, engagement, errors, rejected beacons and coverage are sto
   assert.equal(d.engaged_views, 1);
   assert.equal(d.engaged_visitors, 1);
   assert.equal(d.js_errors, 1);
+  assert.equal(d.views_confirmed, 1);
+  assert.equal(d.visitors_confirmed, 1);
+  assert.equal(db.prepare('SELECT confirmed_pct FROM v_overview WHERE date = ?').get(day).confirmed_pct, 100);
   assert.equal(d.beacons_limited, 1);
   assert.equal(d.beacons_rejected, 2);
   assert.equal(d.ttfb_p75, 300);
@@ -225,7 +228,7 @@ test('a version 2 database is upgraded in place and keeps its days', async () =>
     let db = openDatabase(path);
     db.prepare("INSERT INTO days(date, requests, views) VALUES('2026-11-01', 10, 4)").run();
     db.exec('DROP VIEW v_overview; DROP VIEW v_deploys; DROP TABLE funnel; DROP TABLE vitals_segments; DROP TABLE deploys');
-    for (const column of ['views_uncertain', 'views_bot', 'engaged_views', 'engaged_visitors', 'js_errors', 'beacons_limited', 'beacons_rejected', 'beacons_repeated', 'view_coverage', 'ttfb_p75']) db.exec(`ALTER TABLE days DROP COLUMN ${column}`);
+    for (const column of ['views_uncertain', 'views_bot', 'engaged_views', 'engaged_visitors', 'js_errors', 'beacons_limited', 'beacons_rejected', 'beacons_repeated', 'view_coverage', 'ttfb_p75', 'views_confirmed', 'visitors_confirmed']) db.exec(`ALTER TABLE days DROP COLUMN ${column}`);
     db.prepare("INSERT OR REPLACE INTO meta VALUES('schema_version', '2')").run();
     db.close();
     db = openDatabase(path);

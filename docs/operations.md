@@ -168,7 +168,12 @@ log (status 403/405/413/429) and are counted per day as `beacons_rejected` and `
 Views are reported in three classes, never mixed: *likely human* (a browser, same-origin fetch
 metadata, a referer from the site, not internal), *bot* (the user agent calls itself a crawler) and
 *uncertain* (everything else that was accepted, for example a missing `Sec-Fetch-Site`). Only the
-first counts as `views` and visitors. The label is "likely": no signal proves a person.
+first counts as `views` and visitors. The label is "likely": no signal proves a person. To see how much of "likely human" is real use, reports also give *confirmed* views: those with an
+engaged or leave beacon. Automated browsers that run the script pass every other check but never
+interact or close the page, so they stay unconfirmed. In the first day after the beacon changes
+(Nov 17), 54% of likely-human views were unconfirmed, nearly all full page loads from CN, HK, SG and
+MX desktops, while Kyrgyz and mobile visitors confirmed 74-98%. `views` still counts every likely-human
+view so history stays comparable; read `views_confirmed` (`confirmed_pct` in `v_overview`) for people.
 
 `scripts/rum-report.mjs` (plain Node, no dependencies; run it from the frontend directory with
 the server's Node) prints a report for a window of the nginx log: `--hours 24`,

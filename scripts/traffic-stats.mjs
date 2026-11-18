@@ -122,6 +122,8 @@ const DAYS_V3 = {
   beacons_repeated: 'INTEGER',  // repeats of one beacon (retries) that were ignored
   view_coverage: 'REAL',        // likely-human views / browser page loads: how much the beacon sees
   ttfb_p75: 'INTEGER',
+  views_confirmed: 'INTEGER',   // likely-human views with an engaged or leave beacon (real use or close was seen)
+  visitors_confirmed: 'INTEGER',
 };
 
 const VIEWS_SQL = `
@@ -138,6 +140,7 @@ SELECT date, requests, ROUND(bytes / 1e9, 2) AS gb,
   views_uncertain, views_bot,
   ROUND(100.0 * engaged_views / NULLIF(views, 0), 1) AS engaged_pct,
   ROUND(100.0 * view_coverage, 1) AS coverage_pct,
+  views_confirmed, ROUND(100.0 * views_confirmed / NULLIF(views, 0), 1) AS confirmed_pct,
   js_errors, beacons_limited, ttfb_p75
 FROM days ORDER BY date;
 
@@ -281,6 +284,7 @@ export function dayRows(day) {
     beacons_limited: json ? day.beaconLimited : null, beacons_rejected: json ? day.beaconRejected : null, beacons_repeated: rep?.beacons_deduped ?? null,
     view_coverage: rep && day.browserPages > 0 ? Number((rep.views / day.browserPages).toFixed(3)) : null,
     ttfb_p75: rep?.web_vitals.ttfb_ms.p75 ?? null,
+    views_confirmed: rep?.confirmed.views ?? null, visitors_confirmed: rep?.confirmed.visitors ?? null,
   };
 
   const hourly = [...day.hours].sort((a, b) => a[0] - b[0]).map(([hour, h]) => ({ date: day.date, hour, requests: h.requests, crawler_requests: h.crawler, rate_limited: h.rateLimited, server_errors: h.errors, views: h.views }));
@@ -384,7 +388,7 @@ export async function buildStats({ db, files, date = null, today = new Date().to
 
 export function showOverview(db, limit) {
   const rows = db.prepare('SELECT * FROM (SELECT * FROM v_overview ORDER BY date DESC LIMIT ?) ORDER BY date').all(limit);
-  const columns = ['date', 'requests', 'gb', 'crawler_pct', 'server_errors', 'rate_limited', 'p95_ms', 'views', 'views_bot', 'visitors', 'engaged_pct', 'coverage_pct', 'reads', 'read_pct', 'wa_clicks', 'js_errors'];
+  const columns = ['date', 'requests', 'gb', 'crawler_pct', 'server_errors', 'rate_limited', 'p95_ms', 'views', 'views_bot', 'visitors', 'confirmed_pct', 'engaged_pct', 'coverage_pct', 'reads', 'read_pct', 'wa_clicks', 'js_errors'];
   const cell = v => (v === null || v === undefined ? '-' : String(v));
   const widths = columns.map(c => Math.max(c.length, ...rows.map(r => cell(r[c]).length)));
   const line = values => values.map((v, i) => (i === 0 ? v.padEnd(widths[i]) : v.padStart(widths[i]))).join('  ');

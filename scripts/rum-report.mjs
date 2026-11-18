@@ -161,6 +161,19 @@ export function buildReport(beacons, start, end, options = {}) {
   stats.visitors_with_contact_action = new Set(events.filter(r => GOALS.has(r.ev)).map(visitor)).size;
 
   const viewKey = r => `${visitor(r)}|${r.vi || r.request_id}`;
+  // A view is confirmed when the page was seen being used or closed: an engaged or a leave beacon
+  // arrived for it. Automated browsers that run the script pass every other check but never close
+  // or interact, so unconfirmed views are where they hide (real visitors confirm 90%+ of theirs).
+  // Only views that carry a view id can be judged; older beacons are left out.
+  const confirmedKeys = new Set([...engagedBeacons, ...leaves].map(viewKey));
+  const judged = views.filter(r => r.vi);
+  const confirmedViews = judged.filter(r => confirmedKeys.has(viewKey(r)));
+  stats.confirmed = {
+    views: confirmedViews.length,
+    visitors: new Set(confirmedViews.map(visitor)).size,
+    unconfirmed_views: judged.length - confirmedViews.length,
+    share: share(confirmedViews.length, judged.length),
+  };
   const engagedViews = new Set(engagedBeacons.map(viewKey));
   const engagedVisitors = new Set(engagedBeacons.map(visitor));
   stats.engaged = { views: engagedViews.size, visitors: engagedVisitors.size, rate: share(engagedViews.size, views.length) };
@@ -259,6 +272,7 @@ export function renderReport(s) {
     `views ${s.views} | visitors ${s.visitors} | views/visitor ${s.views_per_visitor} | single-view visitors ${s.single_view_visitors}`,
     `new visitors ${s.new_visitors} | sessions started ${s.sessions_started} | visitors with a contact action ${s.visitors_with_contact_action}`,
     `traffic: ${s.traffic.views_likely_human} likely human, ${s.traffic.views_uncertain} uncertain, ${s.traffic.views_bot} bot views (bot share ${s.traffic.bot_share ?? '-'}) | repeated beacons ignored ${s.beacons_deduped}`,
+    `confirmed (engaged or left): ${s.confirmed.views} views, ${s.confirmed.visitors} visitors | unconfirmed ${s.confirmed.unconfirmed_views} (confirmed share ${s.confirmed.share === null ? '-' : `${(s.confirmed.share * 100).toFixed(0)}%`})`,
     `engaged: ${s.engaged.views} views, ${s.engaged.visitors} visitors (${s.engaged.rate === null ? '-' : `${(s.engaged.rate * 100).toFixed(1)}%`} of views)`,
     `funnel: ${s.funnel.visitors} visitors -> ${s.funnel.engaged_visitors} engaged -> ${s.funnel.contact_visitors} contact action (${s.funnel.whatsapp_visitors} WhatsApp)`,
     `script errors: ${s.js_errors.count} in ${s.js_errors.views_affected} views | top: ${list(s.js_errors.top)}`,

@@ -133,3 +133,21 @@ test('TTFB and LCP are broken down by connection, page type and element', async 
   assert.deepEqual(s.web_vitals_segments.section, { tours: { n: 2, lcp_p75: 4000 } });
   assert.deepEqual(s.web_vitals_segments.element, { i: { n: 1, lcp_p75: 2000 }, t: { n: 1, lcp_p75: 4000 } });
 });
+
+test('views are confirmed by an engaged or leave beacon; bots that never close stay unconfirmed', async () => {
+  const s = await report([
+    row('A', '/en/places/x', 'v', { vi: 'a1', q: '1' }), row('A', '/en/places/x', 'l', { vi: 'a1', q: '2', dwell: '9', scroll: '10' }),
+    row('B', '/en/places/x', 'v', { vi: 'b1', q: '1' }), row('B', '/en/places/x', 'g', { vi: 'b1', q: '2' }),
+    row('C', '/en/places/x', 'v', { vi: 'c1', q: '1' }),
+    row('D', '/en/places/x', 'v', { vi: 'd1', q: '1' }),
+    row('E', '/en/places/x', 'v'),                                                // no view id: cannot be judged, left out
+    row('A', '/en/places/y', 'v', { vi: 'a2', q: '1' }),                          // a second view of A that never confirmed
+  ]);
+  assert.equal(s.views, 6);
+  assert.deepEqual(s.confirmed, { views: 2, visitors: 2, unconfirmed_views: 3, share: 0.4 });
+});
+
+test('with no view ids at all nothing can be judged', async () => {
+  const s = await report([row('A', '/en', undefined), row('B', '/en', undefined)]);
+  assert.deepEqual(s.confirmed, { views: 0, visitors: 0, unconfirmed_views: 0, share: null });
+});
