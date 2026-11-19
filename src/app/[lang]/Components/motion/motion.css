@@ -173,7 +173,7 @@
   initial-value: 0;
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  [data-tilt] { transition: transform .6s var(--motion-ease); }
+  [data-tilt] { transition: transform .7s var(--motion-ease), border-color .35s ease, box-shadow .35s ease; }
   /* The light fades through --glow (a registered number) rather than opacity, so nothing is ever hidden. */
   [data-tilt]::after {
     content: '';
@@ -187,7 +187,8 @@
   [data-tilt][data-tilting] {
     --glow: 1;
     transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
-    transition-duration: .12s;
+    /* Each pointer frame retargets the transition, which smooths the motion without any script easing. */
+    transition: transform .35s var(--motion-ease), border-color .35s ease, box-shadow .35s ease;
     will-change: transform;
   }
 }

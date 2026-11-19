@@ -35,9 +35,20 @@ export default function RouteLoader({ label }: { label: string }) {
       current.show = window.setTimeout(() => setPending(true), SHOW_AFTER_MS);
       current.giveUp = window.setTimeout(() => setPending(false), GIVE_UP_AFTER_MS);
     };
+    // Back or forward abandons a navigation that has not committed, so the pathname never changes
+    // and nothing else would clear the veil before the give-up timer.
+    const onHistory = () => {
+      window.clearTimeout(current.show);
+      window.clearTimeout(current.giveUp);
+      setPending(false);
+    };
     document.addEventListener('click', onClick, true);
+    window.addEventListener('popstate', onHistory);
+    window.addEventListener('pageshow', onHistory);
     return () => {
       document.removeEventListener('click', onClick, true);
+      window.removeEventListener('popstate', onHistory);
+      window.removeEventListener('pageshow', onHistory);
       window.clearTimeout(current.show);
       window.clearTimeout(current.giveUp);
     };

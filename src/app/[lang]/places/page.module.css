@@ -120,8 +120,8 @@
 .region { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 12px; line-height: 1.5; color: rgba(var(--foreground-rgb), .6); }
 .region::before { content: ''; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--main-active-color); }
 .placeContent h2 { font-size: 20px; font-weight: 600; line-height: 1.35; letter-spacing: -.02em; overflow-wrap: anywhere; text-wrap: balance; }
-.cardArrow { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 12px; }
-.cardArrow svg { width: 20px; height: 20px; }
+.cardArrow { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid rgba(var(--foreground-rgb), .16); border-radius: 12px; transition: background-color .35s ease, border-color .35s ease, color .35s ease; }
+.cardArrow svg { width: 20px; height: 20px; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
 .placeBox:focus-visible, .exploreLink:focus-visible { outline: 3px solid var(--main-active-color); outline-offset: 5px; }
 .placeBox[data-place-detail-card]:focus-visible { outline-offset: 4px; }
 .featuredCard { border: 0; isolation: isolate; background: #263438; }
@@ -146,6 +146,10 @@
 @media (hover: hover) {
   .sleekMotion .placeBox:hover { border-color: rgba(255,101,0,.3); box-shadow: 0 18px 40px rgba(0,0,0,.11); }
   .sleekMotion .placeBox:hover .cardArrow { background: var(--main-active-color); border-color: var(--main-active-color); color: #141414; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .sleekMotion .placeBox:hover .cardArrow svg { transform: translate(2px, -2px); }
+  .sleekMotion .placeBox:dir(rtl):hover .cardArrow svg { transform: translate(-2px, -2px); }
 }
 .contactPanel { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 64px; padding: 36px 40px; border: 1px solid var(--line); border-radius: 24px; background: rgba(var(--callout-rgb), .45); }
 .contactPanel h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; text-wrap: balance; }
