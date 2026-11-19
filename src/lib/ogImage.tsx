@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { ImageResponse } from 'next/og';
+import sharp from 'sharp';
 import { absoluteSiteUrl } from '@/lib/seo';
 
 export const ogSize = { width: 1200, height: 630 };
@@ -12,7 +13,7 @@ function sniffImageType(bytes: Buffer): 'image/jpeg' | 'image/png' | undefined {
   return undefined;
 }
 
-// Satori only decodes JPEG/PNG/GIF, so other formats fall back to the gradient.
+// Satori only decodes JPEG/PNG/GIF, so other formats (webp, avif) are transcoded to JPEG.
 async function backgroundDataUrl(path?: string): Promise<string | undefined> {
   if (!path) return undefined;
   try {
@@ -23,8 +24,12 @@ async function backgroundDataUrl(path?: string): Promise<string | undefined> {
     // Trust the file's magic bytes, not Content-Type or the extension: a PNG saved as
     // .jpg (served as image/jpeg) makes satori pick the wrong decoder and crash the render.
     const type = sniffImageType(bytes);
-    if (!type) return undefined;
-    return `data:${type};base64,${bytes.toString('base64')}`;
+    if (type) return `data:${type};base64,${bytes.toString('base64')}`;
+    const jpeg = await sharp(bytes, { limitInputPixels: 50_000_000 })
+      .resize(1200, 630, { fit: 'cover' })
+      .jpeg({ quality: 82 })
+      .toBuffer();
+    return `data:image/jpeg;base64,${jpeg.toString('base64')}`;
   } catch {
     return undefined;
   }
