@@ -63,11 +63,11 @@ export async function renderOgCard({ eyebrow, title, detail, image }: CardOption
         {background && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={background} alt="" width={1200} height={630}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
         )}
         <div style={{
-          position: 'absolute', inset: 0, display: 'flex',
-          background: 'linear-gradient(180deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.78) 100%)',
+          position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex',
+          background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0.85) 100%)',
         }} />
         <div style={{
           position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
