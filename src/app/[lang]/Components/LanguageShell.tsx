@@ -7,6 +7,7 @@ import FlagSun from "./FlagSun";
 import sunStyles from "./FlagSun.module.css";
 import PlaceScrollReset from "./PlaceScrollReset";
 import RouteLoader from "./RouteLoader";
+import CardTilt from "./motion/CardTilt";
 import ScrollMotion from "./motion/ScrollMotion";
 
 export default function LanguageShell({ children, navbar, footer, controls, loadingLabel }: {
@@ -20,7 +21,7 @@ export default function LanguageShell({ children, navbar, footer, controls, load
     {navbar}
     <section className={[styles.section, showSun && sunStyles.page, segment === "about" && sunStyles.aboutPage].filter(Boolean).join(" ")}
       data-motion-page={showSun || undefined}>
-      {showSun && <><FlagSun /><ScrollMotion /></>}
+      {showSun && <><FlagSun /><ScrollMotion /><CardTilt /></>}
       {children}
     </section>
     {footer}

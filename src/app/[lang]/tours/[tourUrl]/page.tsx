@@ -66,7 +66,7 @@ export default async function Tour(props: Params) {
         </header>
         <Suspense fallback={<LoadingSpinner text={page.loading}/>}>
           <div className={styles.heroGallery} data-motion="leave">
-            <TourGallery images={data.images} name={data.title} lang={lang} priority/>
+            <TourGallery images={data.images} name={data.title} lang={lang} priority transitionName={`tour-${tourUrl}`}/>
           </div>
           <div className={styles.overview} data-motion="takeover" data-section data-section-label={data.title}>
             {transferMessages && <p className={styles.transferComparison} data-motion="rise">

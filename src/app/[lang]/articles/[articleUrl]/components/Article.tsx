@@ -8,6 +8,7 @@ import Paragraph from './Paragraph'
 import { getDictionary } from '@/lib/dictionary'
 
 import Image from "next/image";
+import { ViewTransition } from "react";
 
 type Props = {
   article: Article,
@@ -23,6 +24,7 @@ export default async function Article({ article, lang }: Props) {
     <article className={styles.article}>
         {article.image && (
           <div className={styles.heroImage} data-motion="leave">
+              <ViewTransition name={`article-${article.url}`} share="morph" default="none">
               <picture className={styles.image} style={article.url === 'what-is-kyrgyzstan-known-for' ? { aspectRatio: '1600 / 900' } : undefined}>
                 <Image
                 {...imagePlaceholder(getBase64(article.image))}
@@ -34,6 +36,7 @@ export default async function Article({ article, lang }: Props) {
                 priority
                 />
               </picture>
+              </ViewTransition>
           </div>
         )}
         <div className={styles.articleLayout} data-motion="takeover">

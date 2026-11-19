@@ -29,7 +29,7 @@ export default async function ArticleListItem({ article, lang, featured, order }
   };
   return (
     <ArticleCard blurDataURL={getBase64(imageUrl)} title={article.title} subtitle={article.subtitle} href={`/${lang}/articles/${article.url}`}
-      imageUrl={imageUrl} featured={featured} order={order}
+      imageUrl={imageUrl} transitionName={`article-${article.url}`} featured={featured} order={order}
       dateLabel={dateLabel} dateTime={validDate ? date.toISOString() : undefined}
       views={new Intl.NumberFormat(page.langCode).format(article.viewCount)} viewsLabel={viewsLabels[lang]}/>
   )

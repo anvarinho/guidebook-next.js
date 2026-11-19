@@ -2,9 +2,9 @@ import getBlurredDataUrls from '@/lib/getBlurredDataUrls';
 import type { Locale } from '@/lib/i18n.config';
 import PlaceGallery from '../../places/[placeUrl]/components/PlaceGallery';
 
-export default function TourGallery({ images, name, lang, priority = false }: {
-  images: string[]; name: string; lang: Locale; priority?: boolean;
+export default function TourGallery({ images, name, lang, priority = false, transitionName }: {
+  images: string[]; name: string; lang: Locale; priority?: boolean; transitionName?: string;
 }) {
   if (!images.length) return null;
-  return <PlaceGallery blurDataURLs={getBlurredDataUrls(images)} images={images} name={name} lang={lang} priority={priority}/>;
+  return <PlaceGallery blurDataURLs={getBlurredDataUrls(images)} images={images} name={name} lang={lang} priority={priority} transitionName={transitionName}/>;
 }

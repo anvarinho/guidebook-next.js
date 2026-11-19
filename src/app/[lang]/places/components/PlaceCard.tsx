@@ -16,7 +16,7 @@ export default function PlaceCard({ place, lang, blurDataURL, priority = false, 
   detailPage?: boolean;
 }) {
   return (
-    <Link data-place-detail-card={detailPage || undefined} data-motion={priority ? undefined : 'rise'} data-motion-frame
+    <Link data-tilt data-place-detail-card={detailPage || undefined} data-motion={priority ? undefined : 'rise'} data-motion-frame
       href={`/${lang}/places/${place.url}`} className={`${styles.placeBox} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.placeMedia}>
         {/* Related cards on a detail page may repeat a place, and names must be unique, so only list cards morph. */}

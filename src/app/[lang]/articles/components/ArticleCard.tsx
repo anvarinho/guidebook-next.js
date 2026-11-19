@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { imagePlaceholder } from '@/lib/imagePlaceholder';
 import Link from 'next/link';
+import { ViewTransition } from 'react';
 import shared from '../../places/page.module.css';
 import styles from '../articles.module.css';
 
@@ -9,18 +10,20 @@ type Props = {
   imageUrl?: string; blurDataURL?: string;
   dateLabel?: string; dateTime?: string;
   views: string; viewsLabel: string;
-  featured?: boolean; order?: number;
+  featured?: boolean; order?: number; transitionName?: string;
 };
 
-export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataURL, dateLabel, dateTime, views, viewsLabel, featured = false, order = 0 }: Props) {
+export default function ArticleCard({ title, subtitle, href, imageUrl, blurDataURL, dateLabel, dateTime, views, viewsLabel, featured = false, order = 0, transitionName }: Props) {
   return (
-    <Link href={href} data-motion={featured && order === 0 ? undefined : 'rise'} data-motion-frame className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
+    <Link href={href} data-motion={featured && order === 0 ? undefined : 'rise'} data-motion-frame data-tilt className={`${shared.placeBox} ${styles.articleCard} ${featured ? shared.featuredCard : ''}`}>
       <div className={shared.placeMedia}>
+        <ViewTransition name={imageUrl ? transitionName : undefined} share="morph" default="none">
         <div className={`${shared.imageFrame} ${!imageUrl ? styles.noImage : ''}`} data-motion={featured && order === 0 ? undefined : 'settle'}>
           {imageUrl && <Image src={imageUrl} alt={title} className={shared.placeImg} width={640} height={420}
             sizes={featured ? '(max-width: 600px) 100vw, (max-width: 991px) 60vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw'}
             {...imagePlaceholder(blurDataURL)} priority={featured && order === 0} loading={featured && order === 0 ? "eager" : "lazy"}/>}
         </div>
+        </ViewTransition>
         {featured && <span className={shared.cardNumber} aria-hidden="true">{String(order + 1).padStart(2, '0')}</span>}
       </div>
       <div className={`${shared.placeContent} ${styles.content}`}>
