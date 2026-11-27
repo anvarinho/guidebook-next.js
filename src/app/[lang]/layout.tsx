@@ -2,14 +2,13 @@ import { author, siteUrl } from "@/lib/seo";
 import './globals.css'
 import './Components/motion/motion.css'
 import type { Metadata } from 'next'
-import '../bai-jamjuree.css'
-import '../exo-2.css'
 import { Locale, i18n } from '@/lib/i18n.config'
 import { localeMetadata } from '@/lib/localeMetadata'
 import Footer from './Components/Footer'
 import FooterVisibility from './Components/FooterVisibility'
 // import Analytics from './Components/Analytics'
 import FontPreloads from './Components/FontPreloads'
+import LocaleFonts, { exo2Locales } from './Components/LocaleFonts'
 import RealUserBeacon from './Components/RealUserBeacon'
 
 import Navbar from './Components/Navbar'
@@ -47,11 +46,12 @@ export default async function RootLayout(
     <html lang={localeMetadata[lang].tag} dir={localeMetadata[lang].dir} data-scroll-behavior="smooth">
       <head>
         <FontPreloads lang={lang}/>
+        <LocaleFonts lang={lang}/>
         <RealUserBeacon/>
         <Meta lang={lang}/>
       </head>
 
-      <body className={['ru', 'kz', 'kg', 'tg', 'uk', 'mn', 'be', 'sr', 'bg', 'mk'].includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
+      <body className={exo2Locales.includes(lang) ? 'font-exo-2' : 'font-bai-jamjuree'}>
         {/* Google Analytics disabled (PageSpeed: unused JS). Re-enable:
         {process.env.GOOGLE_ANALYTICS_ID && <Analytics id={process.env.GOOGLE_ANALYTICS_ID}/>} */}
         <LanguageShell
